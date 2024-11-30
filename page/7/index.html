@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"humble2967738843.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"humble2967738843.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta property="og:type" content="website">
@@ -102,6 +102,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -136,11 +137,35 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
+</div>
+
+      
+    </div>
+  </div>
 
 </div>
     </header>
@@ -163,7 +188,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN,en,default">
-    <link itemprop="mainEntityOfPage" href="http://humble2967738843.github.io/2023/11/02/suan-fa-bi-ji-v2.0/">
+    <link itemprop="mainEntityOfPage" href="http://humble2967738843.github.io/2023/11/02/bian-ji-da-xing-yu-yan-mo-xing-wen-ti-fang-fa-he-ji-yu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -177,7 +202,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2023/11/02/suan-fa-bi-ji-v2.0/" class="post-title-link" itemprop="url">算法笔记V2.0</a>
+            <a href="/2023/11/02/bian-ji-da-xing-yu-yan-mo-xing-wen-ti-fang-fa-he-ji-yu/" class="post-title-link" itemprop="url">编辑大型语言模型：问题、方法和机遇</a>
         </h2>
 
         <div class="post-meta">
@@ -194,7 +219,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-26 17:28:54" itemprop="dateModified" datetime="2024-05-26T17:28:54+08:00">2024-05-26</time>
+                <time title="修改时间：2024-05-26 17:32:27" itemprop="dateModified" datetime="2024-05-26T17:32:27+08:00">2024-05-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -202,7 +227,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">软件开发</span></a>
+                  <a href="/categories/%E7%9F%A5%E8%AF%86%E7%BC%96%E8%BE%91/" itemprop="url" rel="index"><span itemprop="name">知识编辑</span></a>
                 </span>
             </span>
 
@@ -217,17 +242,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><img src="https://s2.loli.net/2023/12/23/PiVYAZGmlvQJLWq.png" alt="image-20230714101300230" style="zoom:150%;"></p>
-<h2 id="第一章-基础算法"><a href="#第一章-基础算法" class="headerlink" title="第一章 基础算法"></a>第一章 基础算法</h2><p><img src="https://s2.loli.net/2023/12/24/rgBdHP1NfvJwCx8.png" alt="image-20231224114705216"></p>
-<p>暴力的调整区间的方法：</p>
-<p><img src="https://s2.loli.net/2023/12/24/R1kGDsl6rnuHc73.png" alt="image-20231224115049896"></p>
-<p>双指针调整区间的方法：</p>
-<p><img src="https://s2.loli.net/2023/12/24/E7Yqu95JsPoCKcT.png" alt="image-20231224115342677"></p>
-<h3 id="1-1快速排序"><a href="#1-1快速排序" class="headerlink" title="1.1快速排序"></a>1.1快速排序</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">quick_sort</span><span class="params">(<span class="type">int</span> q[], <span class="type">int</span> l, <span class="type">int</span> r)</span></span>&#123;</span><br><span class="line">    <span class="comment">// 没有数或者只有一个数</span></span><br><span class="line">    <span class="keyword">if</span> (l &gt;= r) <span class="keyword">return</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> i = l - <span class="number">1</span>, j = r + <span class="number">1</span>, x = q[l + r &gt;&gt; <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">while</span> (i &lt; j)&#123;</span><br><span class="line">        <span class="keyword">do</span> i ++ ; <span class="keyword">while</span> (q[i] &lt; x);</span><br><span class="line">        <span class="keyword">do</span> j -- ; <span class="keyword">while</span> (q[j] &gt; x);</span><br><span class="line">        <span class="keyword">if</span> (i &lt; j) <span class="built_in">swap</span>(q[i], q[j]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">quick_sort</span>(q, l, j), <span class="built_in">quick_sort</span>(q, j + <span class="number">1</span>, r);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">100</span>;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> q[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">quick_sort</span><span class="params">(<span class="type">int</span> q[], <span class="type">int</span> l, <span class="type">int</span> r)</span></span>&#123;</span><br><span class="line">    <span class="comment">// 没有数或者只有一个数</span></span><br><span class="line">    <span class="keyword">if</span> (l &gt;= r) <span class="keyword">return</span>;</span><br><span class="line">    <span class="comment">// 定义两个指针，定义区间分割点 x</span></span><br><span class="line">    <span class="type">int</span> i = l - <span class="number">1</span>, j = r + <span class="number">1</span>, x = q[l + r &gt;&gt; <span class="number">1</span>];</span><br><span class="line">    <span class="comment">// 两个指针向中间靠</span></span><br><span class="line">    <span class="keyword">while</span> (i &lt; j)&#123;</span><br><span class="line">        <span class="comment">// 找到第一个 q[i] &gt;= x</span></span><br><span class="line">        <span class="keyword">do</span> i ++ ; <span class="keyword">while</span> (q[i] &lt; x);</span><br><span class="line">        <span class="comment">// 找到第一个 q[j] &lt;= x</span></span><br><span class="line">        <span class="keyword">do</span> j -- ; <span class="keyword">while</span> (q[j] &gt; x);</span><br><span class="line">        <span class="comment">// 两个指针 i j 都找到了当前不符合的数的位置，则交换它们</span></span><br><span class="line">        <span class="keyword">if</span> (i &lt; j) <span class="built_in">swap</span>(q[i], q[j]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 递归处理左右两段</span></span><br><span class="line">    <span class="built_in">quick_sort</span>(q, l, j), <span class="built_in">quick_sort</span>(q, j + <span class="number">1</span>, r);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i ++ )&#123;</span><br><span class="line">        cin &gt;&gt; q[i];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">quick_sort</span>(q, <span class="number">0</span>, n - <span class="number">1</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i ++ ) cout &lt;&lt; q[i] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h1 id="编辑大型语言模型：问题、方法和机遇"><a href="#编辑大型语言模型：问题、方法和机遇" class="headerlink" title="编辑大型语言模型：问题、方法和机遇"></a>编辑大型语言模型：问题、方法和机遇</h1><h2 id="Abstruct"><a href="#Abstruct" class="headerlink" title="Abstruct"></a>Abstruct</h2><p>尽管有能力培养有能力的LLMs，但维持其相关性和纠正错误的方法仍然难以捉摸。为此，过去几年见证了LLMs编辑技术的激增，其<span style="background-color: #2ea8e580">目标是有效地改变特定领域内LLMs的行为，而不会对其他输入的性能产生负面影响</span>。本文深入探讨了LLMs模型编辑相关的问题、方法和机遇。特别是，我们<span style="background-color: #ff666680">对任务定义和与模型编辑相关的挑战进行了详尽的概述，并对我们目前掌握的最先进的方法进行了深入的实证分析</span>。我们还<span style="background-color: #ff666680">构建了一个新的基准数据集，以促进更稳健的评估并查明现有技术固有的持久问题</span>。我们的目标是为每种编辑技术的有效性和可行性提供有价值的见解，从而帮助社区做出明智的决定，为特定任务或上下文选择最合适的方法。</p>
+<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h1><p>大型语言模型（LLM）已经表现出理解和生成类人文本的非凡能力（Brown et al., 2020；OpenAI, 2023；Anil et al., 2023；Touvron et al., 2023；Qiao et al., 2022；赵等人，2023）。尽管LLMs的训练非常熟练，但确保其相关性和修复错误的策略仍不清楚。理想情况下，随着世界形势的发展，我们的目标是更新LLMs，避免与训练全新模型相关的计算负担。如图1所示，解决这个问题模型编辑的概念被提出</p>
+<p><img src="../imgs/$%7Bfiilename%7D/SWBFWKDL.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;SWBFWKDL&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%226BF2NSVY%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%221%22%2C%22position%22%3A%7B%22pageIndex%22%3A0%2C%22rects%22%3A%5B%5B300.5%2C490.39%2C533%2C628.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%221%22%7D%7D&quot; width=&quot;388&quot; height=&quot;231&quot; src=&quot;attachments/SWBFWKDL.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>（Sinitsin 等人，2020；De Cao 等人，2021），<span style="background-color: #2ea8e580">能够对模型的行为进行数据有效的改变，特别是在指定的感兴趣领域内，同时确保不会对其他输入产生不利影响。</span>目前，大量关于LLMs模型编辑的工作（De Cao et al., 2021；Meng et al., 2022, 2023；Sinitsin et al., 2020；Huang et al., 2023)在各种编辑任务和设置方面取得了长足的进步。如图 2 所示，<span style="background-color: #2ea8e580">这些工作通过将辅助网络与原始未更改的模型集成或更改导致不良输出的模型参数来操纵特定情况下的模型输出。</span>尽管文献中存在广泛的模型编辑技术，但<span style="background-color: #5fb23680">明显缺乏在统一实验条件下评估这些方法的全面比较分析。缺乏直接比较会削弱我们辨别每种方法相对优缺点的能力，从而阻碍我们理解它们在不同问题领域的适应性。</span></p>
+<pre><code> 为了解决这个问题，本研究致力于建立一个标准的问题定义，并对这些方法进行细致的评估（§2，§3）。我们在规定的条件下进行实验，促进对各自的优缺点进行公正的比较（§4）。&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;我们最初使用两个流行的模型编辑数据集，ZsRE (Levy et al., 2017) 和 COUNTERFACT (Meng et al., 2022)，以及两个结构上的数据集不同的语言模型，T5（Raffel et al.，2020a）（编码器-解码器）和 GPT-J（Wang 和 Komatsuzaki，2021a）（仅解码器）作为我们的基础模型&lt;/span&gt;。我们还评估了较大模型 OPT-13B（Zhang 等人，2022a）和 GPT-NEOX20B（Black 等人，2022）的性能。除了基本编辑设置之外，我们还评估批量和顺序编辑的性能。虽然我们观察到当前的方法在事实模型编辑任务中表现出当大的能力，但&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;我们重新考虑当前的评估并创建一个更具包容性的评估数据集（§5）：可移植性（强大的泛化能力）、局部性（副作用）和效率（时间）和内存使用情况）&lt;/span&gt;。我们发现当前的模型编辑方法在这些层面上有所限制，从而限制了它们的实际应用，未来值得更多的研究。通过系统评估，我们的目标是为每种模型编辑技术的有效性提供有价值的见解，帮助研究人员为特定任务选择合适的方法。
+</code></pre><h2 id="2-Problem-Definition"><a href="#2-Problem-Definition" class="headerlink" title="2 Problem Definition"></a>2 Problem Definition</h2><p>模型编辑，由 Mitchell 等人阐明。 （2022b），<span style="background-color: #2ea8e580">旨在有效地调整特定编辑描述符（xe，ye）上的初始基础模型（fθ，θ表示模型的参数）行为，而不影响其他样本上的模型行为</span>。最终目标是创建一个编辑模型，表示为 fθe。具体来说，基本模型 fθ 由函数 f : X → Y 表示，该函数将输入 x 与其相应的预测 y 相关联。给定一个由编辑输入 xe 和编辑标签 ye 组成的编辑描述符，使得 fθ(xe) ̸= ye，后期编辑模型 fθe 被设计为产生预期输出，其中 fθe(xe) = ye。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2023/11/02/suan-fa-bi-ji-v2.0/#more" rel="contents">
+              <a class="btn" href="/2023/11/02/bian-ji-da-xing-yu-yan-mo-xing-wen-ti-fang-fa-he-ji-yu/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -400,6 +423,13 @@
 
   
 
+
+
+
+  
+<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script>
+<script src="/js/algolia-search.js"></script>
 
 
 
