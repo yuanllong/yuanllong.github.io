@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://s2.loli.net/2024/11/30/3MygRhSbrj12QVs.png">
 <meta property="og:image" content="https://s2.loli.net/2024/11/30/suWvA476q1gXEbB.png">
 <meta property="article:published_time" content="2024-11-30T07:45:56.000Z">
-<meta property="article:modified_time" content="2024-11-30T09:25:41.638Z">
+<meta property="article:modified_time" content="2024-11-30T09:32:41.332Z">
 <meta property="article:author" content="院龙">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s2.loli.net/2024/11/30/YNhABjfvzogsKdy.png">
@@ -183,7 +183,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-11-30 15:45:56 / 修改时间：17:25:41" itemprop="dateCreated datePublished" datetime="2024-11-30T15:45:56+08:00">2024-11-30</time>
+              <time title="创建时间：2024-11-30 15:45:56 / 修改时间：17:32:41" itemprop="dateCreated datePublished" datetime="2024-11-30T15:45:56+08:00">2024-11-30</time>
             </span>
 
           
@@ -445,6 +445,61 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
 
 
   
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
