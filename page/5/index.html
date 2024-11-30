@@ -148,205 +148,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN,en,default">
-    <link itemprop="mainEntityOfPage" href="http://humble2967738843.github.io/2023/12/11/07-zi-dong-qiu-dao/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="院龙">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="院龙">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/12/11/07-zi-dong-qiu-dao/" class="post-title-link" itemprop="url">07自动求导</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-12-11 18:29:22" itemprop="dateCreated datePublished" datetime="2023-12-11T18:29:22+08:00">2023-12-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-26 13:06:04" itemprop="dateModified" datetime="2024-05-26T13:06:04+08:00">2024-05-26</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="07自动求导"><a href="#07自动求导" class="headerlink" title="07自动求导"></a>07自动求导</h1><h2 id="7-1自动求导"><a href="#7-1自动求导" class="headerlink" title="7.1自动求导"></a>7.1自动求导</h2><ul>
-<li><p>向量链式法则</p>
-<ul>
-<li><p>标量链式法则</p>
-<p><img src="https://s2.loli.net/2023/12/11/S6Tb8R7FJHlnz4d.png" alt="image-20231211183126611"></p>
-</li>
-<li><p>拓展到向量</p>
-<p><img src="https://s2.loli.net/2023/12/11/COAszUhudmN2DTr.png" alt="image-20231211183232318"></p>
-</li>
-</ul>
-</li>
-</ul>
-<p>【举例】</p>
-<p>假设</p>
-<p><img src="https://s2.loli.net/2023/12/11/zptWGbem5KU2jBX.png" alt="image-20231211183335744"></p>
-<p>计算</p>
-<p><img src="https://s2.loli.net/2023/12/11/JcoD796mwbYytWz.png" alt="image-20231211183403246"></p>
-<p>先分解</p>
-<p><img src="https://s2.loli.net/2023/12/11/xeqpFOuPcIftW6D.png" alt="image-20231211183436407"></p>
-<p>得到：</p>
-<p><img src="https://s2.loli.net/2023/12/11/BLu8YUWO2CZoe6J.png" alt="image-20231211183524557"></p>
-<p>【举例】</p>
-<p>假设</p>
-<p><img src="https://s2.loli.net/2023/12/11/9NPKpfrQtjC2Tms.png" alt="image-20231211183636383"></p>
-<p>计算：</p>
-<p><img src="https://s2.loli.net/2023/12/11/Y6tjNIBpowdvxcJ.png" alt="image-20231211183658241"></p>
-<p>分解：</p>
-<p><img src="https://s2.loli.net/2023/12/11/PAi5fJZp2BY7KFg.png" alt="image-20231211183715182"></p>
-<p>得到：</p>
-<p><img src="https://s2.loli.net/2023/12/11/CthWvdQFenfuZKs.png" alt="image-20231211183732861"></p>
-<ul>
-<li><p>自动求导</p>
-<ul>
-<li><p>自动求导计算一个函数在指定值上的导数</p>
-</li>
-<li><p>它有别于</p>
-<ul>
-<li><p><strong>符号求导</strong></p>
-<p><img src="https://s2.loli.net/2023/12/11/6KDvQl5n9AkydEN.png" alt="image-20231211184638366"></p>
-</li>
-<li><p><strong>数值求导</strong></p>
-<p><img src="https://s2.loli.net/2023/12/11/Iz1M8gLcWxJNvY6.png" alt="image-20231211184654006"></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>计算图</p>
-<ul>
-<li>将代码分解成操作子</li>
-<li>将计算表示成一个无环图</li>
-<li>显示构造（<code>Tensorflow</code>/<code>Theano</code>/<code>MXNet</code>）</li>
-<li>隐式构造（<code>PyTorch</code>/<code>MXNet</code>）</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/11/aQzUWTLnN9VxXKM.png" alt="image-20231211185105449"></p>
-<p><img src="https://s2.loli.net/2023/12/11/ythLVXC43JjNxKQ.png" alt="image-20231211184924484"></p>
-<p><strong>相当于告诉机器我是如何一步一步地计算地：</strong></p>
-<p><img src="https://s2.loli.net/2023/12/11/CpHZuG3OMXW4j8b.png" alt="image-20231211185511402"></p>
-<ul>
-<li><p>自动求导地两种模式</p>
-<ul>
-<li><p>链式法则</p>
-<p><img src="https://s2.loli.net/2023/12/11/C5vyrK4lhzgbFTf.png" alt="image-20231211185643029"></p>
-</li>
-<li><p>正向积累</p>
-<p><img src="https://s2.loli.net/2023/12/11/17QKZj2VHnM3I5v.png" alt="image-20231211185655510"></p>
-</li>
-<li><p>反向积累、又称反向传递 （<strong>backforward</strong>）</p>
-<p><img src="https://s2.loli.net/2023/12/11/VnXqmPtDUeJFkRu.png" alt="image-20231211185711166"></p>
-</li>
-</ul>
-</li>
-<li><p>反向积累</p>
-<p><img src="https://s2.loli.net/2023/12/11/VTkutaxzcqKof9W.png" alt="image-20231211185840734"></p>
-</li>
-</ul>
-<p><strong>先看正向，正向就是自计算图的底端，从下往上开始计算</strong></p>
-<p><img src="https://s2.loli.net/2023/12/11/WBhC2ZMX4ENqfL6.png" alt="image-20231211220023597"></p>
-<p>当正向算完以后，就可以反向积累了。</p>
-<p><strong>首先，先求 $z$ 关于 $b$ 的导数，算完的结果是 $2b$ ，显然这里的 $b$ 反向积累时，不知道它的值究竟是多少，怎么办呢？我们可以使用之前正向计算过程中留下的结果，也就是读取之前运行的结果</strong></p>
-<p><img src="https://s2.loli.net/2023/12/11/PTR7fGQApD8Xqm4.png" alt="image-20231211220447492"></p>
-<p>同理，我们可以计算 $z$ 关于 $a$ 的导数，这里的 $b$ 就可以使用上面的 $2b$ 中的 $b$ 了。</p>
-<p><img src="https://s2.loli.net/2023/12/11/94OXD5cbTZ1yteY.png" alt="image-20231211220730240"></p>
-<p><strong>最后，我们计算 $z$ 关于 $w$ 的导数，其中的 $a$ 可以取自正向计算时得到的结果</strong></p>
-<p><img src="https://s2.loli.net/2023/12/11/Hqjch59NZpvRiuW.png" alt="image-20231211220926630"></p>
-<ul>
-<li><p>反向累积小结</p>
-<ul>
-<li><p><strong>前向：执行图，存储中间结果</strong></p>
-</li>
-<li><p><strong>反向：从相反方向执行图</strong></p>
-<ul>
-<li><p>去除不需要的枝</p>
-<p><img src="https://s2.loli.net/2023/12/11/nuhBQ2sCtLRyZ7V.png" alt="image-20231211221147596"></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>复杂度</p>
-<ul>
-<li><strong>计算复杂度：O(n), n是操作子个数</strong><ul>
-<li>通常正向和反向的代价类似</li>
-</ul>
-</li>
-<li><strong>内存复杂度：O(n)，因为需要存储正向的所有中间结果</strong></li>
-<li>跟正向累积对比：<ul>
-<li><strong>O(n)计算复杂度用来计算一个变量的梯度</strong></li>
-<li><strong>O(1)内存复杂度</strong></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="7-2自动求导实现"><a href="#7-2自动求导实现" class="headerlink" title="7.2自动求导实现"></a>7.2自动求导实现</h2><p>假设我们想对函数 $y = 2 \boldsymbol {x}^T\boldsymbol {x}$ 关于列向量 $\boldsymbol {x}$ 求导</p>
-<p><img src="https://s2.loli.net/2023/12/11/iprdJa5QMcyGVkR.png" alt="image-20231211221815678"></p>
-<p>在我们计算 $y$ 关于 $\boldsymbol {x}$ 的梯度之前，我们需要一个地方来存储梯度。</p>
-<p><img src="https://s2.loli.net/2023/12/11/zRwyU2geNMVEHIs.png" alt="image-20231211221935331"></p>
-<p>现在我们计算 $y$ 。</p>
-<p><img src="https://s2.loli.net/2023/12/11/BoZMD6XeflHOFhK.png" alt="image-20231211222059870"></p>
-<p>通过调用反向传播函数来自动计算 $y$ 关于 $\boldsymbol {x}$ 每个分量的梯度。</p>
-<p><img src="https://s2.loli.net/2023/12/11/Qoy15qtKZFImcrS.png" alt="image-20231211222232173"></p>
-<p><img src="https://s2.loli.net/2023/12/11/Cw8ALrPfid1IuHy.png" alt="image-20231211222304753"></p>
-<p>现在让我们计算 $\boldsymbol {x}$ 的另一个函数。</p>
-<p><img src="https://s2.loli.net/2023/12/11/y39NPT1OtaxSZ5K.png" alt="image-20231211222417179"></p>
-<p><strong>深度学习中，我们的目的不是计算微分矩阵，而是批量中每个样本单独计算的偏导数之和。</strong></p>
-<p><img src="https://s2.loli.net/2023/12/11/CDgNFVxRL6wMKov.png" alt="image-20231211222656511"></p>
-<p>将某些<strong>计算移动到记录的计算图之外</strong>，用于<strong>固定网络中的某些参数</strong></p>
-<p><img src="https://s2.loli.net/2023/12/11/Z2MYUCwPh8BkVK4.png" alt="image-20231211222810152"></p>
-<p><img src="https://s2.loli.net/2023/12/11/rZFiQPnf8wMbEtj.png" alt="image-20231211222909131"></p>
-<p>即使构建函数的计算图需要通过 Python 控制流（例如，条件、循环或任意函数调用）我们任然可以计算得到变量的梯度。</p>
-<p>工作原理是：<strong>隐式计算流：首先看我们的函数，你会发现，整个函数的返回值总是取决于 b 的值或者是你输入的 a 的值。每一次计算的时候，PyTorch会在背后将计算图存储下来，然后倒着做一遍就可以正确答案了</strong>。同时计算更慢。</p>
-<p><img src="https://s2.loli.net/2023/12/11/GeTXM4N9CzVFgIE.png" alt="image-20231211223252136"></p>
-<h2 id="7-3QA"><a href="#7-3QA" class="headerlink" title="7.3QA"></a>7.3QA</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN,en,default">
     <link itemprop="mainEntityOfPage" href="http://humble2967738843.github.io/2023/12/10/06-ju-zhen-ji-suan/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1864,6 +1665,115 @@ E = - log \sigma(v_{w_O}' h) - \sum_{w_j \in W_{neg}} log \sigma(-v_{w_j}'h)</sc
   
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN,en,default">
+    <link itemprop="mainEntityOfPage" href="http://humble2967738843.github.io/2023/11/06/wang-diao-ni-xiang-wang-diao-de-dong-xi-llms-de-gao-xiao-wang-que/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="院龙">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="院龙">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/06/wang-diao-ni-xiang-wang-diao-de-dong-xi-llms-de-gao-xiao-wang-que/" class="post-title-link" itemprop="url">忘掉你想忘掉的东西：LLMs的高效忘却</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-06 11:40:03" itemprop="dateCreated datePublished" datetime="2023-11-06T11:40:03+08:00">2023-11-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-05-26 17:34:46" itemprop="dateModified" datetime="2024-05-26T17:34:46+08:00">2024-05-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E9%9A%90%E7%A7%81%E9%97%AE%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">大模型隐私问题</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="忘掉你想忘掉的东西：LLMs的高效忘却"><a href="#忘掉你想忘掉的东西：LLMs的高效忘却" class="headerlink" title="忘掉你想忘掉的东西：LLMs的高效忘却"></a>忘掉你想忘掉的东西：LLMs的高效忘却</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>大型语言模型（LLM）在预训练和记忆各种文本数据方面取得了显着进展，然而，这个过程可能会遇到<strong>隐私问题</strong>和<strong>违反数据保护法规</strong>的问题。因此，<strong>从此类模型中轻松删除与个人用户相关的数据，同时在删除后不降低其预测质量的能力变得越来越重要</strong>。为了解决这些问题，在这项工作中，我们提出了一种有效的取消学习框架，<strong>通过将选择性师生目标学习的轻量级取消学习层引入到变压器中，可以有效地更新 LLM，而无需在数据删除后重新训练整个模型</strong>。此外，我们引入了<strong>一种融合机制来有效地结合不同的遗忘层，学习遗忘不同的数据集来处理一系列遗忘操作</strong>。<strong>分类和生成任务</strong>的实验证明了我们提出的方法与最先进的基线相比的有效性。</p>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>利用大型语言模型（LLM）已成为各种 NLP 应用的主导范式（Brown et al., 2020；Chowdhery et al., 2022a；Kojima et al., 2022；Ouyang et al., 2022；Brown et al., 2020；Radford et al., 2019；Lewkowycz et al., 2022；Qin et al., 2023；Touvron et al., 2023），因为法学硕士在预训练或大范围微调期间会记住大量知识文本数据（Brown 等人，2020；Radford 等人，2019；Hoffmann 等人，2022；Webson 和 Pavlick，2022；Min 等人，2022；Liang 等人，2022；Carlini 等人， 2022）。然而，这些数据可能包含敏感信息，例如姓名、电话号码、电子邮件地址和私人临床记录（Jang 等人，2022 年；Kurmanji 等人，2023 年；Kumar 等人，2022）。广泛的研究表明，法学硕士可以生成私人信息，例如《麻省理工学院技术评论》主编，包括他的家庭成员、工作地址和电话号码（Carlini 等人，2022）。最近，欧盟的《通用数据保护条例》（GDPR）和美国的《加州消费者隐私法案》（CCPA）也对被遗忘权提出了新的规定，要求应用程序支持在用户请求时删除用户生成的内容（Sekhari）等人，2021 年；库马尔等人，2022 年）。有鉴于此，有必要为法学硕士提供一种高效且有效的方法来忘记用户所请求的信息。</p>
+<p>​        最近人们开始关注通过再训练和数据预处理来处理法学硕士的此类忘却请求（Bourtoule et al., 2021; Kumar et al., 2022），其中训练数据存储在不同的隔离切片和每个检查点中在每个切片上训练后保存。当收到删除请求时，相应的数据点将从切片中删除，并且直到该数据点的模型检查点将用于进一步重新训练模型。遗忘的影响通常通过已删除数据的模型错误来体现（模型无法预测已删除数据）（Kurmanji et al., 2023; Jang et al., 2022）。其他工作也探索了确保差分隐私（DP）的算法设计（Yu et al., 2021；Li et al., 2021；Anil et al., 2021）。然而，像 SISA (Bourtoule et al., 2021) 这样的机器去学习方法通常需要大量的存储空间 (Bourtoule et al., 2021)，而 DP 方法可能会导致模型性能收敛缓慢和显着恶化 (Nguyen等人，2022）。此外，两者都需要重新训练整个模型，考虑到当前法学硕士的模型规模，这是极其昂贵和耗时的。这些限制也使它们无法动态处理一系列忘记学习的请求，这些请求通常是现实场景中的需要（Jang et al., 2022; Nguyen et al., 2022）。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231107182632183-1699352793499-1.png" alt="image-20231107182632183"></p>
+<p>【我们EUL框架的整体流程。遗忘层被插入到前馈网络之后的变压器层中。在训练过程中，只有取消学习层会忘记所请求的数据，而原始的 LLM 保持不变。对于每个删除请求，首先学习一个取消学习层，然后通过我们设计的融合机制与其他取消学习层合并，形成满足一系列删除请求的融合取消学习变压器。】</p>
+<p>​        为了填补这些空白，在这项工作中，我们提出了一种 LLM 的高效忘却方法（EUL），可以有效地忘却需要忘记的内容，而无需完全重新训练整个模型，同时保留模型的性能。具体来说，我们提出了一种轻量级方法来学习遗忘层，该方法通过选择性的师生公式（Kurmanji 等人，2023）在几次更新中插入变压器，而无需调整大型语言模型。此外，我们引入了一种融合机制，通过最小化回归目标，有效地将学习忘记不同数据集的不同未学习层的权重组合到单个统一的未学习层。这使得 EUL 能够有效地处理一系列删除操作。为了证明我们提出的 EUL 的有效性，我们在不同设置下的 IMDB（Maas 等人，2011）和 SAMSum（Gliwa 等人，2019）上进行了实验，与最先进的取消学习或模型编辑基线相比。总而言之，我们的主要贡献有三个：</p>
+<ul>
+<li>我们引入了一种有效的忘却方法，通过选择性的师生公式以轻量级的方式消除所需数据的影响。</li>
+<li>我们设计了一种融合机制，将学习忘记不同数据集的遗忘层合并到单个遗忘层中，以处理一系列删除操作。</li>
+<li>我们在不同设置下使用不同规模的骨干模型进行分类和生成任务的实验，以说明EUL的有效性。</li>
+</ul>
+<h2 id="2-Related-Work"><a href="#2-Related-Work" class="headerlink" title="2 Related Work"></a>2 Related Work</h2><h3 id="2-1-Large-Language-Models"><a href="#2-1-Large-Language-Models" class="headerlink" title="2.1 Large Language Models"></a>2.1 Large Language Models</h3><p>大型语言模型最近取得了广泛的进展（Brown et al., 2020; Radford et al., 2019; Smith et al., 2022; Rae et al., 2021; Chowdhery et al., 2022b; Touvron et al., 2023 ），特别是在扩大法学硕士方面，例如 LLAMA（Touvron 等人，2023）、Megatron-turing NLG（Smith 等人，2022）、Gopher（Rae 等人，2021）和 PaLM Chowdhery 等人。 （2022b）。其他工作也通过更长的训练（Hoffmann et al., 2022）、指令调整（Wang et al., 2022；Zhou et al., 2023）和人类反馈（Ouyang et al., 2022）在较小的模型上取得了更好的性能。 。然而，最近的研究表明，训练数据，例如姓名、电话号码、电子邮件地址，甚至银行帐号等个人身份信息（Carlini 等人，2021；Lee 等人，2021；Carlini 等人，2022） ; Jagielski et al., 2022），可以很容易地从 LLM 中提取，因为 LLM 会记住数十亿个参数的训练数据（Carlini et al., 2022）。我们的工作旨在通过允许从法学硕士中学习的参数中有效地消除所请求的或私有的数据来缓解此类问题。</p>
+<h3 id="2-2-Machine-Unlearning-for-Privacy"><a href="#2-2-Machine-Unlearning-for-Privacy" class="headerlink" title="2.2 Machine Unlearning for Privacy"></a>2.2 Machine Unlearning for Privacy</h3><p>为了减轻法学硕士的隐私风险，引入了机器取消学习方法来消除用户要求删除的训练示例的贡献（Bourtoule 等人，2021；Chien 等人，2023），包括重新训练深度学习的精确取消学习删除后新数据集上的学习模型（Bourtoule et al., 2021）和近似遗忘（Izzo et al., 2021; Golatkar et al., 2020; Kurmanji et al., 2023; Jang et al., 2022），旨在修改训练模型的权重以生成一组新的权重，这些权重近似于重新训练的权重。遗忘的影响通常通过已删除数据的模型错误来体现（模型无法预测已删除数据）（Kurmanji et al., 2023; Jang et al., 2022）。另一条工作重点是差分隐私（DP），它确保训练数据中的用户信息无法被推断（Dwork，2008；Yu et al.，2021；Li et al.，2021；Anil et al.，2021；Abadi等人，2016）。然而，这两种方法都需要重新训练整个模型，这是极其昂贵和耗时的，特别是对于大型语言模型，甚至会影响任务性能（Anil et al., 2021）。因此，它们无法动态处理删除序列（Jang et al., 2022；Nguyen et al., 2022）。为了克服这些限制，我们引入了一种有效的忘却方法以及融合机制来高效、动态地忘却用户数据序列。        我们的工作也与模型编辑相关（Mitchell et al., 2021; Belinkov et al., 2017; Dai et al., 2021; Wang et al., 2020），而他们通常专注于根据几个给定的数据编辑模型输出有关世界的语言结构或事实，而不是忘记所需的数据。</p>
+<h2 id="3-Efficient-Unlearning-for-LLMs"><a href="#3-Efficient-Unlearning-for-LLMs" class="headerlink" title="3 Efficient Unlearning for LLMs"></a>3 Efficient Unlearning for LLMs</h2><p>本节介绍了我们为法学硕士（EUL）设计的高效遗忘方法，该方法可以高效、动态地处理一系列删除请求。整体流程如图1所示。形式上，对于在数据集D = {(x, y)}上训练的大型语言模型F(.)，其中x是文本数据，y是相应的标签，并且删除请求忘记 Df = {(xf , yf } )，我们的目标是学习满足以下条件的更新模型 F ′(.) (Kurmanji et al., 2023)：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231107183151791-1699353113266-3.png" alt="image-20231107183151791"></p>
+<p>其中 Dr = D − Df = {(xr, yr)} 指的是我们想要保留的数据，I(.) 是互信息。直观上，我们将用 F(.) 更新 F(.)，为我们想要保留的数据生成类似的输出，同时丢失有关对我们想要忘记的数据进行预测的所有信息。</p>
+<h3 id="3-1-Learning-to-Forget-via-Unlearning-Layers"><a href="#3-1-Learning-to-Forget-via-Unlearning-Layers" class="headerlink" title="3.1 Learning to Forget via Unlearning Layers"></a>3.1 Learning to Forget via Unlearning Layers</h3><p>由于当前法学硕士的规模和训练数据量通常很大，更新模型 F(.) 中的所有参数（例如，在 Dr i 上重新训练 F(.)）变得极其昂贵。受参数高效微调最新进展的启发（Houlsby et al., 2019; Chien et al., 2023），我们通过 F (f (.)) 对 F ′(.) 进行建模，其中 f (.; W ) 是与 F (.) 相比，W 的参数数量显着减少。我们只会更新 f(.) 来满足取消学习的请求。</p>
+<p>​        为了有效地实现等式 1 中的忘却目标，我们最小化了选择性的师生目标，其中学生模型 F ′(.) = F (f (.)) 被学习以遵循 Dr 上的教师模型 F (.)，同时不服从F (.) 在 Df 上：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231107183310417-1699353191715-5.png" alt="image-20231107183310417"></p>
+<p>其中 α 是一个超参数，用于平衡忘记 xf 和保留 xr 之间的权衡。直观上，在训练过程中，f(.) 倾向于最小化更新模型的输出和原始模型在要保留的数据上的输出之间的 KL 散度，同时最大化它们在要忘记的数据上的输出之间的 KL 散度。</p>
+<p>​        为了保持任务性能，我们针对保留数据上的任务损失优化 f(.)：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231107183345526-1699353226937-7.png" alt="image-20231107183345526"></p>
+<p>其中 l(.) 是与任务相关的损失，例如，对于分类任务，交叉熵损失 - log P (F (f (xr)))。</p>
+<p>​        此外，我们还否定了法学硕士中使用的原始训练目标（例如，掩码语言建模目标（Raffel et al., 2020）），以忘记与数据相关的知识，以便忘记预先训练的参数并确保遗忘数据中的信息不能轻易地从 F(.) 中提取：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231107183433768-1699353275101-9.png" alt="image-20231107183433768"></p>
+<p>其中l(.)是预训练F(.)时使用的语言模型损失，例如，屏蔽语言模型损失，− log P (^ x|x − ^ x)（^ x是随机屏蔽的标记）。在我们的实验中，我们使用 T5 模型（Raffel et al., 2020）。因此，我们在这个损失项的输入开头添加了一个额外的“预测屏蔽词”。</p>
+<p>​        我们的最终培训目标如下：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231107183512165-1699353314324-11.png" alt="image-20231107183512165"></p>
+<p>其中 λ 和 γ 是超参数。在实践中，遵循 Kurmanji 等人。 （2023），我们交替更新要忘记的数据和要保留的数据，以更稳定地优化 LEUL 中的最小-最大项。具体来说，我们迭代地对要保留的数据执行一个纪元更新，然后对要忘记的数据执行一个纪元更新。</p>
+<h3 id="3-2-Fusing-Unlearning-Layers"><a href="#3-2-Fusing-Unlearning-Layers" class="headerlink" title="3.2 Fusing Unlearning Layers"></a>3.2 Fusing Unlearning Layers</h3><p>为了动态处理一系列遗忘请求并导出一个可以忘记所有请求数据的统一模型，我们引入了一种融合机制，可以合并不同的遗忘层 fi(.; Wi)，这些层学会了忘记 Df i = (Xf i ,Yf i ) 将上一节中的单个 f m(.; Wm) 转换为单个 f m(.; Wm)。也就是说，我们希望 Df i 上的 f m(.) 输出接近 fi(.)：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231107183611459-1699353373309-13.png" alt="image-20231107183611459"></p>
+<p>这是一个线性回归问题，有一个封闭式解：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231107183649235-1699353410763-15.png" alt="image-20231107183649235"></p>
+<p>具体来说，为了导出合并的遗忘层 f m 的权重 Wm，我们将使用遗忘数据 Xf i T Xf i 的 LLM 中的遗忘层之前的隐藏表示的预先计算的内积矩阵，然后根据公式 7 计算 Wm。</p>
+<p>​        融合机制确保了效率和隐私，因为它可以在没有任何额外训练的情况下执行，并且只需要存储要忘记的数据表示的内积矩阵而不是数据本身。</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>在这项工作中，我们提出了 EUL，这是一种针对LLMs的有效忘却方法，可以<strong>通过选择性的师生目标通过学习忘却层来高效且有效地忘却用户请求的数据</strong>。我们进一步引入了<strong>一种融合机制，可以将不同的遗忘层合并到一个统一的层中，以动态地遗忘一系列数据</strong>。对不同设置（不同数据集、不同模型大小、不同遗忘集大小）的实验证明了我们提出的 EUL 方法与最先进的基线相比的有效性。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
   <nav class="pagination">
@@ -1933,7 +1843,7 @@ E = - log \sigma(v_{w_O}' h) - \sum_{w_j \in W_{neg}} log \sigma(-v_{w_j}'h)</sc
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-count">61</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

@@ -768,13 +768,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 <h2 id="8-5QA"><a href="#8-5QA" class="headerlink" title="8.5QA"></a>8.5QA</h2>]]></content>
   </entry>
   <entry>
-    <title>10 梯度下降法</title>
-    <url>/2023/12/18/10-ti-du-xia-jiang-fa/</url>
-    <content><![CDATA[<h1 id="10-梯度下降法"><a href="#10-梯度下降法" class="headerlink" title="10 梯度下降法"></a>10 梯度下降法</h1><h2 id="10-1-Gradient-Descent"><a href="#10-1-Gradient-Descent" class="headerlink" title="10.1 Gradient Descent"></a>10.1 Gradient Descent</h2><p><img src="https://s2.loli.net/2023/12/18/5g29KPrnfduwWSM.png" alt="image-20231218110449631"></p>
-<p><img src="https://s2.loli.net/2023/12/18/l6SPghF1BXREWG5.png" alt="image-20231218111903673"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>09 Softmax 回归 + 损失函数 + 图片分类数据集</title>
     <url>/2023/12/17/09-softmax-hui-gui-sun-shi-han-shu-tu-pian-fen-lei-shu-ju-ji/</url>
     <content><![CDATA[<h1 id="09-Softmax-回归-损失函数-图片分类数据集"><a href="#09-Softmax-回归-损失函数-图片分类数据集" class="headerlink" title="09 Softmax 回归 + 损失函数 + 图片分类数据集"></a>09 Softmax 回归 + 损失函数 + 图片分类数据集</h1><p><img src="https://s2.loli.net/2023/12/17/UM83FgmWJdb2auQ.png" alt="image-20231217221708109"></p>
@@ -794,6 +787,13 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 </ul>
 <p>将人类蛋白质显微镜图片分成 28 类</p>
 <h2 id="9-2损失函数"><a href="#9-2损失函数" class="headerlink" title="9.2损失函数"></a>9.2损失函数</h2><h2 id="9-3图片分类数据集"><a href="#9-3图片分类数据集" class="headerlink" title="9.3图片分类数据集"></a>9.3图片分类数据集</h2><h2 id="9-4Softmax-回归从零开始实现"><a href="#9-4Softmax-回归从零开始实现" class="headerlink" title="9.4Softmax 回归从零开始实现"></a>9.4Softmax 回归从零开始实现</h2><h2 id="9-5Softmax-回归简洁实现"><a href="#9-5Softmax-回归简洁实现" class="headerlink" title="9.5Softmax 回归简洁实现"></a>9.5Softmax 回归简洁实现</h2>]]></content>
+  </entry>
+  <entry>
+    <title>10 梯度下降法</title>
+    <url>/2023/12/18/10-ti-du-xia-jiang-fa/</url>
+    <content><![CDATA[<h1 id="10-梯度下降法"><a href="#10-梯度下降法" class="headerlink" title="10 梯度下降法"></a>10 梯度下降法</h1><h2 id="10-1-Gradient-Descent"><a href="#10-1-Gradient-Descent" class="headerlink" title="10.1 Gradient Descent"></a>10.1 Gradient Descent</h2><p><img src="https://s2.loli.net/2023/12/18/5g29KPrnfduwWSM.png" alt="image-20231218110449631"></p>
+<p><img src="https://s2.loli.net/2023/12/18/l6SPghF1BXREWG5.png" alt="image-20231218111903673"></p>
+]]></content>
   </entry>
   <entry>
     <title>11导数</title>
@@ -969,20 +969,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>30激活函数</title>
-    <url>/2023/12/20/30-ji-huo-han-shu/</url>
-    <content><![CDATA[<h1 id="30-激活函数"><a href="#30-激活函数" class="headerlink" title="30 激活函数"></a>30 激活函数</h1><h2 id="30-1-Activation-functions"><a href="#30-1-Activation-functions" class="headerlink" title="30.1 Activation functions"></a>30.1 Activation functions</h2><p><code>sigmoid函数</code>总是表现要比 <code>tanh双曲正切函数</code>要好一点，这是因为它的值域在 [-1, 1] 之间，激活函数的平均值是 0， 你可能需要平移所有数据，让数据平均值为 0， 使用 <code>tanh</code> 而不是 <code>sigmoid</code> 也有类似于庶几乎中心化的效果</p>
-<p>它们均有的缺点是，当向两边无限延申的时候，他俩的斜率都非常地小，这会拖慢梯度下降法。</p>
-<p>经验法则：当你二分类地时候，最好使用 <code>sigmoid</code> 函数，其他默认选择 <code>ReLU</code> 或者 <code>leakyReLU</code></p>
-<p><img src="https://s2.loli.net/2023/12/20/bP1OkHjLBsMXyQR.png" alt="image-20231220221439273"></p>
-<h2 id="30-2-Pros-and-cons-of-activation-functions"><a href="#30-2-Pros-and-cons-of-activation-functions" class="headerlink" title="30.2 Pros and cons of activation functions"></a>30.2 Pros and cons of activation functions</h2><p><img src="https://s2.loli.net/2023/12/20/jCgQrTwzMZeoa49.png" alt="image-20231220221626024"></p>
-<h2 id="30-3-Why-use-activation-function"><a href="#30-3-Why-use-activation-function" class="headerlink" title="30.3 Why use activation function?"></a>30.3 Why use activation function?</h2><p><img src="https://s2.loli.net/2023/12/20/4weY2TZ6yL1KzGB.png" alt="image-20231220222203072"></p>
-<h2 id="30-4-Sigmoid-activation-function"><a href="#30-4-Sigmoid-activation-function" class="headerlink" title="30.4 Sigmoid activation function"></a>30.4 Sigmoid activation function</h2><p><img src="https://s2.loli.net/2023/12/21/P1NoVB9gQzRHWOe.png" alt="image-20231221122649209"></p>
-<p><img src="https://s2.loli.net/2023/12/21/uoSEqQlPgIeCcOY.png" alt="image-20231221122835804"></p>
-<p><img src="https://s2.loli.net/2023/12/21/JxTZcyqBerOFfwh.png" alt="image-20231221123025173"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>25神经网络</title>
     <url>/2023/12/19/25-shen-jing-wang-luo/</url>
     <content><![CDATA[<h1 id="25-神经网络"><a href="#25-神经网络" class="headerlink" title="25 神经网络"></a>25 神经网络</h1><h2 id="25-1-What-is-a-Neural-Network"><a href="#25-1-What-is-a-Neural-Network" class="headerlink" title="25.1 What is a Neural Network ?"></a>25.1 What is a Neural Network ?</h2><p><img src="https://s2.loli.net/2023/12/19/ZMTlEBK9cYr87mR.png" alt="image-20231219165206416"></p>
@@ -995,6 +981,20 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 <p><img src="https://s2.loli.net/2023/12/20/bBxOjdkr9lq81MJ.png" alt="image-20231220213502717"></p>
 <h2 id="25-5-Justification-for-vectorized-implementation"><a href="#25-5-Justification-for-vectorized-implementation" class="headerlink" title="25.5 Justification for vectorized implementation"></a>25.5 Justification for vectorized implementation</h2><p><img src="https://s2.loli.net/2023/12/20/hR4DELJwqmMWFUl.png" alt="image-20231220214715916"></p>
 <h2 id="25-6-Recap-of-vectorizing-across-multiple-examples"><a href="#25-6-Recap-of-vectorizing-across-multiple-examples" class="headerlink" title="25.6 Recap of vectorizing across multiple examples"></a>25.6 Recap of vectorizing across multiple examples</h2><p><img src="https://s2.loli.net/2023/12/20/LKg54FatcyoUx7B.png" alt="image-20231220215654131"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>30激活函数</title>
+    <url>/2023/12/20/30-ji-huo-han-shu/</url>
+    <content><![CDATA[<h1 id="30-激活函数"><a href="#30-激活函数" class="headerlink" title="30 激活函数"></a>30 激活函数</h1><h2 id="30-1-Activation-functions"><a href="#30-1-Activation-functions" class="headerlink" title="30.1 Activation functions"></a>30.1 Activation functions</h2><p><code>sigmoid函数</code>总是表现要比 <code>tanh双曲正切函数</code>要好一点，这是因为它的值域在 [-1, 1] 之间，激活函数的平均值是 0， 你可能需要平移所有数据，让数据平均值为 0， 使用 <code>tanh</code> 而不是 <code>sigmoid</code> 也有类似于庶几乎中心化的效果</p>
+<p>它们均有的缺点是，当向两边无限延申的时候，他俩的斜率都非常地小，这会拖慢梯度下降法。</p>
+<p>经验法则：当你二分类地时候，最好使用 <code>sigmoid</code> 函数，其他默认选择 <code>ReLU</code> 或者 <code>leakyReLU</code></p>
+<p><img src="https://s2.loli.net/2023/12/20/bP1OkHjLBsMXyQR.png" alt="image-20231220221439273"></p>
+<h2 id="30-2-Pros-and-cons-of-activation-functions"><a href="#30-2-Pros-and-cons-of-activation-functions" class="headerlink" title="30.2 Pros and cons of activation functions"></a>30.2 Pros and cons of activation functions</h2><p><img src="https://s2.loli.net/2023/12/20/jCgQrTwzMZeoa49.png" alt="image-20231220221626024"></p>
+<h2 id="30-3-Why-use-activation-function"><a href="#30-3-Why-use-activation-function" class="headerlink" title="30.3 Why use activation function?"></a>30.3 Why use activation function?</h2><p><img src="https://s2.loli.net/2023/12/20/4weY2TZ6yL1KzGB.png" alt="image-20231220222203072"></p>
+<h2 id="30-4-Sigmoid-activation-function"><a href="#30-4-Sigmoid-activation-function" class="headerlink" title="30.4 Sigmoid activation function"></a>30.4 Sigmoid activation function</h2><p><img src="https://s2.loli.net/2023/12/21/P1NoVB9gQzRHWOe.png" alt="image-20231221122649209"></p>
+<p><img src="https://s2.loli.net/2023/12/21/uoSEqQlPgIeCcOY.png" alt="image-20231221122835804"></p>
+<p><img src="https://s2.loli.net/2023/12/21/JxTZcyqBerOFfwh.png" alt="image-20231221123025173"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1054,6 +1054,23 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
+    <title>38深层网络中的前向传播</title>
+    <url>/2023/12/23/38-shen-ceng-wang-luo-zhong-de-qian-xiang-chuan-bo/</url>
+    <content><![CDATA[<h1 id="38-深层网络中的前向传播"><a href="#38-深层网络中的前向传播" class="headerlink" title="38 深层网络中的前向传播"></a>38 深层网络中的前向传播</h1><p><strong>深度神经网络的符号和如何在深度网络中执行正向传播。对于单个训练实例 x 的前向传播，首先计算第一层的激活，然后计算第二层到输出层的激活，最终得到预测输出。还讨论向量化方法和循环实现正向传播的必要性。</strong></p>
+<ul>
+<li><strong>深度神经网络的正向传播过程，对于单个训练实例的前向传播的计算方法</strong></li>
+<li>深度神经网络的正向传播</li>
+<li>向量化方法在整个训练集上的正向传播</li>
+<li>输入特征向量 x 在计算激活时等于零层的激活</li>
+<li><strong>深度神经网络的符号和正向传播的实现，包括将小写字母替换为大写字母、循环计算激活量等。</strong></li>
+<li>深度学习的符号和表示法</li>
+<li>训练集和表示和预测结果</li>
+<li>深度神经网络的实现和符号表示</li>
+</ul>
+<h2 id="38-1-Forward-propagation-in-a-deep-network"><a href="#38-1-Forward-propagation-in-a-deep-network" class="headerlink" title="38.1 Forward propagation in a deep network"></a>38.1 Forward propagation in a deep network</h2><p><img src="https://s2.loli.net/2023/12/23/szgD3h5LA1CIcTv.png" alt="image-20231223180058234"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>37前向传播和反向传播</title>
     <url>/2023/12/22/37-qian-xiang-chuan-bo-he-fan-xiang-chuan-bo/</url>
     <content><![CDATA[<h1 id="37-前向传播和反向传播"><a href="#37-前向传播和反向传播" class="headerlink" title="37 前向传播和反向传播"></a>37 前向传播和反向传播</h1><p><strong>实现深度神经网路的基本模块，包括前向传播和反向传播。其中，前向传播涉及输入、减去一个、和产出，反向传播涉及导数、梯度和损失函数。通过实现这些方程，可以得到正确的前向传播和反向传播的实现，以及所需的导数。作者建议在开始编程联系前，先研究微积分和线性代数，以便于更好地理解推导。</strong></p>
@@ -1082,23 +1099,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 <h2 id="37-1-Forward-propagation-for-layer-l"><a href="#37-1-Forward-propagation-for-layer-l" class="headerlink" title="37.1 Forward propagation for layer $l$"></a>37.1 Forward propagation for layer $l$</h2><p><img src="https://s2.loli.net/2023/12/22/O1osy4RcXdkAUfS.png" alt="image-20231222175038352"></p>
 <h2 id="37-2-Backward-propagation-for-layer-l"><a href="#37-2-Backward-propagation-for-layer-l" class="headerlink" title="37.2 Backward propagation for layer $l$"></a>37.2 Backward propagation for layer $l$</h2><p><img src="https://s2.loli.net/2023/12/22/A7NxXnUbzvs1gyY.png" alt="image-20231222175306718"></p>
 <h2 id="37-3-Summary"><a href="#37-3-Summary" class="headerlink" title="37.3 Summary"></a>37.3 Summary</h2><p><img src="https://s2.loli.net/2023/12/22/H6nAPErOMaTpRKF.png" alt="image-20231222175622368"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>38深层网络中的前向传播</title>
-    <url>/2023/12/23/38-shen-ceng-wang-luo-zhong-de-qian-xiang-chuan-bo/</url>
-    <content><![CDATA[<h1 id="38-深层网络中的前向传播"><a href="#38-深层网络中的前向传播" class="headerlink" title="38 深层网络中的前向传播"></a>38 深层网络中的前向传播</h1><p><strong>深度神经网络的符号和如何在深度网络中执行正向传播。对于单个训练实例 x 的前向传播，首先计算第一层的激活，然后计算第二层到输出层的激活，最终得到预测输出。还讨论向量化方法和循环实现正向传播的必要性。</strong></p>
-<ul>
-<li><strong>深度神经网络的正向传播过程，对于单个训练实例的前向传播的计算方法</strong></li>
-<li>深度神经网络的正向传播</li>
-<li>向量化方法在整个训练集上的正向传播</li>
-<li>输入特征向量 x 在计算激活时等于零层的激活</li>
-<li><strong>深度神经网络的符号和正向传播的实现，包括将小写字母替换为大写字母、循环计算激活量等。</strong></li>
-<li>深度学习的符号和表示法</li>
-<li>训练集和表示和预测结果</li>
-<li>深度神经网络的实现和符号表示</li>
-</ul>
-<h2 id="38-1-Forward-propagation-in-a-deep-network"><a href="#38-1-Forward-propagation-in-a-deep-network" class="headerlink" title="38.1 Forward propagation in a deep network"></a>38.1 Forward propagation in a deep network</h2><p><img src="https://s2.loli.net/2023/12/23/szgD3h5LA1CIcTv.png" alt="image-20231223180058234"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1191,11 +1191,10 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>52Dropout正则化</title>
-    <url>/2024/01/13/52-dropout-zheng-ze-hua/</url>
-    <content><![CDATA[<h1 id="52-Dropout-正则化"><a href="#52-Dropout-正则化" class="headerlink" title="52 Dropout 正则化"></a>52 Dropout 正则化</h1><h2 id="52-1Dropout-regularization"><a href="#52-1Dropout-regularization" class="headerlink" title="52.1Dropout regularization"></a>52.1Dropout regularization</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240113203610466.png" alt="image-20240113203610466"></p>
-<h2 id="52-2Implementing-dropout-“Inverted-dropout”"><a href="#52-2Implementing-dropout-“Inverted-dropout”" class="headerlink" title="52.2Implementing dropout(“Inverted dropout”)"></a>52.2Implementing dropout(“Inverted dropout”)</h2><p><img src="https://s2.loli.net/2024/01/13/ilLpst3SmYoHRuX.png" alt="image-20240113210330586"></p>
-<h2 id="52-3Making-predictions-at-test-time"><a href="#52-3Making-predictions-at-test-time" class="headerlink" title="52.3Making predictions at test time"></a>52.3Making predictions at test time</h2><p><img src="https://s2.loli.net/2024/01/13/YDzrq1TguIACMRh.png" alt="image-20240113210850114"></p>
+    <title>为什么正则化可以减少过拟合？</title>
+    <url>/2024/01/06/51-wei-shi-me-zheng-ze-hua-ke-yi-jian-shao-guo-ni-he/</url>
+    <content><![CDATA[<h1 id="51-为什么正则化可以减少过拟合？"><a href="#51-为什么正则化可以减少过拟合？" class="headerlink" title="51 为什么正则化可以减少过拟合？"></a>51 为什么正则化可以减少过拟合？</h1><h2 id="51-1-How-does-regularization-prevent-overfitting"><a href="#51-1-How-does-regularization-prevent-overfitting" class="headerlink" title="51.1 How does regularization prevent overfitting?"></a>51.1 How does regularization prevent overfitting?</h2><p><img src="https://s2.loli.net/2024/01/06/eK9HgiZJAS7MwGz.png" alt="image-20240106230618834"></p>
+<p><img src="https://s2.loli.net/2024/01/06/vMUnYbDhmiwR85j.png" alt="image-20240106231520169"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1206,10 +1205,11 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>为什么正则化可以减少过拟合？</title>
-    <url>/2024/01/06/51-wei-shi-me-zheng-ze-hua-ke-yi-jian-shao-guo-ni-he/</url>
-    <content><![CDATA[<h1 id="51-为什么正则化可以减少过拟合？"><a href="#51-为什么正则化可以减少过拟合？" class="headerlink" title="51 为什么正则化可以减少过拟合？"></a>51 为什么正则化可以减少过拟合？</h1><h2 id="51-1-How-does-regularization-prevent-overfitting"><a href="#51-1-How-does-regularization-prevent-overfitting" class="headerlink" title="51.1 How does regularization prevent overfitting?"></a>51.1 How does regularization prevent overfitting?</h2><p><img src="https://s2.loli.net/2024/01/06/eK9HgiZJAS7MwGz.png" alt="image-20240106230618834"></p>
-<p><img src="https://s2.loli.net/2024/01/06/vMUnYbDhmiwR85j.png" alt="image-20240106231520169"></p>
+    <title>52Dropout正则化</title>
+    <url>/2024/01/13/52-dropout-zheng-ze-hua/</url>
+    <content><![CDATA[<h1 id="52-Dropout-正则化"><a href="#52-Dropout-正则化" class="headerlink" title="52 Dropout 正则化"></a>52 Dropout 正则化</h1><h2 id="52-1Dropout-regularization"><a href="#52-1Dropout-regularization" class="headerlink" title="52.1Dropout regularization"></a>52.1Dropout regularization</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240113203610466.png" alt="image-20240113203610466"></p>
+<h2 id="52-2Implementing-dropout-“Inverted-dropout”"><a href="#52-2Implementing-dropout-“Inverted-dropout”" class="headerlink" title="52.2Implementing dropout(“Inverted dropout”)"></a>52.2Implementing dropout(“Inverted dropout”)</h2><p><img src="https://s2.loli.net/2024/01/13/ilLpst3SmYoHRuX.png" alt="image-20240113210330586"></p>
+<h2 id="52-3Making-predictions-at-test-time"><a href="#52-3Making-predictions-at-test-time" class="headerlink" title="52.3Making predictions at test time"></a>52.3Making predictions at test time</h2><p><img src="https://s2.loli.net/2024/01/13/YDzrq1TguIACMRh.png" alt="image-20240113210850114"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1272,6 +1272,15 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
+    <title>GBDT</title>
+    <url>/2024/11/30/gbdt/</url>
+    <content><![CDATA[<p>46546</p>
+<p><img src="https://gitee.com/yuanlongYl/picgo_imgs/raw/master/blogs/202411301546027.png" alt="image-20241130154653593"></p>
+<p>GBDT是基地啊时间 </p>
+<p><img src="https://gitee.com/yuanlongYl/picgo_imgs/raw/master/blogs/202411301603879.png" alt="image-20241130160351980"></p>
+]]></content>
+  </entry>
+  <entry>
     <title></title>
     <url>/2024/01/02/graph-neural-networks/</url>
     <content><![CDATA[<h1 id="Graph-Neural-Networks"><a href="#Graph-Neural-Networks" class="headerlink" title="Graph Neural Networks"></a>Graph Neural Networks</h1><p> <img src="https://s2.loli.net/2024/01/02/X3PRzd8yeAVw2BQ.png" alt="image-20240102091617093"></p>
@@ -1293,12 +1302,43 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>GBDT</title>
-    <url>/2024/11/30/gbdt/</url>
-    <content><![CDATA[<p>46546</p>
-<p><img src="https://gitee.com/yuanlongYl/picgo_imgs/raw/master/blogs/202411301546027.png" alt="image-20241130154653593"></p>
-<p>GBDT是基地啊时间 </p>
+    <title>JVM</title>
+    <url>/2023/11/03/jvm/</url>
+    <content><![CDATA[<h1 id="1-JVM与Java体系结构"><a href="#1-JVM与Java体系结构" class="headerlink" title="1. JVM与Java体系结构"></a>1. JVM与Java体系结构</h1><p><img src="../imgs/$%7Bfiilename%7D/image-20231103173059181-1699003860604-7.png" alt="image-20231103173059181"></p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231103173525870-1699004128599-9.png" alt="image-20231103173525870"></p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231103174101458-1699004463451-11.png" alt="image-20231103174101458"></p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231103175519266-1699005321228-13.png" alt="image-20231103175519266"></p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231103175721844-1699005443920-15.png" alt="image-20231103175721844"></p>
+<h2 id="1-1Java虚拟机"><a href="#1-1Java虚拟机" class="headerlink" title="1.1Java虚拟机"></a>1.1Java虚拟机</h2><p><strong>字节码</strong>：</p>
+<p>1.任何能在jvm平台上执行的字节码格式都是一样的，称为<strong>jvm字节码</strong></p>
+<p>2.不同的编译器，可以编译出相同的字节码文件，字节码文件也可以在不同的JVM上运行</p>
+<p>3.Java虚拟机与Java语言并没有必然的联系，它只与特定的二进制文件——Class文件格式所关联，Class文件中包含了Java虚拟机指令集（或称为字节码、Bytecodes）和符号表，还有其他辅助信息</p>
+<p><strong>虚拟机</strong>：</p>
+<p>1.所谓虚拟机（Virtual Machine），就是一台虚拟的计算机。他是一款软件，用来执行一系列不腻计算机指令。大体上，虚拟机可以分为<strong>系统虚拟机</strong>和<strong>程序虚拟机</strong>。Visual Box、VMware属于系统虚拟机，完全是对物理计算机的仿真，提供了一个可运行完整操作系统的软件平台；程序虚拟机就是Java虚拟机，它专门为执行单个计算机程序而设计</p>
+<p>2.无论是系统虚拟机还是程序虚拟机，在上面运行的软件都被限制与虚拟机提供的自愿者中</p>
+<p><strong>作用</strong></p>
+<p>1.Java虚拟机就是二进制字节码的运行环境，负责装载字节码到其内部，解释/编译为对应平台上的机器指令执行。每一条Java指令，Java虚拟机规范中都有详细的定义，如怎么取操作数，怎么处理操作数，处理结果放在哪里。</p>
+<p><strong>特点</strong></p>
+<p>1.一次编译，到处运行</p>
+<p>2.自动内存管理</p>
+<p>3.自动垃圾回收功能</p>
+<h2 id="1-2JVM位置"><a href="#1-2JVM位置" class="headerlink" title="1.2JVM位置"></a>1.2JVM位置</h2><p><img src="../imgs/$%7Bfiilename%7D/image-20231105223414697-1699194857625-1.png" alt="image-20231105223414697"></p>
+<p>JVM是运行在操作系统之上的，它与硬件没有直接的交互。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105223614555-1699194975706-3.png" alt="image-20231105223614555"></p>
+<h2 id="1-3Google的Android系统结构"><a href="#1-3Google的Android系统结构" class="headerlink" title="1.3Google的Android系统结构"></a>1.3Google的Android系统结构</h2><p><img src="../imgs/$%7Bfiilename%7D/image-20231105223734847-1699195056452-5.png" alt="image-20231105223734847"></p>
+<h2 id="1-4JVM整体结构"><a href="#1-4JVM整体结构" class="headerlink" title="1.4JVM整体结构"></a>1.4JVM整体结构</h2><p><img src="../imgs/$%7Bfiilename%7D/image-20231105223857089-1699195138528-7.png" alt="image-20231105223857089"></p>
+<p>1.HotSpot VM是目前市面上高性能虚拟机的代表作之一</p>
+<p>2.它采用解释器与即时编译器并存的架构</p>
+<h2 id="1-5Java代码的执行流程"><a href="#1-5Java代码的执行流程" class="headerlink" title="1.5Java代码的执行流程"></a>1.5Java代码的执行流程</h2><p><img src="../imgs/$%7Bfiilename%7D/image-20231105224512300-1699195514828-9.png" alt="image-20231105224512300"></p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105224745162-1699195666593-11.png" alt="image-20231105224745162"></p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105224907157-1699195749883-13.png" alt="image-20231105224907157"></p>
 ]]></content>
+      <categories>
+        <category>软件开发</category>
+      </categories>
+      <tags>
+        <tag>JVM</tag>
+      </tags>
   </entry>
   <entry>
     <title>Java基础</title>
@@ -1363,45 +1403,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
       </tags>
   </entry>
   <entry>
-    <title>JVM</title>
-    <url>/2023/11/03/jvm/</url>
-    <content><![CDATA[<h1 id="1-JVM与Java体系结构"><a href="#1-JVM与Java体系结构" class="headerlink" title="1. JVM与Java体系结构"></a>1. JVM与Java体系结构</h1><p><img src="../imgs/$%7Bfiilename%7D/image-20231103173059181-1699003860604-7.png" alt="image-20231103173059181"></p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231103173525870-1699004128599-9.png" alt="image-20231103173525870"></p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231103174101458-1699004463451-11.png" alt="image-20231103174101458"></p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231103175519266-1699005321228-13.png" alt="image-20231103175519266"></p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231103175721844-1699005443920-15.png" alt="image-20231103175721844"></p>
-<h2 id="1-1Java虚拟机"><a href="#1-1Java虚拟机" class="headerlink" title="1.1Java虚拟机"></a>1.1Java虚拟机</h2><p><strong>字节码</strong>：</p>
-<p>1.任何能在jvm平台上执行的字节码格式都是一样的，称为<strong>jvm字节码</strong></p>
-<p>2.不同的编译器，可以编译出相同的字节码文件，字节码文件也可以在不同的JVM上运行</p>
-<p>3.Java虚拟机与Java语言并没有必然的联系，它只与特定的二进制文件——Class文件格式所关联，Class文件中包含了Java虚拟机指令集（或称为字节码、Bytecodes）和符号表，还有其他辅助信息</p>
-<p><strong>虚拟机</strong>：</p>
-<p>1.所谓虚拟机（Virtual Machine），就是一台虚拟的计算机。他是一款软件，用来执行一系列不腻计算机指令。大体上，虚拟机可以分为<strong>系统虚拟机</strong>和<strong>程序虚拟机</strong>。Visual Box、VMware属于系统虚拟机，完全是对物理计算机的仿真，提供了一个可运行完整操作系统的软件平台；程序虚拟机就是Java虚拟机，它专门为执行单个计算机程序而设计</p>
-<p>2.无论是系统虚拟机还是程序虚拟机，在上面运行的软件都被限制与虚拟机提供的自愿者中</p>
-<p><strong>作用</strong></p>
-<p>1.Java虚拟机就是二进制字节码的运行环境，负责装载字节码到其内部，解释/编译为对应平台上的机器指令执行。每一条Java指令，Java虚拟机规范中都有详细的定义，如怎么取操作数，怎么处理操作数，处理结果放在哪里。</p>
-<p><strong>特点</strong></p>
-<p>1.一次编译，到处运行</p>
-<p>2.自动内存管理</p>
-<p>3.自动垃圾回收功能</p>
-<h2 id="1-2JVM位置"><a href="#1-2JVM位置" class="headerlink" title="1.2JVM位置"></a>1.2JVM位置</h2><p><img src="../imgs/$%7Bfiilename%7D/image-20231105223414697-1699194857625-1.png" alt="image-20231105223414697"></p>
-<p>JVM是运行在操作系统之上的，它与硬件没有直接的交互。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105223614555-1699194975706-3.png" alt="image-20231105223614555"></p>
-<h2 id="1-3Google的Android系统结构"><a href="#1-3Google的Android系统结构" class="headerlink" title="1.3Google的Android系统结构"></a>1.3Google的Android系统结构</h2><p><img src="../imgs/$%7Bfiilename%7D/image-20231105223734847-1699195056452-5.png" alt="image-20231105223734847"></p>
-<h2 id="1-4JVM整体结构"><a href="#1-4JVM整体结构" class="headerlink" title="1.4JVM整体结构"></a>1.4JVM整体结构</h2><p><img src="../imgs/$%7Bfiilename%7D/image-20231105223857089-1699195138528-7.png" alt="image-20231105223857089"></p>
-<p>1.HotSpot VM是目前市面上高性能虚拟机的代表作之一</p>
-<p>2.它采用解释器与即时编译器并存的架构</p>
-<h2 id="1-5Java代码的执行流程"><a href="#1-5Java代码的执行流程" class="headerlink" title="1.5Java代码的执行流程"></a>1.5Java代码的执行流程</h2><p><img src="../imgs/$%7Bfiilename%7D/image-20231105224512300-1699195514828-9.png" alt="image-20231105224512300"></p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105224745162-1699195666593-11.png" alt="image-20231105224745162"></p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105224907157-1699195749883-13.png" alt="image-20231105224907157"></p>
-]]></content>
-      <categories>
-        <category>软件开发</category>
-      </categories>
-      <tags>
-        <tag>JVM</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Kaggle&#39;s_30_Days_Of_ML</title>
     <url>/2023/11/16/kaggle-s-30-days-of-ml/</url>
     <content><![CDATA[<h1 id="Kaggle’s-30-Days-Of-ML-Day-1-Getting-Started-With-Kaggle"><a href="#Kaggle’s-30-Days-Of-ML-Day-1-Getting-Started-With-Kaggle" class="headerlink" title="Kaggle’s 30 Days Of ML (Day-1): Getting Started With Kaggle"></a>Kaggle’s 30 Days Of ML (Day-1): Getting Started With Kaggle</h1><h1 id="Kaggle’s-30-Days-Of-ML-Day-9-First-Machine-Learning-Model-and-Validation"><a href="#Kaggle’s-30-Days-Of-ML-Day-9-First-Machine-Learning-Model-and-Validation" class="headerlink" title="Kaggle’s 30 Days Of ML (Day-9): First Machine Learning Model and Validation"></a>Kaggle’s 30 Days Of ML (Day-9): First Machine Learning Model and Validation</h1><p><img src="../imgs/$%7Bfiilename%7D/image-20231117125459917-1700196901968-1.png" alt="image-20231117125459917"></p>
@@ -1412,20 +1413,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
       </categories>
       <tags>
         <tag>kaggle比赛</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>基于提示的零样本关系抽取方法探索</title>
-    <url>/2023/11/06/ji-yu-ti-shi-de-ling-yang-ben-guan-xi-chou-qu-fang-fa-tan-suo/</url>
-    <content><![CDATA[<h1 id="基于提示的零样本关系抽取方法探索"><a href="#基于提示的零样本关系抽取方法探索" class="headerlink" title="基于提示的零样本关系抽取方法探索"></a>基于提示的零样本关系抽取方法探索</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p><strong>零样本关系抽取是处理现实世界中缺乏标记数据的新兴关系的重要方法</strong>。然而，<strong>主流的两塔零样本方法通常依赖于预定义关系的大规模域内标记数据</strong>。在这项工作中，我们<strong>将零样本关系提取视为一种通过提示调整优化的语义匹配任务，当预定义关系的标记数据极其稀缺时，它仍然保持优异的泛化性能</strong>。为了最大限度地提高数据利用的效率，我们引入了一种<strong>提示调整技术来引出预训练语言模型（PLM）中现有的关系知识，而不是直接进行微调</strong>。此外，在训练过程中模型接触到的关系描述很少，我们认为这是两塔方法的性能瓶颈。为了突破瓶颈，我们在编码过程中直接对关系实例及其描述之间的语义交互进行建模。在两个学术数据集上的实验结果表明：（1）我们的方法在预定义关系的不同样本上大幅优于之前最先进的方法； （2）这种优势在资源匮乏的情况下会进一步放大。</p>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>近年来，人们对从发票、采购订单、纳税申报表等各种垂直领域的<strong>类似表单的文档中提取结构化信息越来越感兴趣</strong>。[Zhao、Wu 和 Wang 2019；林等人。 2020；于等人。 2019]。在本文中，我们重新审视<strong>关键信息提取（KIE）问题，即从给定文档中提取一组键的值</strong>[Huang et al. 2017]。 2019]。例如，在图 1 中，给定一组键（“电话”、“总计”）和左侧收据文档，KIE 任务旨在提取“电话”的值“03-55423228”和“电话”的值“50.60”全部的”。提取的结构化信息对于广泛的下游任务至关重要，例如知识库构建、问答、文档理解等[Liu and Croft 2002；吴森等人。 2018； Geva 和 Berant 2018]。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231107114701675-1699328823889-1.png" alt="image-20231107114701675"></p>
-]]></content>
-      <categories>
-        <category>关系抽取</category>
-      </categories>
-      <tags>
-        <tag>ACL2022</tag>
       </tags>
   </entry>
   <entry>
@@ -1472,6 +1459,20 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 <h2 id="exposure-bias"><a href="#exposure-bias" class="headerlink" title="exposure bias"></a>exposure bias</h2><p><img src="https://s2.loli.net/2024/01/01/djlDJ2hG6XLQqnk.png" alt="image-20240101120514182"></p>
 <p><img src="https://s2.loli.net/2024/01/01/lRoSYjk3dCJmFGc.png" alt="image-20240101120627640"></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>基于提示的零样本关系抽取方法探索</title>
+    <url>/2023/11/06/ji-yu-ti-shi-de-ling-yang-ben-guan-xi-chou-qu-fang-fa-tan-suo/</url>
+    <content><![CDATA[<h1 id="基于提示的零样本关系抽取方法探索"><a href="#基于提示的零样本关系抽取方法探索" class="headerlink" title="基于提示的零样本关系抽取方法探索"></a>基于提示的零样本关系抽取方法探索</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p><strong>零样本关系抽取是处理现实世界中缺乏标记数据的新兴关系的重要方法</strong>。然而，<strong>主流的两塔零样本方法通常依赖于预定义关系的大规模域内标记数据</strong>。在这项工作中，我们<strong>将零样本关系提取视为一种通过提示调整优化的语义匹配任务，当预定义关系的标记数据极其稀缺时，它仍然保持优异的泛化性能</strong>。为了最大限度地提高数据利用的效率，我们引入了一种<strong>提示调整技术来引出预训练语言模型（PLM）中现有的关系知识，而不是直接进行微调</strong>。此外，在训练过程中模型接触到的关系描述很少，我们认为这是两塔方法的性能瓶颈。为了突破瓶颈，我们在编码过程中直接对关系实例及其描述之间的语义交互进行建模。在两个学术数据集上的实验结果表明：（1）我们的方法在预定义关系的不同样本上大幅优于之前最先进的方法； （2）这种优势在资源匮乏的情况下会进一步放大。</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>近年来，人们对从发票、采购订单、纳税申报表等各种垂直领域的<strong>类似表单的文档中提取结构化信息越来越感兴趣</strong>。[Zhao、Wu 和 Wang 2019；林等人。 2020；于等人。 2019]。在本文中，我们重新审视<strong>关键信息提取（KIE）问题，即从给定文档中提取一组键的值</strong>[Huang et al. 2017]。 2019]。例如，在图 1 中，给定一组键（“电话”、“总计”）和左侧收据文档，KIE 任务旨在提取“电话”的值“03-55423228”和“电话”的值“50.60”全部的”。提取的结构化信息对于广泛的下游任务至关重要，例如知识库构建、问答、文档理解等[Liu and Croft 2002；吴森等人。 2018； Geva 和 Berant 2018]。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231107114701675-1699328823889-1.png" alt="image-20231107114701675"></p>
+]]></content>
+      <categories>
+        <category>关系抽取</category>
+      </categories>
+      <tags>
+        <tag>ACL2022</tag>
+      </tags>
   </entry>
   <entry>
     <title>基于链式推理的文档级事件论元提取</title>
@@ -1926,74 +1927,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
       </categories>
       <tags>
         <tag>EMNLP2023</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献整理</title>
-    <url>/2023/11/09/wen-xian-zheng-li/</url>
-    <content><![CDATA[<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">基于大语言模型的零样本信息抽取方法实现</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Event Extraction by Answering (Almost) Natural Questions</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
-      <categories>
-        <category>文献整理</category>
-      </categories>
-      <tags>
-        <tag>文献整理</tag>
       </tags>
   </entry>
   <entry>
@@ -3015,13 +2948,72 @@ Gain\_Gini(D,A)=\frac{D_1}{D}Gini(D_1)+\frac{D_2}{D}Gini(D_2)</script><blockquot
       </tags>
   </entry>
   <entry>
-    <title>测试yl</title>
-    <url>/2024/11/30/ce-shi-yl/</url>
-    <content><![CDATA[<p>445645465casnklcnascnasknc</p>
-<p><img src="测试yl.assets/image-20241130105502007-17329353143521.png" alt="image-20241130105502007"></p>
-<p><img src="https://gitee.com/yuanlongYl/picgo_imgs/raw/master/blogs/202411301055442.png" alt="image-20241130105525788"></p>
-<p><img src="https://gitee.com/yuanlongYl/picgo_imgs/raw/master/blogs/202411301104045.png" alt="image-20241130110434075"></p>
+    <title>文献整理</title>
+    <url>/2023/11/09/wen-xian-zheng-li/</url>
+    <content><![CDATA[<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">基于大语言模型的零样本信息抽取方法实现</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Event Extraction by Answering (Almost) Natural Questions</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 ]]></content>
+      <categories>
+        <category>文献整理</category>
+      </categories>
+      <tags>
+        <tag>文献整理</tag>
+      </tags>
   </entry>
   <entry>
     <title>知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现</title>
