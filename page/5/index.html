@@ -21,11 +21,11 @@
   </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="humbleyl">
+<meta property="og:title" content="院龙">
 <meta property="og:url" content="http://humble2967738843.github.io/page/5/index.html">
-<meta property="og:site_name" content="humbleyl">
+<meta property="og:site_name" content="院龙">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="yuan long">
+<meta property="article:author" content="院龙">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://humble2967738843.github.io/page/5/">
@@ -41,7 +41,7 @@
   };
 </script>
 
-  <title>humbleyl</title>
+  <title>院龙</title>
   
 
 
@@ -74,7 +74,7 @@
 
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="humbleyl" type="application/atom+xml">
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="院龙" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -95,7 +95,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">humbleyl</h1>
+      <h1 class="site-title">院龙</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -148,323 +148,16 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN,en,default">
-    <link itemprop="mainEntityOfPage" href="http://humble2967738843.github.io/2023/12/12/08-xian-xing-hui-gui/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="yuan long">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="humbleyl">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/12/12/08-xian-xing-hui-gui/" class="post-title-link" itemprop="url">08线性回归</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-12-12 12:41:36" itemprop="dateCreated datePublished" datetime="2023-12-12T12:41:36+08:00">2023-12-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-26 13:06:58" itemprop="dateModified" datetime="2024-05-26T13:06:58+08:00">2024-05-26</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="08线性回归"><a href="#08线性回归" class="headerlink" title="08线性回归"></a>08线性回归</h1><p><img src="https://s2.loli.net/2023/12/12/tPoJxLu1haDlczS.png" alt="image-20231212124321900"></p>
-<h2 id="8-1线性回归"><a href="#8-1线性回归" class="headerlink" title="8.1线性回归"></a>8.1线性回归</h2><ul>
-<li>如何在美国买房<ul>
-<li>看中一个房子，参观了解</li>
-<li>估计一个价格，出价</li>
-</ul>
-</li>
-</ul>
-<p>房屋基本信息：</p>
-<p><img src="https://s2.loli.net/2023/12/12/G8lb3v2MTjiUFkp.png" alt="image-20231212124510969"></p>
-<p>房屋实景：</p>
-<p><img src="https://s2.loli.net/2023/12/12/iQoMejmu6ckIWVt.png" alt="image-20231212124539159"></p>
-<ul>
-<li>房价预测</li>
-</ul>
-<p>历史的房价走势：</p>
-<p><img src="https://s2.loli.net/2023/12/12/zZJpXMCyNceQ5dS.png" alt="image-20231212124737102"></p>
-<p>当你以一定的价格购入本套房屋之后，过了一段时间，再次给出房价走势，就可以看出你的盈亏情况。</p>
-<p><img src="https://s2.loli.net/2023/12/12/S4DWyRkCAedNTxK.png" alt="image-20231212124913782"></p>
-<ul>
-<li>一个简化模型</li>
-<li>假设1：影响房价的关键因素是卧室个数，卫生间个数和居住面积，记为：$x_1, x_2, x_3$ </li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/12/I3yiWQ5vYeoMTkZ.png" alt="image-20231212125228395"></p>
-<ul>
-<li>假设2：成交价是关键因素的加权和</li>
-</ul>
-<script type="math/tex; mode=display">
-y = w_1x_1 + w_2x_2 + w_3x_3 + b</script><p>权重和偏差的实际值在后面决定</p>
-<ul>
-<li>线性模型<ul>
-<li>给定 n 维输入 $\boldsymbol {x} = [x_1,x_2,…, x_n]^T$</li>
-<li>线性模型有一个 n 维权重和一个标量偏差</li>
-</ul>
-</li>
-</ul>
-<script type="math/tex; mode=display">
-\boldsymbol {w} = [w_1, w_2, ..., w_n]^T, b</script><ul>
-<li>输出是输入的加权和</li>
-</ul>
-<script type="math/tex; mode=display">
-y = w_1x_1 + w_2x_2 + ... + w_nx_n + b</script><p>向量版本：$y = &lt;\boldsymbol {w}, \boldsymbol {x}&gt; + b$</p>
-<ul>
-<li><strong>线性模型可以看作是单层的神经网络</strong></li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/12/IC5SVO2rBnqemTf.png" alt="image-20231212125932995"></p>
-<ul>
-<li>神经网络源于神经科学</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/12/RItL3PfZVknXJpY.png" alt="image-20231212130138271"></p>
-<ul>
-<li>衡量预估质量<ul>
-<li>比较真实值和预估值，例如房屋售价和估价</li>
-<li>假设 $y$ 是真实值，$\hat {y}$ 是估计值，我们可以比较</li>
-</ul>
-</li>
-</ul>
-<script type="math/tex; mode=display">
-l(y, \hat{y}) = 1/2(y - \hat{y})^2</script><p>这个叫做平方损失</p>
-<ul>
-<li>训练数据<ul>
-<li>收集一些数据点来决定参数值（权重和偏差），例如过去6个卖的房子</li>
-<li>这被称之为训练数据</li>
-<li>通常越多越好</li>
-<li>假设我们有 n 个样本，记</li>
-</ul>
-</li>
-</ul>
-<script type="math/tex; mode=display">
-\boldsymbol {X} = \left[ \boldsymbol {x_1}, \boldsymbol {x_2}, ..., \boldsymbol {x_n} \right]^T \\
-\boldsymbol {y} = \left[ {y_1}, {y_2}, ..., {y_n} \right]^T</script><ul>
-<li>参数学习<ul>
-<li>训练损失</li>
-</ul>
-</li>
-</ul>
-<script type="math/tex; mode=display">
-l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w}, b) = 1/2n \sum_{i=1}^n (y_i - <\boldsymbol {x_i}, \boldsymbol {w}> - b)^2 \\ = 1/2n ||\boldsymbol {y} - \boldsymbol {X}\boldsymbol {w} - b||^2</script><ul>
-<li>最小化损失来学习参数</li>
-</ul>
-<script type="math/tex; mode=display">
-\boldsymbol {w}^*, \boldsymbol {b}^* = arg \space min_{\boldsymbol {w}, b} \space l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w}, b)</script><ul>
-<li>显式解<ul>
-<li>将偏差加入权重 $\boldsymbol {X} \longleftarrow [\boldsymbol {X}, \boldsymbol {1}] \space \boldsymbol {w} \longleftarrow [\boldsymbol {w}, b]^T$</li>
-</ul>
-</li>
-</ul>
-<script type="math/tex; mode=display">
-l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \boldsymbol {X}\boldsymbol {w}||^2 \space ) \space \frac{\partial}{\partial \boldsymbol {w}}l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w}) \\
-=1/n (\boldsymbol {y} - \boldsymbol {X}\boldsymbol {w})^T\boldsymbol {X}</script><ul>
-<li>损失是凸函数（<strong>意味着最优解就在梯度等于0的地方</strong>），所以满足最优解</li>
-</ul>
-<script type="math/tex; mode=display">
-\frac{\partial}{\partial w} l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w}) = 0 \\
-<=> 1/n(\boldsymbol {y} - \boldsymbol {X}\boldsymbol {w})^T\boldsymbol {X} = 0 \\
-<=> \boldsymbol {W}^* = (\boldsymbol {X}^T\boldsymbol {X})^{-1}\boldsymbol {X}\boldsymbol {y}</script><ul>
-<li>总结<ul>
-<li>线性回归是对 n 维输入的加权，外加偏差</li>
-<li>使用平方损失来衡量预测值于真实值的差异</li>
-<li>线性回归有显示解</li>
-<li>线性回归可以看作是单层神经网络</li>
-</ul>
-</li>
-</ul>
-<h2 id="8-2基础优化算法"><a href="#8-2基础优化算法" class="headerlink" title="8.2基础优化算法"></a>8.2基础优化算法</h2><p><img src="https://s2.loli.net/2023/12/12/DW4uyxs8ChE5oqv.png" alt="image-20231212223951202"></p>
-<ul>
-<li>梯度下降（<strong>当一个模型没有显式解</strong>）<ul>
-<li>挑选一个初始值 $\boldsymbol {w}_0$</li>
-<li>重复迭代参数 t = 1, 2, 3</li>
-</ul>
-</li>
-</ul>
-<script type="math/tex; mode=display">
-\boldsymbol {w}_t = \boldsymbol {w}_{t-1} - \eta \frac{\partial \phi }{\partial \boldsymbol {w}_{t-1}}</script><ul>
-<li><p>沿着梯度方向将增加损失函数值</p>
-</li>
-<li><p>学习率：步长的超参数</p>
-</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/12/ozCe2PbAqRND61x.png" alt="二次函数等高线"></p>
-<p>分析这个例子，<strong>二次函数的等高线如上，首先挑选一个初始值 $\boldsymbol {w}_0$ ，然后计算它此处的梯度，也就是当前点处函数增长最快的方向，那么负梯度，就是函数下降最快的方向，我们要求出那个最优解，也就是谷底的位置，就要沿着某条路线不断接近这个最优点，而每一处的梯度为我们指明了方向。</strong></p>
-<ul>
-<li>如何选择学习率</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/12/nzMLgJox6YaTkeb.png" alt="image-20231212225822368"></p>
-<ul>
-<li>小批量随机梯度下降<ul>
-<li>在整个训练集上计算梯度太贵了<ul>
-<li>一个深度神经网络模型可能需要数分钟至数小时</li>
-</ul>
-</li>
-<li>我们可以随机采样 b 个样本 $i_1, i_2, …, i_b$ 来近似损失</li>
-</ul>
-</li>
-</ul>
-<script type="math/tex; mode=display">
-\frac{1}{b} \sum_{i \in I_b} l(\boldsymbol {X}_i, y_i, \boldsymbol {w})</script><ul>
-<li>b是批量大小，另一个重要的超参数</li>
-</ul>
-<ul>
-<li>选择批量大小<ul>
-<li>不能太小：每次计算量太小，不适合并行最大利用计算资源</li>
-<li>不能太大：内存消耗增加，浪费计算，例如：如果所有样本嗾使相同的</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>总结<ul>
-<li><strong>梯度下降通过不断沿着繁体都方向更新参数求解</strong></li>
-<li><strong>小批量随机梯度下降是深度学习的求解算法</strong></li>
-<li><strong>两个重要的超参数是批量大小和学习率</strong></li>
-</ul>
-</li>
-</ul>
-<h2 id="8-3线性回归的从零开始实现"><a href="#8-3线性回归的从零开始实现" class="headerlink" title="8.3线性回归的从零开始实现"></a>8.3线性回归的从零开始实现</h2><ul>
-<li>我们将从零开始实现整个方法，包括数据流水线、模型、损失函数和小批量随机梯度下降优化器</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/13/4aWFywdeXGmxp59.png" alt="image-20231213125158033"></p>
-<ul>
-<li>根据带有噪声的线性模型构造一个人造数据集，我们使用线性模型参数$\boldsymbol {w} = [2, -3.4]^T$、$b = 4.2$ 和噪声$\xi$生成数据集及其标签：</li>
-</ul>
-<script type="math/tex; mode=display">
-\boldsymbol {y} = \boldsymbol {X}\boldsymbol {w} + b + \xi</script><p><img src="https://s2.loli.net/2023/12/17/2qSVmaTbBR1K5f9.png" alt="image-20231217121341803"></p>
-<p><img src="https://s2.loli.net/2023/12/17/WXuQLoEcINxZPvn.png" alt="image-20231217121408819"></p>
-<p>参考</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41898018/article/details/119244914">torch.normal()的用法</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/didi_ya/article/details/121158666">PyTorch疑难杂症（1）——torch.matmul()函数用法总结</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_28618765/article/details/78083895">Python numpy函数：reshape（）</a></p>
-<p>X 的产生：从均值为 0 ，方差为 1 的分布，也就是正态分布中进行采样，行数是 num_examples ， 列数是 true_w 的列数，也就是特征数量。</p>
-<p>y 是 X 和 w 进行矩阵相乘后，加上偏置 b 后实现的，也就是先将 [1000, 2] 的矩阵和 [1, 2] 的矩阵进行矩阵的相乘（<strong>使用了广播机制</strong>）。</p>
-<p> y 添加噪音的方式是噪音元素和 y 元素的元素级相加。</p>
-<ul>
-<li><code>features</code>中的每一行都包含一个二维数据样本，<code>labels</code>中的每一行都包含一位标签值（一个标量）</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/17/MZ9zkbDwBVvR17T.png" alt="image-20231217123328347"></p>
-<ul>
-<li>通过生成第二个特征<code>features[:, 1]</code>和<code>labels</code>的散点图， 可以直观观察到两者之间的线性关系。</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/17/XCxtkbZ4BWr6l8n.png" alt="image-20231217124441242"></p>
-<ul>
-<li>在下面的代码中，我们[<strong>定义一个<code>data_iter</code>函数， 该函数接收批量大小、特征矩阵和标签向量作为输入，生成大小为<code>batch_size</code>的小批量</strong>]。 每个小批量包含一组特征和标签。</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/17/TInKoBS5QPJAUWb.png" alt="image-20231217130008390"></p>
-<p><a target="_blank" rel="noopener" href="https://www.runoob.com/python/func-number-shuffle.html">Python shuffle() 函数</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41289353/article/details/125224049">python中yield的用法详解——最简单，最清晰的解释</a></p>
-<p><img src="https://s2.loli.net/2023/12/17/2UedgPGCbDfXn4B.png" alt="image-20231217130201345"></p>
-<ul>
-<li>定义初始化模型参数</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/17/TJ3Z4vCA5uglOBw.png" alt="image-20231217130249921"></p>
-<ul>
-<li>定义模型</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/17/FA91vEV67NuJsxd.png" alt="image-20231217130350962"></p>
-<ul>
-<li>定义损失函数</li>
-</ul>
-<p>因为需要计算损失函数的梯度，所以我们应该先定义损失函数。 这里我们使用 :numref:<code>sec_linear_regression</code>中描述的平方损失函数。 在实现中，我们需要将真实值<code>y</code>的形状转换为和预测值<code>y_hat</code>的形状相同。</p>
-<p><img src="https://s2.loli.net/2023/12/17/v7jeUiyugqz1YNG.png" alt="image-20231217130607942"></p>
-<ul>
-<li>定义优化算法</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/17/XsUFn1y5zOHvgSD.png" alt="image-20231217131537328"></p>
-<ul>
-<li>训练过程</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/17/xg674mtyRBDwVNT.png" alt="image-20231217131731388"></p>
-<ul>
-<li><strong>比较真实参数和通过训练学到的参数来评估训练的成功程度</strong></li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/17/YAUjywHJtiGIqza.png" alt="image-20231217132033441"></p>
-<h2 id="8-4线性回归的简洁实现"><a href="#8-4线性回归的简洁实现" class="headerlink" title="8.4线性回归的简洁实现"></a>8.4线性回归的简洁实现</h2><ul>
-<li>通过使用深度学习框架来简洁地实现 线性回归模型 生成数据集</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/17/haFO3GwWx8sfCHb.png" alt="image-20231217155518330"></p>
-<ul>
-<li>调用框架中现有的 API 来读取数据</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/17/lvUeO86GtAfshwF.png" alt="image-20231217155711824"></p>
-<p>我们可以这样使用数据集，迭代方式是：</p>
-<p><img src="https://s2.loli.net/2023/12/17/uYpaDe2cWtVzHr9.png" alt="image-20231217155833142"></p>
-<ul>
-<li>使用框架的预定义好的层</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/17/jsLdtpzMS7IPACZ.png" alt="image-20231217155906459"></p>
-<p>可以直接使用 <code>PyTorch</code>中的 <code>nn</code>模块，里面有神经网络的容器函数 <code>nn.Sequential()</code>，里面填入一个<code>nn.Linear(2, 1)</code> 等价于我们的线性函数，输入维度为 2 输出维度是 1。</p>
-<p><img src="https://s2.loli.net/2023/12/17/nALkb6Zu1ihVRDG.png" alt="image-20231217160340171"></p>
-<ul>
-<li>计算均方误差使用的是 <code>MSELoss</code>类，也称为平方范数</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/17/9SDstzekOTm8pGK.png" alt="image-20231217160520473"></p>
-<ul>
-<li>实例化<code>SGD</code>实例</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/17/XEa1jy5OvfYgIMD.png" alt="image-20231217160618366"></p>
-<ul>
-<li>训练过程代码于我们从零开始的实现时所做的非常相似</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/17/8wRQnexJV7UlpgP.png" alt="image-20231217160836903"></p>
-<ul>
-<li>比较误差</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/17/XuKPJTnZM2ve35O.png" alt="image-20231217160946721"></p>
-<h2 id="8-5QA"><a href="#8-5QA" class="headerlink" title="8.5QA"></a>8.5QA</h2>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN,en,default">
     <link itemprop="mainEntityOfPage" href="http://humble2967738843.github.io/2023/12/11/07-zi-dong-qiu-dao/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="yuan long">
+      <meta itemprop="name" content="院龙">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="humbleyl">
+      <meta itemprop="name" content="院龙">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -658,12 +351,12 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="yuan long">
+      <meta itemprop="name" content="院龙">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="humbleyl">
+      <meta itemprop="name" content="院龙">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -781,12 +474,12 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="yuan long">
+      <meta itemprop="name" content="院龙">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="humbleyl">
+      <meta itemprop="name" content="院龙">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1015,12 +708,12 @@ Ax = \lambda x</script><p><img src="https://s2.loli.net/2023/12/08/aqi97HUjBVQGk
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="yuan long">
+      <meta itemprop="name" content="院龙">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="humbleyl">
+      <meta itemprop="name" content="院龙">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1200,12 +893,12 @@ Ax = \lambda x</script><p><img src="https://s2.loli.net/2023/12/08/aqi97HUjBVQGk
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="yuan long">
+      <meta itemprop="name" content="院龙">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="humbleyl">
+      <meta itemprop="name" content="院龙">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1586,12 +1279,12 @@ p(x) = \prod_{x\in Mask} p(x|context)</script><p><strong>AR 语言模型：</str
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="yuan long">
+      <meta itemprop="name" content="院龙">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="humbleyl">
+      <meta itemprop="name" content="院龙">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1726,12 +1419,12 @@ E = - log \sigma(v_{w_O}' h) - \sum_{w_j \in W_{neg}} log \sigma(-v_{w_j}'h)</sc
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="yuan long">
+      <meta itemprop="name" content="院龙">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="humbleyl">
+      <meta itemprop="name" content="院龙">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1904,12 +1597,12 @@ E = - log \sigma(v_{w_O}' h) - \sum_{w_j \in W_{neg}} log \sigma(-v_{w_j}'h)</sc
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="yuan long">
+      <meta itemprop="name" content="院龙">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="humbleyl">
+      <meta itemprop="name" content="院龙">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1979,12 +1672,12 @@ E = - log \sigma(v_{w_O}' h) - \sum_{w_j \in W_{neg}} log \sigma(-v_{w_j}'h)</sc
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="yuan long">
+      <meta itemprop="name" content="院龙">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="humbleyl">
+      <meta itemprop="name" content="院龙">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -2095,6 +1788,82 @@ E = - log \sigma(v_{w_O}' h) - \sum_{w_j \in W_{neg}} log \sigma(-v_{w_j}'h)</sc
   
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN,en,default">
+    <link itemprop="mainEntityOfPage" href="http://humble2967738843.github.io/2023/11/06/ji-yu-ti-shi-de-ling-yang-ben-guan-xi-chou-qu-fang-fa-tan-suo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="院龙">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="院龙">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/06/ji-yu-ti-shi-de-ling-yang-ben-guan-xi-chou-qu-fang-fa-tan-suo/" class="post-title-link" itemprop="url">基于提示的零样本关系抽取方法探索</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-06 16:45:06" itemprop="dateCreated datePublished" datetime="2023-11-06T16:45:06+08:00">2023-11-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-05-26 17:33:03" itemprop="dateModified" datetime="2024-05-26T17:33:03+08:00">2024-05-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%85%B3%E7%B3%BB%E6%8A%BD%E5%8F%96/" itemprop="url" rel="index"><span itemprop="name">关系抽取</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="基于提示的零样本关系抽取方法探索"><a href="#基于提示的零样本关系抽取方法探索" class="headerlink" title="基于提示的零样本关系抽取方法探索"></a>基于提示的零样本关系抽取方法探索</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p><strong>零样本关系抽取是处理现实世界中缺乏标记数据的新兴关系的重要方法</strong>。然而，<strong>主流的两塔零样本方法通常依赖于预定义关系的大规模域内标记数据</strong>。在这项工作中，我们<strong>将零样本关系提取视为一种通过提示调整优化的语义匹配任务，当预定义关系的标记数据极其稀缺时，它仍然保持优异的泛化性能</strong>。为了最大限度地提高数据利用的效率，我们引入了一种<strong>提示调整技术来引出预训练语言模型（PLM）中现有的关系知识，而不是直接进行微调</strong>。此外，在训练过程中模型接触到的关系描述很少，我们认为这是两塔方法的性能瓶颈。为了突破瓶颈，我们在编码过程中直接对关系实例及其描述之间的语义交互进行建模。在两个学术数据集上的实验结果表明：（1）我们的方法在预定义关系的不同样本上大幅优于之前最先进的方法； （2）这种优势在资源匮乏的情况下会进一步放大。</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>近年来，人们对从发票、采购订单、纳税申报表等各种垂直领域的<strong>类似表单的文档中提取结构化信息越来越感兴趣</strong>。[Zhao、Wu 和 Wang 2019；林等人。 2020；于等人。 2019]。在本文中，我们重新审视<strong>关键信息提取（KIE）问题，即从给定文档中提取一组键的值</strong>[Huang et al. 2017]。 2019]。例如，在图 1 中，给定一组键（“电话”、“总计”）和左侧收据文档，KIE 任务旨在提取“电话”的值“03-55423228”和“电话”的值“50.60”全部的”。提取的结构化信息对于广泛的下游任务至关重要，例如知识库构建、问答、文档理解等[Liu and Croft 2002；吴森等人。 2018； Geva 和 Berant 2018]。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231107114701675-1699328823889-1.png" alt="image-20231107114701675"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
   <nav class="pagination">
@@ -2156,7 +1925,7 @@ E = - log \sigma(v_{w_O}' h) - \sum_{w_j \in W_{neg}} log \sigma(-v_{w_j}'h)</sc
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">yuan long</p>
+  <p class="site-author-name" itemprop="name">院龙</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -2164,7 +1933,7 @@ E = - log \sigma(v_{w_O}' h) - \sum_{w_j \in W_{neg}} log \sigma(-v_{w_j}'h)</sc
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">63</span>
+          <span class="site-state-item-count">62</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -2206,7 +1975,7 @@ E = - log \sigma(v_{w_O}' h) - \sum_{w_j \in W_{neg}} log \sigma(-v_{w_j}'h)</sc
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">yuan long</span>
+  <span class="author" itemprop="copyrightHolder">院龙</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

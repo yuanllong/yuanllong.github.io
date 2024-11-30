@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>humbleyl</title>
+  <title>院龙</title>
   
   
   <link href="http://humble2967738843.github.io/atom.xml" rel="self"/>
   
   <link href="http://humble2967738843.github.io/"/>
-  <updated>2024-11-30T03:25:59.965Z</updated>
+  <updated>2024-11-30T07:48:07.512Z</updated>
   <id>http://humble2967738843.github.io/</id>
   
   <author>
-    <name>yuan long</name>
+    <name>院龙</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Cesifjisdj</title>
-    <link href="http://humble2967738843.github.io/2024/11/30/cesifjisdj/"/>
-    <id>http://humble2967738843.github.io/2024/11/30/cesifjisdj/</id>
-    <published>2024-11-30T03:05:40.000Z</published>
-    <updated>2024-11-30T03:25:59.965Z</updated>
+    <title>GBDT</title>
+    <link href="http://humble2967738843.github.io/2024/11/30/gbdt/"/>
+    <id>http://humble2967738843.github.io/2024/11/30/gbdt/</id>
+    <published>2024-11-30T07:45:56.000Z</published>
+    <updated>2024-11-30T07:48:07.512Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/yuanlongYl/picgo_imgs/raw/master/blogs/202411301107135.png&quot; alt=&quot;image-20241130110723594&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;p&gt;46546&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/yuanlongYl/picgo_imgs/raw/master/blogs/202411301546027.png&quot;</summary>
         
       
     
@@ -54,19 +54,6 @@
 &lt;p&gt;&lt;img src=&quot;测试yl.assets/image-20241130105502007-17329353143521.png&quot;</summary>
         
       
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>csac</title>
-    <link href="http://humble2967738843.github.io/2024/11/23/csac/"/>
-    <id>http://humble2967738843.github.io/2024/11/23/csac/</id>
-    <published>2024-11-23T03:59:41.000Z</published>
-    <updated>2024-11-23T03:59:41.152Z</updated>
-    
     
     
     
@@ -432,6 +419,27 @@
         
         
     <summary type="html">&lt;h1 id=&quot;Graph-Neural-Networks&quot;&gt;&lt;a href=&quot;#Graph-Neural-Networks&quot; class=&quot;headerlink&quot; title=&quot;Graph Neural Networks&quot;&gt;&lt;/a&gt;Graph Neural</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>BERT and its family</title>
+    <link href="http://humble2967738843.github.io/2024/01/01/bert-and-its-family/"/>
+    <id>http://humble2967738843.github.io/2024/01/01/bert-and-its-family/</id>
+    <published>2024-01-01T07:10:51.204Z</published>
+    <updated>2024-05-26T05:17:21.500Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;BERT-and-its-family&quot;&gt;&lt;a href=&quot;#BERT-and-its-family&quot; class=&quot;headerlink&quot; title=&quot;BERT and its family&quot;&gt;&lt;/a&gt;BERT and its</summary>
         
       
     
