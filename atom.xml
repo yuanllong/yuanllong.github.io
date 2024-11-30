@@ -6,7 +6,7 @@
   <link href="http://humble2967738843.github.io/atom.xml" rel="self"/>
   
   <link href="http://humble2967738843.github.io/"/>
-  <updated>2024-11-30T08:03:58.745Z</updated>
+  <updated>2024-11-30T08:24:10.906Z</updated>
   <id>http://humble2967738843.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://humble2967738843.github.io/2024/11/30/gbdt/"/>
     <id>http://humble2967738843.github.io/2024/11/30/gbdt/</id>
     <published>2024-11-30T07:45:56.000Z</published>
-    <updated>2024-11-30T08:03:58.745Z</updated>
+    <updated>2024-11-30T08:24:10.906Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;46546&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/yuanlongYl/picgo_imgs/raw/master/blogs/202411301546027.png&quot;</summary>
+    <summary type="html">&lt;p&gt;​        GBDT为梯度提升决策树（Gradient  Boosting Decision Tree），是一种以回归决策树为 弱学习器的集成学习模型。GBDT集成学习模型通常使用CART决 策树（回归树）模型作为弱学习器。&lt;/p&gt;
+&lt;p&gt;​       </summary>
         
       
     
