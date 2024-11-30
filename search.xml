@@ -1,132 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>00绪论基本概念</title>
-    <url>/2023/12/07/00-xu-lun-ji-ben-gai-nian/</url>
-    <content><![CDATA[<h1 id="绪论基本概念"><a href="#绪论基本概念" class="headerlink" title="绪论基本概念"></a>绪论基本概念</h1><p><img src="https://s2.loli.net/2023/12/07/o4PD9Ujh3gv8kwY.png" alt="image-20231207182255445"></p>
-<h2 id="1-1引言"><a href="#1-1引言" class="headerlink" title="1.1引言"></a>1.1引言</h2><p><strong>问题</strong></p>
-<ol>
-<li>通过计算的手段，利用经验来改善系统自身的性能</li>
-<li>有了数据</li>
-<li>通过某种学习算法</li>
-<li>得到模型</li>
-<li>进行预测</li>
-</ol>
-<h2 id="1-2基本术语"><a href="#1-2基本术语" class="headerlink" title="1.2基本术语"></a>1.2基本术语</h2><p>1.有了数据</p>
-<ul>
-<li><p>数据集：100个西瓜🍉</p>
-</li>
-<li><p>样本：1个西瓜</p>
-</li>
-<li><p>特征向量：</p>
-<ul>
-<li><p>样本空间；</p>
-</li>
-<li><p>色泽、大小、敲起来的振幅；</p>
-</li>
-<li><p>维度</p>
-</li>
-</ul>
-</li>
-<li><p>属性：色泽</p>
-</li>
-</ul>
-<p>2.通过某种学习算法</p>
-<ul>
-<li>学习</li>
-<li>训练</li>
-</ul>
-<p>3.得到模型</p>
-<ul>
-<li><p><strong>有监督学习</strong>：</p>
-<ul>
-<li><p>分类</p>
-<ul>
-<li><p>二分类</p>
-<ul>
-<li><p>Y 正负</p>
-</li>
-<li><p>瓜农眼中：这个瓜该不该摘，这个瓜熟没熟，我要不要摘<img src="https://s2.loli.net/2023/12/07/Wztg3MfNDEOTeFr.png" alt="image-20231207184933954"></p>
-</li>
-</ul>
-</li>
-<li><p>多分类</p>
-<ul>
-<li><p>Y大于2</p>
-</li>
-<li><p>市场上要买哪种瓜</p>
-<ul>
-<li><p>黑美人<img src="https://s2.loli.net/2023/12/07/GHZhEfSA4LRwTDq.png" alt="image-20231207185136355"></p>
-</li>
-<li><p>小地雷<img src="https://s2.loli.net/2023/12/07/L1QyENhxDmu8ZYv.png" alt="image-20231207185150282"></p>
-</li>
-<li><p>特小凤<img src="https://s2.loli.net/2023/12/07/LMEKs2BmryC5WAD.png" alt="image-20231207185206503"></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>回归</p>
-<ul>
-<li><p>Y = R 实数集</p>
-</li>
-<li><p>某段时间内西瓜的价格，啥时间卖西瓜最合适<img src="https://s2.loli.net/2023/12/07/HPEFTV3aB15gy6r.png" alt="image-20231207185346067"></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>无监督学习</strong>：</p>
-<ul>
-<li><p>聚类</p>
-<ul>
-<li><p>我们不知道要分几类，机器自己分</p>
-</li>
-<li><p>每个组称为“簇” cluster</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>4.进行预测</p>
-<ul>
-<li>测试</li>
-<li>测试样本</li>
-<li>泛化能力</li>
-</ul>
-<h2 id="1-3假设空间"><a href="#1-3假设空间" class="headerlink" title="1.3假设空间"></a>1.3假设空间</h2><ol>
-<li><p>科学的推理手段</p>
-<ul>
-<li><p>归纳：特殊到一般</p>
-<ul>
-<li><p>狭义：从训练数据中得到概念</p>
-<ul>
-<li><p>布尔概念：是或不是</p>
-</li>
-<li><p>假设就是各种情况</p>
-</li>
-</ul>
-</li>
-<li><p>广义：从样本中学习</p>
-</li>
-</ul>
-</li>
-<li><p>演绎：一般到特殊</p>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="1-4归纳偏好"><a href="#1-4归纳偏好" class="headerlink" title="1.4归纳偏好"></a>1.4归纳偏好</h2><ul>
-<li>同一个数据集训练出了不同的模型，如何选择模型</li>
-<li>原则：<strong>奥卡姆剃刀原理：选择最简单的那个，也有其他理解</strong></li>
-<li>推了半天期望，由于假设不成立，我们跳过，P8出现了很多符号</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
     <title>05线性代数</title>
     <url>/2023/12/08/05-xian-xing-dai-shu/</url>
     <content><![CDATA[<h1 id="05线性代数"><a href="#05线性代数" class="headerlink" title="05线性代数"></a>05线性代数</h1><p><img src="https://s2.loli.net/2023/12/08/WRwMYeFdpP2Ogho.png" alt="image-20231208123851480"></p>
@@ -302,10 +176,129 @@ Ax = \lambda x</script><p><img src="https://s2.loli.net/2023/12/08/aqi97HUjBVQGk
 <h2 id="5-4QA"><a href="#5-4QA" class="headerlink" title="5.4QA"></a>5.4QA</h2>]]></content>
   </entry>
   <entry>
-    <title>07二分分类</title>
-    <url>/2023/12/17/07-er-fen-fen-lei/</url>
-    <content><![CDATA[<h1 id="07-二分分类"><a href="#07-二分分类" class="headerlink" title="07 二分分类"></a>07 二分分类</h1><h2 id="7-1-Binary-Classification"><a href="#7-1-Binary-Classification" class="headerlink" title="7.1 Binary Classification"></a>7.1 Binary Classification</h2><p><img src="https://s2.loli.net/2023/12/17/z4fd8SO12cq9sRM.png" alt="image-20231217230534251"></p>
-<h2 id="7-2-Notation"><a href="#7-2-Notation" class="headerlink" title="7.2 Notation"></a>7.2 Notation</h2><p><img src="https://s2.loli.net/2023/12/17/za7rB1UAbJnXqF9.png" alt="image-20231217230831347"></p>
+    <title>00绪论基本概念</title>
+    <url>/2023/12/07/00-xu-lun-ji-ben-gai-nian/</url>
+    <content><![CDATA[<h1 id="绪论基本概念"><a href="#绪论基本概念" class="headerlink" title="绪论基本概念"></a>绪论基本概念</h1><p><img src="https://s2.loli.net/2023/12/07/o4PD9Ujh3gv8kwY.png" alt="image-20231207182255445"></p>
+<h2 id="1-1引言"><a href="#1-1引言" class="headerlink" title="1.1引言"></a>1.1引言</h2><p><strong>问题</strong></p>
+<ol>
+<li>通过计算的手段，利用经验来改善系统自身的性能</li>
+<li>有了数据</li>
+<li>通过某种学习算法</li>
+<li>得到模型</li>
+<li>进行预测</li>
+</ol>
+<h2 id="1-2基本术语"><a href="#1-2基本术语" class="headerlink" title="1.2基本术语"></a>1.2基本术语</h2><p>1.有了数据</p>
+<ul>
+<li><p>数据集：100个西瓜🍉</p>
+</li>
+<li><p>样本：1个西瓜</p>
+</li>
+<li><p>特征向量：</p>
+<ul>
+<li><p>样本空间；</p>
+</li>
+<li><p>色泽、大小、敲起来的振幅；</p>
+</li>
+<li><p>维度</p>
+</li>
+</ul>
+</li>
+<li><p>属性：色泽</p>
+</li>
+</ul>
+<p>2.通过某种学习算法</p>
+<ul>
+<li>学习</li>
+<li>训练</li>
+</ul>
+<p>3.得到模型</p>
+<ul>
+<li><p><strong>有监督学习</strong>：</p>
+<ul>
+<li><p>分类</p>
+<ul>
+<li><p>二分类</p>
+<ul>
+<li><p>Y 正负</p>
+</li>
+<li><p>瓜农眼中：这个瓜该不该摘，这个瓜熟没熟，我要不要摘<img src="https://s2.loli.net/2023/12/07/Wztg3MfNDEOTeFr.png" alt="image-20231207184933954"></p>
+</li>
+</ul>
+</li>
+<li><p>多分类</p>
+<ul>
+<li><p>Y大于2</p>
+</li>
+<li><p>市场上要买哪种瓜</p>
+<ul>
+<li><p>黑美人<img src="https://s2.loli.net/2023/12/07/GHZhEfSA4LRwTDq.png" alt="image-20231207185136355"></p>
+</li>
+<li><p>小地雷<img src="https://s2.loli.net/2023/12/07/L1QyENhxDmu8ZYv.png" alt="image-20231207185150282"></p>
+</li>
+<li><p>特小凤<img src="https://s2.loli.net/2023/12/07/LMEKs2BmryC5WAD.png" alt="image-20231207185206503"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>回归</p>
+<ul>
+<li><p>Y = R 实数集</p>
+</li>
+<li><p>某段时间内西瓜的价格，啥时间卖西瓜最合适<img src="https://s2.loli.net/2023/12/07/HPEFTV3aB15gy6r.png" alt="image-20231207185346067"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>无监督学习</strong>：</p>
+<ul>
+<li><p>聚类</p>
+<ul>
+<li><p>我们不知道要分几类，机器自己分</p>
+</li>
+<li><p>每个组称为“簇” cluster</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>4.进行预测</p>
+<ul>
+<li>测试</li>
+<li>测试样本</li>
+<li>泛化能力</li>
+</ul>
+<h2 id="1-3假设空间"><a href="#1-3假设空间" class="headerlink" title="1.3假设空间"></a>1.3假设空间</h2><ol>
+<li><p>科学的推理手段</p>
+<ul>
+<li><p>归纳：特殊到一般</p>
+<ul>
+<li><p>狭义：从训练数据中得到概念</p>
+<ul>
+<li><p>布尔概念：是或不是</p>
+</li>
+<li><p>假设就是各种情况</p>
+</li>
+</ul>
+</li>
+<li><p>广义：从样本中学习</p>
+</li>
+</ul>
+</li>
+<li><p>演绎：一般到特殊</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="1-4归纳偏好"><a href="#1-4归纳偏好" class="headerlink" title="1.4归纳偏好"></a>1.4归纳偏好</h2><ul>
+<li>同一个数据集训练出了不同的模型，如何选择模型</li>
+<li>原则：<strong>奥卡姆剃刀原理：选择最简单的那个，也有其他理解</strong></li>
+<li>推了半天期望，由于假设不成立，我们跳过，P8出现了很多符号</li>
+</ul>
 ]]></content>
   </entry>
   <entry>
@@ -371,6 +364,13 @@ Ax = \lambda x</script><p><img src="https://s2.loli.net/2023/12/08/aqi97HUjBVQGk
 </ul>
 <p><img src="https://s2.loli.net/2023/12/10/QdJae39DlM1OSq5.png" alt="image-20231210221120356"></p>
 <h2 id="6-2QA"><a href="#6-2QA" class="headerlink" title="6.2QA"></a>6.2QA</h2>]]></content>
+  </entry>
+  <entry>
+    <title>07二分分类</title>
+    <url>/2023/12/17/07-er-fen-fen-lei/</url>
+    <content><![CDATA[<h1 id="07-二分分类"><a href="#07-二分分类" class="headerlink" title="07 二分分类"></a>07 二分分类</h1><h2 id="7-1-Binary-Classification"><a href="#7-1-Binary-Classification" class="headerlink" title="7.1 Binary Classification"></a>7.1 Binary Classification</h2><p><img src="https://s2.loli.net/2023/12/17/z4fd8SO12cq9sRM.png" alt="image-20231217230534251"></p>
+<h2 id="7-2-Notation"><a href="#7-2-Notation" class="headerlink" title="7.2 Notation"></a>7.2 Notation</h2><p><img src="https://s2.loli.net/2023/12/17/za7rB1UAbJnXqF9.png" alt="image-20231217230831347"></p>
+]]></content>
   </entry>
   <entry>
     <title>07自动求导</title>
@@ -518,6 +518,27 @@ Ax = \lambda x</script><p><img src="https://s2.loli.net/2023/12/08/aqi97HUjBVQGk
     <content><![CDATA[<h1 id="08-logistic-回归"><a href="#08-logistic-回归" class="headerlink" title="08 logistic 回归"></a>08 logistic 回归</h1><h2 id="8-1-Logistic-Regression"><a href="#8-1-Logistic-Regression" class="headerlink" title="8.1 Logistic Regression"></a>8.1 Logistic Regression</h2><p><img src="https://s2.loli.net/2023/12/18/gs7HLUcrdN3bzpE.png" alt="image-20231218104931835"></p>
 <h2 id="8-2-Logistic-Regression-cost-function"><a href="#8-2-Logistic-Regression-cost-function" class="headerlink" title="8.2 Logistic Regression cost function"></a>8.2 Logistic Regression cost function</h2><p><img src="https://s2.loli.net/2023/12/18/MGK5DQbgXyeq2Uf.png" alt="image-20231218105940949"></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>09 Softmax 回归 + 损失函数 + 图片分类数据集</title>
+    <url>/2023/12/17/09-softmax-hui-gui-sun-shi-han-shu-tu-pian-fen-lei-shu-ju-ji/</url>
+    <content><![CDATA[<h1 id="09-Softmax-回归-损失函数-图片分类数据集"><a href="#09-Softmax-回归-损失函数-图片分类数据集" class="headerlink" title="09 Softmax 回归 + 损失函数 + 图片分类数据集"></a>09 Softmax 回归 + 损失函数 + 图片分类数据集</h1><p><img src="https://s2.loli.net/2023/12/17/UM83FgmWJdb2auQ.png" alt="image-20231217221708109"></p>
+<h2 id="9-1Softmax-回归"><a href="#9-1Softmax-回归" class="headerlink" title="9.1Softmax 回归"></a>9.1Softmax 回归</h2><ul>
+<li><p>回归 vs 分类</p>
+<ul>
+<li><p>回归估计一个连续值</p>
+</li>
+<li><p>分类预测一个离散类别</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://s2.loli.net/2023/12/17/Ff2MDW8AzBgVhrb.png" alt="image-20231217221852982"></p>
+<ul>
+<li>kaggle 上的分类问题</li>
+</ul>
+<p>将人类蛋白质显微镜图片分成 28 类</p>
+<h2 id="9-2损失函数"><a href="#9-2损失函数" class="headerlink" title="9.2损失函数"></a>9.2损失函数</h2><h2 id="9-3图片分类数据集"><a href="#9-3图片分类数据集" class="headerlink" title="9.3图片分类数据集"></a>9.3图片分类数据集</h2><h2 id="9-4Softmax-回归从零开始实现"><a href="#9-4Softmax-回归从零开始实现" class="headerlink" title="9.4Softmax 回归从零开始实现"></a>9.4Softmax 回归从零开始实现</h2><h2 id="9-5Softmax-回归简洁实现"><a href="#9-5Softmax-回归简洁实现" class="headerlink" title="9.5Softmax 回归简洁实现"></a>9.5Softmax 回归简洁实现</h2>]]></content>
   </entry>
   <entry>
     <title>08线性回归</title>
@@ -768,39 +789,18 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 <h2 id="8-5QA"><a href="#8-5QA" class="headerlink" title="8.5QA"></a>8.5QA</h2>]]></content>
   </entry>
   <entry>
-    <title>09 Softmax 回归 + 损失函数 + 图片分类数据集</title>
-    <url>/2023/12/17/09-softmax-hui-gui-sun-shi-han-shu-tu-pian-fen-lei-shu-ju-ji/</url>
-    <content><![CDATA[<h1 id="09-Softmax-回归-损失函数-图片分类数据集"><a href="#09-Softmax-回归-损失函数-图片分类数据集" class="headerlink" title="09 Softmax 回归 + 损失函数 + 图片分类数据集"></a>09 Softmax 回归 + 损失函数 + 图片分类数据集</h1><p><img src="https://s2.loli.net/2023/12/17/UM83FgmWJdb2auQ.png" alt="image-20231217221708109"></p>
-<h2 id="9-1Softmax-回归"><a href="#9-1Softmax-回归" class="headerlink" title="9.1Softmax 回归"></a>9.1Softmax 回归</h2><ul>
-<li><p>回归 vs 分类</p>
-<ul>
-<li><p>回归估计一个连续值</p>
-</li>
-<li><p>分类预测一个离散类别</p>
-</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/17/Ff2MDW8AzBgVhrb.png" alt="image-20231217221852982"></p>
-<ul>
-<li>kaggle 上的分类问题</li>
-</ul>
-<p>将人类蛋白质显微镜图片分成 28 类</p>
-<h2 id="9-2损失函数"><a href="#9-2损失函数" class="headerlink" title="9.2损失函数"></a>9.2损失函数</h2><h2 id="9-3图片分类数据集"><a href="#9-3图片分类数据集" class="headerlink" title="9.3图片分类数据集"></a>9.3图片分类数据集</h2><h2 id="9-4Softmax-回归从零开始实现"><a href="#9-4Softmax-回归从零开始实现" class="headerlink" title="9.4Softmax 回归从零开始实现"></a>9.4Softmax 回归从零开始实现</h2><h2 id="9-5Softmax-回归简洁实现"><a href="#9-5Softmax-回归简洁实现" class="headerlink" title="9.5Softmax 回归简洁实现"></a>9.5Softmax 回归简洁实现</h2>]]></content>
+    <title>11导数</title>
+    <url>/2023/12/18/11-dao-shu/</url>
+    <content><![CDATA[<h1 id="11-导数"><a href="#11-导数" class="headerlink" title="11 导数"></a>11 导数</h1><h2 id="11-1-Intuition-about-derivatives"><a href="#11-1-Intuition-about-derivatives" class="headerlink" title="11.1 Intuition about derivatives"></a>11.1 Intuition about derivatives</h2><p> <img src="https://s2.loli.net/2023/12/18/vNLjQAUXIDqVWSF.png" alt="image-20231218112637878"></p>
+<h2 id="11-2-examples"><a href="#11-2-examples" class="headerlink" title="11.2 examples"></a>11.2 examples</h2><p><img src="https://s2.loli.net/2023/12/18/45DRYspac3kLzOy.png" alt="image-20231218113045875"></p>
+<p><img src="https://s2.loli.net/2023/12/18/Tzk8fL7Z9OKIRp2.png" alt="image-20231218113339464"></p>
+]]></content>
   </entry>
   <entry>
     <title>10 梯度下降法</title>
     <url>/2023/12/18/10-ti-du-xia-jiang-fa/</url>
     <content><![CDATA[<h1 id="10-梯度下降法"><a href="#10-梯度下降法" class="headerlink" title="10 梯度下降法"></a>10 梯度下降法</h1><h2 id="10-1-Gradient-Descent"><a href="#10-1-Gradient-Descent" class="headerlink" title="10.1 Gradient Descent"></a>10.1 Gradient Descent</h2><p><img src="https://s2.loli.net/2023/12/18/5g29KPrnfduwWSM.png" alt="image-20231218110449631"></p>
 <p><img src="https://s2.loli.net/2023/12/18/l6SPghF1BXREWG5.png" alt="image-20231218111903673"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>11导数</title>
-    <url>/2023/12/18/11-dao-shu/</url>
-    <content><![CDATA[<h1 id="11-导数"><a href="#11-导数" class="headerlink" title="11 导数"></a>11 导数</h1><h2 id="11-1-Intuition-about-derivatives"><a href="#11-1-Intuition-about-derivatives" class="headerlink" title="11.1 Intuition about derivatives"></a>11.1 Intuition about derivatives</h2><p> <img src="https://s2.loli.net/2023/12/18/vNLjQAUXIDqVWSF.png" alt="image-20231218112637878"></p>
-<h2 id="11-2-examples"><a href="#11-2-examples" class="headerlink" title="11.2 examples"></a>11.2 examples</h2><p><img src="https://s2.loli.net/2023/12/18/45DRYspac3kLzOy.png" alt="image-20231218113045875"></p>
-<p><img src="https://s2.loli.net/2023/12/18/Tzk8fL7Z9OKIRp2.png" alt="image-20231218113339464"></p>
 ]]></content>
   </entry>
   <entry>
@@ -952,21 +952,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>25神经网络</title>
-    <url>/2023/12/19/25-shen-jing-wang-luo/</url>
-    <content><![CDATA[<h1 id="25-神经网络"><a href="#25-神经网络" class="headerlink" title="25 神经网络"></a>25 神经网络</h1><h2 id="25-1-What-is-a-Neural-Network"><a href="#25-1-What-is-a-Neural-Network" class="headerlink" title="25.1 What is a Neural Network ?"></a>25.1 What is a Neural Network ?</h2><p><img src="https://s2.loli.net/2023/12/19/ZMTlEBK9cYr87mR.png" alt="image-20231219165206416"></p>
-<h2 id="25-2-Neural-Network-Representation"><a href="#25-2-Neural-Network-Representation" class="headerlink" title="25.2 Neural Network Representation"></a>25.2 Neural Network Representation</h2><p><img src="https://s2.loli.net/2023/12/19/97dc5uODvNkLPlz.png" alt="image-20231219165708420"></p>
-<p><img src="https://s2.loli.net/2023/12/19/iWtYLns6cawBjK1.png" alt="image-20231219170536546"></p>
-<p><strong>向量化的一条经验法则：当我们在一层中有不同的节点，那就将它们竖向堆叠</strong></p>
-<p><img src="https://s2.loli.net/2023/12/19/M5PUYEkIW2G6B34.png" alt="image-20231219171341280"></p>
-<h2 id="25-3-Neural-Network-Representation-learning"><a href="#25-3-Neural-Network-Representation-learning" class="headerlink" title="25.3 Neural Network Representation learning"></a>25.3 Neural Network Representation learning</h2><p><img src="https://s2.loli.net/2023/12/19/jxJ8vWe3ALRCtM6.png" alt="image-20231219171642916"></p>
-<h2 id="25-4-Vectorizing-across-multiple-examples"><a href="#25-4-Vectorizing-across-multiple-examples" class="headerlink" title="25.4 Vectorizing across multiple examples"></a>25.4 Vectorizing across multiple examples</h2><p><img src="https://s2.loli.net/2023/12/20/OhMJLo4AlnGWskV.png" alt="image-20231220212910827"></p>
-<p><img src="https://s2.loli.net/2023/12/20/bBxOjdkr9lq81MJ.png" alt="image-20231220213502717"></p>
-<h2 id="25-5-Justification-for-vectorized-implementation"><a href="#25-5-Justification-for-vectorized-implementation" class="headerlink" title="25.5 Justification for vectorized implementation"></a>25.5 Justification for vectorized implementation</h2><p><img src="https://s2.loli.net/2023/12/20/hR4DELJwqmMWFUl.png" alt="image-20231220214715916"></p>
-<h2 id="25-6-Recap-of-vectorizing-across-multiple-examples"><a href="#25-6-Recap-of-vectorizing-across-multiple-examples" class="headerlink" title="25.6 Recap of vectorizing across multiple examples"></a>25.6 Recap of vectorizing across multiple examples</h2><p><img src="https://s2.loli.net/2023/12/20/LKg54FatcyoUx7B.png" alt="image-20231220215654131"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>21python广播机制</title>
     <url>/2023/12/19/21-python-de-guang-bo-ji-zhi/</url>
     <content><![CDATA[<h1 id="21-Python-的广播机制"><a href="#21-Python-的广播机制" class="headerlink" title="21 Python 的广播机制"></a>21 Python 的广播机制</h1><h2 id="21-1-Broadcasting-example"><a href="#21-1-Broadcasting-example" class="headerlink" title="21.1 Broadcasting example"></a>21.1 Broadcasting example</h2><p>【举例】</p>
@@ -981,6 +966,21 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 <p>而是通常将其表达为 <code>5*1的矩阵</code>比较好，最终运算会得到一个矩阵</p>
 <p><img src="https://s2.loli.net/2023/12/19/aUvJEGmQ7csLhTY.png" alt="image-20231219164307491"></p>
 <p><img src="https://s2.loli.net/2023/12/19/sL2cGn8HY4ohiua.png" alt="image-20231219164514448"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>25神经网络</title>
+    <url>/2023/12/19/25-shen-jing-wang-luo/</url>
+    <content><![CDATA[<h1 id="25-神经网络"><a href="#25-神经网络" class="headerlink" title="25 神经网络"></a>25 神经网络</h1><h2 id="25-1-What-is-a-Neural-Network"><a href="#25-1-What-is-a-Neural-Network" class="headerlink" title="25.1 What is a Neural Network ?"></a>25.1 What is a Neural Network ?</h2><p><img src="https://s2.loli.net/2023/12/19/ZMTlEBK9cYr87mR.png" alt="image-20231219165206416"></p>
+<h2 id="25-2-Neural-Network-Representation"><a href="#25-2-Neural-Network-Representation" class="headerlink" title="25.2 Neural Network Representation"></a>25.2 Neural Network Representation</h2><p><img src="https://s2.loli.net/2023/12/19/97dc5uODvNkLPlz.png" alt="image-20231219165708420"></p>
+<p><img src="https://s2.loli.net/2023/12/19/iWtYLns6cawBjK1.png" alt="image-20231219170536546"></p>
+<p><strong>向量化的一条经验法则：当我们在一层中有不同的节点，那就将它们竖向堆叠</strong></p>
+<p><img src="https://s2.loli.net/2023/12/19/M5PUYEkIW2G6B34.png" alt="image-20231219171341280"></p>
+<h2 id="25-3-Neural-Network-Representation-learning"><a href="#25-3-Neural-Network-Representation-learning" class="headerlink" title="25.3 Neural Network Representation learning"></a>25.3 Neural Network Representation learning</h2><p><img src="https://s2.loli.net/2023/12/19/jxJ8vWe3ALRCtM6.png" alt="image-20231219171642916"></p>
+<h2 id="25-4-Vectorizing-across-multiple-examples"><a href="#25-4-Vectorizing-across-multiple-examples" class="headerlink" title="25.4 Vectorizing across multiple examples"></a>25.4 Vectorizing across multiple examples</h2><p><img src="https://s2.loli.net/2023/12/20/OhMJLo4AlnGWskV.png" alt="image-20231220212910827"></p>
+<p><img src="https://s2.loli.net/2023/12/20/bBxOjdkr9lq81MJ.png" alt="image-20231220213502717"></p>
+<h2 id="25-5-Justification-for-vectorized-implementation"><a href="#25-5-Justification-for-vectorized-implementation" class="headerlink" title="25.5 Justification for vectorized implementation"></a>25.5 Justification for vectorized implementation</h2><p><img src="https://s2.loli.net/2023/12/20/hR4DELJwqmMWFUl.png" alt="image-20231220214715916"></p>
+<h2 id="25-6-Recap-of-vectorizing-across-multiple-examples"><a href="#25-6-Recap-of-vectorizing-across-multiple-examples" class="headerlink" title="25.6 Recap of vectorizing across multiple examples"></a>25.6 Recap of vectorizing across multiple examples</h2><p><img src="https://s2.loli.net/2023/12/20/LKg54FatcyoUx7B.png" alt="image-20231220215654131"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1011,6 +1011,27 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
+    <title>36深度神经网络</title>
+    <url>/2023/12/22/36-shen-du-shen-jing-wang-luo/</url>
+    <content><![CDATA[<h1 id="36-深度神经网络"><a href="#36-深度神经网络" class="headerlink" title="36 深度神经网络"></a>36 深度神经网络</h1><p><strong>深度神经网络的概念和符号表示。与逻辑回归不同，深度神经网络可以处理更深层次的模型，以解决更加复杂的问题。本文介绍符号表示，如层数、节点数、激活函数等，以及如何实现一个深度神经网络。同时，在选择神经网络的层数时需要考虑一些问题，如交叉验证进和超参数等。</strong></p>
+<ul>
+<li><strong>深度神经网络的概念和符号表示，以及实现自己的深度神经网络的方法</strong><ul>
+<li>前向传播和后向传播，实现深度神经网络</li>
+<li>神经网络有不同的层数，每个层都有节点数量</li>
+<li>使用符号 $l$ 表示网络中的层数，$n^{[l]}$表示节点数量</li>
+</ul>
+</li>
+<li><strong>深度神经网络的符号表示，包括节点数量、激活、权重，以及符号的含义和使用</strong><ul>
+<li>描述节点数量的符号：$n^{[l]}$</li>
+<li>符号：$a^{[l]}$表示$l$层的激活函数、$W^{[l]}$表示参数矩阵、$b^{[l]}$表示偏置项</li>
+</ul>
+</li>
+</ul>
+<h2 id="36-1-What-is-a-deep-neural-network"><a href="#36-1-What-is-a-deep-neural-network" class="headerlink" title="36.1 What is a deep neural network?"></a>36.1 What is a deep neural network?</h2><p><img src="https://s2.loli.net/2023/12/22/SCGgok1V4mY96qM.png" alt="image-20231222170917881"></p>
+<h2 id="36-2-Deep-neural-network-notation"><a href="#36-2-Deep-neural-network-notation" class="headerlink" title="36.2 Deep neural network notation"></a>36.2 Deep neural network notation</h2><p> <img src="https://s2.loli.net/2023/12/22/z1lICXLq2iAkMcH.png" alt="image-20231222171652681"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>35随机初始化</title>
     <url>/2023/12/22/35-sui-ji-chu-shi-hua/</url>
     <content><![CDATA[<h1 id="35-随机初始化"><a href="#35-随机初始化" class="headerlink" title="35 随机初始化"></a>35 随机初始化</h1><p><strong>在训练神经网络时，初始化权重的重要性，对于随机初始化的权重，将其全部初始化为零时是不合适的，因为这将导致隐藏单位集散相同的函数，没有区别。相反，初始化为权重为随机值可以解决对称性破缺问题，是隐藏单元计算不同的函数。此外，初始化偏置项和权重的其它注意事项，可以帮助训练更加有效的神经网络。</strong></p>
@@ -1030,27 +1051,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 </ul>
 <h2 id="35-1-What-happens-if-you-initialize-weights-to-zero"><a href="#35-1-What-happens-if-you-initialize-weights-to-zero" class="headerlink" title="35.1 What happens if you initialize weights to zero"></a>35.1 What happens if you initialize weights to zero</h2><p><img src="https://s2.loli.net/2023/12/22/XvPGQlsrHFObB1Y.png" alt="image-20231222122124897"></p>
 <h2 id="35-2-Random-initialization"><a href="#35-2-Random-initialization" class="headerlink" title="35.2 Random initialization"></a>35.2 Random initialization</h2><p><img src="https://s2.loli.net/2023/12/22/H2UiuCyMGgmDhTV.png" alt="image-20231222122527065"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>36深度神经网络</title>
-    <url>/2023/12/22/36-shen-du-shen-jing-wang-luo/</url>
-    <content><![CDATA[<h1 id="36-深度神经网络"><a href="#36-深度神经网络" class="headerlink" title="36 深度神经网络"></a>36 深度神经网络</h1><p><strong>深度神经网络的概念和符号表示。与逻辑回归不同，深度神经网络可以处理更深层次的模型，以解决更加复杂的问题。本文介绍符号表示，如层数、节点数、激活函数等，以及如何实现一个深度神经网络。同时，在选择神经网络的层数时需要考虑一些问题，如交叉验证进和超参数等。</strong></p>
-<ul>
-<li><strong>深度神经网络的概念和符号表示，以及实现自己的深度神经网络的方法</strong><ul>
-<li>前向传播和后向传播，实现深度神经网络</li>
-<li>神经网络有不同的层数，每个层都有节点数量</li>
-<li>使用符号 $l$ 表示网络中的层数，$n^{[l]}$表示节点数量</li>
-</ul>
-</li>
-<li><strong>深度神经网络的符号表示，包括节点数量、激活、权重，以及符号的含义和使用</strong><ul>
-<li>描述节点数量的符号：$n^{[l]}$</li>
-<li>符号：$a^{[l]}$表示$l$层的激活函数、$W^{[l]}$表示参数矩阵、$b^{[l]}$表示偏置项</li>
-</ul>
-</li>
-</ul>
-<h2 id="36-1-What-is-a-deep-neural-network"><a href="#36-1-What-is-a-deep-neural-network" class="headerlink" title="36.1 What is a deep neural network?"></a>36.1 What is a deep neural network?</h2><p><img src="https://s2.loli.net/2023/12/22/SCGgok1V4mY96qM.png" alt="image-20231222170917881"></p>
-<h2 id="36-2-Deep-neural-network-notation"><a href="#36-2-Deep-neural-network-notation" class="headerlink" title="36.2 Deep neural network notation"></a>36.2 Deep neural network notation</h2><p> <img src="https://s2.loli.net/2023/12/22/z1lICXLq2iAkMcH.png" alt="image-20231222171652681"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1156,12 +1156,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>43这和大脑有什么关系？</title>
-    <url>/2024/01/02/43-zhe-he-da-nao-you-shi-me-guan-xi/</url>
-    <content><![CDATA[<h1 id="43-这和大脑有什么关系？"><a href="#43-这和大脑有什么关系？" class="headerlink" title="43 这和大脑有什么关系？"></a>43 这和大脑有什么关系？</h1><h2 id="43-1-Forward-and-backward-propagation"><a href="#43-1-Forward-and-backward-propagation" class="headerlink" title="43.1 Forward and backward propagation"></a>43.1 Forward and backward propagation</h2><p><img src="https://s2.loli.net/2024/01/02/XITyJkBZGtPgFK3.png" alt="image-20240102114639554"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>42参数vs超参数</title>
     <url>/2024/01/02/42-can-shu-vs-chao-can-shu/</url>
     <content><![CDATA[<h1 id="42-参数-vs-超参数"><a href="#42-参数-vs-超参数" class="headerlink" title="42 参数 vs 超参数"></a>42 参数 vs 超参数</h1><h2 id="42-1-What-are-hyperparameters"><a href="#42-1-What-are-hyperparameters" class="headerlink" title="42.1 What are hyperparameters?"></a>42.1 What are hyperparameters?</h2><p><img src="https://s2.loli.net/2024/01/02/oUZe4XYmG9KwdFj.png" alt="image-20240102114031228"></p>
@@ -1174,6 +1168,12 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
     <content><![CDATA[<h1 id="47-训练-开发-测试集合"><a href="#47-训练-开发-测试集合" class="headerlink" title="47 训练 开发 测试集合"></a>47 训练 开发 测试集合</h1><h2 id="47-1-Applied-ML-is-a-highly-iterative-process"><a href="#47-1-Applied-ML-is-a-highly-iterative-process" class="headerlink" title="47.1 Applied ML is a highly iterative process"></a>47.1 Applied ML is a highly iterative process</h2><p><img src="https://s2.loli.net/2024/01/02/dCbINSOFyX1KPoA.png" alt="image-20240102115159250"></p>
 <h2 id="47-2-Train-dev-test-sets"><a href="#47-2-Train-dev-test-sets" class="headerlink" title="47.2 Train/dev/test sets"></a>47.2 Train/dev/test sets</h2><p><img src="https://s2.loli.net/2024/01/02/nY6lAPGzEpc4mfF.png" alt="image-20240102115531660"></p>
 <h2 id="Mismatched-train-test-distribution"><a href="#Mismatched-train-test-distribution" class="headerlink" title="Mismatched train/test distribution"></a>Mismatched train/test distribution</h2><p><img src="https://s2.loli.net/2024/01/02/v1bpjqulMgBCP9N.png" alt="image-20240102115859490"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>43这和大脑有什么关系？</title>
+    <url>/2024/01/02/43-zhe-he-da-nao-you-shi-me-guan-xi/</url>
+    <content><![CDATA[<h1 id="43-这和大脑有什么关系？"><a href="#43-这和大脑有什么关系？" class="headerlink" title="43 这和大脑有什么关系？"></a>43 这和大脑有什么关系？</h1><h2 id="43-1-Forward-and-backward-propagation"><a href="#43-1-Forward-and-backward-propagation" class="headerlink" title="43.1 Forward and backward propagation"></a>43.1 Forward and backward propagation</h2><p><img src="https://s2.loli.net/2024/01/02/XITyJkBZGtPgFK3.png" alt="image-20240102114639554"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1338,27 +1338,6 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
 ]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/2024/01/02/graph-neural-networks/</url>
-    <content><![CDATA[<h1 id="Graph-Neural-Networks"><a href="#Graph-Neural-Networks" class="headerlink" title="Graph Neural Networks"></a>Graph Neural Networks</h1><p> <img src="https://s2.loli.net/2024/01/02/X3PRzd8yeAVw2BQ.png" alt="image-20240102091617093"></p>
-<p><img src="https://s2.loli.net/2024/01/02/ibrAWq4GKnaODmU.png" alt="image-20240102091633581"></p>
-<p><img src="https://s2.loli.net/2024/01/02/vkSD7QTXYzIb2P3.png" alt="image-20240102091655951"></p>
-<p><img src="https://s2.loli.net/2024/01/02/tsgATuv5YWf6dmE.png" alt="image-20240102091704896"></p>
-<p><img src="https://s2.loli.net/2024/01/02/XaYg4cUEhQKxjfF.png" alt="image-20240102092051111"></p>
-<p><img src="https://s2.loli.net/2024/01/02/DBOTAfVsoZpP3G7.png" alt="image-20240102092139541"></p>
-<p><img src="https://s2.loli.net/2024/01/02/zPlAsZHKE2CBg8u.png" alt="image-20240102092226107"></p>
-<p><img src="https://s2.loli.net/2024/01/02/yQKTcIiXPYRB6od.png" alt="image-20240102092403353"></p>
-<p><img src="https://s2.loli.net/2024/01/02/8C2OMYbPq5BIm1r.png" alt="image-20240102092446883"></p>
-<p><img src="https://s2.loli.net/2024/01/02/Buy4Nge9brMG6tw.png" alt="image-20240102092539175"></p>
-<p><img src="https://s2.loli.net/2024/01/02/QdkTCKZnXYmLIaq.png" alt="image-20240102092553255"></p>
-<p><img src="https://s2.loli.net/2024/01/02/sDG7fm93UqjurnL.png" alt="image-20240102092726082"></p>
-<p><img src="https://s2.loli.net/2024/01/02/5CxyABnEUIapTkS.png" alt="image-20240102092900682"></p>
-<p><img src="https://s2.loli.net/2024/01/02/UW52fkCNwt9LXsb.png" alt="image-20240102093103632"></p>
-<p><img src="https://s2.loli.net/2024/01/02/rHNW6E5Z372dSsU.png" alt="image-20240102093208704"></p>
-<p><img src="https://s2.loli.net/2024/01/02/VOAtoWbmqCvTg8S.png" alt="image-20240102093339507"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>JVM</title>
     <url>/2023/11/03/jvm/</url>
     <content><![CDATA[<h1 id="1-JVM与Java体系结构"><a href="#1-JVM与Java体系结构" class="headerlink" title="1. JVM与Java体系结构"></a>1. JVM与Java体系结构</h1><p><img src="../imgs/$%7Bfiilename%7D/image-20231103173059181-1699003860604-7.png" alt="image-20231103173059181"></p>
@@ -1396,6 +1375,27 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
       <tags>
         <tag>JVM</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/01/02/graph-neural-networks/</url>
+    <content><![CDATA[<h1 id="Graph-Neural-Networks"><a href="#Graph-Neural-Networks" class="headerlink" title="Graph Neural Networks"></a>Graph Neural Networks</h1><p> <img src="https://s2.loli.net/2024/01/02/X3PRzd8yeAVw2BQ.png" alt="image-20240102091617093"></p>
+<p><img src="https://s2.loli.net/2024/01/02/ibrAWq4GKnaODmU.png" alt="image-20240102091633581"></p>
+<p><img src="https://s2.loli.net/2024/01/02/vkSD7QTXYzIb2P3.png" alt="image-20240102091655951"></p>
+<p><img src="https://s2.loli.net/2024/01/02/tsgATuv5YWf6dmE.png" alt="image-20240102091704896"></p>
+<p><img src="https://s2.loli.net/2024/01/02/XaYg4cUEhQKxjfF.png" alt="image-20240102092051111"></p>
+<p><img src="https://s2.loli.net/2024/01/02/DBOTAfVsoZpP3G7.png" alt="image-20240102092139541"></p>
+<p><img src="https://s2.loli.net/2024/01/02/zPlAsZHKE2CBg8u.png" alt="image-20240102092226107"></p>
+<p><img src="https://s2.loli.net/2024/01/02/yQKTcIiXPYRB6od.png" alt="image-20240102092403353"></p>
+<p><img src="https://s2.loli.net/2024/01/02/8C2OMYbPq5BIm1r.png" alt="image-20240102092446883"></p>
+<p><img src="https://s2.loli.net/2024/01/02/Buy4Nge9brMG6tw.png" alt="image-20240102092539175"></p>
+<p><img src="https://s2.loli.net/2024/01/02/QdkTCKZnXYmLIaq.png" alt="image-20240102092553255"></p>
+<p><img src="https://s2.loli.net/2024/01/02/sDG7fm93UqjurnL.png" alt="image-20240102092726082"></p>
+<p><img src="https://s2.loli.net/2024/01/02/5CxyABnEUIapTkS.png" alt="image-20240102092900682"></p>
+<p><img src="https://s2.loli.net/2024/01/02/UW52fkCNwt9LXsb.png" alt="image-20240102093103632"></p>
+<p><img src="https://s2.loli.net/2024/01/02/rHNW6E5Z372dSsU.png" alt="image-20240102093208704"></p>
+<p><img src="https://s2.loli.net/2024/01/02/VOAtoWbmqCvTg8S.png" alt="image-20240102093339507"></p>
+]]></content>
   </entry>
   <entry>
     <title>Java基础</title>
@@ -1473,6 +1473,20 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
       </tags>
   </entry>
   <entry>
+    <title>基于提示的零样本关系抽取方法探索</title>
+    <url>/2023/11/06/ji-yu-ti-shi-de-ling-yang-ben-guan-xi-chou-qu-fang-fa-tan-suo/</url>
+    <content><![CDATA[<h1 id="基于提示的零样本关系抽取方法探索"><a href="#基于提示的零样本关系抽取方法探索" class="headerlink" title="基于提示的零样本关系抽取方法探索"></a>基于提示的零样本关系抽取方法探索</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p><strong>零样本关系抽取是处理现实世界中缺乏标记数据的新兴关系的重要方法</strong>。然而，<strong>主流的两塔零样本方法通常依赖于预定义关系的大规模域内标记数据</strong>。在这项工作中，我们<strong>将零样本关系提取视为一种通过提示调整优化的语义匹配任务，当预定义关系的标记数据极其稀缺时，它仍然保持优异的泛化性能</strong>。为了最大限度地提高数据利用的效率，我们引入了一种<strong>提示调整技术来引出预训练语言模型（PLM）中现有的关系知识，而不是直接进行微调</strong>。此外，在训练过程中模型接触到的关系描述很少，我们认为这是两塔方法的性能瓶颈。为了突破瓶颈，我们在编码过程中直接对关系实例及其描述之间的语义交互进行建模。在两个学术数据集上的实验结果表明：（1）我们的方法在预定义关系的不同样本上大幅优于之前最先进的方法； （2）这种优势在资源匮乏的情况下会进一步放大。</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>近年来，人们对从发票、采购订单、纳税申报表等各种垂直领域的<strong>类似表单的文档中提取结构化信息越来越感兴趣</strong>。[Zhao、Wu 和 Wang 2019；林等人。 2020；于等人。 2019]。在本文中，我们重新审视<strong>关键信息提取（KIE）问题，即从给定文档中提取一组键的值</strong>[Huang et al. 2017]。 2019]。例如，在图 1 中，给定一组键（“电话”、“总计”）和左侧收据文档，KIE 任务旨在提取“电话”的值“03-55423228”和“电话”的值“50.60”全部的”。提取的结构化信息对于广泛的下游任务至关重要，例如知识库构建、问答、文档理解等[Liu and Croft 2002；吴森等人。 2018； Geva 和 Berant 2018]。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231107114701675-1699328823889-1.png" alt="image-20231107114701675"></p>
+]]></content>
+      <categories>
+        <category>关系抽取</category>
+      </categories>
+      <tags>
+        <tag>ACL2022</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Transformer</title>
     <url>/2024/01/01/transformer/</url>
     <content><![CDATA[<h1 id="Transformer"><a href="#Transformer" class="headerlink" title="Transformer"></a>Transformer</h1><h2 id="Sequence-to-sequence-Seq2seq"><a href="#Sequence-to-sequence-Seq2seq" class="headerlink" title="Sequence-to-sequence (Seq2seq)"></a>Sequence-to-sequence (Seq2seq)</h2><p><img src="https://s2.loli.net/2024/01/01/1uHMwf28IvBoxmD.png" alt="image-20240101101103745"></p>
@@ -1516,20 +1530,6 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
 <h2 id="exposure-bias"><a href="#exposure-bias" class="headerlink" title="exposure bias"></a>exposure bias</h2><p><img src="https://s2.loli.net/2024/01/01/djlDJ2hG6XLQqnk.png" alt="image-20240101120514182"></p>
 <p><img src="https://s2.loli.net/2024/01/01/lRoSYjk3dCJmFGc.png" alt="image-20240101120627640"></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>基于提示的零样本关系抽取方法探索</title>
-    <url>/2023/11/06/ji-yu-ti-shi-de-ling-yang-ben-guan-xi-chou-qu-fang-fa-tan-suo/</url>
-    <content><![CDATA[<h1 id="基于提示的零样本关系抽取方法探索"><a href="#基于提示的零样本关系抽取方法探索" class="headerlink" title="基于提示的零样本关系抽取方法探索"></a>基于提示的零样本关系抽取方法探索</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p><strong>零样本关系抽取是处理现实世界中缺乏标记数据的新兴关系的重要方法</strong>。然而，<strong>主流的两塔零样本方法通常依赖于预定义关系的大规模域内标记数据</strong>。在这项工作中，我们<strong>将零样本关系提取视为一种通过提示调整优化的语义匹配任务，当预定义关系的标记数据极其稀缺时，它仍然保持优异的泛化性能</strong>。为了最大限度地提高数据利用的效率，我们引入了一种<strong>提示调整技术来引出预训练语言模型（PLM）中现有的关系知识，而不是直接进行微调</strong>。此外，在训练过程中模型接触到的关系描述很少，我们认为这是两塔方法的性能瓶颈。为了突破瓶颈，我们在编码过程中直接对关系实例及其描述之间的语义交互进行建模。在两个学术数据集上的实验结果表明：（1）我们的方法在预定义关系的不同样本上大幅优于之前最先进的方法； （2）这种优势在资源匮乏的情况下会进一步放大。</p>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>近年来，人们对从发票、采购订单、纳税申报表等各种垂直领域的<strong>类似表单的文档中提取结构化信息越来越感兴趣</strong>。[Zhao、Wu 和 Wang 2019；林等人。 2020；于等人。 2019]。在本文中，我们重新审视<strong>关键信息提取（KIE）问题，即从给定文档中提取一组键的值</strong>[Huang et al. 2017]。 2019]。例如，在图 1 中，给定一组键（“电话”、“总计”）和左侧收据文档，KIE 任务旨在提取“电话”的值“03-55423228”和“电话”的值“50.60”全部的”。提取的结构化信息对于广泛的下游任务至关重要，例如知识库构建、问答、文档理解等[Liu and Croft 2002；吴森等人。 2018； Geva 和 Berant 2018]。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231107114701675-1699328823889-1.png" alt="image-20231107114701675"></p>
-]]></content>
-      <categories>
-        <category>关系抽取</category>
-      </categories>
-      <tags>
-        <tag>ACL2022</tag>
-      </tags>
   </entry>
   <entry>
     <title>基于链式推理的文档级事件论元提取</title>
@@ -1777,42 +1777,6 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
       </tags>
   </entry>
   <entry>
-    <title>情境学习创建任务向量</title>
-    <url>/2023/11/02/qing-jing-xue-xi-chuang-jian-ren-wu-xiang-liang/</url>
-    <content><![CDATA[<h1 id="情境学习创建任务向量"><a href="#情境学习创建任务向量" class="headerlink" title="情境学习创建任务向量"></a>情境学习创建任务向量</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>大型语言模型 (LLM) 中的上下文学习 (ICL) 已成为一种强大的新学习范式。然而，其基本机制仍不清楚。<strong>特别是，将其映射到“标准”机器学习框架具有挑战性，在该框架中，人们使用训练集 S 在某个假设类中找到最佳拟合函数 f (x)</strong>。在这里，我们在这个问题上取得了进展，表明 ICL 学习的函数通常具有非常简单的结构：<strong>它们对应于变压器 LLM，其唯一输入是查询 x 和从训练集计算出的单个“任务向量”</strong>。因此，<strong>ICL 可以看作是将 S 压缩为单个任务向量 θ(S)，然后使用该任务向量来调制变压器以产生输出</strong>。我们通过一系列模型和任务的综合实验来支持上述主张。</p>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>大型语言模型在过去几年中得到了显着改进。这些模型的一个<strong>显着特性是它们可以从很少的演示中学习新规则</strong>。例如，可以使用输入“Apple → Red、Lime → Green、Corn →”提示模型并生成输出“Yellow”。因此，<strong>该模型仅基于两个示例就学习了映射，并且可以将其正确应用于新示例</strong>。这种能力被称为 InContext Learning (ICL)，已被广泛使用，产生了令人印象深刻的实证结果（Brown 等人，2020；Liu 等人，2023；Dong 等人，2022）。</p>
-<p>​       鉴于这一成功，人们自然会问 ICL 背后的根本机制是什么。即，模型内部如何使用演示 S 和查询 x 来产生所需的输出？在这里，我们利用统计学习理论中的假设类概念（Shalev-Shwartz 和 Ben-David，2014）。在学习理论公式中，人们通常考虑假设类 H，其中 H 的每个元素都是函数 h(x; θ)，对输入 x 进行运算，并由参数向量 θ 指定。例如，如果 x ∈ Rd，则类 H 可以是线性分类器的集合，由系数向量 θ 定义为 h(x; θ) = θ · x。学习算法寻找一个能很好地拟合训练集的元素 h ∈ H。这称为经验风险最小化。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105171853641-1699175934785-1.png" alt="image-20231105171853641"></p>
-<p>​       目前尚不清楚 ICL 是否以这种方式运行，<font color="red" size="4.5"> 因为预测是通过 T ([S, x]) 执行的，其中 T 通常是自回归变压器和[S, x] 是 S 和 x 中标记的串联 </font><strong><em>*。因此，在一般情况下，</em></strong>它可以是对 S 和 x 进行运算以产生输出的任意函数**。这可以包括“非参数”方法，例如最近邻法。最近的工作已经开始探索这个问题。例如，研究表明，当从头开始训练 Transformer 以在上下文中执行线性回归时，新兴的学习算法类似于随机梯度下降（Akyürek 等人，2022 年；von Oswald 等人，2022 年）。然而，对于执行更复杂的自然语言任务的法LLMs来说，根本不清楚假设空间可能是什么。</p>
-<p>​        在这项工作中，我们表明，<strong>在广泛的任务中，LLMs中的 ICL 可以被视为在非常自然的假设空间上工作</strong>。我们认为，<strong>给定训练集 S，变压器将其映射到“任务向量”θ(S)，该向量本质上表示 S.2 中描述的映射/规则</strong>。即，<strong>给定变压器 T 和向量 θ，我们可以构造实现该任务的新函数 f (x; θ)</strong>。<strong>函数 f 与应用于 x 的原始变换器非常相似，但没有演示，而是通过 θ 进行调制</strong>（见图 2）。</p>
-<p>​        我们的观点也与<strong>软提示</strong>有关（Lester et al., 2021），因为这两种方法都会<strong>针对特定任务调节变压器的功能</strong>。然而，<strong>在 ICL 中，任务向量是在前向传递中计算的，而不是进行微调的。</strong></p>
-<p>​        我们的贡献包括<strong>提出基于假设类的 ICL 机械观点</strong>，并进行实验来验证我们对一系列公开可用的LLMs和各种任务的观点。我们的结果进一步加深了对 ICL 的理解，并可能对LLMs有效适应执行特定任务具有实际意义。</p>
-<h2 id="2-A-Hypothesis-Class-View-of-ICL"><a href="#2-A-Hypothesis-Class-View-of-ICL" class="headerlink" title="2 A Hypothesis Class View of ICL"></a>2 A Hypothesis Class View of ICL</h2><p>受学习理论的假设类视图的启发，我们的目标<strong>是了解 ICL 是否将演示集 S 映射到查询 x 上的函数以及这种映射是如何发生的</strong>。具体来说，我们<strong>试图看看 ICL 是否将 S 转换为 θ——某个假设空间内函数的“参数”</strong>。我们的实证研究结果表明这种观点是适用的，揭示了 ICL 运行的假设空间的结构。</p>
-<h3 id="2-1Theoretical-Framework"><a href="#2-1Theoretical-Framework" class="headerlink" title="2.1Theoretical Framework"></a>2.1Theoretical Framework</h3><p>我们使用 <em>T</em> 表示仅解码器变压器 LLM，<em>S</em> 表示用作 ICL 输入的演示集（即训练示例），x 表示要求 ICL 提供输出的查询。我们使用 <em>T</em> ([<em>S</em>, x]) 表示 ICL 对 <em>S</em> 和 x 串联的输出。</p>
-<p>​        为了证明 ICL 在假设空间内运行，我们的目标是证明其基本机制可以分为两部分：</p>
-<ul>
-<li>一种“学习算法”（用 <em>A</em> 表示），将 <em>S</em> 映射到“任务向量”<em>θ</em>，独立于查询 x。鉴于注意力层可以访问 S 和 x，这种独立性并非微不足道。</li>
-<li>一个“规则应用”（用<em>f</em>表示），它基于<strong><em>θ</em></strong> ≡ <strong><em>A</em></strong>(<strong><em>S</em></strong>) 将查询x 映射到输出，而不直接依赖于<em>S</em>。同样，这种独立性并非微不足道。</li>
-</ul>
-<p>因此，我们考虑以下从一组演示和查询到预测输出的映射<em>：T</em> ([S, x]) = f (x; A(S))。如果我们可以将 LLM 的前向传递分解为上述两个部分，我们可以将 ICL 视为在以下假设类上运行： H = {f (·; θ) | θ}。在下一节中，我们提出这样一个类的实现。</p>
-<h3 id="2-2-A-proposed-Hypothesis-Class"><a href="#2-2-A-proposed-Hypothesis-Class" class="headerlink" title="2.2 A proposed Hypothesis Class"></a>2.2 A proposed Hypothesis Class</h3><p>上述框架有多种可能的实现，对应于 A 和 f 的不同选择。接下来我们描述我们关注的实现，这自然是从变压器架构中得出的。我们<strong>考虑如图 1 所示的 ICL 设置，其中输入以查询 x（即 Corn）结尾，后跟“→”符号</strong>。如上所述，我们将学习视为由两个步骤组成：<strong>根据训练样本 S 计算参数向量 θ，并将该参数向量定义的规则应用于查询 x</strong>。变压器执行此操作的一个简单方法<strong>可能是让 → 表示的前 L 层计算 θ，然后让其余层将 θ 和 x 作为输入并产生输出</strong>。参见图 1。回想一下，变压器在任何层都可以访问 S 和 x，这对我们的观点提出了挑战。</p>
-<p>​        在以下部分中，我们将解决这一挑战并提出验证我们观点的实验。也就是说，我们证明<strong>我们可以在执行 ICL 的 LLM 的前向传播中分离出我们提出的 A 和 f。我们还表明 θ 向量是可解释的并且对应于学习任务。</strong></p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105174538487-1699177540536-5.png" alt="image-20231105174538487"></p>
-<h2 id="3-Validity-of-the-Hypothesis-Class-View"><a href="#3-Validity-of-the-Hypothesis-Class-View" class="headerlink" title="3 Validity of the Hypothesis Class View"></a>3 Validity of the Hypothesis Class View</h2><p>我们首先证明，<strong>将前向传播分成两个不同的分量 A 和 f（在第 2.2 节中定义）可以保持 ICL 的高精度。</strong></p>
-<h3 id="3-1-Separating-A-and-f"><a href="#3-1-Separating-A-and-f" class="headerlink" title="3.1 Separating A and f"></a>3.1 Separating A and f</h3><p>我们在常规前向传递中面临一些挑战：<strong>首先，对应于 A 的初始 L 层，更新 → 的表示以创建 θ，可以处理查询 x。因此，它们可能依赖于 x，从而产生 θ 对 x 的不必要的依赖。</strong>其次，与 f 相对应的其余层可以直接访问 S，而不是仅使用 x 和 θ。</p>
-<p>​        我们提出以下过程来解决这些挑战：<strong>为了解决第一个问题，我们引入一个“虚拟查询”x′并使用该查询计算→的表示。我们使用前 L 层之后的 → 表示（使用 x′ 计算）作为向量 θ（如图 2 左侧所示）。另一种方法是阻止对 x 的关注，但这会导致性能不佳。为了解决在不允许直接依赖于 S 的情况下计算 f (x, θ) 的第二个问题，我们仅对 x 和 →,3 执行变换器的前向传递，并对我们之前在第 L 层提取的 θ 进行“修补”。</strong> →（图2右侧）.4</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105175112562-1699177874552-7.png" alt="image-20231105175112562"></p>
-<p>3.2</p>
-<h2 id="8-Conclusions"><a href="#8-Conclusions" class="headerlink" title="8 Conclusions"></a>8 Conclusions</h2><p>通过LLMs对 ICL 的探索，我们揭示了 ICL 学习机制的新视角。我们揭示了一个简单而优雅的结构：<strong>ICL 通过将给定的训练集压缩为单个任务向量来发挥作用，然后引导变压器根据给定的查询生成适当的输出</strong>。我们的工作为了解LLMs如何进行 ICL 奠定了基础。根据我们的发现，未来的工作可以集中于理解任务向量是如何构建的以及如何使用它来计算输出。</p>
-]]></content>
-      <categories>
-        <category>上下文学习</category>
-      </categories>
-      <tags>
-        <tag>EMNLP2023</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我们可以编辑多模态大型语言模型吗？</title>
     <url>/2023/11/02/wo-men-ke-yi-bian-ji-duo-mo-tai-da-xing-yu-yan-mo-xing-ma/</url>
     <content><![CDATA[<h1 id="我们可以编辑多模态大型语言模型吗？"><a href="#我们可以编辑多模态大型语言模型吗？" class="headerlink" title="我们可以编辑多模态大型语言模型吗？"></a>我们可以编辑多模态大型语言模型吗？</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>在本文中，我们重点关注编辑多模态大型语言模型（MLLM）。与编辑单模态LLMs相比，多模态模型编辑更具挑战性，需要在编辑过程中进行更高水平的审查和仔细考虑。为了促进这一领域的研究，我们<span style="background-color: #ff666680">构建了一个名为 MMEdit 的新基准，用于编辑多模式LLMs并建立一套创新的评估指标</span>。我们进行了涉及各种模型编辑基线的综合实验，并分析了编辑不同组件对多模式LLMs的影响。根据经验，我们注意到<span style="background-color: #ff666680">以前的基线可以在一定程度上实现多模态 LLM 的编辑，但效果仍然差强人意，这表明这项任务的潜在难度。</span>我们希望我们的工作能够为 NLP 社区提供见解1。</p>
@@ -1885,6 +1849,42 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
 ]]></content>
       <categories>
         <category>知识编辑</category>
+      </categories>
+      <tags>
+        <tag>EMNLP2023</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>情境学习创建任务向量</title>
+    <url>/2023/11/02/qing-jing-xue-xi-chuang-jian-ren-wu-xiang-liang/</url>
+    <content><![CDATA[<h1 id="情境学习创建任务向量"><a href="#情境学习创建任务向量" class="headerlink" title="情境学习创建任务向量"></a>情境学习创建任务向量</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>大型语言模型 (LLM) 中的上下文学习 (ICL) 已成为一种强大的新学习范式。然而，其基本机制仍不清楚。<strong>特别是，将其映射到“标准”机器学习框架具有挑战性，在该框架中，人们使用训练集 S 在某个假设类中找到最佳拟合函数 f (x)</strong>。在这里，我们在这个问题上取得了进展，表明 ICL 学习的函数通常具有非常简单的结构：<strong>它们对应于变压器 LLM，其唯一输入是查询 x 和从训练集计算出的单个“任务向量”</strong>。因此，<strong>ICL 可以看作是将 S 压缩为单个任务向量 θ(S)，然后使用该任务向量来调制变压器以产生输出</strong>。我们通过一系列模型和任务的综合实验来支持上述主张。</p>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>大型语言模型在过去几年中得到了显着改进。这些模型的一个<strong>显着特性是它们可以从很少的演示中学习新规则</strong>。例如，可以使用输入“Apple → Red、Lime → Green、Corn →”提示模型并生成输出“Yellow”。因此，<strong>该模型仅基于两个示例就学习了映射，并且可以将其正确应用于新示例</strong>。这种能力被称为 InContext Learning (ICL)，已被广泛使用，产生了令人印象深刻的实证结果（Brown 等人，2020；Liu 等人，2023；Dong 等人，2022）。</p>
+<p>​       鉴于这一成功，人们自然会问 ICL 背后的根本机制是什么。即，模型内部如何使用演示 S 和查询 x 来产生所需的输出？在这里，我们利用统计学习理论中的假设类概念（Shalev-Shwartz 和 Ben-David，2014）。在学习理论公式中，人们通常考虑假设类 H，其中 H 的每个元素都是函数 h(x; θ)，对输入 x 进行运算，并由参数向量 θ 指定。例如，如果 x ∈ Rd，则类 H 可以是线性分类器的集合，由系数向量 θ 定义为 h(x; θ) = θ · x。学习算法寻找一个能很好地拟合训练集的元素 h ∈ H。这称为经验风险最小化。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105171853641-1699175934785-1.png" alt="image-20231105171853641"></p>
+<p>​       目前尚不清楚 ICL 是否以这种方式运行，<font color="red" size="4.5"> 因为预测是通过 T ([S, x]) 执行的，其中 T 通常是自回归变压器和[S, x] 是 S 和 x 中标记的串联 </font><strong><em>*。因此，在一般情况下，</em></strong>它可以是对 S 和 x 进行运算以产生输出的任意函数**。这可以包括“非参数”方法，例如最近邻法。最近的工作已经开始探索这个问题。例如，研究表明，当从头开始训练 Transformer 以在上下文中执行线性回归时，新兴的学习算法类似于随机梯度下降（Akyürek 等人，2022 年；von Oswald 等人，2022 年）。然而，对于执行更复杂的自然语言任务的法LLMs来说，根本不清楚假设空间可能是什么。</p>
+<p>​        在这项工作中，我们表明，<strong>在广泛的任务中，LLMs中的 ICL 可以被视为在非常自然的假设空间上工作</strong>。我们认为，<strong>给定训练集 S，变压器将其映射到“任务向量”θ(S)，该向量本质上表示 S.2 中描述的映射/规则</strong>。即，<strong>给定变压器 T 和向量 θ，我们可以构造实现该任务的新函数 f (x; θ)</strong>。<strong>函数 f 与应用于 x 的原始变换器非常相似，但没有演示，而是通过 θ 进行调制</strong>（见图 2）。</p>
+<p>​        我们的观点也与<strong>软提示</strong>有关（Lester et al., 2021），因为这两种方法都会<strong>针对特定任务调节变压器的功能</strong>。然而，<strong>在 ICL 中，任务向量是在前向传递中计算的，而不是进行微调的。</strong></p>
+<p>​        我们的贡献包括<strong>提出基于假设类的 ICL 机械观点</strong>，并进行实验来验证我们对一系列公开可用的LLMs和各种任务的观点。我们的结果进一步加深了对 ICL 的理解，并可能对LLMs有效适应执行特定任务具有实际意义。</p>
+<h2 id="2-A-Hypothesis-Class-View-of-ICL"><a href="#2-A-Hypothesis-Class-View-of-ICL" class="headerlink" title="2 A Hypothesis Class View of ICL"></a>2 A Hypothesis Class View of ICL</h2><p>受学习理论的假设类视图的启发，我们的目标<strong>是了解 ICL 是否将演示集 S 映射到查询 x 上的函数以及这种映射是如何发生的</strong>。具体来说，我们<strong>试图看看 ICL 是否将 S 转换为 θ——某个假设空间内函数的“参数”</strong>。我们的实证研究结果表明这种观点是适用的，揭示了 ICL 运行的假设空间的结构。</p>
+<h3 id="2-1Theoretical-Framework"><a href="#2-1Theoretical-Framework" class="headerlink" title="2.1Theoretical Framework"></a>2.1Theoretical Framework</h3><p>我们使用 <em>T</em> 表示仅解码器变压器 LLM，<em>S</em> 表示用作 ICL 输入的演示集（即训练示例），x 表示要求 ICL 提供输出的查询。我们使用 <em>T</em> ([<em>S</em>, x]) 表示 ICL 对 <em>S</em> 和 x 串联的输出。</p>
+<p>​        为了证明 ICL 在假设空间内运行，我们的目标是证明其基本机制可以分为两部分：</p>
+<ul>
+<li>一种“学习算法”（用 <em>A</em> 表示），将 <em>S</em> 映射到“任务向量”<em>θ</em>，独立于查询 x。鉴于注意力层可以访问 S 和 x，这种独立性并非微不足道。</li>
+<li>一个“规则应用”（用<em>f</em>表示），它基于<strong><em>θ</em></strong> ≡ <strong><em>A</em></strong>(<strong><em>S</em></strong>) 将查询x 映射到输出，而不直接依赖于<em>S</em>。同样，这种独立性并非微不足道。</li>
+</ul>
+<p>因此，我们考虑以下从一组演示和查询到预测输出的映射<em>：T</em> ([S, x]) = f (x; A(S))。如果我们可以将 LLM 的前向传递分解为上述两个部分，我们可以将 ICL 视为在以下假设类上运行： H = {f (·; θ) | θ}。在下一节中，我们提出这样一个类的实现。</p>
+<h3 id="2-2-A-proposed-Hypothesis-Class"><a href="#2-2-A-proposed-Hypothesis-Class" class="headerlink" title="2.2 A proposed Hypothesis Class"></a>2.2 A proposed Hypothesis Class</h3><p>上述框架有多种可能的实现，对应于 A 和 f 的不同选择。接下来我们描述我们关注的实现，这自然是从变压器架构中得出的。我们<strong>考虑如图 1 所示的 ICL 设置，其中输入以查询 x（即 Corn）结尾，后跟“→”符号</strong>。如上所述，我们将学习视为由两个步骤组成：<strong>根据训练样本 S 计算参数向量 θ，并将该参数向量定义的规则应用于查询 x</strong>。变压器执行此操作的一个简单方法<strong>可能是让 → 表示的前 L 层计算 θ，然后让其余层将 θ 和 x 作为输入并产生输出</strong>。参见图 1。回想一下，变压器在任何层都可以访问 S 和 x，这对我们的观点提出了挑战。</p>
+<p>​        在以下部分中，我们将解决这一挑战并提出验证我们观点的实验。也就是说，我们证明<strong>我们可以在执行 ICL 的 LLM 的前向传播中分离出我们提出的 A 和 f。我们还表明 θ 向量是可解释的并且对应于学习任务。</strong></p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105174538487-1699177540536-5.png" alt="image-20231105174538487"></p>
+<h2 id="3-Validity-of-the-Hypothesis-Class-View"><a href="#3-Validity-of-the-Hypothesis-Class-View" class="headerlink" title="3 Validity of the Hypothesis Class View"></a>3 Validity of the Hypothesis Class View</h2><p>我们首先证明，<strong>将前向传播分成两个不同的分量 A 和 f（在第 2.2 节中定义）可以保持 ICL 的高精度。</strong></p>
+<h3 id="3-1-Separating-A-and-f"><a href="#3-1-Separating-A-and-f" class="headerlink" title="3.1 Separating A and f"></a>3.1 Separating A and f</h3><p>我们在常规前向传递中面临一些挑战：<strong>首先，对应于 A 的初始 L 层，更新 → 的表示以创建 θ，可以处理查询 x。因此，它们可能依赖于 x，从而产生 θ 对 x 的不必要的依赖。</strong>其次，与 f 相对应的其余层可以直接访问 S，而不是仅使用 x 和 θ。</p>
+<p>​        我们提出以下过程来解决这些挑战：<strong>为了解决第一个问题，我们引入一个“虚拟查询”x′并使用该查询计算→的表示。我们使用前 L 层之后的 → 表示（使用 x′ 计算）作为向量 θ（如图 2 左侧所示）。另一种方法是阻止对 x 的关注，但这会导致性能不佳。为了解决在不允许直接依赖于 S 的情况下计算 f (x, θ) 的第二个问题，我们仅对 x 和 →,3 执行变换器的前向传递，并对我们之前在第 L 层提取的 θ 进行“修补”。</strong> →（图2右侧）.4</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105175112562-1699177874552-7.png" alt="image-20231105175112562"></p>
+<p>3.2</p>
+<h2 id="8-Conclusions"><a href="#8-Conclusions" class="headerlink" title="8 Conclusions"></a>8 Conclusions</h2><p>通过LLMs对 ICL 的探索，我们揭示了 ICL 学习机制的新视角。我们揭示了一个简单而优雅的结构：<strong>ICL 通过将给定的训练集压缩为单个任务向量来发挥作用，然后引导变压器根据给定的查询生成适当的输出</strong>。我们的工作为了解LLMs如何进行 ICL 奠定了基础。根据我们的发现，未来的工作可以集中于理解任务向量是如何构建的以及如何使用它来计算输出。</p>
+]]></content>
+      <categories>
+        <category>上下文学习</category>
       </categories>
       <tags>
         <tag>EMNLP2023</tag>
