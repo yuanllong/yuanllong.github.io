@@ -173,7 +173,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-11-30 15:45:56 / 修改时间：16:40:05" itemprop="dateCreated datePublished" datetime="2024-11-30T15:45:56+08:00">2024-11-30</time>
+              <time title="创建时间：2024-11-30 15:45:56 / 修改时间：17:25:41" itemprop="dateCreated datePublished" datetime="2024-11-30T15:45:56+08:00">2024-11-30</time>
             </span>
 
           
@@ -209,6 +209,45 @@
 <p><img src="https://s2.loli.net/2024/11/30/3MygRhSbrj12QVs.png" alt="image-20241130163946424"></p>
 <p><strong>梯度的大小反映了当前预测值与目标值之间的距离。因 此，除第一棵决策树使用原始预测指标建树，之后的每一棵 决策树都用前一棵决策树的预测值与目标值计算出来的负梯 度来建树。相当于给分错的样本加权多次分类，使样本最终 残差趋近于0。</strong></p>
 <p>由于是对目标残差或增量进行建模预测，因此 <strong>GBDT模型只需把过程中每一棵决策树的输出结果累加，便 可得到最终的预测输出。</strong></p>
+<p>设某个回归任务的训练样本数据集为$D={(X_1, y_1), (X_2, y_2),…,(X_n, y_n)}$,根据样本集$D$构造第一 个弱学习器的初始回归决策树$L_0$，对于$D$中任意给定的一个训练样本$X$，决策树$L_0$对$X$的预测输出与其标记值$y$之间的误差为：</p>
+<script type="math/tex; mode=display">
+e(L_0(X))=\frac{1}{2}[L_0(X)-y]^2</script><p>使用上述函数作为优化的目标函数改进模型$L_0$，使用梯度下 降法实现对上述优化问题的求解，则对上式求导可求得如下梯度</p>
+<script type="math/tex; mode=display">
+\frac{\partial e(L_0(X))}{\partial L_0(X)}=L_0(X)-y</script><p>梯度的反方向为$y-L_0(X)$，应对模型$L_0(X)$往该方向进行调整。</p>
+<p>由于模型$L_0(X)$ 的更新方向$y-L_0(x)$为训练样本标 记值与该模型预测结果之差，即模型$L_0(X)$的的预测误差 ，可构造一个新的模型$L_1(X)$进行拟合。</p>
+<p>在对样本$X$进行预测时，由于$L_1$对于$X$的输出是对$L_0$的输出的某个校正量，且校正方向一定是误差$e$减小的 方向，故这两个模型的输出之和$L_0(X)+L_1(X)$一定比$L_0(X)$更加接近样本真实值$y$。</p>
+<p>GBDT集成学习算法正是根据上述思路通过迭代方 式逐步构造多个弱学习器，根据训练样本数据集$D$构造 一个新的数据集$T_1$，并使用$T_1$1构造一个新的回归决策树模型$L_1(X)$作为GBDT，集成学习模型的一个新增弱学习器。$T_1$的具体形式如下：</p>
+<script type="math/tex; mode=display">
+T_1={(X_1, \nabla_1), (X_2, \nabla_2),...,(X_n, \nabla_n)}</script><p>其中$\nabla_i = y_i-L_0(X_i)$</p>
+<p>GBDT集成学习算法的基本步骤如下：</p>
+<p>（1）构造初始学习器$L^0(X)$。令$t=0$，根据下式构建初始回归树$L^0(X)=L_0(X)$</p>
+<script type="math/tex; mode=display">
+L_0(X)=arg_{c}min\sum_{X_i, y_i\in D}J(y_i,c)</script><p>其中$L_0(X)$为只有一个根节点的初始回归决策树，$c$为使得目标 函数最小化的模型参数，$J(y_i,c)$为损失函数。</p>
+<p>这里采用平方误差损失函数，即有：</p>
+<script type="math/tex; mode=display">
+J(y,g(x))=\frac{1}{2}(y-g(x))^2</script><p>其中$y$为为样本真实值或标注值，$g(x)$为单个回归决策树模型的预测。</p>
+<p>（2）令$t=t+1$，并计算数据集$D$中每个训练样本的负梯度$\nabla_i$：</p>
+<script type="math/tex; mode=display">
+\nabla_i=-[\frac{\partial J(y,L(X_i)}{\partial L(X_i)}]_{L(X)=L^t(X)}</script><p>（3）<strong>构建新的训练样本集$T_t$</strong>：</p>
+<script type="math/tex; mode=display">
+T_1={(X_1, \nabla_1), (X_2, \nabla_2),...,(X_n, \nabla_n)}</script><p>使用$T_t$作为训练样本集构造一棵回归树，并使用该回归树作为第$t+1$个弱学习器$L_t(X)$，该决策树中第$j$个叶子的输出值为：</p>
+<script type="math/tex; mode=display">
+C_{t,j}=arg_{c} min\sum_{(X_i,\nabla_i)\in T_{t}^j}J(y_i,L^t(X_i)+c)</script><p>其中$T_t^j$表示第$t+1$个弱学习器的第$j$个叶子节点所对应 的数据集合。</p>
+<p>上式表明弱学习器$L_t(X)$中每个叶节点的输出均使得上轮迭代所得集成模型$L^(t-1)(X)$的预测误差达到最小</p>
+<p>可将回归决策树$L_t(X)$表示为：</p>
+<script type="math/tex; mode=display">
+L_t(X)=\sum C_{t,j}[(X_i,\nabla_i)\in T_{t}^j]</script><p>其中：</p>
+<script type="math/tex; mode=display">
+I[(X_i, \nabla_i)\in T_{t}^j]=\left\{  
+             \begin{array}{**lr**}  
+             1, & (X_i,\nabla_i)\in T_t^j\\  
+             0, & (X_i,\nabla_i)\notin T_t^j
+             \end{array}  
+\right.</script><p>（4）更新集成模型为：</p>
+<script type="math/tex; mode=display">
+L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回步骤（2），否 则算法结束。</p>
+<p>【例题】现有某个公司四位员工的考评信息即月薪如表5-9 所示，试根据该数据集和GBDT学习算法构造包含两个个体学 习器的集成模型，并使用该集成模型预测工龄为25年，绩效得 分为65分的员工的月薪。</p>
+<p><img src="https://s2.loli.net/2024/11/30/suWvA476q1gXEbB.png" alt="image-20241130172531954"></p>
 
       
     </div>

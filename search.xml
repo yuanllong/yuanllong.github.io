@@ -373,6 +373,13 @@ Ax = \lambda x</script><p><img src="https://s2.loli.net/2023/12/08/aqi97HUjBVQGk
 ]]></content>
   </entry>
   <entry>
+    <title>08逻辑回归</title>
+    <url>/2023/12/18/08-logistic-hui-gui/</url>
+    <content><![CDATA[<h1 id="08-logistic-回归"><a href="#08-logistic-回归" class="headerlink" title="08 logistic 回归"></a>08 logistic 回归</h1><h2 id="8-1-Logistic-Regression"><a href="#8-1-Logistic-Regression" class="headerlink" title="8.1 Logistic Regression"></a>8.1 Logistic Regression</h2><p><img src="https://s2.loli.net/2023/12/18/gs7HLUcrdN3bzpE.png" alt="image-20231218104931835"></p>
+<h2 id="8-2-Logistic-Regression-cost-function"><a href="#8-2-Logistic-Regression-cost-function" class="headerlink" title="8.2 Logistic Regression cost function"></a>8.2 Logistic Regression cost function</h2><p><img src="https://s2.loli.net/2023/12/18/MGK5DQbgXyeq2Uf.png" alt="image-20231218105940949"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>07自动求导</title>
     <url>/2023/12/11/07-zi-dong-qiu-dao/</url>
     <content><![CDATA[<h1 id="07自动求导"><a href="#07自动求导" class="headerlink" title="07自动求导"></a>07自动求导</h1><h2 id="7-1自动求导"><a href="#7-1自动求导" class="headerlink" title="7.1自动求导"></a>7.1自动求导</h2><ul>
@@ -511,13 +518,6 @@ Ax = \lambda x</script><p><img src="https://s2.loli.net/2023/12/08/aqi97HUjBVQGk
 <p>工作原理是：<strong>隐式计算流：首先看我们的函数，你会发现，整个函数的返回值总是取决于 b 的值或者是你输入的 a 的值。每一次计算的时候，PyTorch会在背后将计算图存储下来，然后倒着做一遍就可以正确答案了</strong>。同时计算更慢。</p>
 <p><img src="https://s2.loli.net/2023/12/11/GeTXM4N9CzVFgIE.png" alt="image-20231211223252136"></p>
 <h2 id="7-3QA"><a href="#7-3QA" class="headerlink" title="7.3QA"></a>7.3QA</h2>]]></content>
-  </entry>
-  <entry>
-    <title>08逻辑回归</title>
-    <url>/2023/12/18/08-logistic-hui-gui/</url>
-    <content><![CDATA[<h1 id="08-logistic-回归"><a href="#08-logistic-回归" class="headerlink" title="08 logistic 回归"></a>08 logistic 回归</h1><h2 id="8-1-Logistic-Regression"><a href="#8-1-Logistic-Regression" class="headerlink" title="8.1 Logistic Regression"></a>8.1 Logistic Regression</h2><p><img src="https://s2.loli.net/2023/12/18/gs7HLUcrdN3bzpE.png" alt="image-20231218104931835"></p>
-<h2 id="8-2-Logistic-Regression-cost-function"><a href="#8-2-Logistic-Regression-cost-function" class="headerlink" title="8.2 Logistic Regression cost function"></a>8.2 Logistic Regression cost function</h2><p><img src="https://s2.loli.net/2023/12/18/MGK5DQbgXyeq2Uf.png" alt="image-20231218105940949"></p>
-]]></content>
   </entry>
   <entry>
     <title>08线性回归</title>
@@ -768,6 +768,21 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 <h2 id="8-5QA"><a href="#8-5QA" class="headerlink" title="8.5QA"></a>8.5QA</h2>]]></content>
   </entry>
   <entry>
+    <title>10 梯度下降法</title>
+    <url>/2023/12/18/10-ti-du-xia-jiang-fa/</url>
+    <content><![CDATA[<h1 id="10-梯度下降法"><a href="#10-梯度下降法" class="headerlink" title="10 梯度下降法"></a>10 梯度下降法</h1><h2 id="10-1-Gradient-Descent"><a href="#10-1-Gradient-Descent" class="headerlink" title="10.1 Gradient Descent"></a>10.1 Gradient Descent</h2><p><img src="https://s2.loli.net/2023/12/18/5g29KPrnfduwWSM.png" alt="image-20231218110449631"></p>
+<p><img src="https://s2.loli.net/2023/12/18/l6SPghF1BXREWG5.png" alt="image-20231218111903673"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>11导数</title>
+    <url>/2023/12/18/11-dao-shu/</url>
+    <content><![CDATA[<h1 id="11-导数"><a href="#11-导数" class="headerlink" title="11 导数"></a>11 导数</h1><h2 id="11-1-Intuition-about-derivatives"><a href="#11-1-Intuition-about-derivatives" class="headerlink" title="11.1 Intuition about derivatives"></a>11.1 Intuition about derivatives</h2><p> <img src="https://s2.loli.net/2023/12/18/vNLjQAUXIDqVWSF.png" alt="image-20231218112637878"></p>
+<h2 id="11-2-examples"><a href="#11-2-examples" class="headerlink" title="11.2 examples"></a>11.2 examples</h2><p><img src="https://s2.loli.net/2023/12/18/45DRYspac3kLzOy.png" alt="image-20231218113045875"></p>
+<p><img src="https://s2.loli.net/2023/12/18/Tzk8fL7Z9OKIRp2.png" alt="image-20231218113339464"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>09 Softmax 回归 + 损失函数 + 图片分类数据集</title>
     <url>/2023/12/17/09-softmax-hui-gui-sun-shi-han-shu-tu-pian-fen-lei-shu-ju-ji/</url>
     <content><![CDATA[<h1 id="09-Softmax-回归-损失函数-图片分类数据集"><a href="#09-Softmax-回归-损失函数-图片分类数据集" class="headerlink" title="09 Softmax 回归 + 损失函数 + 图片分类数据集"></a>09 Softmax 回归 + 损失函数 + 图片分类数据集</h1><p><img src="https://s2.loli.net/2023/12/17/UM83FgmWJdb2auQ.png" alt="image-20231217221708109"></p>
@@ -787,39 +802,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 </ul>
 <p>将人类蛋白质显微镜图片分成 28 类</p>
 <h2 id="9-2损失函数"><a href="#9-2损失函数" class="headerlink" title="9.2损失函数"></a>9.2损失函数</h2><h2 id="9-3图片分类数据集"><a href="#9-3图片分类数据集" class="headerlink" title="9.3图片分类数据集"></a>9.3图片分类数据集</h2><h2 id="9-4Softmax-回归从零开始实现"><a href="#9-4Softmax-回归从零开始实现" class="headerlink" title="9.4Softmax 回归从零开始实现"></a>9.4Softmax 回归从零开始实现</h2><h2 id="9-5Softmax-回归简洁实现"><a href="#9-5Softmax-回归简洁实现" class="headerlink" title="9.5Softmax 回归简洁实现"></a>9.5Softmax 回归简洁实现</h2>]]></content>
-  </entry>
-  <entry>
-    <title>11导数</title>
-    <url>/2023/12/18/11-dao-shu/</url>
-    <content><![CDATA[<h1 id="11-导数"><a href="#11-导数" class="headerlink" title="11 导数"></a>11 导数</h1><h2 id="11-1-Intuition-about-derivatives"><a href="#11-1-Intuition-about-derivatives" class="headerlink" title="11.1 Intuition about derivatives"></a>11.1 Intuition about derivatives</h2><p> <img src="https://s2.loli.net/2023/12/18/vNLjQAUXIDqVWSF.png" alt="image-20231218112637878"></p>
-<h2 id="11-2-examples"><a href="#11-2-examples" class="headerlink" title="11.2 examples"></a>11.2 examples</h2><p><img src="https://s2.loli.net/2023/12/18/45DRYspac3kLzOy.png" alt="image-20231218113045875"></p>
-<p><img src="https://s2.loli.net/2023/12/18/Tzk8fL7Z9OKIRp2.png" alt="image-20231218113339464"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>10 梯度下降法</title>
-    <url>/2023/12/18/10-ti-du-xia-jiang-fa/</url>
-    <content><![CDATA[<h1 id="10-梯度下降法"><a href="#10-梯度下降法" class="headerlink" title="10 梯度下降法"></a>10 梯度下降法</h1><h2 id="10-1-Gradient-Descent"><a href="#10-1-Gradient-Descent" class="headerlink" title="10.1 Gradient Descent"></a>10.1 Gradient Descent</h2><p><img src="https://s2.loli.net/2023/12/18/5g29KPrnfduwWSM.png" alt="image-20231218110449631"></p>
-<p><img src="https://s2.loli.net/2023/12/18/l6SPghF1BXREWG5.png" alt="image-20231218111903673"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>15 logistic 回归中的梯度下降法</title>
-    <url>/2023/12/18/15-logistic-hui-gui-zhong-de-ti-du-xia-jiang-fa/</url>
-    <content><![CDATA[<h1 id="15-logistic-回归中的梯度下降法"><a href="#15-logistic-回归中的梯度下降法" class="headerlink" title="15 logistic 回归中的梯度下降法"></a>15 logistic 回归中的梯度下降法</h1><h2 id="15-1-Logistic-regression-recap"><a href="#15-1-Logistic-regression-recap" class="headerlink" title="15.1 Logistic regression recap"></a>15.1 Logistic regression recap</h2><p><img src="https://s2.loli.net/2023/12/18/hXOaQpjCR5tVZ91.png" alt="image-20231218163658891"></p>
-<p><img src="https://s2.loli.net/2023/12/18/5XP6SNwk8vBspmQ.png" alt="image-20231218164343526"></p>
-<h2 id="15-2-Logistic-regression-on-m-examples"><a href="#15-2-Logistic-regression-on-m-examples" class="headerlink" title="15.2 Logistic regression on $m$ examples"></a>15.2 Logistic regression on $m$ examples</h2><p><img src="https://s2.loli.net/2023/12/18/lMQC6tNmITUvpqh.png" alt="image-20231218164842297"></p>
-<p><img src="https://s2.loli.net/2023/12/18/t9iFOHaAWfjbcDK.png" alt="image-20231218165746210"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>13计算图</title>
-    <url>/2023/12/18/13-ji-suan-tu/</url>
-    <content><![CDATA[<h1 id="13-计算图"><a href="#13-计算图" class="headerlink" title="13 计算图"></a>13 计算图</h1><h2 id="13-1-Computation-Graph"><a href="#13-1-Computation-Graph" class="headerlink" title="13.1 Computation Graph"></a>13.1 Computation Graph</h2><p><img src="https://s2.loli.net/2023/12/18/C91u6wRZVLIzkgn.png" alt="image-20231218113756356"></p>
-<h2 id="13-2-Computing-derivatives"><a href="#13-2-Computing-derivatives" class="headerlink" title="13.2 Computing derivatives"></a>13.2 Computing derivatives</h2><p><img src="https://s2.loli.net/2023/12/18/PJSbW8NOrpXVYvL.png" alt="image-20231218120438053"></p>
-<p><img src="https://s2.loli.net/2023/12/18/deJoOvjcH3U8EYm.png" alt="image-20231218120900304"></p>
-<p>可控</p>
-]]></content>
   </entry>
   <entry>
     <title>16.1词嵌入（Word2Vec）</title>
@@ -938,6 +920,24 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
       </tags>
   </entry>
   <entry>
+    <title>13计算图</title>
+    <url>/2023/12/18/13-ji-suan-tu/</url>
+    <content><![CDATA[<h1 id="13-计算图"><a href="#13-计算图" class="headerlink" title="13 计算图"></a>13 计算图</h1><h2 id="13-1-Computation-Graph"><a href="#13-1-Computation-Graph" class="headerlink" title="13.1 Computation Graph"></a>13.1 Computation Graph</h2><p><img src="https://s2.loli.net/2023/12/18/C91u6wRZVLIzkgn.png" alt="image-20231218113756356"></p>
+<h2 id="13-2-Computing-derivatives"><a href="#13-2-Computing-derivatives" class="headerlink" title="13.2 Computing derivatives"></a>13.2 Computing derivatives</h2><p><img src="https://s2.loli.net/2023/12/18/PJSbW8NOrpXVYvL.png" alt="image-20231218120438053"></p>
+<p><img src="https://s2.loli.net/2023/12/18/deJoOvjcH3U8EYm.png" alt="image-20231218120900304"></p>
+<p>可控</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>15 logistic 回归中的梯度下降法</title>
+    <url>/2023/12/18/15-logistic-hui-gui-zhong-de-ti-du-xia-jiang-fa/</url>
+    <content><![CDATA[<h1 id="15-logistic-回归中的梯度下降法"><a href="#15-logistic-回归中的梯度下降法" class="headerlink" title="15 logistic 回归中的梯度下降法"></a>15 logistic 回归中的梯度下降法</h1><h2 id="15-1-Logistic-regression-recap"><a href="#15-1-Logistic-regression-recap" class="headerlink" title="15.1 Logistic regression recap"></a>15.1 Logistic regression recap</h2><p><img src="https://s2.loli.net/2023/12/18/hXOaQpjCR5tVZ91.png" alt="image-20231218163658891"></p>
+<p><img src="https://s2.loli.net/2023/12/18/5XP6SNwk8vBspmQ.png" alt="image-20231218164343526"></p>
+<h2 id="15-2-Logistic-regression-on-m-examples"><a href="#15-2-Logistic-regression-on-m-examples" class="headerlink" title="15.2 Logistic regression on $m$ examples"></a>15.2 Logistic regression on $m$ examples</h2><p><img src="https://s2.loli.net/2023/12/18/lMQC6tNmITUvpqh.png" alt="image-20231218164842297"></p>
+<p><img src="https://s2.loli.net/2023/12/18/t9iFOHaAWfjbcDK.png" alt="image-20231218165746210"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>17向量化</title>
     <url>/2023/12/18/17-xiang-liang-hua/</url>
     <content><![CDATA[<h1 id="17-向量化"><a href="#17-向量化" class="headerlink" title="17 向量化"></a>17 向量化</h1><h2 id="17-1-What-is-vectorization"><a href="#17-1-What-is-vectorization" class="headerlink" title="17.1 What is vectorization?"></a>17.1 What is vectorization?</h2><p><img src="https://s2.loli.net/2023/12/18/1BKChsn8SaX2gwW.png" alt="image-20231218170525346"></p>
@@ -949,6 +949,21 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 <h2 id="17-4-Vectorizing-Logistic-Regression"><a href="#17-4-Vectorizing-Logistic-Regression" class="headerlink" title="17.4 Vectorizing Logistic Regression"></a>17.4 Vectorizing Logistic Regression</h2><p><img src="https://s2.loli.net/2023/12/18/ybrQ4onj3CTq7Uc.png" alt="image-20231218172750055"></p>
 <h2 id="17-5-Vectorizing-Logistic-Regression-2"><a href="#17-5-Vectorizing-Logistic-Regression-2" class="headerlink" title="17.5 Vectorizing Logistic Regression 2"></a>17.5 Vectorizing Logistic Regression 2</h2><p><img src="https://s2.loli.net/2023/12/19/W6RvpId7YN9HsKJ.png" alt="image-20231219114423482"></p>
 <h2 id="17-6-Implementing-Logistic-Regression"><a href="#17-6-Implementing-Logistic-Regression" class="headerlink" title="17.6 Implementing Logistic Regression"></a>17.6 Implementing Logistic Regression</h2><p><img src="https://s2.loli.net/2023/12/19/vJufMBcE6FzxKP8.png" alt="image-20231219114728401"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>25神经网络</title>
+    <url>/2023/12/19/25-shen-jing-wang-luo/</url>
+    <content><![CDATA[<h1 id="25-神经网络"><a href="#25-神经网络" class="headerlink" title="25 神经网络"></a>25 神经网络</h1><h2 id="25-1-What-is-a-Neural-Network"><a href="#25-1-What-is-a-Neural-Network" class="headerlink" title="25.1 What is a Neural Network ?"></a>25.1 What is a Neural Network ?</h2><p><img src="https://s2.loli.net/2023/12/19/ZMTlEBK9cYr87mR.png" alt="image-20231219165206416"></p>
+<h2 id="25-2-Neural-Network-Representation"><a href="#25-2-Neural-Network-Representation" class="headerlink" title="25.2 Neural Network Representation"></a>25.2 Neural Network Representation</h2><p><img src="https://s2.loli.net/2023/12/19/97dc5uODvNkLPlz.png" alt="image-20231219165708420"></p>
+<p><img src="https://s2.loli.net/2023/12/19/iWtYLns6cawBjK1.png" alt="image-20231219170536546"></p>
+<p><strong>向量化的一条经验法则：当我们在一层中有不同的节点，那就将它们竖向堆叠</strong></p>
+<p><img src="https://s2.loli.net/2023/12/19/M5PUYEkIW2G6B34.png" alt="image-20231219171341280"></p>
+<h2 id="25-3-Neural-Network-Representation-learning"><a href="#25-3-Neural-Network-Representation-learning" class="headerlink" title="25.3 Neural Network Representation learning"></a>25.3 Neural Network Representation learning</h2><p><img src="https://s2.loli.net/2023/12/19/jxJ8vWe3ALRCtM6.png" alt="image-20231219171642916"></p>
+<h2 id="25-4-Vectorizing-across-multiple-examples"><a href="#25-4-Vectorizing-across-multiple-examples" class="headerlink" title="25.4 Vectorizing across multiple examples"></a>25.4 Vectorizing across multiple examples</h2><p><img src="https://s2.loli.net/2023/12/20/OhMJLo4AlnGWskV.png" alt="image-20231220212910827"></p>
+<p><img src="https://s2.loli.net/2023/12/20/bBxOjdkr9lq81MJ.png" alt="image-20231220213502717"></p>
+<h2 id="25-5-Justification-for-vectorized-implementation"><a href="#25-5-Justification-for-vectorized-implementation" class="headerlink" title="25.5 Justification for vectorized implementation"></a>25.5 Justification for vectorized implementation</h2><p><img src="https://s2.loli.net/2023/12/20/hR4DELJwqmMWFUl.png" alt="image-20231220214715916"></p>
+<h2 id="25-6-Recap-of-vectorizing-across-multiple-examples"><a href="#25-6-Recap-of-vectorizing-across-multiple-examples" class="headerlink" title="25.6 Recap of vectorizing across multiple examples"></a>25.6 Recap of vectorizing across multiple examples</h2><p><img src="https://s2.loli.net/2023/12/20/LKg54FatcyoUx7B.png" alt="image-20231220215654131"></p>
 ]]></content>
   </entry>
   <entry>
@@ -966,21 +981,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 <p>而是通常将其表达为 <code>5*1的矩阵</code>比较好，最终运算会得到一个矩阵</p>
 <p><img src="https://s2.loli.net/2023/12/19/aUvJEGmQ7csLhTY.png" alt="image-20231219164307491"></p>
 <p><img src="https://s2.loli.net/2023/12/19/sL2cGn8HY4ohiua.png" alt="image-20231219164514448"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>25神经网络</title>
-    <url>/2023/12/19/25-shen-jing-wang-luo/</url>
-    <content><![CDATA[<h1 id="25-神经网络"><a href="#25-神经网络" class="headerlink" title="25 神经网络"></a>25 神经网络</h1><h2 id="25-1-What-is-a-Neural-Network"><a href="#25-1-What-is-a-Neural-Network" class="headerlink" title="25.1 What is a Neural Network ?"></a>25.1 What is a Neural Network ?</h2><p><img src="https://s2.loli.net/2023/12/19/ZMTlEBK9cYr87mR.png" alt="image-20231219165206416"></p>
-<h2 id="25-2-Neural-Network-Representation"><a href="#25-2-Neural-Network-Representation" class="headerlink" title="25.2 Neural Network Representation"></a>25.2 Neural Network Representation</h2><p><img src="https://s2.loli.net/2023/12/19/97dc5uODvNkLPlz.png" alt="image-20231219165708420"></p>
-<p><img src="https://s2.loli.net/2023/12/19/iWtYLns6cawBjK1.png" alt="image-20231219170536546"></p>
-<p><strong>向量化的一条经验法则：当我们在一层中有不同的节点，那就将它们竖向堆叠</strong></p>
-<p><img src="https://s2.loli.net/2023/12/19/M5PUYEkIW2G6B34.png" alt="image-20231219171341280"></p>
-<h2 id="25-3-Neural-Network-Representation-learning"><a href="#25-3-Neural-Network-Representation-learning" class="headerlink" title="25.3 Neural Network Representation learning"></a>25.3 Neural Network Representation learning</h2><p><img src="https://s2.loli.net/2023/12/19/jxJ8vWe3ALRCtM6.png" alt="image-20231219171642916"></p>
-<h2 id="25-4-Vectorizing-across-multiple-examples"><a href="#25-4-Vectorizing-across-multiple-examples" class="headerlink" title="25.4 Vectorizing across multiple examples"></a>25.4 Vectorizing across multiple examples</h2><p><img src="https://s2.loli.net/2023/12/20/OhMJLo4AlnGWskV.png" alt="image-20231220212910827"></p>
-<p><img src="https://s2.loli.net/2023/12/20/bBxOjdkr9lq81MJ.png" alt="image-20231220213502717"></p>
-<h2 id="25-5-Justification-for-vectorized-implementation"><a href="#25-5-Justification-for-vectorized-implementation" class="headerlink" title="25.5 Justification for vectorized implementation"></a>25.5 Justification for vectorized implementation</h2><p><img src="https://s2.loli.net/2023/12/20/hR4DELJwqmMWFUl.png" alt="image-20231220214715916"></p>
-<h2 id="25-6-Recap-of-vectorizing-across-multiple-examples"><a href="#25-6-Recap-of-vectorizing-across-multiple-examples" class="headerlink" title="25.6 Recap of vectorizing across multiple examples"></a>25.6 Recap of vectorizing across multiple examples</h2><p><img src="https://s2.loli.net/2023/12/20/LKg54FatcyoUx7B.png" alt="image-20231220215654131"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1085,23 +1085,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>38深层网络中的前向传播</title>
-    <url>/2023/12/23/38-shen-ceng-wang-luo-zhong-de-qian-xiang-chuan-bo/</url>
-    <content><![CDATA[<h1 id="38-深层网络中的前向传播"><a href="#38-深层网络中的前向传播" class="headerlink" title="38 深层网络中的前向传播"></a>38 深层网络中的前向传播</h1><p><strong>深度神经网络的符号和如何在深度网络中执行正向传播。对于单个训练实例 x 的前向传播，首先计算第一层的激活，然后计算第二层到输出层的激活，最终得到预测输出。还讨论向量化方法和循环实现正向传播的必要性。</strong></p>
-<ul>
-<li><strong>深度神经网络的正向传播过程，对于单个训练实例的前向传播的计算方法</strong></li>
-<li>深度神经网络的正向传播</li>
-<li>向量化方法在整个训练集上的正向传播</li>
-<li>输入特征向量 x 在计算激活时等于零层的激活</li>
-<li><strong>深度神经网络的符号和正向传播的实现，包括将小写字母替换为大写字母、循环计算激活量等。</strong></li>
-<li>深度学习的符号和表示法</li>
-<li>训练集和表示和预测结果</li>
-<li>深度神经网络的实现和符号表示</li>
-</ul>
-<h2 id="38-1-Forward-propagation-in-a-deep-network"><a href="#38-1-Forward-propagation-in-a-deep-network" class="headerlink" title="38.1 Forward propagation in a deep network"></a>38.1 Forward propagation in a deep network</h2><p><img src="https://s2.loli.net/2023/12/23/szgD3h5LA1CIcTv.png" alt="image-20231223180058234"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>39核对矩阵的维数</title>
     <url>/2023/12/24/39-he-dui-ju-zhen-de-wei-shu/</url>
     <content><![CDATA[<h1 id="39-核对矩阵的维数"><a href="#39-核对矩阵的维数" class="headerlink" title="39 核对矩阵的维数"></a>39 核对矩阵的维数</h1><p><strong>深度学习中深度神经网络的正向传播和反向传播的过程。包含神经网络中各个层的参数和输入特性的尺寸，以及如何确保矩阵和向量的尺寸一致性。通过正向传播，我们可以计算出网络的输出和损失函数，而反向传播则用与计算梯度并更新参数。还包含深度神经网络相较于浅层表示的优势。</strong></p>
@@ -1125,6 +1108,23 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 </ul>
 <h2 id="39-1-Parameters-W-l-space-and-space-b-l"><a href="#39-1-Parameters-W-l-space-and-space-b-l" class="headerlink" title="39.1 Parameters $W^{[l]} \space and \space b^{[l]}$"></a>39.1 Parameters $W^{[l]} \space and \space b^{[l]}$</h2><p><img src="https://s2.loli.net/2023/12/24/m4xLu1pgdOvTG3o.png" alt="image-20231224132254978"></p>
 <h2 id="39-2-Vectorized-implementation"><a href="#39-2-Vectorized-implementation" class="headerlink" title="39.2 Vectorized implementation"></a>39.2 Vectorized implementation</h2><p><img src="https://s2.loli.net/2023/12/24/bchgKoSJxC45X3V.png" alt="image-20231224132819273"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>38深层网络中的前向传播</title>
+    <url>/2023/12/23/38-shen-ceng-wang-luo-zhong-de-qian-xiang-chuan-bo/</url>
+    <content><![CDATA[<h1 id="38-深层网络中的前向传播"><a href="#38-深层网络中的前向传播" class="headerlink" title="38 深层网络中的前向传播"></a>38 深层网络中的前向传播</h1><p><strong>深度神经网络的符号和如何在深度网络中执行正向传播。对于单个训练实例 x 的前向传播，首先计算第一层的激活，然后计算第二层到输出层的激活，最终得到预测输出。还讨论向量化方法和循环实现正向传播的必要性。</strong></p>
+<ul>
+<li><strong>深度神经网络的正向传播过程，对于单个训练实例的前向传播的计算方法</strong></li>
+<li>深度神经网络的正向传播</li>
+<li>向量化方法在整个训练集上的正向传播</li>
+<li>输入特征向量 x 在计算激活时等于零层的激活</li>
+<li><strong>深度神经网络的符号和正向传播的实现，包括将小写字母替换为大写字母、循环计算激活量等。</strong></li>
+<li>深度学习的符号和表示法</li>
+<li>训练集和表示和预测结果</li>
+<li>深度神经网络的实现和符号表示</li>
+</ul>
+<h2 id="38-1-Forward-propagation-in-a-deep-network"><a href="#38-1-Forward-propagation-in-a-deep-network" class="headerlink" title="38.1 Forward propagation in a deep network"></a>38.1 Forward propagation in a deep network</h2><p><img src="https://s2.loli.net/2023/12/23/szgD3h5LA1CIcTv.png" alt="image-20231223180058234"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1163,6 +1163,14 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
+    <title>48偏差和方差</title>
+    <url>/2024/01/05/48-pian-chai-he-fang-chai/</url>
+    <content><![CDATA[<h1 id="48-偏差和方差"><a href="#48-偏差和方差" class="headerlink" title="48 偏差和方差"></a>48 偏差和方差</h1><h2 id="Bias-and-Variance"><a href="#Bias-and-Variance" class="headerlink" title="Bias and Variance"></a>Bias and Variance</h2><p><img src="https://s2.loli.net/2024/01/05/tXWsarKZ4qpvSdY.png" alt="image-20240105121254636"></p>
+<p><img src="https://s2.loli.net/2024/01/05/3SJeIYPVkEojilH.png" alt="image-20240105121719692"></p>
+<h2 id="High-bias-and-high-variance"><a href="#High-bias-and-high-variance" class="headerlink" title="High bias and high variance"></a>High bias and high variance</h2><p><img src="https://s2.loli.net/2024/01/05/WUb7IruKNq6Gg3Z.png" alt="image-20240105122119324"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>43这和大脑有什么关系？</title>
     <url>/2024/01/02/43-zhe-he-da-nao-you-shi-me-guan-xi/</url>
     <content><![CDATA[<h1 id="43-这和大脑有什么关系？"><a href="#43-这和大脑有什么关系？" class="headerlink" title="43 这和大脑有什么关系？"></a>43 这和大脑有什么关系？</h1><h2 id="43-1-Forward-and-backward-propagation"><a href="#43-1-Forward-and-backward-propagation" class="headerlink" title="43.1 Forward and backward propagation"></a>43.1 Forward and backward propagation</h2><p><img src="https://s2.loli.net/2024/01/02/XITyJkBZGtPgFK3.png" alt="image-20240102114639554"></p>
@@ -1177,24 +1185,16 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
+    <title>49机器学习基础</title>
+    <url>/2024/01/05/49-ji-qi-xue-xi-ji-chu/</url>
+    <content><![CDATA[<h1 id="49-机器学习基础"><a href="#49-机器学习基础" class="headerlink" title="49 机器学习基础"></a>49 机器学习基础</h1><h2 id="Basic-recipe-for-machine-learning"><a href="#Basic-recipe-for-machine-learning" class="headerlink" title="Basic recipe for machine learning"></a>Basic recipe for machine learning</h2><p><img src="https://s2.loli.net/2024/01/05/Owq1IAr3ZspX2jn.png" alt="image-20240105122804069"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>50正则化</title>
     <url>/2024/01/05/50-zheng-ze-hua/</url>
     <content><![CDATA[<h1 id="50-正则化"><a href="#50-正则化" class="headerlink" title="50 正则化"></a>50 正则化</h1><h2 id="logistic-regression"><a href="#logistic-regression" class="headerlink" title="logistic regression"></a>logistic regression</h2><p><img src="https://s2.loli.net/2024/01/05/heCbfkAP8I1O2cp.png" alt="image-20240105123556939"></p>
 <h2 id="Neural-network"><a href="#Neural-network" class="headerlink" title="Neural network"></a>Neural network</h2><p><img src="https://s2.loli.net/2024/01/05/6K2UAiya5ILhCQn.png" alt="image-20240105124653826"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>48偏差和方差</title>
-    <url>/2024/01/05/48-pian-chai-he-fang-chai/</url>
-    <content><![CDATA[<h1 id="48-偏差和方差"><a href="#48-偏差和方差" class="headerlink" title="48 偏差和方差"></a>48 偏差和方差</h1><h2 id="Bias-and-Variance"><a href="#Bias-and-Variance" class="headerlink" title="Bias and Variance"></a>Bias and Variance</h2><p><img src="https://s2.loli.net/2024/01/05/tXWsarKZ4qpvSdY.png" alt="image-20240105121254636"></p>
-<p><img src="https://s2.loli.net/2024/01/05/3SJeIYPVkEojilH.png" alt="image-20240105121719692"></p>
-<h2 id="High-bias-and-high-variance"><a href="#High-bias-and-high-variance" class="headerlink" title="High bias and high variance"></a>High bias and high variance</h2><p><img src="https://s2.loli.net/2024/01/05/WUb7IruKNq6Gg3Z.png" alt="image-20240105122119324"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>49机器学习基础</title>
-    <url>/2024/01/05/49-ji-qi-xue-xi-ji-chu/</url>
-    <content><![CDATA[<h1 id="49-机器学习基础"><a href="#49-机器学习基础" class="headerlink" title="49 机器学习基础"></a>49 机器学习基础</h1><h2 id="Basic-recipe-for-machine-learning"><a href="#Basic-recipe-for-machine-learning" class="headerlink" title="Basic recipe for machine learning"></a>Basic recipe for machine learning</h2><p><img src="https://s2.loli.net/2024/01/05/Owq1IAr3ZspX2jn.png" alt="image-20240105122804069"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1216,24 +1216,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
     <title>53理解Dropout</title>
     <url>/2024/01/16/53-li-jie-dropout/</url>
     <content><![CDATA[<h1 id="53-理解-Dropout"><a href="#53-理解-Dropout" class="headerlink" title="53 理解 Dropout"></a>53 理解 Dropout</h1><h2 id="53-1Why-does-drop-out-work"><a href="#53-1Why-does-drop-out-work" class="headerlink" title="53.1Why does drop-out work?"></a>53.1Why does drop-out work?</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240113212243807.png" alt="image-20240113212243807"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2024/01/02/building-recommender-system-with-gnn/</url>
-    <content><![CDATA[<h1 id="Building-Recommender-System-with-GNN"><a href="#Building-Recommender-System-with-GNN" class="headerlink" title="Building Recommender System with GNN"></a>Building Recommender System with GNN</h1><h2 id="Part1-Intro-to-GNN"><a href="#Part1-Intro-to-GNN" class="headerlink" title="Part1: Intro to GNN"></a>Part1: Intro to GNN</h2><p><img src="https://s2.loli.net/2024/01/02/YG6IJ2yqmKrHpgu.png" alt="image-20240102093813068"></p>
-<p><img src="https://s2.loli.net/2024/01/02/NnDVusyUarfP7Bj.png" alt="image-20240102093947364"></p>
-<p><img src="https://s2.loli.net/2024/01/02/OJyrtMAjZmuHKiG.png" alt="image-20240102094029280"></p>
-<p><img src="https://s2.loli.net/2024/01/02/v29RWSGTwM3br1q.png" alt="image-20240102094208182"></p>
-<p><img src="https://s2.loli.net/2024/01/02/MzbBhYHCsxwFUDA.png" alt="image-20240102094318610"></p>
-<p><img src="https://s2.loli.net/2024/01/02/EbY5l7mG4j8uxTi.png" alt="image-20240102094522141"></p>
-<p><img src="https://s2.loli.net/2024/01/02/KwkYmbyLXjla85H.png" alt="image-20240102095433388"></p>
-<p><img src="https://s2.loli.net/2024/01/02/hyE5kwJuMlYoQ6d.png" alt="image-20240102095715735"></p>
-<p><img src="https://s2.loli.net/2024/01/02/1JOisIEHlS4ZGrc.png" alt="image-20240102095928047"></p>
-<p><img src="https://s2.loli.net/2024/01/02/zcorTG9veWNO1hU.png" alt="image-20240102100124742"></p>
-<p><img src="https://s2.loli.net/2024/01/02/n6ZWoUOTFX978Eq.png" alt="image-20240102100308238"></p>
-<p><img src="https://s2.loli.net/2024/01/02/EQ8RbjtuvpHSrl9.png" alt="image-20240102100357505"></p>
-<p><img src="https://s2.loli.net/2024/01/02/8qX3bhr5asLpuNB.png" alt="image-20240102100506717"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1272,6 +1254,24 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
+    <title></title>
+    <url>/2024/01/02/building-recommender-system-with-gnn/</url>
+    <content><![CDATA[<h1 id="Building-Recommender-System-with-GNN"><a href="#Building-Recommender-System-with-GNN" class="headerlink" title="Building Recommender System with GNN"></a>Building Recommender System with GNN</h1><h2 id="Part1-Intro-to-GNN"><a href="#Part1-Intro-to-GNN" class="headerlink" title="Part1: Intro to GNN"></a>Part1: Intro to GNN</h2><p><img src="https://s2.loli.net/2024/01/02/YG6IJ2yqmKrHpgu.png" alt="image-20240102093813068"></p>
+<p><img src="https://s2.loli.net/2024/01/02/NnDVusyUarfP7Bj.png" alt="image-20240102093947364"></p>
+<p><img src="https://s2.loli.net/2024/01/02/OJyrtMAjZmuHKiG.png" alt="image-20240102094029280"></p>
+<p><img src="https://s2.loli.net/2024/01/02/v29RWSGTwM3br1q.png" alt="image-20240102094208182"></p>
+<p><img src="https://s2.loli.net/2024/01/02/MzbBhYHCsxwFUDA.png" alt="image-20240102094318610"></p>
+<p><img src="https://s2.loli.net/2024/01/02/EbY5l7mG4j8uxTi.png" alt="image-20240102094522141"></p>
+<p><img src="https://s2.loli.net/2024/01/02/KwkYmbyLXjla85H.png" alt="image-20240102095433388"></p>
+<p><img src="https://s2.loli.net/2024/01/02/hyE5kwJuMlYoQ6d.png" alt="image-20240102095715735"></p>
+<p><img src="https://s2.loli.net/2024/01/02/1JOisIEHlS4ZGrc.png" alt="image-20240102095928047"></p>
+<p><img src="https://s2.loli.net/2024/01/02/zcorTG9veWNO1hU.png" alt="image-20240102100124742"></p>
+<p><img src="https://s2.loli.net/2024/01/02/n6ZWoUOTFX978Eq.png" alt="image-20240102100308238"></p>
+<p><img src="https://s2.loli.net/2024/01/02/EQ8RbjtuvpHSrl9.png" alt="image-20240102100357505"></p>
+<p><img src="https://s2.loli.net/2024/01/02/8qX3bhr5asLpuNB.png" alt="image-20240102100506717"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>GBDT</title>
     <url>/2024/11/30/gbdt/</url>
     <content><![CDATA[<p>​        GBDT为梯度提升决策树（Gradient  Boosting Decision Tree），是一种以回归决策树为 弱学习器的集成学习模型。GBDT集成学习模型通常使用CART决 策树（回归树）模型作为弱学习器。</p>
@@ -1296,6 +1296,45 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 <p><img src="https://s2.loli.net/2024/11/30/3MygRhSbrj12QVs.png" alt="image-20241130163946424"></p>
 <p><strong>梯度的大小反映了当前预测值与目标值之间的距离。因 此，除第一棵决策树使用原始预测指标建树，之后的每一棵 决策树都用前一棵决策树的预测值与目标值计算出来的负梯 度来建树。相当于给分错的样本加权多次分类，使样本最终 残差趋近于0。</strong></p>
 <p>由于是对目标残差或增量进行建模预测，因此 <strong>GBDT模型只需把过程中每一棵决策树的输出结果累加，便 可得到最终的预测输出。</strong></p>
+<p>设某个回归任务的训练样本数据集为$D={(X_1, y_1), (X_2, y_2),…,(X_n, y_n)}$,根据样本集$D$构造第一 个弱学习器的初始回归决策树$L_0$，对于$D$中任意给定的一个训练样本$X$，决策树$L_0$对$X$的预测输出与其标记值$y$之间的误差为：</p>
+<script type="math/tex; mode=display">
+e(L_0(X))=\frac{1}{2}[L_0(X)-y]^2</script><p>使用上述函数作为优化的目标函数改进模型$L_0$，使用梯度下 降法实现对上述优化问题的求解，则对上式求导可求得如下梯度</p>
+<script type="math/tex; mode=display">
+\frac{\partial e(L_0(X))}{\partial L_0(X)}=L_0(X)-y</script><p>梯度的反方向为$y-L_0(X)$，应对模型$L_0(X)$往该方向进行调整。</p>
+<p>由于模型$L_0(X)$ 的更新方向$y-L_0(x)$为训练样本标 记值与该模型预测结果之差，即模型$L_0(X)$的的预测误差 ，可构造一个新的模型$L_1(X)$进行拟合。</p>
+<p>在对样本$X$进行预测时，由于$L_1$对于$X$的输出是对$L_0$的输出的某个校正量，且校正方向一定是误差$e$减小的 方向，故这两个模型的输出之和$L_0(X)+L_1(X)$一定比$L_0(X)$更加接近样本真实值$y$。</p>
+<p>GBDT集成学习算法正是根据上述思路通过迭代方 式逐步构造多个弱学习器，根据训练样本数据集$D$构造 一个新的数据集$T_1$，并使用$T_1$1构造一个新的回归决策树模型$L_1(X)$作为GBDT，集成学习模型的一个新增弱学习器。$T_1$的具体形式如下：</p>
+<script type="math/tex; mode=display">
+T_1={(X_1, \nabla_1), (X_2, \nabla_2),...,(X_n, \nabla_n)}</script><p>其中$\nabla_i = y_i-L_0(X_i)$</p>
+<p>GBDT集成学习算法的基本步骤如下：</p>
+<p>（1）构造初始学习器$L^0(X)$。令$t=0$，根据下式构建初始回归树$L^0(X)=L_0(X)$</p>
+<script type="math/tex; mode=display">
+L_0(X)=arg_{c}min\sum_{X_i, y_i\in D}J(y_i,c)</script><p>其中$L_0(X)$为只有一个根节点的初始回归决策树，$c$为使得目标 函数最小化的模型参数，$J(y_i,c)$为损失函数。</p>
+<p>这里采用平方误差损失函数，即有：</p>
+<script type="math/tex; mode=display">
+J(y,g(x))=\frac{1}{2}(y-g(x))^2</script><p>其中$y$为为样本真实值或标注值，$g(x)$为单个回归决策树模型的预测。</p>
+<p>（2）令$t=t+1$，并计算数据集$D$中每个训练样本的负梯度$\nabla_i$：</p>
+<script type="math/tex; mode=display">
+\nabla_i=-[\frac{\partial J(y,L(X_i)}{\partial L(X_i)}]_{L(X)=L^t(X)}</script><p>（3）<strong>构建新的训练样本集$T_t$</strong>：</p>
+<script type="math/tex; mode=display">
+T_1={(X_1, \nabla_1), (X_2, \nabla_2),...,(X_n, \nabla_n)}</script><p>使用$T_t$作为训练样本集构造一棵回归树，并使用该回归树作为第$t+1$个弱学习器$L_t(X)$，该决策树中第$j$个叶子的输出值为：</p>
+<script type="math/tex; mode=display">
+C_{t,j}=arg_{c} min\sum_{(X_i,\nabla_i)\in T_{t}^j}J(y_i,L^t(X_i)+c)</script><p>其中$T_t^j$表示第$t+1$个弱学习器的第$j$个叶子节点所对应 的数据集合。</p>
+<p>上式表明弱学习器$L_t(X)$中每个叶节点的输出均使得上轮迭代所得集成模型$L^(t-1)(X)$的预测误差达到最小</p>
+<p>可将回归决策树$L_t(X)$表示为：</p>
+<script type="math/tex; mode=display">
+L_t(X)=\sum C_{t,j}[(X_i,\nabla_i)\in T_{t}^j]</script><p>其中：</p>
+<script type="math/tex; mode=display">
+I[(X_i, \nabla_i)\in T_{t}^j]=\left\{  
+             \begin{array}{**lr**}  
+             1, & (X_i,\nabla_i)\in T_t^j\\  
+             0, & (X_i,\nabla_i)\notin T_t^j
+             \end{array}  
+\right.</script><p>（4）更新集成模型为：</p>
+<script type="math/tex; mode=display">
+L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回步骤（2），否 则算法结束。</p>
+<p>【例题】现有某个公司四位员工的考评信息即月薪如表5-9 所示，试根据该数据集和GBDT学习算法构造包含两个个体学 习器的集成模型，并使用该集成模型预测工龄为25年，绩效得 分为65分的员工的月薪。</p>
+<p><img src="https://s2.loli.net/2024/11/30/suWvA476q1gXEbB.png" alt="image-20241130172531954"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1738,6 +1777,42 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
       </tags>
   </entry>
   <entry>
+    <title>情境学习创建任务向量</title>
+    <url>/2023/11/02/qing-jing-xue-xi-chuang-jian-ren-wu-xiang-liang/</url>
+    <content><![CDATA[<h1 id="情境学习创建任务向量"><a href="#情境学习创建任务向量" class="headerlink" title="情境学习创建任务向量"></a>情境学习创建任务向量</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>大型语言模型 (LLM) 中的上下文学习 (ICL) 已成为一种强大的新学习范式。然而，其基本机制仍不清楚。<strong>特别是，将其映射到“标准”机器学习框架具有挑战性，在该框架中，人们使用训练集 S 在某个假设类中找到最佳拟合函数 f (x)</strong>。在这里，我们在这个问题上取得了进展，表明 ICL 学习的函数通常具有非常简单的结构：<strong>它们对应于变压器 LLM，其唯一输入是查询 x 和从训练集计算出的单个“任务向量”</strong>。因此，<strong>ICL 可以看作是将 S 压缩为单个任务向量 θ(S)，然后使用该任务向量来调制变压器以产生输出</strong>。我们通过一系列模型和任务的综合实验来支持上述主张。</p>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>大型语言模型在过去几年中得到了显着改进。这些模型的一个<strong>显着特性是它们可以从很少的演示中学习新规则</strong>。例如，可以使用输入“Apple → Red、Lime → Green、Corn →”提示模型并生成输出“Yellow”。因此，<strong>该模型仅基于两个示例就学习了映射，并且可以将其正确应用于新示例</strong>。这种能力被称为 InContext Learning (ICL)，已被广泛使用，产生了令人印象深刻的实证结果（Brown 等人，2020；Liu 等人，2023；Dong 等人，2022）。</p>
+<p>​       鉴于这一成功，人们自然会问 ICL 背后的根本机制是什么。即，模型内部如何使用演示 S 和查询 x 来产生所需的输出？在这里，我们利用统计学习理论中的假设类概念（Shalev-Shwartz 和 Ben-David，2014）。在学习理论公式中，人们通常考虑假设类 H，其中 H 的每个元素都是函数 h(x; θ)，对输入 x 进行运算，并由参数向量 θ 指定。例如，如果 x ∈ Rd，则类 H 可以是线性分类器的集合，由系数向量 θ 定义为 h(x; θ) = θ · x。学习算法寻找一个能很好地拟合训练集的元素 h ∈ H。这称为经验风险最小化。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105171853641-1699175934785-1.png" alt="image-20231105171853641"></p>
+<p>​       目前尚不清楚 ICL 是否以这种方式运行，<font color="red" size="4.5"> 因为预测是通过 T ([S, x]) 执行的，其中 T 通常是自回归变压器和[S, x] 是 S 和 x 中标记的串联 </font><strong><em>*。因此，在一般情况下，</em></strong>它可以是对 S 和 x 进行运算以产生输出的任意函数**。这可以包括“非参数”方法，例如最近邻法。最近的工作已经开始探索这个问题。例如，研究表明，当从头开始训练 Transformer 以在上下文中执行线性回归时，新兴的学习算法类似于随机梯度下降（Akyürek 等人，2022 年；von Oswald 等人，2022 年）。然而，对于执行更复杂的自然语言任务的法LLMs来说，根本不清楚假设空间可能是什么。</p>
+<p>​        在这项工作中，我们表明，<strong>在广泛的任务中，LLMs中的 ICL 可以被视为在非常自然的假设空间上工作</strong>。我们认为，<strong>给定训练集 S，变压器将其映射到“任务向量”θ(S)，该向量本质上表示 S.2 中描述的映射/规则</strong>。即，<strong>给定变压器 T 和向量 θ，我们可以构造实现该任务的新函数 f (x; θ)</strong>。<strong>函数 f 与应用于 x 的原始变换器非常相似，但没有演示，而是通过 θ 进行调制</strong>（见图 2）。</p>
+<p>​        我们的观点也与<strong>软提示</strong>有关（Lester et al., 2021），因为这两种方法都会<strong>针对特定任务调节变压器的功能</strong>。然而，<strong>在 ICL 中，任务向量是在前向传递中计算的，而不是进行微调的。</strong></p>
+<p>​        我们的贡献包括<strong>提出基于假设类的 ICL 机械观点</strong>，并进行实验来验证我们对一系列公开可用的LLMs和各种任务的观点。我们的结果进一步加深了对 ICL 的理解，并可能对LLMs有效适应执行特定任务具有实际意义。</p>
+<h2 id="2-A-Hypothesis-Class-View-of-ICL"><a href="#2-A-Hypothesis-Class-View-of-ICL" class="headerlink" title="2 A Hypothesis Class View of ICL"></a>2 A Hypothesis Class View of ICL</h2><p>受学习理论的假设类视图的启发，我们的目标<strong>是了解 ICL 是否将演示集 S 映射到查询 x 上的函数以及这种映射是如何发生的</strong>。具体来说，我们<strong>试图看看 ICL 是否将 S 转换为 θ——某个假设空间内函数的“参数”</strong>。我们的实证研究结果表明这种观点是适用的，揭示了 ICL 运行的假设空间的结构。</p>
+<h3 id="2-1Theoretical-Framework"><a href="#2-1Theoretical-Framework" class="headerlink" title="2.1Theoretical Framework"></a>2.1Theoretical Framework</h3><p>我们使用 <em>T</em> 表示仅解码器变压器 LLM，<em>S</em> 表示用作 ICL 输入的演示集（即训练示例），x 表示要求 ICL 提供输出的查询。我们使用 <em>T</em> ([<em>S</em>, x]) 表示 ICL 对 <em>S</em> 和 x 串联的输出。</p>
+<p>​        为了证明 ICL 在假设空间内运行，我们的目标是证明其基本机制可以分为两部分：</p>
+<ul>
+<li>一种“学习算法”（用 <em>A</em> 表示），将 <em>S</em> 映射到“任务向量”<em>θ</em>，独立于查询 x。鉴于注意力层可以访问 S 和 x，这种独立性并非微不足道。</li>
+<li>一个“规则应用”（用<em>f</em>表示），它基于<strong><em>θ</em></strong> ≡ <strong><em>A</em></strong>(<strong><em>S</em></strong>) 将查询x 映射到输出，而不直接依赖于<em>S</em>。同样，这种独立性并非微不足道。</li>
+</ul>
+<p>因此，我们考虑以下从一组演示和查询到预测输出的映射<em>：T</em> ([S, x]) = f (x; A(S))。如果我们可以将 LLM 的前向传递分解为上述两个部分，我们可以将 ICL 视为在以下假设类上运行： H = {f (·; θ) | θ}。在下一节中，我们提出这样一个类的实现。</p>
+<h3 id="2-2-A-proposed-Hypothesis-Class"><a href="#2-2-A-proposed-Hypothesis-Class" class="headerlink" title="2.2 A proposed Hypothesis Class"></a>2.2 A proposed Hypothesis Class</h3><p>上述框架有多种可能的实现，对应于 A 和 f 的不同选择。接下来我们描述我们关注的实现，这自然是从变压器架构中得出的。我们<strong>考虑如图 1 所示的 ICL 设置，其中输入以查询 x（即 Corn）结尾，后跟“→”符号</strong>。如上所述，我们将学习视为由两个步骤组成：<strong>根据训练样本 S 计算参数向量 θ，并将该参数向量定义的规则应用于查询 x</strong>。变压器执行此操作的一个简单方法<strong>可能是让 → 表示的前 L 层计算 θ，然后让其余层将 θ 和 x 作为输入并产生输出</strong>。参见图 1。回想一下，变压器在任何层都可以访问 S 和 x，这对我们的观点提出了挑战。</p>
+<p>​        在以下部分中，我们将解决这一挑战并提出验证我们观点的实验。也就是说，我们证明<strong>我们可以在执行 ICL 的 LLM 的前向传播中分离出我们提出的 A 和 f。我们还表明 θ 向量是可解释的并且对应于学习任务。</strong></p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105174538487-1699177540536-5.png" alt="image-20231105174538487"></p>
+<h2 id="3-Validity-of-the-Hypothesis-Class-View"><a href="#3-Validity-of-the-Hypothesis-Class-View" class="headerlink" title="3 Validity of the Hypothesis Class View"></a>3 Validity of the Hypothesis Class View</h2><p>我们首先证明，<strong>将前向传播分成两个不同的分量 A 和 f（在第 2.2 节中定义）可以保持 ICL 的高精度。</strong></p>
+<h3 id="3-1-Separating-A-and-f"><a href="#3-1-Separating-A-and-f" class="headerlink" title="3.1 Separating A and f"></a>3.1 Separating A and f</h3><p>我们在常规前向传递中面临一些挑战：<strong>首先，对应于 A 的初始 L 层，更新 → 的表示以创建 θ，可以处理查询 x。因此，它们可能依赖于 x，从而产生 θ 对 x 的不必要的依赖。</strong>其次，与 f 相对应的其余层可以直接访问 S，而不是仅使用 x 和 θ。</p>
+<p>​        我们提出以下过程来解决这些挑战：<strong>为了解决第一个问题，我们引入一个“虚拟查询”x′并使用该查询计算→的表示。我们使用前 L 层之后的 → 表示（使用 x′ 计算）作为向量 θ（如图 2 左侧所示）。另一种方法是阻止对 x 的关注，但这会导致性能不佳。为了解决在不允许直接依赖于 S 的情况下计算 f (x, θ) 的第二个问题，我们仅对 x 和 →,3 执行变换器的前向传递，并对我们之前在第 L 层提取的 θ 进行“修补”。</strong> →（图2右侧）.4</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105175112562-1699177874552-7.png" alt="image-20231105175112562"></p>
+<p>3.2</p>
+<h2 id="8-Conclusions"><a href="#8-Conclusions" class="headerlink" title="8 Conclusions"></a>8 Conclusions</h2><p>通过LLMs对 ICL 的探索，我们揭示了 ICL 学习机制的新视角。我们揭示了一个简单而优雅的结构：<strong>ICL 通过将给定的训练集压缩为单个任务向量来发挥作用，然后引导变压器根据给定的查询生成适当的输出</strong>。我们的工作为了解LLMs如何进行 ICL 奠定了基础。根据我们的发现，未来的工作可以集中于理解任务向量是如何构建的以及如何使用它来计算输出。</p>
+]]></content>
+      <categories>
+        <category>上下文学习</category>
+      </categories>
+      <tags>
+        <tag>EMNLP2023</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我们可以编辑多模态大型语言模型吗？</title>
     <url>/2023/11/02/wo-men-ke-yi-bian-ji-duo-mo-tai-da-xing-yu-yan-mo-xing-ma/</url>
     <content><![CDATA[<h1 id="我们可以编辑多模态大型语言模型吗？"><a href="#我们可以编辑多模态大型语言模型吗？" class="headerlink" title="我们可以编辑多模态大型语言模型吗？"></a>我们可以编辑多模态大型语言模型吗？</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>在本文中，我们重点关注编辑多模态大型语言模型（MLLM）。与编辑单模态LLMs相比，多模态模型编辑更具挑战性，需要在编辑过程中进行更高水平的审查和仔细考虑。为了促进这一领域的研究，我们<span style="background-color: #ff666680">构建了一个名为 MMEdit 的新基准，用于编辑多模式LLMs并建立一套创新的评估指标</span>。我们进行了涉及各种模型编辑基线的综合实验，并分析了编辑不同组件对多模式LLMs的影响。根据经验，我们注意到<span style="background-color: #ff666680">以前的基线可以在一定程度上实现多模态 LLM 的编辑，但效果仍然差强人意，这表明这项任务的潜在难度。</span>我们希望我们的工作能够为 NLP 社区提供见解1。</p>
@@ -1810,42 +1885,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
       <categories>
         <category>知识编辑</category>
-      </categories>
-      <tags>
-        <tag>EMNLP2023</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>情境学习创建任务向量</title>
-    <url>/2023/11/02/qing-jing-xue-xi-chuang-jian-ren-wu-xiang-liang/</url>
-    <content><![CDATA[<h1 id="情境学习创建任务向量"><a href="#情境学习创建任务向量" class="headerlink" title="情境学习创建任务向量"></a>情境学习创建任务向量</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>大型语言模型 (LLM) 中的上下文学习 (ICL) 已成为一种强大的新学习范式。然而，其基本机制仍不清楚。<strong>特别是，将其映射到“标准”机器学习框架具有挑战性，在该框架中，人们使用训练集 S 在某个假设类中找到最佳拟合函数 f (x)</strong>。在这里，我们在这个问题上取得了进展，表明 ICL 学习的函数通常具有非常简单的结构：<strong>它们对应于变压器 LLM，其唯一输入是查询 x 和从训练集计算出的单个“任务向量”</strong>。因此，<strong>ICL 可以看作是将 S 压缩为单个任务向量 θ(S)，然后使用该任务向量来调制变压器以产生输出</strong>。我们通过一系列模型和任务的综合实验来支持上述主张。</p>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>大型语言模型在过去几年中得到了显着改进。这些模型的一个<strong>显着特性是它们可以从很少的演示中学习新规则</strong>。例如，可以使用输入“Apple → Red、Lime → Green、Corn →”提示模型并生成输出“Yellow”。因此，<strong>该模型仅基于两个示例就学习了映射，并且可以将其正确应用于新示例</strong>。这种能力被称为 InContext Learning (ICL)，已被广泛使用，产生了令人印象深刻的实证结果（Brown 等人，2020；Liu 等人，2023；Dong 等人，2022）。</p>
-<p>​       鉴于这一成功，人们自然会问 ICL 背后的根本机制是什么。即，模型内部如何使用演示 S 和查询 x 来产生所需的输出？在这里，我们利用统计学习理论中的假设类概念（Shalev-Shwartz 和 Ben-David，2014）。在学习理论公式中，人们通常考虑假设类 H，其中 H 的每个元素都是函数 h(x; θ)，对输入 x 进行运算，并由参数向量 θ 指定。例如，如果 x ∈ Rd，则类 H 可以是线性分类器的集合，由系数向量 θ 定义为 h(x; θ) = θ · x。学习算法寻找一个能很好地拟合训练集的元素 h ∈ H。这称为经验风险最小化。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105171853641-1699175934785-1.png" alt="image-20231105171853641"></p>
-<p>​       目前尚不清楚 ICL 是否以这种方式运行，<font color="red" size="4.5"> 因为预测是通过 T ([S, x]) 执行的，其中 T 通常是自回归变压器和[S, x] 是 S 和 x 中标记的串联 </font><strong><em>*。因此，在一般情况下，</em></strong>它可以是对 S 和 x 进行运算以产生输出的任意函数**。这可以包括“非参数”方法，例如最近邻法。最近的工作已经开始探索这个问题。例如，研究表明，当从头开始训练 Transformer 以在上下文中执行线性回归时，新兴的学习算法类似于随机梯度下降（Akyürek 等人，2022 年；von Oswald 等人，2022 年）。然而，对于执行更复杂的自然语言任务的法LLMs来说，根本不清楚假设空间可能是什么。</p>
-<p>​        在这项工作中，我们表明，<strong>在广泛的任务中，LLMs中的 ICL 可以被视为在非常自然的假设空间上工作</strong>。我们认为，<strong>给定训练集 S，变压器将其映射到“任务向量”θ(S)，该向量本质上表示 S.2 中描述的映射/规则</strong>。即，<strong>给定变压器 T 和向量 θ，我们可以构造实现该任务的新函数 f (x; θ)</strong>。<strong>函数 f 与应用于 x 的原始变换器非常相似，但没有演示，而是通过 θ 进行调制</strong>（见图 2）。</p>
-<p>​        我们的观点也与<strong>软提示</strong>有关（Lester et al., 2021），因为这两种方法都会<strong>针对特定任务调节变压器的功能</strong>。然而，<strong>在 ICL 中，任务向量是在前向传递中计算的，而不是进行微调的。</strong></p>
-<p>​        我们的贡献包括<strong>提出基于假设类的 ICL 机械观点</strong>，并进行实验来验证我们对一系列公开可用的LLMs和各种任务的观点。我们的结果进一步加深了对 ICL 的理解，并可能对LLMs有效适应执行特定任务具有实际意义。</p>
-<h2 id="2-A-Hypothesis-Class-View-of-ICL"><a href="#2-A-Hypothesis-Class-View-of-ICL" class="headerlink" title="2 A Hypothesis Class View of ICL"></a>2 A Hypothesis Class View of ICL</h2><p>受学习理论的假设类视图的启发，我们的目标<strong>是了解 ICL 是否将演示集 S 映射到查询 x 上的函数以及这种映射是如何发生的</strong>。具体来说，我们<strong>试图看看 ICL 是否将 S 转换为 θ——某个假设空间内函数的“参数”</strong>。我们的实证研究结果表明这种观点是适用的，揭示了 ICL 运行的假设空间的结构。</p>
-<h3 id="2-1Theoretical-Framework"><a href="#2-1Theoretical-Framework" class="headerlink" title="2.1Theoretical Framework"></a>2.1Theoretical Framework</h3><p>我们使用 <em>T</em> 表示仅解码器变压器 LLM，<em>S</em> 表示用作 ICL 输入的演示集（即训练示例），x 表示要求 ICL 提供输出的查询。我们使用 <em>T</em> ([<em>S</em>, x]) 表示 ICL 对 <em>S</em> 和 x 串联的输出。</p>
-<p>​        为了证明 ICL 在假设空间内运行，我们的目标是证明其基本机制可以分为两部分：</p>
-<ul>
-<li>一种“学习算法”（用 <em>A</em> 表示），将 <em>S</em> 映射到“任务向量”<em>θ</em>，独立于查询 x。鉴于注意力层可以访问 S 和 x，这种独立性并非微不足道。</li>
-<li>一个“规则应用”（用<em>f</em>表示），它基于<strong><em>θ</em></strong> ≡ <strong><em>A</em></strong>(<strong><em>S</em></strong>) 将查询x 映射到输出，而不直接依赖于<em>S</em>。同样，这种独立性并非微不足道。</li>
-</ul>
-<p>因此，我们考虑以下从一组演示和查询到预测输出的映射<em>：T</em> ([S, x]) = f (x; A(S))。如果我们可以将 LLM 的前向传递分解为上述两个部分，我们可以将 ICL 视为在以下假设类上运行： H = {f (·; θ) | θ}。在下一节中，我们提出这样一个类的实现。</p>
-<h3 id="2-2-A-proposed-Hypothesis-Class"><a href="#2-2-A-proposed-Hypothesis-Class" class="headerlink" title="2.2 A proposed Hypothesis Class"></a>2.2 A proposed Hypothesis Class</h3><p>上述框架有多种可能的实现，对应于 A 和 f 的不同选择。接下来我们描述我们关注的实现，这自然是从变压器架构中得出的。我们<strong>考虑如图 1 所示的 ICL 设置，其中输入以查询 x（即 Corn）结尾，后跟“→”符号</strong>。如上所述，我们将学习视为由两个步骤组成：<strong>根据训练样本 S 计算参数向量 θ，并将该参数向量定义的规则应用于查询 x</strong>。变压器执行此操作的一个简单方法<strong>可能是让 → 表示的前 L 层计算 θ，然后让其余层将 θ 和 x 作为输入并产生输出</strong>。参见图 1。回想一下，变压器在任何层都可以访问 S 和 x，这对我们的观点提出了挑战。</p>
-<p>​        在以下部分中，我们将解决这一挑战并提出验证我们观点的实验。也就是说，我们证明<strong>我们可以在执行 ICL 的 LLM 的前向传播中分离出我们提出的 A 和 f。我们还表明 θ 向量是可解释的并且对应于学习任务。</strong></p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105174538487-1699177540536-5.png" alt="image-20231105174538487"></p>
-<h2 id="3-Validity-of-the-Hypothesis-Class-View"><a href="#3-Validity-of-the-Hypothesis-Class-View" class="headerlink" title="3 Validity of the Hypothesis Class View"></a>3 Validity of the Hypothesis Class View</h2><p>我们首先证明，<strong>将前向传播分成两个不同的分量 A 和 f（在第 2.2 节中定义）可以保持 ICL 的高精度。</strong></p>
-<h3 id="3-1-Separating-A-and-f"><a href="#3-1-Separating-A-and-f" class="headerlink" title="3.1 Separating A and f"></a>3.1 Separating A and f</h3><p>我们在常规前向传递中面临一些挑战：<strong>首先，对应于 A 的初始 L 层，更新 → 的表示以创建 θ，可以处理查询 x。因此，它们可能依赖于 x，从而产生 θ 对 x 的不必要的依赖。</strong>其次，与 f 相对应的其余层可以直接访问 S，而不是仅使用 x 和 θ。</p>
-<p>​        我们提出以下过程来解决这些挑战：<strong>为了解决第一个问题，我们引入一个“虚拟查询”x′并使用该查询计算→的表示。我们使用前 L 层之后的 → 表示（使用 x′ 计算）作为向量 θ（如图 2 左侧所示）。另一种方法是阻止对 x 的关注，但这会导致性能不佳。为了解决在不允许直接依赖于 S 的情况下计算 f (x, θ) 的第二个问题，我们仅对 x 和 →,3 执行变换器的前向传递，并对我们之前在第 L 层提取的 θ 进行“修补”。</strong> →（图2右侧）.4</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105175112562-1699177874552-7.png" alt="image-20231105175112562"></p>
-<p>3.2</p>
-<h2 id="8-Conclusions"><a href="#8-Conclusions" class="headerlink" title="8 Conclusions"></a>8 Conclusions</h2><p>通过LLMs对 ICL 的探索，我们揭示了 ICL 学习机制的新视角。我们揭示了一个简单而优雅的结构：<strong>ICL 通过将给定的训练集压缩为单个任务向量来发挥作用，然后引导变压器根据给定的查询生成适当的输出</strong>。我们的工作为了解LLMs如何进行 ICL 奠定了基础。根据我们的发现，未来的工作可以集中于理解任务向量是如何构建的以及如何使用它来计算输出。</p>
-]]></content>
-      <categories>
-        <category>上下文学习</category>
       </categories>
       <tags>
         <tag>EMNLP2023</tag>
@@ -3106,6 +3145,14 @@ Gain\_Gini(D,A)=\frac{D_1}{D}Gini(D_1)+\frac{D_2}{D}Gini(D_2)</script><blockquot
       </tags>
   </entry>
   <entry>
+    <title></title>
+    <url>/2024/03/23/tong-ji-xue-xi-fang-fa/</url>
+    <content><![CDATA[<h1 id="10-1-提升方法AdaBoost算法"><a href="#10-1-提升方法AdaBoost算法" class="headerlink" title="10.1 提升方法AdaBoost算法"></a>10.1 提升方法AdaBoost算法</h1><p><img src="https://s2.loli.net/2024/03/23/qSx2yrfQHYu86ij.png" alt="image-20240323120941983"></p>
+<p><img src="https://s2.loli.net/2024/03/23/hUxJme2paKIswVn.png" alt="image-20240323121244084"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240323121450856.png" alt="image-20240323121450856"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>算法笔记V2.0</title>
     <url>/2023/11/02/suan-fa-bi-ji-v2.0/</url>
     <content><![CDATA[<p><img src="https://s2.loli.net/2023/12/23/PiVYAZGmlvQJLWq.png" alt="image-20230714101300230" style="zoom:150%;" /></p>
@@ -3554,14 +3601,6 @@ N = p_1^{c_1} \times p_2^{c_2} \times \cdots \times p_k^{c_k}</script><h4 id="4-
       <tags>
         <tag>C++算法题目</tag>
       </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2024/03/23/tong-ji-xue-xi-fang-fa/</url>
-    <content><![CDATA[<h1 id="10-1-提升方法AdaBoost算法"><a href="#10-1-提升方法AdaBoost算法" class="headerlink" title="10.1 提升方法AdaBoost算法"></a>10.1 提升方法AdaBoost算法</h1><p><img src="https://s2.loli.net/2024/03/23/qSx2yrfQHYu86ij.png" alt="image-20240323120941983"></p>
-<p><img src="https://s2.loli.net/2024/03/23/hUxJme2paKIswVn.png" alt="image-20240323121244084"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240323121450856.png" alt="image-20240323121450856"></p>
-]]></content>
   </entry>
   <entry>
     <title>自注意力机制</title>
