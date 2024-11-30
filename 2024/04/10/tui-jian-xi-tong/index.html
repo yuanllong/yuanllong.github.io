@@ -1,25 +1,26 @@
-
-<!DOCTYPE html><html lang="zh-CN">
-
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
 <head>
-  <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0" theme-name="Stellar" theme-version="1.27.0">
-  
-  <meta name="generator" content="Hexo 7.0.0">
-  <meta http-equiv='x-dns-prefetch-control' content='on' />
-  
-  <meta name="renderer" content="webkit">
-  <meta name="force-rendering" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="HandheldFriendly" content="True" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="theme-color" content="#f8f8f8">
-  
-  <title>推荐系统 - humbleyl</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-  
-    <meta name="description" content="第一章 推荐系统概述1.1推荐系统的意义推荐系统就是一个将信息生产者和信息消费者连接起来的桥梁。平台往往会作为推荐系统的载体，实现信息生产者和消费者之间信息的匹配。上述提到的平台方、信息生产者和消费者可以分别用平台方（如：腾讯视频、淘宝、网易云音乐等）、物品（如：视频、商品、音乐等）和用户和来指代。下面分别从这三方需求出发，介绍推荐系统的存在的意义。 平台方平台方一般是为信息生产者提供物品展示的位">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"humble2967738843.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="第一章 推荐系统概述1.1推荐系统的意义推荐系统就是一个将信息生产者和信息消费者连接起来的桥梁。平台往往会作为推荐系统的载体，实现信息生产者和消费者之间信息的匹配。上述提到的平台方、信息生产者和消费者可以分别用平台方（如：腾讯视频、淘宝、网易云音乐等）、物品（如：视频、商品、音乐等）和用户和来指代。下面分别从这三方需求出发，介绍推荐系统的存在的意义。 平台方平台方一般是为信息生产者提供物品展示的位">
 <meta property="og:type" content="article">
 <meta property="og:title" content="推荐系统">
 <meta property="og:url" content="http://humble2967738843.github.io/2024/04/10/tui-jian-xi-tong/index.html">
@@ -68,70 +69,182 @@
 <meta property="article:tag" content="FFM">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s2.loli.net/2024/04/11/MlPqAFQacgiJpwL.png">
-<meta name="twitter:creator" content="@humbleyl">
-  
-  
-  
-  <meta name="keywords" content="DeepFM,FFM">
 
-  <!-- feed -->
-  
-    <link rel="alternate" href="/atom.xml" title="humbleyl" type="application/atom+xml">
-  
+<link rel="canonical" href="http://humble2967738843.github.io/2024/04/10/tui-jian-xi-tong/">
 
-  <link rel="stylesheet" href="/css/main.css?v=1.27.0">
 
-  
-    <link rel="shortcut icon" href="solar:documents-bold-duotone">
-  
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
 
+  <title>推荐系统 | humbleyl</title>
   
 
-  
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --></head>
-<body>
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="humbleyl" type="application/atom+xml">
+</head>
 
-<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://s2.loli.net/2024/04/10/32Y4obwgxJCeOMr.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">humbleyl</div><div class="sub normal cap">院龙的博客</div><div class="sub hover cap" style="opacity:0"> humbleyl</div></a></div></header>
-
-<div class="nav-area">
-<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
-
-
-<nav class="menu dis-select"><a class="nav-item active" title="博客" href="/" style="color:#1BCDFC"><svg t="1716731776385" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17107" width="300" height="300"><path d="M1017.771 511.331c0 280.666-227.523 508.191-508.191 508.191s-508.19-227.525-508.19-508.191c0-280.665 227.523-508.19 508.191-508.19s508.19 227.523 508.19 508.19zM191.726 479.984h26.423v188.788h40.113v-188.788h23.558v-37.567h-23.558v-84.048h-40.113v84.048h-26.423v37.567zM274.182 598.096h46.958l-17.669 18.465c15.493 11.884 29.502 23.241 42.023 34.065l25.787-28.334c-10.932-8.701-21.703-16.766-32.314-24.195h92.165v16.555c0 4.882-1.221 9.022-3.662 12.417-2.443 3.395-8.332 5.093-17.669 5.093-8.703 0-21.437-0.532-38.205-1.591 4.88 16.766 8.063 29.393 9.551 37.885 31.622 0 51.998-1.036 61.126-3.104 9.126-2.068 16.023-6.475 20.692-13.212 4.669-6.74 7.004-15.734 7.004-26.981v-27.061h36.929v-31.2h-36.929v-12.417h20.375v-126.389h-81.5v-15.281h94.871v-31.2h-25.15c-7.217-9.973-14.326-19.314-21.33-28.017l-28.334 14.007 10.029 14.007h-30.085v-25.151h-37.567v25.151h-91.687v31.2h91.687v15.281h-78.636v128.3h38.205v-16.236h40.432v14.964h37.567v-14.964h43.298v9.551h-21.012v17.191h-156.951v31.2zM330.85 456.107h40.432v16.555h-40.432v-16.555zM330.85 498.13h40.432v16.555h-40.432v-16.555zM452.146 472.662h-43.298v-16.555h43.298v16.555zM408.85 498.13h43.298v16.555h-43.298v-16.555zM605.279 670.683v-15.281h139.442v15.281h43.298v-109.039c9.443 1.591 19.205 3.131 29.289 4.615l15.919-39.158c-42.449-2.547-79.008-7.323-109.675-14.326 23.241-12.838 42.819-27.697 58.738-44.571v-10.188h38.205v-75.771h-113.179c-3.715-11.247-7.059-20.692-10.029-28.334l-54.441 5.411 9.87 22.923h-123.526v75.771h43.616v-39.796h204.069v19.739h-119.068c3.82-4.14 7.427-8.382 10.825-12.735h-49.346c-22.711 23.558-52.107 43.086-88.186 58.579 8.063 8.703 16.023 18.465 23.877 29.289 15.068-7.642 29.076-15.703 42.023-24.195 9.973 9.129 20.587 17.139 31.836 24.036-30.563 7.537-68.026 14.062-112.382 19.579 5.731 11.461 11.037 23.666 15.919 36.611 10.188-1.696 20.057-3.447 29.609-5.253v106.81h43.296zM774.487 559.257h-190.062c35.339-7.534 65.687-15.81 91.052-24.832 27.061 9.445 60.063 17.725 99.010 24.832zM744.721 619.108h-139.442v-23.558h139.442v23.558zM628.359 470.433h96.305c-14.54 11.249-30.777 20.534-48.709 27.857-17.723-7.323-33.586-16.607-47.596-27.857z" fill="#272636" p-id="17108"></path></svg></a><a class="nav-item" title="文档" href="/wiki/" style="color:#3DC550"><svg t="1716731927468" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="29342" width="300" height="300"><path d="M931.607098 176.851787H459.277181l-13.308673-44.020995c-5.11872-17.147713-20.858785-28.92077-38.774307-28.92077H92.136966c-22.394401 0-40.565859 18.043489-40.565859 40.437891V879.268183c0 22.394401 18.043489 40.565859 40.437891 40.565858H931.607098c22.394401 0 40.437891-18.171457 40.565859-40.565858V217.289678c0-22.266433-18.171457-40.437891-40.565859-40.437891z" fill="#FFA000" p-id="29343"></path><path d="M867.87903 869.414646H155.865034c-22.394401 0-40.565859-18.043489-40.565859-40.43789V279.226193c0-22.394401 18.043489-40.565859 40.437891-40.565858h712.141964c22.394401 0 40.565859 18.043489 40.565859 40.43789V828.976756c0 22.394401-18.171457 40.565859-40.565859 40.43789z" fill="#FFFFFF" p-id="29344"></path><path d="M931.607098 919.834041H92.136966c-22.394401 0-40.565859-18.043489-40.565859-40.43789V355.367158c0-22.394401 18.043489-40.565859 40.437891-40.565858H931.607098c22.394401 0 40.565859 18.043489 40.565859 40.43789v524.028993c-0.127968 22.394401-18.171457 40.565859-40.565859 40.565858z" fill="#FFCA28" p-id="29345"></path><path d="M379.553112 482.311422H156.76081c-11.133217 0-20.218945-9.085729-20.218945-20.346913 0-11.133217 9.085729-20.218945 20.218945-20.218945h222.92027c11.133217 0 20.218945 9.085729 20.346913 20.218945-0.127968 11.261185-9.213697 20.346913-20.474881 20.346913 0.127968 0 0 0 0 0z m0 137.693577H156.76081c-11.133217 0-20.218945-9.085729-20.218945-20.346914 0-11.133217 9.085729-20.218945 20.218945-20.218945h222.92027c11.133217 0 20.218945 9.085729 20.346913 20.218945-0.127968 11.261185-9.213697 20.346913-20.474881 20.346914 0.127968 0 0 0 0 0z" fill="#FFFFFF" p-id="29346"></path><path d="M844.972757 768.703824l-109.540615-72.301924c-3.327168-2.303424-7.806048-2.303424-11.133217 0l-109.540615 72.429892c-4.734816 3.071232-11.005249 1.791552-14.07648-2.815296-1.151712-1.663584-1.663584-3.583104-1.663585-5.630592V313.393652c0-11.133217 8.701825-20.218945 19.32317-20.218946h222.92027c10.621345 0 19.323169 9.085729 19.323169 20.218946v446.864284c0.127968 5.502624-4.350912 10.109473-9.981505 10.23744-1.91952 0-3.967008-0.63984-5.630592-1.791552z" fill="#F44336" p-id="29347"></path></svg></a><a class="nav-item" title="在线简历" href="/explore/" style="color:#FA6400"><svg t="1716732005879" class="icon" viewBox="0 0 1160 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="31680" width="300" height="300"><path d="M1052.97035029 374.93800508L595.69272266 590.84097031c-14.55525615 8.49056572-32.74932656 8.49056572-47.30458272 0L89.89757422 374.93800508C64.42587617 361.59568701 54.72237237 331.2722375 68.06469043 305.80053945c4.85175234-9.70350381 12.12937998-16.98113232 21.83288379-21.83288466L548.38813994 68.06469043c14.55525615-8.49056572 32.74932656-8.49056572 47.30458272 0l458.49056572 215.90296436c25.47169805 13.34231807 35.17520185 43.66576846 21.83288379 69.13746649-6.06469043 9.70350381-13.34231807 16.98113232-23.04582188 21.8328838z m-817.52021542 120.0808626L547.17520185 641.78436641c14.55525615 8.49056572 32.74932656 8.49056572 47.30458272 0l311.72506699-146.76549873v298.3827498c0 92.18328838-150.40431299 167.38544443-335.98382695 167.38544444S235.45013487 886.79784395 235.45013487 793.40161748V495.01886768z" fill="#2F77F1" p-id="31681"></path><path d="M1056.60916455 424.66846396c13.34231807 0 24.25875996 10.9164419 24.25875996 24.25875997v145.55256064c0 13.34231807-10.9164419 24.25875996-24.25875996 24.25875996s-24.25875996-10.9164419-24.25875996-24.25875996v-145.55256064c0-13.34231807 10.9164419-24.25875996 24.25875996-24.25875997z" fill="#AFFCFE" p-id="31682"></path></svg></a><a class="nav-item" title="社交" href="/friends/" style="color:#F44336"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262" opacity=".5"/><path fill="currentColor" d="M10.99 14.308c-1.327-.978-3.49-2.84-3.49-4.593c0-2.677 2.475-3.677 4.5-1.609c2.025-2.068 4.5-1.068 4.5 1.609c0 1.752-2.163 3.615-3.49 4.593c-.454.335-.681.502-1.01.502c-.329 0-.556-.167-1.01-.502"/></svg></a></nav>
-</div>
-<div class="widgets">
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">专栏：搜广推</span></div><div class="widget-body"><a class="item active" href="/2024/04/10/tui-jian-xi-tong/"><span class="title">推荐系统</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a></div></widget>
-
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/11/30/cesifjisdj/"><span class="title">Cesifjisdj</span></a><a class="item title" href="/2024/11/30/ce-shi-yl/"><span class="title">测试yl</span></a><a class="item title" href="/2024/11/23/csac/"><span class="title">csac</span></a><a class="item title" href="/2024/04/10/tui-jian-xi-tong/"><span class="title">推荐系统</span></a><a class="item title" href="/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/"><span class="title">多语言模型中事实知识的跨语言一致性</span></a><a class="item title" href="/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/"><span class="title">基于链式推理的文档级事件论元提取</span></a><a class="item title" href="/2023/11/02/zhi-shi-shen-jing-yuan-zhong-xin-zhi-lu-yu-yan-wu-guan-zhi-shi-shen-jing-yuan-he-jian-bing-zhi-shi-shen-jing-yuan-de-fa-xian/"><span class="title">知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现</span></a><a class="item title" href="/2023/11/02/wo-men-ke-yi-tong-guo-qing-jing-xue-xi-lai-bian-ji-shi-shi-zhi-shi-ma/"><span class="title">我们可以通过情景学习来编辑事实知识吗？</span></a><a class="item title" href="/2023/11/02/wo-men-ke-yi-bian-ji-duo-mo-tai-da-xing-yu-yan-mo-xing-ma/"><span class="title">我们可以编辑多模态大型语言模型吗？</span></a><a class="item title" href="/2023/11/06/wang-diao-ni-xiang-wang-diao-de-dong-xi-llms-de-gao-xiao-wang-que/"><span class="title">忘掉你想忘掉的东西：LLMs的高效忘却</span></a></div></widget>
-</div>
-<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/Humble2967738843" target="_blank" rel="external nofollow noopener noreferrer"><svg t="1716701113980" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4745" width="200" height="200"><path d="M512 512m-469.333333 0a469.333333 469.333333 0 1 0 938.666666 0 469.333333 469.333333 0 1 0-938.666666 0Z" fill="#434A54" p-id="4746"></path><path d="M610.688 808.149333c0-12.074667 0.426667-51.498667 0.426667-100.437333 0-34.133333-11.733333-56.448-24.832-67.84 81.493333-9.045333 167.125333-39.978667 167.125333-180.608 0-39.936-14.208-72.618667-37.674667-98.261333 3.84-9.216 16.341333-46.421333-3.584-96.853334 0 0-30.72-9.813333-100.565333 37.546667a351.658667 351.658667 0 0 0-91.733333-12.373333 350.549333 350.549333 0 0 0-91.605334 12.373333c-69.973333-47.36-100.693333-37.546667-100.693333-37.546667-19.882667 50.432-7.338667 87.637333-3.541333 96.853334a141.653333 141.653333 0 0 0-37.717334 98.261333c0 140.288 85.461333 171.690667 166.784 180.906667-10.453333 9.173333-19.968 25.301333-23.253333 48.981333-20.906667 9.386667-73.856 25.514667-106.496-30.421333 0 0-19.370667-35.157333-56.149333-37.76 0 0-35.712-0.426667-2.474667 22.272 0 0 23.978667 11.264 40.618667 53.546666 0 0 21.504 65.365333 123.349333 43.221334 0.170667 30.592 0.512 59.392 0.512 68.138666a19.968 19.968 0 0 1-2.218667 9.173334 339.925333 339.925333 0 0 0 187.904 3.114666 19.2 19.2 0 0 1-4.181333-12.288z" fill="#FFFFFF" p-id="4747"></path><path d="M180.138667 843.861333A467.882667 467.882667 0 0 0 512 981.333333c259.2 0 469.333333-210.133333 469.333333-469.333333 0-129.621333-52.522667-246.954667-137.472-331.861333L180.138667 843.861333z" fill="#231F20" opacity=".1" p-id="4748"></path></svg></a><a class="social" href="https://" target="_blank" rel="external nofollow noopener noreferrer"><svg t="1716701237965" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="12408" width="200" height="200"><path d="M276.822886 874.188342c-47.901937-0.484303-85.721573-1.942714-96.222136 64.483801-4.204628 59.150968 41.545465 67.092431 120.596869 81.461911 86.981861 4.49631 137.949214 16.482801 205.118694-49.93821l-227.814878-96.106564" fill="" p-id="12409"></path><path d="M270.939709 875.64125c-24.792995 0-64.296684-0.968605-81.098684 43.647779 2.102314 5.332833 12.327704 2.982864 18.794246-1.562977 9.691557-4.589869 5.162226 1.799625-5.552971 10.412507-11.661788 8.12858-37.660036 34.54509 6.461038 61.633019 46.801249 21.645028 193.974228 61.280799 285.678041-16.169105 0 0-180.892553-56.256158-222.493052-97.944713h-1.788618v-0.01651z" fill="#F0971C" p-id="12410"></path><path d="M764.482659 865.94419c47.896434-0.484303 85.710567-1.948218 96.222136 64.4838 4.204628 59.150968-64.731455 68.859035-120.602373 81.461912-59.734332 5.51995-137.949214 16.488305-205.118693-49.93821l227.820381-96.106564" fill="" p-id="12411"></path><path d="M770.360332 867.402601c24.787491 0 64.29118-0.974109 81.087678 43.642275-2.09681 5.332833-12.316698 2.982864-18.777736-1.562976-9.708067-4.589869-5.16773 1.799625 5.547467 10.412507 11.661788 8.123077 37.66554 34.54509-6.461038 61.633019-46.801249 21.645028-193.974228 61.275295-285.683544-16.174609 0 0 180.903559-56.250655 222.504059-97.939209l1.783114-0.011007z" fill="#F0971C" p-id="12412"></path><path d="M825.598354 441.216247c51.259035 54.307941 83.206502 107.641773 108.412255 245.337829 3.417636 83.393619-7.567229 91.153468-31.947466 113.453405-17.638524-2.905816-36.124577-30.059786-54.616134-94.070291-18.491557-63.993994-21.848655-264.720943-21.848655-264.720943z" fill="" p-id="12413"></path><path d="M847.452513 380.128069c0-15.21701-4.716448-29.894683-13.466917-43.741337C832.994977 150.420008 697.560835 0 530.619501 0 363.683671 0 228.249529 150.420008 227.25891 336.386732c-8.744965 13.852157-13.466916 28.52983-13.466917 43.735833 0 22.228392 10.043777 43.334083 28.078549 62.342963 39.349592 136.000997 153.744086 234.385984 288.748959 234.385984 135.015881 0 249.404871-98.384988 288.759967-234.385984 18.034771-19.003377 28.073045-40.109067 28.073045-62.337459zM198.035646 442.184853C146.771107 496.48729 114.834648 549.826626 89.623392 687.517178c-3.423139 83.393619 25.899186 111.031892 31.936459 113.458909 6.042777 2.410506 36.135584-30.06529 54.62714-94.064788 18.486053-63.988491 21.848655-264.726446 21.848655-264.726446z" fill="" p-id="12414"></path><path d="M864.254513 621.585973c0 200.82601-158.394492 363.634261-353.810621 363.634261-195.394116 0-353.805118-162.80825-353.805118-363.634261 0-200.831514 158.405499-363.639764 353.805118-363.639764 195.410626 0 353.810621 162.802747 353.810621 363.639764z" fill="" p-id="12415"></path><path d="M220.50619 696.245633c0 149.952216 134.702185 271.517691 300.86203 271.517691 166.154342 0 300.86203-121.565475 300.86203-271.517691s-134.707688-271.517691-300.86203-271.51769c-166.154342 0.005503-300.86203 121.565475-300.86203 271.51769z" fill="#FFFFFF" p-id="12416"></path><path d="M232.068916 322.672161s-23.950969 19.636272-18.909818 60.361724c-25.211256 30.544089-20.797498 62.54659-9.454909 95.281048 18.909818 62.788741 146.650152 162.665161 309.684043 162.665161 223.544209-15.018886 289.090173-123.392617 338.890797-180.122071 0 0 29.003126-47.280049-18.909818-129.457407l-72.491305 7.275547-528.80899-16.004002z" fill="" p-id="12417"></path><path d="M302.980734 572.85852c-3.147967 33.086678-15.128955 139.996494 3.786366 166.545086 20.170106 26.190869 44.43477 38.909317 96.112067 30.907316 23.323577-7.638774 28.364727-29.817635 26.163352-61.809129l-0.946592-92.364225-125.115193-43.279048z" fill="" p-id="12418"></path><path d="M223.246902 372.126068s83.200998 144.002998 271.033388 151.273041c83.206502 1.458411 167.662284 8.728455 292.458278-87.26804 24.583864-25.453408 29.003126-33.455409 29.003126-33.455409s8.189118 65.457909-112.820509 147.635268c0 0 82.562599 0.731957 141.812629-170.182859 0 0 29.003126 111.274043-72.480298 164.36022-93.288803 56.008504-154.432015 93.090679-309.480417 84.362224-101.874168-25.326829-254.005746-65.457909-264.726446-192.730451 0 0 6.306942-29.817635 14.49606-24.000499 0 0 0.627392 69.095683 52.943088 92.364225-0.011007 0.005503-52.326703-77.807627-42.238899-132.35772z" fill="#E71F19" p-id="12419"></path><path d="M321.059532 589.605486s-36.240149 138.185862 4.413759 161.459908c41.2813 19.273045 66.498059 14.182364 94.229891 4.727454 11.661788-16.004002 1.260288-111.63727 4.721951-121.455406-6.306942-4.006504-24.892057-8.370731-28.051031-8.370731 0 0-2.834271 40.719949-0.313696 65.463413-5.046654-19.273045-8.827517-19.273045-8.827517-71.275045-30.235897-10.550093-66.173356-30.549593-66.173357-30.549593z" fill="#E71F19" p-id="12420"></path><path d="M506.316313 242.426509c0 50.60963-22.487054 91.637771-50.218886 91.637771s-50.218885-41.028141-50.218885-91.637771 22.487054-91.637771 50.218885-91.63777c27.731832-0.005503 50.218885 41.022638 50.218886 91.63777z m147.492178 0c0 50.60963-22.498061 91.637771-50.218885 91.637771-27.731832 0-50.218885-41.028141-50.218886-91.637771s22.487054-91.637771 50.218886-91.63777c27.726328-0.005503 50.218885 41.022638 50.218885 91.63777z" fill="#FFFFFF" p-id="12421"></path><path d="M499.530572 243.395115c0 19.553721-8.469793 35.398123-18.915322 35.398123-10.440025 0-18.915322-15.844402-18.915321-35.398123 0-19.548217 8.469793-35.398123 18.915321-35.398123 10.445528 0.005503 18.915322 15.855409 18.915322 35.398123z m74.791742 10.54459c-1.794121-18.238398 8.662414-44.368729 29.151719-37.638023 14.86479 6.730706 14.028267 32.547341 13.703565 39.096434-0.324703 6.538086-8.97611 11.089431-12.922076 0-1.893183-10.36848-10.093308-41.63352-17.176235-2.371982-2.360976 9.091682-11.969981 8.915572-12.756973 0.913571z" fill="" p-id="12422"></path><path d="M676.779847 358.472035c-37.032644-15.618761-89.452905-25.381863-147.624261-25.381863-56.872544 0-108.236144 9.32833-145.109189 24.347216-30.57711 12.44878-57.648529 34.567103-56.597371 47.02689 3.153471 12.503815 13.13671 20.626891 68.176608 29.118699-19.53721-18.915322-15.21701-14.600625-15.21701-43.5212 0 28.920575 23.48868 43.669792 61.357847 59.42614 24.853533 10.340963 55.386615 16.455284 88.418259 16.455284 34.677172 0 66.602625-6.73621 92.072542-18.023764 35.805377-15.855409 53.108191-28.661913 53.108191-56.6414 0 27.979486 5.773108 19.030894-17.242276 42.310443 53.366853-9.383364 70.17986-19.757348 71.5227-32.525327 0.022014-11.238023-25.55247-31.072419-52.86604-42.591118z" fill="#F0971C" p-id="12423"></path></svg></a><a class="social" href="https://www.kaggle.com/humbleyll" target="_blank" rel="external nofollow noopener noreferrer"><svg t="1716701307894" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="13418" width="200" height="200"><path d="M803.1909 1017.952189c-0.927971 3.935877-4.991844 6.015812-11.999625 6.015812H657.27546c-7.967751 0-14.975532-3.487891-20.991344-10.591669l-220.921096-281.111215-61.790069 58.622168v218.073185c0 10.015687-4.991844 15.007531-14.975532 15.007531H234.88866c-10.079685 0-15.103528-4.991844-15.103528-15.007531V15.071529C219.785132 5.11984 224.808975 0 234.88866 0h103.708759c9.983688 0 14.975532 5.11984 14.975532 15.071529v611.948877l264.663729-267.607638c7.03978-7.03978 14.07956-10.495672 21.11934-10.495672h138.203681c6.143808 0 10.079685 2.55992 12.15962 7.67976 1.951939 6.367801 1.439955 10.87966-1.535952 13.43958l-279.67126 270.679542 291.670885 362.964657c4.063873 4.447861 4.991844 8.863723 2.975907 15.263523z" fill="#20BEFF" p-id="13419"></path></svg></a><a class="social" href="https://" target="_blank" rel="external nofollow noopener noreferrer"><svg t="1716701358358" class="icon" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="14411" width="200" height="200"><path d="M1024.16 694.816c0-149.92-143.104-271.392-319.584-271.392-176.576 0-319.68 121.504-319.68 271.392S528 966.208 704.576 966.208c55.456 0 107.648-12.096 153.184-33.248l125.984 54.528-14.592-140.544c34.784-43.392 55.04-95.808 55.04-152.128zM596.832 621.28c-25.152 0-45.472-20.352-45.472-45.472s20.32-45.472 45.472-45.472c25.12 0 45.44 20.384 45.44 45.472s-20.384 45.472-45.44 45.472z m215.392 0c-25.056 0-45.44-20.352-45.44-45.472s20.384-45.472 45.44-45.472c25.184 0 45.536 20.384 45.536 45.472s-20.352 45.472-45.536 45.472zM704.576 387.488c49.376 0 96.416 8.8 139.264 24.64 0.32-5.728 0.992-11.232 0.992-16.992 0-198.08-189.152-358.624-422.432-358.624C189.184 36.512 0.032 197.024 0.032 395.136c0 74.496 26.816 143.776 72.704 201.12L53.472 781.92l166.432-72.096c41.216 19.2 86.784 32.16 134.88 38.784-3.616-17.504-5.824-35.424-5.824-53.792 0.032-169.44 159.552-307.296 355.616-307.296z m-139.808-209.6c33.184 0 60 26.88 60 60 0 33.184-26.816 60.064-60 60.064s-60.032-26.88-60.032-60.064c0-33.152 26.88-60 60.032-60zM280.032 297.952c-33.184 0-60-26.88-60-60.064 0-33.152 26.848-60 60-60 33.184 0 60.032 26.88 60.032 60s-26.88 60.064-60.032 60.064z" fill="#51C332" p-id="14412"></path></svg></a></div></footer>
-</div></aside><div class="l_main" id="main">
-
-
-
-
-
-<div class="article banner top">
-  <div class="content">
-    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/2024/04/10/tui-jian-xi-tong/">搜广推</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-04-10T04:09:32.000Z">2024-04-10</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-06-26T23:34:34.658Z">2024-06-27</time></span></div></div></div>
-    
-    <div class="bottom only-title">
-      
-      <div class="text-area">
-        <h1 class="text title"><span>推荐系统</span></h1>
-        
-      </div>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-    
   </div>
-  </div><article class="md-text content"><h1 id="第一章-推荐系统概述"><a href="#第一章-推荐系统概述" class="headerlink" title="第一章 推荐系统概述"></a>第一章 推荐系统概述</h1><h2 id="1-1推荐系统的意义"><a href="#1-1推荐系统的意义" class="headerlink" title="1.1推荐系统的意义"></a>1.1推荐系统的意义</h2><p>推荐系统就是一个将信息生产者和信息消费者连接起来的桥梁。平台往往会作为推荐系统的载体，实现信息生产者和消费者之间信息的匹配。上述提到的平台方、信息生产者和消费者可以分别用平台方（如：腾讯视频、淘宝、网易云音乐等）、物品（如：视频、商品、音乐等）和用户和来指代。下面分别从这三方需求出发，介绍推荐系统的存在的意义。</p>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">humbleyl</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://humble2967738843.github.io/2024/04/10/tui-jian-xi-tong/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="yuan long">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="humbleyl">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          推荐系统
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-04-10 12:09:32" itemprop="dateCreated datePublished" datetime="2024-04-10T12:09:32+08:00">2024-04-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-06-27 07:34:34" itemprop="dateModified" datetime="2024-06-27T07:34:34+08:00">2024-06-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%90%9C%E5%B9%BF%E6%8E%A8/" itemprop="url" rel="index"><span itemprop="name">搜广推</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="第一章-推荐系统概述"><a href="#第一章-推荐系统概述" class="headerlink" title="第一章 推荐系统概述"></a>第一章 推荐系统概述</h1><h2 id="1-1推荐系统的意义"><a href="#1-1推荐系统的意义" class="headerlink" title="1.1推荐系统的意义"></a>1.1推荐系统的意义</h2><p>推荐系统就是一个将信息生产者和信息消费者连接起来的桥梁。平台往往会作为推荐系统的载体，实现信息生产者和消费者之间信息的匹配。上述提到的平台方、信息生产者和消费者可以分别用平台方（如：腾讯视频、淘宝、网易云音乐等）、物品（如：视频、商品、音乐等）和用户和来指代。下面分别从这三方需求出发，介绍推荐系统的存在的意义。</p>
 <h3 id="平台方"><a href="#平台方" class="headerlink" title="平台方"></a>平台方</h3><p>平台方一般是为信息生产者提供物品展示的位置，然后通过不同的方式吸引用户来到平台上寻找他们感兴趣的物品。平台通过商家对物品的展示以及用户的浏览、观看或下单等行为，就产生了所谓的”流量”。</p>
 <p>对平台方而言，流量的高效利用是推荐系统存在的重要原因。以典型的电商网站一般具有如图所示的树状拓扑结构，树状结构在连通性方面有着天然的劣势，阻碍这流量的高效流通。推荐系统的出现使得原本的树状结构变成网络拓扑结构，大大增强了整个网络的连通性。推荐模块不仅使用户在当前页面有了更好的选择路径，同时也给了每个商品增加入口和展示机会，进而提高了成交概率。而推荐质量的好坏，直接决定了用户选择这条路径的可能性，进而影响着流量的利用效率。</p>
 <h3 id="推荐和搜索的区别"><a href="#推荐和搜索的区别" class="headerlink" title="推荐和搜索的区别"></a>推荐和搜索的区别</h3><p>搜索和推荐都是解决互联网大数据时代信息过载的手段，但是它们也存在着许多的不同：</p>
@@ -158,8 +271,8 @@
 </ol>
 <h3 id="设计思想"><a href="#设计思想" class="headerlink" title="设计思想"></a>设计思想</h3><p>网飞的这个架构提出的非常早，其中的技术也许不是现在常用的技术了，但是架构模型仍然被很多公司采用。</p>
 <p>这个架构为什么要这么设计，本质上是因为推荐系统是由大量数据驱动的，大数据框架最经典的就是lambda架构和kappa架构。而推荐系统在不同环节所使用的数据、处理数据的量级、需要的读取速度都是不同的，目前的技术还是很难实现一套端到端的及时响应系统，所以这种架构的设计本质上还是一种权衡后的产物，所以有了下图这种模型：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/11/MlPqAFQacgiJpwL.png" alt="image-20240411224023001"></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/11/1BOuDUGCretljZF.png" alt="image-20240411224115381"></p>
+<p><img src="https://s2.loli.net/2024/04/11/MlPqAFQacgiJpwL.png" alt="image-20240411224023001"></p>
+<p><img src="https://s2.loli.net/2024/04/11/1BOuDUGCretljZF.png" alt="image-20240411224115381"></p>
 <p>整个数据部分其实是一整个链路，主要是三块，分别是客户端及服务器实时数据处理、流处理平台准实时数据处理和大数据平台离线数据处理这三个部分。</p>
 <p>看到这里，一个很直观的问题就是，为什么数据处理需要这么多步骤？这些步骤都是干嘛的，存在的意义是什么？</p>
 <p>我们一个一个来说，首先是客户端和服务端的实时数据处理。这个很好理解，这个步骤的工作就是记录。将用户在平台上真实的行为记录下来，比如用户看到了哪些内容，和哪些内容发生了交互，和哪些没有发生了交互。如果再精细一点，还会记录用户停留的时间，用户使用的设备等等。除此之外还会记录行为发生的时间，行为发生的session等其他上下文信息。</p>
@@ -175,7 +288,7 @@
 <li>离线模型的训练；</li>
 </ol>
 <p>这里我们可以看出离线层的任务是最接近学校中我们处理数据、训练模型这种任务的，不同可能就是需要面临更大规模的数据。离线任务一般会按照天或者更久运行，比如每天晚上定期更新这一天的数据，然后重新训练模型，第二天上线新模型。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/11/PNs4UCxmSDdvIuH.png" alt="image-20240411225231577"></p>
+<p><img src="https://s2.loli.net/2024/04/11/PNs4UCxmSDdvIuH.png" alt="image-20240411225231577"></p>
 <h3 id="离线层优势和不足"><a href="#离线层优势和不足" class="headerlink" title="离线层优势和不足"></a>离线层优势和不足</h3><p>离线层面临的数据量级是最大的，面临主要的问题是海量数据存储、大规模特征工程、多机分布式机器学习模型训练。目前主流的做法是HDFS，收集到我们所有的业务数据，通过HIVE等工具，从全量数据中抽取出我们需要的数据，进行相应的加工，离线阶段主流使用的分布式框架一般是Spark。所以离线层有如下的优势：</p>
 <ol>
 <li>可以处理大量的数据，进行大规模特征工程；</li>
@@ -191,7 +304,7 @@
 <li>模型实时训练：可以通过在线学习的方法更新模型，实时推送到线上；</li>
 </ol>
 <p>近线层的发展得益于最近几年大数据技术的发展，很多流处理框架的提出大大促进了近线层的进步。如今Flink、Storm等工具一统天下。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/12/cubdwvZhHnsAx87.png" alt="image-20240412182725567"></p>
+<p><img src="https://s2.loli.net/2024/04/12/cubdwvZhHnsAx87.png" alt="image-20240412182725567"></p>
 <h3 id="在线层"><a href="#在线层" class="headerlink" title="在线层"></a>在线层</h3><p>在线层，就是直接面向用户的的那一层了。最大的特点是对响应延时有要求，因为它是直接面对用户群体的，你可以想象你打开抖音淘宝等界面，几乎都是秒刷出来给你的推荐结果的，不会说还需要让你等待几秒钟时间。所有的用户请求都会发送到在线层，在线层需要快速返回结果，它主要承担的工作有：</p>
 <ol>
 <li>模型在线服务；包括了快速召回和排序；</li>
@@ -202,7 +315,7 @@
 <p>典型的在线服务是用过RESTful/RPC等提供服务，一般是公司后台服务部门调用我们的这个服务，返回给前端。具体部署应用比较多的方式就是使用Docker在K8S部署。而在线服务的数据源就是我们在离线层计算好的每个用户和商品特征，我们事先存放在数据库中，在线层只需要实时拼接，不进行复杂的特征运算，然后输入近线层或者离线层已经训练好的模型，根据推理结果进行排序，最后返回给后台服务器，后台服务器根据我们对每一个用户的打分，再返回给用户。</p>
 <p>在线层最大的问题就是对实时性要求特别高，一般来说是几十毫秒，这就限制了我们能做的工作，很多任务往往无法及时完成，需要近线层协助我们做。</p>
 <h3 id="算法架构"><a href="#算法架构" class="headerlink" title="算法架构"></a>算法架构</h3><p>我们在入门学习推荐系统的时候，更加关注的是哪个模型AUC更高、topK效果好，哪个模型更加牛逼的问题，从基本的协同过滤到点击率预估算法，从深度学习到强化学习，学术界都始终走在最前列。一个推荐算法从出现到在业界得到广泛应用是一个长期的过程，因为在实际的生产系统中，首先需要保证的是稳定、实时地向用户提供推荐服务，在这个前提下才能追求推荐系统的效果。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/13/otixzas2RVNmWl8.png" alt="image-20240413222420120"></p>
+<p><img src="https://s2.loli.net/2024/04/13/otixzas2RVNmWl8.png" alt="image-20240413222420120"></p>
 <ul>
 <li>召回</li>
 </ul>
@@ -242,7 +355,7 @@
 <p>所以希望这篇文章能够帮助大家在负责某一个模块，优化某一个功能的时候，除了能够有算法和数据，还能能够考虑对整个架构带来的影响，如何提升整体的一个性能，慢慢开阔自己的眼界，构建出一个更好的推荐系统。</p>
 <h2 id="1-3推荐系统的技术栈"><a href="#1-3推荐系统的技术栈" class="headerlink" title="1.3推荐系统的技术栈"></a>1.3推荐系统的技术栈</h2><p>推荐系统是一个非常大的框架，有非常多的模块在里面，完整的一套推荐系统体系里，不仅会涉及到推荐算法工程师、后台开发工程师、数据挖掘/分析工程师、NLP/CV工程师还有前端、客户端甚至产品、运营等支持。我们作为算法工程师，需要掌握的技术栈主要就是在算法和工程两个区域了，所以这篇文章将会分别从算法和工程两个角度出发，结合两者分析当前主流的一些推荐算法技术栈。</p>
 <h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><p>首先我们从推荐系统架构出发，一种分法是将整个推荐系统架构分为召回、粗排、精排、重排、混排等模块。它的分解方法是从一份数据如何从生产出来，到线上服务完整顺序的一个流程。因为在不同环节，我们一般会考虑不同的算法，所以这种角度出发我们来研究推荐系统主流的算法技术栈。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240417131451288.png" alt="image-20240417131451288"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240417131451288.png" alt="image-20240417131451288"></p>
 <p>为了帮助新手在后文方便理解，首先简单介绍这些模块的功能主要是：</p>
 <ul>
 <li>召回：从推荐池中选取几千上万的item，送给后续的排序模块。由于召回面对的候选集十分大，且一般需要在线输出，故召回模块必须轻量快速低延迟。由于后续还有排序模块作为保障，召回不需要十分准确，但不可遗漏（特别是搜索系统中的召回模块）。目前基本上采用多路召回解决范式，分为非个性化召回和个性化召回。个性化召回又有content-based、behavior-based、feature-based等多种方式。</li>
@@ -252,7 +365,7 @@
 <li>混排：多个业务线都想在Feeds流中获取曝光，则需要对它们的结果进行混排。比如推荐流中插入广告、视频流中插入图文和banner等。可以基于规则策略（如广告定坑）和强化学习来实现。</li>
 </ul>
 <h3 id="画像层"><a href="#画像层" class="headerlink" title="画像层"></a>画像层</h3><p>首先是推荐系统的物料库，这部分内容里，算法主要体现在如何绘制一个用户画像和商品画像。这个环节是推荐系统架构的基础设施，一般可能新用户/商品进来，或者每周定期会重新一次整个物料库，计算其中信息，为用户打上标签，计算统计信息，为商品做内容理解等内容。其中用户画像是大家比较容易理解的，比如用户年龄、爱好通常APP会通过注册界面收集这些信息。而商品画像形式就非常多了，比如淘宝主要推荐商品，抖音主要是短视频，所以大家的物料形式比较多，内容、质量差异也比较大，所以内容画像各家的做法也不同，当前比较主流的都会涉及到一个多模态信息内容理解。下面我贴了一个微信看一看的内容画像框架，然后我们来介绍下在这一块主要使用的算法技术。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240417131728890.png" alt="image-20240417131728890"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240417131728890.png" alt="image-20240417131728890"></p>
 <p>一般推荐系统会加入多模态的一个内容理解。我们用短视频形式举个例子，假设用户拍摄了一条短视频，上传到了平台，从推荐角度看，首先我们有的信息是这条短视频的作者、长度、作者为它选择的标签、时间戳这些信息。但是这对于推荐来说是远远不够的，首先作者打上的标签不一定准确反映作品，原因可能是我们模型的语义空间可能和作者/现实世界不一致。其次我们需要更多维度的特征，比如有些用户喜欢看小姐姐跳舞，那我希望能够判断一条视频中是否有小姐姐，这就涉及到封面图的基于CV的内容抽取或者整个视频的抽取；再比如作品的标题一般能够反映主题信息，除了很多平台常用的用“#”加上一个标签以外，我们也希望能够通过标题抽取出基于NLP的信息。还有更多的维度可以考虑：封面图多维度的多媒体特征体系，包括人脸识别，人脸embedding，标签，一二级分类，视频embedding表示，水印，OCR识别，清晰度，低俗色情，敏感信息等多种维度。</p>
 <p>这里面涉及的任务主要是CV的目标检测、语义分割等任务，NLP中的情感分析、摘要抽取、自然语言理解等任务。但是这部分算法一般团队都会有专门负责的组，不需要推荐算法工程师来负责，他们会有多模态的语意标签输出，主要形式是各种粒度的Embedding。我们只需要在我们的推荐模型中引入这些预训练的Embedding。</p>
 <h3 id="文本理解"><a href="#文本理解" class="headerlink" title="文本理解"></a>文本理解</h3><p>这应该是用的最多的模态信息，包括item的标题、正文、OCR、评论等数据。这里面也可以产生不同粒度的信息，比如文本分类，把整个item做一个粗粒度的分类。</p>
@@ -264,7 +377,7 @@
 <h3 id="知识图谱"><a href="#知识图谱" class="headerlink" title="知识图谱"></a>知识图谱</h3><p>知识图谱作为知识承载系统，用于对接内外部关键词信息与词关系信息；内容画像会将原关系信息整合，并构建可业务应用的关系知识体系，其次，依赖业务中积累用户行为产生的实体关系数据，本身用户需求的标签信息，一并用于构建业务知识的兴趣图谱，基于同构网络与异构网络表示学习等核心模型，输出知识表示与表达，抽象后的图谱用于文本识别，推荐语义理解，兴趣拓展推理等场景，直接用于兴趣推理的冷启场景已经验证有很不错的收益。</p>
 <p>这方面的算法有：KGAT、RippleNet等。</p>
 <h3 id="召回-粗排"><a href="#召回-粗排" class="headerlink" title="召回/粗排"></a>召回/粗排</h3><p>推荐系统的召回阶段可以理解为根据用户的历史行为数据，为用户在海量的信息中粗选一批待推荐的内容，挑选出一个小的候选集的过程。粗排用到的很多技术与召回重合，所以放在一起讲，粗排也不是必需的环节，它的功能对召回的结果进行个粗略的排序，在保证一定精准的前提下，进一步减少往后传送的物品数量，这就是粗排的作用。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片image-20220410000221817.png" alt="在这里插入图片描述"></p>
+<p><img src="http://ryluo.oss-cn-chengdu.aliyuncs.com/图片image-20220410000221817.png" alt="在这里插入图片描述"></p>
 <p>召回模块面对几百上千万的推荐池物料规模，候选集十分庞大。由于后续有排序模块作为保障，故不需要十分准确，但必须保证不要遗漏和低延迟。目前主要通过多路召回来实现，一方面各路可以并行计算，另一方面取长补短。可以看到各类同类竞品的系统虽然细节上多少存在差异，但不约而同的采取了多路召回的架构，这类设计考虑如下几点问题：</p>
 <ol>
 <li><strong>考虑用户层面</strong>：用户兴趣的多元化，用户需求与场景的多元化：例如：新闻需求，重大要闻，相关内容沉浸阅读等等</li>
@@ -286,7 +399,7 @@
 <h3 id="图模型"><a href="#图模型" class="headerlink" title="图模型"></a>图模型</h3><p>推荐系统中User和Item相关的行为、需求、属性和社交信息具有天然的图结构，可以使用一张复杂的异构图来表示整个推荐系统。图神经网络模型推荐就是基于这个想法，把异构网络中包含的结构和语义信息编码到结点Embedding表示中，并使用得到向量进行个性化推荐。知识图谱其实是图神经网络的一个比较特殊的具体实例，但是，知识图谱因为编码的是静态知识，而不是用户比较直接的行为数据，和具体应用距离比较远，这可能是导致两者在推荐领域表现有差异的主要原因。</p>
 <p>这方面典型的算法有：GraphSAGE、PinSage等。</p>
 <h3 id="精排"><a href="#精排" class="headerlink" title="精排"></a>精排</h3><p>排序模型是推荐系统中涵盖的研究方向最多，有非常多的子领域值得研究探索，这也是推荐系统中技术含量最高的部分，毕竟它是直接面对用户，产生的结果对用户影响最大的一层。目前精排层深度学习已经一统天下了，这是王喆老师《深度学习推荐算法》书中的精排层模型演化线路。具体来看分为DNN、Wide&amp;Deep两大块，实际深入还有序列建模，以及没有提到的多任务建模都是工业界非常常用的，所以我们接下来具体谈论其中每一块的技术栈。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/17/xZzb5hRlyasTJM9.png" alt="在这里插入图片描述"></p>
+<p><img src="https://s2.loli.net/2024/04/17/xZzb5hRlyasTJM9.png" alt="在这里插入图片描述"></p>
 <h3 id="特征交叉模型"><a href="#特征交叉模型" class="headerlink" title="特征交叉模型"></a>特征交叉模型</h3><p>在深度学习推荐算法发展早期，很多论文聚焦于如何提升模型的特征组合和交叉的能力，这其中既包含隐式特征交叉Deep Crossing也有采用显式特征交叉的探究。本质上是希望模型能够摆脱人工先验的特征工程，实现端到端的一套模型。</p>
 <p>在早期的推荐系统中，基本是由人工进行特征交叉的，往往凭借对业务的理解和经验，但是费时费力。于是有了很多的这方面的研究，从FM到GBDT+LR都是引入模型进行自动化的特征交叉。再往后就是深度模型，深度模型虽然有万能近似定理，但是真正想要发挥模型的潜力，显式的特征交叉还是必不可少的。</p>
 <p>这方面的经典研究工作有：DCN、DeepFM、xDeepFM等；</p>
@@ -405,11 +518,11 @@ sim(u, v) = \frac{\sum_{i \in I}(r_{ui} - \bar r_u )(r_{vi} - \bar r_v)}{\sqrt{\
 <li><p>例如，我们要对用户$A$进行物品推荐，可以先找到和他有相似兴趣的其他用户。</p>
 </li>
 <li><p>然后，将共同兴趣用户喜欢的，但用户$A$未交互过的物品推荐给 $A$。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/11/bZEseFk2vx4RM7q.png" alt="image-20240411110402334"></p>
+<p><img src="https://s2.loli.net/2024/04/11/bZEseFk2vx4RM7q.png" alt="image-20240411110402334"></p>
 </li>
 </ul>
 <h3 id="计算过程"><a href="#计算过程" class="headerlink" title="计算过程"></a>计算过程</h3><p>以下图为例，给用户推荐物品的过程可以形象化为：预测用户对物品进行打分的任务，表格里面是5个用户对于5件物品的一个打分情况，就可以理解为用户对物品的喜欢程度。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/11/n1FNf8TB9seOc7S.png" alt="image-20240411110604527"></p>
+<p><img src="https://s2.loli.net/2024/04/11/n1FNf8TB9seOc7S.png" alt="image-20240411110604527"></p>
 <p>UserCF算法的两个步骤：</p>
 <ul>
 <li>首先，根据前面的这些打分情况(或者说已有的用户向量）计算一下 Alice 和用户1， 2， 3， 4的相似程度， 找出与 Alice 最相似的 n 个用户。</li>
@@ -468,7 +581,7 @@ sim(Alice, user_1) = cos(Alice, user_1) = \frac{5*3 + 3*1+4*2+4*3}{\sqrt(5^2+3^2
 </blockquote>
 <ul>
 <li><p>基于 sklearn 计算所有用户之间的皮尔逊相关系数。可以看出，与 Alice 相似度最高的用户为用户1和用户2。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/11/c8hMAeuiIvyJgxp.png" alt="image-20240411113155651"></p>
+<p><img src="https://s2.loli.net/2024/04/11/c8hMAeuiIvyJgxp.png" alt="image-20240411113155651"></p>
 </li>
 </ul>
 </li>
@@ -561,9 +674,9 @@ Coverage=\frac{\left| U_{u \in U} R(u) \right|}{\left| I \right|}</script><ul>
 <li>然后，把与用户喜欢的物品相类似的物品推荐给用户。</li>
 </ul>
 <p>举例来说，如果用户 1 喜欢物品 A ，而物品 A 和 C 非常相似，则可以将物品 C 推荐给用户1。ItemCF算法并不利用物品的内容属性计算物品之间的相似度， 主要通过分析用户的行为记录计算物品之间的相似度， 该算法认为， 物品 A 和物品 C 具有很大的相似度是因为喜欢物品 A 的用户极可能喜欢物品 C。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240427215458380.png" alt="image-20240427215458380"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240427215458380.png" alt="image-20240427215458380"></p>
 <h3 id="计算过程-1"><a href="#计算过程-1" class="headerlink" title="计算过程"></a>计算过程</h3><p>基于物品的协同过滤算法和基于用户的协同过滤算法很像， 所以我们这里直接还是拿上面 Alice 的那个例子来看。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/27/8viM1fWGdKuEXN3.png" alt="image-20240427215540918"></p>
+<p><img src="https://s2.loli.net/2024/04/27/8viM1fWGdKuEXN3.png" alt="image-20240427215540918"></p>
 <p>如果想知道 Alice 对物品5打多少分， 基于物品的协同过滤算法会这么做：</p>
 <ul>
 <li>首先计算一下物品5和物品1， 2， 3， 4之间的相似性。</li>
@@ -588,7 +701,7 @@ sim(物品1,物品5)=\frac{3*3+4*5+3*4+1*1}{\sqrt{9+16+9+1}*\sqrt{9+25+16+1}}</s
 <ol>
 <li>基于 <code>sklearn</code> 计算物品之间的皮尔逊相关系数：</li>
 </ol>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/27/Ma1HrBGQpk3xsdy.png" alt="image-20240427220522091"></p>
+<p><img src="https://s2.loli.net/2024/04/27/Ma1HrBGQpk3xsdy.png" alt="image-20240427220522091"></p>
 <ol>
 <li>根据皮尔逊相关系数， 可以找到与物品5最相似的2个物品是 item1 和 item4， 下面基于上面的公式计算最终得分：</li>
 </ol>
@@ -652,7 +765,7 @@ w_{ij} = \frac{\sum_{u \in N(i) \cap N(j)} \frac{1}{log1+|N(u)|}}{|N(i)|^{1-a}|N
 <li>导致的问题是<strong>热门物品具有很强的头部效应， 容易跟大量物品产生相似， 而尾部物品由于特征向量稀疏， 导致很少被推荐</strong>。</li>
 </ul>
 <p>比如下面这个例子：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/28/2KL4yXo7pnV8YMJ.png" alt="image-20240428211817361"></p>
+<p><img src="https://s2.loli.net/2024/04/28/2KL4yXo7pnV8YMJ.png" alt="image-20240428211817361"></p>
 <ul>
 <li>左边矩阵中，𝐴,𝐵,𝐶,𝐷<em>A</em>,<em>B</em>,<em>C</em>,<em>D</em> 表示的是物品。</li>
 <li>可以看出，D是一件热门物品，其与 A、B、C的相似度比较大。因此，推荐系统更可能将D推荐给用过 A、B、C的用户。</li>
@@ -698,7 +811,7 @@ w_{ij} = \frac{\sum_{u \in N(i) \cap N(j)} \frac{1}{log1+|N(u)|}}{|N(i)|^{1-a}|N
 <li>这个时候，根据cosine 相似度计算出来的推荐结果效果会打折扣。</li>
 </ul>
 <p>举例来说明，如下图（<code>X,Y,Z</code> 表示物品，<code>d,e,f</code>表示用户）：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/28/s7BDKTPaZ3VEGuR.png" alt="image-20240428212534039"></p>
+<p><img src="https://s2.loli.net/2024/04/28/s7BDKTPaZ3VEGuR.png" alt="image-20240428212534039"></p>
 <ul>
 <li>如果使用余弦相似度进行计算，用户 d 和 e 之间较为相似。但是实际上，用户 d 和 f 之间应该更加相似。只不过由于 d 倾向于打高分，e 倾向于打低分导致二者之间的余弦相似度更高。</li>
 <li>这种情况下，可以考虑使用皮尔逊相关系数计算用户之间的相似性关系。</li>
@@ -715,7 +828,7 @@ w_{ij} = \frac{\sum_{u \in N(i) \cap N(j)} \frac{1}{log1+|N(u)|}}{|N(i)|^{1-a}|N
 </ul>
 </blockquote>
 <h3 id="Swing-Graph-based"><a href="#Swing-Graph-based" class="headerlink" title="Swing(Graph-based)"></a>Swing(Graph-based)</h3><h4 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h4><p>大规模推荐系统需要实时对用户行为做出海量预测，为了保证这种实时性，大规模的推荐系统通常严重依赖于预先计算好的产品索引。产品索引的功能为：<strong>给定种子产品返回排序后的候选相关产品列表</strong>。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/06/25/NFDPOKqxpiTyuIj.png" alt="在这里插入图片描述"></p>
+<p><img src="https://s2.loli.net/2024/06/25/NFDPOKqxpiTyuIj.png" alt="在这里插入图片描述"></p>
 <p>相关性产品索引主要包含两部分：<strong>替代性产品和互补性产品</strong>。例如图中的不同种类的衬衫构成了替代关系，而衬衫和风衣裤子等构成了互补关系。用户通常希望在完成购买行为之前尽可能看更多的衬衫，而用户购买过衬衫之后更希望看到与之搭配的单品而不是其他衬衫了。</p>
 <h4 id="之前方法的局限性"><a href="#之前方法的局限性" class="headerlink" title="之前方法的局限性"></a>之前方法的局限性</h4><ul>
 <li>基于 Cosine, Jaccard, 皮尔逊相关性等相似度计算的协同过滤算法，在计算邻居关联强度的时候只关注于 Item-based (常用，因为item相比于用户变化的慢，且新Item特征比较容易获得)，Item-based CF 只关注于 Item-User-Item 的路径，把所有的User-Item交互都平等得看待，从而忽视了 User-Item 交互中的大量噪声，推荐精度存在局限性。</li>
@@ -728,7 +841,7 @@ w_{ij} = \frac{\sum_{u \in N(i) \cap N(j)} \frac{1}{log1+|N(u)|}}{|N(i)|^{1-a}|N
 </ul>
 <h4 id="Swing算法"><a href="#Swing算法" class="headerlink" title="Swing算法"></a>Swing算法</h4><p>Swing 通过利用 User-Item-User 路径中所包含的信息，考虑 User-Item 二部图中的鲁棒内部子结构计算相似性。</p>
 <ul>
-<li><p>什么是内部子结构？ 以经典的啤酒尿布故事为例，张三同时购买了啤酒和尿布，这可能是一种巧合。但两个甚至多个顾客都同时购买了啤酒尿布，这就证明啤酒和尿布具有相关关系。这样共同购买啤酒和尿布的用户越多，啤酒和尿布的相关度就会越高。图中的红色四边形就是一种Swing子结构，这种子结构可以作为给王五推荐尿布的依据。<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/06/25/AG2rNRbMCuJylsH.png" alt="在这里插入图片描述"></p>
+<li><p>什么是内部子结构？ 以经典的啤酒尿布故事为例，张三同时购买了啤酒和尿布，这可能是一种巧合。但两个甚至多个顾客都同时购买了啤酒尿布，这就证明啤酒和尿布具有相关关系。这样共同购买啤酒和尿布的用户越多，啤酒和尿布的相关度就会越高。图中的红色四边形就是一种Swing子结构，这种子结构可以作为给王五推荐尿布的依据。<img src="https://s2.loli.net/2024/06/25/AG2rNRbMCuJylsH.png" alt="在这里插入图片描述"></p>
 </li>
 <li><p>通俗解释：若用户$u$和用户$v$之间除了购买过$i$外，还购买过商品$j$ ，则认为两件商品是具有某种程度上的相似的。也就是说，商品与商品之间的相似关系，是通过用户关系来传递的。为了衡量物品$i$和$j$ 的相似性，比较同时购买了物品$i$和$j$ 的用户$u$和用户$v$， 如果这两个用户共同购买的物品越少，即这两个用户原始兴趣不相似，但仍同时购买了两个相同的物品$i$和$j$， 则物品$i$和$j$的相似性越高。</p>
 </li>
@@ -757,7 +870,7 @@ s(i,j) = \sum</script><p>其中$U_i$是点击过商品$i$的用户集合，$I_u$
 <script type="math/tex; mode=display">
 \theta_{i,j}=p(c_{i,j}|c_j)=\frac{c_{i,j}}{c_j}</script><p>即，$N(c_{i,j})$为在购买过$i$之后购买$j$类的数量，$c_j$为购买$j$类的数量。</p>
 <p>由于类别直接的种类差异，每个类别的相关类数量存在差异，因此采用最大相对落点来作为划分阈值。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/06/26/cIJshlBxM32mLzE.png" alt="在这里插入图片描述"></p>
+<p><img src="https://s2.loli.net/2024/06/26/cIJshlBxM32mLzE.png" alt="在这里插入图片描述"></p>
 <p>例如图(a)中T恤的相关类选择前八个，图(b)中手机的相关类选择前三个。</p>
 </li>
 <li><p>商品层面 商品层面的相关性挖掘主要有两个关键设计：</p>
@@ -824,12 +937,12 @@ w_0 + \sum_{i=1}^n w_ix_i =w_0 + \sum_{t \in I} w_tx_t + \sum_{u \in U} w_u x_u<
 <li>其中，$U$表示用户相关特征集合，$I$表示物品相关特征集合。</li>
 </ul>
 <p><strong>FM 的二阶特征交互</strong></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/29/nL1HB7tQdFo2yw6.png" alt="image-20240429222930591"></p>
+<p><img src="https://s2.loli.net/2024/04/29/nL1HB7tQdFo2yw6.png" alt="image-20240429222930591"></p>
 <ul>
 <li>公式变换后，计算复杂度由$O(kn^2)$降到$O(kn)$。</li>
 </ul>
 <p>由于本文章需要将 FM 模型用在召回，故将二阶特征交互项拆分为用户和物品项。有：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/29/mKQL1DdTsNwu2Ec.png" alt="image-20240429223104780"></p>
+<p><img src="https://s2.loli.net/2024/04/29/mKQL1DdTsNwu2Ec.png" alt="image-20240429223104780"></p>
 <h2 id="FM用于召回"><a href="#FM用于召回" class="headerlink" title="FM用于召回"></a>FM用于召回</h2><h2 id="2-2经典排序模型"><a href="#2-2经典排序模型" class="headerlink" title="2.2经典排序模型"></a>2.2经典排序模型</h2><h3 id="2-2-3Wide-amp-Deep系列"><a href="#2-2-3Wide-amp-Deep系列" class="headerlink" title="2.2.3Wide&amp;Deep系列"></a>2.2.3Wide&amp;Deep系列</h3><h3 id="2-2-1GBDT-LR简介"><a href="#2-2-1GBDT-LR简介" class="headerlink" title="2.2.1GBDT+LR简介"></a>2.2.1GBDT+LR简介</h3><p>前面介绍的协同过滤和矩阵分解存在的劣势就是<strong>仅利用了用户与物品相互行为信息进行推荐， 忽视了用户自身特征， 物品自身特征以及上下文信息等</strong>，导致生成的结果往往会比较片面。 而这次介绍的这个模型是2014年由Facebook提出的GBDT+LR模型， 该模型利用GBDT自动进行特征组合和选择， 进而生成新的离散特征向量， 再把该特征向量当做LR模型的输入， 来产生最后的预测结果， 该模型能够综合利用用户、物品和上下文等多种不同的特征， 生成较为全面的推荐结果， 在CTR点击率预估场景下使用较为广泛。</p>
 <p>下面首先会介绍逻辑回归和GBDT模型各自的原理及优缺点， 然后介绍GBDT+LR模型的工作原理和细节。</p>
 <h4 id="逻辑回归模型"><a href="#逻辑回归模型" class="headerlink" title="逻辑回归模型"></a>逻辑回归模型</h4><p>逻辑回归模型非常重要， 在推荐领域里面， 相比于传统的协同过滤， 逻辑回归模型能够综合利用用户、物品、上下文等多种不同的特征生成较为“全面”的推荐结果， 关于逻辑回归的更多细节， 可以参考下面给出的链接，这里只介绍比较重要的一些细节和在推荐中的应用。</p>
@@ -884,7 +997,7 @@ P(Y=1|x)=\frac{1}{1+e^{-F_M(x)}}</script><p>初始化GBDT 和回归问题一样�
 <script type="math/tex; mode=display">
 F_0(x)=arg \, min(\sum_{i=1}^n L(y, \gamma))</script><p>上式里面，$F$代表GBDT模型， $F_0$是模型的初始状态， 该式子的意思是找到一个，$\gamma$使所有样本的 Loss 最小，在这里及下文中，$\gamma$都表示节点的输出，即叶子节点， 且它是一个$log(\eta_i)$形式的值(回归值)，在初始状态，$\gamma=F_0$。</p>
 <p>下面看例子(该例子来自下面的第二个链接)， 假设我们有下面3条样本：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/29/IzmOvTwlacWe4XQ.png" alt="image-20240429104938229"></p>
+<p><img src="https://s2.loli.net/2024/04/29/IzmOvTwlacWe4XQ.png" alt="image-20240429104938229"></p>
 <p>我们希望构建 GBDT 分类树，它能通过「喜欢爆米花」、「年龄」和「颜色偏好」这 3 个特征来预测某一个样本是否喜欢看电影。我们把数据代入上面的公式中求Loss:</p>
 <script type="math/tex; mode=display">
 Loss = L(1, \gamma) + L(1, \gamma) + L(0, \gamma)</script><p>为了令其最小， 我们求导， 且让导数为0， 则：</p>
@@ -898,10 +1011,10 @@ F_0(x)=\log(\frac{positive_count}{negative_count})=\log(\frac{2}{1})=0.69</scrip
 <li><p>计算负梯度得到残差</p>
 <script type="math/tex; mode=display">
 r_{im} = - [\frac{\partial L(y_i, F(x_i))}{\partial F(x_i)}]_{F(x)=F_{m-1}(x)}</script><p>此处使用$m-1$棵树的模型， 计算每个样本的残差,$r_{im}$ 就是上面的$y_i- p_i$, 于是例子中， 每个样本的残差：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/29/JiMa9vt7uXpqLyD.png" alt="image-20240429110324439"></p>
+<p><img src="https://s2.loli.net/2024/04/29/JiMa9vt7uXpqLyD.png" alt="image-20240429110324439"></p>
 </li>
 <li><p>使用回归树来拟合$\gamma_{jm}$， 这里的表$i$示样本哈，回归树的建立过程可以参考下面的链接文章，简单的说就是遍历每个特征， 每个特征下遍历每个取值， 计算分裂后两组数据的平方损失， 找到最小的那个划分节点。 假如我们产生的第2棵决策树如下：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/29/HNqI53UDMw2V6zc.png" alt="image-20240429110613002"></p>
+<p><img src="https://s2.loli.net/2024/04/29/HNqI53UDMw2V6zc.png" alt="image-20240429110613002"></p>
 <p>对于每个叶子节点$j$, 计算最佳残差拟合值</p>
 <script type="math/tex; mode=display">
 \gamma_{jm}=\arg \min_r \sum_{x \in R_{ij}} L(y_i, F_{m-1}+\gamma)</script><p>意思是， 在刚构建的树$m$中， 找到每个节点$j$的输出$\gamma_{jm}$, 能使得该节点的loss最小。 那么我们看一下这个$\gamma$的求解方式， 这里非常的巧妙。 首先， 我们把损失函数写出来， 对于左边的第一个样本， 有</p>
@@ -915,7 +1028,7 @@ L(y_1,F_{m-1}(x_1) + \gamma) \approx L(y_1,F_{m-1}(x_1)) + L'(y_1,F_{m-1}(x_1)) 
 \frac{dL}{d\gamma}=L'(y_1,F_{m-1}(x_1)) + L''(y_1,F_{m-1}(x_1))\gamma</script><p>Loss最小的时候， 上面的式子等于0， 就可以得到$\gamma$:</p>
 <script type="math/tex; mode=display">
 \gamma_{11}=\frac{-L'(y_1,F_{m-1}(x_1))}{L''(y_1,F_{m-1}(x_1))\gamma}</script><p><strong>因为分子就是残差(上述已经求到了)， 分母可以通过对残差求导，得到原损失函数的二阶导：</strong></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/29/TXCVQtEjUomghYB.png" alt="image-20240429114857610"></p>
+<p><img src="https://s2.loli.net/2024/04/29/TXCVQtEjUomghYB.png" alt="image-20240429114857610"></p>
 </li>
 </ol>
 </li>
@@ -928,7 +1041,7 @@ L(y_1,F_{m-1}(x_1) + \gamma) \approx L(y_1,F_{m-1}(x_1)) + L'(y_1,F_{m-1}(x_1)) 
 
   ![image-20240429115219850](https://s2.loli.net/2024/04/29/kMBUL7gdFIsH5TJ.png)
 </code></pre><p>​                求导， 令其结果为0，就会得到， 第1棵树的第2个叶子节点的输出：</p>
-<p>​                <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/29/EqmsJanTiGpb4yt.png" alt="image-20240429115351409"></p>
+<p>​                <img src="https://s2.loli.net/2024/04/29/EqmsJanTiGpb4yt.png" alt="image-20240429115351409"></p>
 <p>​                可以看出， 对于任意叶子节点， 我们可以直接计算其输出值：</p>
 <p>​                </p>
 <script type="math/tex; mode=display">
@@ -947,23 +1060,23 @@ F_m(x) = F_{m-1}(x) + v \sum_{j=1}^{J_m} \gamma_m</script><p><strong>下面分�
 <ul>
 <li><strong>DNN局限</strong> 当我们使用DNN网络解决推荐问题的时候存在网络参数过于庞大的问题，这是因为在进行特征处理的时候我们需要使用one-hot编码来处理离散特征，这会导致输入的维度猛增。这里借用AI大会的一张图片：</li>
 </ul>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/20/qpC37U1iFvQArsD.png" alt="image-20240420184743955"></p>
+<p><img src="https://s2.loli.net/2024/04/20/qpC37U1iFvQArsD.png" alt="image-20240420184743955"></p>
 <p>这样庞大的参数量也是不实际的。为了解决DNN参数量过大的局限性，可以采用非常经典的Field思想，将OneHot特征转换为Dense Vector</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/20/RIcVbTMsCmjkwWO.png" alt="image-20240420184904998"></p>
+<p><img src="https://s2.loli.net/2024/04/20/RIcVbTMsCmjkwWO.png" alt="image-20240420184904998"></p>
 <p>此时通过增加全连接层就可以实现高阶的特征组合，如下图所示：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/20/ErF3zNLtidIesAv.png" alt="image-20240420185002554"></p>
+<p><img src="https://s2.loli.net/2024/04/20/ErF3zNLtidIesAv.png" alt="image-20240420185002554"></p>
 <p>但是仍然缺少低阶的特征组合，于是增加FM来表示低阶的特征组合。</p>
 <ul>
 <li><strong>FNN和PNN</strong> 结合FM和DNN其实有两种方式，可以并行结合也可以串行结合。这两种方式各有几种代表模型。在DeepFM之前有FNN，虽然在影响力上可能并不如DeepFM，但是了解FNN的思想对我们理解DeepFM的特点和优点是很有帮助的。</li>
 </ul>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/04/20/fDnehZHYQj91dLM.png" alt="image-20240420185121873"></p>
+<p><img src="https://s2.loli.net/2024/04/20/fDnehZHYQj91dLM.png" alt="image-20240420185121873"></p>
 <p>FNN是使用预训练好的FM模块，得到隐向量，然后把隐向量作为DNN的输入，但是经过实验进一步发现，在Embedding layer和hidden layer1之间增加一个product层（如上图所示）可以提高模型的表现，所以提出了PNN，使用product layer替换FM预训练层。</p>
 <ul>
 <li><strong>Wide&amp;Deep</strong> FNN和PNN模型仍然有一个比较明显的尚未解决的缺点：对于低阶组合特征学习到的比较少，这一点主要是由于FM和DNN的串行方式导致的，也就是虽然FM学到了低阶特征组合，但是DNN的全连接结构导致低阶特征并不能在DNN的输出端较好的表现。看来我们已经找到问题了，将串行方式改进为并行方式能比较好的解决这个问题。于是Google提出了Wide&amp;Deep模型（将前几章），但是如果深入探究Wide&amp;Deep的构成方式，虽然将整个模型的结构调整为了并行结构，在实际的使用中Wide Module中的部分需要较为精巧的特征工程，换句话说人工处理对于模型的效果具有比较大的影响（这一点可以在Wide&amp;Deep模型部分得到验证）。</li>
 </ul>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240420223257343.png" alt="image-20240420223257343"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240420223257343.png" alt="image-20240420223257343"></p>
 <h3 id="2-2-2特征交叉"><a href="#2-2-2特征交叉" class="headerlink" title="2.2.2特征交叉"></a>2.2.2特征交叉</h3><h2 id="DCN"><a href="#DCN" class="headerlink" title="DCN"></a>DCN</h2><h2 id="动机-2"><a href="#动机-2" class="headerlink" title="动机"></a>动机</h2><p>Wide&amp;Deep模型的提出不仅综合了“记忆能力”和“泛化能力”， 而且开启了不同网络结构融合的新思路。 所以后面就有各式各样的模型改进Wide部分或者Deep部分， 而Deep&amp;Cross模型(DCN)就是其中比较典型的一个，这是2017年斯坦福大学和谷歌的研究人员在ADKDD会议上提出的， 该模型针对W&amp;D的wide部分进行了改进， 因为Wide部分有一个不足就是需要人工进行特征的组合筛选， 过程繁琐且需要经验， 而2阶的FM模型在线性的时间复杂度中自动进行特征交互，但是这些特征交互的表现能力并不够，并且随着阶数的上升，模型复杂度会大幅度提高。于是乎，作者用一个Cross Network替换掉了Wide部分，来自动进行特征之间的交叉，并且网络的时间和空间复杂度都是线性的。 通过与Deep部分相结合，构成了深度交叉网络（Deep &amp; Cross Network），简称DCN。</p>
-<h2 id="模型结构及原理"><a href="#模型结构及原理" class="headerlink" title="模型结构及原理"></a>模型结构及原理</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/05/02/1kzsxSruqDcEl2B.png" alt="image-20240502131845415"></p>
+<h2 id="模型结构及原理"><a href="#模型结构及原理" class="headerlink" title="模型结构及原理"></a>模型结构及原理</h2><p><img src="https://s2.loli.net/2024/05/02/1kzsxSruqDcEl2B.png" alt="image-20240502131845415"></p>
 <p>这个模型的结构也是比较简洁的， 从下到上依次为：Embedding和Stacking层， Cross网络层与Deep网络层并列， 以及最后的输出层。下面也是一一为大家剖析。</p>
 <h2 id="Embedding和Stacking层"><a href="#Embedding和Stacking层" class="headerlink" title="Embedding和Stacking层"></a>Embedding和Stacking层</h2><p>Embedding层我们已经非常的熟悉了吧， 这里的作用依然是把稀疏离散的类别型特征变成低维密集型。</p>
 <script type="math/tex; mode=display">
@@ -974,7 +1087,7 @@ X_0=[X^T_{embed,1},...,X^T_{embed,k},X^T_{dense}]</script><p>一共𝑘<em>k</em
 <h2 id="Cross-NetWork"><a href="#Cross-NetWork" class="headerlink" title="Cross NetWork"></a>Cross NetWork</h2><p>这个就是本模型最大的亮点了【Cross网络】， 这个思路感觉非常Nice。设计该网络的目的是增加特征之间的交互力度。交叉网络由多个交叉层组成， 假设第$l$层的输出向量$x<em>l$， 那么对于第$l+1$层的输出向量$x</em>{l+1}$表示为：</p>
 <script type="math/tex; mode=display">
 x_{l+1}=x_0x_l^Tw_l+b_l+x_l=f(x_l,w_l,b_l) + x_l</script><p>可以看到， 交叉层的二阶部分非常类似PNN提到的外积操作， 在此基础上增加了外积操作的权重向量$w_l$， 以及原输入向量和$x_l$偏置向量$b_l$。 交叉层的可视化如下：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/05/02/ui65yf3hXp1zjE4.png" alt="image-20240502133426935"></p>
+<p><img src="https://s2.loli.net/2024/05/02/ui65yf3hXp1zjE4.png" alt="image-20240502133426935"></p>
 <p>可以看到， 每一层增加了一个$n$维的权重向量$w_l$（n表示输入向量维度）， 并且在每一层均保留了输入向量， 因此输入和输出之间的变化不会特别明显。关于这一层， 原论文里面有个具体的证明推导Cross Network为啥有效， 不过比较复杂，这里我拿一个式子简单的解释下上面这个公式的伟大之处：</p>
 <blockquote>
 <p><strong>我们根据上面这个公式， 尝试的写前面几层看看:</strong></p>
@@ -1075,7 +1188,7 @@ L=-\frac{1}{N}\sum_{(\mathbf{x},y)\in S}(y \log p(x) + (1-y) \log (1-p(\mathbf(x
 </ul>
 </li>
 <li><p>LR推导：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/05/02/AH9h3XGcQL6nBFr.png" alt="image-20240502234225932"></p>
+<p><img src="https://s2.loli.net/2024/05/02/AH9h3XGcQL6nBFr.png" alt="image-20240502234225932"></p>
 </li>
 </ul>
 </li>
@@ -1138,496 +1251,200 @@ Gain\_Gini(D,A)=\frac{D_1}{D}Gini(D_1)+\frac{D_2}{D}Gini(D_2)</script><blockquot
 </ul>
 <hr>
 
-<div class="article-footer fs14">
-    <section id="license">
-      <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
-</div>
-    </section>
-    
-    <section id="share">
-      <div class="header"><span>分享文章</span></div>
-      <div class="body">
-        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="http://humble2967738843.github.io/2024/04/10/tui-jian-xi-tong/" /></div>
-        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=http://humble2967738843.github.io/2024/04/10/tui-jian-xi-tong/&title=推荐系统 - humbleyl&summary=第一章 推荐系统概述1.1推荐系统的意义推荐系统就是一个将信息生产者和信息消费者连接起来的桥梁。平台往往会作为推荐系统的载体，实现信息生产者和消费者之间信息的匹配。上述提到的平台方、信息生产者和消费者可以分别用平台方（如：腾讯视频、淘..."><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=推荐系统 - humbleyl&amp;body=http://humble2967738843.github.io/2024/04/10/tui-jian-xi-tong/"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
-        
-        <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
-          <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=http://humble2967738843.github.io/2024/04/10/tui-jian-xi-tong/"/>
-        </div>
-        
-      </div>
-    </section>
     </div>
-</article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/">基于链式推理的文档级事件论元提取</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/03/23/tong-ji-xue-xi-fang-fa/">2024-03-23</a></div></section></div>
 
-<div class="related-wrap" id="related-posts"></div>
+    
+    
+    
 
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/DeepFM/" rel="tag"># DeepFM</a>
+              <a href="/tags/FFM/" rel="tag"># FFM</a>
+          </div>
 
-  <div class="related-wrap md-text" id="comments">
-    <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
-
-    </section>
-    <section class='body cmt-body giscus'>
-      
-
-<svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
-
-<div id="giscus" src="https://giscus.app/client.js" data-repo="Humble2967738843/giscus" data-repo-id="R_kgDOLsS5kA" data-category="Announcements" data-category-id="DIC_kwDOLsS5kM4Cel5C" data-mapping="url" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
-
-    </section>
-  </div>
+        
 
 
-
-<footer class="page-footer footnote"><hr><div class="text"><center>
-</br>
-</br>
-<script type="text/javascript">
-function show_runtime() {
-    window.setTimeout("show_runtime()", 1000);
-    X = new Date("10/20/2023 00:00:00");
-    Y = new Date();
-    T = (Y.getTime() - X.getTime());
-    M = 24 * 60 * 60 * 1000;
-    a = T / M;
-    A = Math.floor(a);
-    b = (a - A) * 24;
-    B = Math.floor(b);
-    c = (b - B) * 60;
-    C = Math.floor((b - B) * 60);
-    D = Math.floor((c - C) * 60);
-    runtime_span.innerHTML = "⏲️本站已运行 " + A + "天|" + B + "小时|" + C + "分|" + D + "秒⏲️"
-}
-show_runtime();
-</script>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_pv">🤩本站总访问量<span id="busuanzi_value_site_pv"></span>次</span><br>
-<span id="runtime_span"></span>
-</center>
-</div></footer>
-<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-<div class="widgets">
-
-
-
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0"><span class="toc-text">第一章 推荐系统概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%84%8F%E4%B9%89"><span class="toc-text">1.1推荐系统的意义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E5%8F%B0%E6%96%B9"><span class="toc-text">平台方</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E5%92%8C%E6%90%9C%E7%B4%A2%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">推荐和搜索的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%B6%E6%9E%84"><span class="toc-text">1.2推荐系统的架构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84"><span class="toc-text">系统架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3"><span class="toc-text">设计思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E7%BA%BF%E5%B1%82"><span class="toc-text">离线层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E7%BA%BF%E5%B1%82%E4%BC%98%E5%8A%BF%E5%92%8C%E4%B8%8D%E8%B6%B3"><span class="toc-text">离线层优势和不足</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%91%E7%BA%BF%E5%B1%82"><span class="toc-text">近线层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E5%B1%82"><span class="toc-text">在线层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E6%9E%B6%E6%9E%84"><span class="toc-text">算法架构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%80%E6%9C%AF%E6%A0%88"><span class="toc-text">1.3推荐系统的技术栈</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%B3%95"><span class="toc-text">算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%BB%E5%83%8F%E5%B1%82"><span class="toc-text">画像层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E7%90%86%E8%A7%A3"><span class="toc-text">文本理解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D%E6%A0%87%E7%AD%BE"><span class="toc-text">关键词标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E7%90%86%E8%A7%A3"><span class="toc-text">内容理解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1"><span class="toc-text">知识图谱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AC%E5%9B%9E-%E7%B2%97%E6%8E%92"><span class="toc-text">召回&#x2F;粗排</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%8F%E5%85%B8%E5%8F%AC%E5%9B%9E%E6%A8%A1%E5%9E%8B"><span class="toc-text">经典召回模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%8F%E5%88%97%E5%8F%AC%E5%9B%9E%E6%A8%A1%E5%9E%8B"><span class="toc-text">序列召回模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%BA%8F%E5%88%97%E6%8B%86%E5%88%86"><span class="toc-text">用户序列拆分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1-1"><span class="toc-text">知识图谱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E6%A8%A1%E5%9E%8B"><span class="toc-text">图模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B2%BE%E6%8E%92"><span class="toc-text">精排</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E5%BE%81%E4%BA%A4%E5%8F%89%E6%A8%A1%E5%9E%8B"><span class="toc-text">特征交叉模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%8F%E5%88%97%E6%A8%A1%E5%9E%8B"><span class="toc-text">序列模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%A8%A1%E6%80%81%E4%BF%A1%E6%81%AF%E8%9E%8D%E5%90%88"><span class="toc-text">多模态信息融合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%AD%A6%E4%B9%A0"><span class="toc-text">多任务学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0"><span class="toc-text">强化学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%A8%E5%9F%9F%E6%8E%A8%E8%8D%90"><span class="toc-text">跨域推荐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E6%8E%92%E5%BA%8F"><span class="toc-text">重排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E7%A8%8B"><span class="toc-text">工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93-1"><span class="toc-text">总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80"><span class="toc-text">第二章 推荐系统算法基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1%E7%BB%8F%E5%85%B8%E5%8F%AC%E5%9B%9E%E6%A8%A1%E5%9E%8B"><span class="toc-text">2.1经典召回模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1%E5%9F%BA%E4%BA%8E%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E7%9A%84%E5%8F%AC%E5%9B%9E"><span class="toc-text">2.1.1基于协同过滤的召回</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3"><span class="toc-text">核心思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E4%BC%BC%E5%BA%A6%E5%BA%A6%E9%87%8F%E6%96%B9%E6%B3%95"><span class="toc-text">相似度度量方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">适用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E7%94%A8%E6%88%B7%E7%9A%84%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4"><span class="toc-text">基于用户的协同过滤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3-1"><span class="toc-text">核心思想</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E8%BF%87%E7%A8%8B"><span class="toc-text">计算过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E8%BF%87%E7%A8%8B"><span class="toc-text">具体过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8%E8%AE%A1%E7%AE%97"><span class="toc-text">手动计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UserCF%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0"><span class="toc-text">UserCF编程实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UserCF%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-text">UserCF优缺点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E8%AF%84%E4%BC%B0"><span class="toc-text">算法评估</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AC%E5%9B%9E%E7%8E%87"><span class="toc-text">召回率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B2%BE%E7%A1%AE%E7%8E%87"><span class="toc-text">精确率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A6%86%E7%9B%96%E7%8E%87"><span class="toc-text">覆盖率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E9%A2%96%E5%BA%A6"><span class="toc-text">新颖度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E7%89%A9%E5%93%81%E7%9A%84%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4"><span class="toc-text">基于物品的协同过滤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="toc-text">基本思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E8%BF%87%E7%A8%8B-1"><span class="toc-text">计算过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ItemCF%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0"><span class="toc-text">ItemCF编程实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E7%AE%97%E6%B3%95%E7%9A%84%E6%9D%83%E9%87%8D%E6%94%B9%E8%BF%9B"><span class="toc-text">协同过滤算法的权重改进</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E7%AE%97%E6%B3%95%E7%9A%84%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="toc-text">协同过滤算法的问题分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%BE%E5%90%8E%E6%80%9D%E8%80%83"><span class="toc-text">课后思考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Swing-Graph-based"><span class="toc-text">Swing(Graph-based)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E6%9C%BA"><span class="toc-text">动机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%8B%E5%89%8D%E6%96%B9%E6%B3%95%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-text">之前方法的局限性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B4%A1%E7%8C%AE"><span class="toc-text">贡献</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Swing%E7%AE%97%E6%B3%95"><span class="toc-text">Swing算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Surprise%E7%AE%97%E6%B3%95"><span class="toc-text">Surprise算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E5%88%86%E8%A7%A3"><span class="toc-text">矩阵分解</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9A%90%E8%AF%AD%E4%B9%89%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%9F%A9%E9%98%B5%E5%88%86%E8%A7%A3"><span class="toc-text">隐语义模型与矩阵分解</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9A%90%E8%AF%AD%E4%B9%89%E6%A8%A1%E5%9E%8B"><span class="toc-text">隐语义模型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9F%B3%E4%B9%90%E8%AF%84%E5%88%86%E5%AE%9E%E4%BE%8B"><span class="toc-text">音乐评分实例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%91%E9%87%8F%E7%9A%84%E5%8F%AC%E5%9B%9E"><span class="toc-text">向量的召回</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FM%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%84"><span class="toc-text">FM模型结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FM%E7%94%A8%E4%BA%8E%E5%8F%AC%E5%9B%9E"><span class="toc-text">FM用于召回</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E6%A8%A1%E5%9E%8B"><span class="toc-text">2.2经典排序模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-3Wide-amp-Deep%E7%B3%BB%E5%88%97"><span class="toc-text">2.2.3Wide&amp;Deep系列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1GBDT-LR%E7%AE%80%E4%BB%8B"><span class="toc-text">2.2.1GBDT+LR简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B"><span class="toc-text">逻辑回归模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GBDT%E6%A8%A1%E5%9E%8B"><span class="toc-text">GBDT模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GBDT-LR%E6%A8%A1%E5%9E%8B"><span class="toc-text">GBDT+LR模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DeepFM"><span class="toc-text">DeepFM</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E6%9C%BA-1"><span class="toc-text">动机</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2%E7%89%B9%E5%BE%81%E4%BA%A4%E5%8F%89"><span class="toc-text">2.2.2特征交叉</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DCN"><span class="toc-text">DCN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%9C%BA-2"><span class="toc-text">动机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%84%E5%8F%8A%E5%8E%9F%E7%90%86"><span class="toc-text">模型结构及原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Embedding%E5%92%8CStacking%E5%B1%82"><span class="toc-text">Embedding和Stacking层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cross-NetWork"><span class="toc-text">Cross NetWork</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Deep-Network"><span class="toc-text">Deep Network</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E5%90%88%E8%BE%93%E5%87%BA%E5%B1%82"><span class="toc-text">组合输出层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-4%E5%BA%8F%E5%88%97%E6%A8%A1%E5%9E%8B"><span class="toc-text">2.2.4序列模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DIN"><span class="toc-text">DIN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%9C%BA-3"><span class="toc-text">动机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DIN%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%84%E5%8F%8A%E5%8E%9F%E7%90%86"><span class="toc-text">DIN模型结构及原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E5%BE%81%E8%A1%A8%E7%A4%BA"><span class="toc-text">特征表示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%BA%BF%E6%A8%A1%E5%9E%8B"><span class="toc-text">基线模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DIN%E6%A8%A1%E5%9E%8B%E6%9E%B6%E6%9E%84"><span class="toc-text">DIN模型架构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%AE%97%E6%B3%95%E9%9D%A2%E7%BB%8F"><span class="toc-text">第四章 推荐系统算法面经</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1ML%E4%B8%8EDL%E5%9F%BA%E7%A1%80"><span class="toc-text">4.1ML与DL基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="toc-text">机器学习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%A7%A3%E6%9E%90"><span class="toc-text">参考解析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-1"><span class="toc-text">机器学习</span></a></li></ol></li></ol></li></ol></div><div class="widget-footer">
-
-<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
-</div></aside><div class='float-panel blur'>
-  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
-  </button>
-  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
-  </button>
-</div>
-</div><div class="scripts">
-<script type="text/javascript">
-  const ctx = {
-    date_suffix: {
-      just: `刚刚`,
-      min: `分钟前`,
-      hour: `小时前`,
-      day: `天前`,
-    },
-    root : `/`,
-  };
-
-  // required plugins (only load if needs)
-  if (`local_search`) {
-    ctx.search = {};
-    ctx.search.service = `local_search`;
-    if (ctx.search.service == 'local_search') {
-      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"}`);
-      ctx.search[ctx.search.service] = service_obj;
-    }
-  }
-  const def = {
-    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
-    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
-  };
-  const deps = {
-    jquery: `https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js`,
-    marked: `https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js`
-  }
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/03/23/tong-ji-xue-xi-fang-fa/" rel="prev" title="">
+      <i class="fa fa-chevron-left"></i> 
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/" rel="next" title="基于链式推理的文档级事件论元提取">
+      基于链式推理的文档级事件论元提取 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</script>
 
-<script type="text/javascript">
-  const utils = {
-    // 懒加载 css https://github.com/filamentgroup/loadCSS
-    css: (href, before, media, attributes) => {
-      var doc = window.document;
-      var ss = doc.createElement("link");
-      var ref;
-      if (before) {
-        ref = before;
-      } else {
-        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
-        ref = refs[refs.length - 1];
-      }
-      var sheets = doc.styleSheets;
-      if (attributes) {
-        for (var attributeName in attributes) {
-          if (attributes.hasOwnProperty(attributeName)) {
-            ss.setAttribute(attributeName, attributes[attributeName]);
-          }
-        }
-      }
-      ss.rel = "stylesheet";
-      ss.href = href;
-      ss.media = "only x";
-      function ready(cb) {
-        if (doc.body) {
-          return cb();
-        }
-        setTimeout(function () {
-          ready(cb);
-        });
-      }
-      ready(function () {
-        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
-      });
-      var onloadcssdefined = function (cb) {
-        var resolvedHref = ss.href;
-        var i = sheets.length;
-        while (i--) {
-          if (sheets[i].href === resolvedHref) {
-            return cb();
-          }
-        }
-        setTimeout(function () {
-          onloadcssdefined(cb);
-        });
-      };
-      function loadCB() {
-        if (ss.addEventListener) {
-          ss.removeEventListener("load", loadCB);
-        }
-        ss.media = media || "all";
-      }
-      if (ss.addEventListener) {
-        ss.addEventListener("load", loadCB);
-      }
-      ss.onloadcssdefined = onloadcssdefined;
-      onloadcssdefined(loadCB);
-      return ss;
-    },
 
-    js: (src, opt) => new Promise((resolve, reject) => {
-      var script = document.createElement('script');
-      if (src.startsWith('/')){
-        src = ctx.root + src.substring(1);
-      }
-      script.src = src;
-      if (opt) {
-        for (let key of Object.keys(opt)) {
-          script[key] = opt[key]
-        }
-      } else {
-        // 默认异步，如果需要同步，第二个参数传入 {} 即可
-        script.async = true
-      }
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    }),
-
-    jq: (fn) => {
-      if (typeof jQuery === 'undefined') {
-        utils.js(deps.jquery).then(fn)
-      } else {
-        fn()
-      }
-    },
-    
-    onLoading: (el) => {
-      if (el) {
-        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
-      }
-    },
-    onLoadSuccess: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap').remove();
-      }
-    },
-    onLoadFailure: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap svg').remove();
-        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
-        $(el).find('.loading-wrap').addClass('error');
-      }
-    },
-    request: (el, url, callback, onFailure) => {
-      let retryTimes = 3;
-      utils.onLoading(el);
-      function req() {
-        return new Promise((resolve, reject) => {
-          let status = 0; // 0 等待 1 完成 2 超时
-          let timer = setTimeout(() => {
-            if (status === 0) {
-              status = 2;
-              timer = null;
-              reject('请求超时');
-              if (retryTimes == 0) {
-                onFailure();
-              }
-            }
-          }, 5000);
-          fetch(url).then(function(response) {
-            if (status !== 2) {
-              clearTimeout(timer);
-              resolve(response);
-              timer = null;
-              status = 1;
-            }
-            if (response.ok) {
-              return response.json();
-            }
-            throw new Error('Network response was not ok.');
-          }).then(function(data) {
-            retryTimes = 0;
-            utils.onLoadSuccess(el);
-            callback(data);
-          }).catch(function(error) {
-            if (retryTimes > 0) {
-              retryTimes -= 1;
-              setTimeout(() => {
-                req();
-              }, 5000);
-            } else {
-              utils.onLoadFailure(el);
-              onFailure();
-            }
-          });
-        });
-      }
-      req();
-    },
-  };
-</script>
+          </div>
+          
 
 <script>
-  const sidebar = {
-    leftbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    rightbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('rightbar');
-        l_body.removeAttribute('leftbar');
-      }
-    },
-    dismiss: () => {
-      if (l_body) {
-        l_body.removeAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    toggleTOC: () => {
-      document.querySelector('#data-toc').classList.toggle('collapse');
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
     }
-  }
-</script>
-
-<!-- required -->
-<script src="/js/main.js?v=1.27.0" async></script>
-
-<!-- optional -->
-
-  <script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const els = document.querySelectorAll("#comments #giscus");
-    if (els.length === 0) return;
-    els.forEach((el, i) => {
-      try {
-        el.innerHTML = '';
-      } catch (error) {
-        console.error(error);
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
       }
-      var script = document.createElement('script');
-      script.async = true;
-      for (let key of Object.keys(el.attributes)) {
-        let attr = el.attributes[key];
-        if (['class', 'id'].includes(attr.name) === false) {
-          script.setAttribute(attr.name, attr.value);
-        }
-      }
-      el.appendChild(script);
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
     });
-  });
+  }
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">第一章 推荐系统概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%84%8F%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">1.1推荐系统的意义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B3%E5%8F%B0%E6%96%B9"><span class="nav-number">1.1.1.</span> <span class="nav-text">平台方</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E5%92%8C%E6%90%9C%E7%B4%A2%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.1.2.</span> <span class="nav-text">推荐和搜索的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%9E%B6%E6%9E%84"><span class="nav-number">1.2.</span> <span class="nav-text">1.2推荐系统的架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84"><span class="nav-number">1.2.1.</span> <span class="nav-text">系统架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3"><span class="nav-number">1.2.2.</span> <span class="nav-text">设计思想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A6%BB%E7%BA%BF%E5%B1%82"><span class="nav-number">1.2.3.</span> <span class="nav-text">离线层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A6%BB%E7%BA%BF%E5%B1%82%E4%BC%98%E5%8A%BF%E5%92%8C%E4%B8%8D%E8%B6%B3"><span class="nav-number">1.2.4.</span> <span class="nav-text">离线层优势和不足</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%91%E7%BA%BF%E5%B1%82"><span class="nav-number">1.2.5.</span> <span class="nav-text">近线层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E7%BA%BF%E5%B1%82"><span class="nav-number">1.2.6.</span> <span class="nav-text">在线层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%9E%B6%E6%9E%84"><span class="nav-number">1.2.7.</span> <span class="nav-text">算法架构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.3.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%8A%80%E6%9C%AF%E6%A0%88"><span class="nav-number">1.4.</span> <span class="nav-text">1.3推荐系统的技术栈</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%97%E6%B3%95"><span class="nav-number">1.4.1.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%BB%E5%83%8F%E5%B1%82"><span class="nav-number">1.4.2.</span> <span class="nav-text">画像层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E7%90%86%E8%A7%A3"><span class="nav-number">1.4.3.</span> <span class="nav-text">文本理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D%E6%A0%87%E7%AD%BE"><span class="nav-number">1.4.4.</span> <span class="nav-text">关键词标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E5%AE%B9%E7%90%86%E8%A7%A3"><span class="nav-number">1.4.5.</span> <span class="nav-text">内容理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1"><span class="nav-number">1.4.6.</span> <span class="nav-text">知识图谱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AC%E5%9B%9E-%E7%B2%97%E6%8E%92"><span class="nav-number">1.4.7.</span> <span class="nav-text">召回&#x2F;粗排</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%8F%E5%85%B8%E5%8F%AC%E5%9B%9E%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.4.8.</span> <span class="nav-text">经典召回模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%8F%E5%88%97%E5%8F%AC%E5%9B%9E%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.4.9.</span> <span class="nav-text">序列召回模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E5%BA%8F%E5%88%97%E6%8B%86%E5%88%86"><span class="nav-number">1.4.10.</span> <span class="nav-text">用户序列拆分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1-1"><span class="nav-number">1.4.11.</span> <span class="nav-text">知识图谱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.4.12.</span> <span class="nav-text">图模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B2%BE%E6%8E%92"><span class="nav-number">1.4.13.</span> <span class="nav-text">精排</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E5%BE%81%E4%BA%A4%E5%8F%89%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.4.14.</span> <span class="nav-text">特征交叉模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%8F%E5%88%97%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.4.15.</span> <span class="nav-text">序列模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E6%A8%A1%E6%80%81%E4%BF%A1%E6%81%AF%E8%9E%8D%E5%90%88"><span class="nav-number">1.4.16.</span> <span class="nav-text">多模态信息融合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E4%BB%BB%E5%8A%A1%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.4.17.</span> <span class="nav-text">多任务学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.4.18.</span> <span class="nav-text">强化学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%A8%E5%9F%9F%E6%8E%A8%E8%8D%90"><span class="nav-number">1.4.19.</span> <span class="nav-text">跨域推荐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E6%8E%92%E5%BA%8F"><span class="nav-number">1.4.20.</span> <span class="nav-text">重排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E7%A8%8B"><span class="nav-number">1.4.21.</span> <span class="nav-text">工程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-1"><span class="nav-number">1.4.22.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80"><span class="nav-number">2.</span> <span class="nav-text">第二章 推荐系统算法基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1%E7%BB%8F%E5%85%B8%E5%8F%AC%E5%9B%9E%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.1.</span> <span class="nav-text">2.1经典召回模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1%E5%9F%BA%E4%BA%8E%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E7%9A%84%E5%8F%AC%E5%9B%9E"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1基于协同过滤的召回</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3"><span class="nav-number">2.1.2.</span> <span class="nav-text">核心思想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E4%BC%BC%E5%BA%A6%E5%BA%A6%E9%87%8F%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.3.</span> <span class="nav-text">相似度度量方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">2.1.4.</span> <span class="nav-text">适用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E7%94%A8%E6%88%B7%E7%9A%84%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4"><span class="nav-number">2.1.5.</span> <span class="nav-text">基于用户的协同过滤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3-1"><span class="nav-number">2.1.5.1.</span> <span class="nav-text">核心思想</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E8%BF%87%E7%A8%8B"><span class="nav-number">2.1.6.</span> <span class="nav-text">计算过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E8%BF%87%E7%A8%8B"><span class="nav-number">2.1.7.</span> <span class="nav-text">具体过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E8%AE%A1%E7%AE%97"><span class="nav-number">2.1.8.</span> <span class="nav-text">手动计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UserCF%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.1.9.</span> <span class="nav-text">UserCF编程实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UserCF%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">2.1.10.</span> <span class="nav-text">UserCF优缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E8%AF%84%E4%BC%B0"><span class="nav-number">2.2.</span> <span class="nav-text">算法评估</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AC%E5%9B%9E%E7%8E%87"><span class="nav-number">2.2.1.</span> <span class="nav-text">召回率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B2%BE%E7%A1%AE%E7%8E%87"><span class="nav-number">2.2.2.</span> <span class="nav-text">精确率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A6%86%E7%9B%96%E7%8E%87"><span class="nav-number">2.2.3.</span> <span class="nav-text">覆盖率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E9%A2%96%E5%BA%A6"><span class="nav-number">2.2.4.</span> <span class="nav-text">新颖度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E4%BA%8E%E7%89%A9%E5%93%81%E7%9A%84%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4"><span class="nav-number">2.2.5.</span> <span class="nav-text">基于物品的协同过滤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="nav-number">2.2.6.</span> <span class="nav-text">基本思想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E8%BF%87%E7%A8%8B-1"><span class="nav-number">2.2.7.</span> <span class="nav-text">计算过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ItemCF%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.2.8.</span> <span class="nav-text">ItemCF编程实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E7%AE%97%E6%B3%95%E7%9A%84%E6%9D%83%E9%87%8D%E6%94%B9%E8%BF%9B"><span class="nav-number">2.2.9.</span> <span class="nav-text">协同过滤算法的权重改进</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4%E7%AE%97%E6%B3%95%E7%9A%84%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="nav-number">2.2.10.</span> <span class="nav-text">协同过滤算法的问题分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%BE%E5%90%8E%E6%80%9D%E8%80%83"><span class="nav-number">2.2.11.</span> <span class="nav-text">课后思考</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Swing-Graph-based"><span class="nav-number">2.2.12.</span> <span class="nav-text">Swing(Graph-based)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A8%E6%9C%BA"><span class="nav-number">2.2.12.1.</span> <span class="nav-text">动机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B9%8B%E5%89%8D%E6%96%B9%E6%B3%95%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="nav-number">2.2.12.2.</span> <span class="nav-text">之前方法的局限性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B4%A1%E7%8C%AE"><span class="nav-number">2.2.12.3.</span> <span class="nav-text">贡献</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Swing%E7%AE%97%E6%B3%95"><span class="nav-number">2.2.12.4.</span> <span class="nav-text">Swing算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Surprise%E7%AE%97%E6%B3%95"><span class="nav-number">2.2.12.5.</span> <span class="nav-text">Surprise算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5%E5%88%86%E8%A7%A3"><span class="nav-number">2.2.12.6.</span> <span class="nav-text">矩阵分解</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9A%90%E8%AF%AD%E4%B9%89%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%9F%A9%E9%98%B5%E5%88%86%E8%A7%A3"><span class="nav-number">2.2.12.6.1.</span> <span class="nav-text">隐语义模型与矩阵分解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9A%90%E8%AF%AD%E4%B9%89%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.2.12.6.2.</span> <span class="nav-text">隐语义模型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9F%B3%E4%B9%90%E8%AF%84%E5%88%86%E5%AE%9E%E4%BE%8B"><span class="nav-number">2.2.12.6.3.</span> <span class="nav-text">音乐评分实例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%91%E9%87%8F%E7%9A%84%E5%8F%AC%E5%9B%9E"><span class="nav-number">2.2.13.</span> <span class="nav-text">向量的召回</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FM%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%84"><span class="nav-number">2.3.</span> <span class="nav-text">FM模型结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FM%E7%94%A8%E4%BA%8E%E5%8F%AC%E5%9B%9E"><span class="nav-number">2.4.</span> <span class="nav-text">FM用于召回</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.5.</span> <span class="nav-text">2.2经典排序模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3Wide-amp-Deep%E7%B3%BB%E5%88%97"><span class="nav-number">2.5.1.</span> <span class="nav-text">2.2.3Wide&amp;Deep系列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1GBDT-LR%E7%AE%80%E4%BB%8B"><span class="nav-number">2.5.2.</span> <span class="nav-text">2.2.1GBDT+LR简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.5.2.1.</span> <span class="nav-text">逻辑回归模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GBDT%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.5.2.2.</span> <span class="nav-text">GBDT模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GBDT-LR%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.5.2.3.</span> <span class="nav-text">GBDT+LR模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DeepFM"><span class="nav-number">2.5.2.4.</span> <span class="nav-text">DeepFM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A8%E6%9C%BA-1"><span class="nav-number">2.5.2.5.</span> <span class="nav-text">动机</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2%E7%89%B9%E5%BE%81%E4%BA%A4%E5%8F%89"><span class="nav-number">2.5.3.</span> <span class="nav-text">2.2.2特征交叉</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DCN"><span class="nav-number">2.6.</span> <span class="nav-text">DCN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%9C%BA-2"><span class="nav-number">2.7.</span> <span class="nav-text">动机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%84%E5%8F%8A%E5%8E%9F%E7%90%86"><span class="nav-number">2.8.</span> <span class="nav-text">模型结构及原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Embedding%E5%92%8CStacking%E5%B1%82"><span class="nav-number">2.9.</span> <span class="nav-text">Embedding和Stacking层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cross-NetWork"><span class="nav-number">2.10.</span> <span class="nav-text">Cross NetWork</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deep-Network"><span class="nav-number">2.11.</span> <span class="nav-text">Deep Network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E5%90%88%E8%BE%93%E5%87%BA%E5%B1%82"><span class="nav-number">2.12.</span> <span class="nav-text">组合输出层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-4%E5%BA%8F%E5%88%97%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.12.1.</span> <span class="nav-text">2.2.4序列模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DIN"><span class="nav-number">2.13.</span> <span class="nav-text">DIN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%9C%BA-3"><span class="nav-number">2.14.</span> <span class="nav-text">动机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DIN%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%84%E5%8F%8A%E5%8E%9F%E7%90%86"><span class="nav-number">2.15.</span> <span class="nav-text">DIN模型结构及原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E5%BE%81%E8%A1%A8%E7%A4%BA"><span class="nav-number">2.16.</span> <span class="nav-text">特征表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%BA%BF%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.17.</span> <span class="nav-text">基线模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DIN%E6%A8%A1%E5%9E%8B%E6%9E%B6%E6%9E%84"><span class="nav-number">2.18.</span> <span class="nav-text">DIN模型架构</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E7%AE%97%E6%B3%95%E9%9D%A2%E7%BB%8F"><span class="nav-number">3.</span> <span class="nav-text">第四章 推荐系统算法面经</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1ML%E4%B8%8EDL%E5%9F%BA%E7%A1%80"><span class="nav-number">3.1.</span> <span class="nav-text">4.1ML与DL基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-number">3.2.</span> <span class="nav-text">机器学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%A7%A3%E6%9E%90"><span class="nav-number">3.3.</span> <span class="nav-text">参考解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-1"><span class="nav-number">3.3.1.</span> <span class="nav-text">机器学习</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">yuan long</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">63</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
 
 
 
-<script defer>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
-    for (let id of Object.keys(ctx.services)) {
-      const js = ctx.services[id].js;
-      if (id == 'siteinfo') {
-        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
-        if (ctx.cardlinks?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            setCardLink(ctx.cardlinks);
-          });
-        }
-      } else {
-        const els = document.getElementsByClassName(`ds-${id}`);
-        if (els?.length > 0) {
-          utils.jq(() => {
-            if (id == 'timeline' || 'memos' || 'marked') {
-              utils.js(deps.marked).then(function () {
-                utils.js(js, { defer: true });
-              });
-            } else {
-              utils.js(js, { defer: true });
-            }
-          });
-        }
-      }
-    }
-  });
-</script>
+      </div>
 
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.search = {
-      path: `/search.json`,
-    }
-    utils.js('/js/search/local-search.js', { defer: true });
-  });
-</script><script>
-  window.FPConfig = {
-    delay: 0,
-    ignoreKeywords: [],
-    maxRPS: 5,
-    hoverDelay: 25
-  };
-</script>
-<script defer src="https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazy",
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    window.lazyLoadInstance?.update();
-  });
-</script><script>
-  ctx.fancybox = {
-    selector: `.timenode p>img`,
-    css: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
-    js: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
-  };
-  var selector = '[data-fancybox]:not(.error)';
-  if (ctx.fancybox.selector) {
-    selector += `, ${ctx.fancybox.selector}`
-  }
-  var needFancybox = document.querySelectorAll(selector).length !== 0;
-  if (!needFancybox) {
-    const els = document.getElementsByClassName('ds-memos');
-    if (els != undefined && els.length > 0) {
-      needFancybox = true;
-    }
-  }
-  if (needFancybox) {
-    utils.css(ctx.fancybox.css);
-    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
-      Fancybox.bind(selector, {
-        hideScrollbar: false,
-        Thumbs: {
-          autoStart: false,
-        },
-        caption: (fancybox, slide) => {
-          return slide.triggerEl.alt || null
-        }
-      });
-    })
-  }
-</script><script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const swiper_api = document.getElementById('swiper-api');
-    if (swiper_api != undefined) {
-      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
-      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
-        const effect = swiper_api.getAttribute('effect') || '';
-        var swiper = new Swiper('.swiper#swiper-api', {
-          slidesPerView: 'auto',
-          spaceBetween: 8,
-          centeredSlides: true,
-          effect: effect,
-          loop: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
-      })
-    }
-  });
-</script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-    processEscapes: true
-  }
-});
-MathJax.Hub.Config({
-  tex2jax: {
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-  }
-});
-MathJax.Hub.Queue(function() {
-  var all = MathJax.Hub.getAllJax(), i;
-  for(i=0; i < all.length; i += 1) {
-    all[i].SourceElement().parentNode.className += ' has-jax';
-  }
-});
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    window.codeElements = document.querySelectorAll('.code');
-    if (window.codeElements.length > 0) {
-      ctx.copycode = {
-        default_text: `Copy`,
-        success_text: `Copied`,
-        toast: `复制成功`,
-      };
-      utils.js('/js/plugins/copycode.js');
-    }
-  });
-</script>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
 
-<!-- inject -->
+      </div>
+    </main>
 
-</div></body></html>
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yuan long</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

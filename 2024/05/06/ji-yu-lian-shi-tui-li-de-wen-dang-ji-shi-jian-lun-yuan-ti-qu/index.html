@@ -1,25 +1,26 @@
-
-<!DOCTYPE html><html lang="zh-CN">
-
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
 <head>
-  <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0" theme-name="Stellar" theme-version="1.27.0">
-  
-  <meta name="generator" content="Hexo 7.0.0">
-  <meta http-equiv='x-dns-prefetch-control' content='on' />
-  
-  <meta name="renderer" content="webkit">
-  <meta name="force-rendering" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="HandheldFriendly" content="True" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="theme-color" content="#f8f8f8">
-  
-  <title>基于链式推理的文档级事件论元提取 - humbleyl</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-  
-    <meta name="description" content="Document-Level Event Argument Extraction With A Chain Reasoning Paradigm 文档级事件参数提取旨在识别句子级别之外的事件参数，其中一个重大挑战是对远程依赖关系进行建模。针对这一挑战，我们为该任务提出了一种新的链式推理范式，它可以生成可分解的一阶逻辑规则进行推理。由于链的组合性质，这种范式自然地捕获了远程相互依赖，这也通过显式地建">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"humble2967738843.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Document-Level Event Argument Extraction With A Chain Reasoning Paradigm 文档级事件参数提取旨在识别句子级别之外的事件参数，其中一个重大挑战是对远程依赖关系进行建模。针对这一挑战，我们为该任务提出了一种新的链式推理范式，它可以生成可分解的一阶逻辑规则进行推理。由于链的组合性质，这种范式自然地捕获了远程相互依赖，这也通过显式地建">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于链式推理的文档级事件论元提取">
 <meta property="og:url" content="http://humble2967738843.github.io/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/index.html">
@@ -44,112 +45,224 @@
 <meta property="article:tag" content="ACL2023">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://humble2967738843.github.io/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/attachments/5WFMU28T.png">
-<meta name="twitter:creator" content="@humbleyl">
-  
-  
-  
-  <meta name="keywords" content="ACL2023">
 
-  <!-- feed -->
-  
-    <link rel="alternate" href="/atom.xml" title="humbleyl" type="application/atom+xml">
-  
+<link rel="canonical" href="http://humble2967738843.github.io/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/">
 
-  <link rel="stylesheet" href="/css/main.css?v=1.27.0">
 
-  
-    <link rel="shortcut icon" href="solar:documents-bold-duotone">
-  
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
 
+  <title>基于链式推理的文档级事件论元提取 | humbleyl</title>
   
 
-  
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --></head>
-<body>
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="humbleyl" type="application/atom+xml">
+</head>
 
-<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://s2.loli.net/2024/04/10/32Y4obwgxJCeOMr.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">humbleyl</div><div class="sub normal cap">院龙的博客</div><div class="sub hover cap" style="opacity:0"> humbleyl</div></a></div></header>
-
-<div class="nav-area">
-<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
-
-
-<nav class="menu dis-select"><a class="nav-item active" title="博客" href="/" style="color:#1BCDFC"><svg t="1716731776385" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17107" width="300" height="300"><path d="M1017.771 511.331c0 280.666-227.523 508.191-508.191 508.191s-508.19-227.525-508.19-508.191c0-280.665 227.523-508.19 508.191-508.19s508.19 227.523 508.19 508.19zM191.726 479.984h26.423v188.788h40.113v-188.788h23.558v-37.567h-23.558v-84.048h-40.113v84.048h-26.423v37.567zM274.182 598.096h46.958l-17.669 18.465c15.493 11.884 29.502 23.241 42.023 34.065l25.787-28.334c-10.932-8.701-21.703-16.766-32.314-24.195h92.165v16.555c0 4.882-1.221 9.022-3.662 12.417-2.443 3.395-8.332 5.093-17.669 5.093-8.703 0-21.437-0.532-38.205-1.591 4.88 16.766 8.063 29.393 9.551 37.885 31.622 0 51.998-1.036 61.126-3.104 9.126-2.068 16.023-6.475 20.692-13.212 4.669-6.74 7.004-15.734 7.004-26.981v-27.061h36.929v-31.2h-36.929v-12.417h20.375v-126.389h-81.5v-15.281h94.871v-31.2h-25.15c-7.217-9.973-14.326-19.314-21.33-28.017l-28.334 14.007 10.029 14.007h-30.085v-25.151h-37.567v25.151h-91.687v31.2h91.687v15.281h-78.636v128.3h38.205v-16.236h40.432v14.964h37.567v-14.964h43.298v9.551h-21.012v17.191h-156.951v31.2zM330.85 456.107h40.432v16.555h-40.432v-16.555zM330.85 498.13h40.432v16.555h-40.432v-16.555zM452.146 472.662h-43.298v-16.555h43.298v16.555zM408.85 498.13h43.298v16.555h-43.298v-16.555zM605.279 670.683v-15.281h139.442v15.281h43.298v-109.039c9.443 1.591 19.205 3.131 29.289 4.615l15.919-39.158c-42.449-2.547-79.008-7.323-109.675-14.326 23.241-12.838 42.819-27.697 58.738-44.571v-10.188h38.205v-75.771h-113.179c-3.715-11.247-7.059-20.692-10.029-28.334l-54.441 5.411 9.87 22.923h-123.526v75.771h43.616v-39.796h204.069v19.739h-119.068c3.82-4.14 7.427-8.382 10.825-12.735h-49.346c-22.711 23.558-52.107 43.086-88.186 58.579 8.063 8.703 16.023 18.465 23.877 29.289 15.068-7.642 29.076-15.703 42.023-24.195 9.973 9.129 20.587 17.139 31.836 24.036-30.563 7.537-68.026 14.062-112.382 19.579 5.731 11.461 11.037 23.666 15.919 36.611 10.188-1.696 20.057-3.447 29.609-5.253v106.81h43.296zM774.487 559.257h-190.062c35.339-7.534 65.687-15.81 91.052-24.832 27.061 9.445 60.063 17.725 99.010 24.832zM744.721 619.108h-139.442v-23.558h139.442v23.558zM628.359 470.433h96.305c-14.54 11.249-30.777 20.534-48.709 27.857-17.723-7.323-33.586-16.607-47.596-27.857z" fill="#272636" p-id="17108"></path></svg></a><a class="nav-item" title="文档" href="/wiki/" style="color:#3DC550"><svg t="1716731927468" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="29342" width="300" height="300"><path d="M931.607098 176.851787H459.277181l-13.308673-44.020995c-5.11872-17.147713-20.858785-28.92077-38.774307-28.92077H92.136966c-22.394401 0-40.565859 18.043489-40.565859 40.437891V879.268183c0 22.394401 18.043489 40.565859 40.437891 40.565858H931.607098c22.394401 0 40.437891-18.171457 40.565859-40.565858V217.289678c0-22.266433-18.171457-40.437891-40.565859-40.437891z" fill="#FFA000" p-id="29343"></path><path d="M867.87903 869.414646H155.865034c-22.394401 0-40.565859-18.043489-40.565859-40.43789V279.226193c0-22.394401 18.043489-40.565859 40.437891-40.565858h712.141964c22.394401 0 40.565859 18.043489 40.565859 40.43789V828.976756c0 22.394401-18.171457 40.565859-40.565859 40.43789z" fill="#FFFFFF" p-id="29344"></path><path d="M931.607098 919.834041H92.136966c-22.394401 0-40.565859-18.043489-40.565859-40.43789V355.367158c0-22.394401 18.043489-40.565859 40.437891-40.565858H931.607098c22.394401 0 40.565859 18.043489 40.565859 40.43789v524.028993c-0.127968 22.394401-18.171457 40.565859-40.565859 40.565858z" fill="#FFCA28" p-id="29345"></path><path d="M379.553112 482.311422H156.76081c-11.133217 0-20.218945-9.085729-20.218945-20.346913 0-11.133217 9.085729-20.218945 20.218945-20.218945h222.92027c11.133217 0 20.218945 9.085729 20.346913 20.218945-0.127968 11.261185-9.213697 20.346913-20.474881 20.346913 0.127968 0 0 0 0 0z m0 137.693577H156.76081c-11.133217 0-20.218945-9.085729-20.218945-20.346914 0-11.133217 9.085729-20.218945 20.218945-20.218945h222.92027c11.133217 0 20.218945 9.085729 20.346913 20.218945-0.127968 11.261185-9.213697 20.346913-20.474881 20.346914 0.127968 0 0 0 0 0z" fill="#FFFFFF" p-id="29346"></path><path d="M844.972757 768.703824l-109.540615-72.301924c-3.327168-2.303424-7.806048-2.303424-11.133217 0l-109.540615 72.429892c-4.734816 3.071232-11.005249 1.791552-14.07648-2.815296-1.151712-1.663584-1.663584-3.583104-1.663585-5.630592V313.393652c0-11.133217 8.701825-20.218945 19.32317-20.218946h222.92027c10.621345 0 19.323169 9.085729 19.323169 20.218946v446.864284c0.127968 5.502624-4.350912 10.109473-9.981505 10.23744-1.91952 0-3.967008-0.63984-5.630592-1.791552z" fill="#F44336" p-id="29347"></path></svg></a><a class="nav-item" title="在线简历" href="/explore/" style="color:#FA6400"><svg t="1716732005879" class="icon" viewBox="0 0 1160 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="31680" width="300" height="300"><path d="M1052.97035029 374.93800508L595.69272266 590.84097031c-14.55525615 8.49056572-32.74932656 8.49056572-47.30458272 0L89.89757422 374.93800508C64.42587617 361.59568701 54.72237237 331.2722375 68.06469043 305.80053945c4.85175234-9.70350381 12.12937998-16.98113232 21.83288379-21.83288466L548.38813994 68.06469043c14.55525615-8.49056572 32.74932656-8.49056572 47.30458272 0l458.49056572 215.90296436c25.47169805 13.34231807 35.17520185 43.66576846 21.83288379 69.13746649-6.06469043 9.70350381-13.34231807 16.98113232-23.04582188 21.8328838z m-817.52021542 120.0808626L547.17520185 641.78436641c14.55525615 8.49056572 32.74932656 8.49056572 47.30458272 0l311.72506699-146.76549873v298.3827498c0 92.18328838-150.40431299 167.38544443-335.98382695 167.38544444S235.45013487 886.79784395 235.45013487 793.40161748V495.01886768z" fill="#2F77F1" p-id="31681"></path><path d="M1056.60916455 424.66846396c13.34231807 0 24.25875996 10.9164419 24.25875996 24.25875997v145.55256064c0 13.34231807-10.9164419 24.25875996-24.25875996 24.25875996s-24.25875996-10.9164419-24.25875996-24.25875996v-145.55256064c0-13.34231807 10.9164419-24.25875996 24.25875996-24.25875997z" fill="#AFFCFE" p-id="31682"></path></svg></a><a class="nav-item" title="社交" href="/friends/" style="color:#F44336"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262" opacity=".5"/><path fill="currentColor" d="M10.99 14.308c-1.327-.978-3.49-2.84-3.49-4.593c0-2.677 2.475-3.677 4.5-1.609c2.025-2.068 4.5-1.068 4.5 1.609c0 1.752-2.163 3.615-3.49 4.593c-.454.335-.681.502-1.01.502c-.329 0-.556-.167-1.01-.502"/></svg></a></nav>
-</div>
-<div class="widgets">
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">专栏：自然语言处理论文阅读</span></div><div class="widget-body"><a class="item active" href="/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/"><span class="title">基于链式推理的文档级事件论元提取</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item" href="/2023/11/06/wang-diao-ni-xiang-wang-diao-de-dong-xi-llms-de-gao-xiao-wang-que/"><span class="title">忘掉你想忘掉的东西：LLMs的高效忘却</span></a><a class="item" href="/2023/11/02/qing-jing-xue-xi-chuang-jian-ren-wu-xiang-liang/"><span class="title">情境学习创建任务向量</span></a><a class="item" href="/2023/11/02/bian-ji-da-xing-yu-yan-mo-xing-wen-ti-fang-fa-he-ji-yu/"><span class="title">编辑大型语言模型：问题、方法和机遇</span></a><a class="item" href="/2023/11/02/zhi-shi-shen-jing-yuan-zhong-xin-zhi-lu-yu-yan-wu-guan-zhi-shi-shen-jing-yuan-he-jian-bing-zhi-shi-shen-jing-yuan-de-fa-xian/"><span class="title">知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现</span></a><a class="item" href="/2023/11/02/wo-men-ke-yi-tong-guo-qing-jing-xue-xi-lai-bian-ji-shi-shi-zhi-shi-ma/"><span class="title">我们可以通过情景学习来编辑事实知识吗？</span></a><a class="item" href="/2023/11/02/wo-men-ke-yi-bian-ji-duo-mo-tai-da-xing-yu-yan-mo-xing-ma/"><span class="title">我们可以编辑多模态大型语言模型吗？</span></a><a class="item" href="/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/"><span class="title">多语言模型中事实知识的跨语言一致性</span></a></div></widget>
-
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/11/30/cesifjisdj/"><span class="title">Cesifjisdj</span></a><a class="item title" href="/2024/11/30/ce-shi-yl/"><span class="title">测试yl</span></a><a class="item title" href="/2024/11/23/csac/"><span class="title">csac</span></a><a class="item title" href="/2024/04/10/tui-jian-xi-tong/"><span class="title">推荐系统</span></a><a class="item title" href="/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/"><span class="title">多语言模型中事实知识的跨语言一致性</span></a><a class="item title" href="/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/"><span class="title">基于链式推理的文档级事件论元提取</span></a><a class="item title" href="/2023/11/02/zhi-shi-shen-jing-yuan-zhong-xin-zhi-lu-yu-yan-wu-guan-zhi-shi-shen-jing-yuan-he-jian-bing-zhi-shi-shen-jing-yuan-de-fa-xian/"><span class="title">知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现</span></a><a class="item title" href="/2023/11/02/wo-men-ke-yi-tong-guo-qing-jing-xue-xi-lai-bian-ji-shi-shi-zhi-shi-ma/"><span class="title">我们可以通过情景学习来编辑事实知识吗？</span></a><a class="item title" href="/2023/11/02/wo-men-ke-yi-bian-ji-duo-mo-tai-da-xing-yu-yan-mo-xing-ma/"><span class="title">我们可以编辑多模态大型语言模型吗？</span></a><a class="item title" href="/2023/11/06/wang-diao-ni-xiang-wang-diao-de-dong-xi-llms-de-gao-xiao-wang-que/"><span class="title">忘掉你想忘掉的东西：LLMs的高效忘却</span></a></div></widget>
-</div>
-<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/Humble2967738843" target="_blank" rel="external nofollow noopener noreferrer"><svg t="1716701113980" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4745" width="200" height="200"><path d="M512 512m-469.333333 0a469.333333 469.333333 0 1 0 938.666666 0 469.333333 469.333333 0 1 0-938.666666 0Z" fill="#434A54" p-id="4746"></path><path d="M610.688 808.149333c0-12.074667 0.426667-51.498667 0.426667-100.437333 0-34.133333-11.733333-56.448-24.832-67.84 81.493333-9.045333 167.125333-39.978667 167.125333-180.608 0-39.936-14.208-72.618667-37.674667-98.261333 3.84-9.216 16.341333-46.421333-3.584-96.853334 0 0-30.72-9.813333-100.565333 37.546667a351.658667 351.658667 0 0 0-91.733333-12.373333 350.549333 350.549333 0 0 0-91.605334 12.373333c-69.973333-47.36-100.693333-37.546667-100.693333-37.546667-19.882667 50.432-7.338667 87.637333-3.541333 96.853334a141.653333 141.653333 0 0 0-37.717334 98.261333c0 140.288 85.461333 171.690667 166.784 180.906667-10.453333 9.173333-19.968 25.301333-23.253333 48.981333-20.906667 9.386667-73.856 25.514667-106.496-30.421333 0 0-19.370667-35.157333-56.149333-37.76 0 0-35.712-0.426667-2.474667 22.272 0 0 23.978667 11.264 40.618667 53.546666 0 0 21.504 65.365333 123.349333 43.221334 0.170667 30.592 0.512 59.392 0.512 68.138666a19.968 19.968 0 0 1-2.218667 9.173334 339.925333 339.925333 0 0 0 187.904 3.114666 19.2 19.2 0 0 1-4.181333-12.288z" fill="#FFFFFF" p-id="4747"></path><path d="M180.138667 843.861333A467.882667 467.882667 0 0 0 512 981.333333c259.2 0 469.333333-210.133333 469.333333-469.333333 0-129.621333-52.522667-246.954667-137.472-331.861333L180.138667 843.861333z" fill="#231F20" opacity=".1" p-id="4748"></path></svg></a><a class="social" href="https://" target="_blank" rel="external nofollow noopener noreferrer"><svg t="1716701237965" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="12408" width="200" height="200"><path d="M276.822886 874.188342c-47.901937-0.484303-85.721573-1.942714-96.222136 64.483801-4.204628 59.150968 41.545465 67.092431 120.596869 81.461911 86.981861 4.49631 137.949214 16.482801 205.118694-49.93821l-227.814878-96.106564" fill="" p-id="12409"></path><path d="M270.939709 875.64125c-24.792995 0-64.296684-0.968605-81.098684 43.647779 2.102314 5.332833 12.327704 2.982864 18.794246-1.562977 9.691557-4.589869 5.162226 1.799625-5.552971 10.412507-11.661788 8.12858-37.660036 34.54509 6.461038 61.633019 46.801249 21.645028 193.974228 61.280799 285.678041-16.169105 0 0-180.892553-56.256158-222.493052-97.944713h-1.788618v-0.01651z" fill="#F0971C" p-id="12410"></path><path d="M764.482659 865.94419c47.896434-0.484303 85.710567-1.948218 96.222136 64.4838 4.204628 59.150968-64.731455 68.859035-120.602373 81.461912-59.734332 5.51995-137.949214 16.488305-205.118693-49.93821l227.820381-96.106564" fill="" p-id="12411"></path><path d="M770.360332 867.402601c24.787491 0 64.29118-0.974109 81.087678 43.642275-2.09681 5.332833-12.316698 2.982864-18.777736-1.562976-9.708067-4.589869-5.16773 1.799625 5.547467 10.412507 11.661788 8.123077 37.66554 34.54509-6.461038 61.633019-46.801249 21.645028-193.974228 61.275295-285.683544-16.174609 0 0 180.903559-56.250655 222.504059-97.939209l1.783114-0.011007z" fill="#F0971C" p-id="12412"></path><path d="M825.598354 441.216247c51.259035 54.307941 83.206502 107.641773 108.412255 245.337829 3.417636 83.393619-7.567229 91.153468-31.947466 113.453405-17.638524-2.905816-36.124577-30.059786-54.616134-94.070291-18.491557-63.993994-21.848655-264.720943-21.848655-264.720943z" fill="" p-id="12413"></path><path d="M847.452513 380.128069c0-15.21701-4.716448-29.894683-13.466917-43.741337C832.994977 150.420008 697.560835 0 530.619501 0 363.683671 0 228.249529 150.420008 227.25891 336.386732c-8.744965 13.852157-13.466916 28.52983-13.466917 43.735833 0 22.228392 10.043777 43.334083 28.078549 62.342963 39.349592 136.000997 153.744086 234.385984 288.748959 234.385984 135.015881 0 249.404871-98.384988 288.759967-234.385984 18.034771-19.003377 28.073045-40.109067 28.073045-62.337459zM198.035646 442.184853C146.771107 496.48729 114.834648 549.826626 89.623392 687.517178c-3.423139 83.393619 25.899186 111.031892 31.936459 113.458909 6.042777 2.410506 36.135584-30.06529 54.62714-94.064788 18.486053-63.988491 21.848655-264.726446 21.848655-264.726446z" fill="" p-id="12414"></path><path d="M864.254513 621.585973c0 200.82601-158.394492 363.634261-353.810621 363.634261-195.394116 0-353.805118-162.80825-353.805118-363.634261 0-200.831514 158.405499-363.639764 353.805118-363.639764 195.410626 0 353.810621 162.802747 353.810621 363.639764z" fill="" p-id="12415"></path><path d="M220.50619 696.245633c0 149.952216 134.702185 271.517691 300.86203 271.517691 166.154342 0 300.86203-121.565475 300.86203-271.517691s-134.707688-271.517691-300.86203-271.51769c-166.154342 0.005503-300.86203 121.565475-300.86203 271.51769z" fill="#FFFFFF" p-id="12416"></path><path d="M232.068916 322.672161s-23.950969 19.636272-18.909818 60.361724c-25.211256 30.544089-20.797498 62.54659-9.454909 95.281048 18.909818 62.788741 146.650152 162.665161 309.684043 162.665161 223.544209-15.018886 289.090173-123.392617 338.890797-180.122071 0 0 29.003126-47.280049-18.909818-129.457407l-72.491305 7.275547-528.80899-16.004002z" fill="" p-id="12417"></path><path d="M302.980734 572.85852c-3.147967 33.086678-15.128955 139.996494 3.786366 166.545086 20.170106 26.190869 44.43477 38.909317 96.112067 30.907316 23.323577-7.638774 28.364727-29.817635 26.163352-61.809129l-0.946592-92.364225-125.115193-43.279048z" fill="" p-id="12418"></path><path d="M223.246902 372.126068s83.200998 144.002998 271.033388 151.273041c83.206502 1.458411 167.662284 8.728455 292.458278-87.26804 24.583864-25.453408 29.003126-33.455409 29.003126-33.455409s8.189118 65.457909-112.820509 147.635268c0 0 82.562599 0.731957 141.812629-170.182859 0 0 29.003126 111.274043-72.480298 164.36022-93.288803 56.008504-154.432015 93.090679-309.480417 84.362224-101.874168-25.326829-254.005746-65.457909-264.726446-192.730451 0 0 6.306942-29.817635 14.49606-24.000499 0 0 0.627392 69.095683 52.943088 92.364225-0.011007 0.005503-52.326703-77.807627-42.238899-132.35772z" fill="#E71F19" p-id="12419"></path><path d="M321.059532 589.605486s-36.240149 138.185862 4.413759 161.459908c41.2813 19.273045 66.498059 14.182364 94.229891 4.727454 11.661788-16.004002 1.260288-111.63727 4.721951-121.455406-6.306942-4.006504-24.892057-8.370731-28.051031-8.370731 0 0-2.834271 40.719949-0.313696 65.463413-5.046654-19.273045-8.827517-19.273045-8.827517-71.275045-30.235897-10.550093-66.173356-30.549593-66.173357-30.549593z" fill="#E71F19" p-id="12420"></path><path d="M506.316313 242.426509c0 50.60963-22.487054 91.637771-50.218886 91.637771s-50.218885-41.028141-50.218885-91.637771 22.487054-91.637771 50.218885-91.63777c27.731832-0.005503 50.218885 41.022638 50.218886 91.63777z m147.492178 0c0 50.60963-22.498061 91.637771-50.218885 91.637771-27.731832 0-50.218885-41.028141-50.218886-91.637771s22.487054-91.637771 50.218886-91.63777c27.726328-0.005503 50.218885 41.022638 50.218885 91.63777z" fill="#FFFFFF" p-id="12421"></path><path d="M499.530572 243.395115c0 19.553721-8.469793 35.398123-18.915322 35.398123-10.440025 0-18.915322-15.844402-18.915321-35.398123 0-19.548217 8.469793-35.398123 18.915321-35.398123 10.445528 0.005503 18.915322 15.855409 18.915322 35.398123z m74.791742 10.54459c-1.794121-18.238398 8.662414-44.368729 29.151719-37.638023 14.86479 6.730706 14.028267 32.547341 13.703565 39.096434-0.324703 6.538086-8.97611 11.089431-12.922076 0-1.893183-10.36848-10.093308-41.63352-17.176235-2.371982-2.360976 9.091682-11.969981 8.915572-12.756973 0.913571z" fill="" p-id="12422"></path><path d="M676.779847 358.472035c-37.032644-15.618761-89.452905-25.381863-147.624261-25.381863-56.872544 0-108.236144 9.32833-145.109189 24.347216-30.57711 12.44878-57.648529 34.567103-56.597371 47.02689 3.153471 12.503815 13.13671 20.626891 68.176608 29.118699-19.53721-18.915322-15.21701-14.600625-15.21701-43.5212 0 28.920575 23.48868 43.669792 61.357847 59.42614 24.853533 10.340963 55.386615 16.455284 88.418259 16.455284 34.677172 0 66.602625-6.73621 92.072542-18.023764 35.805377-15.855409 53.108191-28.661913 53.108191-56.6414 0 27.979486 5.773108 19.030894-17.242276 42.310443 53.366853-9.383364 70.17986-19.757348 71.5227-32.525327 0.022014-11.238023-25.55247-31.072419-52.86604-42.591118z" fill="#F0971C" p-id="12423"></path></svg></a><a class="social" href="https://www.kaggle.com/humbleyll" target="_blank" rel="external nofollow noopener noreferrer"><svg t="1716701307894" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="13418" width="200" height="200"><path d="M803.1909 1017.952189c-0.927971 3.935877-4.991844 6.015812-11.999625 6.015812H657.27546c-7.967751 0-14.975532-3.487891-20.991344-10.591669l-220.921096-281.111215-61.790069 58.622168v218.073185c0 10.015687-4.991844 15.007531-14.975532 15.007531H234.88866c-10.079685 0-15.103528-4.991844-15.103528-15.007531V15.071529C219.785132 5.11984 224.808975 0 234.88866 0h103.708759c9.983688 0 14.975532 5.11984 14.975532 15.071529v611.948877l264.663729-267.607638c7.03978-7.03978 14.07956-10.495672 21.11934-10.495672h138.203681c6.143808 0 10.079685 2.55992 12.15962 7.67976 1.951939 6.367801 1.439955 10.87966-1.535952 13.43958l-279.67126 270.679542 291.670885 362.964657c4.063873 4.447861 4.991844 8.863723 2.975907 15.263523z" fill="#20BEFF" p-id="13419"></path></svg></a><a class="social" href="https://" target="_blank" rel="external nofollow noopener noreferrer"><svg t="1716701358358" class="icon" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="14411" width="200" height="200"><path d="M1024.16 694.816c0-149.92-143.104-271.392-319.584-271.392-176.576 0-319.68 121.504-319.68 271.392S528 966.208 704.576 966.208c55.456 0 107.648-12.096 153.184-33.248l125.984 54.528-14.592-140.544c34.784-43.392 55.04-95.808 55.04-152.128zM596.832 621.28c-25.152 0-45.472-20.352-45.472-45.472s20.32-45.472 45.472-45.472c25.12 0 45.44 20.384 45.44 45.472s-20.384 45.472-45.44 45.472z m215.392 0c-25.056 0-45.44-20.352-45.44-45.472s20.384-45.472 45.44-45.472c25.184 0 45.536 20.384 45.536 45.472s-20.352 45.472-45.536 45.472zM704.576 387.488c49.376 0 96.416 8.8 139.264 24.64 0.32-5.728 0.992-11.232 0.992-16.992 0-198.08-189.152-358.624-422.432-358.624C189.184 36.512 0.032 197.024 0.032 395.136c0 74.496 26.816 143.776 72.704 201.12L53.472 781.92l166.432-72.096c41.216 19.2 86.784 32.16 134.88 38.784-3.616-17.504-5.824-35.424-5.824-53.792 0.032-169.44 159.552-307.296 355.616-307.296z m-139.808-209.6c33.184 0 60 26.88 60 60 0 33.184-26.816 60.064-60 60.064s-60.032-26.88-60.032-60.064c0-33.152 26.88-60 60.032-60zM280.032 297.952c-33.184 0-60-26.88-60-60.064 0-33.152 26.848-60 60-60 33.184 0 60.032 26.88 60.032 60s-26.88 60.064-60.032 60.064z" fill="#51C332" p-id="14412"></path></svg></a></div></footer>
-</div></aside><div class="l_main" id="main">
-
-
-
-
-
-<div class="article banner top">
-  <div class="content">
-    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/">自然语言处理论文阅读</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-05-06T04:21:08.000Z">2024-05-06</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-05-26T11:14:12.534Z">2024-05-26</time></span></div></div></div>
-    
-    <div class="bottom only-title">
-      
-      <div class="text-area">
-        <h1 class="text title"><span>基于链式推理的文档级事件论元提取</span></h1>
-        
-      </div>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-    
   </div>
-  </div><article class="md-text content"><p>Document-Level Event Argument Extraction With A Chain Reasoning Paradigm</p>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">humbleyl</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://humble2967738843.github.io/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="yuan long">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="humbleyl">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          基于链式推理的文档级事件论元提取
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-05-06 12:21:08" itemprop="dateCreated datePublished" datetime="2024-05-06T12:21:08+08:00">2024-05-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-05-26 19:14:12" itemprop="dateModified" datetime="2024-05-26T19:14:12+08:00">2024-05-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BA%8B%E4%BB%B6%E5%8F%82%E6%95%B0%E6%8A%BD%E5%8F%96/" itemprop="url" rel="index"><span itemprop="name">事件参数抽取</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Document-Level Event Argument Extraction With A Chain Reasoning Paradigm</p>
 <p>文档级事件参数提取旨在识别句子级别之外的事件参数，其中一个重大挑战是对远程依赖关系进行建模。针对这一挑战，我们为该任务<span style="background-color: #ff666680">提出了一种新的链式推理范式，它可以生成可分解的一阶逻辑规则进行推理。由于链的组合性质，这种范式自然地捕获了远程相互依赖，这也通过显式地建模推理过程来提高可解释性</span>。我们<span style="background-color: #ff666680">引入 T 范数模糊逻辑进行优化，它允许端到端学习，并有望将逻辑推理的表达能力与神经网络的泛化相结合</span>。在实验中，我们表明我们的方法在两个标准基准上明显优于以前的方法（F1 中超过 6 个点）。此外，它在资源匮乏的情况下具有数据效率，并且足够强大以防御对抗性攻击。</p>
 <p>1.</p>
 <p>识别事件参数（即事件的参与者）是文档级事件理解的一项关键任务（Ebner et al., 2020；Li et al., 2021）。在此任务中，主要挑战是对事件触发器和参数之间的远程依赖关系进行建模，因为事件表达式可以跨越多个句子（Ebner 等人，2020；Liu 等人，2021；Li 等人，2021）。考虑图 1 中由触发引爆（类型 = 攻击）表示的事件。为了定位其参数 Tartus（语义角色 = 地点），模型应捕获包含三个句子和 178 个单词的大型上下文窗口，以支持推理过程。</p>
 <p>目前，有效捕获此类依赖关系仍然是一个悬而未决的问题（Liu et al., 2021, 2022c）。先前的研究提出建模通过结合分层编码机制（Du and Cardie，2020a）、生成范式（Li et al.，2021；Ma et al.，2022；Du et al.，2022）和文档级归纳偏差（Wei等人，2021；Pouran Ben Veyseh 等人，2022；Liu 等人，2022b)。然而，此类方法并未明确表征文档上下文背后的推理模式，这可能会导致性能不佳。此外，大多数以前的方法都是不可解释的，因为它们依赖于黑盒神经网络。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="attachments/5WFMU28T.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;5WFMU28T&quot; width=&quot;676&quot; height=&quot;697&quot; src=&quot;attachments/5WFMU28T.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="attachments/5WFMU28T.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;5WFMU28T&quot; width=&quot;676&quot; height=&quot;697&quot; src=&quot;attachments/5WFMU28T.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>在本文中，我们提出了一种新的推理链范式来解决文档级事件参数提取（EAE）。如图 1 底部所示，<span style="background-color: #ff666680">我们的方法试图通过一系列局部推理步骤来描述全局参数查找过程。</span>例如，我们可以使用以下链来定位塔尔图斯：<span style="background-color: #ff666680">引爆目标→Arzunah Bridge locatedIn→塔尔图斯。</span>与以前的方法相比，这种推理链范式具有三个明显的好处：<span style="background-color: #ff666680">首先，由于推理链的组合结构，它自然地捕获了长距离依赖关系</span>。其次，<span style="background-color: #ff666680">它只涉及局部推理，这在概念上比直接执行全局推理更容易</span>。第三，<span style="background-color: #ff666680">它提高了可解释性，因为推理过程是可见的</span>。</p>
 <p>我们的方法将推理链形式化为一阶逻辑（FOL）规则（Cresswell 和 Hughes，1996）。具体来说，<span style="background-color: #ff666680">令 RL(T , ?) 为对事件参数的查询，该事件参数满足关于事件触发器 T 的语义角色 RL （例如，地点）</span>。我们将查询形式化为以下 FOL 规则：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="attachments/T4XFLP62.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;T4XFLP62&quot; width=&quot;513&quot; height=&quot;69&quot; src=&quot;attachments/T4XFLP62.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="attachments/T4XFLP62.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;T4XFLP62&quot; width=&quot;513&quot; height=&quot;69&quot; src=&quot;attachments/T4XFLP62.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>其中<span style="background-color: #ff666680">规则主体（右侧）由具有低级谓词 {ri}1n 和中间线索实体 {Bi}n−1 1 的合取命题组成</span>。我们<span style="background-color: #ff666680">构建一个模型，根据文档上下文自动生成规则，然后将规则转换为推理链来定位事件参数</span>。然而，由于 FOL 规则的离散性质，使用 FOL 规则进行优化通常具有挑战性（Qu 等人，2021a）。受到使用 FOL 增强神经网络的工作的启发（Li 和 Srikumar，2019；Ahmed 等人，2022），我们<span style="background-color: #ff666680">提出了用于松弛的 T-Norm 模糊逻辑（Hajek，1998），这导致了端到端的训练机制。</span></p>
 <p>我们在两个基准上验证了我们的方法的有效性（Ebner 等人，2020；Li 等人，2021）。根据结果​​，我们的方法通过这种链式推理范式提供了有希望的结果，例如与使用大规模外部资源训练的模型相比，F1 提高了 6 个点（第 6.1 节）。有趣的是，除了性能提升之外，我们的方法还表现出良好的鲁棒性，特别是在资源匮乏的情况下和防御对抗性噪音（第 7.2 节）。最后，我们使用彻底的案例研究来评估我们方法的可解释性（第 7.3 节）。</p>
 <p>2 相关工作</p>
 <p><strong>使用 FOL 规则进行推理</strong>。一阶逻辑（FOL）规则可以对声明性知识进行编码，并在符号推理中发挥至关重要的作用（Cresswell 和 Hughes，1996）。在深度学习时代，多项研究探讨了 <span style="background-color: #2ea8e580">FOL 规则与神经网络的集成以进行推理（称为神经符号方法），以及在知识库推理（Qu 等人，2021b）、文本蕴涵（Li 和 Srikumar）中的应用，2019）、问答（Wang 和 Pan，2022）以及其他（Medina 等人，2021；Ahmed 等人，2022）</span>。我们的方法<span style="background-color: #ff666680">受到知识库推理工作的启发，据我们所知，这是在文档级 EAE 背景下合并 FOL 规则进行推理的首次尝试</span>。与其他方法相比，我们研究了使用神经网络自动生成规则，而不是像（Li 和 Srikumar，2019；Wang 和 Pan，2022）那样采用专家编写的规则。此外，与基于强化学习的方法不同（Qu et al., 2021b），我们<span style="background-color: #ff666680">使用 T 范数进行规则松弛，从而形成具有更稳定学习过程的端到端训练范例。</span></p>
 <p>3 方法</p>
 <p>图 2 概述了我们的方法，并提供了一个提取事件引爆的 Place 角色参数的示例。令 D = {w1, · · · , T, · · · , wN } 为包含 N 个单词和事件触发器 T 的文档，并令 RL(T , ?) 为对语义角色 RL 的事件参数的查询。我们的方法不是直接执行可能涉及高级过程的推理，而是将查询表示为具有连接命题和低级谓词的 FOL 规则{ri}1n：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="attachments/EALEF5M3.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;EALEF5M3&quot; width=&quot;585&quot; height=&quot;67&quot; src=&quot;attachments/EALEF5M3.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="attachments/EALEF5M3.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;EALEF5M3&quot; width=&quot;585&quot; height=&quot;67&quot; src=&quot;attachments/EALEF5M3.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>这样，规则的主体就暗示了一个推理链：T r1 → B1 r2 → · · · Bn−1 rn → ?。我们使用双谓词公式，特别是RL(T, ?) ← r1(T, B) ∧ r2(B, ?)为了解释我们的方法，我们在第 4 节中描述了一般情况。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="attachments/3Y9VQ2IL.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;3Y9VQ2IL&quot; width=&quot;1379&quot; height=&quot;627&quot; src=&quot;attachments/3Y9VQ2IL.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="attachments/3Y9VQ2IL.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;3Y9VQ2IL&quot; width=&quot;1379&quot; height=&quot;627&quot; src=&quot;attachments/3Y9VQ2IL.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>3.1</p>
 <p>在我们方法的第一步中，我们创建一组实体，可以从中选择一个实体作为中间线索实体以形成推理链（关于我们的双谓词结构）。<span style="background-color: #ff666680">我们扩大了“实体”的概念，以包含文档中的任何单个单词，以合并基于动词的提示</span>。<span style="background-color: #ff666680">为了限制集合的大小，我们给每个单词一个分数源自 BERT 表示</span>（Devlin 等人，2019）。例如，wi 的得分为：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="attachments/46BYK6KL.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;46BYK6KL&quot; width=&quot;562&quot; height=&quot;106&quot; src=&quot;attachments/46BYK6KL.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="attachments/46BYK6KL.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;46BYK6KL&quot; width=&quot;562&quot; height=&quot;106&quot; src=&quot;attachments/46BYK6KL.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>其中h<sub>wi</sub>是wi的表示，w<sub>s</sub>和b<sub>s</sub>是模型参数。我们根据分数对所有单词进行排序，并选择分数最高的 K 个单词组成集合，表示为 B = {b<sub>i</sub>}<sub>i</sub><sup>K=1</sup>。</p>
 <p>为了促进训练和测试，我们还生成了一个参数候选集。在这种情况下，<span style="background-color: #2ea8e580">我们不使用实体的广义定义，因为事件参数被定义为名词实体</span>（Walker and Consortium，2005；Ahn，2006）。当真实实体可用时（例如在 WikiEvents (Li et al., 2021) 中），我们将候选集视为真实实体集；否则，我们使用外部工具包2来识别实体。我们用 A = {ai}iL=1 表示参数候选集。</p>
 <p>3.2</p>
 <p><span style="background-color: #ff666680">给定实体候选集B和参数候选集A，下一步是生成两个谓词并选择集合中的相关候选者以形成规则。</span>在这里，我们解释了生成关于特定实体参数对（B ∈ B，A ∈ A）的谓词的方法，并且我们在第 4 节中展示了对不同候选对生成的规则进行排名的度量。</p>
 <p><strong>谓词表示。</strong>在我们的方法中，我们假设有 M 个原子谓词不可分解的语义，由谓词集 R = {R<sub>i</sub>}<sup>M</sup><sub>i=1</sub> 表示。我们给每个谓词一个 d 维向量化表示，并导出 R 的矩阵表示 U ∈ RM×d。对于语义角色 RL，我们还给它一个 d 维表示，由 r<sub>RL</sub> ∈ Rd 表示。</p>
 <p><strong>学习角色-谓词关联</strong>。给定这些表示，我们首先学习角色-顶级谓词关联，<span style="background-color: #ff666680">该关联指示哪些谓词可能仅基于角色而不考虑上下文而生成</span>。我们采用自回归学习并生成概率向量 a(1) RL ∈ RM 指示第一个谓词 r1 在谓词集 R 上的分布：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="attachments/2DJDB86S.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;2DJDB86S&quot; width=&quot;487&quot; height=&quot;73&quot; src=&quot;attachments/2DJDB86S.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="attachments/2DJDB86S.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;2DJDB86S&quot; width=&quot;487&quot; height=&quot;73&quot; src=&quot;attachments/2DJDB86S.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>其中 W<sup> (1) </sup><sub>s</sub> ∈ R<sup>d×d</sup> 是一个参数。为了了解第二个谓词 r2 的分布，我们首先通过整合第一个谓词的影响来更新角色的表示：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="attachments/WLCE8QIE.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;WLCE8QIE&quot; width=&quot;469&quot; height=&quot;76&quot; src=&quot;attachments/WLCE8QIE.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="attachments/WLCE8QIE.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;WLCE8QIE&quot; width=&quot;469&quot; height=&quot;76&quot; src=&quot;attachments/WLCE8QIE.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>然后计算概率向量 a<sup>(2)</sup> <sub>RL</sub> ∈ R<sup>M </sup>：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="attachments/IKPRLVPR.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;IKPRLVPR&quot; width=&quot;497&quot; height=&quot;78&quot; src=&quot;attachments/IKPRLVPR.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="attachments/IKPRLVPR.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;IKPRLVPR&quot; width=&quot;497&quot; height=&quot;78&quot; src=&quot;attachments/IKPRLVPR.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>其中 W<sup> (1) </sup><sub>a</sub> ∈ R<sup>M×d</sup> 和 W<sup> (2)</sup><sub> s</sub> ∈ R<sup>d×d </sup>是要学习的参数。我们可以将 r1 和 r2 分别设置为 a<sup>(1) </sup><sub>RL</sub> 和 a<sup>(2) </sup><sub>RL</sub> 中概率最高的谓词。<span style="background-color: #ff666680">然而，这种方法总是为语义角色生成相同的谓词，并且性能相当差（7.1）</span>。作为解决方案，我们引入了一种根据上下文对谓词重新排序的机制。</p>
 <p><strong>上下文相关谓词生成</strong>。设 X 和 Y 为两个实体。我们首先计算一个概率向量 v(X,Y ) ∈ R<sup>M</sup> 表示 (X,Y ) 与每个谓词 R ∈ R 的兼容性，以形成命题 R(X, Y )：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="attachments/CUYULVTV.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;CUYULVTV&quot; width=&quot;520&quot; height=&quot;68&quot; src=&quot;attachments/CUYULVTV.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="attachments/CUYULVTV.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;CUYULVTV&quot; width=&quot;520&quot; height=&quot;68&quot; src=&quot;attachments/CUYULVTV.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>其中 h<sub>X</sub> ​​和 h<sub>Y</sub> 是 X 和 Y 的表示，⊕ 是串联运算符，W ∈ R<sup>m×2d</sup> 是模型参数。我<span style="background-color: #ff666680">们将兼容性概率与角色谓词关联概率相结合，以生成最终谓词</span>。具体来说，对于事件触发器 T ，一定实体 B ∈ B 和参数候选 A ∈ A，我们生成以下两个谓词：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="attachments/RCETCNC6.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;RCETCNC6&quot; width=&quot;601&quot; height=&quot;122&quot; src=&quot;attachments/RCETCNC6.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="attachments/RCETCNC6.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;RCETCNC6&quot; width=&quot;601&quot; height=&quot;122&quot; src=&quot;attachments/RCETCNC6.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>其中是逐元素乘法运算符，s<sub>X</sub>表示被选为候选线索实体集 B 中的实体 X 的得分（式（1））。这样，生成的 FOL 规则为 RL(T, A) ← r1(T, B) ∧ r2(B, A)，暗示到达事件参数 A 的推理路径： T r1 −→ B r2 −→ A 。\<br>4 优化和泛化</p>
 <p>由于 FOL 规则的离散性，使用 FOL 规则进行优化通常具有挑战性（Qu 等人，2021a）。在这里，我们提出了用于松弛的 T-Norm 模糊逻辑，它产生了端到端的学习过程。</p>
 <p><strong>用于松弛的 T 范数模糊逻辑</strong>。 T-Norm 模糊逻辑通过承认 1（真值）和 0（假值）之间的中间真值来概括经典的二值逻辑。对于我们生成的 FOL 规则 RL(T, A) ← r1(T, B) ∧ r2(B, A)，我们将 r1(T, B) 和 r2(B, A) 的真值设置为相应的分数式（6）和式（7）中，分别记为p1和p2。然后，遵循 Łukasiewicz T-Norm 逻辑，两个命题的合取对应于：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="attachments/3VGXZBE4.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;3VGXZBE4&quot; width=&quot;572&quot; height=&quot;55&quot; src=&quot;attachments/3VGXZBE4.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="attachments/3VGXZBE4.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;3VGXZBE4&quot; width=&quot;572&quot; height=&quot;55&quot; src=&quot;attachments/3VGXZBE4.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>我们将其重写为度量4：M (T, B, A) = p(r1(T, B) ∧ r2(B, A)) 并将其用于规则排序和优化。特别地，我们枚举每个实体参数对 (B, A) ∈ B × A，并用 ( ˆ B, ˆ A) 表示得分最高的一个。然后我们得出以下优化损失：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="attachments/B45E6KDW.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;B45E6KDW&quot; width=&quot;588&quot; height=&quot;131&quot; src=&quot;attachments/B45E6KDW.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="attachments/B45E6KDW.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;B45E6KDW&quot; width=&quot;588&quot; height=&quot;131&quot; src=&quot;attachments/B45E6KDW.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>其中θ表示整体参数集（在训练时，ground-truth参数是已知的，我们可以直接将最优参数设置为ground-truth）。尽管我们的方法考虑了每个候选实体和参数，但我们通过并行张量运算表明，我们的方法与先前的方法一样有效地进行竞争（参见附录 A.1）。</p>
 <p>概括为一般情况。我们使用结构二谓词结构来解释我们的方法，但是很容易将其适用于具有任意数量谓词的一般情况。现在假设一个 n 谓词结构。我们首先使用类似于等式 1 的自回归机制来学习一系列角色预测关联向量 a(1) RL 、 a(2) RL 、…、a(n) RL 。 （3）和（4）。然后，我们重新排序并生成谓词r1，r2，····，rn以形成逻辑规则。为了优化，我们驱动以下度量 p(r1∧r2∧···∧rn) = min(p1, p2,···, pn)，这类似于等式： (8)进行规则排序和模型训练。</p>
 <p>5.</p>
@@ -179,470 +292,198 @@
 <p>9.</p>
 <p>我们方法的一个限制是，当存在不同长度的规则时，最终结果是由集成决定的，而不是通过构建模型来生成具有最佳长度的单个规则。第二种方式更加自然和重要，因为计算出规则的长度也是符号推理的关键部分。然而，它需要更多的参数化（例如，规则的长度可以是参数）和更高级的优化方法。上述方法的研究留待以后的工作。</p>
 
-<div class="article-footer fs14">
-    <section id="license">
-      <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
-</div>
-    </section>
-    
-    <section id="share">
-      <div class="header"><span>分享文章</span></div>
-      <div class="body">
-        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="http://humble2967738843.github.io/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/" /></div>
-        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=http://humble2967738843.github.io/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/&title=基于链式推理的文档级事件论元提取 - humbleyl&summary=Document-Level Event Argument Extraction With A Chain Reasoning Paradigm
-文档级事件参数提取旨在识别句子级别之外的事件参数，其中一个重大挑战是对远程依赖关系进行建..."><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=基于链式推理的文档级事件论元提取 - humbleyl&amp;body=http://humble2967738843.github.io/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
-        
-        <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
-          <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=http://humble2967738843.github.io/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/"/>
-        </div>
-        
-      </div>
-    </section>
     </div>
-</article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/11/23/csac/">csac</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/04/10/tui-jian-xi-tong/">推荐系统</a></div></section></div>
 
-<div class="related-wrap" id="related-posts"></div>
+    
+    
+    
 
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/ACL2023/" rel="tag"># ACL2023</a>
+          </div>
 
-  <div class="related-wrap md-text" id="comments">
-    <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
-
-    </section>
-    <section class='body cmt-body giscus'>
-      
-
-<svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
-
-<div id="giscus" src="https://giscus.app/client.js" data-repo="Humble2967738843/giscus" data-repo-id="R_kgDOLsS5kA" data-category="Announcements" data-category-id="DIC_kwDOLsS5kM4Cel5C" data-mapping="url" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
-
-    </section>
-  </div>
+        
 
 
-
-<footer class="page-footer footnote"><hr><div class="text"><center>
-</br>
-</br>
-<script type="text/javascript">
-function show_runtime() {
-    window.setTimeout("show_runtime()", 1000);
-    X = new Date("10/20/2023 00:00:00");
-    Y = new Date();
-    T = (Y.getTime() - X.getTime());
-    M = 24 * 60 * 60 * 1000;
-    a = T / M;
-    A = Math.floor(a);
-    b = (a - A) * 24;
-    B = Math.floor(b);
-    c = (b - B) * 60;
-    C = Math.floor((b - B) * 60);
-    D = Math.floor((c - C) * 60);
-    runtime_span.innerHTML = "⏲️本站已运行 " + A + "天|" + B + "小时|" + C + "分|" + D + "秒⏲️"
-}
-show_runtime();
-</script>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_pv">🤩本站总访问量<span id="busuanzi_value_site_pv"></span>次</span><br>
-<span id="runtime_span"></span>
-</center>
-</div></footer>
-<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel blur'>
-  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
-  </button>
-  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
-  </button>
-</div>
-</div><div class="scripts">
-<script type="text/javascript">
-  const ctx = {
-    date_suffix: {
-      just: `刚刚`,
-      min: `分钟前`,
-      hour: `小时前`,
-      day: `天前`,
-    },
-    root : `/`,
-  };
-
-  // required plugins (only load if needs)
-  if (`local_search`) {
-    ctx.search = {};
-    ctx.search.service = `local_search`;
-    if (ctx.search.service == 'local_search') {
-      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"}`);
-      ctx.search[ctx.search.service] = service_obj;
-    }
-  }
-  const def = {
-    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
-    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
-  };
-  const deps = {
-    jquery: `https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js`,
-    marked: `https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js`
-  }
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/04/10/tui-jian-xi-tong/" rel="prev" title="推荐系统">
+      <i class="fa fa-chevron-left"></i> 推荐系统
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/11/23/csac/" rel="next" title="csac">
+      csac <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</script>
 
-<script type="text/javascript">
-  const utils = {
-    // 懒加载 css https://github.com/filamentgroup/loadCSS
-    css: (href, before, media, attributes) => {
-      var doc = window.document;
-      var ss = doc.createElement("link");
-      var ref;
-      if (before) {
-        ref = before;
-      } else {
-        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
-        ref = refs[refs.length - 1];
-      }
-      var sheets = doc.styleSheets;
-      if (attributes) {
-        for (var attributeName in attributes) {
-          if (attributes.hasOwnProperty(attributeName)) {
-            ss.setAttribute(attributeName, attributes[attributeName]);
-          }
-        }
-      }
-      ss.rel = "stylesheet";
-      ss.href = href;
-      ss.media = "only x";
-      function ready(cb) {
-        if (doc.body) {
-          return cb();
-        }
-        setTimeout(function () {
-          ready(cb);
-        });
-      }
-      ready(function () {
-        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
-      });
-      var onloadcssdefined = function (cb) {
-        var resolvedHref = ss.href;
-        var i = sheets.length;
-        while (i--) {
-          if (sheets[i].href === resolvedHref) {
-            return cb();
-          }
-        }
-        setTimeout(function () {
-          onloadcssdefined(cb);
-        });
-      };
-      function loadCB() {
-        if (ss.addEventListener) {
-          ss.removeEventListener("load", loadCB);
-        }
-        ss.media = media || "all";
-      }
-      if (ss.addEventListener) {
-        ss.addEventListener("load", loadCB);
-      }
-      ss.onloadcssdefined = onloadcssdefined;
-      onloadcssdefined(loadCB);
-      return ss;
-    },
 
-    js: (src, opt) => new Promise((resolve, reject) => {
-      var script = document.createElement('script');
-      if (src.startsWith('/')){
-        src = ctx.root + src.substring(1);
-      }
-      script.src = src;
-      if (opt) {
-        for (let key of Object.keys(opt)) {
-          script[key] = opt[key]
-        }
-      } else {
-        // 默认异步，如果需要同步，第二个参数传入 {} 即可
-        script.async = true
-      }
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    }),
-
-    jq: (fn) => {
-      if (typeof jQuery === 'undefined') {
-        utils.js(deps.jquery).then(fn)
-      } else {
-        fn()
-      }
-    },
-    
-    onLoading: (el) => {
-      if (el) {
-        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
-      }
-    },
-    onLoadSuccess: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap').remove();
-      }
-    },
-    onLoadFailure: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap svg').remove();
-        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
-        $(el).find('.loading-wrap').addClass('error');
-      }
-    },
-    request: (el, url, callback, onFailure) => {
-      let retryTimes = 3;
-      utils.onLoading(el);
-      function req() {
-        return new Promise((resolve, reject) => {
-          let status = 0; // 0 等待 1 完成 2 超时
-          let timer = setTimeout(() => {
-            if (status === 0) {
-              status = 2;
-              timer = null;
-              reject('请求超时');
-              if (retryTimes == 0) {
-                onFailure();
-              }
-            }
-          }, 5000);
-          fetch(url).then(function(response) {
-            if (status !== 2) {
-              clearTimeout(timer);
-              resolve(response);
-              timer = null;
-              status = 1;
-            }
-            if (response.ok) {
-              return response.json();
-            }
-            throw new Error('Network response was not ok.');
-          }).then(function(data) {
-            retryTimes = 0;
-            utils.onLoadSuccess(el);
-            callback(data);
-          }).catch(function(error) {
-            if (retryTimes > 0) {
-              retryTimes -= 1;
-              setTimeout(() => {
-                req();
-              }, 5000);
-            } else {
-              utils.onLoadFailure(el);
-              onFailure();
-            }
-          });
-        });
-      }
-      req();
-    },
-  };
-</script>
+          </div>
+          
 
 <script>
-  const sidebar = {
-    leftbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    rightbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('rightbar');
-        l_body.removeAttribute('leftbar');
-      }
-    },
-    dismiss: () => {
-      if (l_body) {
-        l_body.removeAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    toggleTOC: () => {
-      document.querySelector('#data-toc').classList.toggle('collapse');
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
     }
-  }
-</script>
-
-<!-- required -->
-<script src="/js/main.js?v=1.27.0" async></script>
-
-<!-- optional -->
-
-  <script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const els = document.querySelectorAll("#comments #giscus");
-    if (els.length === 0) return;
-    els.forEach((el, i) => {
-      try {
-        el.innerHTML = '';
-      } catch (error) {
-        console.error(error);
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
       }
-      var script = document.createElement('script');
-      script.async = true;
-      for (let key of Object.keys(el.attributes)) {
-        let attr = el.attributes[key];
-        if (['class', 'id'].includes(attr.name) === false) {
-          script.setAttribute(attr.name, attr.value);
-        }
-      }
-      el.appendChild(script);
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
     });
-  });
-</script>
-
-
-
-
-<script defer>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
-    for (let id of Object.keys(ctx.services)) {
-      const js = ctx.services[id].js;
-      if (id == 'siteinfo') {
-        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
-        if (ctx.cardlinks?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            setCardLink(ctx.cardlinks);
-          });
-        }
-      } else {
-        const els = document.getElementsByClassName(`ds-${id}`);
-        if (els?.length > 0) {
-          utils.jq(() => {
-            if (id == 'timeline' || 'memos' || 'marked') {
-              utils.js(deps.marked).then(function () {
-                utils.js(js, { defer: true });
-              });
-            } else {
-              utils.js(js, { defer: true });
-            }
-          });
-        }
-      }
-    }
-  });
-</script>
-
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.search = {
-      path: `/search.json`,
-    }
-    utils.js('/js/search/local-search.js', { defer: true });
-  });
-</script><script>
-  window.FPConfig = {
-    delay: 0,
-    ignoreKeywords: [],
-    maxRPS: 5,
-    hoverDelay: 25
-  };
-</script>
-<script defer src="https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazy",
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    window.lazyLoadInstance?.update();
-  });
-</script><script>
-  ctx.fancybox = {
-    selector: `.timenode p>img`,
-    css: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
-    js: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
-  };
-  var selector = '[data-fancybox]:not(.error)';
-  if (ctx.fancybox.selector) {
-    selector += `, ${ctx.fancybox.selector}`
   }
-  var needFancybox = document.querySelectorAll(selector).length !== 0;
-  if (!needFancybox) {
-    const els = document.getElementsByClassName('ds-memos');
-    if (els != undefined && els.length > 0) {
-      needFancybox = true;
-    }
-  }
-  if (needFancybox) {
-    utils.css(ctx.fancybox.css);
-    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
-      Fancybox.bind(selector, {
-        hideScrollbar: false,
-        Thumbs: {
-          autoStart: false,
-        },
-        caption: (fancybox, slide) => {
-          return slide.triggerEl.alt || null
-        }
-      });
-    })
-  }
-</script><script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const swiper_api = document.getElementById('swiper-api');
-    if (swiper_api != undefined) {
-      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
-      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
-        const effect = swiper_api.getAttribute('effect') || '';
-        var swiper = new Swiper('.swiper#swiper-api', {
-          slidesPerView: 'auto',
-          spaceBetween: 8,
-          centeredSlides: true,
-          effect: effect,
-          loop: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
-      })
-    }
-  });
-</script><script>
-  document.addEventListener('DOMContentLoaded', function () {
-    window.codeElements = document.querySelectorAll('.code');
-    if (window.codeElements.length > 0) {
-      ctx.copycode = {
-        default_text: `Copy`,
-        success_text: `Copied`,
-        toast: `复制成功`,
-      };
-      utils.js('/js/plugins/copycode.js');
-    }
-  });
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
 
-<!-- inject -->
+  <aside class="sidebar">
+    <div class="sidebar-inner">
 
-</div></body></html>
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">yuan long</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">63</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yuan long</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

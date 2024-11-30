@@ -1,25 +1,26 @@
-
-<!DOCTYPE html><html lang="zh-CN">
-
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
 <head>
-  <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0" theme-name="Stellar" theme-version="1.27.0">
-  
-  <meta name="generator" content="Hexo 7.0.0">
-  <meta http-equiv='x-dns-prefetch-control' content='on' />
-  
-  <meta name="renderer" content="webkit">
-  <meta name="force-rendering" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="HandheldFriendly" content="True" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="theme-color" content="#f8f8f8">
-  
-  <title>多语言模型中事实知识的跨语言一致性 - humbleyl</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-  
-    <meta name="description" content="多语言模型中事实知识的跨语言一致性Abstract多语言大规模预训练语言模型（PLM）已被证明可以存储大量的事实知识，但观察到语言之间存在很大差异。为了确保具有不同语言背景的用户从同一模型获得一致的反馈，我们研究了各种多语言PLM中事实知识的跨语言一致性（CLC）。为此，我们提出了一个基于排名的一致性（RankC）指标，以独立于准确性来评估跨语言的知识一致性。使用这个指标，我们在模型级别和语言对级">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"humble2967738843.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="多语言模型中事实知识的跨语言一致性Abstract多语言大规模预训练语言模型（PLM）已被证明可以存储大量的事实知识，但观察到语言之间存在很大差异。为了确保具有不同语言背景的用户从同一模型获得一致的反馈，我们研究了各种多语言PLM中事实知识的跨语言一致性（CLC）。为此，我们提出了一个基于排名的一致性（RankC）指标，以独立于准确性来评估跨语言的知识一致性。使用这个指标，我们在模型级别和语言对级">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多语言模型中事实知识的跨语言一致性">
 <meta property="og:url" content="http://humble2967738843.github.io/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/index.html">
@@ -44,73 +45,185 @@
 <meta property="article:tag" content="EMNLP2023">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s2.loli.net/2024/05/26/yIq1rwA2Hf7F6Db.png">
-<meta name="twitter:creator" content="@humbleyl">
-  
-  
-  
-  <meta name="keywords" content="EMNLP2023">
 
-  <!-- feed -->
-  
-    <link rel="alternate" href="/atom.xml" title="humbleyl" type="application/atom+xml">
-  
+<link rel="canonical" href="http://humble2967738843.github.io/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/">
 
-  <link rel="stylesheet" href="/css/main.css?v=1.27.0">
 
-  
-    <link rel="shortcut icon" href="solar:documents-bold-duotone">
-  
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
 
+  <title>多语言模型中事实知识的跨语言一致性 | humbleyl</title>
   
 
-  
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --></head>
-<body>
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="humbleyl" type="application/atom+xml">
+</head>
 
-<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
-
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://s2.loli.net/2024/04/10/32Y4obwgxJCeOMr.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">humbleyl</div><div class="sub normal cap">院龙的博客</div><div class="sub hover cap" style="opacity:0"> humbleyl</div></a></div></header>
-
-<div class="nav-area">
-<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
-
-
-<nav class="menu dis-select"><a class="nav-item active" title="博客" href="/" style="color:#1BCDFC"><svg t="1716731776385" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="17107" width="300" height="300"><path d="M1017.771 511.331c0 280.666-227.523 508.191-508.191 508.191s-508.19-227.525-508.19-508.191c0-280.665 227.523-508.19 508.191-508.19s508.19 227.523 508.19 508.19zM191.726 479.984h26.423v188.788h40.113v-188.788h23.558v-37.567h-23.558v-84.048h-40.113v84.048h-26.423v37.567zM274.182 598.096h46.958l-17.669 18.465c15.493 11.884 29.502 23.241 42.023 34.065l25.787-28.334c-10.932-8.701-21.703-16.766-32.314-24.195h92.165v16.555c0 4.882-1.221 9.022-3.662 12.417-2.443 3.395-8.332 5.093-17.669 5.093-8.703 0-21.437-0.532-38.205-1.591 4.88 16.766 8.063 29.393 9.551 37.885 31.622 0 51.998-1.036 61.126-3.104 9.126-2.068 16.023-6.475 20.692-13.212 4.669-6.74 7.004-15.734 7.004-26.981v-27.061h36.929v-31.2h-36.929v-12.417h20.375v-126.389h-81.5v-15.281h94.871v-31.2h-25.15c-7.217-9.973-14.326-19.314-21.33-28.017l-28.334 14.007 10.029 14.007h-30.085v-25.151h-37.567v25.151h-91.687v31.2h91.687v15.281h-78.636v128.3h38.205v-16.236h40.432v14.964h37.567v-14.964h43.298v9.551h-21.012v17.191h-156.951v31.2zM330.85 456.107h40.432v16.555h-40.432v-16.555zM330.85 498.13h40.432v16.555h-40.432v-16.555zM452.146 472.662h-43.298v-16.555h43.298v16.555zM408.85 498.13h43.298v16.555h-43.298v-16.555zM605.279 670.683v-15.281h139.442v15.281h43.298v-109.039c9.443 1.591 19.205 3.131 29.289 4.615l15.919-39.158c-42.449-2.547-79.008-7.323-109.675-14.326 23.241-12.838 42.819-27.697 58.738-44.571v-10.188h38.205v-75.771h-113.179c-3.715-11.247-7.059-20.692-10.029-28.334l-54.441 5.411 9.87 22.923h-123.526v75.771h43.616v-39.796h204.069v19.739h-119.068c3.82-4.14 7.427-8.382 10.825-12.735h-49.346c-22.711 23.558-52.107 43.086-88.186 58.579 8.063 8.703 16.023 18.465 23.877 29.289 15.068-7.642 29.076-15.703 42.023-24.195 9.973 9.129 20.587 17.139 31.836 24.036-30.563 7.537-68.026 14.062-112.382 19.579 5.731 11.461 11.037 23.666 15.919 36.611 10.188-1.696 20.057-3.447 29.609-5.253v106.81h43.296zM774.487 559.257h-190.062c35.339-7.534 65.687-15.81 91.052-24.832 27.061 9.445 60.063 17.725 99.010 24.832zM744.721 619.108h-139.442v-23.558h139.442v23.558zM628.359 470.433h96.305c-14.54 11.249-30.777 20.534-48.709 27.857-17.723-7.323-33.586-16.607-47.596-27.857z" fill="#272636" p-id="17108"></path></svg></a><a class="nav-item" title="文档" href="/wiki/" style="color:#3DC550"><svg t="1716731927468" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="29342" width="300" height="300"><path d="M931.607098 176.851787H459.277181l-13.308673-44.020995c-5.11872-17.147713-20.858785-28.92077-38.774307-28.92077H92.136966c-22.394401 0-40.565859 18.043489-40.565859 40.437891V879.268183c0 22.394401 18.043489 40.565859 40.437891 40.565858H931.607098c22.394401 0 40.437891-18.171457 40.565859-40.565858V217.289678c0-22.266433-18.171457-40.437891-40.565859-40.437891z" fill="#FFA000" p-id="29343"></path><path d="M867.87903 869.414646H155.865034c-22.394401 0-40.565859-18.043489-40.565859-40.43789V279.226193c0-22.394401 18.043489-40.565859 40.437891-40.565858h712.141964c22.394401 0 40.565859 18.043489 40.565859 40.43789V828.976756c0 22.394401-18.171457 40.565859-40.565859 40.43789z" fill="#FFFFFF" p-id="29344"></path><path d="M931.607098 919.834041H92.136966c-22.394401 0-40.565859-18.043489-40.565859-40.43789V355.367158c0-22.394401 18.043489-40.565859 40.437891-40.565858H931.607098c22.394401 0 40.565859 18.043489 40.565859 40.43789v524.028993c-0.127968 22.394401-18.171457 40.565859-40.565859 40.565858z" fill="#FFCA28" p-id="29345"></path><path d="M379.553112 482.311422H156.76081c-11.133217 0-20.218945-9.085729-20.218945-20.346913 0-11.133217 9.085729-20.218945 20.218945-20.218945h222.92027c11.133217 0 20.218945 9.085729 20.346913 20.218945-0.127968 11.261185-9.213697 20.346913-20.474881 20.346913 0.127968 0 0 0 0 0z m0 137.693577H156.76081c-11.133217 0-20.218945-9.085729-20.218945-20.346914 0-11.133217 9.085729-20.218945 20.218945-20.218945h222.92027c11.133217 0 20.218945 9.085729 20.346913 20.218945-0.127968 11.261185-9.213697 20.346913-20.474881 20.346914 0.127968 0 0 0 0 0z" fill="#FFFFFF" p-id="29346"></path><path d="M844.972757 768.703824l-109.540615-72.301924c-3.327168-2.303424-7.806048-2.303424-11.133217 0l-109.540615 72.429892c-4.734816 3.071232-11.005249 1.791552-14.07648-2.815296-1.151712-1.663584-1.663584-3.583104-1.663585-5.630592V313.393652c0-11.133217 8.701825-20.218945 19.32317-20.218946h222.92027c10.621345 0 19.323169 9.085729 19.323169 20.218946v446.864284c0.127968 5.502624-4.350912 10.109473-9.981505 10.23744-1.91952 0-3.967008-0.63984-5.630592-1.791552z" fill="#F44336" p-id="29347"></path></svg></a><a class="nav-item" title="在线简历" href="/explore/" style="color:#FA6400"><svg t="1716732005879" class="icon" viewBox="0 0 1160 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="31680" width="300" height="300"><path d="M1052.97035029 374.93800508L595.69272266 590.84097031c-14.55525615 8.49056572-32.74932656 8.49056572-47.30458272 0L89.89757422 374.93800508C64.42587617 361.59568701 54.72237237 331.2722375 68.06469043 305.80053945c4.85175234-9.70350381 12.12937998-16.98113232 21.83288379-21.83288466L548.38813994 68.06469043c14.55525615-8.49056572 32.74932656-8.49056572 47.30458272 0l458.49056572 215.90296436c25.47169805 13.34231807 35.17520185 43.66576846 21.83288379 69.13746649-6.06469043 9.70350381-13.34231807 16.98113232-23.04582188 21.8328838z m-817.52021542 120.0808626L547.17520185 641.78436641c14.55525615 8.49056572 32.74932656 8.49056572 47.30458272 0l311.72506699-146.76549873v298.3827498c0 92.18328838-150.40431299 167.38544443-335.98382695 167.38544444S235.45013487 886.79784395 235.45013487 793.40161748V495.01886768z" fill="#2F77F1" p-id="31681"></path><path d="M1056.60916455 424.66846396c13.34231807 0 24.25875996 10.9164419 24.25875996 24.25875997v145.55256064c0 13.34231807-10.9164419 24.25875996-24.25875996 24.25875996s-24.25875996-10.9164419-24.25875996-24.25875996v-145.55256064c0-13.34231807 10.9164419-24.25875996 24.25875996-24.25875997z" fill="#AFFCFE" p-id="31682"></path></svg></a><a class="nav-item" title="社交" href="/friends/" style="color:#F44336"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262" opacity=".5"/><path fill="currentColor" d="M10.99 14.308c-1.327-.978-3.49-2.84-3.49-4.593c0-2.677 2.475-3.677 4.5-1.609c2.025-2.068 4.5-1.068 4.5 1.609c0 1.752-2.163 3.615-3.49 4.593c-.454.335-.681.502-1.01.502c-.329 0-.556-.167-1.01-.502"/></svg></a></nav>
-</div>
-<div class="widgets">
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">专栏：自然语言处理论文阅读</span></div><div class="widget-body"><a class="item" href="/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/"><span class="title">基于链式推理的文档级事件论元提取</span></a><a class="item" href="/2023/11/06/wang-diao-ni-xiang-wang-diao-de-dong-xi-llms-de-gao-xiao-wang-que/"><span class="title">忘掉你想忘掉的东西：LLMs的高效忘却</span></a><a class="item" href="/2023/11/02/qing-jing-xue-xi-chuang-jian-ren-wu-xiang-liang/"><span class="title">情境学习创建任务向量</span></a><a class="item" href="/2023/11/02/bian-ji-da-xing-yu-yan-mo-xing-wen-ti-fang-fa-he-ji-yu/"><span class="title">编辑大型语言模型：问题、方法和机遇</span></a><a class="item" href="/2023/11/02/zhi-shi-shen-jing-yuan-zhong-xin-zhi-lu-yu-yan-wu-guan-zhi-shi-shen-jing-yuan-he-jian-bing-zhi-shi-shen-jing-yuan-de-fa-xian/"><span class="title">知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现</span></a><a class="item" href="/2023/11/02/wo-men-ke-yi-tong-guo-qing-jing-xue-xi-lai-bian-ji-shi-shi-zhi-shi-ma/"><span class="title">我们可以通过情景学习来编辑事实知识吗？</span></a><a class="item" href="/2023/11/02/wo-men-ke-yi-bian-ji-duo-mo-tai-da-xing-yu-yan-mo-xing-ma/"><span class="title">我们可以编辑多模态大型语言模型吗？</span></a><a class="item active" href="/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/"><span class="title">多语言模型中事实知识的跨语言一致性</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a></div></widget>
-
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/11/30/cesifjisdj/"><span class="title">Cesifjisdj</span></a><a class="item title" href="/2024/11/30/ce-shi-yl/"><span class="title">测试yl</span></a><a class="item title" href="/2024/11/23/csac/"><span class="title">csac</span></a><a class="item title" href="/2024/04/10/tui-jian-xi-tong/"><span class="title">推荐系统</span></a><a class="item title" href="/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/"><span class="title">多语言模型中事实知识的跨语言一致性</span></a><a class="item title" href="/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/"><span class="title">基于链式推理的文档级事件论元提取</span></a><a class="item title" href="/2023/11/02/zhi-shi-shen-jing-yuan-zhong-xin-zhi-lu-yu-yan-wu-guan-zhi-shi-shen-jing-yuan-he-jian-bing-zhi-shi-shen-jing-yuan-de-fa-xian/"><span class="title">知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现</span></a><a class="item title" href="/2023/11/02/wo-men-ke-yi-tong-guo-qing-jing-xue-xi-lai-bian-ji-shi-shi-zhi-shi-ma/"><span class="title">我们可以通过情景学习来编辑事实知识吗？</span></a><a class="item title" href="/2023/11/02/wo-men-ke-yi-bian-ji-duo-mo-tai-da-xing-yu-yan-mo-xing-ma/"><span class="title">我们可以编辑多模态大型语言模型吗？</span></a><a class="item title" href="/2023/11/06/wang-diao-ni-xiang-wang-diao-de-dong-xi-llms-de-gao-xiao-wang-que/"><span class="title">忘掉你想忘掉的东西：LLMs的高效忘却</span></a></div></widget>
-</div>
-<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/Humble2967738843" target="_blank" rel="external nofollow noopener noreferrer"><svg t="1716701113980" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4745" width="200" height="200"><path d="M512 512m-469.333333 0a469.333333 469.333333 0 1 0 938.666666 0 469.333333 469.333333 0 1 0-938.666666 0Z" fill="#434A54" p-id="4746"></path><path d="M610.688 808.149333c0-12.074667 0.426667-51.498667 0.426667-100.437333 0-34.133333-11.733333-56.448-24.832-67.84 81.493333-9.045333 167.125333-39.978667 167.125333-180.608 0-39.936-14.208-72.618667-37.674667-98.261333 3.84-9.216 16.341333-46.421333-3.584-96.853334 0 0-30.72-9.813333-100.565333 37.546667a351.658667 351.658667 0 0 0-91.733333-12.373333 350.549333 350.549333 0 0 0-91.605334 12.373333c-69.973333-47.36-100.693333-37.546667-100.693333-37.546667-19.882667 50.432-7.338667 87.637333-3.541333 96.853334a141.653333 141.653333 0 0 0-37.717334 98.261333c0 140.288 85.461333 171.690667 166.784 180.906667-10.453333 9.173333-19.968 25.301333-23.253333 48.981333-20.906667 9.386667-73.856 25.514667-106.496-30.421333 0 0-19.370667-35.157333-56.149333-37.76 0 0-35.712-0.426667-2.474667 22.272 0 0 23.978667 11.264 40.618667 53.546666 0 0 21.504 65.365333 123.349333 43.221334 0.170667 30.592 0.512 59.392 0.512 68.138666a19.968 19.968 0 0 1-2.218667 9.173334 339.925333 339.925333 0 0 0 187.904 3.114666 19.2 19.2 0 0 1-4.181333-12.288z" fill="#FFFFFF" p-id="4747"></path><path d="M180.138667 843.861333A467.882667 467.882667 0 0 0 512 981.333333c259.2 0 469.333333-210.133333 469.333333-469.333333 0-129.621333-52.522667-246.954667-137.472-331.861333L180.138667 843.861333z" fill="#231F20" opacity=".1" p-id="4748"></path></svg></a><a class="social" href="https://" target="_blank" rel="external nofollow noopener noreferrer"><svg t="1716701237965" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="12408" width="200" height="200"><path d="M276.822886 874.188342c-47.901937-0.484303-85.721573-1.942714-96.222136 64.483801-4.204628 59.150968 41.545465 67.092431 120.596869 81.461911 86.981861 4.49631 137.949214 16.482801 205.118694-49.93821l-227.814878-96.106564" fill="" p-id="12409"></path><path d="M270.939709 875.64125c-24.792995 0-64.296684-0.968605-81.098684 43.647779 2.102314 5.332833 12.327704 2.982864 18.794246-1.562977 9.691557-4.589869 5.162226 1.799625-5.552971 10.412507-11.661788 8.12858-37.660036 34.54509 6.461038 61.633019 46.801249 21.645028 193.974228 61.280799 285.678041-16.169105 0 0-180.892553-56.256158-222.493052-97.944713h-1.788618v-0.01651z" fill="#F0971C" p-id="12410"></path><path d="M764.482659 865.94419c47.896434-0.484303 85.710567-1.948218 96.222136 64.4838 4.204628 59.150968-64.731455 68.859035-120.602373 81.461912-59.734332 5.51995-137.949214 16.488305-205.118693-49.93821l227.820381-96.106564" fill="" p-id="12411"></path><path d="M770.360332 867.402601c24.787491 0 64.29118-0.974109 81.087678 43.642275-2.09681 5.332833-12.316698 2.982864-18.777736-1.562976-9.708067-4.589869-5.16773 1.799625 5.547467 10.412507 11.661788 8.123077 37.66554 34.54509-6.461038 61.633019-46.801249 21.645028-193.974228 61.275295-285.683544-16.174609 0 0 180.903559-56.250655 222.504059-97.939209l1.783114-0.011007z" fill="#F0971C" p-id="12412"></path><path d="M825.598354 441.216247c51.259035 54.307941 83.206502 107.641773 108.412255 245.337829 3.417636 83.393619-7.567229 91.153468-31.947466 113.453405-17.638524-2.905816-36.124577-30.059786-54.616134-94.070291-18.491557-63.993994-21.848655-264.720943-21.848655-264.720943z" fill="" p-id="12413"></path><path d="M847.452513 380.128069c0-15.21701-4.716448-29.894683-13.466917-43.741337C832.994977 150.420008 697.560835 0 530.619501 0 363.683671 0 228.249529 150.420008 227.25891 336.386732c-8.744965 13.852157-13.466916 28.52983-13.466917 43.735833 0 22.228392 10.043777 43.334083 28.078549 62.342963 39.349592 136.000997 153.744086 234.385984 288.748959 234.385984 135.015881 0 249.404871-98.384988 288.759967-234.385984 18.034771-19.003377 28.073045-40.109067 28.073045-62.337459zM198.035646 442.184853C146.771107 496.48729 114.834648 549.826626 89.623392 687.517178c-3.423139 83.393619 25.899186 111.031892 31.936459 113.458909 6.042777 2.410506 36.135584-30.06529 54.62714-94.064788 18.486053-63.988491 21.848655-264.726446 21.848655-264.726446z" fill="" p-id="12414"></path><path d="M864.254513 621.585973c0 200.82601-158.394492 363.634261-353.810621 363.634261-195.394116 0-353.805118-162.80825-353.805118-363.634261 0-200.831514 158.405499-363.639764 353.805118-363.639764 195.410626 0 353.810621 162.802747 353.810621 363.639764z" fill="" p-id="12415"></path><path d="M220.50619 696.245633c0 149.952216 134.702185 271.517691 300.86203 271.517691 166.154342 0 300.86203-121.565475 300.86203-271.517691s-134.707688-271.517691-300.86203-271.51769c-166.154342 0.005503-300.86203 121.565475-300.86203 271.51769z" fill="#FFFFFF" p-id="12416"></path><path d="M232.068916 322.672161s-23.950969 19.636272-18.909818 60.361724c-25.211256 30.544089-20.797498 62.54659-9.454909 95.281048 18.909818 62.788741 146.650152 162.665161 309.684043 162.665161 223.544209-15.018886 289.090173-123.392617 338.890797-180.122071 0 0 29.003126-47.280049-18.909818-129.457407l-72.491305 7.275547-528.80899-16.004002z" fill="" p-id="12417"></path><path d="M302.980734 572.85852c-3.147967 33.086678-15.128955 139.996494 3.786366 166.545086 20.170106 26.190869 44.43477 38.909317 96.112067 30.907316 23.323577-7.638774 28.364727-29.817635 26.163352-61.809129l-0.946592-92.364225-125.115193-43.279048z" fill="" p-id="12418"></path><path d="M223.246902 372.126068s83.200998 144.002998 271.033388 151.273041c83.206502 1.458411 167.662284 8.728455 292.458278-87.26804 24.583864-25.453408 29.003126-33.455409 29.003126-33.455409s8.189118 65.457909-112.820509 147.635268c0 0 82.562599 0.731957 141.812629-170.182859 0 0 29.003126 111.274043-72.480298 164.36022-93.288803 56.008504-154.432015 93.090679-309.480417 84.362224-101.874168-25.326829-254.005746-65.457909-264.726446-192.730451 0 0 6.306942-29.817635 14.49606-24.000499 0 0 0.627392 69.095683 52.943088 92.364225-0.011007 0.005503-52.326703-77.807627-42.238899-132.35772z" fill="#E71F19" p-id="12419"></path><path d="M321.059532 589.605486s-36.240149 138.185862 4.413759 161.459908c41.2813 19.273045 66.498059 14.182364 94.229891 4.727454 11.661788-16.004002 1.260288-111.63727 4.721951-121.455406-6.306942-4.006504-24.892057-8.370731-28.051031-8.370731 0 0-2.834271 40.719949-0.313696 65.463413-5.046654-19.273045-8.827517-19.273045-8.827517-71.275045-30.235897-10.550093-66.173356-30.549593-66.173357-30.549593z" fill="#E71F19" p-id="12420"></path><path d="M506.316313 242.426509c0 50.60963-22.487054 91.637771-50.218886 91.637771s-50.218885-41.028141-50.218885-91.637771 22.487054-91.637771 50.218885-91.63777c27.731832-0.005503 50.218885 41.022638 50.218886 91.63777z m147.492178 0c0 50.60963-22.498061 91.637771-50.218885 91.637771-27.731832 0-50.218885-41.028141-50.218886-91.637771s22.487054-91.637771 50.218886-91.63777c27.726328-0.005503 50.218885 41.022638 50.218885 91.63777z" fill="#FFFFFF" p-id="12421"></path><path d="M499.530572 243.395115c0 19.553721-8.469793 35.398123-18.915322 35.398123-10.440025 0-18.915322-15.844402-18.915321-35.398123 0-19.548217 8.469793-35.398123 18.915321-35.398123 10.445528 0.005503 18.915322 15.855409 18.915322 35.398123z m74.791742 10.54459c-1.794121-18.238398 8.662414-44.368729 29.151719-37.638023 14.86479 6.730706 14.028267 32.547341 13.703565 39.096434-0.324703 6.538086-8.97611 11.089431-12.922076 0-1.893183-10.36848-10.093308-41.63352-17.176235-2.371982-2.360976 9.091682-11.969981 8.915572-12.756973 0.913571z" fill="" p-id="12422"></path><path d="M676.779847 358.472035c-37.032644-15.618761-89.452905-25.381863-147.624261-25.381863-56.872544 0-108.236144 9.32833-145.109189 24.347216-30.57711 12.44878-57.648529 34.567103-56.597371 47.02689 3.153471 12.503815 13.13671 20.626891 68.176608 29.118699-19.53721-18.915322-15.21701-14.600625-15.21701-43.5212 0 28.920575 23.48868 43.669792 61.357847 59.42614 24.853533 10.340963 55.386615 16.455284 88.418259 16.455284 34.677172 0 66.602625-6.73621 92.072542-18.023764 35.805377-15.855409 53.108191-28.661913 53.108191-56.6414 0 27.979486 5.773108 19.030894-17.242276 42.310443 53.366853-9.383364 70.17986-19.757348 71.5227-32.525327 0.022014-11.238023-25.55247-31.072419-52.86604-42.591118z" fill="#F0971C" p-id="12423"></path></svg></a><a class="social" href="https://www.kaggle.com/humbleyll" target="_blank" rel="external nofollow noopener noreferrer"><svg t="1716701307894" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="13418" width="200" height="200"><path d="M803.1909 1017.952189c-0.927971 3.935877-4.991844 6.015812-11.999625 6.015812H657.27546c-7.967751 0-14.975532-3.487891-20.991344-10.591669l-220.921096-281.111215-61.790069 58.622168v218.073185c0 10.015687-4.991844 15.007531-14.975532 15.007531H234.88866c-10.079685 0-15.103528-4.991844-15.103528-15.007531V15.071529C219.785132 5.11984 224.808975 0 234.88866 0h103.708759c9.983688 0 14.975532 5.11984 14.975532 15.071529v611.948877l264.663729-267.607638c7.03978-7.03978 14.07956-10.495672 21.11934-10.495672h138.203681c6.143808 0 10.079685 2.55992 12.15962 7.67976 1.951939 6.367801 1.439955 10.87966-1.535952 13.43958l-279.67126 270.679542 291.670885 362.964657c4.063873 4.447861 4.991844 8.863723 2.975907 15.263523z" fill="#20BEFF" p-id="13419"></path></svg></a><a class="social" href="https://" target="_blank" rel="external nofollow noopener noreferrer"><svg t="1716701358358" class="icon" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="14411" width="200" height="200"><path d="M1024.16 694.816c0-149.92-143.104-271.392-319.584-271.392-176.576 0-319.68 121.504-319.68 271.392S528 966.208 704.576 966.208c55.456 0 107.648-12.096 153.184-33.248l125.984 54.528-14.592-140.544c34.784-43.392 55.04-95.808 55.04-152.128zM596.832 621.28c-25.152 0-45.472-20.352-45.472-45.472s20.32-45.472 45.472-45.472c25.12 0 45.44 20.384 45.44 45.472s-20.384 45.472-45.44 45.472z m215.392 0c-25.056 0-45.44-20.352-45.44-45.472s20.384-45.472 45.44-45.472c25.184 0 45.536 20.384 45.536 45.472s-20.352 45.472-45.536 45.472zM704.576 387.488c49.376 0 96.416 8.8 139.264 24.64 0.32-5.728 0.992-11.232 0.992-16.992 0-198.08-189.152-358.624-422.432-358.624C189.184 36.512 0.032 197.024 0.032 395.136c0 74.496 26.816 143.776 72.704 201.12L53.472 781.92l166.432-72.096c41.216 19.2 86.784 32.16 134.88 38.784-3.616-17.504-5.824-35.424-5.824-53.792 0.032-169.44 159.552-307.296 355.616-307.296z m-139.808-209.6c33.184 0 60 26.88 60 60 0 33.184-26.816 60.064-60 60.064s-60.032-26.88-60.032-60.064c0-33.152 26.88-60 60.032-60zM280.032 297.952c-33.184 0-60-26.88-60-60.064 0-33.152 26.848-60 60-60 33.184 0 60.032 26.88 60.032 60s-26.88 60.064-60.032 60.064z" fill="#51C332" p-id="14412"></path></svg></a></div></footer>
-</div></aside><div class="l_main" id="main">
-
-
-
-
-
-<div class="article banner top">
-  <div class="content">
-    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/">自然语言处理论文阅读</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2023-11-02T04:21:08.000Z">2023-11-02</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-05-26T11:53:03.927Z">2024-05-26</time></span></div></div></div>
-    
-    <div class="bottom only-title">
-      
-      <div class="text-area">
-        <h1 class="text title"><span>多语言模型中事实知识的跨语言一致性</span></h1>
-        
-      </div>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-    
   </div>
-  </div><article class="md-text content"><h1 id="多语言模型中事实知识的跨语言一致性"><a href="#多语言模型中事实知识的跨语言一致性" class="headerlink" title="多语言模型中事实知识的跨语言一致性"></a>多语言模型中事实知识的跨语言一致性</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p><span style="background-color: #2ea8e580">多语言大规模预训练语言模型（PLM）已被证明可以存储大量的事实知识，但观察到语言之间存在很大差异</span>。为了确保具有不同语言背景的用户从同一模型获得一致的反馈，我们研究了各种多语言PLM中事实知识的跨语言一致性（CLC）。为此，我们<span style="background-color: #2ea8e580">提出了一个基于排名的一致性（RankC）指标，以独立于准确性来评估跨语言的知识一致性</span>。使用这个指标，我们在模型级别和语言对级别对CLC的决定因素进行了深入分析。在其他结果中，我们发现<span style="background-color: #ff666680">增加模型大小会导致大多数语言中更高的事实探测准确性，但不会提高跨语言的一致性</span>。最后，我们进行了关于CLC的案例研究，当通过模型编辑在PLM中插入新的事实关联时。英<span style="background-color: #ff666680">语插入的一小部分事实样本的结果揭示了一个清晰的模式，即新知识仅转移到英语具有高 RankC 分数的语言。</span></p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2024/05/26/yIq1rwA2Hf7F6Db.png" alt="image-20240526194951557"></p>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">humbleyl</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://humble2967738843.github.io/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="yuan long">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="humbleyl">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          多语言模型中事实知识的跨语言一致性
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-02 12:21:08" itemprop="dateCreated datePublished" datetime="2023-11-02T12:21:08+08:00">2023-11-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-05-26 19:53:03" itemprop="dateModified" datetime="2024-05-26T19:53:03+08:00">2024-05-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%9F%A5%E8%AF%86%E7%BC%96%E8%BE%91/" itemprop="url" rel="index"><span itemprop="name">知识编辑</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="多语言模型中事实知识的跨语言一致性"><a href="#多语言模型中事实知识的跨语言一致性" class="headerlink" title="多语言模型中事实知识的跨语言一致性"></a>多语言模型中事实知识的跨语言一致性</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p><span style="background-color: #2ea8e580">多语言大规模预训练语言模型（PLM）已被证明可以存储大量的事实知识，但观察到语言之间存在很大差异</span>。为了确保具有不同语言背景的用户从同一模型获得一致的反馈，我们研究了各种多语言PLM中事实知识的跨语言一致性（CLC）。为此，我们<span style="background-color: #2ea8e580">提出了一个基于排名的一致性（RankC）指标，以独立于准确性来评估跨语言的知识一致性</span>。使用这个指标，我们在模型级别和语言对级别对CLC的决定因素进行了深入分析。在其他结果中，我们发现<span style="background-color: #ff666680">增加模型大小会导致大多数语言中更高的事实探测准确性，但不会提高跨语言的一致性</span>。最后，我们进行了关于CLC的案例研究，当通过模型编辑在PLM中插入新的事实关联时。英<span style="background-color: #ff666680">语插入的一小部分事实样本的结果揭示了一个清晰的模式，即新知识仅转移到英语具有高 RankC 分数的语言。</span></p>
+<p><img src="https://s2.loli.net/2024/05/26/yIq1rwA2Hf7F6Db.png" alt="image-20240526194951557"></p>
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><pre><code> 大规模预训练语言模型 （PLM） 在事实知识发挥重要作用的任务中展示了强大的能力（Roberts 等人，2020 年;秦等人，2022 年）。虽然以前大多数关于探索 PLM 中事实知识的工作都集中在英语上（Davison 等人，2019 年;布拉维等人，2020 年;申等人，2020;布朗等人，2020 年;阿尔甘米等人，2021 年;Peng 等人，2022 年），一些值得注意的研究已将评估扩展到许多其他语言（Jiang 等人，2020 年;卡斯纳等人，2021 年;尹等人，2022 年）。这些研究结果表明事实知识在多大程度上跨语言泛化，揭示了现代 NLP 技术中语言不平等的另一个方面（Hupkes 等人，2022 年）。
-</code></pre><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../imgs/$%7Bfiilename%7D/JTY72Y4D-1698899470325-23.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;JTY72Y4D&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%225VBT7M5M%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%221%22%2C%22position%22%3A%7B%22pageIndex%22%3A0%2C%22rects%22%3A%5B%5B293.654%2C401.698%2C529.038%2C631.313%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%221%22%7D%7D&quot; width=&quot;392&quot; height=&quot;382&quot; src=&quot;attachments/JTY72Y4D.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+</code></pre><p><img src="../imgs/$%7Bfiilename%7D/JTY72Y4D-1698899470325-23.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;JTY72Y4D&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%225VBT7M5M%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%221%22%2C%22position%22%3A%7B%22pageIndex%22%3A0%2C%22rects%22%3A%5B%5B293.654%2C401.698%2C529.038%2C631.313%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%221%22%7D%7D&quot; width=&quot;392&quot; height=&quot;382&quot; src=&quot;attachments/JTY72Y4D.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <pre><code> 然而，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;评估跨语言的事实知识并非易事。确保结果的可比性要求以所有语言查询一组“普遍”事实，但该集合的选择可能偏向于在维基数据等流行知识库中代表性更高的特定世界区域.2相反，在世界其他地区更相关的事实（例如， 关于某一特定区域的地点或重要人物的信息）不太可能出现在基准中，这使得难以解释这种评估的结果&lt;/span&gt;。
 
  在这项工作中，我们采取了不同的立场：我们没有衡量PLM在每种语言中编码的事实知识量，而是关注其跨语言的一致性。如图 1 所示，多语言 BLOOM-3b 模型当以英语、西班牙语和越南语查询时，输出始终正确完成第一个提示，但不是匈牙利语和希腊语。该模型还以英语、西班牙语和越南语（但不是匈牙利语和希腊语）对第二个查询输出一致但错误的答案，这表明前三种语言在模型中共享相关的知识表示。
@@ -124,22 +237,22 @@
 <p><strong>跨语言一致性</strong> 据我们所知，我们是第一个对多语言PLM中事实知识的跨语言一致性进行系统分析的公司，即PLM对不同语言提出的相同问题返回相同答案的程度。作为探索研究的一部分，Jiang等人（2020）计算了mBERT中两种语言之间重叠的正确预测的比例（参见第3.1节）。他们报告的总体比率较低，在最相似的对（英语 - 荷兰语）中只有34%的峰值，但没有进一步调查决定一致性的因素。此外，他们将这种分析限制在一个（仅编码器）模型，同时我们还检查了编码器-解码器和一系列仅解码器模型（参见第5.1节）。另一个区别是，<span style="color: #ff2020"><span style="background-color: #ff666680">我们对一致性采取了更全面的观点，即不正确但跨语言引用同一实体的预测也应被视为一致。</span>&lt;/span&gt;有趣的是，Ohmer 等人（2023 年）的并行工作建议使用模型预测的跨语言一致性作为评估其对特定单词形式之外的含义的理解的一种手段。他们在两个语言理解任务（释义识别和自然语言推理）中展示了他们的方法。尽管范围不同，但他们使用英语、德语和中文翻译对 ChatGPT 的评估表明，模型响应的一致性有限，这与我们的事实调查结果一致（参见第 5 节），并进一步表明这个问题在非常大规模的上一代 PLM 中仍然存在</p>
 <h2 id="3-Measuring-Cross-Lingual-Consistentcy"><a href="#3-Measuring-Cross-Lingual-Consistentcy" class="headerlink" title="3.Measuring Cross-Lingual Consistentcy"></a>3.Measuring Cross-Lingual Consistentcy</h2><p><strong>任务定义</strong> 每种语言l ∈ L有一组定义为 Ql 的查询（即提示）。对于每个查询 qi ∈ Ql，有Ni对应候选项，例如，查询“史蒂夫乔布斯为 __ 工作”有 10 个候选者：苹果、任天堂、谷歌、WWE、亚历山大、德国、雅虎、柏林、BBC、Microsoft。每个查询都会馈送到 PLM，返回的概率用于计算每个候选单词的排名分数。分数计算取决于模型的类型（仅编码器、编码器解码器或仅解码器）以及候选单词分割为子单词的方式（请参阅附录 B 中的详细信息）。按排名分数排序后，Qi 的候选集表示为 {ci1， . . . ， cNi i }，其中 ci1 的预测概率最高，cNi i 的预测概率最低。请注意，现有的用于知识探测的多语言数据集（X-FACTR（Jiang 等人，2020 年）和 MLAMA（Kassner 等人，2021 年））在不同语言中具有不同数量的查询，这对于衡量一致性是有问题的。</p>
 <h3 id="3-1Prioions-Work-Correct-Predictions-Overlap"><a href="#3-1Prioions-Work-Correct-Predictions-Overlap" class="headerlink" title="3.1Prioions Work:Correct Predictions Overlap"></a>3.1Prioions Work:Correct Predictions Overlap</h3><pre><code> 基于每个 qi 和 q′ i 的预测 ci1 和 c′1 i（即排序候选列表的第一个元素），Jiang 等人 （2020） 计算正确预测的平均重叠率如下：
-</code></pre><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../imgs/$%7Bfiilename%7D/UTGQ3CDQ-1698899466973-21.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;UTGQ3CDQ&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22BSQLBJQX%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%223%22%2C%22position%22%3A%7B%22pageIndex%22%3A2%2C%22rects%22%3A%5B%5B303%2C459.39%2C527.5%2C518.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%223%22%7D%7D&quot; width=&quot;374&quot; height=&quot;98&quot; src=&quot;attachments/UTGQ3CDQ.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+</code></pre><p><img src="../imgs/$%7Bfiilename%7D/UTGQ3CDQ-1698899466973-21.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;UTGQ3CDQ&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22BSQLBJQX%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%223%22%2C%22position%22%3A%7B%22pageIndex%22%3A2%2C%22rects%22%3A%5B%5B303%2C459.39%2C527.5%2C518.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%223%22%7D%7D&quot; width=&quot;374&quot; height=&quot;98&quot; src=&quot;attachments/UTGQ3CDQ.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>其中 1（·) 是指示函数，oi 和 o′i 分别是 qi 和 q′ i 的正确答案。</p>
 <pre><code> 由于他们的基准测试包含不同语言的不同数量的查询，因此它们通过丢弃 l 或 l′ 中不可用的样本来过滤每个语言对 （l， l′） 的查询集：
-</code></pre><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../imgs/$%7Bfiilename%7D/CKJAUHAN-1698899465379-19.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;CKJAUHAN&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22GIHZDH3X%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%223%22%2C%22position%22%3A%7B%22pageIndex%22%3A2%2C%22rects%22%3A%5B%5B307.5%2C333.39%2C526.5%2C367.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%223%22%7D%7D&quot; width=&quot;365&quot; height=&quot;57&quot; src=&quot;attachments/CKJAUHAN.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+</code></pre><p><img src="../imgs/$%7Bfiilename%7D/CKJAUHAN-1698899465379-19.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;CKJAUHAN&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22GIHZDH3X%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%223%22%2C%22position%22%3A%7B%22pageIndex%22%3A2%2C%22rects%22%3A%5B%5B307.5%2C333.39%2C526.5%2C367.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%223%22%7D%7D&quot; width=&quot;365&quot; height=&quot;57&quot; src=&quot;attachments/CKJAUHAN.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p> <span style="background-color: #2ea8e580">由于筛选是分别对每个语言对完成的，因此这会导致不同的查询集，这限制了它们的结果在具有非常不同的筛选集的语言对之间的可比性。</span></p>
 <h3 id="3-2This-Work-RankC-Metric"><a href="#3-2This-Work-RankC-Metric" class="headerlink" title="3.2This Work:RankC Metric"></a>3.2This Work:RankC Metric</h3><p><span style="background-color: #2ea8e580">为了确保不同语言对之间的可比性，我们要求基准测试中的所有查询及其相应的候选查询都翻译成所有语言。</span>因此，对于任何语言对 （l， l′），查询集的长度始终相等 |Ql|= |Ql′|，第 i 个查询 Ni = N ′ i 的候选项数也是如此。基于这些假设，我们提出了一种新的基于排名的一致性（RankC）指标，以有效地评估PLM中知识的跨语言一致性，而与准确性无关。<span style="background-color: #2ea8e580">我们不只是关注正确的预测，而是将所有候选的排名纳入考虑。</span>RankC的灵感来自信息检索的K（MAP\@K）指标的平均平均精度（Schutze等人，2008）。与原版MAP\@K不同，在 RankC K 中因查询而异。qi 的值 K 等于 Ni，即其候选者的数量。给定语言 l 和 l′，两种语言之间的一致性分数定义为所有翻译查询对 （qi， q′ i） ∈ （Ql， Ql′） 的一致性平均值：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../imgs/$%7Bfiilename%7D/4BUNNT2A-1698899462448-17.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;4BUNNT2A&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22UWV6KRQ7%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B72%2C596.89%2C292.5%2C645.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;368&quot; height=&quot;81&quot; src=&quot;attachments/4BUNNT2A.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="../imgs/$%7Bfiilename%7D/4BUNNT2A-1698899462448-17.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;4BUNNT2A&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22UWV6KRQ7%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B72%2C596.89%2C292.5%2C645.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;368&quot; height=&quot;81&quot; src=&quot;attachments/4BUNNT2A.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>每个查询对的一致性是通过加权平均 P @j 函数计算的，该函数输出具有前 j 个最高概率的候选函数之间的重叠比率3：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../imgs/$%7Bfiilename%7D/9E3DW5HT-1698899458937-15.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;9E3DW5HT&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22IP7IB4WX%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B71.5%2C453.39%2C291%2C536.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;366&quot; height=&quot;139&quot; src=&quot;attachments/9E3DW5HT.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="../imgs/$%7Bfiilename%7D/9E3DW5HT-1698899458937-15.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;9E3DW5HT&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22IP7IB4WX%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B71.5%2C453.39%2C291%2C536.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;366&quot; height=&quot;139&quot; src=&quot;attachments/9E3DW5HT.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>每个 P @j的权重 wj 定义如下。</p>
 <p><strong>基于排名的权重</strong> 直观地说，排名较高的候选人应该对一致性分数产生更大的影响。为了实现这一目标，RankC 对所有 P @js采用加权平均值，其中 j 较小的 P @j被赋予较高的权重 wj，以强调具有高概率的候选人的影响。但是，预测概率不能直接使用，因为它们对于 qi 和 q′ i 的候选者是不同的。为了解决这个问题，我们引入了基于softmax的归一化权重，而不是值j：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../imgs/$%7Bfiilename%7D/SGCTJSZD-1698899456427-13.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;SGCTJSZD&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22B2LWRTBH%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B71.5%2C223.39%2C292%2C274.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;368&quot; height=&quot;86&quot; src=&quot;attachments/SGCTJSZD.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="../imgs/$%7Bfiilename%7D/SGCTJSZD-1698899456427-13.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;SGCTJSZD&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22B2LWRTBH%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B71.5%2C223.39%2C292%2C274.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;368&quot; height=&quot;86&quot; src=&quot;attachments/SGCTJSZD.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>其中 Ni 是查询 qi 和 q′ i.4 的候选数量 结合等式 3、4 和 5，RankC 指标变为：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../imgs/$%7Bfiilename%7D/ML4DE4BX-1698899454568-11.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;ML4DE4BX&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22UUK6AGQ7%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B69.5%2C92.89%2C291.5%2C180.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;370&quot; height=&quot;147&quot; src=&quot;attachments/ML4DE4BX.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="../imgs/$%7Bfiilename%7D/ML4DE4BX-1698899454568-11.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;ML4DE4BX&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22UUK6AGQ7%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B69.5%2C92.89%2C291.5%2C180.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;370&quot; height=&quot;147&quot; src=&quot;attachments/ML4DE4BX.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>附录D给出了RankC计算示例，以及高/低RankC的解释</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../imgs/$%7Bfiilename%7D/UNBA9DMX-1698899452209-9.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;UNBA9DMX&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22JHHBPXWD%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B299%2C662.89%2C527.5%2C774.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;381&quot; height=&quot;187&quot; src=&quot;attachments/UNBA9DMX.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="../imgs/$%7Bfiilename%7D/UNBA9DMX-1698899452209-9.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;UNBA9DMX&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22JHHBPXWD%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B299%2C662.89%2C527.5%2C774.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;381&quot; height=&quot;187&quot; src=&quot;attachments/UNBA9DMX.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <pre><code> 我们在同一数据集上对RankC与以前使用的指标（COverlap，参见公式1)进行了实证比较。附录F中的结果表明，&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;几乎所有具有高COVERLAP分数的语言对也获得了较高的RankC分数。此外，RankC揭示了一些新的高一致性对，由于探测精度低，它们的COverlap评分较低。&lt;/span&gt;
 </code></pre><h2 id="4-Experimental-Setup"><a href="#4-Experimental-Setup" class="headerlink" title="4.Experimental Setup"></a>4.Experimental Setup</h2><p><strong>数据集</strong> 如第 3.2 节所述，RankC 要求将查询及其候选语言翻译成所有评估语言。因此，我们从 X-FACTR（Jiang 等人，2020 年）和 MLAMA（Kassner 等人，2021 年）中提取所有满足此标准的查询。我们将生成的多并行数据集称为平衡多语言模型分析（BMLAMA），并以两个版本发布：BMLAMA-17，包括17种语言的6.7k查询（接近X-FACTR，包括23种语言），BMLAMA-53包括53种语言的3k查询（与MLAMA相同）。详细统计数据如表1所示。</p>
 <p><strong>模型</strong> 多语言知识探索的先前工作（Jiang等人，2020;Kassner 等人，2021 年）专注于仅编码器的 PLM，例如 mBERT（Devlin 等人，2019 年）或 XLM-RoBERTa（Liu 等人，2019 年）。然而，由于纯解码器 PLM 已成为当前 NLP 时代的主流，我们的实验还包括仅解码器的 BLOOM 系列（560m、1.1b、1.7b、3b 参数）（Scao 等人，2022 年）和编码器-解码器 mT5large （1.2b）（Xue 等人，2021 年），此外还包括仅编码器的 XLM-RoBERTa-large（354m）。</p>
@@ -155,497 +268,215 @@
 
  遗传相关语言的一个重要特征是它们往往有很多单词共同或具有共同祖先。&lt;span style=&quot;background-color: #ff666680&quot;&gt;因此，RankC与遗传相似性的中等相关性，加上与句法和地理相似性的弱相关性，表明词汇重叠可能是CLC比具有相似的语法和词序或在附近地区使用更重要的因素。&lt;/span&gt;
 </code></pre><h3 id="6-2Subword-Vocabulary-Overlap"><a href="#6-2Subword-Vocabulary-Overlap" class="headerlink" title="6.2Subword Vocabulary Overlap"></a>6.2Subword Vocabulary Overlap</h3><p>基于上述观察结果，我们研究了词汇重叠的粗略测量是否也可以很好地预测CLC。具体来说，我们提取了我们评估语言中严格平行语料库的词汇表，并测量它们的成对重叠：</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../imgs/$%7Bfiilename%7D/9DVJYQ7U.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;9DVJYQ7U&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22Q2E54XNM%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%227%22%2C%22position%22%3A%7B%22pageIndex%22%3A6%2C%22rects%22%3A%5B%5B70.385%2C344.005%2C291.923%2C381.505%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%227%22%7D%7D&quot; width=&quot;369&quot; height=&quot;62&quot; src=&quot;attachments/9DVJYQ7U.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="../imgs/$%7Bfiilename%7D/9DVJYQ7U.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;9DVJYQ7U&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22Q2E54XNM%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%227%22%2C%22position%22%3A%7B%22pageIndex%22%3A6%2C%22rects%22%3A%5B%5B70.385%2C344.005%2C291.923%2C381.505%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%227%22%7D%7D&quot; width=&quot;369&quot; height=&quot;62&quot; src=&quot;attachments/9DVJYQ7U.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>我们考虑两个语料库：BMLAMA 本身和 Flores-200（Costa-jussà 等人，2022 年)。前者预计非常相关，但由此产生的相关性可能不太可推广，因为它是衡量一致性本身的同一语料库。相比之下，后者是一组混合域的 2k 个句子，从英语翻译成 200 种语言，用于机器翻译评估。因为我们对不同语言使用完全相同的单词表示的程度感兴趣，所以我们在测量词汇重叠之前用模型的分词器对语料库进行分割，这使得这个指标模型依赖于。</p>
 <pre><code> 如表2（右）所示，BMLAMA上的皮尔逊相关分数证明，&lt;span style=&quot;background-color: #ff666680&quot;&gt;子词词汇重叠对PLM中知识的跨语言一致性有显著的强烈影响，掩盖了遗传的影响&lt;/span&gt;
-</code></pre><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../imgs/$%7Bfiilename%7D/7UYEHQJN.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;7UYEHQJN&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22I4F9IANM%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%227%22%2C%22position%22%3A%7B%22pageIndex%22%3A6%2C%22rects%22%3A%5B%5B294.808%2C500.928%2C528.462%2C596.698%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%227%22%7D%7D&quot; width=&quot;389&quot; height=&quot;159&quot; src=&quot;attachments/7UYEHQJN.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+</code></pre><p><img src="../imgs/$%7Bfiilename%7D/7UYEHQJN.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;7UYEHQJN&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22I4F9IANM%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%227%22%2C%22position%22%3A%7B%22pageIndex%22%3A6%2C%22rects%22%3A%5B%5B294.808%2C500.928%2C528.462%2C596.698%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%227%22%7D%7D&quot; width=&quot;389&quot; height=&quot;159&quot; src=&quot;attachments/7UYEHQJN.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <p>相似。<span style="background-color: #ff666680">这表明事实知识可能主要以相当肤浅的方式（通过共享使用一些子词嵌入）渗透到语言之间，相反，即使语言相关，在没有这种锚点的情况下，它也可能受到阻碍。</span>例如，<span style="background-color: #2ea8e580">BLOOM-3b中一致性最高的对是乌克兰语-俄语，它们位于语言树中（遗传相似性：0.8），并且总体上共享大量子词词汇（词汇重叠：0.76）。然而，在查询大卫·卡梅伦的工作地点时，BLOOM-3b预测的是俄语查询（“伦敦”）中的正确答案，但乌克兰语（“莫斯科”）中的错误答案。</span>这表明<span style="background-color: #2ea8e580">正确的知识没有从俄语转移到乌克兰语，因为这两个查询之间的子词重叠有限（0.17）。</span>当在Flores上测量词汇重叠时（表2的最后一列），相关性较低，但仍然显着为正，表明我们的发现不仅限于我们的基准。跨语言知识一致性与词汇重叠之间的相关性如图5所示。<span style="background-color: #2ea8e580">CLC对浅词汇重叠的强烈依赖部分解释了为什么增加模型大小没有积极的影响</span>（参见第5.2节)。<span style="background-color: #5fb23680">我们推测，较大的子单词词汇实际上可能导致较低的一致性，因为在任何两种语言之间共享部分单词的机会会降低。我们将对这一假设的进一步调查留给未来的工作。</span></p>
 <h2 id="7-Case-Study-Cross-Lingual-Consistency-and-Knowledge-Incorporation"><a href="#7-Case-Study-Cross-Lingual-Consistency-and-Knowledge-Incorporation" class="headerlink" title="7.Case Study: Cross-Lingual Consistency and Knowledge Incorporation"></a>7.Case Study: Cross-Lingual Consistency and Knowledge Incorporation</h2><p>之前的工作（Jiang et al., 2020；Kassner et al., 2021；Artetxe et al., 2022）和我们的探索结果表明，低资源语言的知识量是有限的。简单地在更大的非英语语料库上训练新的 PLM 非常耗时，而且大多数大学和其他研究机构都无法承担其成本（Ding 等人，2022）。<span style="background-color: #2ea8e580">一个有前景的解决方案是通过微调方法整合外部知识（Hu et al., 2022）或以非常有针对性的方式直接编辑 PLM 的权重</span>（De Cao et al., 2021；Meng et al., 2022）。<span style="background-color: #2ea8e580">为了使该过程在多语言场景中可行并避免意外影响，重要的是要了解以一种语言插入知识是否以及如何影响 PLM 中的其他语言，包括最易受影响和最不易受影响的语言</span>。在本节中，我们将针对这个问题及其与 CLC 的相互作用进行第一个案例研究。</p>
 <p><strong>Rank-One 模型编辑（ROME）</strong>由Meng 等人提出。 (2022)，这种基于神经元可解释性的最先进的模型编辑技术在特异性和泛化方面都优于其他几种编辑技术。简而言之，<span style="background-color: #2ea8e580">该技术直接修改 PLM 早期前馈层中的权重，其中事实关联已通过因果干预找到。</span></p>
 <p><strong>反事实知识 </strong>遵循孟等人。 （2022），我们考虑将反事实知识插入 PLM 的任务，例如事实上错误的“史蒂夫·乔布斯曾为微软工作”。由于在预训练期间从未观察到此类事实关联，因此这种方法避免了插入模型已认为可能的事实的风险。</p>
 <p><strong>案例研究</strong> 我们研究了 BLOOM-3b，因为 ROME 目前仅适用于仅解码器模型。选择英语作为插入事实的源语言。作为目标语言，我们选择两种与英语具有高度一致性（RankC）的语言（西班牙语和越南语）和两种RankC 较低（匈牙利语和希腊语）。这些语言在脚本和与英语的相关性方面也各不相同。通过确保 PLM 在编辑之前选择最有可能的最初正确答案来挑选六个查询。我们还确保，对于每个编辑的知识，主题和客体实体在所有语言中都是相同的标记。这消除了这样的担忧：例如，西班牙语和越南语仅仅因为所评估的查询中主语和宾语标记的词汇共现而获得与英语一致的预测。对于评估，我们遵循孟等人的设置。 （2022）并将候选集缩小为两个单词——一个正确，一个错误。后者是ROME的编辑目标。根据每个查询，PLM 计算正确和错误答案的 logit 值，分别为 logitC 和 logitW。这些 logits 在不同语言之间差异很大。为了关注原始事实和编辑事实之间的关系，我们按照之前的工作（Sarti et al., 2023）将 logits 标准化为</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../imgs/$%7Bfiilename%7D/JTSVCJAA.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;JTSVCJAA&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22LQTSE2UG%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B300.577%2C424.775%2C526.731%2C775.544%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;377&quot; height=&quot;585&quot; src=&quot;attachments/JTSVCJAA.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="../imgs/$%7Bfiilename%7D/JTSVCJAA.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;JTSVCJAA&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRSQJFTAR%22%2C%22annotationKey%22%3A%22LQTSE2UG%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B300.577%2C424.775%2C526.731%2C775.544%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FRHFZGHTF%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;377&quot; height=&quot;585&quot; src=&quot;attachments/JTSVCJAA.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
 <pre><code> 表 3 显示了三个查询的结果。一个非常清晰的模式出现了：&lt;span style=&quot;background-color: #ff666680&quot;&gt;当一个事实被插入到英语中时，它会一致地传播到高 CLC 语言（即西班牙语和越南语）。相反，低 CLC 语言（匈牙利语和希腊语)受到的影响要小得多，即使在模型编辑后，仍然会输出更高的正确答案概率。&lt;/span&gt;附录 J 中给出的其余三个查询显示了相同的模式。
 
 尽管我们的研究规模较小，但结果表明，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;CLC 不仅是 PLM 中现有知识的副产品，而且还代表了在将新知识融入其他语言时对语言扰动的敏感性。&lt;/span&gt;我们认为这是增强多语言场景中模型编辑优势的一个有前途的方向。
 </code></pre><h2 id="8-Conclusion"><a href="#8-Conclusion" class="headerlink" title="8.Conclusion"></a>8.Conclusion</h2><p>我们分析了多语言大型 PLM 中事实知识的跨语言一致性 (CLC)。我们提出了一个新的指标 RankC，用于独立于准确性来量化一致性，并将其应用于跨语言平衡的事实知识基准。我们的综合分析表明，<span style="background-color: #ff666680">(i) 不同 PLM 的平均 CLC 较低，并且不受模型大小的明显影响；</span> <span style="background-color: #ff666680">(ii) PLM 内不同语言对的 CLC 与遗传相似性显着相关，但与词汇重叠的相关性明显更强；</span> <span style="background-color: #ff666680">(iii) 通过模型编辑插入到语言 X 中的新事实更有可能传播到具有 X 的 CLC 分数较高的语言。</span></p>
 <h3 id="Limitations"><a href="#Limitations" class="headerlink" title="Limitations"></a>Limitations</h3><p>由于 GPU 资源的限制，我们无法测试大于 BLOOM-7.1b 的模型。鼓励在未来的工作中将我们的分析扩展到更大规模的模型，看看是否得出相同的结论。<span style="background-color: #5fb23680">然而，图4的结果表明，随着模型规模的增加，平均CLC增长极其缓慢。 BMLAMA 中包含的事实虽然被认为具有普遍性，但可能与西方世界更相关，这可能会在评估中引入偏见。我</span>们从 BMLAMA 所建立的基准中继承了这个问题。解决这个问题并非易事，特别是在比较工作中，需要探究跨语言的确切事实集，并且应该在未来的工作中予以关注。</p>
 
-<div class="article-footer fs14">
-    <section id="license">
-      <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
-</div>
-    </section>
-    
-    <section id="share">
-      <div class="header"><span>分享文章</span></div>
-      <div class="body">
-        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="http://humble2967738843.github.io/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/" /></div>
-        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=http://humble2967738843.github.io/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/&title=多语言模型中事实知识的跨语言一致性 - humbleyl&summary=多语言模型中事实知识的跨语言一致性Abstract多语言大规模预训练语言模型（PLM）已被证明可以存储大量的事实知识，但观察到语言之间存在很大差异。为了确保具有不同语言背景的用户从同一模型获得一致的反馈，我们研究了各种多语言PLM中事..."><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=多语言模型中事实知识的跨语言一致性 - humbleyl&amp;body=http://humble2967738843.github.io/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
-        
-        <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
-          <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=http://humble2967738843.github.io/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/"/>
-        </div>
-        
-      </div>
-    </section>
     </div>
-</article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2023/11/02/qing-jing-xue-xi-chuang-jian-ren-wu-xiang-liang/">情境学习创建任务向量</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2023/11/02/wo-men-ke-yi-bian-ji-duo-mo-tai-da-xing-yu-yan-mo-xing-ma/">我们可以编辑多模态大型语言模型吗？</a></div></section></div>
 
-<div class="related-wrap" id="related-posts">
-    <section class='header'>
-      <div class='title cap theme'>您可能感兴趣的文章</div>
-    </section>
-    <section class='body'>
-    <div class="related-posts"><a class="item" href="\2023\11\06\wang-diao-ni-xiang-wang-diao-de-dong-xi-llms-de-gao-xiao-wang-que\" title="忘掉你想忘掉的东西：LLMs的高效忘却"><span class="title">忘掉你想忘掉的东西：LLMs的高效忘却</span></a><a class="item" href="\2023\11\02\qing-jing-xue-xi-chuang-jian-ren-wu-xiang-liang\" title="情境学习创建任务向量"><span class="title">情境学习创建任务向量</span></a><a class="item" href="\2023\11\02\wo-men-ke-yi-bian-ji-duo-mo-tai-da-xing-yu-yan-mo-xing-ma\" title="我们可以编辑多模态大型语言模型吗？"><span class="title">我们可以编辑多模态大型语言模型吗？</span></a><a class="item" href="\2023\11\02\wo-men-ke-yi-tong-guo-qing-jing-xue-xi-lai-bian-ji-shi-shi-zhi-shi-ma\" title="我们可以通过情景学习来编辑事实知识吗？"><span class="title">我们可以通过情景学习来编辑事实知识吗？</span></a><a class="item" href="\2023\11\02\zhi-shi-shen-jing-yuan-zhong-xin-zhi-lu-yu-yan-wu-guan-zhi-shi-shen-jing-yuan-he-jian-bing-zhi-shi-shen-jing-yuan-de-fa-xian\" title="知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现"><span class="title">知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现</span></a></div></section></div>
+    
+    
+    
 
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/EMNLP2023/" rel="tag"># EMNLP2023</a>
+          </div>
 
-  <div class="related-wrap md-text" id="comments">
-    <section class='header cmt-title cap theme'>
-      <p>快来参与讨论吧~</p>
-
-    </section>
-    <section class='body cmt-body giscus'>
-      
-
-<svg class="loading" style="vertical-align:middle;fill:currentColor;overflow:hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
-
-<div id="giscus" src="https://giscus.app/client.js" data-repo="Humble2967738843/giscus" data-repo-id="R_kgDOLsS5kA" data-category="Announcements" data-category-id="DIC_kwDOLsS5kM4Cel5C" data-mapping="url" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
-
-    </section>
-  </div>
+        
 
 
-
-<footer class="page-footer footnote"><hr><div class="text"><center>
-</br>
-</br>
-<script type="text/javascript">
-function show_runtime() {
-    window.setTimeout("show_runtime()", 1000);
-    X = new Date("10/20/2023 00:00:00");
-    Y = new Date();
-    T = (Y.getTime() - X.getTime());
-    M = 24 * 60 * 60 * 1000;
-    a = T / M;
-    A = Math.floor(a);
-    b = (a - A) * 24;
-    B = Math.floor(b);
-    c = (b - B) * 60;
-    C = Math.floor((b - B) * 60);
-    D = Math.floor((c - C) * 60);
-    runtime_span.innerHTML = "⏲️本站已运行 " + A + "天|" + B + "小时|" + C + "分|" + D + "秒⏲️"
-}
-show_runtime();
-</script>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_pv">🤩本站总访问量<span id="busuanzi_value_site_pv"></span>次</span><br>
-<span id="runtime_span"></span>
-</center>
-</div></footer>
-<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-<div class="widgets">
-
-
-
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%9A%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E4%B8%AD%E4%BA%8B%E5%AE%9E%E7%9F%A5%E8%AF%86%E7%9A%84%E8%B7%A8%E8%AF%AD%E8%A8%80%E4%B8%80%E8%87%B4%E6%80%A7"><span class="toc-text">多语言模型中事实知识的跨语言一致性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract"><span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Related-Work"><span class="toc-text">2.Related Work</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Measuring-Cross-Lingual-Consistentcy"><span class="toc-text">3.Measuring Cross-Lingual Consistentcy</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1Prioions-Work-Correct-Predictions-Overlap"><span class="toc-text">3.1Prioions Work:Correct Predictions Overlap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2This-Work-RankC-Metric"><span class="toc-text">3.2This Work:RankC Metric</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Experimental-Setup"><span class="toc-text">4.Experimental Setup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Main-Consistency-Result"><span class="toc-text">5.Main Consistency Result</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1Consistency-in-Different-PLMs"><span class="toc-text">5.1Consistency in Different PLMs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2Effect-of-Model-Size"><span class="toc-text">5.2Effect of Model Size</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Typological-Similarity"><span class="toc-text">6.Typological Similarity</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2Subword-Vocabulary-Overlap"><span class="toc-text">6.2Subword Vocabulary Overlap</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Case-Study-Cross-Lingual-Consistency-and-Knowledge-Incorporation"><span class="toc-text">7.Case Study: Cross-Lingual Consistency and Knowledge Incorporation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Conclusion"><span class="toc-text">8.Conclusion</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Limitations"><span class="toc-text">Limitations</span></a></li></ol></li></ol></li></ol></div><div class="widget-footer">
-
-<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
-</div></aside><div class='float-panel blur'>
-  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
-  </button>
-  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
-  </button>
-</div>
-</div><div class="scripts">
-<script type="text/javascript">
-  const ctx = {
-    date_suffix: {
-      just: `刚刚`,
-      min: `分钟前`,
-      hour: `小时前`,
-      day: `天前`,
-    },
-    root : `/`,
-  };
-
-  // required plugins (only load if needs)
-  if (`local_search`) {
-    ctx.search = {};
-    ctx.search.service = `local_search`;
-    if (ctx.search.service == 'local_search') {
-      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"}`);
-      ctx.search[ctx.search.service] = service_obj;
-    }
-  }
-  const def = {
-    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
-    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
-  };
-  const deps = {
-    jquery: `https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js`,
-    marked: `https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js`
-  }
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/11/02/wo-men-ke-yi-bian-ji-duo-mo-tai-da-xing-yu-yan-mo-xing-ma/" rel="prev" title="我们可以编辑多模态大型语言模型吗？">
+      <i class="fa fa-chevron-left"></i> 我们可以编辑多模态大型语言模型吗？
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/11/02/qing-jing-xue-xi-chuang-jian-ren-wu-xiang-liang/" rel="next" title="情境学习创建任务向量">
+      情境学习创建任务向量 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</script>
 
-<script type="text/javascript">
-  const utils = {
-    // 懒加载 css https://github.com/filamentgroup/loadCSS
-    css: (href, before, media, attributes) => {
-      var doc = window.document;
-      var ss = doc.createElement("link");
-      var ref;
-      if (before) {
-        ref = before;
-      } else {
-        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
-        ref = refs[refs.length - 1];
-      }
-      var sheets = doc.styleSheets;
-      if (attributes) {
-        for (var attributeName in attributes) {
-          if (attributes.hasOwnProperty(attributeName)) {
-            ss.setAttribute(attributeName, attributes[attributeName]);
-          }
-        }
-      }
-      ss.rel = "stylesheet";
-      ss.href = href;
-      ss.media = "only x";
-      function ready(cb) {
-        if (doc.body) {
-          return cb();
-        }
-        setTimeout(function () {
-          ready(cb);
-        });
-      }
-      ready(function () {
-        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
-      });
-      var onloadcssdefined = function (cb) {
-        var resolvedHref = ss.href;
-        var i = sheets.length;
-        while (i--) {
-          if (sheets[i].href === resolvedHref) {
-            return cb();
-          }
-        }
-        setTimeout(function () {
-          onloadcssdefined(cb);
-        });
-      };
-      function loadCB() {
-        if (ss.addEventListener) {
-          ss.removeEventListener("load", loadCB);
-        }
-        ss.media = media || "all";
-      }
-      if (ss.addEventListener) {
-        ss.addEventListener("load", loadCB);
-      }
-      ss.onloadcssdefined = onloadcssdefined;
-      onloadcssdefined(loadCB);
-      return ss;
-    },
 
-    js: (src, opt) => new Promise((resolve, reject) => {
-      var script = document.createElement('script');
-      if (src.startsWith('/')){
-        src = ctx.root + src.substring(1);
-      }
-      script.src = src;
-      if (opt) {
-        for (let key of Object.keys(opt)) {
-          script[key] = opt[key]
-        }
-      } else {
-        // 默认异步，如果需要同步，第二个参数传入 {} 即可
-        script.async = true
-      }
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    }),
-
-    jq: (fn) => {
-      if (typeof jQuery === 'undefined') {
-        utils.js(deps.jquery).then(fn)
-      } else {
-        fn()
-      }
-    },
-    
-    onLoading: (el) => {
-      if (el) {
-        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
-      }
-    },
-    onLoadSuccess: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap').remove();
-      }
-    },
-    onLoadFailure: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap svg').remove();
-        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
-        $(el).find('.loading-wrap').addClass('error');
-      }
-    },
-    request: (el, url, callback, onFailure) => {
-      let retryTimes = 3;
-      utils.onLoading(el);
-      function req() {
-        return new Promise((resolve, reject) => {
-          let status = 0; // 0 等待 1 完成 2 超时
-          let timer = setTimeout(() => {
-            if (status === 0) {
-              status = 2;
-              timer = null;
-              reject('请求超时');
-              if (retryTimes == 0) {
-                onFailure();
-              }
-            }
-          }, 5000);
-          fetch(url).then(function(response) {
-            if (status !== 2) {
-              clearTimeout(timer);
-              resolve(response);
-              timer = null;
-              status = 1;
-            }
-            if (response.ok) {
-              return response.json();
-            }
-            throw new Error('Network response was not ok.');
-          }).then(function(data) {
-            retryTimes = 0;
-            utils.onLoadSuccess(el);
-            callback(data);
-          }).catch(function(error) {
-            if (retryTimes > 0) {
-              retryTimes -= 1;
-              setTimeout(() => {
-                req();
-              }, 5000);
-            } else {
-              utils.onLoadFailure(el);
-              onFailure();
-            }
-          });
-        });
-      }
-      req();
-    },
-  };
-</script>
+          </div>
+          
 
 <script>
-  const sidebar = {
-    leftbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    rightbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('rightbar');
-        l_body.removeAttribute('leftbar');
-      }
-    },
-    dismiss: () => {
-      if (l_body) {
-        l_body.removeAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    toggleTOC: () => {
-      document.querySelector('#data-toc').classList.toggle('collapse');
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
     }
-  }
-</script>
-
-<!-- required -->
-<script src="/js/main.js?v=1.27.0" async></script>
-
-<!-- optional -->
-
-  <script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const els = document.querySelectorAll("#comments #giscus");
-    if (els.length === 0) return;
-    els.forEach((el, i) => {
-      try {
-        el.innerHTML = '';
-      } catch (error) {
-        console.error(error);
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
       }
-      var script = document.createElement('script');
-      script.async = true;
-      for (let key of Object.keys(el.attributes)) {
-        let attr = el.attributes[key];
-        if (['class', 'id'].includes(attr.name) === false) {
-          script.setAttribute(attr.name, attr.value);
-        }
-      }
-      el.appendChild(script);
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
     });
-  });
-</script>
-
-
-
-
-<script defer>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
-    for (let id of Object.keys(ctx.services)) {
-      const js = ctx.services[id].js;
-      if (id == 'siteinfo') {
-        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
-        if (ctx.cardlinks?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            setCardLink(ctx.cardlinks);
-          });
-        }
-      } else {
-        const els = document.getElementsByClassName(`ds-${id}`);
-        if (els?.length > 0) {
-          utils.jq(() => {
-            if (id == 'timeline' || 'memos' || 'marked') {
-              utils.js(deps.marked).then(function () {
-                utils.js(js, { defer: true });
-              });
-            } else {
-              utils.js(js, { defer: true });
-            }
-          });
-        }
-      }
-    }
-  });
-</script>
-
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.search = {
-      path: `/search.json`,
-    }
-    utils.js('/js/search/local-search.js', { defer: true });
-  });
-</script><script>
-  window.FPConfig = {
-    delay: 0,
-    ignoreKeywords: [],
-    maxRPS: 5,
-    hoverDelay: 25
-  };
-</script>
-<script defer src="https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazy",
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    window.lazyLoadInstance?.update();
-  });
-</script><script>
-  ctx.fancybox = {
-    selector: `.timenode p>img`,
-    css: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
-    js: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
-  };
-  var selector = '[data-fancybox]:not(.error)';
-  if (ctx.fancybox.selector) {
-    selector += `, ${ctx.fancybox.selector}`
   }
-  var needFancybox = document.querySelectorAll(selector).length !== 0;
-  if (!needFancybox) {
-    const els = document.getElementsByClassName('ds-memos');
-    if (els != undefined && els.length > 0) {
-      needFancybox = true;
-    }
-  }
-  if (needFancybox) {
-    utils.css(ctx.fancybox.css);
-    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
-      Fancybox.bind(selector, {
-        hideScrollbar: false,
-        Thumbs: {
-          autoStart: false,
-        },
-        caption: (fancybox, slide) => {
-          return slide.triggerEl.alt || null
-        }
-      });
-    })
-  }
-</script><script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const swiper_api = document.getElementById('swiper-api');
-    if (swiper_api != undefined) {
-      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
-      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
-        const effect = swiper_api.getAttribute('effect') || '';
-        var swiper = new Swiper('.swiper#swiper-api', {
-          slidesPerView: 'auto',
-          spaceBetween: 8,
-          centeredSlides: true,
-          effect: effect,
-          loop: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
-      })
-    }
-  });
-</script><script>
-  document.addEventListener('DOMContentLoaded', function () {
-    window.codeElements = document.querySelectorAll('.code');
-    if (window.codeElements.length > 0) {
-      ctx.copycode = {
-        default_text: `Copy`,
-        success_text: `Copied`,
-        toast: `复制成功`,
-      };
-      utils.js('/js/plugins/copycode.js');
-    }
-  });
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
 
-<!-- inject -->
+  <aside class="sidebar">
+    <div class="sidebar-inner">
 
-</div></body></html>
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E4%B8%AD%E4%BA%8B%E5%AE%9E%E7%9F%A5%E8%AF%86%E7%9A%84%E8%B7%A8%E8%AF%AD%E8%A8%80%E4%B8%80%E8%87%B4%E6%80%A7"><span class="nav-number">1.</span> <span class="nav-text">多语言模型中事实知识的跨语言一致性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Abstract"><span class="nav-number">1.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.2.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Related-Work"><span class="nav-number">1.3.</span> <span class="nav-text">2.Related Work</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Measuring-Cross-Lingual-Consistentcy"><span class="nav-number">1.4.</span> <span class="nav-text">3.Measuring Cross-Lingual Consistentcy</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1Prioions-Work-Correct-Predictions-Overlap"><span class="nav-number">1.4.1.</span> <span class="nav-text">3.1Prioions Work:Correct Predictions Overlap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2This-Work-RankC-Metric"><span class="nav-number">1.4.2.</span> <span class="nav-text">3.2This Work:RankC Metric</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Experimental-Setup"><span class="nav-number">1.5.</span> <span class="nav-text">4.Experimental Setup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Main-Consistency-Result"><span class="nav-number">1.6.</span> <span class="nav-text">5.Main Consistency Result</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1Consistency-in-Different-PLMs"><span class="nav-number">1.6.1.</span> <span class="nav-text">5.1Consistency in Different PLMs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2Effect-of-Model-Size"><span class="nav-number">1.6.2.</span> <span class="nav-text">5.2Effect of Model Size</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Typological-Similarity"><span class="nav-number">1.7.</span> <span class="nav-text">6.Typological Similarity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2Subword-Vocabulary-Overlap"><span class="nav-number">1.7.1.</span> <span class="nav-text">6.2Subword Vocabulary Overlap</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Case-Study-Cross-Lingual-Consistency-and-Knowledge-Incorporation"><span class="nav-number">1.8.</span> <span class="nav-text">7.Case Study: Cross-Lingual Consistency and Knowledge Incorporation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Conclusion"><span class="nav-number">1.9.</span> <span class="nav-text">8.Conclusion</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Limitations"><span class="nav-number">1.9.1.</span> <span class="nav-text">Limitations</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">yuan long</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">63</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yuan long</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
