@@ -302,13 +302,6 @@ Ax = \lambda x</script><p><img src="https://s2.loli.net/2023/12/08/aqi97HUjBVQGk
 <h2 id="5-4QA"><a href="#5-4QA" class="headerlink" title="5.4QA"></a>5.4QA</h2>]]></content>
   </entry>
   <entry>
-    <title>07二分分类</title>
-    <url>/2023/12/17/07-er-fen-fen-lei/</url>
-    <content><![CDATA[<h1 id="07-二分分类"><a href="#07-二分分类" class="headerlink" title="07 二分分类"></a>07 二分分类</h1><h2 id="7-1-Binary-Classification"><a href="#7-1-Binary-Classification" class="headerlink" title="7.1 Binary Classification"></a>7.1 Binary Classification</h2><p><img src="https://s2.loli.net/2023/12/17/z4fd8SO12cq9sRM.png" alt="image-20231217230534251"></p>
-<h2 id="7-2-Notation"><a href="#7-2-Notation" class="headerlink" title="7.2 Notation"></a>7.2 Notation</h2><p><img src="https://s2.loli.net/2023/12/17/za7rB1UAbJnXqF9.png" alt="image-20231217230831347"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>06矩阵计算</title>
     <url>/2023/12/10/06-ju-zhen-ji-suan/</url>
     <content><![CDATA[<h1 id="06矩阵计算"><a href="#06矩阵计算" class="headerlink" title="06矩阵计算"></a>06矩阵计算</h1><h2 id="6-1矩阵计算"><a href="#6-1矩阵计算" class="headerlink" title="6.1矩阵计算"></a>6.1矩阵计算</h2><ul>
@@ -371,6 +364,13 @@ Ax = \lambda x</script><p><img src="https://s2.loli.net/2023/12/08/aqi97HUjBVQGk
 </ul>
 <p><img src="https://s2.loli.net/2023/12/10/QdJae39DlM1OSq5.png" alt="image-20231210221120356"></p>
 <h2 id="6-2QA"><a href="#6-2QA" class="headerlink" title="6.2QA"></a>6.2QA</h2>]]></content>
+  </entry>
+  <entry>
+    <title>07二分分类</title>
+    <url>/2023/12/17/07-er-fen-fen-lei/</url>
+    <content><![CDATA[<h1 id="07-二分分类"><a href="#07-二分分类" class="headerlink" title="07 二分分类"></a>07 二分分类</h1><h2 id="7-1-Binary-Classification"><a href="#7-1-Binary-Classification" class="headerlink" title="7.1 Binary Classification"></a>7.1 Binary Classification</h2><p><img src="https://s2.loli.net/2023/12/17/z4fd8SO12cq9sRM.png" alt="image-20231217230534251"></p>
+<h2 id="7-2-Notation"><a href="#7-2-Notation" class="headerlink" title="7.2 Notation"></a>7.2 Notation</h2><p><img src="https://s2.loli.net/2023/12/17/za7rB1UAbJnXqF9.png" alt="image-20231217230831347"></p>
+]]></content>
   </entry>
   <entry>
     <title>07自动求导</title>
@@ -768,6 +768,21 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 <h2 id="8-5QA"><a href="#8-5QA" class="headerlink" title="8.5QA"></a>8.5QA</h2>]]></content>
   </entry>
   <entry>
+    <title>10 梯度下降法</title>
+    <url>/2023/12/18/10-ti-du-xia-jiang-fa/</url>
+    <content><![CDATA[<h1 id="10-梯度下降法"><a href="#10-梯度下降法" class="headerlink" title="10 梯度下降法"></a>10 梯度下降法</h1><h2 id="10-1-Gradient-Descent"><a href="#10-1-Gradient-Descent" class="headerlink" title="10.1 Gradient Descent"></a>10.1 Gradient Descent</h2><p><img src="https://s2.loli.net/2023/12/18/5g29KPrnfduwWSM.png" alt="image-20231218110449631"></p>
+<p><img src="https://s2.loli.net/2023/12/18/l6SPghF1BXREWG5.png" alt="image-20231218111903673"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>11导数</title>
+    <url>/2023/12/18/11-dao-shu/</url>
+    <content><![CDATA[<h1 id="11-导数"><a href="#11-导数" class="headerlink" title="11 导数"></a>11 导数</h1><h2 id="11-1-Intuition-about-derivatives"><a href="#11-1-Intuition-about-derivatives" class="headerlink" title="11.1 Intuition about derivatives"></a>11.1 Intuition about derivatives</h2><p> <img src="https://s2.loli.net/2023/12/18/vNLjQAUXIDqVWSF.png" alt="image-20231218112637878"></p>
+<h2 id="11-2-examples"><a href="#11-2-examples" class="headerlink" title="11.2 examples"></a>11.2 examples</h2><p><img src="https://s2.loli.net/2023/12/18/45DRYspac3kLzOy.png" alt="image-20231218113045875"></p>
+<p><img src="https://s2.loli.net/2023/12/18/Tzk8fL7Z9OKIRp2.png" alt="image-20231218113339464"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>09 Softmax 回归 + 损失函数 + 图片分类数据集</title>
     <url>/2023/12/17/09-softmax-hui-gui-sun-shi-han-shu-tu-pian-fen-lei-shu-ju-ji/</url>
     <content><![CDATA[<h1 id="09-Softmax-回归-损失函数-图片分类数据集"><a href="#09-Softmax-回归-损失函数-图片分类数据集" class="headerlink" title="09 Softmax 回归 + 损失函数 + 图片分类数据集"></a>09 Softmax 回归 + 损失函数 + 图片分类数据集</h1><p><img src="https://s2.loli.net/2023/12/17/UM83FgmWJdb2auQ.png" alt="image-20231217221708109"></p>
@@ -787,21 +802,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 </ul>
 <p>将人类蛋白质显微镜图片分成 28 类</p>
 <h2 id="9-2损失函数"><a href="#9-2损失函数" class="headerlink" title="9.2损失函数"></a>9.2损失函数</h2><h2 id="9-3图片分类数据集"><a href="#9-3图片分类数据集" class="headerlink" title="9.3图片分类数据集"></a>9.3图片分类数据集</h2><h2 id="9-4Softmax-回归从零开始实现"><a href="#9-4Softmax-回归从零开始实现" class="headerlink" title="9.4Softmax 回归从零开始实现"></a>9.4Softmax 回归从零开始实现</h2><h2 id="9-5Softmax-回归简洁实现"><a href="#9-5Softmax-回归简洁实现" class="headerlink" title="9.5Softmax 回归简洁实现"></a>9.5Softmax 回归简洁实现</h2>]]></content>
-  </entry>
-  <entry>
-    <title>10 梯度下降法</title>
-    <url>/2023/12/18/10-ti-du-xia-jiang-fa/</url>
-    <content><![CDATA[<h1 id="10-梯度下降法"><a href="#10-梯度下降法" class="headerlink" title="10 梯度下降法"></a>10 梯度下降法</h1><h2 id="10-1-Gradient-Descent"><a href="#10-1-Gradient-Descent" class="headerlink" title="10.1 Gradient Descent"></a>10.1 Gradient Descent</h2><p><img src="https://s2.loli.net/2023/12/18/5g29KPrnfduwWSM.png" alt="image-20231218110449631"></p>
-<p><img src="https://s2.loli.net/2023/12/18/l6SPghF1BXREWG5.png" alt="image-20231218111903673"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>11导数</title>
-    <url>/2023/12/18/11-dao-shu/</url>
-    <content><![CDATA[<h1 id="11-导数"><a href="#11-导数" class="headerlink" title="11 导数"></a>11 导数</h1><h2 id="11-1-Intuition-about-derivatives"><a href="#11-1-Intuition-about-derivatives" class="headerlink" title="11.1 Intuition about derivatives"></a>11.1 Intuition about derivatives</h2><p> <img src="https://s2.loli.net/2023/12/18/vNLjQAUXIDqVWSF.png" alt="image-20231218112637878"></p>
-<h2 id="11-2-examples"><a href="#11-2-examples" class="headerlink" title="11.2 examples"></a>11.2 examples</h2><p><img src="https://s2.loli.net/2023/12/18/45DRYspac3kLzOy.png" alt="image-20231218113045875"></p>
-<p><img src="https://s2.loli.net/2023/12/18/Tzk8fL7Z9OKIRp2.png" alt="image-20231218113339464"></p>
-]]></content>
   </entry>
   <entry>
     <title>13计算图</title>
@@ -998,19 +998,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>33神经网络中的梯度下降法</title>
-    <url>/2023/12/21/33.shen-jing-wang-luo-de-ti-du-xia-jiang-fa/</url>
-    <content><![CDATA[<h1 id="33-神经网络的梯度下降法"><a href="#33-神经网络的梯度下降法" class="headerlink" title="33.神经网络的梯度下降法"></a>33.神经网络的梯度下降法</h1><h2 id="33-1-Gradient-descent-for-neural-networks"><a href="#33-1-Gradient-descent-for-neural-networks" class="headerlink" title="33.1 Gradient descent for neural networks"></a>33.1 Gradient descent for neural networks</h2><p><img src="https://s2.loli.net/2023/12/21/TlmcBKHQSbEi73L.png" alt="image-20231221214947242"></p>
-<h2 id="33-2-Formulas-for-computing-derivatives"><a href="#33-2-Formulas-for-computing-derivatives" class="headerlink" title="33.2 Formulas for computing derivatives"></a>33.2 Formulas for computing derivatives</h2><p><img src="https://s2.loli.net/2023/12/21/mebXpLOdly257Ao.png" alt="image-20231221215413827"></p>
-<h2 id="33-3-Computing-gradients"><a href="#33-3-Computing-gradients" class="headerlink" title="33.3 Computing gradients"></a>33.3 Computing gradients</h2><p><img src="https://s2.loli.net/2023/12/21/Wxil3T5qBHfY9pM.png" alt="image-20231221220125146"></p>
-<p><strong>这里迷糊了好久，终于理清楚了：P20 2.14证明了$dw=x<em>dz^T$，这里写成了dw=dz</em>x，实际上效果一样，对于矩阵相乘来说，左右互换结果就不一样了，dz写在前面，等同做了一次转置</strong></p>
-<p><strong>〖(A∗B)〗^T=B^T∗A^T</strong></p>
-<p><img src="https://s2.loli.net/2023/12/21/SKNIoOUVEuGRA6X.png" alt="image-20231221221307296"></p>
-<h2 id="33-4-Summary-of-gradient-descent"><a href="#33-4-Summary-of-gradient-descent" class="headerlink" title="33.4 Summary of gradient descent"></a>33.4 Summary of gradient descent</h2><p><img src="https://s2.loli.net/2023/12/21/P7xHrJEDdOVMTm4.png" alt="image-20231221221512260"></p>
-<p><img src="https://s2.loli.net/2023/12/21/jEKUJu6LQGHPsR9.png" alt="image-20231221221645389"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>35随机初始化</title>
     <url>/2023/12/22/35-sui-ji-chu-shi-hua/</url>
     <content><![CDATA[<h1 id="35-随机初始化"><a href="#35-随机初始化" class="headerlink" title="35 随机初始化"></a>35 随机初始化</h1><p><strong>在训练神经网络时，初始化权重的重要性，对于随机初始化的权重，将其全部初始化为零时是不合适的，因为这将导致隐藏单位集散相同的函数，没有区别。相反，初始化为权重为随机值可以解决对称性破缺问题，是隐藏单元计算不同的函数。此外，初始化偏置项和权重的其它注意事项，可以帮助训练更加有效的神经网络。</strong></p>
@@ -1054,20 +1041,16 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>38深层网络中的前向传播</title>
-    <url>/2023/12/23/38-shen-ceng-wang-luo-zhong-de-qian-xiang-chuan-bo/</url>
-    <content><![CDATA[<h1 id="38-深层网络中的前向传播"><a href="#38-深层网络中的前向传播" class="headerlink" title="38 深层网络中的前向传播"></a>38 深层网络中的前向传播</h1><p><strong>深度神经网络的符号和如何在深度网络中执行正向传播。对于单个训练实例 x 的前向传播，首先计算第一层的激活，然后计算第二层到输出层的激活，最终得到预测输出。还讨论向量化方法和循环实现正向传播的必要性。</strong></p>
-<ul>
-<li><strong>深度神经网络的正向传播过程，对于单个训练实例的前向传播的计算方法</strong></li>
-<li>深度神经网络的正向传播</li>
-<li>向量化方法在整个训练集上的正向传播</li>
-<li>输入特征向量 x 在计算激活时等于零层的激活</li>
-<li><strong>深度神经网络的符号和正向传播的实现，包括将小写字母替换为大写字母、循环计算激活量等。</strong></li>
-<li>深度学习的符号和表示法</li>
-<li>训练集和表示和预测结果</li>
-<li>深度神经网络的实现和符号表示</li>
-</ul>
-<h2 id="38-1-Forward-propagation-in-a-deep-network"><a href="#38-1-Forward-propagation-in-a-deep-network" class="headerlink" title="38.1 Forward propagation in a deep network"></a>38.1 Forward propagation in a deep network</h2><p><img src="https://s2.loli.net/2023/12/23/szgD3h5LA1CIcTv.png" alt="image-20231223180058234"></p>
+    <title>33神经网络中的梯度下降法</title>
+    <url>/2023/12/21/33.shen-jing-wang-luo-de-ti-du-xia-jiang-fa/</url>
+    <content><![CDATA[<h1 id="33-神经网络的梯度下降法"><a href="#33-神经网络的梯度下降法" class="headerlink" title="33.神经网络的梯度下降法"></a>33.神经网络的梯度下降法</h1><h2 id="33-1-Gradient-descent-for-neural-networks"><a href="#33-1-Gradient-descent-for-neural-networks" class="headerlink" title="33.1 Gradient descent for neural networks"></a>33.1 Gradient descent for neural networks</h2><p><img src="https://s2.loli.net/2023/12/21/TlmcBKHQSbEi73L.png" alt="image-20231221214947242"></p>
+<h2 id="33-2-Formulas-for-computing-derivatives"><a href="#33-2-Formulas-for-computing-derivatives" class="headerlink" title="33.2 Formulas for computing derivatives"></a>33.2 Formulas for computing derivatives</h2><p><img src="https://s2.loli.net/2023/12/21/mebXpLOdly257Ao.png" alt="image-20231221215413827"></p>
+<h2 id="33-3-Computing-gradients"><a href="#33-3-Computing-gradients" class="headerlink" title="33.3 Computing gradients"></a>33.3 Computing gradients</h2><p><img src="https://s2.loli.net/2023/12/21/Wxil3T5qBHfY9pM.png" alt="image-20231221220125146"></p>
+<p><strong>这里迷糊了好久，终于理清楚了：P20 2.14证明了$dw=x<em>dz^T$，这里写成了dw=dz</em>x，实际上效果一样，对于矩阵相乘来说，左右互换结果就不一样了，dz写在前面，等同做了一次转置</strong></p>
+<p><strong>〖(A∗B)〗^T=B^T∗A^T</strong></p>
+<p><img src="https://s2.loli.net/2023/12/21/SKNIoOUVEuGRA6X.png" alt="image-20231221221307296"></p>
+<h2 id="33-4-Summary-of-gradient-descent"><a href="#33-4-Summary-of-gradient-descent" class="headerlink" title="33.4 Summary of gradient descent"></a>33.4 Summary of gradient descent</h2><p><img src="https://s2.loli.net/2023/12/21/P7xHrJEDdOVMTm4.png" alt="image-20231221221512260"></p>
+<p><img src="https://s2.loli.net/2023/12/21/jEKUJu6LQGHPsR9.png" alt="image-20231221221645389"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1102,6 +1085,23 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
+    <title>38深层网络中的前向传播</title>
+    <url>/2023/12/23/38-shen-ceng-wang-luo-zhong-de-qian-xiang-chuan-bo/</url>
+    <content><![CDATA[<h1 id="38-深层网络中的前向传播"><a href="#38-深层网络中的前向传播" class="headerlink" title="38 深层网络中的前向传播"></a>38 深层网络中的前向传播</h1><p><strong>深度神经网络的符号和如何在深度网络中执行正向传播。对于单个训练实例 x 的前向传播，首先计算第一层的激活，然后计算第二层到输出层的激活，最终得到预测输出。还讨论向量化方法和循环实现正向传播的必要性。</strong></p>
+<ul>
+<li><strong>深度神经网络的正向传播过程，对于单个训练实例的前向传播的计算方法</strong></li>
+<li>深度神经网络的正向传播</li>
+<li>向量化方法在整个训练集上的正向传播</li>
+<li>输入特征向量 x 在计算激活时等于零层的激活</li>
+<li><strong>深度神经网络的符号和正向传播的实现，包括将小写字母替换为大写字母、循环计算激活量等。</strong></li>
+<li>深度学习的符号和表示法</li>
+<li>训练集和表示和预测结果</li>
+<li>深度神经网络的实现和符号表示</li>
+</ul>
+<h2 id="38-1-Forward-propagation-in-a-deep-network"><a href="#38-1-Forward-propagation-in-a-deep-network" class="headerlink" title="38.1 Forward propagation in a deep network"></a>38.1 Forward propagation in a deep network</h2><p><img src="https://s2.loli.net/2023/12/23/szgD3h5LA1CIcTv.png" alt="image-20231223180058234"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>39核对矩阵的维数</title>
     <url>/2023/12/24/39-he-dui-ju-zhen-de-wei-shu/</url>
     <content><![CDATA[<h1 id="39-核对矩阵的维数"><a href="#39-核对矩阵的维数" class="headerlink" title="39 核对矩阵的维数"></a>39 核对矩阵的维数</h1><p><strong>深度学习中深度神经网络的正向传播和反向传播的过程。包含神经网络中各个层的参数和输入特性的尺寸，以及如何确保矩阵和向量的尺寸一致性。通过正向传播，我们可以计算出网络的输出和损失函数，而反向传播则用与计算梯度并更新参数。还包含深度神经网络相较于浅层表示的优势。</strong></p>
@@ -1125,6 +1125,13 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 </ul>
 <h2 id="39-1-Parameters-W-l-space-and-space-b-l"><a href="#39-1-Parameters-W-l-space-and-space-b-l" class="headerlink" title="39.1 Parameters $W^{[l]} \space and \space b^{[l]}$"></a>39.1 Parameters $W^{[l]} \space and \space b^{[l]}$</h2><p><img src="https://s2.loli.net/2023/12/24/m4xLu1pgdOvTG3o.png" alt="image-20231224132254978"></p>
 <h2 id="39-2-Vectorized-implementation"><a href="#39-2-Vectorized-implementation" class="headerlink" title="39.2 Vectorized implementation"></a>39.2 Vectorized implementation</h2><p><img src="https://s2.loli.net/2023/12/24/bchgKoSJxC45X3V.png" alt="image-20231224132819273"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>41搭建深层神经网络块</title>
+    <url>/2024/01/02/41-da-jian-shen-ceng-shen-jing-wang-luo-kuai/</url>
+    <content><![CDATA[<h1 id="41-搭建深层神经网络块"><a href="#41-搭建深层神经网络块" class="headerlink" title="41 搭建深层神经网络块"></a>41 搭建深层神经网络块</h1><h2 id="41-1-Forward-and-backward-functions"><a href="#41-1-Forward-and-backward-functions" class="headerlink" title="41.1 Forward and backward functions"></a>41.1 Forward and backward functions</h2><p><img src="https://s2.loli.net/2024/01/02/EQqSfZ79F8RPADt.png" alt="image-20240102113354053"></p>
+<p><img src="https://s2.loli.net/2024/01/02/Gt9qfyEvS1BDwpz.png" alt="image-20240102113716528"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1156,24 +1163,9 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>41搭建深层神经网络块</title>
-    <url>/2024/01/02/41-da-jian-shen-ceng-shen-jing-wang-luo-kuai/</url>
-    <content><![CDATA[<h1 id="41-搭建深层神经网络块"><a href="#41-搭建深层神经网络块" class="headerlink" title="41 搭建深层神经网络块"></a>41 搭建深层神经网络块</h1><h2 id="41-1-Forward-and-backward-functions"><a href="#41-1-Forward-and-backward-functions" class="headerlink" title="41.1 Forward and backward functions"></a>41.1 Forward and backward functions</h2><p><img src="https://s2.loli.net/2024/01/02/EQqSfZ79F8RPADt.png" alt="image-20240102113354053"></p>
-<p><img src="https://s2.loli.net/2024/01/02/Gt9qfyEvS1BDwpz.png" alt="image-20240102113716528"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>43这和大脑有什么关系？</title>
     <url>/2024/01/02/43-zhe-he-da-nao-you-shi-me-guan-xi/</url>
     <content><![CDATA[<h1 id="43-这和大脑有什么关系？"><a href="#43-这和大脑有什么关系？" class="headerlink" title="43 这和大脑有什么关系？"></a>43 这和大脑有什么关系？</h1><h2 id="43-1-Forward-and-backward-propagation"><a href="#43-1-Forward-and-backward-propagation" class="headerlink" title="43.1 Forward and backward propagation"></a>43.1 Forward and backward propagation</h2><p><img src="https://s2.loli.net/2024/01/02/XITyJkBZGtPgFK3.png" alt="image-20240102114639554"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>47训练 开发 测试集合</title>
-    <url>/2024/01/02/47-xun-lian-kai-fa-ce-shi-ji-he/</url>
-    <content><![CDATA[<h1 id="47-训练-开发-测试集合"><a href="#47-训练-开发-测试集合" class="headerlink" title="47 训练 开发 测试集合"></a>47 训练 开发 测试集合</h1><h2 id="47-1-Applied-ML-is-a-highly-iterative-process"><a href="#47-1-Applied-ML-is-a-highly-iterative-process" class="headerlink" title="47.1 Applied ML is a highly iterative process"></a>47.1 Applied ML is a highly iterative process</h2><p><img src="https://s2.loli.net/2024/01/02/dCbINSOFyX1KPoA.png" alt="image-20240102115159250"></p>
-<h2 id="47-2-Train-dev-test-sets"><a href="#47-2-Train-dev-test-sets" class="headerlink" title="47.2 Train/dev/test sets"></a>47.2 Train/dev/test sets</h2><p><img src="https://s2.loli.net/2024/01/02/nY6lAPGzEpc4mfF.png" alt="image-20240102115531660"></p>
-<h2 id="Mismatched-train-test-distribution"><a href="#Mismatched-train-test-distribution" class="headerlink" title="Mismatched train/test distribution"></a>Mismatched train/test distribution</h2><p><img src="https://s2.loli.net/2024/01/02/v1bpjqulMgBCP9N.png" alt="image-20240102115859490"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1185,16 +1177,17 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>49机器学习基础</title>
-    <url>/2024/01/05/49-ji-qi-xue-xi-ji-chu/</url>
-    <content><![CDATA[<h1 id="49-机器学习基础"><a href="#49-机器学习基础" class="headerlink" title="49 机器学习基础"></a>49 机器学习基础</h1><h2 id="Basic-recipe-for-machine-learning"><a href="#Basic-recipe-for-machine-learning" class="headerlink" title="Basic recipe for machine learning"></a>Basic recipe for machine learning</h2><p><img src="https://s2.loli.net/2024/01/05/Owq1IAr3ZspX2jn.png" alt="image-20240105122804069"></p>
+    <title>47训练 开发 测试集合</title>
+    <url>/2024/01/02/47-xun-lian-kai-fa-ce-shi-ji-he/</url>
+    <content><![CDATA[<h1 id="47-训练-开发-测试集合"><a href="#47-训练-开发-测试集合" class="headerlink" title="47 训练 开发 测试集合"></a>47 训练 开发 测试集合</h1><h2 id="47-1-Applied-ML-is-a-highly-iterative-process"><a href="#47-1-Applied-ML-is-a-highly-iterative-process" class="headerlink" title="47.1 Applied ML is a highly iterative process"></a>47.1 Applied ML is a highly iterative process</h2><p><img src="https://s2.loli.net/2024/01/02/dCbINSOFyX1KPoA.png" alt="image-20240102115159250"></p>
+<h2 id="47-2-Train-dev-test-sets"><a href="#47-2-Train-dev-test-sets" class="headerlink" title="47.2 Train/dev/test sets"></a>47.2 Train/dev/test sets</h2><p><img src="https://s2.loli.net/2024/01/02/nY6lAPGzEpc4mfF.png" alt="image-20240102115531660"></p>
+<h2 id="Mismatched-train-test-distribution"><a href="#Mismatched-train-test-distribution" class="headerlink" title="Mismatched train/test distribution"></a>Mismatched train/test distribution</h2><p><img src="https://s2.loli.net/2024/01/02/v1bpjqulMgBCP9N.png" alt="image-20240102115859490"></p>
 ]]></content>
   </entry>
   <entry>
-    <title>为什么正则化可以减少过拟合？</title>
-    <url>/2024/01/06/51-wei-shi-me-zheng-ze-hua-ke-yi-jian-shao-guo-ni-he/</url>
-    <content><![CDATA[<h1 id="51-为什么正则化可以减少过拟合？"><a href="#51-为什么正则化可以减少过拟合？" class="headerlink" title="51 为什么正则化可以减少过拟合？"></a>51 为什么正则化可以减少过拟合？</h1><h2 id="51-1-How-does-regularization-prevent-overfitting"><a href="#51-1-How-does-regularization-prevent-overfitting" class="headerlink" title="51.1 How does regularization prevent overfitting?"></a>51.1 How does regularization prevent overfitting?</h2><p><img src="https://s2.loli.net/2024/01/06/eK9HgiZJAS7MwGz.png" alt="image-20240106230618834"></p>
-<p><img src="https://s2.loli.net/2024/01/06/vMUnYbDhmiwR85j.png" alt="image-20240106231520169"></p>
+    <title>49机器学习基础</title>
+    <url>/2024/01/05/49-ji-qi-xue-xi-ji-chu/</url>
+    <content><![CDATA[<h1 id="49-机器学习基础"><a href="#49-机器学习基础" class="headerlink" title="49 机器学习基础"></a>49 机器学习基础</h1><h2 id="Basic-recipe-for-machine-learning"><a href="#Basic-recipe-for-machine-learning" class="headerlink" title="Basic recipe for machine learning"></a>Basic recipe for machine learning</h2><p><img src="https://s2.loli.net/2024/01/05/Owq1IAr3ZspX2jn.png" alt="image-20240105122804069"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1205,11 +1198,10 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>52Dropout正则化</title>
-    <url>/2024/01/13/52-dropout-zheng-ze-hua/</url>
-    <content><![CDATA[<h1 id="52-Dropout-正则化"><a href="#52-Dropout-正则化" class="headerlink" title="52 Dropout 正则化"></a>52 Dropout 正则化</h1><h2 id="52-1Dropout-regularization"><a href="#52-1Dropout-regularization" class="headerlink" title="52.1Dropout regularization"></a>52.1Dropout regularization</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240113203610466.png" alt="image-20240113203610466"></p>
-<h2 id="52-2Implementing-dropout-“Inverted-dropout”"><a href="#52-2Implementing-dropout-“Inverted-dropout”" class="headerlink" title="52.2Implementing dropout(“Inverted dropout”)"></a>52.2Implementing dropout(“Inverted dropout”)</h2><p><img src="https://s2.loli.net/2024/01/13/ilLpst3SmYoHRuX.png" alt="image-20240113210330586"></p>
-<h2 id="52-3Making-predictions-at-test-time"><a href="#52-3Making-predictions-at-test-time" class="headerlink" title="52.3Making predictions at test time"></a>52.3Making predictions at test time</h2><p><img src="https://s2.loli.net/2024/01/13/YDzrq1TguIACMRh.png" alt="image-20240113210850114"></p>
+    <title>为什么正则化可以减少过拟合？</title>
+    <url>/2024/01/06/51-wei-shi-me-zheng-ze-hua-ke-yi-jian-shao-guo-ni-he/</url>
+    <content><![CDATA[<h1 id="51-为什么正则化可以减少过拟合？"><a href="#51-为什么正则化可以减少过拟合？" class="headerlink" title="51 为什么正则化可以减少过拟合？"></a>51 为什么正则化可以减少过拟合？</h1><h2 id="51-1-How-does-regularization-prevent-overfitting"><a href="#51-1-How-does-regularization-prevent-overfitting" class="headerlink" title="51.1 How does regularization prevent overfitting?"></a>51.1 How does regularization prevent overfitting?</h2><p><img src="https://s2.loli.net/2024/01/06/eK9HgiZJAS7MwGz.png" alt="image-20240106230618834"></p>
+<p><img src="https://s2.loli.net/2024/01/06/vMUnYbDhmiwR85j.png" alt="image-20240106231520169"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1269,6 +1261,14 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 <p><img src="https://s2.loli.net/2024/01/02/n6ZWoUOTFX978Eq.png" alt="image-20240102100308238"></p>
 <p><img src="https://s2.loli.net/2024/01/02/EQ8RbjtuvpHSrl9.png" alt="image-20240102100357505"></p>
 <p><img src="https://s2.loli.net/2024/01/02/8qX3bhr5asLpuNB.png" alt="image-20240102100506717"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>52Dropout正则化</title>
+    <url>/2024/01/13/52-dropout-zheng-ze-hua/</url>
+    <content><![CDATA[<h1 id="52-Dropout-正则化"><a href="#52-Dropout-正则化" class="headerlink" title="52 Dropout 正则化"></a>52 Dropout 正则化</h1><h2 id="52-1Dropout-regularization"><a href="#52-1Dropout-regularization" class="headerlink" title="52.1Dropout regularization"></a>52.1Dropout regularization</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240113203610466.png" alt="image-20240113203610466"></p>
+<h2 id="52-2Implementing-dropout-“Inverted-dropout”"><a href="#52-2Implementing-dropout-“Inverted-dropout”" class="headerlink" title="52.2Implementing dropout(“Inverted dropout”)"></a>52.2Implementing dropout(“Inverted dropout”)</h2><p><img src="https://s2.loli.net/2024/01/13/ilLpst3SmYoHRuX.png" alt="image-20240113210330586"></p>
+<h2 id="52-3Making-predictions-at-test-time"><a href="#52-3Making-predictions-at-test-time" class="headerlink" title="52.3Making predictions at test time"></a>52.3Making predictions at test time</h2><p><img src="https://s2.loli.net/2024/01/13/YDzrq1TguIACMRh.png" alt="image-20240113210850114"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1691,6 +1691,42 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
       </tags>
   </entry>
   <entry>
+    <title>情境学习创建任务向量</title>
+    <url>/2023/11/02/qing-jing-xue-xi-chuang-jian-ren-wu-xiang-liang/</url>
+    <content><![CDATA[<h1 id="情境学习创建任务向量"><a href="#情境学习创建任务向量" class="headerlink" title="情境学习创建任务向量"></a>情境学习创建任务向量</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>大型语言模型 (LLM) 中的上下文学习 (ICL) 已成为一种强大的新学习范式。然而，其基本机制仍不清楚。<strong>特别是，将其映射到“标准”机器学习框架具有挑战性，在该框架中，人们使用训练集 S 在某个假设类中找到最佳拟合函数 f (x)</strong>。在这里，我们在这个问题上取得了进展，表明 ICL 学习的函数通常具有非常简单的结构：<strong>它们对应于变压器 LLM，其唯一输入是查询 x 和从训练集计算出的单个“任务向量”</strong>。因此，<strong>ICL 可以看作是将 S 压缩为单个任务向量 θ(S)，然后使用该任务向量来调制变压器以产生输出</strong>。我们通过一系列模型和任务的综合实验来支持上述主张。</p>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>大型语言模型在过去几年中得到了显着改进。这些模型的一个<strong>显着特性是它们可以从很少的演示中学习新规则</strong>。例如，可以使用输入“Apple → Red、Lime → Green、Corn →”提示模型并生成输出“Yellow”。因此，<strong>该模型仅基于两个示例就学习了映射，并且可以将其正确应用于新示例</strong>。这种能力被称为 InContext Learning (ICL)，已被广泛使用，产生了令人印象深刻的实证结果（Brown 等人，2020；Liu 等人，2023；Dong 等人，2022）。</p>
+<p>​       鉴于这一成功，人们自然会问 ICL 背后的根本机制是什么。即，模型内部如何使用演示 S 和查询 x 来产生所需的输出？在这里，我们利用统计学习理论中的假设类概念（Shalev-Shwartz 和 Ben-David，2014）。在学习理论公式中，人们通常考虑假设类 H，其中 H 的每个元素都是函数 h(x; θ)，对输入 x 进行运算，并由参数向量 θ 指定。例如，如果 x ∈ Rd，则类 H 可以是线性分类器的集合，由系数向量 θ 定义为 h(x; θ) = θ · x。学习算法寻找一个能很好地拟合训练集的元素 h ∈ H。这称为经验风险最小化。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105171853641-1699175934785-1.png" alt="image-20231105171853641"></p>
+<p>​       目前尚不清楚 ICL 是否以这种方式运行，<font color="red" size="4.5"> 因为预测是通过 T ([S, x]) 执行的，其中 T 通常是自回归变压器和[S, x] 是 S 和 x 中标记的串联 </font><strong><em>*。因此，在一般情况下，</em></strong>它可以是对 S 和 x 进行运算以产生输出的任意函数**。这可以包括“非参数”方法，例如最近邻法。最近的工作已经开始探索这个问题。例如，研究表明，当从头开始训练 Transformer 以在上下文中执行线性回归时，新兴的学习算法类似于随机梯度下降（Akyürek 等人，2022 年；von Oswald 等人，2022 年）。然而，对于执行更复杂的自然语言任务的法LLMs来说，根本不清楚假设空间可能是什么。</p>
+<p>​        在这项工作中，我们表明，<strong>在广泛的任务中，LLMs中的 ICL 可以被视为在非常自然的假设空间上工作</strong>。我们认为，<strong>给定训练集 S，变压器将其映射到“任务向量”θ(S)，该向量本质上表示 S.2 中描述的映射/规则</strong>。即，<strong>给定变压器 T 和向量 θ，我们可以构造实现该任务的新函数 f (x; θ)</strong>。<strong>函数 f 与应用于 x 的原始变换器非常相似，但没有演示，而是通过 θ 进行调制</strong>（见图 2）。</p>
+<p>​        我们的观点也与<strong>软提示</strong>有关（Lester et al., 2021），因为这两种方法都会<strong>针对特定任务调节变压器的功能</strong>。然而，<strong>在 ICL 中，任务向量是在前向传递中计算的，而不是进行微调的。</strong></p>
+<p>​        我们的贡献包括<strong>提出基于假设类的 ICL 机械观点</strong>，并进行实验来验证我们对一系列公开可用的LLMs和各种任务的观点。我们的结果进一步加深了对 ICL 的理解，并可能对LLMs有效适应执行特定任务具有实际意义。</p>
+<h2 id="2-A-Hypothesis-Class-View-of-ICL"><a href="#2-A-Hypothesis-Class-View-of-ICL" class="headerlink" title="2 A Hypothesis Class View of ICL"></a>2 A Hypothesis Class View of ICL</h2><p>受学习理论的假设类视图的启发，我们的目标<strong>是了解 ICL 是否将演示集 S 映射到查询 x 上的函数以及这种映射是如何发生的</strong>。具体来说，我们<strong>试图看看 ICL 是否将 S 转换为 θ——某个假设空间内函数的“参数”</strong>。我们的实证研究结果表明这种观点是适用的，揭示了 ICL 运行的假设空间的结构。</p>
+<h3 id="2-1Theoretical-Framework"><a href="#2-1Theoretical-Framework" class="headerlink" title="2.1Theoretical Framework"></a>2.1Theoretical Framework</h3><p>我们使用 <em>T</em> 表示仅解码器变压器 LLM，<em>S</em> 表示用作 ICL 输入的演示集（即训练示例），x 表示要求 ICL 提供输出的查询。我们使用 <em>T</em> ([<em>S</em>, x]) 表示 ICL 对 <em>S</em> 和 x 串联的输出。</p>
+<p>​        为了证明 ICL 在假设空间内运行，我们的目标是证明其基本机制可以分为两部分：</p>
+<ul>
+<li>一种“学习算法”（用 <em>A</em> 表示），将 <em>S</em> 映射到“任务向量”<em>θ</em>，独立于查询 x。鉴于注意力层可以访问 S 和 x，这种独立性并非微不足道。</li>
+<li>一个“规则应用”（用<em>f</em>表示），它基于<strong><em>θ</em></strong> ≡ <strong><em>A</em></strong>(<strong><em>S</em></strong>) 将查询x 映射到输出，而不直接依赖于<em>S</em>。同样，这种独立性并非微不足道。</li>
+</ul>
+<p>因此，我们考虑以下从一组演示和查询到预测输出的映射<em>：T</em> ([S, x]) = f (x; A(S))。如果我们可以将 LLM 的前向传递分解为上述两个部分，我们可以将 ICL 视为在以下假设类上运行： H = {f (·; θ) | θ}。在下一节中，我们提出这样一个类的实现。</p>
+<h3 id="2-2-A-proposed-Hypothesis-Class"><a href="#2-2-A-proposed-Hypothesis-Class" class="headerlink" title="2.2 A proposed Hypothesis Class"></a>2.2 A proposed Hypothesis Class</h3><p>上述框架有多种可能的实现，对应于 A 和 f 的不同选择。接下来我们描述我们关注的实现，这自然是从变压器架构中得出的。我们<strong>考虑如图 1 所示的 ICL 设置，其中输入以查询 x（即 Corn）结尾，后跟“→”符号</strong>。如上所述，我们将学习视为由两个步骤组成：<strong>根据训练样本 S 计算参数向量 θ，并将该参数向量定义的规则应用于查询 x</strong>。变压器执行此操作的一个简单方法<strong>可能是让 → 表示的前 L 层计算 θ，然后让其余层将 θ 和 x 作为输入并产生输出</strong>。参见图 1。回想一下，变压器在任何层都可以访问 S 和 x，这对我们的观点提出了挑战。</p>
+<p>​        在以下部分中，我们将解决这一挑战并提出验证我们观点的实验。也就是说，我们证明<strong>我们可以在执行 ICL 的 LLM 的前向传播中分离出我们提出的 A 和 f。我们还表明 θ 向量是可解释的并且对应于学习任务。</strong></p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105174538487-1699177540536-5.png" alt="image-20231105174538487"></p>
+<h2 id="3-Validity-of-the-Hypothesis-Class-View"><a href="#3-Validity-of-the-Hypothesis-Class-View" class="headerlink" title="3 Validity of the Hypothesis Class View"></a>3 Validity of the Hypothesis Class View</h2><p>我们首先证明，<strong>将前向传播分成两个不同的分量 A 和 f（在第 2.2 节中定义）可以保持 ICL 的高精度。</strong></p>
+<h3 id="3-1-Separating-A-and-f"><a href="#3-1-Separating-A-and-f" class="headerlink" title="3.1 Separating A and f"></a>3.1 Separating A and f</h3><p>我们在常规前向传递中面临一些挑战：<strong>首先，对应于 A 的初始 L 层，更新 → 的表示以创建 θ，可以处理查询 x。因此，它们可能依赖于 x，从而产生 θ 对 x 的不必要的依赖。</strong>其次，与 f 相对应的其余层可以直接访问 S，而不是仅使用 x 和 θ。</p>
+<p>​        我们提出以下过程来解决这些挑战：<strong>为了解决第一个问题，我们引入一个“虚拟查询”x′并使用该查询计算→的表示。我们使用前 L 层之后的 → 表示（使用 x′ 计算）作为向量 θ（如图 2 左侧所示）。另一种方法是阻止对 x 的关注，但这会导致性能不佳。为了解决在不允许直接依赖于 S 的情况下计算 f (x, θ) 的第二个问题，我们仅对 x 和 →,3 执行变换器的前向传递，并对我们之前在第 L 层提取的 θ 进行“修补”。</strong> →（图2右侧）.4</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105175112562-1699177874552-7.png" alt="image-20231105175112562"></p>
+<p>3.2</p>
+<h2 id="8-Conclusions"><a href="#8-Conclusions" class="headerlink" title="8 Conclusions"></a>8 Conclusions</h2><p>通过LLMs对 ICL 的探索，我们揭示了 ICL 学习机制的新视角。我们揭示了一个简单而优雅的结构：<strong>ICL 通过将给定的训练集压缩为单个任务向量来发挥作用，然后引导变压器根据给定的查询生成适当的输出</strong>。我们的工作为了解LLMs如何进行 ICL 奠定了基础。根据我们的发现，未来的工作可以集中于理解任务向量是如何构建的以及如何使用它来计算输出。</p>
+]]></content>
+      <categories>
+        <category>上下文学习</category>
+      </categories>
+      <tags>
+        <tag>EMNLP2023</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>忘掉你想忘掉的东西：LLMs的高效忘却</title>
     <url>/2023/11/06/wang-diao-ni-xiang-wang-diao-de-dong-xi-llms-de-gao-xiao-wang-que/</url>
     <content><![CDATA[<h1 id="忘掉你想忘掉的东西：LLMs的高效忘却"><a href="#忘掉你想忘掉的东西：LLMs的高效忘却" class="headerlink" title="忘掉你想忘掉的东西：LLMs的高效忘却"></a>忘掉你想忘掉的东西：LLMs的高效忘却</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>大型语言模型（LLM）在预训练和记忆各种文本数据方面取得了显着进展，然而，这个过程可能会遇到<strong>隐私问题</strong>和<strong>违反数据保护法规</strong>的问题。因此，<strong>从此类模型中轻松删除与个人用户相关的数据，同时在删除后不降低其预测质量的能力变得越来越重要</strong>。为了解决这些问题，在这项工作中，我们提出了一种有效的取消学习框架，<strong>通过将选择性师生目标学习的轻量级取消学习层引入到变压器中，可以有效地更新 LLM，而无需在数据删除后重新训练整个模型</strong>。此外，我们引入了<strong>一种融合机制来有效地结合不同的遗忘层，学习遗忘不同的数据集来处理一系列遗忘操作</strong>。<strong>分类和生成任务</strong>的实验证明了我们提出的方法与最先进的基线相比的有效性。</p>
@@ -1732,42 +1768,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
       <categories>
         <category>大模型隐私问题</category>
-      </categories>
-      <tags>
-        <tag>EMNLP2023</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>情境学习创建任务向量</title>
-    <url>/2023/11/02/qing-jing-xue-xi-chuang-jian-ren-wu-xiang-liang/</url>
-    <content><![CDATA[<h1 id="情境学习创建任务向量"><a href="#情境学习创建任务向量" class="headerlink" title="情境学习创建任务向量"></a>情境学习创建任务向量</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>大型语言模型 (LLM) 中的上下文学习 (ICL) 已成为一种强大的新学习范式。然而，其基本机制仍不清楚。<strong>特别是，将其映射到“标准”机器学习框架具有挑战性，在该框架中，人们使用训练集 S 在某个假设类中找到最佳拟合函数 f (x)</strong>。在这里，我们在这个问题上取得了进展，表明 ICL 学习的函数通常具有非常简单的结构：<strong>它们对应于变压器 LLM，其唯一输入是查询 x 和从训练集计算出的单个“任务向量”</strong>。因此，<strong>ICL 可以看作是将 S 压缩为单个任务向量 θ(S)，然后使用该任务向量来调制变压器以产生输出</strong>。我们通过一系列模型和任务的综合实验来支持上述主张。</p>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>大型语言模型在过去几年中得到了显着改进。这些模型的一个<strong>显着特性是它们可以从很少的演示中学习新规则</strong>。例如，可以使用输入“Apple → Red、Lime → Green、Corn →”提示模型并生成输出“Yellow”。因此，<strong>该模型仅基于两个示例就学习了映射，并且可以将其正确应用于新示例</strong>。这种能力被称为 InContext Learning (ICL)，已被广泛使用，产生了令人印象深刻的实证结果（Brown 等人，2020；Liu 等人，2023；Dong 等人，2022）。</p>
-<p>​       鉴于这一成功，人们自然会问 ICL 背后的根本机制是什么。即，模型内部如何使用演示 S 和查询 x 来产生所需的输出？在这里，我们利用统计学习理论中的假设类概念（Shalev-Shwartz 和 Ben-David，2014）。在学习理论公式中，人们通常考虑假设类 H，其中 H 的每个元素都是函数 h(x; θ)，对输入 x 进行运算，并由参数向量 θ 指定。例如，如果 x ∈ Rd，则类 H 可以是线性分类器的集合，由系数向量 θ 定义为 h(x; θ) = θ · x。学习算法寻找一个能很好地拟合训练集的元素 h ∈ H。这称为经验风险最小化。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105171853641-1699175934785-1.png" alt="image-20231105171853641"></p>
-<p>​       目前尚不清楚 ICL 是否以这种方式运行，<font color="red" size="4.5"> 因为预测是通过 T ([S, x]) 执行的，其中 T 通常是自回归变压器和[S, x] 是 S 和 x 中标记的串联 </font><strong><em>*。因此，在一般情况下，</em></strong>它可以是对 S 和 x 进行运算以产生输出的任意函数**。这可以包括“非参数”方法，例如最近邻法。最近的工作已经开始探索这个问题。例如，研究表明，当从头开始训练 Transformer 以在上下文中执行线性回归时，新兴的学习算法类似于随机梯度下降（Akyürek 等人，2022 年；von Oswald 等人，2022 年）。然而，对于执行更复杂的自然语言任务的法LLMs来说，根本不清楚假设空间可能是什么。</p>
-<p>​        在这项工作中，我们表明，<strong>在广泛的任务中，LLMs中的 ICL 可以被视为在非常自然的假设空间上工作</strong>。我们认为，<strong>给定训练集 S，变压器将其映射到“任务向量”θ(S)，该向量本质上表示 S.2 中描述的映射/规则</strong>。即，<strong>给定变压器 T 和向量 θ，我们可以构造实现该任务的新函数 f (x; θ)</strong>。<strong>函数 f 与应用于 x 的原始变换器非常相似，但没有演示，而是通过 θ 进行调制</strong>（见图 2）。</p>
-<p>​        我们的观点也与<strong>软提示</strong>有关（Lester et al., 2021），因为这两种方法都会<strong>针对特定任务调节变压器的功能</strong>。然而，<strong>在 ICL 中，任务向量是在前向传递中计算的，而不是进行微调的。</strong></p>
-<p>​        我们的贡献包括<strong>提出基于假设类的 ICL 机械观点</strong>，并进行实验来验证我们对一系列公开可用的LLMs和各种任务的观点。我们的结果进一步加深了对 ICL 的理解，并可能对LLMs有效适应执行特定任务具有实际意义。</p>
-<h2 id="2-A-Hypothesis-Class-View-of-ICL"><a href="#2-A-Hypothesis-Class-View-of-ICL" class="headerlink" title="2 A Hypothesis Class View of ICL"></a>2 A Hypothesis Class View of ICL</h2><p>受学习理论的假设类视图的启发，我们的目标<strong>是了解 ICL 是否将演示集 S 映射到查询 x 上的函数以及这种映射是如何发生的</strong>。具体来说，我们<strong>试图看看 ICL 是否将 S 转换为 θ——某个假设空间内函数的“参数”</strong>。我们的实证研究结果表明这种观点是适用的，揭示了 ICL 运行的假设空间的结构。</p>
-<h3 id="2-1Theoretical-Framework"><a href="#2-1Theoretical-Framework" class="headerlink" title="2.1Theoretical Framework"></a>2.1Theoretical Framework</h3><p>我们使用 <em>T</em> 表示仅解码器变压器 LLM，<em>S</em> 表示用作 ICL 输入的演示集（即训练示例），x 表示要求 ICL 提供输出的查询。我们使用 <em>T</em> ([<em>S</em>, x]) 表示 ICL 对 <em>S</em> 和 x 串联的输出。</p>
-<p>​        为了证明 ICL 在假设空间内运行，我们的目标是证明其基本机制可以分为两部分：</p>
-<ul>
-<li>一种“学习算法”（用 <em>A</em> 表示），将 <em>S</em> 映射到“任务向量”<em>θ</em>，独立于查询 x。鉴于注意力层可以访问 S 和 x，这种独立性并非微不足道。</li>
-<li>一个“规则应用”（用<em>f</em>表示），它基于<strong><em>θ</em></strong> ≡ <strong><em>A</em></strong>(<strong><em>S</em></strong>) 将查询x 映射到输出，而不直接依赖于<em>S</em>。同样，这种独立性并非微不足道。</li>
-</ul>
-<p>因此，我们考虑以下从一组演示和查询到预测输出的映射<em>：T</em> ([S, x]) = f (x; A(S))。如果我们可以将 LLM 的前向传递分解为上述两个部分，我们可以将 ICL 视为在以下假设类上运行： H = {f (·; θ) | θ}。在下一节中，我们提出这样一个类的实现。</p>
-<h3 id="2-2-A-proposed-Hypothesis-Class"><a href="#2-2-A-proposed-Hypothesis-Class" class="headerlink" title="2.2 A proposed Hypothesis Class"></a>2.2 A proposed Hypothesis Class</h3><p>上述框架有多种可能的实现，对应于 A 和 f 的不同选择。接下来我们描述我们关注的实现，这自然是从变压器架构中得出的。我们<strong>考虑如图 1 所示的 ICL 设置，其中输入以查询 x（即 Corn）结尾，后跟“→”符号</strong>。如上所述，我们将学习视为由两个步骤组成：<strong>根据训练样本 S 计算参数向量 θ，并将该参数向量定义的规则应用于查询 x</strong>。变压器执行此操作的一个简单方法<strong>可能是让 → 表示的前 L 层计算 θ，然后让其余层将 θ 和 x 作为输入并产生输出</strong>。参见图 1。回想一下，变压器在任何层都可以访问 S 和 x，这对我们的观点提出了挑战。</p>
-<p>​        在以下部分中，我们将解决这一挑战并提出验证我们观点的实验。也就是说，我们证明<strong>我们可以在执行 ICL 的 LLM 的前向传播中分离出我们提出的 A 和 f。我们还表明 θ 向量是可解释的并且对应于学习任务。</strong></p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105174538487-1699177540536-5.png" alt="image-20231105174538487"></p>
-<h2 id="3-Validity-of-the-Hypothesis-Class-View"><a href="#3-Validity-of-the-Hypothesis-Class-View" class="headerlink" title="3 Validity of the Hypothesis Class View"></a>3 Validity of the Hypothesis Class View</h2><p>我们首先证明，<strong>将前向传播分成两个不同的分量 A 和 f（在第 2.2 节中定义）可以保持 ICL 的高精度。</strong></p>
-<h3 id="3-1-Separating-A-and-f"><a href="#3-1-Separating-A-and-f" class="headerlink" title="3.1 Separating A and f"></a>3.1 Separating A and f</h3><p>我们在常规前向传递中面临一些挑战：<strong>首先，对应于 A 的初始 L 层，更新 → 的表示以创建 θ，可以处理查询 x。因此，它们可能依赖于 x，从而产生 θ 对 x 的不必要的依赖。</strong>其次，与 f 相对应的其余层可以直接访问 S，而不是仅使用 x 和 θ。</p>
-<p>​        我们提出以下过程来解决这些挑战：<strong>为了解决第一个问题，我们引入一个“虚拟查询”x′并使用该查询计算→的表示。我们使用前 L 层之后的 → 表示（使用 x′ 计算）作为向量 θ（如图 2 左侧所示）。另一种方法是阻止对 x 的关注，但这会导致性能不佳。为了解决在不允许直接依赖于 S 的情况下计算 f (x, θ) 的第二个问题，我们仅对 x 和 →,3 执行变换器的前向传递，并对我们之前在第 L 层提取的 θ 进行“修补”。</strong> →（图2右侧）.4</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105175112562-1699177874552-7.png" alt="image-20231105175112562"></p>
-<p>3.2</p>
-<h2 id="8-Conclusions"><a href="#8-Conclusions" class="headerlink" title="8 Conclusions"></a>8 Conclusions</h2><p>通过LLMs对 ICL 的探索，我们揭示了 ICL 学习机制的新视角。我们揭示了一个简单而优雅的结构：<strong>ICL 通过将给定的训练集压缩为单个任务向量来发挥作用，然后引导变压器根据给定的查询生成适当的输出</strong>。我们的工作为了解LLMs如何进行 ICL 奠定了基础。根据我们的发现，未来的工作可以集中于理解任务向量是如何构建的以及如何使用它来计算输出。</p>
-]]></content>
-      <categories>
-        <category>上下文学习</category>
       </categories>
       <tags>
         <tag>EMNLP2023</tag>
@@ -1843,102 +1843,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 </code></pre><h2 id="5-Conclusion"><a href="#5-Conclusion" class="headerlink" title="5 Conclusion"></a>5 Conclusion</h2><p>在本文中，我们介绍了多模式模型编辑，以及新的基准 MMEdit。根据经验，我们分析了各种模型编辑基线的有效性，并探索它们对不同组件（例如视觉和文本）的影响。</p>
 <h2 id="6-Limitations"><a href="#6-Limitations" class="headerlink" title="6 Limitations"></a>6 Limitations</h2><p><strong>楷模</strong>。我们只编辑几个基本的多模式LLMs，留下许多其他的。此外，由于资源限制，我们编辑的多模态LLM的参数数量低于10B，我们无法编辑具有更多参数的LLM，例如65B LLaMA Adapter V2（Gao et al., 2023） 。</p>
 <p><strong>高效的视觉编辑</strong>。在本文中，我们的分析主要集中于比较不同模式模块中现有编辑方法的不同效果。然而，结果并不令人满意。展望未来，我们的主要目标是探索如何跨其他模式高效、准确地编辑信息。这包括研究技术，<span style="background-color: #5fb23680">例如通过查明多模态模型内的知识并识别需要修改的内容来在不同模态之间进行共同编辑。</span></p>
-]]></content>
-      <categories>
-        <category>知识编辑</category>
-      </categories>
-      <tags>
-        <tag>EMNLP2023</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我们可以通过情景学习来编辑事实知识吗？</title>
-    <url>/2023/11/02/wo-men-ke-yi-tong-guo-qing-jing-xue-xi-lai-bian-ji-shi-shi-zhi-shi-ma/</url>
-    <content><![CDATA[<h1 id="我们可以通过情景学习来编辑事实知识吗？"><a href="#我们可以通过情景学习来编辑事实知识吗？" class="headerlink" title="我们可以通过情景学习来编辑事实知识吗？"></a>我们可以通过情景学习来编辑事实知识吗？</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>之前的研究表明，像 GPT 这样的大型语言模型 (LLM) 在其参数中存储了大量事实知识。然而，存储的知识可能是错误的或过时的。传统的知识编辑方法通过对包含特定知识的文本进行微调来完善LLMs。然而，随着LLMs规模的不断扩大，这些基于梯度的方法带来了巨大的计算成本。模型即服务的趋势也使得修改黑盒 LM 中的知识变得不可能。<span style="background-color: #ff666680">受到上下文学习（ICL）这种基于演示上下文而无需参数更新的新范式的启发</span>，我们探索 ICL 是否可以编辑事实知识。为了回答这个问题，我们对 ICL 策略进行了全面的实证研究。实验表明，<span style="background-color: #ff666680">与 GPT-J (6B) 上基于梯度的方法相比，上下文知识编辑 (IKE) 在没有任何梯度和参数更新的情况下实现了有竞争力的成功率，但副作用要少得多，包括减少对相似但不相关事实的过度编辑以及更少的对先前存储的知识的遗忘</span>。我们还将该方法应用于具有数十或数百个参数的大型 LM，例如 OPT-175B，这显示了我们方法的可扩展性。该代码可在<span class="highlight" data-annotation="%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FLB4642KE%22%2C%22pageLabel%22%3A%221%22%2C%22position%22%3A%7B%22pageIndex%22%3A0%2C%22rects%22%3A%5B%5B233.271%2C260.191%2C273.121%2C269.098%5D%2C%5B87.874%2C248.236%2C225.359%2C257.143%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F8YZC667S%22%5D%2C%22locator%22%3A%221%22%7D%7D" ztype="zhighlight"><a href="zotero://open-pdf/library/items/LB4642KE?page=1">“https:// github.com/PKUnlp-icler/IKE.”</a></span></p>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>预训练语言模型 (LM) 为 NLP 研究树立了新范式，并席卷了所有现有的 NLP 基准。由于取得了令人鼓舞的成果，研究人员为 LM 赋予了满足现实世界需求的新技能，例如使用网络浏览器（Nakano 等人，2021）、编码（Chen 等人，2021）、玩策略游戏（FAIR 等人） al.，2022）和对话人才（OpenAI，2022、2023）。然而，语言模型的广泛应用也引发了人们对其生成虚假内容的陷阱的日益关注（Elazar et al., 2021；Cao</p>
-<p><img src="../imgs/$%7Bfiilename%7D/M6YKHBS2.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;M6YKHBS2&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FLB4642KE%22%2C%22annotationKey%22%3A%22FY8NBQWF%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%221%22%2C%22position%22%3A%7B%22pageIndex%22%3A0%2C%22rects%22%3A%5B%5B302.763%2C474.785%2C526.974%2C629.522%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F8YZC667S%22%5D%2C%22locator%22%3A%221%22%7D%7D&quot; width=&quot;374&quot; height=&quot;258&quot; src=&quot;attachments/M6YKHBS2.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>等人，2021a）、过时（Dhingra 等人，2022）、有偏见（Sheng 等人，2019；Zhao 等人，2021）和攻击性（Gehman 等人，2020）。为了缓解这一缺陷，旨在修改语言学习者所学到的知识的知识编辑（图 1）引起了越来越多的关注（Mitchell 等人，2022a；Meng 等人，2022a)。知识编辑的目标有两个：概括性和特异性。前者需要泛化到描述相同知识的各种提示，后者则不需要干扰其他不相关的知识。</p>
-<pre><code> 以往的知识编辑方法主要采用&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;基于梯度的方法来修改特定的模型参数以获得所需的模型行为&lt;/span&gt;（Mitchell等，2021；Meng等，2022a），例如在选举后更新总统。然而，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;目标知识神经元的识别通常需要计算开销很大的梯度估计&lt;/span&gt;（Dai et al., 2022）。此外，&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;更新的参数本身会导致超出所需版本的副作用，例如忘记以前学到的事实或对不相关事实进行过度编辑&lt;/span&gt;。先前的研究表明，当大规模 LM (LLM) 作为黑盒服务部署时（Sun 等人，2022），&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;对其参数的微小修改可能会极大地影响其最终用户的行为&lt;/span&gt;。因此，传统方法仍然受到编辑 LLM arXiv:2305.12740v1 \[cs.CL] 202 年 5 月 22 日的困扰，因为这些限制阻碍了可扩展性和通用性。
-
- 最近，情境学习（ICL）（Brown et al., 2020）已成为指导LLMs执行复杂任务的新范式。在 &lt;span style=&quot;background-color: #2ea8e580&quot;&gt;ICL 中，任务描述和演示示例以自然语言表示以形成上下文，并且以上下文为条件的 LM 预测根据预定义规则转换为答案&lt;/span&gt;（Brown 等人，2020）。通过这种方式，大型 LM 无需对参数进行任何修改即可适应各种下游任务，使其自然适合大型 LM 上的知识编辑。首先，它通过避免修改参数来减少计算开销，并消除参数更新带来的副作用的风险。最重要的是，&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;ICL 为人类提供了一种可解释的方式来校准 LM 行为&lt;/span&gt;。尽管有这些优点，ICL 是否适用于知识编辑仍不清楚。
-
- 在本文中，我们研究了 ICL 为LLMs进行知识编辑的潜力。我们专注于两个目标：（1）确保泛化，以便大型语言模型可以泛化到多个文本表面以获取更新的知识；（2）通过对目标知识事实进行准确修改，同时保留其他不相关事实，确保特异性。为了同时实现这些目标，我们设计了演示格式和组织策略，以构建合适的上下文学习演示，以指导LLMs的知识编辑。我们定义了三种类型的演示格式化模板，包括&lt;span style=&quot;background-color: #ff666680&quot;&gt;（i）复制，旨在将新事实注入语言模型； (ii) 更新，提高注入知识事实的泛化能力； (iii) 保留，指导语言模型保留不相关的知识事实。此外，为了充分利用 ICL 进行知识编辑的潜力，我们从训练语料库中检索相关知识事实作为演示输入。&lt;/span&gt; GPT-J（6B）知识编辑基准的实验结果表明，所提出的上下文学习知识编辑（IKE）在强基线下实现了整体可比的知识编辑性能。例如，IKE 的编辑成功率绝对优于 MEND（Mitchell 等人，2021）10％，并且在特异性方面比 ROME 获得了 30 分的增益（Meng 等人，2022a）。由于没有参数修改，IKE适用于OPT-175B等LLM，并表现出更好的记忆能力，即编辑后，近50%的知识事实保留了较高的概率。进一步的分析表明，&lt;span style=&quot;background-color: #ff666680&quot;&gt;演示选择和保留演示有助于特异性，而更新演示则提高泛化能力&lt;/span&gt;。最后，我们讨论了IKE在实际场景中应用时可能遇到的潜在挑战，并提供了相应的讨论。总的来说，这项研究的贡献有四个方面：
-</code></pre><ul>
-<li>据我们所知，这项工作代表了对 ICL 编辑 LM 知识潜力的首次系统探索。</li>
-<li>我们对ICL 策略进行全面的实证研究，并分析这些策略如何影响最终性能。</li>
-<li>通过设计适当的演示格式和组织策略，IKE 可以以更少的计算开销和副作用实现相当的成功率。</li>
-<li>我们研究将IKE 应用到现实场景的可行性并讨论潜在的挑战。</li>
-</ul>
-<h2 id="2-Related-Work"><a href="#2-Related-Work" class="headerlink" title="2 Related Work"></a>2 Related Work</h2><p><strong>知识编辑方法 </strong>最近关于知识编辑的研究大多是基于炒作网络或基于归因的。基于炒作网络的方法训练超网络以获得某些编辑的梯度变化。例如，曹等人。 （2021b）使用超网络来预测测试时的参数变化，这会改变事实，同时保留不相关的事实。 MEND（Mitchell 等人，2022a）学会了将原始微调梯度转换为梯度的低秩分解。米切尔等人。 （2022b）使用编辑记忆检索器和反事实模型来生成，而不更新基本模型的参数。基于归因的方法定位神经网络中某些知识的神经元激活，仅更新相关参数。戴等人。 （2022）使用基于梯度的归因评估了不同神经元对特定知识的贡献，并通过用缩放的嵌入向量替换多层感知器（MLP）权重矩阵中的列来更新或删除事实。孟等人。 (2022a)定位了表达事实知识的单层，并通过在MLP模块中编写新的键值对来编辑这些事实知识。</p>
-<p><strong>知识编辑基准</strong> 一些知识编辑基准通常用于评估编辑方法的有效性和特异性。对于 BERT 风格的模型，通常采用事实检查数据集 FEVER (Thorne et al., 2018) 和问答数据集 zsRE (Levy et al., 2017)。在 FEVER 中，每个 x 是一个声明，每个 y 表示相应声明的有效性。在 zsRE 中，每个 x 都是关于事实的问题，每个 y 都是答案，而 xloc 询问与 x 无关的事实。对于 GPT 风格的模型，Mitchell 等人。 (2022a) 引入了维基文本编辑数据集，该数据集要求模型完成带有编辑延续的段落，同时每个标记的分布与不相关的段落 xloc 应保持不变。在我们的实验中，我们使用了一个更具挑战性的 QA 数据集，称为 COUNTERFACT（Meng 等人，2022a）。在 COUNTERFACT 中，问题 x 的编辑答案 y 有时可能与现实世界反事实，并且不相关的超出范围的样本 xloc 比 zsRE 中的困难得多，这使得模型更难预测所需的答案。此外，预先训练的LLMs很难捕获这些所需的事实，从而避免了LLMs在编辑之前了解这些知识的影响。</p>
-<p><strong>情境学习</strong> 情境学习 (ICL) 是一种免训练范例，可从输入情境中串联的演示中学习。给定相关示例和查询，模型通过类比学习来做出预测（Brown 等人，2020；Liu 等人，2022）。现有的知识编辑方法需要重新计算梯度或者以廉价的方式计算并执行这样的知识编辑。斯等人。 （2022）首次探讨了情境学习是否可以更新LLMs的知识，并表明结合各种演示可以提高知识编辑的成功率。然而，他们只关注GPT-3，而没有深入探索知识编辑的潜在能力和副作用。</p>
-<h3 id="3-Task-Formulation"><a href="#3-Task-Formulation" class="headerlink" title="3 Task Formulation"></a>3 Task Formulation</h3><p>知识编辑的目标是通过最大化概率 PM(y*|x*) 来将新事实 (x*, y*) 注入到 LMM 中。 x*是探究M中事实知识的提示（例如，美国总统是），y*将是编辑目标乔·拜登。知识编辑还需要概括性和特异性：</p>
-<ul>
-<li><strong>泛化</strong>：对于编辑中的提示x的范围 Dx*（即与新事实相关的提示），x ∈ Dx* 的预测也应该更新为 y*。例如，预测问题：谁是美国总统？答：将更新为乔·拜登。</li>
-<li><strong>特异性</strong>：对于提示x 超出编辑范围，x / ε Dx*，x 的预测应该是它原来的预测yo。例如，俄罗斯总统的预测应该保留。</li>
-</ul>
-<h2 id="4-Method-IKE"><a href="#4-Method-IKE" class="headerlink" title="4 Method: IKE"></a>4 Method: IKE</h2><h3 id="4-1-In-Context-Learning"><a href="#4-1-In-Context-Learning" class="headerlink" title="4.1 In-Context Learning"></a>4.1 In-Context Learning</h3><p>情境学习（ICL）是由 Brown 等人提出的。 （2020）用于小样本学习。对于大型语言模型 M，ICL 的目标是根据 k 个演示 C = {(x1, y1),… 来预测输入 x 的 ˆ y ∈ Y，而无需进行任何参数更新。 。 。 ，（xk，yk）}。语言模型 M 预测给定 x 的 y ∈ Y 的概率：PM(y | x, C)。更具体地说，ICL 使用模板 T 将输入和标签转换为自然语言文本。以情感分析为例，输入 xi 和标签 yi 的上下文演示将转换为句子：xi。情感：yi，那么语言模型 M 将在给定 T (x1, y1), 的情况下预测 y ∈ Y。 。 。 ，T（xk，yk），T（x，）。</p>
-<h3 id="4-2-In-Context-Knowledge-Editing"><a href="#4-2-In-Context-Knowledge-Editing" class="headerlink" title="4.2 In-Context Knowledge Editing"></a>4.2 In-Context Knowledge Editing</h3><p>当我们将目标事实 f = (x*, y*) 注入 LM 时，我们将构造 k 个演示 C = {c1,…。 。 。 ，ck}。知识编辑的目标是当提示x在目标提示x*的编辑范围内时最大化P(y*|x,f,C)，并且最小化P(y*|x,f,C)之间的距离。 | x, f, C) 和 P (y | x) 当 x / ∈ Dx* （特异性目标）时。 LM 应确定探测提示 x 是否在 x* 的编辑范围内，即 Dx*。为了通过 ICL 实现这些目标，适当的演示输入至关重要。我们进一步将以f为目标的知识编辑演示构建分解为两个子问题：</p>
-<p>（i）如何设计每个演示的格式； (ii) 如何选择上下文演示并对其进行排名（Dong 等人，2023）。</p>
-<h4 id="4-2-1-Demonstration-Formating"><a href="#4-2-1-Demonstration-Formating" class="headerlink" title="4.2.1 Demonstration Formating"></a>4.2.1 Demonstration Formating</h4><p>每个演示 ci 都包含一个新事实 fi = (xi*, y* i )、一个探测提示 xi 及其预测 yi。上下文演示应该教会 LM 复制、更新和保留针对不同提示的预测：</p>
-<ul>
-<li><strong>复制</strong>：要将新事实注入 LM，第一步是教他们将目标提示的预测复制到新事实中。在复制演示中，xi = xi* 且 yi = y* i。</li>
-<li><strong>更新</strong>：知识编辑不仅仅是教语言模型重复新事实。为了知识编辑的泛化，编辑范围内提示的预测也应该更新。在更新演示中，xi ∈ Dx* i 且 yi = y* i。</li>
-<li><strong>保留</strong>：出于知识编辑的特殊性，语言模型应在超出范围的提示中保留其原始预测。在保留演示中，xi / ∈ Dx* i 和 yi 应该是它的原始答案 yo i。 IKE 的模板 T 将 f 、 x 和 y 转换为自然语言：T (f, x, y) = New Fact: f 。提示：xy。详细信息列于§A。</li>
-</ul>
-<h4 id="4-2-2-Demonstration-Organization"><a href="#4-2-2-Demonstration-Organization" class="headerlink" title="4.2.2 Demonstration Organization"></a>4.2.2 Demonstration Organization</h4><p>当我们在 LM 中编辑知识事实 f 时，我们构建 k 个演示 C = {c1,… 。 。 , ck} 来自训练语料库。哪些演示适合上下文编辑？我们关注刘等人。 （2022）使用无监督检索器来选择 k 个最近邻居。更具体地说，我们使用预训练的句子编码器 E 对新事实 f 的提示 x* 及其原始答案 yo 和目标预测 y* 进行编码。这</p>
-<p><img src="../imgs/$%7Bfiilename%7D/ZLL8JITP.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;ZLL8JITP&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FLB4642KE%22%2C%22annotationKey%22%3A%228PRW9YFQ%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B302.885%2C681.505%2C530.769%2C775.544%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F8YZC667S%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;380&quot; height=&quot;157&quot; src=&quot;attachments/ZLL8JITP.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>训练语料库中的记录将以相同的方式进行编码，并根据余弦相似度检索 k-NN 事实。上下文演示的排名还取决于余弦相似度：cos(c0, f ) &lt; cos(c1, f ) &lt; 。 。 。 &lt; cos(ck, f )，其中 c1, . 。 。 , ck 从左到右放置在上下文中。</p>
-<h3 id="4-3-Discussion-Gradient-based-methods-and-gradient-free-methods"><a href="#4-3-Discussion-Gradient-based-methods-and-gradient-free-methods" class="headerlink" title="4.3 Discussion:Gradient-based methods and gradient-free methods"></a>4.3 Discussion:Gradient-based methods and gradient-free methods</h3><p>之前的参数更新方法会调整LM M的参数θ。它们根据梯度∇θ − log PM(y*|x*)计算Δθ，将基础模型Mθ更新为编辑后的M′θ+Δθ。然后将通过 PM′(y | x) 评估编辑方法。相反，上下文学习通过为新事实 f = (x*, y*) 构建演示 C 来修改 M 中的知识事实，然后通过 PM(y | x, f, C) 来评估编辑方法。将 PM(y | x, f, C) 与 PM′(y | x) 进行比较，可以发现： (i) ICL 不需要对目标事实进行梯度估计，并且在知识编辑后保持原始 LM M 不变。这大大减少了计算开销，从而使编辑适用于具有万亿级参数的LM，并消除了修改参数的副作用。 (ii) 演示 C 以自然文本表示，比显着参数更新 Δθ 更容易解释。它提供了一个人类可理解的界面来校准模型行为。我们在表 1 中重点介绍了这两种方法的特点。</p>
-<h2 id="5-Experiment"><a href="#5-Experiment" class="headerlink" title="5 Experiment"></a>5 Experiment</h2><p>在本节中，我们通过实验来回答以下研究问题：</p>
-<ul>
-<li>与基于梯度的方法相比，IKE 的性能如何？</li>
-<li>演示设计策略如何影响IKE 的性能</li>
-<li>LM 的规模如何影响IKE 的性能，IKE 能否扩展到具有数百或数千亿参数的大型语言模型？</li>
-<li><p>知识编辑有哪些副作用？与其他参数更新方法相比，IKE 产生的副作用是多还是少？</p>
-<p> 我们首先介绍实验设置，包括比较基线方法、评估基准和不同尺度的语言模型，用于知识编辑（第 5.1 节）。然后我们分析了§5.2中的主要知识编辑结果以及情境学习知识编辑的影响因素（§5.3）。</p>
-</li>
-</ul>
-<h3 id="5-1-Experimental-Setting"><a href="#5-1-Experimental-Setting" class="headerlink" title="5.1 Experimental Setting"></a>5.1 Experimental Setting</h3><p>我们的目标是评估上下文知识编辑与参数更新方法相比的性能。我们还对不同大小的语言模型进行了实验，以探索上下文知识编辑的扩展能力。</p>
-<h4 id="5-1-1-基线"><a href="#5-1-1-基线" class="headerlink" title="5.1.1 基线"></a>5.1.1 基线</h4><p>遵循之前的知识编辑方法，我们还选择 GPT-J (6B) 作为我们的主要评估骨干。比较的基线包括：</p>
-<p><strong>FT</strong> 在描述编辑事实的文本上微调基本模型，而无需通过应用 Adam 提前停止来训练新的模型编辑器。</p>
-<p><strong>MEND</strong> MEND（Mitchell 等人，2022a）通过使用预训练的超网络将权重矩阵分解为rank-1 形式来转换更新事实的微调梯度。</p>
-<p><strong>ROME</strong> ROME（Meng et al., 2022a）学习定位一组特定 MLP 模块的事实检索，并通过直接在 MLP 模块中写入新的键值对来更新知识。</p>
-<p><strong>PROMPT</strong> 探索上下文演示如何影响 IKE 的性能。我们直接使用新事实作为上下文，通过 P(y|x, f ) 来探测 LM，其中 f = (x*, y*)。实施细节见§A</p>
-<h4 id="5-1-2-Evaluation-Setup"><a href="#5-1-2-Evaluation-Setup" class="headerlink" title="5.1.2 Evaluation Setup"></a>5.1.2 Evaluation Setup</h4><p><strong>模型</strong> 为了探索 LM 的规模将如何影响上下文知识编辑的有效性，我们在五个类似 GPT 的自回归转换器语言模型上评估了上下文知识编辑，其规模范围从 1.5B 到 175B 参数：</p>
-<ul>
-<li>GPT- 2 XL (1.5B)（Radford 等人，2019），GPT-2 的 15 亿参数版本。</li>
-<li>GPT-NEO (2.7B)（Gao 等人，2021），EleutherAI 发布的类 GPT-2 因果语言模型的 27 亿参数版本。它是在专门为 LLM 训练设计的 Pile 数据集上进行训练的。</li>
-<li>GPT-J (6B)（Wang 和 Komatsuzaki，2021），一种在具有 60 亿个参数的 Pile 上训练的自回归文本生成模型。</li>
-<li>GPT-NEOX (20B)（Black 等人，2022），一个在 Pile 上训练的 200 亿参数自回归语言模型。</li>
-<li>OPT (175B)（Zhang 等人，2022），开放式预训练 Transformer，由 MetaAI 创建，具有 1750 亿个参数。</li>
-</ul>
-<p><strong>基准</strong> 我们主要评估 COUNTERFACT 的基线（Meng et al., 2022a），这是一个具有挑战性的基准，适用于具有困难编辑目标和难以区分编辑范围的类 GPT 因果语言模型。它包含 21, 919 条不同关系和实体的记录。每条记录的目标是将知识三元组（s*，r*，oc）更改为（s*，r*，o*），其中s*和r*由目标提示x*描述。该记录还包含释义提示 P P 作为范围内提示和邻域提示 P N ，即与目标三元组共享同一对象的知识三元组（s′，r*，oc）作为范围外提示。我们关注孟等人。 (2022a) 使用前 2000 条记录作为测试集，其余记录分为训练集。 COUNTERFACT 的详细信息在 §B 中列出。</p>
-<p><strong>指标</strong> 知识编辑的性能从三个方面来衡量（有效性、泛化性和特异性）。</p>
-<ul>
-<li><strong>功效 </strong>通过功效得分 (ES, E[I[P(o*) &gt; P(oc)]]) 和功效幅度 (EM, E[P(o*) − P( oc）]）。</li>
-<li><strong>泛化 </strong>通过释义衡量释义提示的译后编辑准确性分数 (PS) 和释义幅度 (PM)。 PS和PM的定义与ES和EM类似。</li>
-<li><strong>特异性 </strong>通过邻域得分 (NS, E[I[P(oc) &gt; P(o*)]]) 和邻域量级 (NM, E[P(oc) − P(o*)]) 来衡量邻域提示的准确性，因为邻域提示 (s′, r*, oc) 与目标提示共享相同的原始对象，并且这些事实不应被编辑。</li>
-</ul>
-<p>我们也关注孟等人。 (2022a) 将 ES、PS、NS 的调和平均值报告为分数 (S)</p>
-<p><img src="../imgs/$%7Bfiilename%7D/QTYQT47T.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;QTYQT47T&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FLB4642KE%22%2C%22annotationKey%22%3A%22JKFNHCLD%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%226%22%2C%22position%22%3A%7B%22pageIndex%22%3A5%2C%22rects%22%3A%5B%5B64%2C569.39%2C535%2C784.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F8YZC667S%22%5D%2C%22locator%22%3A%226%22%7D%7D&quot; width=&quot;785&quot; height=&quot;359&quot; src=&quot;attachments/QTYQT47T.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<h3 id="5-2-Main-Results"><a href="#5-2-Main-Results" class="headerlink" title="5.2 Main Results"></a>5.2 Main Results</h3><p>表2的顶行显示了不同方法的知识编辑结果。我们的研究结果是：（i）所有方法在功效方面都表现良好，正如它们接近的 ES 分数所示。然而，在普遍性和特殊性方面存在显着差异。例如，FT 获得了较高的 ES (99.9) 和 PS (96.4) 分数，但在特异性方面表现不佳。这凸显了知识编辑中平衡泛化和特殊性的挑战。 (ii) 在基线方法中，ROME 在所有三个指标方面总体表现最好，但计算开销较高。由于这一限制，它不适用于诸如 OPT175B 等更迫切需要知识编辑的大型 LM。 (iii) 所提出的方法 IKE 在特异性方面表现出色，但在有效性和泛化方面也表现良好。例如，IKE 在 GPTJ 上获得了与 ROME 相当的总分（89.6 比 91.5），同时不需要任何参数对 LM 的修改。这种计算优势使得在 OPT-175B 等大型 LM 上执行知识编辑成为可能，其中 IKE 比 PROMPT 明显提高了 36.0 个点。这些结果证明了 IKE 在知识编辑方面的有效性、效率和可扩展性。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/P6MNIS5S.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;P6MNIS5S&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FLB4642KE%22%2C%22annotationKey%22%3A%22GWHX8CHK%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%226%22%2C%22position%22%3A%7B%22pageIndex%22%3A5%2C%22rects%22%3A%5B%5B303.158%2C339.39%2C531.316%2C561.232%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F8YZC667S%22%5D%2C%22locator%22%3A%226%22%7D%7D&quot; width=&quot;380&quot; height=&quot;369&quot; src=&quot;attachments/P6MNIS5S.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<h3 id="5-3-Analysis"><a href="#5-3-Analysis" class="headerlink" title="5.3 Analysis"></a>5.3 Analysis</h3><p>在这一部分中，我们讨论不同演示策略的效果、跨尺度模型的 IKE 可扩展性以及知识编辑引入的副作用。</p>
-<h4 id="5-3-1Ablation-on-Demonstration"><a href="#5-3-1Ablation-on-Demonstration" class="headerlink" title="5.3.1Ablation on Demonstration"></a>5.3.1Ablation on Demonstration</h4><p><strong>演示次数</strong> 演示次数是 ICL 性能的影响因素之一 (Brown et al., 2020)。我们研究了演示数量如何影响第二阶段的 IKE 性能</p>
-<p><img src="../imgs/$%7Bfiilename%7D/HKQ4CHLZ.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;HKQ4CHLZ&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FLB4642KE%22%2C%22annotationKey%22%3A%22MUQZEW2N%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%227%22%2C%22position%22%3A%7B%22pageIndex%22%3A6%2C%22rects%22%3A%5B%5B63.947%2C615.706%2C292.895%2C778.732%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F8YZC667S%22%5D%2C%22locator%22%3A%227%22%7D%7D&quot; width=&quot;382&quot; height=&quot;272&quot; src=&quot;attachments/HKQ4CHLZ.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>表 3 中的块。在没有任何演示的情况下，PROMPT 因其低 NS（37.9）而表现出过度泛化，表明它只是学习复制预测。给定一些演示（4 或 8)，IKE 在有效性和泛化性方面比 PROMPT 表现更差，因为它开始区分提示是否在编辑范围内。随着演示次数的增加，IKE逐渐学会平衡通用性和特殊性，实现更好的权衡。</p>
-<p><strong>演示组织 </strong>先前的研究（Liu et al., 2022; Rubin et al., 2022; Lu et al., 2022）表明，包括演示选择和演示排序（Dong et al., 2023）在内的演示组织对于 ICL 也至关重要。我们的建议遵循刘等人的简单无监督方法。 （2022），根据输入提示和演示之间的余弦相似度从训练语料库中检索和排序演示。在表 3 第三块中的两项消融研究中，我们发现删除选择程序（即随机选择）会导致 NS 分数从 77.0 明显下降到 45.0，这表明正确提示选择的重要性。然而，随机排序带来的性能差异可以忽略不计。我们推测这是因为所选的提示与目标事实高度相关，并且基于 Transformer 的 LM 中的注意力机制可以很好地处理长程依赖性。我们将进一步的改进作为未来的工作。</p>
-<p><strong>演示格式 </strong>我们进一步检查演示类型的影响，包括复制、更新和保留。如表 3 中的第四个块所示，删除复制演示会导致性能轻微下降，因为即使没有复制演示，LM 也可以轻松复制演示中的内容。相反，更新演示在教导 LM 修改其知识方面发挥着重要作用，删除更新演示后泛化得分要差得多。此外，删除保留演示会导致特异性急剧下降（通过 NM 分数衡量），从 35.2 降至 -47.6。这表明保留演示对于帮助 LM 识别超出范围的事实并维持对这些提示的原始预测至关重要。</p>
-<h4 id="5-3-2IKE-Benefits-from-Model-Scaling"><a href="#5-3-2IKE-Benefits-from-Model-Scaling" class="headerlink" title="5.3.2IKE Benefits from Model Scaling"></a>5.3.2IKE Benefits from Model Scaling</h4><p>我们进一步评估了 COUNTERFACT 上的 IKE，针对不同尺度的五种类似 GPT 的因果语言模型。正如之前的实验表明，所有方法都表现出很高的知识编辑功效，因此我们重点关注大型语言模型的泛化性和特异性，因为这些指标的定义是为了衡量可能对最终用户造成巨大影响的副作用。如表 4 所示，我们发现 IKE 的性能与 LM 的规模正相关，并且最大的 OPT-175B 实现了最强的泛化和特异性结果。这是令人鼓舞的，因为 IKE 的性能可以随着 LM 规模的增加而增强，使其可插入未来更强大的 LM 主干。</p>
-<h4 id="5-3-3Resilience-to-Over-Editing"><a href="#5-3-3Resilience-to-Over-Editing" class="headerlink" title="5.3.3Resilience to Over-Editing"></a>5.3.3Resilience to Over-Editing</h4><p>过度编辑是知识编辑的常见副作用，指在编辑目标事实时对超出范围的事实产生影响。尽管 COUNTERFACT 已经包含由 (s′, r*, oc) 组成的范围外提示，它们与编辑目标共享相同的关系 r 和原始对象 oc： (s*, r*, oc) → (s*, r*, o*），我们采用Dong等人提出的对比知识评估（CKA）对过度编辑进行更全面的评估。 （2022）。具体来说，对于一个三元组（s，r，o），CKA将r替换为其他相似但不相关的关系r′，并比较PM（o | s，r）和PM（o | s，r′）来评估M是否知道事实（s，r，o）。受此启发，我们将(s*,r’,o*)视为相似但不相关的提示，并考虑P(o*|s*,r’)的变化，发现P(o*|s*,r’ ）在注入（s*，r*，o*）后也会增加。为了进一步探索不同方法中的过度编辑，我们考虑 CKA 分数 P(o*|s*, r*)/Er′∈RP(o*|s*, r′)。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/A9BSU2NB.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;A9BSU2NB&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FLB4642KE%22%2C%22annotationKey%22%3A%22W3GR7IZZ%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B61.731%2C622.082%2C298.269%2C782.467%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F8YZC667S%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;394&quot; height=&quot;267&quot; src=&quot;attachments/A9BSU2NB.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p><img src="../imgs/$%7Bfiilename%7D/JRUG4L94.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;JRUG4L94&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FLB4642KE%22%2C%22annotationKey%22%3A%22V8EL5CWL%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B304.038%2C646.313%2C529.038%2C781.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F8YZC667S%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;375&quot; height=&quot;226&quot; src=&quot;attachments/JRUG4L94.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>CKA评估结果如表5所示。如果CKA得分小于预定义阈值α，则正确事实的困惑度为输给了对比虚假事实的困惑，结果证明这是一次编辑失败。尽管所有基线在编辑功效方面都表现良好，但在更严格的对比评估下它们往往过于概括。 ROME 的平均 CKA 得分最低，错误率最高，这表明它识别与目标提示共享同一主题的范围外提示的能力较差。 IKE 对过度编辑的影响较小。</p>
-<h4 id="5-3-4Maintenance-for-Original-Knowledge"><a href="#5-3-4Maintenance-for-Original-Knowledge" class="headerlink" title="5.3.4Maintenance for Original Knowledge"></a>5.3.4Maintenance for Original Knowledge</h4><p>我们得出的结论是，先前存储在语言模型中的事实知识将在知识编辑过程中被删除或遗忘。我们在表6中考虑编辑前后P(oc|s*, r)的变化。结果表明，所有编辑方法都会导致P(oc|s*, r*)的下降。罗马几乎忘记了所有最初的事实。如果我们想要纠正 LM 的预测，就必须擦除原来的事实知识。然而，如果我们想更新语言模型的预测，例如更新美国总统是从唐纳德·特朗普到乔·拜登的预测（时间感知关系），那么旧知识 2017 年，美国总统是唐纳德·特朗普不应该被忘记。</p>
-<pre><code>为了评估编辑中这种时间感知知识的遗忘，我们基于 TEMPLAMA (Dhingra et al., 2022) 构建了一个小型基准，以进一步表明 IKE 比 §C 中的其他基准可以导致更少的知识遗忘。
-</code></pre><h2 id="6-Discussions"><a href="#6-Discussions" class="headerlink" title="6 Discussions"></a>6 Discussions</h2><p>在之前的实验中，我们遵循孟等人之前研究的设置。 （2022a）并主要评估编辑单个事实以进行公平比较的方法。我们的结果表明 IKE 可以获得更好的泛化性和特异性，副作用更少，并且不需要修改参数。尽管如此，为了探讨可行性在将 IKE 应用到现实场景中时，有几个重要问题尚未得到充分探索：(1) IKE 能否扩展以容纳更多的编辑事实？考虑到语言模型的输入长度有限，在上下文中包含大量的编辑事实可能是不可行的。 (2) IKE 能否适应处理不同格式和域的事实和提示？在IKE中，事实和提示的域和格式保持一致。然而，在现实世界中，事实和提示有多种形式。米切尔等人。 (2022b)提出了一种基于检索的方法来编辑多个知识事实。类似地，具有外部存储器来存储事实编辑的 IKE 可以检索正确的事实编辑来构建给定提示的上下文，从而避免永远在上下文中预先添加所有事实编辑。为了验证 IKE 对不同形式的事实或提示的泛化，我们用维基百科中的中性数据替换了事实，或者用生成提示替换了提示，提示 LM 生成与新对象相关的文本。详细讨论可以在§D 中找到。</p>
-<h2 id="7-Conclusion"><a href="#7-Conclusion" class="headerlink" title="7 Conclusion"></a>7 Conclusion</h2><p>在这项工作中，我们研究了上下文学习在大规模语言模型上进行知识编辑的潜力。具体来说，我们设计了提示LM的演示策略，包括三种类型的演示格式和基于检索的演示组织。我们表明，所提出的方法 IKE 在不需要任何参数修改的情况下实现了竞争性知识编辑功效，并保持了良好的泛化和特异性性能。进一步的分析证明了它对于大型 LM 的可扩展性、对过度编辑问题的弹性以及通过多轮编辑维护时间感知知识事实的能力。我们的结果证明 ICL 在 LM 知识编辑方面具有巨大潜力。</p>
 ]]></content>
       <categories>
         <category>知识编辑</category>
@@ -3031,6 +2935,102 @@ Gain\_Gini(D,A)=\frac{D_1}{D}Gini(D_1)+\frac{D_2}{D}Gini(D_2)</script><blockquot
       </categories>
       <tags>
         <tag>文献整理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我们可以通过情景学习来编辑事实知识吗？</title>
+    <url>/2023/11/02/wo-men-ke-yi-tong-guo-qing-jing-xue-xi-lai-bian-ji-shi-shi-zhi-shi-ma/</url>
+    <content><![CDATA[<h1 id="我们可以通过情景学习来编辑事实知识吗？"><a href="#我们可以通过情景学习来编辑事实知识吗？" class="headerlink" title="我们可以通过情景学习来编辑事实知识吗？"></a>我们可以通过情景学习来编辑事实知识吗？</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>之前的研究表明，像 GPT 这样的大型语言模型 (LLM) 在其参数中存储了大量事实知识。然而，存储的知识可能是错误的或过时的。传统的知识编辑方法通过对包含特定知识的文本进行微调来完善LLMs。然而，随着LLMs规模的不断扩大，这些基于梯度的方法带来了巨大的计算成本。模型即服务的趋势也使得修改黑盒 LM 中的知识变得不可能。<span style="background-color: #ff666680">受到上下文学习（ICL）这种基于演示上下文而无需参数更新的新范式的启发</span>，我们探索 ICL 是否可以编辑事实知识。为了回答这个问题，我们对 ICL 策略进行了全面的实证研究。实验表明，<span style="background-color: #ff666680">与 GPT-J (6B) 上基于梯度的方法相比，上下文知识编辑 (IKE) 在没有任何梯度和参数更新的情况下实现了有竞争力的成功率，但副作用要少得多，包括减少对相似但不相关事实的过度编辑以及更少的对先前存储的知识的遗忘</span>。我们还将该方法应用于具有数十或数百个参数的大型 LM，例如 OPT-175B，这显示了我们方法的可扩展性。该代码可在<span class="highlight" data-annotation="%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FLB4642KE%22%2C%22pageLabel%22%3A%221%22%2C%22position%22%3A%7B%22pageIndex%22%3A0%2C%22rects%22%3A%5B%5B233.271%2C260.191%2C273.121%2C269.098%5D%2C%5B87.874%2C248.236%2C225.359%2C257.143%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F8YZC667S%22%5D%2C%22locator%22%3A%221%22%7D%7D" ztype="zhighlight"><a href="zotero://open-pdf/library/items/LB4642KE?page=1">“https:// github.com/PKUnlp-icler/IKE.”</a></span></p>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>预训练语言模型 (LM) 为 NLP 研究树立了新范式，并席卷了所有现有的 NLP 基准。由于取得了令人鼓舞的成果，研究人员为 LM 赋予了满足现实世界需求的新技能，例如使用网络浏览器（Nakano 等人，2021）、编码（Chen 等人，2021）、玩策略游戏（FAIR 等人） al.，2022）和对话人才（OpenAI，2022、2023）。然而，语言模型的广泛应用也引发了人们对其生成虚假内容的陷阱的日益关注（Elazar et al., 2021；Cao</p>
+<p><img src="../imgs/$%7Bfiilename%7D/M6YKHBS2.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;M6YKHBS2&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FLB4642KE%22%2C%22annotationKey%22%3A%22FY8NBQWF%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%221%22%2C%22position%22%3A%7B%22pageIndex%22%3A0%2C%22rects%22%3A%5B%5B302.763%2C474.785%2C526.974%2C629.522%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F8YZC667S%22%5D%2C%22locator%22%3A%221%22%7D%7D&quot; width=&quot;374&quot; height=&quot;258&quot; src=&quot;attachments/M6YKHBS2.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>等人，2021a）、过时（Dhingra 等人，2022）、有偏见（Sheng 等人，2019；Zhao 等人，2021）和攻击性（Gehman 等人，2020）。为了缓解这一缺陷，旨在修改语言学习者所学到的知识的知识编辑（图 1）引起了越来越多的关注（Mitchell 等人，2022a；Meng 等人，2022a)。知识编辑的目标有两个：概括性和特异性。前者需要泛化到描述相同知识的各种提示，后者则不需要干扰其他不相关的知识。</p>
+<pre><code> 以往的知识编辑方法主要采用&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;基于梯度的方法来修改特定的模型参数以获得所需的模型行为&lt;/span&gt;（Mitchell等，2021；Meng等，2022a），例如在选举后更新总统。然而，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;目标知识神经元的识别通常需要计算开销很大的梯度估计&lt;/span&gt;（Dai et al., 2022）。此外，&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;更新的参数本身会导致超出所需版本的副作用，例如忘记以前学到的事实或对不相关事实进行过度编辑&lt;/span&gt;。先前的研究表明，当大规模 LM (LLM) 作为黑盒服务部署时（Sun 等人，2022），&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;对其参数的微小修改可能会极大地影响其最终用户的行为&lt;/span&gt;。因此，传统方法仍然受到编辑 LLM arXiv:2305.12740v1 \[cs.CL] 202 年 5 月 22 日的困扰，因为这些限制阻碍了可扩展性和通用性。
+
+ 最近，情境学习（ICL）（Brown et al., 2020）已成为指导LLMs执行复杂任务的新范式。在 &lt;span style=&quot;background-color: #2ea8e580&quot;&gt;ICL 中，任务描述和演示示例以自然语言表示以形成上下文，并且以上下文为条件的 LM 预测根据预定义规则转换为答案&lt;/span&gt;（Brown 等人，2020）。通过这种方式，大型 LM 无需对参数进行任何修改即可适应各种下游任务，使其自然适合大型 LM 上的知识编辑。首先，它通过避免修改参数来减少计算开销，并消除参数更新带来的副作用的风险。最重要的是，&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;ICL 为人类提供了一种可解释的方式来校准 LM 行为&lt;/span&gt;。尽管有这些优点，ICL 是否适用于知识编辑仍不清楚。
+
+ 在本文中，我们研究了 ICL 为LLMs进行知识编辑的潜力。我们专注于两个目标：（1）确保泛化，以便大型语言模型可以泛化到多个文本表面以获取更新的知识；（2）通过对目标知识事实进行准确修改，同时保留其他不相关事实，确保特异性。为了同时实现这些目标，我们设计了演示格式和组织策略，以构建合适的上下文学习演示，以指导LLMs的知识编辑。我们定义了三种类型的演示格式化模板，包括&lt;span style=&quot;background-color: #ff666680&quot;&gt;（i）复制，旨在将新事实注入语言模型； (ii) 更新，提高注入知识事实的泛化能力； (iii) 保留，指导语言模型保留不相关的知识事实。此外，为了充分利用 ICL 进行知识编辑的潜力，我们从训练语料库中检索相关知识事实作为演示输入。&lt;/span&gt; GPT-J（6B）知识编辑基准的实验结果表明，所提出的上下文学习知识编辑（IKE）在强基线下实现了整体可比的知识编辑性能。例如，IKE 的编辑成功率绝对优于 MEND（Mitchell 等人，2021）10％，并且在特异性方面比 ROME 获得了 30 分的增益（Meng 等人，2022a）。由于没有参数修改，IKE适用于OPT-175B等LLM，并表现出更好的记忆能力，即编辑后，近50%的知识事实保留了较高的概率。进一步的分析表明，&lt;span style=&quot;background-color: #ff666680&quot;&gt;演示选择和保留演示有助于特异性，而更新演示则提高泛化能力&lt;/span&gt;。最后，我们讨论了IKE在实际场景中应用时可能遇到的潜在挑战，并提供了相应的讨论。总的来说，这项研究的贡献有四个方面：
+</code></pre><ul>
+<li>据我们所知，这项工作代表了对 ICL 编辑 LM 知识潜力的首次系统探索。</li>
+<li>我们对ICL 策略进行全面的实证研究，并分析这些策略如何影响最终性能。</li>
+<li>通过设计适当的演示格式和组织策略，IKE 可以以更少的计算开销和副作用实现相当的成功率。</li>
+<li>我们研究将IKE 应用到现实场景的可行性并讨论潜在的挑战。</li>
+</ul>
+<h2 id="2-Related-Work"><a href="#2-Related-Work" class="headerlink" title="2 Related Work"></a>2 Related Work</h2><p><strong>知识编辑方法 </strong>最近关于知识编辑的研究大多是基于炒作网络或基于归因的。基于炒作网络的方法训练超网络以获得某些编辑的梯度变化。例如，曹等人。 （2021b）使用超网络来预测测试时的参数变化，这会改变事实，同时保留不相关的事实。 MEND（Mitchell 等人，2022a）学会了将原始微调梯度转换为梯度的低秩分解。米切尔等人。 （2022b）使用编辑记忆检索器和反事实模型来生成，而不更新基本模型的参数。基于归因的方法定位神经网络中某些知识的神经元激活，仅更新相关参数。戴等人。 （2022）使用基于梯度的归因评估了不同神经元对特定知识的贡献，并通过用缩放的嵌入向量替换多层感知器（MLP）权重矩阵中的列来更新或删除事实。孟等人。 (2022a)定位了表达事实知识的单层，并通过在MLP模块中编写新的键值对来编辑这些事实知识。</p>
+<p><strong>知识编辑基准</strong> 一些知识编辑基准通常用于评估编辑方法的有效性和特异性。对于 BERT 风格的模型，通常采用事实检查数据集 FEVER (Thorne et al., 2018) 和问答数据集 zsRE (Levy et al., 2017)。在 FEVER 中，每个 x 是一个声明，每个 y 表示相应声明的有效性。在 zsRE 中，每个 x 都是关于事实的问题，每个 y 都是答案，而 xloc 询问与 x 无关的事实。对于 GPT 风格的模型，Mitchell 等人。 (2022a) 引入了维基文本编辑数据集，该数据集要求模型完成带有编辑延续的段落，同时每个标记的分布与不相关的段落 xloc 应保持不变。在我们的实验中，我们使用了一个更具挑战性的 QA 数据集，称为 COUNTERFACT（Meng 等人，2022a）。在 COUNTERFACT 中，问题 x 的编辑答案 y 有时可能与现实世界反事实，并且不相关的超出范围的样本 xloc 比 zsRE 中的困难得多，这使得模型更难预测所需的答案。此外，预先训练的LLMs很难捕获这些所需的事实，从而避免了LLMs在编辑之前了解这些知识的影响。</p>
+<p><strong>情境学习</strong> 情境学习 (ICL) 是一种免训练范例，可从输入情境中串联的演示中学习。给定相关示例和查询，模型通过类比学习来做出预测（Brown 等人，2020；Liu 等人，2022）。现有的知识编辑方法需要重新计算梯度或者以廉价的方式计算并执行这样的知识编辑。斯等人。 （2022）首次探讨了情境学习是否可以更新LLMs的知识，并表明结合各种演示可以提高知识编辑的成功率。然而，他们只关注GPT-3，而没有深入探索知识编辑的潜在能力和副作用。</p>
+<h3 id="3-Task-Formulation"><a href="#3-Task-Formulation" class="headerlink" title="3 Task Formulation"></a>3 Task Formulation</h3><p>知识编辑的目标是通过最大化概率 PM(y*|x*) 来将新事实 (x*, y*) 注入到 LMM 中。 x*是探究M中事实知识的提示（例如，美国总统是），y*将是编辑目标乔·拜登。知识编辑还需要概括性和特异性：</p>
+<ul>
+<li><strong>泛化</strong>：对于编辑中的提示x的范围 Dx*（即与新事实相关的提示），x ∈ Dx* 的预测也应该更新为 y*。例如，预测问题：谁是美国总统？答：将更新为乔·拜登。</li>
+<li><strong>特异性</strong>：对于提示x 超出编辑范围，x / ε Dx*，x 的预测应该是它原来的预测yo。例如，俄罗斯总统的预测应该保留。</li>
+</ul>
+<h2 id="4-Method-IKE"><a href="#4-Method-IKE" class="headerlink" title="4 Method: IKE"></a>4 Method: IKE</h2><h3 id="4-1-In-Context-Learning"><a href="#4-1-In-Context-Learning" class="headerlink" title="4.1 In-Context Learning"></a>4.1 In-Context Learning</h3><p>情境学习（ICL）是由 Brown 等人提出的。 （2020）用于小样本学习。对于大型语言模型 M，ICL 的目标是根据 k 个演示 C = {(x1, y1),… 来预测输入 x 的 ˆ y ∈ Y，而无需进行任何参数更新。 。 。 ，（xk，yk）}。语言模型 M 预测给定 x 的 y ∈ Y 的概率：PM(y | x, C)。更具体地说，ICL 使用模板 T 将输入和标签转换为自然语言文本。以情感分析为例，输入 xi 和标签 yi 的上下文演示将转换为句子：xi。情感：yi，那么语言模型 M 将在给定 T (x1, y1), 的情况下预测 y ∈ Y。 。 。 ，T（xk，yk），T（x，）。</p>
+<h3 id="4-2-In-Context-Knowledge-Editing"><a href="#4-2-In-Context-Knowledge-Editing" class="headerlink" title="4.2 In-Context Knowledge Editing"></a>4.2 In-Context Knowledge Editing</h3><p>当我们将目标事实 f = (x*, y*) 注入 LM 时，我们将构造 k 个演示 C = {c1,…。 。 。 ，ck}。知识编辑的目标是当提示x在目标提示x*的编辑范围内时最大化P(y*|x,f,C)，并且最小化P(y*|x,f,C)之间的距离。 | x, f, C) 和 P (y | x) 当 x / ∈ Dx* （特异性目标）时。 LM 应确定探测提示 x 是否在 x* 的编辑范围内，即 Dx*。为了通过 ICL 实现这些目标，适当的演示输入至关重要。我们进一步将以f为目标的知识编辑演示构建分解为两个子问题：</p>
+<p>（i）如何设计每个演示的格式； (ii) 如何选择上下文演示并对其进行排名（Dong 等人，2023）。</p>
+<h4 id="4-2-1-Demonstration-Formating"><a href="#4-2-1-Demonstration-Formating" class="headerlink" title="4.2.1 Demonstration Formating"></a>4.2.1 Demonstration Formating</h4><p>每个演示 ci 都包含一个新事实 fi = (xi*, y* i )、一个探测提示 xi 及其预测 yi。上下文演示应该教会 LM 复制、更新和保留针对不同提示的预测：</p>
+<ul>
+<li><strong>复制</strong>：要将新事实注入 LM，第一步是教他们将目标提示的预测复制到新事实中。在复制演示中，xi = xi* 且 yi = y* i。</li>
+<li><strong>更新</strong>：知识编辑不仅仅是教语言模型重复新事实。为了知识编辑的泛化，编辑范围内提示的预测也应该更新。在更新演示中，xi ∈ Dx* i 且 yi = y* i。</li>
+<li><strong>保留</strong>：出于知识编辑的特殊性，语言模型应在超出范围的提示中保留其原始预测。在保留演示中，xi / ∈ Dx* i 和 yi 应该是它的原始答案 yo i。 IKE 的模板 T 将 f 、 x 和 y 转换为自然语言：T (f, x, y) = New Fact: f 。提示：xy。详细信息列于§A。</li>
+</ul>
+<h4 id="4-2-2-Demonstration-Organization"><a href="#4-2-2-Demonstration-Organization" class="headerlink" title="4.2.2 Demonstration Organization"></a>4.2.2 Demonstration Organization</h4><p>当我们在 LM 中编辑知识事实 f 时，我们构建 k 个演示 C = {c1,… 。 。 , ck} 来自训练语料库。哪些演示适合上下文编辑？我们关注刘等人。 （2022）使用无监督检索器来选择 k 个最近邻居。更具体地说，我们使用预训练的句子编码器 E 对新事实 f 的提示 x* 及其原始答案 yo 和目标预测 y* 进行编码。这</p>
+<p><img src="../imgs/$%7Bfiilename%7D/ZLL8JITP.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;ZLL8JITP&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FLB4642KE%22%2C%22annotationKey%22%3A%228PRW9YFQ%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B302.885%2C681.505%2C530.769%2C775.544%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F8YZC667S%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;380&quot; height=&quot;157&quot; src=&quot;attachments/ZLL8JITP.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>训练语料库中的记录将以相同的方式进行编码，并根据余弦相似度检索 k-NN 事实。上下文演示的排名还取决于余弦相似度：cos(c0, f ) &lt; cos(c1, f ) &lt; 。 。 。 &lt; cos(ck, f )，其中 c1, . 。 。 , ck 从左到右放置在上下文中。</p>
+<h3 id="4-3-Discussion-Gradient-based-methods-and-gradient-free-methods"><a href="#4-3-Discussion-Gradient-based-methods-and-gradient-free-methods" class="headerlink" title="4.3 Discussion:Gradient-based methods and gradient-free methods"></a>4.3 Discussion:Gradient-based methods and gradient-free methods</h3><p>之前的参数更新方法会调整LM M的参数θ。它们根据梯度∇θ − log PM(y*|x*)计算Δθ，将基础模型Mθ更新为编辑后的M′θ+Δθ。然后将通过 PM′(y | x) 评估编辑方法。相反，上下文学习通过为新事实 f = (x*, y*) 构建演示 C 来修改 M 中的知识事实，然后通过 PM(y | x, f, C) 来评估编辑方法。将 PM(y | x, f, C) 与 PM′(y | x) 进行比较，可以发现： (i) ICL 不需要对目标事实进行梯度估计，并且在知识编辑后保持原始 LM M 不变。这大大减少了计算开销，从而使编辑适用于具有万亿级参数的LM，并消除了修改参数的副作用。 (ii) 演示 C 以自然文本表示，比显着参数更新 Δθ 更容易解释。它提供了一个人类可理解的界面来校准模型行为。我们在表 1 中重点介绍了这两种方法的特点。</p>
+<h2 id="5-Experiment"><a href="#5-Experiment" class="headerlink" title="5 Experiment"></a>5 Experiment</h2><p>在本节中，我们通过实验来回答以下研究问题：</p>
+<ul>
+<li>与基于梯度的方法相比，IKE 的性能如何？</li>
+<li>演示设计策略如何影响IKE 的性能</li>
+<li>LM 的规模如何影响IKE 的性能，IKE 能否扩展到具有数百或数千亿参数的大型语言模型？</li>
+<li><p>知识编辑有哪些副作用？与其他参数更新方法相比，IKE 产生的副作用是多还是少？</p>
+<p> 我们首先介绍实验设置，包括比较基线方法、评估基准和不同尺度的语言模型，用于知识编辑（第 5.1 节）。然后我们分析了§5.2中的主要知识编辑结果以及情境学习知识编辑的影响因素（§5.3）。</p>
+</li>
+</ul>
+<h3 id="5-1-Experimental-Setting"><a href="#5-1-Experimental-Setting" class="headerlink" title="5.1 Experimental Setting"></a>5.1 Experimental Setting</h3><p>我们的目标是评估上下文知识编辑与参数更新方法相比的性能。我们还对不同大小的语言模型进行了实验，以探索上下文知识编辑的扩展能力。</p>
+<h4 id="5-1-1-基线"><a href="#5-1-1-基线" class="headerlink" title="5.1.1 基线"></a>5.1.1 基线</h4><p>遵循之前的知识编辑方法，我们还选择 GPT-J (6B) 作为我们的主要评估骨干。比较的基线包括：</p>
+<p><strong>FT</strong> 在描述编辑事实的文本上微调基本模型，而无需通过应用 Adam 提前停止来训练新的模型编辑器。</p>
+<p><strong>MEND</strong> MEND（Mitchell 等人，2022a）通过使用预训练的超网络将权重矩阵分解为rank-1 形式来转换更新事实的微调梯度。</p>
+<p><strong>ROME</strong> ROME（Meng et al., 2022a）学习定位一组特定 MLP 模块的事实检索，并通过直接在 MLP 模块中写入新的键值对来更新知识。</p>
+<p><strong>PROMPT</strong> 探索上下文演示如何影响 IKE 的性能。我们直接使用新事实作为上下文，通过 P(y|x, f ) 来探测 LM，其中 f = (x*, y*)。实施细节见§A</p>
+<h4 id="5-1-2-Evaluation-Setup"><a href="#5-1-2-Evaluation-Setup" class="headerlink" title="5.1.2 Evaluation Setup"></a>5.1.2 Evaluation Setup</h4><p><strong>模型</strong> 为了探索 LM 的规模将如何影响上下文知识编辑的有效性，我们在五个类似 GPT 的自回归转换器语言模型上评估了上下文知识编辑，其规模范围从 1.5B 到 175B 参数：</p>
+<ul>
+<li>GPT- 2 XL (1.5B)（Radford 等人，2019），GPT-2 的 15 亿参数版本。</li>
+<li>GPT-NEO (2.7B)（Gao 等人，2021），EleutherAI 发布的类 GPT-2 因果语言模型的 27 亿参数版本。它是在专门为 LLM 训练设计的 Pile 数据集上进行训练的。</li>
+<li>GPT-J (6B)（Wang 和 Komatsuzaki，2021），一种在具有 60 亿个参数的 Pile 上训练的自回归文本生成模型。</li>
+<li>GPT-NEOX (20B)（Black 等人，2022），一个在 Pile 上训练的 200 亿参数自回归语言模型。</li>
+<li>OPT (175B)（Zhang 等人，2022），开放式预训练 Transformer，由 MetaAI 创建，具有 1750 亿个参数。</li>
+</ul>
+<p><strong>基准</strong> 我们主要评估 COUNTERFACT 的基线（Meng et al., 2022a），这是一个具有挑战性的基准，适用于具有困难编辑目标和难以区分编辑范围的类 GPT 因果语言模型。它包含 21, 919 条不同关系和实体的记录。每条记录的目标是将知识三元组（s*，r*，oc）更改为（s*，r*，o*），其中s*和r*由目标提示x*描述。该记录还包含释义提示 P P 作为范围内提示和邻域提示 P N ，即与目标三元组共享同一对象的知识三元组（s′，r*，oc）作为范围外提示。我们关注孟等人。 (2022a) 使用前 2000 条记录作为测试集，其余记录分为训练集。 COUNTERFACT 的详细信息在 §B 中列出。</p>
+<p><strong>指标</strong> 知识编辑的性能从三个方面来衡量（有效性、泛化性和特异性）。</p>
+<ul>
+<li><strong>功效 </strong>通过功效得分 (ES, E[I[P(o*) &gt; P(oc)]]) 和功效幅度 (EM, E[P(o*) − P( oc）]）。</li>
+<li><strong>泛化 </strong>通过释义衡量释义提示的译后编辑准确性分数 (PS) 和释义幅度 (PM)。 PS和PM的定义与ES和EM类似。</li>
+<li><strong>特异性 </strong>通过邻域得分 (NS, E[I[P(oc) &gt; P(o*)]]) 和邻域量级 (NM, E[P(oc) − P(o*)]) 来衡量邻域提示的准确性，因为邻域提示 (s′, r*, oc) 与目标提示共享相同的原始对象，并且这些事实不应被编辑。</li>
+</ul>
+<p>我们也关注孟等人。 (2022a) 将 ES、PS、NS 的调和平均值报告为分数 (S)</p>
+<p><img src="../imgs/$%7Bfiilename%7D/QTYQT47T.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;QTYQT47T&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FLB4642KE%22%2C%22annotationKey%22%3A%22JKFNHCLD%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%226%22%2C%22position%22%3A%7B%22pageIndex%22%3A5%2C%22rects%22%3A%5B%5B64%2C569.39%2C535%2C784.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F8YZC667S%22%5D%2C%22locator%22%3A%226%22%7D%7D&quot; width=&quot;785&quot; height=&quot;359&quot; src=&quot;attachments/QTYQT47T.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<h3 id="5-2-Main-Results"><a href="#5-2-Main-Results" class="headerlink" title="5.2 Main Results"></a>5.2 Main Results</h3><p>表2的顶行显示了不同方法的知识编辑结果。我们的研究结果是：（i）所有方法在功效方面都表现良好，正如它们接近的 ES 分数所示。然而，在普遍性和特殊性方面存在显着差异。例如，FT 获得了较高的 ES (99.9) 和 PS (96.4) 分数，但在特异性方面表现不佳。这凸显了知识编辑中平衡泛化和特殊性的挑战。 (ii) 在基线方法中，ROME 在所有三个指标方面总体表现最好，但计算开销较高。由于这一限制，它不适用于诸如 OPT175B 等更迫切需要知识编辑的大型 LM。 (iii) 所提出的方法 IKE 在特异性方面表现出色，但在有效性和泛化方面也表现良好。例如，IKE 在 GPTJ 上获得了与 ROME 相当的总分（89.6 比 91.5），同时不需要任何参数对 LM 的修改。这种计算优势使得在 OPT-175B 等大型 LM 上执行知识编辑成为可能，其中 IKE 比 PROMPT 明显提高了 36.0 个点。这些结果证明了 IKE 在知识编辑方面的有效性、效率和可扩展性。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/P6MNIS5S.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;P6MNIS5S&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FLB4642KE%22%2C%22annotationKey%22%3A%22GWHX8CHK%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%226%22%2C%22position%22%3A%7B%22pageIndex%22%3A5%2C%22rects%22%3A%5B%5B303.158%2C339.39%2C531.316%2C561.232%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F8YZC667S%22%5D%2C%22locator%22%3A%226%22%7D%7D&quot; width=&quot;380&quot; height=&quot;369&quot; src=&quot;attachments/P6MNIS5S.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<h3 id="5-3-Analysis"><a href="#5-3-Analysis" class="headerlink" title="5.3 Analysis"></a>5.3 Analysis</h3><p>在这一部分中，我们讨论不同演示策略的效果、跨尺度模型的 IKE 可扩展性以及知识编辑引入的副作用。</p>
+<h4 id="5-3-1Ablation-on-Demonstration"><a href="#5-3-1Ablation-on-Demonstration" class="headerlink" title="5.3.1Ablation on Demonstration"></a>5.3.1Ablation on Demonstration</h4><p><strong>演示次数</strong> 演示次数是 ICL 性能的影响因素之一 (Brown et al., 2020)。我们研究了演示数量如何影响第二阶段的 IKE 性能</p>
+<p><img src="../imgs/$%7Bfiilename%7D/HKQ4CHLZ.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;HKQ4CHLZ&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FLB4642KE%22%2C%22annotationKey%22%3A%22MUQZEW2N%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%227%22%2C%22position%22%3A%7B%22pageIndex%22%3A6%2C%22rects%22%3A%5B%5B63.947%2C615.706%2C292.895%2C778.732%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F8YZC667S%22%5D%2C%22locator%22%3A%227%22%7D%7D&quot; width=&quot;382&quot; height=&quot;272&quot; src=&quot;attachments/HKQ4CHLZ.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>表 3 中的块。在没有任何演示的情况下，PROMPT 因其低 NS（37.9）而表现出过度泛化，表明它只是学习复制预测。给定一些演示（4 或 8)，IKE 在有效性和泛化性方面比 PROMPT 表现更差，因为它开始区分提示是否在编辑范围内。随着演示次数的增加，IKE逐渐学会平衡通用性和特殊性，实现更好的权衡。</p>
+<p><strong>演示组织 </strong>先前的研究（Liu et al., 2022; Rubin et al., 2022; Lu et al., 2022）表明，包括演示选择和演示排序（Dong et al., 2023）在内的演示组织对于 ICL 也至关重要。我们的建议遵循刘等人的简单无监督方法。 （2022），根据输入提示和演示之间的余弦相似度从训练语料库中检索和排序演示。在表 3 第三块中的两项消融研究中，我们发现删除选择程序（即随机选择）会导致 NS 分数从 77.0 明显下降到 45.0，这表明正确提示选择的重要性。然而，随机排序带来的性能差异可以忽略不计。我们推测这是因为所选的提示与目标事实高度相关，并且基于 Transformer 的 LM 中的注意力机制可以很好地处理长程依赖性。我们将进一步的改进作为未来的工作。</p>
+<p><strong>演示格式 </strong>我们进一步检查演示类型的影响，包括复制、更新和保留。如表 3 中的第四个块所示，删除复制演示会导致性能轻微下降，因为即使没有复制演示，LM 也可以轻松复制演示中的内容。相反，更新演示在教导 LM 修改其知识方面发挥着重要作用，删除更新演示后泛化得分要差得多。此外，删除保留演示会导致特异性急剧下降（通过 NM 分数衡量），从 35.2 降至 -47.6。这表明保留演示对于帮助 LM 识别超出范围的事实并维持对这些提示的原始预测至关重要。</p>
+<h4 id="5-3-2IKE-Benefits-from-Model-Scaling"><a href="#5-3-2IKE-Benefits-from-Model-Scaling" class="headerlink" title="5.3.2IKE Benefits from Model Scaling"></a>5.3.2IKE Benefits from Model Scaling</h4><p>我们进一步评估了 COUNTERFACT 上的 IKE，针对不同尺度的五种类似 GPT 的因果语言模型。正如之前的实验表明，所有方法都表现出很高的知识编辑功效，因此我们重点关注大型语言模型的泛化性和特异性，因为这些指标的定义是为了衡量可能对最终用户造成巨大影响的副作用。如表 4 所示，我们发现 IKE 的性能与 LM 的规模正相关，并且最大的 OPT-175B 实现了最强的泛化和特异性结果。这是令人鼓舞的，因为 IKE 的性能可以随着 LM 规模的增加而增强，使其可插入未来更强大的 LM 主干。</p>
+<h4 id="5-3-3Resilience-to-Over-Editing"><a href="#5-3-3Resilience-to-Over-Editing" class="headerlink" title="5.3.3Resilience to Over-Editing"></a>5.3.3Resilience to Over-Editing</h4><p>过度编辑是知识编辑的常见副作用，指在编辑目标事实时对超出范围的事实产生影响。尽管 COUNTERFACT 已经包含由 (s′, r*, oc) 组成的范围外提示，它们与编辑目标共享相同的关系 r 和原始对象 oc： (s*, r*, oc) → (s*, r*, o*），我们采用Dong等人提出的对比知识评估（CKA）对过度编辑进行更全面的评估。 （2022）。具体来说，对于一个三元组（s，r，o），CKA将r替换为其他相似但不相关的关系r′，并比较PM（o | s，r）和PM（o | s，r′）来评估M是否知道事实（s，r，o）。受此启发，我们将(s*,r’,o*)视为相似但不相关的提示，并考虑P(o*|s*,r’)的变化，发现P(o*|s*,r’ ）在注入（s*，r*，o*）后也会增加。为了进一步探索不同方法中的过度编辑，我们考虑 CKA 分数 P(o*|s*, r*)/Er′∈RP(o*|s*, r′)。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/A9BSU2NB.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;A9BSU2NB&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FLB4642KE%22%2C%22annotationKey%22%3A%22W3GR7IZZ%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B61.731%2C622.082%2C298.269%2C782.467%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F8YZC667S%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;394&quot; height=&quot;267&quot; src=&quot;attachments/A9BSU2NB.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="../imgs/$%7Bfiilename%7D/JRUG4L94.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;JRUG4L94&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FLB4642KE%22%2C%22annotationKey%22%3A%22V8EL5CWL%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B304.038%2C646.313%2C529.038%2C781.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F8YZC667S%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;375&quot; height=&quot;226&quot; src=&quot;attachments/JRUG4L94.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>CKA评估结果如表5所示。如果CKA得分小于预定义阈值α，则正确事实的困惑度为输给了对比虚假事实的困惑，结果证明这是一次编辑失败。尽管所有基线在编辑功效方面都表现良好，但在更严格的对比评估下它们往往过于概括。 ROME 的平均 CKA 得分最低，错误率最高，这表明它识别与目标提示共享同一主题的范围外提示的能力较差。 IKE 对过度编辑的影响较小。</p>
+<h4 id="5-3-4Maintenance-for-Original-Knowledge"><a href="#5-3-4Maintenance-for-Original-Knowledge" class="headerlink" title="5.3.4Maintenance for Original Knowledge"></a>5.3.4Maintenance for Original Knowledge</h4><p>我们得出的结论是，先前存储在语言模型中的事实知识将在知识编辑过程中被删除或遗忘。我们在表6中考虑编辑前后P(oc|s*, r)的变化。结果表明，所有编辑方法都会导致P(oc|s*, r*)的下降。罗马几乎忘记了所有最初的事实。如果我们想要纠正 LM 的预测，就必须擦除原来的事实知识。然而，如果我们想更新语言模型的预测，例如更新美国总统是从唐纳德·特朗普到乔·拜登的预测（时间感知关系），那么旧知识 2017 年，美国总统是唐纳德·特朗普不应该被忘记。</p>
+<pre><code>为了评估编辑中这种时间感知知识的遗忘，我们基于 TEMPLAMA (Dhingra et al., 2022) 构建了一个小型基准，以进一步表明 IKE 比 §C 中的其他基准可以导致更少的知识遗忘。
+</code></pre><h2 id="6-Discussions"><a href="#6-Discussions" class="headerlink" title="6 Discussions"></a>6 Discussions</h2><p>在之前的实验中，我们遵循孟等人之前研究的设置。 （2022a）并主要评估编辑单个事实以进行公平比较的方法。我们的结果表明 IKE 可以获得更好的泛化性和特异性，副作用更少，并且不需要修改参数。尽管如此，为了探讨可行性在将 IKE 应用到现实场景中时，有几个重要问题尚未得到充分探索：(1) IKE 能否扩展以容纳更多的编辑事实？考虑到语言模型的输入长度有限，在上下文中包含大量的编辑事实可能是不可行的。 (2) IKE 能否适应处理不同格式和域的事实和提示？在IKE中，事实和提示的域和格式保持一致。然而，在现实世界中，事实和提示有多种形式。米切尔等人。 (2022b)提出了一种基于检索的方法来编辑多个知识事实。类似地，具有外部存储器来存储事实编辑的 IKE 可以检索正确的事实编辑来构建给定提示的上下文，从而避免永远在上下文中预先添加所有事实编辑。为了验证 IKE 对不同形式的事实或提示的泛化，我们用维基百科中的中性数据替换了事实，或者用生成提示替换了提示，提示 LM 生成与新对象相关的文本。详细讨论可以在§D 中找到。</p>
+<h2 id="7-Conclusion"><a href="#7-Conclusion" class="headerlink" title="7 Conclusion"></a>7 Conclusion</h2><p>在这项工作中，我们研究了上下文学习在大规模语言模型上进行知识编辑的潜力。具体来说，我们设计了提示LM的演示策略，包括三种类型的演示格式和基于检索的演示组织。我们表明，所提出的方法 IKE 在不需要任何参数修改的情况下实现了竞争性知识编辑功效，并保持了良好的泛化和特异性性能。进一步的分析证明了它对于大型 LM 的可扩展性、对过度编辑问题的弹性以及通过多轮编辑维护时间感知知识事实的能力。我们的结果证明 ICL 在 LM 知识编辑方面具有巨大潜力。</p>
+]]></content>
+      <categories>
+        <category>知识编辑</category>
+      </categories>
+      <tags>
+        <tag>EMNLP2023</tag>
       </tags>
   </entry>
   <entry>
