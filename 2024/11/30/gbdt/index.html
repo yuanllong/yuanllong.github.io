@@ -27,15 +27,15 @@
 <meta property="og:site_name" content="院龙">
 <meta property="og:description" content="​        GBDT为梯度提升决策树（Gradient  Boosting Decision Tree），是一种以回归决策树为 弱学习器的集成学习模型。GBDT集成学习模型通常使用CART决 策树（回归树）模型作为弱学习器。 ​        提升树算法(Boosting Decision Tree)：  提升树是迭代多棵回归树来共同决策。当采用平方 误差损失函数时，每一棵回归树学习的是之前">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gitee.com/yuanlongYl/picgo_imgs/raw/master/blogs/202411301616472.png">
-<meta property="og:image" content="https://gitee.com/yuanlongYl/picgo_imgs/raw/master/blogs/202411301617296.png">
-<meta property="og:image" content="https://gitee.com/yuanlongYl/picgo_imgs/raw/master/blogs/202411301621997.png">
-<meta property="og:image" content="https://gitee.com/yuanlongYl/picgo_imgs/raw/master/blogs/202411301623896.png">
+<meta property="og:image" content="https://s2.loli.net/2024/11/30/YNhABjfvzogsKdy.png">
+<meta property="og:image" content="https://s2.loli.net/2024/11/30/fQz65S8XenPcL2Z.png">
+<meta property="og:image" content="https://s2.loli.net/2024/11/30/B6JROQlmMohCjTw.png">
+<meta property="og:image" content="https://s2.loli.net/2024/11/30/3MygRhSbrj12QVs.png">
 <meta property="article:published_time" content="2024-11-30T07:45:56.000Z">
-<meta property="article:modified_time" content="2024-11-30T08:24:10.906Z">
+<meta property="article:modified_time" content="2024-11-30T08:40:05.393Z">
 <meta property="article:author" content="院龙">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/yuanlongYl/picgo_imgs/raw/master/blogs/202411301616472.png">
+<meta name="twitter:image" content="https://s2.loli.net/2024/11/30/YNhABjfvzogsKdy.png">
 
 <link rel="canonical" href="http://humble2967738843.github.io/2024/11/30/gbdt/">
 
@@ -182,7 +182,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-11-30 15:45:56 / 修改时间：16:24:10" itemprop="dateCreated datePublished" datetime="2024-11-30T15:45:56+08:00">2024-11-30</time>
+              <time title="创建时间：2024-11-30 15:45:56 / 修改时间：16:40:05" itemprop="dateCreated datePublished" datetime="2024-11-30T15:45:56+08:00">2024-11-30</time>
             </span>
 
           
@@ -204,18 +204,18 @@
 <li>提升树即是整个迭代过程生成的回归树的累加。</li>
 </ul>
 <p>例：训练一个提升树模型来预测年龄 训练集只有4个人，A,B,C,D，他们的年龄分别是 14,16,24,26。其中A、B分别是高一和高三学生；C,D 分别是应届毕业生和工作两年的员工。样本中有购物 金额、上网时长、经常到百度知道提问等特征。</p>
-<p><img src="https://gitee.com/yuanlongYl/picgo_imgs/raw/master/blogs/202411301616472.png" alt="image-20241130161600957"></p>
+<p><img src="https://s2.loli.net/2024/11/30/YNhABjfvzogsKdy.png" alt="image-20241130163828685"></p>
 <p>提升树过程如下：由于数据太少，限定叶子节点最多有两个，即每棵树 都只有一个分枝，并且限定只学习两棵树。第一棵树，由于A,B年龄较为 相近，C,D年龄较为相近，4人被分为两拨，每拨用<strong>平均年龄作为预测值</strong> 。<strong>拿残差替代A,B,C,D的原值</strong>，到第二棵树去学习，如果预测值和它们的残差相等，则只需把第二棵树的结论累加到第一棵树上就能得到真实年龄了。第二棵树只有两个值1和-1，直接分成两个节点。此时所有人的残 差都是0，即每个人都得到了真实的预测值。</p>
-<p><img src="https://gitee.com/yuanlongYl/picgo_imgs/raw/master/blogs/202411301617296.png" alt="image-20241130161717214"></p>
+<p><img src="https://s2.loli.net/2024/11/30/fQz65S8XenPcL2Z.png" alt="image-20241130163856863"></p>
 <p>现在A,B,C,D的预测值都和真实年龄一致</p>
 <p>A: 14岁高一学生，购物较少，经常问学长问题； 预测年龄A = 15 – 1 = 14 </p>
 <p>B: 16岁高三学生；购物较少，经常被学弟问问题； 预测年龄B = 15 + 1 = 16 </p>
 <p>C: 24岁应届毕业生；购物较多，经常问师兄问题； 预测年龄C = 25 – 1 = 24 </p>
 <p>D: 26岁工作两年员工；购物较多，经常被师弟问问题； 预测年龄D = 25 + 1 = 26</p>
-<p><img src="https://gitee.com/yuanlongYl/picgo_imgs/raw/master/blogs/202411301621997.png" alt="image-20241130162155965"></p>
+<p><img src="https://s2.loli.net/2024/11/30/B6JROQlmMohCjTw.png" alt="image-20241130163925661"></p>
 <p>从例子很直观看到，预测值等于所有树值得累加，如A的预测值 = 树1左节点值(15)+树2左节点(-1)=14。</p>
 <p>因此，给定当前模型fm-1(x)，只需要简单的拟合当前模型的残差。 累加每棵回归树的结论，得出最终的预测值.现将回归问题的提升 树算法叙述如下：</p>
-<p><img src="https://gitee.com/yuanlongYl/picgo_imgs/raw/master/blogs/202411301623896.png" alt="image-20241130162303746"></p>
+<p><img src="https://s2.loli.net/2024/11/30/3MygRhSbrj12QVs.png" alt="image-20241130163946424"></p>
 <p><strong>梯度的大小反映了当前预测值与目标值之间的距离。因 此，除第一棵决策树使用原始预测指标建树，之后的每一棵 决策树都用前一棵决策树的预测值与目标值计算出来的负梯 度来建树。相当于给分错的样本加权多次分类，使样本最终 残差趋近于0。</strong></p>
 <p>由于是对目标残差或增量进行建模预测，因此 <strong>GBDT模型只需把过程中每一棵决策树的输出结果累加，便 可得到最终的预测输出。</strong></p>
 
