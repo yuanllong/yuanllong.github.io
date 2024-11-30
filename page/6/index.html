@@ -1133,146 +1133,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN,en,default">
-    <link itemprop="mainEntityOfPage" href="http://humble2967738843.github.io/2023/11/02/wo-men-ke-yi-bian-ji-duo-mo-tai-da-xing-yu-yan-mo-xing-ma/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="yuan long">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="humbleyl">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/11/02/wo-men-ke-yi-bian-ji-duo-mo-tai-da-xing-yu-yan-mo-xing-ma/" class="post-title-link" itemprop="url">我们可以编辑多模态大型语言模型吗？</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-11-02 12:21:08" itemprop="dateCreated datePublished" datetime="2023-11-02T12:21:08+08:00">2023-11-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-26 17:35:11" itemprop="dateModified" datetime="2024-05-26T17:35:11+08:00">2024-05-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%9F%A5%E8%AF%86%E7%BC%96%E8%BE%91/" itemprop="url" rel="index"><span itemprop="name">知识编辑</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="我们可以编辑多模态大型语言模型吗？"><a href="#我们可以编辑多模态大型语言模型吗？" class="headerlink" title="我们可以编辑多模态大型语言模型吗？"></a>我们可以编辑多模态大型语言模型吗？</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>在本文中，我们重点关注编辑多模态大型语言模型（MLLM）。与编辑单模态LLMs相比，多模态模型编辑更具挑战性，需要在编辑过程中进行更高水平的审查和仔细考虑。为了促进这一领域的研究，我们<span style="background-color: #ff666680">构建了一个名为 MMEdit 的新基准，用于编辑多模式LLMs并建立一套创新的评估指标</span>。我们进行了涉及各种模型编辑基线的综合实验，并分析了编辑不同组件对多模式LLMs的影响。根据经验，我们注意到<span style="background-color: #ff666680">以前的基线可以在一定程度上实现多模态 LLM 的编辑，但效果仍然差强人意，这表明这项任务的潜在难度。</span>我们希望我们的工作能够为 NLP 社区提供见解1。</p>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>随着大型语言模型 (LLM) 的广泛部署（Zhao 等人，2023），在不产生大量再培训成本的情况下保持其知识准确和最新的必要性变得越来越重要（Sinitsin 等人，2020）。<span style="background-color: #2ea8e580">先前的研究引入了知识编辑方法，旨在逐步向语言模型注入一组新的事实</span>（Mitchell 等人，2022a；Han 等人，2023；Hartvigsen 人，2022；Zhong 等人，2023；Gandikota等人，2023；姚等人，2023）。</p>
-<pre><code>  与单模态模型编辑不同，多模态LLMs的编辑任务因其固有的多样性和复杂性而面临相当大的挑战。具体来说，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;多模式模型的错误输出可能源于各种模式的协同效应。输出不正确可能不仅仅源于LLMs，类似于误读或误识别等人为错误&lt;/span&gt;（例如，色盲影响图像中的颜色识别）。如图1所示，在编辑之前，模型将物体错误地识别为“梯子”而不是正确的“障碍物”，从而导致错误的预测。编辑后，模型准确识别了“障碍”。请注意，多模态LLMs（Yin et al., 2023）的效用正在增加，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;但缺乏相应的数据集资源和用于编辑多模态大语言模型的基准。&lt;/span&gt;
-
- 为了促进这一领域的研究，我们第一步构建了一个多模态模型编辑基准：&lt;span style=&quot;background-color: #ff666680&quot;&gt;称为 MMEdit，它包含两个子任务：编辑 VQA 和编辑图像标题。&lt;/span&gt;具体来说，我们&lt;span style=&quot;background-color: #ff666680&quot;&gt;遵循单模态模型编辑方法（Mitchell et al., 2022a；Cao et al., 2021；Mitchell et al., 2022b）来构建数据集，这扩展了之前的评估原则，即 Reliability2、Locality3 和通用性4，多模式设置。对于可靠性评估，我们从严格的数据收集开始，收集表现不佳的多模态模型数据来创建专用的可靠性编辑数据集（§3.2.1）。对于局部性评估，我们将其分为文本局部性和多模态局部性，以评估多模态 LLM 的稳定性（第 3.2.2 节）。对于通用性评估，与局部性类似，我们将其分为文本通用性和多模态通用性，并利用 ChatGLM (Du et al., 2022) 和稳定扩散 (Rombach et al., 2022) 生成重新措辞的文本以及重新措辞的图像进行评估（第 3.2.3 节）。我们评估了 MMEdit 上的几种知识编辑方法。&lt;/span&gt;根据经验，我们注意到&lt;span style=&quot;background-color: #5fb23680&quot;&gt;当前的编辑方法对于编辑多模态语言模型中的文本模型有效，但对于编辑视觉模块则不那么有效&lt;/span&gt;。例如，在编辑BLIP-2模型的语言模块时，MEND的可靠性可以达到92.6%，但在编辑视觉模块时只能达到14.1%，表明该任务的潜在难度和机遇。总的来说，我们的主要贡献如下：
-</code></pre><ul>
-<li>我们迈出了第一步，研究编辑多模态LLMs，将模型编辑扩展到多模态设置。</li>
-</ul>
-<!---->
-<ul>
-<li>我们提出了MMEdit，一个新的基准，用于评估多模态模型编辑方法的可靠性、局部性和通用性。</li>
-</ul>
-<!---->
-<ul>
-<li>我们使用各种基线进行实验，证明虽然当前的方法可以在一定程度上帮助多模式编辑，但结果仍然达不到完全满意的程度。我们将公开代码和数据集以用于未来的研究目的。</li>
-</ul>
-<h2 id="2-Related-Work"><a href="#2-Related-Work" class="headerlink" title="2 Related Work"></a>2 Related Work</h2><h3 id="2-1-Multimodal-Language-Models"><a href="#2-1-Multimodal-Language-Models" class="headerlink" title="2.1 Multimodal Language Models"></a>2.1 Multimodal Language Models</h3><pre><code> 多模态学习 (MML)（Xu 等人，2022a；Yin 等人，2023）提供了一种构建 AI 模型的整体方法，该模型可以从各种数据模态中提取和关联信息。由于其社会意义，MML 在研究界站稳了脚跟，在过去十年中巩固了自己作为一个重要研究领域的地位。视&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;觉语言预训练是MML的重要分支之一，旨在学习在各种视觉和语言任务上具有改进性能的多模态基础模型&lt;/span&gt;。 Vision Transformer (ViT)（Dosovitskiy et al., 2021）&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;是一项开创性的工作，贡献了端到端将 Transformers 的编码器应用于图像的解决方案。&lt;/span&gt; CLIP（Radford et al., 2021）&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;提出了一种方法，使用多模态预训练将分类转换为检索任务，使预训练模型能够解决零样本识别问题&lt;/span&gt;。最近，LLaMA (Touvron et al., 2023)、BLOOM (Scao et al., 2022) 和 ChatGPT (OpenAI, 2022) 等 LLM 的进步得到了扩大训练数据和增加参数的支持，最近取得了重大成功。这些模型展示了令人印象深刻的语言理解、生成和知识推理能力，增强了它们理解自然语言和生成高质量、基于上下文的文本的能力。大型语言模型的发展刺激了自回归语言模型作为视觉语言任务中的解码器的广泛使用。&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;利用跨模态迁移，这种方法可以实现语言和多模态领域之间的知识共享&lt;/span&gt;（Gao et al., 2023; Liu et al., 2023; Li et al., 2023a; Ye et al., 2023; Zhu et al., 2023；Li 等人，2023b；Zhang 等人，2023）。
-</code></pre><h3 id="2-2-Model-Editing"><a href="#2-2-Model-Editing" class="headerlink" title="2.2 Model Editing"></a>2.2 Model Editing</h3><pre><code> LLMs（Zhao et al., 2023）主要从训练语料库中获取知识。然而，数据集的质量并不总是得到保证，可能会将有害或不正确的信息集成到模型中（Hernandez 等人，2023）。&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;一种解决方案是使用更新的知识重新训练模型，尽管这可能成本高昂且难以实施&lt;/span&gt;。或者，&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;可以考虑使用一些更新的事实进行微调，但它存在过度拟合和灾难性遗忘的风险&lt;/span&gt;（Zhai et al., 2023）。为了解决这些问题，（Sinitsin et al., 2020）提出了模型编辑，旨在高效、准确地改变模型中存储的事实知识。这种方法应用于各个领域（Mao et al., 2023; Onoe et al., 2023; Xu et al., 2022b; Wang et al., 2023a; Li et al., 2023c），并且研究数量不断增加调查编辑的影响（Ilharco 等人，2023；Gupta 等人，2023；Hase 等人，2023；Cohen 等人，2023；Wu 等人，2023；Wang 等人，2023b；Gandikota 等人等人，2023；Li 等人，2023d）。目前，模型编辑方法主要有三种类型：&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;1）元学习方法，2）定位然后编辑方法，3）上下文知识编辑方法。&lt;/span&gt;
-</code></pre><p><strong>元学习方法</strong>。 MEND（Mitchell 等人，2022a）和知识编辑器 (KE)（Cao 等人，2021）提出了<span style="background-color: #2ea8e580">涉及外部编辑器的方法，能够学习用于知识更新的最佳参数集 θ，同时施加约束以保持模型稳定性。</span> CaliNET (Dong et al., 2022) 和 T-Patcher (Huang et al., 2023) 从 (Dai et al., 2022) 中汲取灵感，<span style="background-color: #2ea8e580">将额外的可训练参数引入到预训练语言模型的前馈模块中。</span> SERAC（Mitchell 等人，2022b）<span style="background-color: #2ea8e580">利用显式记忆来存储编辑，并学习对它们进行推理，以根据需要调整基本模型的预测。</span></p>
-<p><strong>定位然后编辑方法</strong>。 ROME（Meng et al., 2022a）<span style="background-color: #2ea8e580">提出了采用因果中介分析来识别编辑区域的方法。</span> ROME 发现记忆的事实关联可以精确定位到 GPT 模型中的特定位置。然而，ROME 的一个显着限制是它一次只能编辑一个事实。为了解决这个问题，Meng 等人。 (2022b)提出了一种称为MEMIT的新方法，<span style="background-color: #2ea8e580">它是之前工作ROME的继承者，它对单层的MLP权重进行rankone修改，以将内存直接写入模型中。</span></p>
-<p><strong>上下文知识编辑方法</strong>。 InContext Learning (ICL)（Brown et al., 2020）<span style="background-color: #2ea8e580">表示一种免训练范式，其中知识是从输入上下文中直接串联的演示中获取的</span>。最近出现了一种新颖的编辑范式，它<span style="background-color: #2ea8e580">利用LLMs理解上下文的能力（Zheng et al., 2023），从而实现基于上下文的模型编辑，指导模型的生成过程，并提供高效、轻量级的模型方法编辑</span>。迄今为止的模型编辑方法主要迎合单模态场景，在多模态编辑方面留下了空白。据我们所知，我们是第一个研究LLMs多模式模型编辑的人，并为促进该领域的研究提供了新的基准。</p>
-<h2 id="3-Editing-Multimodal-LLMs"><a href="#3-Editing-Multimodal-LLMs" class="headerlink" title="3 Editing Multimodal LLMs"></a>3 Editing Multimodal LLMs</h2><p>我们在图 2 中说明了多模态编辑的建议任务。我们将介绍任务定义（§3.1）、（§3.2）中的数据集构建细节、多模态模型（§3.3）以及我们在实验。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/KQ9KJ8DQ.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;KQ9KJ8DQ&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22MS6FUQ8I%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%223%22%2C%22position%22%3A%7B%22pageIndex%22%3A2%2C%22rects%22%3A%5B%5B68.654%2C497.467%2C526.731%2C777.852%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%223%22%7D%7D&quot; width=&quot;763&quot; height=&quot;467&quot; src=&quot;attachments/KQ9KJ8DQ.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<h3 id="3-1-Task-Definition"><a href="#3-1-Task-Definition" class="headerlink" title="3.1 Task Definition"></a>3.1 Task Definition</h3><p>假设我们有一个由 <em>θ </em>参数化的多模态 LLM<em> f </em>（由两部分组成，由 θ<sub>vision</sub> 和 θ<sub>text</sub> 参数化的 f<sub>vision</sub> 和 f<sub>text </sub>），将输入 i<sub>e</sub> 和 x<sub>e</sub> 映射到 y<sub>o</sub> 的预测，其中 i<sub>e </sub>指的是编辑图像输入，xe 指的是编辑文本提示输入和 y<sub>o</sub> 表示为原始输出。我们将 M 表示为特定指标的符号表示，下标表示特定度量，上标表示变化编辑数据。我们准备第 3.2.1 节中所述的编辑数据集，其表示为 Dedit。受到姚等人的启发。 （2023），我们引入了一系列多模式模型编辑指标。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/ZFVB46CA.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;ZFVB46CA&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22MJQK4385%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B64.853%2C526.008%2C292.5%2C791.596%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;379&quot; height=&quot;442&quot; src=&quot;attachments/ZFVB46CA.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p><strong>可靠性</strong>。需要编辑可靠性才能将预测从 y<sub>o</sub> 更改为 y<sub>e</sub>。直观上，我们需要的是更新后的 θe，其中 f（即 x<sub>e</sub>;θ<sub>e</sub>）= y<sub>e</sub>。为了衡量可靠性，我们使用编辑准确性，如下所述：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/HSTRNPML.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;HSTRNPML&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22NS7JGJWI%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B68.824%2C342.919%2C292.059%2C378.214%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;372&quot; height=&quot;59&quot; src=&quot;attachments/HSTRNPML.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>其中θ<sub>e</sub>指的是编辑后的参数。</p>
-<p><strong>局部性</strong>。为了保持模型的稳定性，必须最大限度地减少编辑对模型更广泛的知识库造成的意外副作用。为了实现这一目标，我们引入了两个指标：M <sup>Text</sup> <sub>loc</sub> (T-Locality) 和 M<sup>Image</sup> <sub>loc</sub> (M-Locality)，这两个指标都是为了在编辑过程中保持模型的稳定性。鉴于多模态语言模型中的知识是从LLMs继承的，保护这些知识至关重要。考虑到这一目标，我们搁置了模型的视觉辨别模块，而是采用基本的问答数据集 D<sub>loc-t</sub>，如第 3.2.2 节中所述。我们定义问题为x，答案为y，如下：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/J24EN8UP.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;J24EN8UP&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22M2ZHI4QM%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B67.941%2C93.214%2C292.941%2C133.361%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;375&quot; height=&quot;67&quot; src=&quot;attachments/J24EN8UP.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>视觉编码器在多模态语言模型中发挥着关键作用，将将图像转换为矢量表示，以便与自然语言文本共同编码。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/IPZFZHUW.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;IPZFZHUW&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22ZIQHSJG7%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B301.765%2C653.066%2C528.529%2C777.919%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;378&quot; height=&quot;208&quot; src=&quot;attachments/IPZFZHUW.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>因此，我们必须考虑对该模块进行任何修改的潜在后果。我们构建表示为 D<sub>loc-v</sub> 的数据集用于测试 MImage loc ，并计算如下：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/4NC86SS7.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;4NC86SS7&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22K2BYGI7E%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B302.647%2C522.478%2C532.941%2C557.772%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;384&quot; height=&quot;59&quot; src=&quot;attachments/4NC86SS7.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>其中（iv，xv，yv）是范围外数据，θe表示编辑数据更新的参数（即xe，ye)。</p>
-<p><strong>泛化性</strong>。在整个编辑过程中，仅仅修改个别错误的输入是不够的。修订后的模型还应保留泛化能力，并始终为等效输入（例如改写的句子）生成一致的输出，如图 3 所示。虽然以前的单模态模型编辑任务仅需要考虑改写的文本，但多模态场景需要泛化以及图像。为了解决这个问题，我们引入了两个泛化考虑因素：MText gen (TGenerality) 和 MImage gen (M-Generality)，其表示如下：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/BS3DHYZH.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;BS3DHYZH&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22SSPQQ5PC%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B303.088%2C236.596%2C527.206%2C296.596%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;374&quot; height=&quot;100&quot; src=&quot;attachments/BS3DHYZH.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>其中 ir 表示重新表述的图像，xr 指重新表述的文本提示，N (x) 表示 x 范围内的对象。</p>
-<h3 id="3-2-Datasets"><a href="#3-2-Datasets" class="headerlink" title="3.2 Datasets"></a>3.2 Datasets</h3><p>我们构建的数据集MMEdit主要包含两个子任务：编辑VQA（E-VQA）和编辑图像标题（E-IC）。</p>
-<h4 id="3-2-1-Reliability-Dataset-Construction"><a href="#3-2-1-Reliability-Dataset-Construction" class="headerlink" title="3.2.1 Reliability Dataset Construction"></a>3.2.1 Reliability Dataset Construction</h4><p>为了对我们的实验进行基准测试，我们选择了两个常见的多模态任务：视觉问答（VQA）（Antol et al., 2015）和图像</p>
-<p><img src="../imgs/$%7Bfiilename%7D/TT279E4N.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;TT279E4N&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%229KCXYY3D%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%225%22%2C%22position%22%3A%7B%22pageIndex%22%3A4%2C%22rects%22%3A%5B%5B60%2C488.39%2C297%2C778.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%225%22%7D%7D&quot; width=&quot;395&quot; height=&quot;483&quot; src=&quot;attachments/TT279E4N.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>字幕（Herdade 等人，2019）。 <span style="background-color: #2ea8e580">VQA 旨在设计一种算法，不仅可以理解图像中的视觉内容，还可以理解用于查询该图像的自然语言，并随后生成这些查询的精确答案</span>。<span style="background-color: #2ea8e580">图像字幕是设计能够理解图像视觉内容的算法，随后用自然语言生成连贯且精确的图像描述</span>。在本研究中，我们选择 BLIP-2 OPT。我们的基础编辑数据源自两个评估数据集的次优条目，即 VQAv2（Goyal 等人，2017）和 COCO Caption（Chen 等人，2015)。</p>
-<pre><code> 除了基本的编辑数据之外，利用其他数据也至关重要。这些数据不仅有助于编辑过程，还验证更改的有效性，评估模型编辑的稳定性和通用性。
-</code></pre><h4 id="3-2-2-Locality-Dataset-Construction"><a href="#3-2-2-Locality-Dataset-Construction" class="headerlink" title="3.2.2 Locality Dataset Construction"></a>3.2.2 Locality Dataset Construction</h4><p>我们必须仔细考虑多模态模型中编辑对语言功能的影响，<span style="background-color: #5fb23680">类似于我们如何评估手术后个体大脑的各个认知区域。</span></p>
-<p><strong>文本局部性数据集</strong>。为了评估语言模型的稳定性，我们利用之前在 MEND 中使用的 NQ 数据集（Kwiatkowski 等人，2019）作为模型内 LLM 组件稳定性的基准。我们专门使用模型的输出预编辑和后期编辑来构建 KL 散点图，从而促进对模型编辑的约束。此外，我们还计算了保持 top-1 状态的实例比例，进一步量化了模型的稳定性。</p>
-<p><strong>多模态局部性数据集</strong>。同样，验证编辑对视觉模块的影响也至关重要。因此，我们在多模态领域使用简单的数据集 OK-VQA（Marino 等人，2019），作为多模态视觉模块局部性的度量。我们再次在编辑过程之前和之后使用 logits 更新 KL 离散度约束。</p>
-<h4 id="3-2-3-Generality-Dataset-Construction"><a href="#3-2-3-Generality-Dataset-Construction" class="headerlink" title="3.2.3 Generality Dataset Construction"></a>3.2.3 Generality Dataset Construction</h4><p>我们在多模态模型中提出了两种形式的通用性。共性数据集构建的整体流程如图4所示。</p>
-<p><strong>文本泛化数据集</strong>。值得注意的是，LLMs表现出强大的会话能力和强大的解决问题的能力，这使我们能够制定任务指令，从而指导模型生成类似的文本输入。对于 E-VQA 任务，我们利用 ChatGLM（Du et al., 2022；Zeng et al., 2022）生成类似的查询。然而，对于E-IC任务，由于提示的简洁和相对直接，模型生成的输出质量并不令人满意。因此，我们采用手动编写的包含20条提示的模板来随机替换原来的提示。</p>
-<p><strong>视觉泛化数据集</strong>。近年来，<span style="background-color: #2ea8e580">扩散模型（Ho et al., 2020）在图像生成领域取得了巨大成功。超越最初最先进的模型</span>：生成对抗网络（GAN）模型（Goodfellow 等人，2014）。扩散模型在许多图像生成任务中表现出色，并在各个应用领域中表现出了值得称赞的性能。<span style="background-color: #2ea8e580">稳定扩散（Rombach 等人，2022）是一种潜在的文本到图像扩散模型，能够根据给定的文本输入生成逼真的图像</span>。我们利用稳定扩散 2.1 来生成重新解释的图像。该数据集利用 COCO 数据集的标题描述来评估模型的图像泛化能力。</p>
-<h3 id="3-3-Multimodal-Language-Models"><a href="#3-3-Multimodal-Language-Models" class="headerlink" title="3.3 Multimodal Language Models"></a>3.3 Multimodal Language Models</h3><p><strong>BLIP-2 OPT</strong>。 BLIP-2（Li et al., 2023b）<span style="background-color: #2ea8e580">是一种通用且高效的预训练策略，可从现成的冻结预训练图像编码器和冻结大型语言模型引导视觉语言预训练。该模型利用轻量级查询转换器来弥合视觉模态和文本模态之间的差距，并在各种视觉语言任务上实现最先进的性能</span>。我们选择 BLIP-2 OPT 作为基本编辑模型，它在视觉模块中利用 ViT-L，并选择无监督训练的 OPT 模型用于基于解码器的 LLM。迷你GPT-4。</p>
-<p><strong>MiniGPT-4</strong>（Zhu et al., 2023）是一种类似于 BLIP-2 的有效视觉语言模型，利用冷冻视觉编码器与冷冻 Vicuna（Chiang et al., 2023）相结合。据报道，基于 LLaMA 构建的 Vicuna 根据 GPT-4 的评估标准达到了 ChatGPT 90% 的性能。 MiniGPT-4 添加了一个投影层，以使编码的视觉特征与 Vicuna 语言模型保持一致。 MiniGPT-4 采用与 BLIP-2 相同的预训练视觉组件，由 EVA-CLIP（Sun 等人，2023）的 Vit-G/14 和 Q-Former 组成。</p>
-<h3 id="3-4-Baselines"><a href="#3-4-Baselines" class="headerlink" title="3.4 Baselines"></a>3.4 Baselines</h3><p><strong>Finetune</strong>。微调已成为一种广泛采用的策略，用于使预训练的语言模型适应特定任务或领域（Cortes 等人，2015）。在我们的探索中，我们深入研究了两种不同的微调方法：一种专注于语言模型的最后一层。以BLIP-2 OPT模型为例，我们对OPT模型的第31个解码器层进行微调。另一个目标是多模态语言模型中的视觉块，具体来说，我们微调 Q-former 模型以过度拟合编辑数据集。</p>
-<p><strong>MEND</strong>。具有梯度分解的模型编辑器网络（Mitchell 等人，2022a）使用单个输入输出对对语言模型进行高效的本地编辑。本质上，MEND 学习转换微调 LLM 的梯度，它利用梯度的低秩分解。</p>
-<p><strong>KE</strong>。 KE（Cao et al., 2021）是一种可以编辑语言模型中错误知识而无需重新训练整个模型的方法。 KE 利用具有约束优化的超网络（双向 LSTM），用于预测推理过程中的权重更新。</p>
-<p><strong>SERAC</strong>。 SERAC（Mitchell 等人，2022b）引入了一种基于内存的模型编辑方法，该方法利用显式内存系统来缓存编辑。该内存随后用于在推理过程中调整基本模型的输出。该系统利用一个小型辅助范围分类器和反事实模型。范围分类器的作用是确定输入是否在内存缓存的范围内。如果在此范围内找到输入，则会将其与最相关的缓存项结合起来，并输入到反事实模型中进行预测。</p>
-<p><strong>In-Context Knowledge Editing.</strong>。上下文知识编辑（IKE）（Zheng et al., 2023）构造 k 个演示 C = {c1, . 。 。 , ck }，遵循 Liu 等人中概述的方法。 （2022）。该方法采用基于余弦相似度的无监督检索器，在将事实 f = (x*, y*) 注入语言模型之前从训练集中获取演示。 x* 是探索模型中事实知识的提示（例如，美国总统是），y* 将是编辑目标乔·拜登。上下文演示的排名也取决于余弦相似度：cos(c1, f ) &lt; cos(c2, f ) &lt; · · · &lt; cos(ck, f )。其中 c1, . 。 。 , ck 在上下文中从左到右顺序排列。演示 C 可以被视为外部增强的知识库，主要设计用于指导 LM 内的生成。其最终目标是当提示符x落在目标提示符x*的编辑范围内时，最大化P(y|x,f,C)。</p>
-<h2 id="4-Experiments"><a href="#4-Experiments" class="headerlink" title="4 Experiments"></a>4 Experiments</h2><h3 id="4-1-Results"><a href="#4-1-Results" class="headerlink" title="4.1 Results"></a>4.1 Results</h3><p>在这一部分中，我们对 MMEdit 上的多种编辑方法进行了比较分析。这些比较的结果如表2所示。之后，我们深入研究了实验结果的三个指标，包括可靠性、局部性和通用性三个方面。此外，我们通过文本和视觉方式分析局部性和通用性，并在图 6 中提供了几个编辑案例。</p>
-<p><strong>可靠性</strong>。从结果来看，<span style="background-color: #ff666680">所有模型编辑方法在可靠性方面均优于基本方法</span>。特别是，<span style="background-color: #ff666680">利用外部存储器进行编辑的 IKE 和 SERAC 方法在多模态语言中表现出了值得称赞的性能楷模</span>。我们<span style="background-color: #ff666680">观察到微调方法的性能比模型编辑方法差</span>。请注意，<span style="background-color: #5fb23680">仅微调 LLM 或模态融合模块的参数并不能充分捕获多模态数据的特征</span>。我们分析原因为如下：<span style="background-color: #5fb23680">用于微调的数据与原始模型有较大差异，例如Q-former和OPT模型，需要有效协作。简单地微调这些模块之一可能无法准确捕获特定于任务的特征。另一方面，微调所有模块会产生大量的资源开销</span>。此外，<span style="background-color: #ff666680">根据我们的实验结果，我们观察到微调可能会导致原始模型发生重大变化，通常会导致其他知识的丢失，在多模式数据集中尤其明显。</span></p>
-<p><img src="../imgs/$%7Bfiilename%7D/WSEXRRE8.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;WSEXRRE8&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%229DEQKYBI%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%227%22%2C%22position%22%3A%7B%22pageIndex%22%3A6%2C%22rects%22%3A%5B%5B68.077%2C533.813%2C530.769%2C783.044%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%227%22%7D%7D&quot; width=&quot;771&quot; height=&quot;415&quot; src=&quot;attachments/WSEXRRE8.png&quot; ztype=&quot;zimage&quot;&gt;"><br><strong>局部性</strong>。<span style="background-color: #ff666680">几种传统的编辑方法仍然适用于多模式编辑</span>，这对于有效修改模型内的知识并纠正其输出很有价值。然而，IKE和SERAC尽管在可靠性方面表现出色，但由于缺乏对M-Locality的约束而在M-Locality上表现不佳，<span style="background-color: #5fb23680">这表明尽管这些基于外部存储器的编辑技术无疑成功地修复了输出，但它们在稳定内部模型中的知识还有改进的空间。</span>对于T-Locality，大多数模型编辑方法都获得了良好的性能，而IKE再次表现不佳。根本原因是其他三种方法对T-Locality施加了约束，而IKE作为InContext Learning方法缺乏鲁棒的约束机制，导致性能不佳。</p>
-<p><strong>泛化</strong>。我们在 E-VQA 中与 MiniGPT-4 进行了各种方法的文本和图像泛化能力的比较探索。请注意，<span style="background-color: #ff666680">KE 往往表现出较低程度的图像泛化，这主要是由于其在训练阶段对 M 局部性的固有考虑。</span>因此，<span style="background-color: #ff666680">与基于记忆的方法相比，元学习方法的图像泛化效率往往较低。另一方面，基于内存的方法所表现出的卓越图像泛化能力是以牺牲 M-Locality 为代价实现的，导致 M-Locality 水平显着降低。</span>通过对各种编辑方法的评估，<span style="background-color: #5fb23680">我们经常发现图像泛化性能往往不如文本泛化性能强大。</span></p>
-<p><img src="../imgs/$%7Bfiilename%7D/QNQGNXI7.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;QNQGNXI7&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%227YT8KPYF%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B54.231%2C457.659%2C540.577%2C782.467%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;811&quot; height=&quot;542&quot; src=&quot;attachments/QNQGNXI7.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p><img src="../imgs/$%7Bfiilename%7D/CPEZX96N.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;CPEZX96N&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%2293WRHX5J%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B55.962%2C212.467%2C303.462%2C451.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;413&quot; height=&quot;400&quot; src=&quot;attachments/CPEZX96N.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<h3 id="4-2-Editing-Different-Component"><a href="#4-2-Editing-Different-Component" class="headerlink" title="4.2 Editing Different Component"></a>4.2 Editing Different Component</h3><p>我们进一步分析了编辑多模态模型不同区域的变化。与编辑单模态模型相比，由于多模态模型的复杂性和多样性，我们可以尝试编辑更多模块并分析它们对视觉和文本知识的影响。结果如图 7 所示。对于 BLIP-2 OPT 模型，我们研究了在 VQA 数据集上编辑 Q-former 和 OPT 的区别。关于MiniGPT4模型，我们主要关注llama_proj和Vicuna模型在编辑最后几层的区别。选择的分析编辑方法有 MEND、KE 和 FT，这使我们能够指定编辑区域。</p>
-<pre><code> 结果表明，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;编辑视觉模块比编辑语言模块更具挑战性（另请参阅图 6 中的失败编辑）。我们认为这种困难可能归因于模型的架构&lt;/span&gt;。&lt;span style=&quot;background-color: #ff666680&quot;&gt;编辑LLM的最后一层可以直接修改输出，而修改视觉模块只影响LLM的输入，对模型的影响相对较小&lt;/span&gt;。具体来说，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;各种模态驻留在不同的空间中，这意味着事实知识可以存储在模型内的单独参数中&lt;/span&gt;。考虑到LLMs拥有大量参数，这一点对于多模态模型变得更加重要。因此，编辑语言模型可以显着提高性能。值得注意的是，模型中的视觉模块在图像理解中起着至关重要的作用，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;因此表明未来的工作需要同时考虑来自不同模式的信息。&lt;/span&gt;
-</code></pre><h2 id="5-Conclusion"><a href="#5-Conclusion" class="headerlink" title="5 Conclusion"></a>5 Conclusion</h2><p>在本文中，我们介绍了多模式模型编辑，以及新的基准 MMEdit。根据经验，我们分析了各种模型编辑基线的有效性，并探索它们对不同组件（例如视觉和文本）的影响。</p>
-<h2 id="6-Limitations"><a href="#6-Limitations" class="headerlink" title="6 Limitations"></a>6 Limitations</h2><p><strong>楷模</strong>。我们只编辑几个基本的多模式LLMs，留下许多其他的。此外，由于资源限制，我们编辑的多模态LLM的参数数量低于10B，我们无法编辑具有更多参数的LLM，例如65B LLaMA Adapter V2（Gao et al., 2023） 。</p>
-<p><strong>高效的视觉编辑</strong>。在本文中，我们的分析主要集中于比较不同模式模块中现有编辑方法的不同效果。然而，结果并不令人满意。展望未来，我们的主要目标是探索如何跨其他模式高效、准确地编辑信息。这包括研究技术，<span style="background-color: #5fb23680">例如通过查明多模态模型内的知识并识别需要修改的内容来在不同模态之间进行共同编辑。</span></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN,en,default">
     <link itemprop="mainEntityOfPage" href="http://humble2967738843.github.io/2023/11/02/wo-men-ke-yi-tong-guo-qing-jing-xue-xi-lai-bian-ji-shi-shi-zhi-shi-ma/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1412,6 +1272,146 @@
 <pre><code>为了评估编辑中这种时间感知知识的遗忘，我们基于 TEMPLAMA (Dhingra et al., 2022) 构建了一个小型基准，以进一步表明 IKE 比 §C 中的其他基准可以导致更少的知识遗忘。
 </code></pre><h2 id="6-Discussions"><a href="#6-Discussions" class="headerlink" title="6 Discussions"></a>6 Discussions</h2><p>在之前的实验中，我们遵循孟等人之前研究的设置。 （2022a）并主要评估编辑单个事实以进行公平比较的方法。我们的结果表明 IKE 可以获得更好的泛化性和特异性，副作用更少，并且不需要修改参数。尽管如此，为了探讨可行性在将 IKE 应用到现实场景中时，有几个重要问题尚未得到充分探索：(1) IKE 能否扩展以容纳更多的编辑事实？考虑到语言模型的输入长度有限，在上下文中包含大量的编辑事实可能是不可行的。 (2) IKE 能否适应处理不同格式和域的事实和提示？在IKE中，事实和提示的域和格式保持一致。然而，在现实世界中，事实和提示有多种形式。米切尔等人。 (2022b)提出了一种基于检索的方法来编辑多个知识事实。类似地，具有外部存储器来存储事实编辑的 IKE 可以检索正确的事实编辑来构建给定提示的上下文，从而避免永远在上下文中预先添加所有事实编辑。为了验证 IKE 对不同形式的事实或提示的泛化，我们用维基百科中的中性数据替换了事实，或者用生成提示替换了提示，提示 LM 生成与新对象相关的文本。详细讨论可以在§D 中找到。</p>
 <h2 id="7-Conclusion"><a href="#7-Conclusion" class="headerlink" title="7 Conclusion"></a>7 Conclusion</h2><p>在这项工作中，我们研究了上下文学习在大规模语言模型上进行知识编辑的潜力。具体来说，我们设计了提示LM的演示策略，包括三种类型的演示格式和基于检索的演示组织。我们表明，所提出的方法 IKE 在不需要任何参数修改的情况下实现了竞争性知识编辑功效，并保持了良好的泛化和特异性性能。进一步的分析证明了它对于大型 LM 的可扩展性、对过度编辑问题的弹性以及通过多轮编辑维护时间感知知识事实的能力。我们的结果证明 ICL 在 LM 知识编辑方面具有巨大潜力。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN,en,default">
+    <link itemprop="mainEntityOfPage" href="http://humble2967738843.github.io/2023/11/02/wo-men-ke-yi-bian-ji-duo-mo-tai-da-xing-yu-yan-mo-xing-ma/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="yuan long">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="humbleyl">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/11/02/wo-men-ke-yi-bian-ji-duo-mo-tai-da-xing-yu-yan-mo-xing-ma/" class="post-title-link" itemprop="url">我们可以编辑多模态大型语言模型吗？</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-02 12:21:08" itemprop="dateCreated datePublished" datetime="2023-11-02T12:21:08+08:00">2023-11-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-05-26 17:35:11" itemprop="dateModified" datetime="2024-05-26T17:35:11+08:00">2024-05-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%9F%A5%E8%AF%86%E7%BC%96%E8%BE%91/" itemprop="url" rel="index"><span itemprop="name">知识编辑</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="我们可以编辑多模态大型语言模型吗？"><a href="#我们可以编辑多模态大型语言模型吗？" class="headerlink" title="我们可以编辑多模态大型语言模型吗？"></a>我们可以编辑多模态大型语言模型吗？</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>在本文中，我们重点关注编辑多模态大型语言模型（MLLM）。与编辑单模态LLMs相比，多模态模型编辑更具挑战性，需要在编辑过程中进行更高水平的审查和仔细考虑。为了促进这一领域的研究，我们<span style="background-color: #ff666680">构建了一个名为 MMEdit 的新基准，用于编辑多模式LLMs并建立一套创新的评估指标</span>。我们进行了涉及各种模型编辑基线的综合实验，并分析了编辑不同组件对多模式LLMs的影响。根据经验，我们注意到<span style="background-color: #ff666680">以前的基线可以在一定程度上实现多模态 LLM 的编辑，但效果仍然差强人意，这表明这项任务的潜在难度。</span>我们希望我们的工作能够为 NLP 社区提供见解1。</p>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>随着大型语言模型 (LLM) 的广泛部署（Zhao 等人，2023），在不产生大量再培训成本的情况下保持其知识准确和最新的必要性变得越来越重要（Sinitsin 等人，2020）。<span style="background-color: #2ea8e580">先前的研究引入了知识编辑方法，旨在逐步向语言模型注入一组新的事实</span>（Mitchell 等人，2022a；Han 等人，2023；Hartvigsen 人，2022；Zhong 等人，2023；Gandikota等人，2023；姚等人，2023）。</p>
+<pre><code>  与单模态模型编辑不同，多模态LLMs的编辑任务因其固有的多样性和复杂性而面临相当大的挑战。具体来说，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;多模式模型的错误输出可能源于各种模式的协同效应。输出不正确可能不仅仅源于LLMs，类似于误读或误识别等人为错误&lt;/span&gt;（例如，色盲影响图像中的颜色识别）。如图1所示，在编辑之前，模型将物体错误地识别为“梯子”而不是正确的“障碍物”，从而导致错误的预测。编辑后，模型准确识别了“障碍”。请注意，多模态LLMs（Yin et al., 2023）的效用正在增加，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;但缺乏相应的数据集资源和用于编辑多模态大语言模型的基准。&lt;/span&gt;
+
+ 为了促进这一领域的研究，我们第一步构建了一个多模态模型编辑基准：&lt;span style=&quot;background-color: #ff666680&quot;&gt;称为 MMEdit，它包含两个子任务：编辑 VQA 和编辑图像标题。&lt;/span&gt;具体来说，我们&lt;span style=&quot;background-color: #ff666680&quot;&gt;遵循单模态模型编辑方法（Mitchell et al., 2022a；Cao et al., 2021；Mitchell et al., 2022b）来构建数据集，这扩展了之前的评估原则，即 Reliability2、Locality3 和通用性4，多模式设置。对于可靠性评估，我们从严格的数据收集开始，收集表现不佳的多模态模型数据来创建专用的可靠性编辑数据集（§3.2.1）。对于局部性评估，我们将其分为文本局部性和多模态局部性，以评估多模态 LLM 的稳定性（第 3.2.2 节）。对于通用性评估，与局部性类似，我们将其分为文本通用性和多模态通用性，并利用 ChatGLM (Du et al., 2022) 和稳定扩散 (Rombach et al., 2022) 生成重新措辞的文本以及重新措辞的图像进行评估（第 3.2.3 节）。我们评估了 MMEdit 上的几种知识编辑方法。&lt;/span&gt;根据经验，我们注意到&lt;span style=&quot;background-color: #5fb23680&quot;&gt;当前的编辑方法对于编辑多模态语言模型中的文本模型有效，但对于编辑视觉模块则不那么有效&lt;/span&gt;。例如，在编辑BLIP-2模型的语言模块时，MEND的可靠性可以达到92.6%，但在编辑视觉模块时只能达到14.1%，表明该任务的潜在难度和机遇。总的来说，我们的主要贡献如下：
+</code></pre><ul>
+<li>我们迈出了第一步，研究编辑多模态LLMs，将模型编辑扩展到多模态设置。</li>
+</ul>
+<!---->
+<ul>
+<li>我们提出了MMEdit，一个新的基准，用于评估多模态模型编辑方法的可靠性、局部性和通用性。</li>
+</ul>
+<!---->
+<ul>
+<li>我们使用各种基线进行实验，证明虽然当前的方法可以在一定程度上帮助多模式编辑，但结果仍然达不到完全满意的程度。我们将公开代码和数据集以用于未来的研究目的。</li>
+</ul>
+<h2 id="2-Related-Work"><a href="#2-Related-Work" class="headerlink" title="2 Related Work"></a>2 Related Work</h2><h3 id="2-1-Multimodal-Language-Models"><a href="#2-1-Multimodal-Language-Models" class="headerlink" title="2.1 Multimodal Language Models"></a>2.1 Multimodal Language Models</h3><pre><code> 多模态学习 (MML)（Xu 等人，2022a；Yin 等人，2023）提供了一种构建 AI 模型的整体方法，该模型可以从各种数据模态中提取和关联信息。由于其社会意义，MML 在研究界站稳了脚跟，在过去十年中巩固了自己作为一个重要研究领域的地位。视&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;觉语言预训练是MML的重要分支之一，旨在学习在各种视觉和语言任务上具有改进性能的多模态基础模型&lt;/span&gt;。 Vision Transformer (ViT)（Dosovitskiy et al., 2021）&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;是一项开创性的工作，贡献了端到端将 Transformers 的编码器应用于图像的解决方案。&lt;/span&gt; CLIP（Radford et al., 2021）&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;提出了一种方法，使用多模态预训练将分类转换为检索任务，使预训练模型能够解决零样本识别问题&lt;/span&gt;。最近，LLaMA (Touvron et al., 2023)、BLOOM (Scao et al., 2022) 和 ChatGPT (OpenAI, 2022) 等 LLM 的进步得到了扩大训练数据和增加参数的支持，最近取得了重大成功。这些模型展示了令人印象深刻的语言理解、生成和知识推理能力，增强了它们理解自然语言和生成高质量、基于上下文的文本的能力。大型语言模型的发展刺激了自回归语言模型作为视觉语言任务中的解码器的广泛使用。&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;利用跨模态迁移，这种方法可以实现语言和多模态领域之间的知识共享&lt;/span&gt;（Gao et al., 2023; Liu et al., 2023; Li et al., 2023a; Ye et al., 2023; Zhu et al., 2023；Li 等人，2023b；Zhang 等人，2023）。
+</code></pre><h3 id="2-2-Model-Editing"><a href="#2-2-Model-Editing" class="headerlink" title="2.2 Model Editing"></a>2.2 Model Editing</h3><pre><code> LLMs（Zhao et al., 2023）主要从训练语料库中获取知识。然而，数据集的质量并不总是得到保证，可能会将有害或不正确的信息集成到模型中（Hernandez 等人，2023）。&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;一种解决方案是使用更新的知识重新训练模型，尽管这可能成本高昂且难以实施&lt;/span&gt;。或者，&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;可以考虑使用一些更新的事实进行微调，但它存在过度拟合和灾难性遗忘的风险&lt;/span&gt;（Zhai et al., 2023）。为了解决这些问题，（Sinitsin et al., 2020）提出了模型编辑，旨在高效、准确地改变模型中存储的事实知识。这种方法应用于各个领域（Mao et al., 2023; Onoe et al., 2023; Xu et al., 2022b; Wang et al., 2023a; Li et al., 2023c），并且研究数量不断增加调查编辑的影响（Ilharco 等人，2023；Gupta 等人，2023；Hase 等人，2023；Cohen 等人，2023；Wu 等人，2023；Wang 等人，2023b；Gandikota 等人等人，2023；Li 等人，2023d）。目前，模型编辑方法主要有三种类型：&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;1）元学习方法，2）定位然后编辑方法，3）上下文知识编辑方法。&lt;/span&gt;
+</code></pre><p><strong>元学习方法</strong>。 MEND（Mitchell 等人，2022a）和知识编辑器 (KE)（Cao 等人，2021）提出了<span style="background-color: #2ea8e580">涉及外部编辑器的方法，能够学习用于知识更新的最佳参数集 θ，同时施加约束以保持模型稳定性。</span> CaliNET (Dong et al., 2022) 和 T-Patcher (Huang et al., 2023) 从 (Dai et al., 2022) 中汲取灵感，<span style="background-color: #2ea8e580">将额外的可训练参数引入到预训练语言模型的前馈模块中。</span> SERAC（Mitchell 等人，2022b）<span style="background-color: #2ea8e580">利用显式记忆来存储编辑，并学习对它们进行推理，以根据需要调整基本模型的预测。</span></p>
+<p><strong>定位然后编辑方法</strong>。 ROME（Meng et al., 2022a）<span style="background-color: #2ea8e580">提出了采用因果中介分析来识别编辑区域的方法。</span> ROME 发现记忆的事实关联可以精确定位到 GPT 模型中的特定位置。然而，ROME 的一个显着限制是它一次只能编辑一个事实。为了解决这个问题，Meng 等人。 (2022b)提出了一种称为MEMIT的新方法，<span style="background-color: #2ea8e580">它是之前工作ROME的继承者，它对单层的MLP权重进行rankone修改，以将内存直接写入模型中。</span></p>
+<p><strong>上下文知识编辑方法</strong>。 InContext Learning (ICL)（Brown et al., 2020）<span style="background-color: #2ea8e580">表示一种免训练范式，其中知识是从输入上下文中直接串联的演示中获取的</span>。最近出现了一种新颖的编辑范式，它<span style="background-color: #2ea8e580">利用LLMs理解上下文的能力（Zheng et al., 2023），从而实现基于上下文的模型编辑，指导模型的生成过程，并提供高效、轻量级的模型方法编辑</span>。迄今为止的模型编辑方法主要迎合单模态场景，在多模态编辑方面留下了空白。据我们所知，我们是第一个研究LLMs多模式模型编辑的人，并为促进该领域的研究提供了新的基准。</p>
+<h2 id="3-Editing-Multimodal-LLMs"><a href="#3-Editing-Multimodal-LLMs" class="headerlink" title="3 Editing Multimodal LLMs"></a>3 Editing Multimodal LLMs</h2><p>我们在图 2 中说明了多模态编辑的建议任务。我们将介绍任务定义（§3.1）、（§3.2）中的数据集构建细节、多模态模型（§3.3）以及我们在实验。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/KQ9KJ8DQ.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;KQ9KJ8DQ&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22MS6FUQ8I%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%223%22%2C%22position%22%3A%7B%22pageIndex%22%3A2%2C%22rects%22%3A%5B%5B68.654%2C497.467%2C526.731%2C777.852%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%223%22%7D%7D&quot; width=&quot;763&quot; height=&quot;467&quot; src=&quot;attachments/KQ9KJ8DQ.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<h3 id="3-1-Task-Definition"><a href="#3-1-Task-Definition" class="headerlink" title="3.1 Task Definition"></a>3.1 Task Definition</h3><p>假设我们有一个由 <em>θ </em>参数化的多模态 LLM<em> f </em>（由两部分组成，由 θ<sub>vision</sub> 和 θ<sub>text</sub> 参数化的 f<sub>vision</sub> 和 f<sub>text </sub>），将输入 i<sub>e</sub> 和 x<sub>e</sub> 映射到 y<sub>o</sub> 的预测，其中 i<sub>e </sub>指的是编辑图像输入，xe 指的是编辑文本提示输入和 y<sub>o</sub> 表示为原始输出。我们将 M 表示为特定指标的符号表示，下标表示特定度量，上标表示变化编辑数据。我们准备第 3.2.1 节中所述的编辑数据集，其表示为 Dedit。受到姚等人的启发。 （2023），我们引入了一系列多模式模型编辑指标。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/ZFVB46CA.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;ZFVB46CA&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22MJQK4385%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B64.853%2C526.008%2C292.5%2C791.596%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;379&quot; height=&quot;442&quot; src=&quot;attachments/ZFVB46CA.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><strong>可靠性</strong>。需要编辑可靠性才能将预测从 y<sub>o</sub> 更改为 y<sub>e</sub>。直观上，我们需要的是更新后的 θe，其中 f（即 x<sub>e</sub>;θ<sub>e</sub>）= y<sub>e</sub>。为了衡量可靠性，我们使用编辑准确性，如下所述：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/HSTRNPML.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;HSTRNPML&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22NS7JGJWI%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B68.824%2C342.919%2C292.059%2C378.214%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;372&quot; height=&quot;59&quot; src=&quot;attachments/HSTRNPML.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>其中θ<sub>e</sub>指的是编辑后的参数。</p>
+<p><strong>局部性</strong>。为了保持模型的稳定性，必须最大限度地减少编辑对模型更广泛的知识库造成的意外副作用。为了实现这一目标，我们引入了两个指标：M <sup>Text</sup> <sub>loc</sub> (T-Locality) 和 M<sup>Image</sup> <sub>loc</sub> (M-Locality)，这两个指标都是为了在编辑过程中保持模型的稳定性。鉴于多模态语言模型中的知识是从LLMs继承的，保护这些知识至关重要。考虑到这一目标，我们搁置了模型的视觉辨别模块，而是采用基本的问答数据集 D<sub>loc-t</sub>，如第 3.2.2 节中所述。我们定义问题为x，答案为y，如下：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/J24EN8UP.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;J24EN8UP&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22M2ZHI4QM%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B67.941%2C93.214%2C292.941%2C133.361%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;375&quot; height=&quot;67&quot; src=&quot;attachments/J24EN8UP.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>视觉编码器在多模态语言模型中发挥着关键作用，将将图像转换为矢量表示，以便与自然语言文本共同编码。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/IPZFZHUW.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;IPZFZHUW&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22ZIQHSJG7%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B301.765%2C653.066%2C528.529%2C777.919%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;378&quot; height=&quot;208&quot; src=&quot;attachments/IPZFZHUW.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>因此，我们必须考虑对该模块进行任何修改的潜在后果。我们构建表示为 D<sub>loc-v</sub> 的数据集用于测试 MImage loc ，并计算如下：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/4NC86SS7.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;4NC86SS7&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22K2BYGI7E%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B302.647%2C522.478%2C532.941%2C557.772%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;384&quot; height=&quot;59&quot; src=&quot;attachments/4NC86SS7.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>其中（iv，xv，yv）是范围外数据，θe表示编辑数据更新的参数（即xe，ye)。</p>
+<p><strong>泛化性</strong>。在整个编辑过程中，仅仅修改个别错误的输入是不够的。修订后的模型还应保留泛化能力，并始终为等效输入（例如改写的句子）生成一致的输出，如图 3 所示。虽然以前的单模态模型编辑任务仅需要考虑改写的文本，但多模态场景需要泛化以及图像。为了解决这个问题，我们引入了两个泛化考虑因素：MText gen (TGenerality) 和 MImage gen (M-Generality)，其表示如下：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/BS3DHYZH.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;BS3DHYZH&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22SSPQQ5PC%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B303.088%2C236.596%2C527.206%2C296.596%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;374&quot; height=&quot;100&quot; src=&quot;attachments/BS3DHYZH.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>其中 ir 表示重新表述的图像，xr 指重新表述的文本提示，N (x) 表示 x 范围内的对象。</p>
+<h3 id="3-2-Datasets"><a href="#3-2-Datasets" class="headerlink" title="3.2 Datasets"></a>3.2 Datasets</h3><p>我们构建的数据集MMEdit主要包含两个子任务：编辑VQA（E-VQA）和编辑图像标题（E-IC）。</p>
+<h4 id="3-2-1-Reliability-Dataset-Construction"><a href="#3-2-1-Reliability-Dataset-Construction" class="headerlink" title="3.2.1 Reliability Dataset Construction"></a>3.2.1 Reliability Dataset Construction</h4><p>为了对我们的实验进行基准测试，我们选择了两个常见的多模态任务：视觉问答（VQA）（Antol et al., 2015）和图像</p>
+<p><img src="../imgs/$%7Bfiilename%7D/TT279E4N.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;TT279E4N&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%229KCXYY3D%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%225%22%2C%22position%22%3A%7B%22pageIndex%22%3A4%2C%22rects%22%3A%5B%5B60%2C488.39%2C297%2C778.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%225%22%7D%7D&quot; width=&quot;395&quot; height=&quot;483&quot; src=&quot;attachments/TT279E4N.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>字幕（Herdade 等人，2019）。 <span style="background-color: #2ea8e580">VQA 旨在设计一种算法，不仅可以理解图像中的视觉内容，还可以理解用于查询该图像的自然语言，并随后生成这些查询的精确答案</span>。<span style="background-color: #2ea8e580">图像字幕是设计能够理解图像视觉内容的算法，随后用自然语言生成连贯且精确的图像描述</span>。在本研究中，我们选择 BLIP-2 OPT。我们的基础编辑数据源自两个评估数据集的次优条目，即 VQAv2（Goyal 等人，2017）和 COCO Caption（Chen 等人，2015)。</p>
+<pre><code> 除了基本的编辑数据之外，利用其他数据也至关重要。这些数据不仅有助于编辑过程，还验证更改的有效性，评估模型编辑的稳定性和通用性。
+</code></pre><h4 id="3-2-2-Locality-Dataset-Construction"><a href="#3-2-2-Locality-Dataset-Construction" class="headerlink" title="3.2.2 Locality Dataset Construction"></a>3.2.2 Locality Dataset Construction</h4><p>我们必须仔细考虑多模态模型中编辑对语言功能的影响，<span style="background-color: #5fb23680">类似于我们如何评估手术后个体大脑的各个认知区域。</span></p>
+<p><strong>文本局部性数据集</strong>。为了评估语言模型的稳定性，我们利用之前在 MEND 中使用的 NQ 数据集（Kwiatkowski 等人，2019）作为模型内 LLM 组件稳定性的基准。我们专门使用模型的输出预编辑和后期编辑来构建 KL 散点图，从而促进对模型编辑的约束。此外，我们还计算了保持 top-1 状态的实例比例，进一步量化了模型的稳定性。</p>
+<p><strong>多模态局部性数据集</strong>。同样，验证编辑对视觉模块的影响也至关重要。因此，我们在多模态领域使用简单的数据集 OK-VQA（Marino 等人，2019），作为多模态视觉模块局部性的度量。我们再次在编辑过程之前和之后使用 logits 更新 KL 离散度约束。</p>
+<h4 id="3-2-3-Generality-Dataset-Construction"><a href="#3-2-3-Generality-Dataset-Construction" class="headerlink" title="3.2.3 Generality Dataset Construction"></a>3.2.3 Generality Dataset Construction</h4><p>我们在多模态模型中提出了两种形式的通用性。共性数据集构建的整体流程如图4所示。</p>
+<p><strong>文本泛化数据集</strong>。值得注意的是，LLMs表现出强大的会话能力和强大的解决问题的能力，这使我们能够制定任务指令，从而指导模型生成类似的文本输入。对于 E-VQA 任务，我们利用 ChatGLM（Du et al., 2022；Zeng et al., 2022）生成类似的查询。然而，对于E-IC任务，由于提示的简洁和相对直接，模型生成的输出质量并不令人满意。因此，我们采用手动编写的包含20条提示的模板来随机替换原来的提示。</p>
+<p><strong>视觉泛化数据集</strong>。近年来，<span style="background-color: #2ea8e580">扩散模型（Ho et al., 2020）在图像生成领域取得了巨大成功。超越最初最先进的模型</span>：生成对抗网络（GAN）模型（Goodfellow 等人，2014）。扩散模型在许多图像生成任务中表现出色，并在各个应用领域中表现出了值得称赞的性能。<span style="background-color: #2ea8e580">稳定扩散（Rombach 等人，2022）是一种潜在的文本到图像扩散模型，能够根据给定的文本输入生成逼真的图像</span>。我们利用稳定扩散 2.1 来生成重新解释的图像。该数据集利用 COCO 数据集的标题描述来评估模型的图像泛化能力。</p>
+<h3 id="3-3-Multimodal-Language-Models"><a href="#3-3-Multimodal-Language-Models" class="headerlink" title="3.3 Multimodal Language Models"></a>3.3 Multimodal Language Models</h3><p><strong>BLIP-2 OPT</strong>。 BLIP-2（Li et al., 2023b）<span style="background-color: #2ea8e580">是一种通用且高效的预训练策略，可从现成的冻结预训练图像编码器和冻结大型语言模型引导视觉语言预训练。该模型利用轻量级查询转换器来弥合视觉模态和文本模态之间的差距，并在各种视觉语言任务上实现最先进的性能</span>。我们选择 BLIP-2 OPT 作为基本编辑模型，它在视觉模块中利用 ViT-L，并选择无监督训练的 OPT 模型用于基于解码器的 LLM。迷你GPT-4。</p>
+<p><strong>MiniGPT-4</strong>（Zhu et al., 2023）是一种类似于 BLIP-2 的有效视觉语言模型，利用冷冻视觉编码器与冷冻 Vicuna（Chiang et al., 2023）相结合。据报道，基于 LLaMA 构建的 Vicuna 根据 GPT-4 的评估标准达到了 ChatGPT 90% 的性能。 MiniGPT-4 添加了一个投影层，以使编码的视觉特征与 Vicuna 语言模型保持一致。 MiniGPT-4 采用与 BLIP-2 相同的预训练视觉组件，由 EVA-CLIP（Sun 等人，2023）的 Vit-G/14 和 Q-Former 组成。</p>
+<h3 id="3-4-Baselines"><a href="#3-4-Baselines" class="headerlink" title="3.4 Baselines"></a>3.4 Baselines</h3><p><strong>Finetune</strong>。微调已成为一种广泛采用的策略，用于使预训练的语言模型适应特定任务或领域（Cortes 等人，2015）。在我们的探索中，我们深入研究了两种不同的微调方法：一种专注于语言模型的最后一层。以BLIP-2 OPT模型为例，我们对OPT模型的第31个解码器层进行微调。另一个目标是多模态语言模型中的视觉块，具体来说，我们微调 Q-former 模型以过度拟合编辑数据集。</p>
+<p><strong>MEND</strong>。具有梯度分解的模型编辑器网络（Mitchell 等人，2022a）使用单个输入输出对对语言模型进行高效的本地编辑。本质上，MEND 学习转换微调 LLM 的梯度，它利用梯度的低秩分解。</p>
+<p><strong>KE</strong>。 KE（Cao et al., 2021）是一种可以编辑语言模型中错误知识而无需重新训练整个模型的方法。 KE 利用具有约束优化的超网络（双向 LSTM），用于预测推理过程中的权重更新。</p>
+<p><strong>SERAC</strong>。 SERAC（Mitchell 等人，2022b）引入了一种基于内存的模型编辑方法，该方法利用显式内存系统来缓存编辑。该内存随后用于在推理过程中调整基本模型的输出。该系统利用一个小型辅助范围分类器和反事实模型。范围分类器的作用是确定输入是否在内存缓存的范围内。如果在此范围内找到输入，则会将其与最相关的缓存项结合起来，并输入到反事实模型中进行预测。</p>
+<p><strong>In-Context Knowledge Editing.</strong>。上下文知识编辑（IKE）（Zheng et al., 2023）构造 k 个演示 C = {c1, . 。 。 , ck }，遵循 Liu 等人中概述的方法。 （2022）。该方法采用基于余弦相似度的无监督检索器，在将事实 f = (x*, y*) 注入语言模型之前从训练集中获取演示。 x* 是探索模型中事实知识的提示（例如，美国总统是），y* 将是编辑目标乔·拜登。上下文演示的排名也取决于余弦相似度：cos(c1, f ) &lt; cos(c2, f ) &lt; · · · &lt; cos(ck, f )。其中 c1, . 。 。 , ck 在上下文中从左到右顺序排列。演示 C 可以被视为外部增强的知识库，主要设计用于指导 LM 内的生成。其最终目标是当提示符x落在目标提示符x*的编辑范围内时，最大化P(y|x,f,C)。</p>
+<h2 id="4-Experiments"><a href="#4-Experiments" class="headerlink" title="4 Experiments"></a>4 Experiments</h2><h3 id="4-1-Results"><a href="#4-1-Results" class="headerlink" title="4.1 Results"></a>4.1 Results</h3><p>在这一部分中，我们对 MMEdit 上的多种编辑方法进行了比较分析。这些比较的结果如表2所示。之后，我们深入研究了实验结果的三个指标，包括可靠性、局部性和通用性三个方面。此外，我们通过文本和视觉方式分析局部性和通用性，并在图 6 中提供了几个编辑案例。</p>
+<p><strong>可靠性</strong>。从结果来看，<span style="background-color: #ff666680">所有模型编辑方法在可靠性方面均优于基本方法</span>。特别是，<span style="background-color: #ff666680">利用外部存储器进行编辑的 IKE 和 SERAC 方法在多模态语言中表现出了值得称赞的性能楷模</span>。我们<span style="background-color: #ff666680">观察到微调方法的性能比模型编辑方法差</span>。请注意，<span style="background-color: #5fb23680">仅微调 LLM 或模态融合模块的参数并不能充分捕获多模态数据的特征</span>。我们分析原因为如下：<span style="background-color: #5fb23680">用于微调的数据与原始模型有较大差异，例如Q-former和OPT模型，需要有效协作。简单地微调这些模块之一可能无法准确捕获特定于任务的特征。另一方面，微调所有模块会产生大量的资源开销</span>。此外，<span style="background-color: #ff666680">根据我们的实验结果，我们观察到微调可能会导致原始模型发生重大变化，通常会导致其他知识的丢失，在多模式数据集中尤其明显。</span></p>
+<p><img src="../imgs/$%7Bfiilename%7D/WSEXRRE8.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;WSEXRRE8&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%229DEQKYBI%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%227%22%2C%22position%22%3A%7B%22pageIndex%22%3A6%2C%22rects%22%3A%5B%5B68.077%2C533.813%2C530.769%2C783.044%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%227%22%7D%7D&quot; width=&quot;771&quot; height=&quot;415&quot; src=&quot;attachments/WSEXRRE8.png&quot; ztype=&quot;zimage&quot;&gt;"><br><strong>局部性</strong>。<span style="background-color: #ff666680">几种传统的编辑方法仍然适用于多模式编辑</span>，这对于有效修改模型内的知识并纠正其输出很有价值。然而，IKE和SERAC尽管在可靠性方面表现出色，但由于缺乏对M-Locality的约束而在M-Locality上表现不佳，<span style="background-color: #5fb23680">这表明尽管这些基于外部存储器的编辑技术无疑成功地修复了输出，但它们在稳定内部模型中的知识还有改进的空间。</span>对于T-Locality，大多数模型编辑方法都获得了良好的性能，而IKE再次表现不佳。根本原因是其他三种方法对T-Locality施加了约束，而IKE作为InContext Learning方法缺乏鲁棒的约束机制，导致性能不佳。</p>
+<p><strong>泛化</strong>。我们在 E-VQA 中与 MiniGPT-4 进行了各种方法的文本和图像泛化能力的比较探索。请注意，<span style="background-color: #ff666680">KE 往往表现出较低程度的图像泛化，这主要是由于其在训练阶段对 M 局部性的固有考虑。</span>因此，<span style="background-color: #ff666680">与基于记忆的方法相比，元学习方法的图像泛化效率往往较低。另一方面，基于内存的方法所表现出的卓越图像泛化能力是以牺牲 M-Locality 为代价实现的，导致 M-Locality 水平显着降低。</span>通过对各种编辑方法的评估，<span style="background-color: #5fb23680">我们经常发现图像泛化性能往往不如文本泛化性能强大。</span></p>
+<p><img src="../imgs/$%7Bfiilename%7D/QNQGNXI7.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;QNQGNXI7&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%227YT8KPYF%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B54.231%2C457.659%2C540.577%2C782.467%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;811&quot; height=&quot;542&quot; src=&quot;attachments/QNQGNXI7.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="../imgs/$%7Bfiilename%7D/CPEZX96N.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;CPEZX96N&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%2293WRHX5J%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B55.962%2C212.467%2C303.462%2C451.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;413&quot; height=&quot;400&quot; src=&quot;attachments/CPEZX96N.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<h3 id="4-2-Editing-Different-Component"><a href="#4-2-Editing-Different-Component" class="headerlink" title="4.2 Editing Different Component"></a>4.2 Editing Different Component</h3><p>我们进一步分析了编辑多模态模型不同区域的变化。与编辑单模态模型相比，由于多模态模型的复杂性和多样性，我们可以尝试编辑更多模块并分析它们对视觉和文本知识的影响。结果如图 7 所示。对于 BLIP-2 OPT 模型，我们研究了在 VQA 数据集上编辑 Q-former 和 OPT 的区别。关于MiniGPT4模型，我们主要关注llama_proj和Vicuna模型在编辑最后几层的区别。选择的分析编辑方法有 MEND、KE 和 FT，这使我们能够指定编辑区域。</p>
+<pre><code> 结果表明，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;编辑视觉模块比编辑语言模块更具挑战性（另请参阅图 6 中的失败编辑）。我们认为这种困难可能归因于模型的架构&lt;/span&gt;。&lt;span style=&quot;background-color: #ff666680&quot;&gt;编辑LLM的最后一层可以直接修改输出，而修改视觉模块只影响LLM的输入，对模型的影响相对较小&lt;/span&gt;。具体来说，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;各种模态驻留在不同的空间中，这意味着事实知识可以存储在模型内的单独参数中&lt;/span&gt;。考虑到LLMs拥有大量参数，这一点对于多模态模型变得更加重要。因此，编辑语言模型可以显着提高性能。值得注意的是，模型中的视觉模块在图像理解中起着至关重要的作用，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;因此表明未来的工作需要同时考虑来自不同模式的信息。&lt;/span&gt;
+</code></pre><h2 id="5-Conclusion"><a href="#5-Conclusion" class="headerlink" title="5 Conclusion"></a>5 Conclusion</h2><p>在本文中，我们介绍了多模式模型编辑，以及新的基准 MMEdit。根据经验，我们分析了各种模型编辑基线的有效性，并探索它们对不同组件（例如视觉和文本）的影响。</p>
+<h2 id="6-Limitations"><a href="#6-Limitations" class="headerlink" title="6 Limitations"></a>6 Limitations</h2><p><strong>楷模</strong>。我们只编辑几个基本的多模式LLMs，留下许多其他的。此外，由于资源限制，我们编辑的多模态LLM的参数数量低于10B，我们无法编辑具有更多参数的LLM，例如65B LLaMA Adapter V2（Gao et al., 2023） 。</p>
+<p><strong>高效的视觉编辑</strong>。在本文中，我们的分析主要集中于比较不同模式模块中现有编辑方法的不同效果。然而，结果并不令人满意。展望未来，我们的主要目标是探索如何跨其他模式高效、准确地编辑信息。这包括研究技术，<span style="background-color: #5fb23680">例如通过查明多模态模型内的知识并识别需要修改的内容来在不同模态之间进行共同编辑。</span></p>
 
       
     </div>
