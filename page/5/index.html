@@ -210,49 +210,14 @@
 <p><img src="https://s2.loli.net/2023/12/10/DExw4IelAZaztUG.png" alt="image-20231210212635618"></p>
 <p><img src="https://s2.loli.net/2023/12/10/2kdaW31bwzUpe4i.png" alt="image-20231210212836474"></p>
 <p>另一个例子</p>
-<p><img src="https://s2.loli.net/2023/12/10/bmYzIX8y1lHQNeR.png" alt="image-20231210212924305"></p>
-<ul>
-<li>梯度<ul>
-<li>将导数拓展到向量</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/10/IYfiq7KQlZEV3pR.png" alt="image-20231210213557615"></p>
-<ul>
-<li>$\frac{\partial y}{\partial x}$<ul>
-<li>列向量的导数是行向量</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/10/XWvAMFKkmLesYli.png" alt="image-20231210213818208"></p>
-<p>【举例】</p>
-<script type="math/tex; mode=display">
-\frac{\partial x_1^2}{\partial x} + 2x_2^2=[2x_1 + 4x_2]</script><p>方向 $(2, 4)$ 与等高线正交</p>
-<p><img src="https://s2.loli.net/2023/12/10/7KpYcLPmDo4jIw3.png" alt="image-20231210214202"></p>
-<p>如何理解：<strong>前面的函数可以画作是等高线，可以看作是一座山，现取任意一点 $(x_1, x_2) = (1, 1)$  ，经过这个点做等高线的切线（可以看作是上面函数的导数），而这个切线的垂线方向恰好可以使用我们所谓的梯度函数 $[2x_1, 4x_2]$ 计算出来。</strong></p>
-<p><strong>梯度和等高线是正交的，指向的是等高线变化最大的方向。</strong>也就是机器学习求解的核心思想。</p>
-<p>【举例】</p>
-<p><img src="https://s2.loli.net/2023/12/10/pqwCnxD5MA6tiWf.png" alt="image-20231210215112830"></p>
-<p><img src="https://s2.loli.net/2023/12/10/qWMLQ1CjtezKZAw.png" alt="image-20231210215141945"></p>
-<ul>
-<li>$\frac{\partial y}{\partial x}$</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/10/aVk2tSzN6xvf1db.png" alt="image-20231210215451058"></p>
-<p><img src="https://s2.loli.net/2023/12/10/ofFO4aHIXlNdKxu.png" alt="image-20231210215430244"></p>
-<p>$\frac{\partial y}{\partial x}$是行向量，$\frac{\partial y}{\partial x}$是列向量，这个被称为分子局部符号，反过来的版本就叫分母布局符号</p>
-<ul>
-<li>$\frac{\partial y}{\partial x}$</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/10/BzU2X47kly6oOcg.png" alt="image-20231210220234811"></p>
-<p><img src="https://s2.loli.net/2023/12/10/gUzCJlrPDY6iKaj.png" alt="image-20231210220248272"></p>
-<p><img src="https://s2.loli.net/2023/12/10/Nzu2t6r9xcmvH4P.png" alt="image-20231210220322753"></p>
-<p>【举例】</p>
-<p><img src="https://s2.loli.net/2023/12/10/D79yhU6iNQE5rTv.png" alt="image-20231210220453673"></p>
-<ul>
-<li>拓展到矩阵</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/10/QdJae39DlM1OSq5.png" alt="image-20231210221120356"></p>
-<h2 id="6-2QA"><a href="#6-2QA" class="headerlink" title="6.2QA"></a>6.2QA</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/10/06-ju-zhen-ji-suan/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -350,143 +315,14 @@ a & \text{ $ if a > 0 $ } \\
 <p>【举例】</p>
 <p>$c = a + b$</p>
 <p><img src="https://s2.loli.net/2023/12/08/FJW457BjzIxQhAU.png" alt="image-20231208221234555"></p>
-<p>$c = a * b$</p>
-<p><img src="https://s2.loli.net/2023/12/08/iHdQYVvpjbSwI4R.png" alt="image-20231208221304693"></p>
-<ul>
-<li>点乘</li>
-</ul>
-<script type="math/tex; mode=display">
-a^T b = \sum_i a_ib_i</script><ul>
-<li>正交</li>
-</ul>
-<script type="math/tex; mode=display">
-a^Tb = \sum_i a_i b_i = 0</script><p><img src="https://s2.loli.net/2023/12/08/TStW7HOB1r4J9XF.png" alt="image-20231208221644639"></p>
-<p><strong>矩阵</strong></p>
-<ul>
-<li>简单操作</li>
-</ul>
-<script type="math/tex; mode=display">
-C = A + B \\
-C = a * B \\
-C = sinA</script><ul>
-<li>乘法（矩阵乘以向量）</li>
-</ul>
-<script type="math/tex; mode=display">
-c = Ab</script><p><img src="https://s2.loli.net/2023/12/08/aFrORcwp1KMbfhP.png" alt="矩阵乘以向量"></p>
-<p><strong>直观上理解矩阵乘法</strong>：向量可以看作空间，矩阵可以看作是特定的工具，向量与特定的矩阵相乘后，将会使得向量变得扭曲，也就是变换到另一个空间中</p>
-<p><img src="https://s2.loli.net/2023/12/08/GEneLpHOWuBFza5.png" alt="直观上理解矩阵乘法"></p>
-<ul>
-<li>范数</li>
-</ul>
-<script type="math/tex; mode=display">
-c = A * b \\
-hence |c| <= ||A|| * ||b||</script><ul>
-<li>取决于如何衡量 b 和 c的长度</li>
-<li>常见的范数</li>
-<li>矩阵范数：最小的满足的上面公式的值</li>
-<li>Frobenius 范数</li>
-</ul>
-<script type="math/tex; mode=display">
-||A||_{Frob} = \left[ \sum_{ij} A_{ij}^2 \right]^{1/2}</script><p><strong>特殊矩阵</strong></p>
-<ul>
-<li>对称和反对称</li>
-</ul>
-<script type="math/tex; mode=display">
-A_{ij} = A_{ji} \\
-A_{ij} = -A_{ji}</script><p><img src="https://s2.loli.net/2023/12/08/WkO897cMeLTEVqG.png" alt="image-20231208223352977"></p>
-<ul>
-<li>正定</li>
-</ul>
-<script type="math/tex; mode=display">
-||x||^2 = x^Tx >= 0 \\
-generalizes to \\
-x^TAx >= 0</script><p><img src="https://s2.loli.net/2023/12/08/eQ3w7MXjvZBKmEl.png" alt="image-20231208223522068"></p>
-<ul>
-<li>正交矩阵<ul>
-<li>所有行都相互正交</li>
-<li>所有行都有单位长度 $u$</li>
-<li>可以写成</li>
-</ul>
-</li>
-<li>置换矩阵</li>
-<li>置换矩阵是正交矩阵</li>
-<li>特征向量和特征值<ul>
-<li>不被矩阵改变方向的向量$x$（<strong>但长度可能会改变</strong>）</li>
-</ul>
-</li>
-</ul>
-<script type="math/tex; mode=display">
-Ax = \lambda x</script><p><img src="https://s2.loli.net/2023/12/08/aqi97HUjBVQGk1F.png" alt="image-20231208224252581"></p>
-<ul>
-<li>对称矩阵总是可以找到特征向量</li>
-</ul>
-<h2 id="5-2线性代数实现"><a href="#5-2线性代数实现" class="headerlink" title="5.2线性代数实现"></a>5.2线性代数实现</h2><p>标量由只有一个元素的张量表示</p>
-<p><img src="https://s2.loli.net/2023/12/09/SGmW8QPnMXzfIor.png" alt="image-20231209152426875"></p>
-<p>你可以将向量视为标量值组成的列表</p>
-<p><img src="https://s2.loli.net/2023/12/09/GmoESUCyKabAnXV.png" alt="image-20231209152539663"></p>
-<p>通过张量的索引来访问任一元素</p>
-<p><img src="https://s2.loli.net/2023/12/09/WeOzi8kUPvHhZDt.png" alt="image-20231209152604605"></p>
-<p>访问张量的长度</p>
-<p><img src="https://s2.loli.net/2023/12/09/fB4mHSrdutLOPJw.png" alt="image-20231209152703768"></p>
-<p>只有一个轴的张量，形状只有一个元素</p>
-<p><img src="https://s2.loli.net/2023/12/09/3r4JBczaENgw9Gd.png" alt="image-20231209152726497"></p>
-<p>通过指定两个分量 $m$ 和 $n$ 来创建一个形状 $m * n$ 的矩阵</p>
-<p><img src="https://s2.loli.net/2023/12/09/aDjNKtfdH6vXb9g.png" alt="image-20231209152855536"></p>
-<p>矩阵的转置</p>
-<p><img src="https://s2.loli.net/2023/12/09/6VOAfsBmClFR4Dt.png" alt="image-20231209152938567"></p>
-<p>对称矩阵（symmetric matrix）$A$ 等于其转置：$A = A^T$</p>
-<p><img src="https://s2.loli.net/2023/12/09/ryJBHx4iSZCNaoQ.png" alt="image-20231209153046682"></p>
-<p><img src="https://s2.loli.net/2023/12/09/B6XvFPcsIaHyEwr.png" alt="image-20231209153111807"></p>
-<p>就像向量是标量的推广，矩阵是向量的推广一样，我们可以构建具有更多轴的数据结构 <strong>代表2个具有3 * 4结构的矩阵的组合</strong></p>
-<p><img src="https://s2.loli.net/2023/12/09/z2JnxGuyglNSBX6.png" alt="image-20231209153215038"></p>
-<p>给定具有相同形状的任何两个张量，任何按元素二元运算的结果都将是相同形状的张量</p>
-<p><img src="https://s2.loli.net/2023/12/09/9xKdV6USFkj1yHq.png" alt="image-20231209153448715"></p>
-<p><img src="https://s2.loli.net/2023/12/09/z4UXC9R8aLsDGKQ.png" alt="image-20231209153501138"></p>
-<p>两个矩阵的按元素的成绩称为 哈达玛积（Hadamard product）（数学符号）⊙</p>
-<p><img src="https://s2.loli.net/2023/12/09/cTdrO89U1tLs3Ny.png" alt="image-20231209153835936"></p>
-<p><img src="https://s2.loli.net/2023/12/09/71WP9ROlLvsFifZ.png" alt="image-20231209153850528"></p>
-<p>计算其元素的和</p>
-<p><img src="https://s2.loli.net/2023/12/09/N1CK9gH4YFcJD5m.png" alt="image-20231209153932420"></p>
-<p>表示任意形状张量的元素和</p>
-<p><img src="https://s2.loli.net/2023/12/09/vRTyCNFwMLeUurW.png" alt="image-20231209154014998"></p>
-<p>指定求和汇总张量的轴</p>
-<p>axis=0 意味着对 2 这一维度进行求和，剩下的两个维度留下来了。</p>
-<p><img src="https://s2.loli.net/2023/12/09/O5mESaK81ujvLzg.png" alt="image-20231209154251883"></p>
-<p><img src="https://s2.loli.net/2023/12/09/SBplV19n6WCbJ8U.png" alt="image-20231209154222362"></p>
-<p>axis=1 意味着对 5 这一维度进行求和，剩下的两个维度留下来了。</p>
-<p><img src="https://s2.loli.net/2023/12/09/f3FbEpYLR1dtPga.png" alt="image-20231209154529821"></p>
-<p>也可以指定其中的多个维度进行求和，其余的维度留下来</p>
-<p><img src="https://s2.loli.net/2023/12/09/LfJOmsx1oaqD28k.png" alt="image-20231209154709279"></p>
-<p><img src="https://s2.loli.net/2023/12/09/ypw5d9il6NRGrc2.png" alt="image-20231209154755666"></p>
-<p><strong>下面解释一下是怎么按特定轴求和的</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">原始的tensor.size([2, 5, 4]), 一共是40个数</span><br><span class="line">tensor([[[ 0,  1,  3,  4],</span><br><span class="line">		 [ 5,  6,  7,  8],</span><br><span class="line">		 [ 9, 10, 11, 12],</span><br><span class="line">		 [13, 14, 15, 16],</span><br><span class="line">		 [17, 18, 19, 20]],</span><br><span class="line">		 </span><br><span class="line">		[[21, 22, 23, 24],</span><br><span class="line">		 [24, 25, 26, 27],</span><br><span class="line">		 [28, 29, 30, 31],</span><br><span class="line">		 [32, 33, 34, 35],</span><br><span class="line">		 [36, 37, 38, 39]]])</span><br><span class="line">按 axis=0 求和，也就是</span><br></pre></td></tr></table></figure>
-<p>一个与求和相关的量是 平均值（mean 或 average）</p>
-<p><img src="https://s2.loli.net/2023/12/09/qYuWCpZ1zIGEOlm.png" alt="image-20231209162139075"></p>
-<p>计算总和或均值时保持轴数不变</p>
-<p><img src="https://s2.loli.net/2023/12/09/ktsEXCSLOF1phTP.png" alt="image-20231209162248301"></p>
-<p>通过广播将 $A$ 除以 sum_A </p>
-<p><img src="https://s2.loli.net/2023/12/09/sJ9u4axNmzAZeOj.png" alt="image-20231209162431838"></p>
-<p>某个轴计算 $A$ 元素的累积总和</p>
-<p><img src="https://s2.loli.net/2023/12/09/4qhyUSHTos8bQpE.png" alt="image-20231209162526414"></p>
-<p>点积是相同位置的按元素乘积的和4</p>
-<p><img src="https://s2.loli.net/2023/12/09/PitU9EjMDT6rswy.png" alt="image-20231209162702754"></p>
-<p>我们可以通过执行按元素乘法，然后进行求和来表示两个向量的点积</p>
-<p><img src="https://s2.loli.net/2023/12/09/l82JiN9IY45mAz7.png" alt="image-20231209162847916"></p>
-<p>矩阵向量积 $Ax$ 是一个长度为 $m$ 的列向量，其 $i^{th}$ 元素是点积 $a_i^Tx$</p>
-<p><img src="https://s2.loli.net/2023/12/09/O8qkeSBwUpjYFCs.png" alt="image-20231209163033727"></p>
-<p>我们可以将矩阵-矩阵乘法 $AB$ 看作是简单地执行 $m$ 次矩阵-向量积，并将结果拼接在一起，形成一个 $n * m$ 的矩阵</p>
-<p><img src="https://s2.loli.net/2023/12/09/WgdQNoFIHRqrk8E.png" alt="image-20231209163240282"></p>
-<p>$L_2$ 范数是向量元素平方和的平方根</p>
-<script type="math/tex; mode=display">
-||x||_2 = \sqrt{\sum_{i-1}^n x_i^2}</script><p><img src="https://s2.loli.net/2023/12/09/RX5k97ySiZHUJ8D.png" alt="image-20231209163429546"></p>
-<p>$L_1$ 范数，它表示为向量元素的绝对值之和：</p>
-<script type="math/tex; mode=display">
-||x||_1 = \sum_{i=1}^n |x_i|</script><p><img src="https://s2.loli.net/2023/12/09/nIaBMVCW8K6OlNT.png" alt="image-20231209163603565"></p>
-<p>矩阵的 <em>弗罗贝尼乌斯范数</em> （Frobenius norm） 是矩阵元素的平方和的平方根：</p>
-<script type="math/tex; mode=display">
-||X||_F = \sqrt{\sum_{i=1}^m \sum_{j=1}^n x_{ij}^2}</script><p><img src="https://s2.loli.net/2023/12/09/9JXOxPIDnt1ZmUR.png" alt="image-20231209163941729"></p>
-<h2 id="5-3按特定轴求和"><a href="#5-3按特定轴求和" class="headerlink" title="5.3按特定轴求和"></a>5.3按特定轴求和</h2><p><img src="https://s2.loli.net/2023/12/09/zfXoBY1nAbhLOUF.png" alt="image-20231209164342978"></p>
-<h2 id="5-4QA"><a href="#5-4QA" class="headerlink" title="5.4QA"></a>5.4QA</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/08/05-xian-xing-dai-shu/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -583,95 +419,14 @@ Ax = \lambda x</script><p><img src="https://s2.loli.net/2023/12/08/aqi97HUjBVQGk
 <li>学习</li>
 <li>训练</li>
 </ul>
-<p>3.得到模型</p>
-<ul>
-<li><p><strong>有监督学习</strong>：</p>
-<ul>
-<li><p>分类</p>
-<ul>
-<li><p>二分类</p>
-<ul>
-<li><p>Y 正负</p>
-</li>
-<li><p>瓜农眼中：这个瓜该不该摘，这个瓜熟没熟，我要不要摘<img src="https://s2.loli.net/2023/12/07/Wztg3MfNDEOTeFr.png" alt="image-20231207184933954"></p>
-</li>
-</ul>
-</li>
-<li><p>多分类</p>
-<ul>
-<li><p>Y大于2</p>
-</li>
-<li><p>市场上要买哪种瓜</p>
-<ul>
-<li><p>黑美人<img src="https://s2.loli.net/2023/12/07/GHZhEfSA4LRwTDq.png" alt="image-20231207185136355"></p>
-</li>
-<li><p>小地雷<img src="https://s2.loli.net/2023/12/07/L1QyENhxDmu8ZYv.png" alt="image-20231207185150282"></p>
-</li>
-<li><p>特小凤<img src="https://s2.loli.net/2023/12/07/LMEKs2BmryC5WAD.png" alt="image-20231207185206503"></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>回归</p>
-<ul>
-<li><p>Y = R 实数集</p>
-</li>
-<li><p>某段时间内西瓜的价格，啥时间卖西瓜最合适<img src="https://s2.loli.net/2023/12/07/HPEFTV3aB15gy6r.png" alt="image-20231207185346067"></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>无监督学习</strong>：</p>
-<ul>
-<li><p>聚类</p>
-<ul>
-<li><p>我们不知道要分几类，机器自己分</p>
-</li>
-<li><p>每个组称为“簇” cluster</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>4.进行预测</p>
-<ul>
-<li>测试</li>
-<li>测试样本</li>
-<li>泛化能力</li>
-</ul>
-<h2 id="1-3假设空间"><a href="#1-3假设空间" class="headerlink" title="1.3假设空间"></a>1.3假设空间</h2><ol>
-<li><p>科学的推理手段</p>
-<ul>
-<li><p>归纳：特殊到一般</p>
-<ul>
-<li><p>狭义：从训练数据中得到概念</p>
-<ul>
-<li><p>布尔概念：是或不是</p>
-</li>
-<li><p>假设就是各种情况</p>
-</li>
-</ul>
-</li>
-<li><p>广义：从样本中学习</p>
-</li>
-</ul>
-</li>
-<li><p>演绎：一般到特殊</p>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="1-4归纳偏好"><a href="#1-4归纳偏好" class="headerlink" title="1.4归纳偏好"></a>1.4归纳偏好</h2><ul>
-<li>同一个数据集训练出了不同的模型，如何选择模型</li>
-<li>原则：<strong>奥卡姆剃刀原理：选择最简单的那个，也有其他理解</strong></li>
-<li>推了半天期望，由于假设不成立，我们跳过，P8出现了很多符号</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/07/00-xu-lun-ji-ben-gai-nian/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -754,310 +509,14 @@ P(w_2|w_1) \cdot P(w_3|w_1,w_2) \cdots P(w_n|w_1, w_2, \cdots, w_{n-1})</script>
 <script type="math/tex; mode=display">
 P(A|B) = \frac{P(AB)}{P(B)}</script><p>我们观察上式， 会发现，$P(w_1)$比较好算， $p(w_2|w_1) = \frac{P(w_1w_2)}{P(w_1)}$也还行，但是$P(w_3|w_1,w_2)$就比较有难度了，随着n的增大，计算会越来越难，$P(w_n|w_1, w_2,…, w_n)$几乎根本不可能计算出来，怎么办？</p>
 <p><strong>马尔可夫假设：</strong>假设任意一个词$w<em>i$出现的概率只同它前面的n个词$w</em>{i-1}, …, w_{i - n}$有关，因此，那么就有：</p>
-<script type="math/tex; mode=display">
-一元模型：P(S) = \prod_{i=1}^{l} P(w_i) \\
-二元模型：P(s) = \prod_{i=1}^{l} P(w_i|w_{i-1})</script><p>缺点：</p>
-<ol>
-<li>无法建模更远的关系，语料不足使得无法训练更高阶的语言模型。</li>
-<li>无法建模出词之间的相似度。</li>
-<li>训练语料里面有些n元组没有出现过，其对应的条件概率就是0， 导致计算一整句话的概率为0，解决这个问题有来个那种常用的方法：平滑法和回退法。</li>
-</ol>
-<h3 id="1-2深度学习方法-神经网络语言模型-1"><a href="#1-2深度学习方法-神经网络语言模型-1" class="headerlink" title="1.2深度学习方法 - 神经网络语言模型[1]"></a>1.2深度学习方法 - 神经网络语言模型[1]</h3><p>首先，我们回到问题本身，我们为什么要计算$p(s)$，我们的目的是为了通过大规模语料库学习到语言内部的概率分布，那么有没有办法通过深度学习额方式来学习到这种概率分布呢？</p>
-<p><img src="https://s2.loli.net/2023/12/09/vfWaFKh4Oox2lki.png" alt="image-20231206130946742"></p>
-<p>观察上图，假设有一组词序列，$w_1, w_2, …, w_t$ ，其中，$w_i \in V$，$V$是所有单词的集合。我们输入的是一个词序列， 而我们的输出是一个概率值，表示根据context预测出下一个词是$i$的概率。用数学来表示，我们最终是要训练一个模型：</p>
-<script type="math/tex; mode=display">
-P(s) = P(w_t|w_1^{t-1})</script><ul>
-<li>$w<em>t$ 表示这个词序列中的第$t$个单词，$w</em>{t-n+1}$表示输入长度为n的词序列中的第一个单词</li>
-<li>$w_1^{t-1}$表示从第一个单词到$t-1$个的那次组成的子序列</li>
-</ul>
-<p>因此，我们发现，该模型的每个样本其实计算的是：$p(w<em>n|w_1, …, w</em>{n-1})$</p>
-<h3 id="1-3词向量-表示语言的方式"><a href="#1-3词向量-表示语言的方式" class="headerlink" title="1.3词向量 - 表示语言的方式"></a>1.3词向量 - 表示语言的方式</h3><p>前面，我们通过NNLM可以知道，通过语言模型的训练，模型可以学习到语言的概率分布，那么如何将学习到的信息应用到下游任务呢？这就是词向量产生的背景，这里简单介绍下Word2Vec[4]。</p>
-<p>首先明确一点，<strong>词向量是语言模型的副产物</strong>。怎么理解呢？意思是说，词向量是语言模型训练完成之后产生的。</p>
-<p>这里我们以Word2Vec的CBOW训练模型为例：</p>
-<p><img src="https://s2.loli.net/2023/12/09/5h2RyCPvrNwLEf9.png" alt="img"></p>
-<script type="math/tex; mode=display">
-h = \frac{1}{C} W^T(w_1 + w_2 + \cdots + x_c) \\
-u = w'^{T} * h \\
-P(w_j| context) = y_i = \frac{exp({u_j})}{\sum_{k \in V} exp({u_k})}</script><p>通过这样的训练完成后，把$W_{V \times N}$ 保存下来，我们就得到了词向量。</p>
-<h2 id="2-预训练语言模型-用模型表示语言"><a href="#2-预训练语言模型-用模型表示语言" class="headerlink" title="2.预训练语言模型 - 用模型表示语言"></a>2.预训练语言模型 - 用模型表示语言</h2><p>前面提到，我们的最终目的还是<strong>通过语言模型来获得某种语言的表示</strong>，但是我们看到，上面那种训练方式，似乎不太合适，那个最后$W_{V \times N}$ 消失不见了，并且模型没有做深。</p>
-<p>我们此处总结一些Word2Vec的弱点：</p>
-<ul>
-<li>模型无法做深，词向量的表征能力有限，词向量的抽象程度不高。</li>
-<li>词向量获得的是上下文无关的，难以解决歧义问题</li>
-<li>OV词无法解决</li>
-</ul>
-<h3 id="2-1NLP特点"><a href="#2-1NLP特点" class="headerlink" title="2.1NLP特点"></a>2.1NLP特点</h3><p>在进入预训练语言模型之前，我们先来看看对于NLP来说，最重要的是什么。</p>
-<p>首先是NLP的特点：</p>
-<ol>
-<li>输入是一个维线性序列</li>
-<li>输入是不定长的，这点对于模型处理起来会比较麻烦</li>
-<li>单词位置与句子位置的相对位置非常重要，互换可能导致完全不同的意思</li>
-<li>句子中的长距离特征对于理解语义也是非常关键的。</li>
-</ol>
-<p>其次是，NLP中几大常见的任务：</p>
-<ol>
-<li><strong>序列标注</strong>：分词、词性标注、命名实体识别等。特点是句子中每个单词要求模型根据上下文都要给出一个分类类别。</li>
-<li><strong>分类任务</strong>：文本分类、情感分析。特点是不管文章多长，总体给出一个分类类别即可。</li>
-<li><strong>句子关系推断</strong>：QA、自然语言推理。特点是给定两个句子，模型判断出两个句子是否具备某种语义关系。</li>
-<li><strong>生成式任务</strong>：机器翻译、文本摘要。特点是输入文本内容后，需要自主生成另一个文本。</li>
-</ol>
-<p>最后，我们来聊一聊三大基本单元：CNN、LSTM、Transformer。</p>
-<p>首先，先简单回顾下Transformer的self-attention机制，该机制在预训练语言模型中起到了至关重要的作用。我们看到，对于Transformer来说，通过self-attention机制，词与词之间的关系一目了然，并且不会受到文本长度的限制。然后注意，在Attention is all you need这篇文章中，Transformer是Encoder-decoder架构的，这与后面的BERT所用的有所不同，后面的BERT所用的只是transformer_block。</p>
-<p>于是我们总结一下这三个基本单元的优缺点：</p>
-<p><strong>RNN</strong></p>
-<ul>
-<li>优点：天生的具有时序结构，十分适合解决NLP问题</li>
-<li>缺点：<ol>
-<li>反向传播时所存在的优化困难的问题，及梯度消失，梯度爆炸问题，进而导致超长距离依赖的解决不佳。</li>
-<li>并行能力，进而导致难以做深</li>
-</ol>
-</li>
-</ul>
-<p><strong>CNN</strong></p>
-<ul>
-<li><p>优点：</p>
-<ol>
-<li>可以并行，可以做的非常深</li>
-<li>能够很好的捕捉 n-gram 特征</li>
-</ol>
-</li>
-<li><p>缺点：</p>
-<ol>
-<li>无法解决长距离依赖问题</li>
-<li>对于位置信息不敏感</li>
-</ol>
-</li>
-</ul>
-<p><strong>Transformer</strong></p>
-<ul>
-<li><p>优点：</p>
-<ol>
-<li>self-attention天生的就解决了长距离依赖问题</li>
-<li>可以并行，可以做的非常深</li>
-<li>位置信息通过 position embedding 很好的补充了</li>
-</ol>
-</li>
-<li><p>缺点：</p>
-<ol>
-<li>对于超长文本，会导致非常大的计算复杂度</li>
-<li>位置信息依赖于 position embedding</li>
-</ol>
-</li>
-</ul>
-<h3 id="2-2ELMO"><a href="#2-2ELMO" class="headerlink" title="2.2ELMO"></a>2.2ELMO</h3><p><img src="https://s2.loli.net/2023/12/09/1ldrYhGB8PitHDX.jpg" alt=""></p>
-<p>ELMO是通过L层的双向LSTM语言模型来学习上下文信息的，这就解决了上文提到的前两个问题，而针对OV词，ELMO采用了 char-level 来生成词向量进而进行训练。而对于ELMO的不同层而言，不同层的LSTM能够把把握不同粒度和层级的信息，比如浅层的LSTM把握的是单词特征，中层的LSTM把握句法特征，深层的LSTM把握语义特征。</p>
-<script type="math/tex; mode=display">
-前向语言模型：p(t_1,t_2,\cdots,t_N) = \prod_{k=1}^N p(t_k|t_1,t_2, \cdots, t_{k-1}) \\
-后向语言模型：p(t_1,t_2,\cdots,t_N) = \prod_{k=1}^{N} p(t_k|t_{k+1},t_{k+2},\cdots.t_{N})</script><p>但是，ELMO的缺点也十分明显：</p>
-<ul>
-<li><strong>LSTM特征提取能力远弱于Transformer,并行性较差</strong></li>
-<li><strong>拼接方式双向融合特征能力偏弱</strong></li>
-<li>层数浅，只有两层</li>
-</ul>
-<h3 id="2-2BERT"><a href="#2-2BERT" class="headerlink" title="2.2BERT"></a>2.2BERT</h3><p>语言模型：</p>
-<script type="math/tex; mode=display">
-P(s) = P(x_{mask}|context)</script><p>我们先来看模型架构，BERT-base 采用12层的 Transformer，这里简单说明，BERT 的架构相当于 Transformer 的 Encoder-decoder 架构中的 Encoder。</p>
-<p>然后，我们关注，输入的组成部分，输入包含三个部分：</p>
-<ul>
-<li>token embedding：词向量，第一个单词是CLS标志，可以用于之后的分类任务</li>
-<li>Segment Embeddings：区别两种句子，因为预训练不光做LM还要做两个句子为输入的分类任务</li>
-<li>Position Embeddings：和之前文章中的 Transformer不一样，<strong>不是三角函数而是学习出来的</strong></li>
-</ul>
-<p>最后，我们看下预训练训练任务部分。</p>
-<p>首先是 Masked LM：随机遮蔽输入的 token 的15%，然后预测被遮住的 token。这样会带来一个问题，即训练和微调阶段的不一致性，因为训练阶段采用了 [MASK] 而 fine-tune 阶段并没有。为了减轻该问题， we do not always replace “masked” words with the actual [MASK] token.</p>
-<p>具体做法为：</p>
-<blockquote>
-<p>假如我们有一句话，my dog is hairy，被选中的词为hairy，数据生成器并不总是将hairy替换为 [MASK]，此时过程为：</p>
-<p>80%情况：用 [MASK] 替换 hairy</p>
-<p>10%情况：随机选一个词，如 apple 来替换 hairy</p>
-<p>10%情况：不改变这句话</p>
-</blockquote>
-<p>然后是NSP，即Next Sentence Prediction，选定一个句子A，B作为预训练样本，B有50%的可能是A的下一句，也有50%的可能是语料库的随机句子。</p>
-<h3 id="2-3GPT1-0"><a href="#2-3GPT1-0" class="headerlink" title="2.3GPT1.0"></a>2.3GPT1.0</h3><p>其实GPT1.0要比BERT出来的早，但是吃了不会宣传的亏。首先来看语言模型：</p>
-<script type="math/tex; mode=display">
-P(s) = P(w_i|w_{i-k}, \cdots, w_{i-1}) \\
-L_1(U) = \sum_i log P(u_i| u_{i-k}, \cdots, u_{i-1}; \Theta); \, \, \text{k为窗口大小}</script><p>跟 bert 有很明显的差别，但是符合原来语言模型的定义。</p>
-<p>其次，模型结构采用单向 Transformer, 这是由于语言模型决定的。</p>
-<p>再次， embedding 不包含 NSP 这种 segment embedding。</p>
-<p>说到这里，我们就说完了基础的三个预训练语言模型，接下来我们探讨下如何更好的使用预训练语言模型。</p>
-<h2 id="3-如何使用预训练语言模型"><a href="#3-如何使用预训练语言模型" class="headerlink" title="3.如何使用预训练语言模型"></a>3.如何使用预训练语言模型</h2><h3 id="3-1是否要进行微调-1"><a href="#3-1是否要进行微调-1" class="headerlink" title="3.1是否要进行微调[1]"></a>3.1是否要进行微调[1]</h3><p>我们是直接采用训练好的向量还是用预训练语言模型进行微调呢？</p>
-<p>『冰』表示freeze， 『火』表示微调的结果。</p>
-<p>实际上，对于大多数任务， BERT 进行微调的方式总是比提取向量再训练的方式能够获得更佳的效果。因此，再条件允许的情况下，推荐采用微调的方式。</p>
-<h3 id="3-2是否要进行再次预训练-2"><a href="#3-2是否要进行再次预训练-2" class="headerlink" title="3.2是否要进行再次预训练[2]"></a>3.2是否要进行再次预训练[2]</h3><p>答案是需要。</p>
-<p>我们知道现在的预训练语料采用的都是百科，书籍等比较规范的数据，而实际业务中的数据千差万别，可以这么理解，预训练本身获得的是语料库中文本的分布，而如果预训练数据分布于业务数据分布偏差较大，会带来一些负面的影响。</p>
-<p>因此，针对一些业务，如果数据与百科数据擦汗别非常大，先进性预训练，然后再进行微调是一种比较合适的方式。</p>
-<p>我们这里简单介绍下[2]中的结论：</p>
-<ol>
-<li>在目标领域的数据集上继续预训练 （DAPT）可以提升效果；目标领域与语言模型的原始预训练预训练语料越不相关，DAPT效果则提升越明显。</li>
-<li>在具体任务的数据集上继续预训练 （TAPT）可以十分廉价的提升效果。</li>
-<li>结合二者（先进行DAPT，再进行TAPT）可以进一步提升效果。</li>
-<li>如果能够获取更多的、任务相关的五标注数据继续预训练（Curated-TAPT），效果则最佳。</li>
-</ol>
-<h3 id="3-3BERT向量-vs-Glove向量"><a href="#3-3BERT向量-vs-Glove向量" class="headerlink" title="3.3BERT向量 vs Glove向量"></a>3.3BERT向量 vs Glove向量</h3><p>接下来我们分析，BERT 相对于 Glove 向量，到底强在哪。首先是训练数据集规模的影响：</p>
-<ul>
-<li>随着数据规模的扩大，Glove 向量的表现与 BERT 向量的表现差距越来越小，我们看到当训练数据足够多的时候，Glove 在一些任务撒谎给你的获得略差于 BERT的影响，但是在绝大多数情况下依旧比 BERT 向量差很多，这说明 BERT对于小数据集的优越性。</li>
-<li>在简单任务上，随着数据量的增加，Glove 能达到 BERT 十分接近的效果。</li>
-</ul>
-<p>然后是语言特征：</p>
-<ul>
-<li><strong>the complexity of text structure:</strong> 句子结构的复杂性</li>
-<li><strong>Ambiguity in word usage</strong>: 单词的歧义性</li>
-<li><strong>Prevalence of unseen words</strong>: 未登录词出现的概率</li>
-</ul>
-<p>上图我们可以得出以 BERT 为代表的 Contextual embeddings 在解决一些文本结构复杂度高和单词歧义性方面有显著的效果。</p>
-<h2 id="4-预训练语言模型-后时代"><a href="#4-预训练语言模型-后时代" class="headerlink" title="4.预训练语言模型 - 后时代"></a>4.预训练语言模型 - 后时代</h2><p>首先，我们来分析一下这张图，从上到下：</p>
-<ul>
-<li><strong>Contextual：</strong>谈论 静态 embedding 与 上下文 embedding，被做烂了，pass。</li>
-<li><strong>Architectures：</strong> 模型整体架构，这部分还有的探讨，可以参见上面 T5 的Model Architecture 部分。 目前业界还没有统一的标准说应该选择哪种架构，不过从 T5 的效果来看， Transformer+Encoder+Decoder 的效果是最好的，但参数量也上去了。其实就目前来看，研究的意义不是很大了，除非说能出现一个大的突破。</li>
-<li><strong>Task Types：</strong> 谈论了两件事： <strong>语言模型的选择</strong>以及<strong>Contrastive Learning</strong>，其实这两个应该分开讨论。</li>
-<li><strong>Multi-Lingual：</strong>  从多国语言的角度出发，这方面不太懂，也不感兴趣，觉得用处不会太大。</li>
-<li><strong>Multi-Modal：</strong> 多模角度，我个人认为这对于工业界是十分有意义的。</li>
-<li><strong>Knowledge Enriched：</strong> 知识 + 预训练语言模型，我觉得这是一个很值得研究的方向，无论是在工业界和学术界。</li>
-<li><strong>Domain Specific：</strong> 特定领域 + 预训练语言模型，我觉得这方面很有搞头，毕竟很多专有领域跟公共领域还是很不同的，比如医学，生物，法学等。由于每看过相关文章，无法说上面的模型与 bert在同样语料上预训练后哪个效果好，但还是有一定参考价值的。</li>
-<li><strong>Language-Specific：</strong> 这块我觉得还是很有研究价值的，毕竟我们中文跟英文从各个方面来说差距还是蛮大的，如果能对语言有深入了解，感觉还有搞头。</li>
-<li><strong>Model Compression：</strong> 模型压缩，这个在工业界用处很大，十分建议研究，需求也很大，一些蒸馏方法所需要的资源门槛也比较低，如果有资源，有idea，建议入坑。</li>
-</ul>
-<p>考虑到涉及到的内容太多，我这里抽取四个部分讨论，分别是： Architectures， Task Types， Knowledge Enriched 以及 language generation。 </p>
-<h3 id="4-1AE-vs-AR"><a href="#4-1AE-vs-AR" class="headerlink" title="4.1AE vs AR"></a>4.1AE vs AR</h3><p>AR 语言模型：自回归语言模型，指的是，依据前面（或后面）出现的 tokens 来预测当前时刻的 token， 代表有 ELMO， GPT 等。</p>
-<script type="math/tex; mode=display">
-forward: p(x) = \prod_{t=1}^T p(x_t | x_{<t}) \\ backward: p(x) = \prod_{t=T}^1 p(x_t | x_{>t})</script><p>AE 语言模型：通过<strong>上下文信息</strong>来预测被 mask 的 token， 代表有 BERT , Word2Vec(CBOW)  。</p>
-<script type="math/tex; mode=display">
-p(x) = \prod_{x\in Mask} p(x|context)</script><p><strong>AR 语言模型：</strong></p>
-<ul>
-<li><strong>缺点：</strong>它只能利用单向语义而不能同时利用上下文信息。 ELMO 通过双向都做AR 模型，然后进行拼接，但从结果来看，效果并不是太好。</li>
-<li><strong>优点：</strong> 对生成模型友好，天然符合生成式任务的生成过程。这也是为什么 GPT 能够编故事的原因。</li>
-</ul>
-<p><strong>AE 语言模型：</strong></p>
-<ul>
-<li><strong>缺点：</strong> 由于训练中采用了 [MASK] 标记，导致预训练与微调阶段不一致的问题。 此外对于生成式问题， AE 模型也显得捉襟见肘，这也是目前 BERT 为数不多实现大的突破的领域。</li>
-<li><strong>优点：</strong> 能够很好的编码上下文语义信息， 在自然语言理解相关的下游任务上表现突出。</li>
-</ul>
-<h2 id="5-GPT系列"><a href="#5-GPT系列" class="headerlink" title="5.GPT系列"></a>5.GPT系列</h2><h3 id="5-1GPT-2-0"><a href="#5-1GPT-2-0" class="headerlink" title="5.1GPT 2.0"></a>5.1GPT 2.0</h3><p>GPT 2.0 验证了数据的重要性，即使单纯的从数据角度入手，效果就可以获得巨大的提升。GPT 2.0 采用800w 互联网网页数据，这样训练出来的语言模型，能够覆盖几乎所有领域的内容。</p>
-<p>第二个意义在于，GPT 2.0 开始探索了预训练语言模型在 zero-shot 下的表现。这方面在GPT 3.0 中体现的淋漓尽致。</p>
-<ul>
-<li>预训练数据与网络深度的重要性，目前也没有到极限。</li>
-<li>GPT 2.0 的生成效果非常惊艳，至少语法，流畅度等方面是没有问题的，就是没有灵魂</li>
-<li>zero-flot 也不是不可以</li>
-</ul>
-<h3 id="5-2GPT-3-0"><a href="#5-2GPT-3-0" class="headerlink" title="5.2GPT 3.0"></a>5.2GPT 3.0</h3><p>先来介绍一下几个概念：</p>
-<ul>
-<li>FT，fine-tuning：就是微调啦</li>
-<li>FS，few-shot：允许输入数条范例和一则任务说明</li>
-<li>One-shot：只允许输入一条范例和一则任务说明</li>
-<li>Zero-shot：不允许输入任何范例，只允许输入一则任务说明</li>
-</ul>
-<p>GPT 3.0 本质上是探索超大型预训练语言模型在 few-shot，one-shot，zero-shot 上的可能性，这是延续之前 GPT 2.0 的研究，整体上，GPT 3.0 在 zero-shot 下能获得相当不错的结果。</p>
-<h2 id="6-BERT系列"><a href="#6-BERT系列" class="headerlink" title="6.BERT系列"></a>6.BERT系列</h2><h3 id="6-1Roberta"><a href="#6-1Roberta" class="headerlink" title="6.1Roberta"></a>6.1Roberta</h3><p>roberta 是bert 的一个完善版，相对于模型架构之类的都没有改变，改变的只是三个方面：</p>
-<ol>
-<li><p>预训练数据：</p>
-<ul>
-<li>BERT 采用了 BOOKCORPUS 和英文维基百科， 总共16GB。而 RoBERTa 采用了 BOOKCORPUS + 英文维基百科+ CC-NEWS+OPENWEBTEXT+STORIES， 总共160GB。</li>
-<li>Roberta 与 bert 都采用 512 个token 作为序列长度，但与 bert 不同的是， robert 不会随机掺杂一些短句，这意味着 roberta 采用的都是长句。</li>
-</ul>
-</li>
-<li><p>动态mask vs 静态 mask：</p>
-<ul>
-<li><strong>静态 mask：</strong>Bert 在准备训练数据时，每个样本只会进行一次随机 mask，每个 epoch 都重复使用，后续的每个训练步都采用相同的mask。</li>
-<li><strong>修改版静态mask：</strong> 在预处理时将数据集拷贝10次，每份数据采用不同的 mask。</li>
-<li><strong>动态mask</strong>：不在预处理时进行 mask，而是在每次向模型输入时动态生成mask</li>
-</ul>
-</li>
-<li><p>数据格式与NSP：</p>
-<ul>
-<li><strong>Segment-pair + NSP：</strong>与 bert 一样。输入包含两个 segment，这两个 segment 可能会来自同一个文档或不同文档，两个segment 的token 数均小于 512，预训练任务包含 MLM 与 NSP。</li>
-<li><strong>Sentence+pair + NSP：</strong>输入包含两个 sentence，两个句子可能来自同一文档或不同文档，两个句子 token 数均少于 512。预训练任务包含 MLM 与 NSP。</li>
-<li><strong>Full-sentences：</strong>输入只有一部分，来自同一个文档或不同文档的连续句子，token总数不超过512。输入可能跨越文档边界，如果跨文档，则在上一个文档末尾添加文档边界token。不包含NSP任务。</li>
-<li><strong>Doc-sentences：</strong>输入只有一部分，输入来自同一个文档的连续句子，token总数不超过512。预训练不包含 NSP 任务。</li>
-</ul>
-<p>通过四个对比实验我们发现：</p>
-<ul>
-<li>Segment-pair 较好于 sentence-pair，可能是因为 segment 能够学习到长距离依赖关系。</li>
-<li>Doc-sentences 几乎在所有任务中表现最佳，这意味着 NSP 任务没有什么用</li>
-<li>Doc-sentences 略好于 Full-sentences。</li>
-</ul>
-</li>
-</ol>
-<h3 id="6-2T5"><a href="#6-2T5" class="headerlink" title="6.2T5"></a>6.2T5</h3><h2 id="7-预训练语言模型与自然语言生成"><a href="#7-预训练语言模型与自然语言生成" class="headerlink" title="7.预训练语言模型与自然语言生成"></a>7.预训练语言模型与自然语言生成</h2><p>这里我们先来回顾一下BERT和GPT， 前面提到， BERT 本质上相当于 Transformer 中的 Encoder， 而GPT 相当于 Transformer 中的 Decoder。既然我们已经验证了 Transformer 在文本生成领域的成功，尤其是机器翻译领域， 那么当我们想用于生成问题的时候，很自然的想到有没有办法把二者结合起来呢？</p>
-<p>MASS 就是基于这样的思想。</p>
-<h3 id="7-1MASS"><a href="#7-1MASS" class="headerlink" title="7.1MASS"></a>7.1MASS</h3><p>MASS 的思想很简单， 对于输入序列 x，  mask 该句从 u 到 v 位置上的token，记为 $x^{\u:v}$， 而对应的， 从 u 到 v 位置上的 token 片段记为 $x^{u:v}$ 。 k = v - u + 1 表示 mask 的窗口大小 ， 表示一句话中多少个 token 被 mask 。 对于 MASS 的语言模型来说， 其输入为 mask 后的序列 $x^{\u:v}$ ， 输出为被 mask 后的序列 $x^{u:v}$。</p>
-<p><strong>为何 MASS 适合生成</strong></p>
-<p><strong>首先，</strong> 通过 Seq2Seq 框架来预测被 mask 的tokens 使得 Encoder 去学习没有被 mask 的 token 的信息， 而Decoder 去学习如何从 Encoder 中提取有效的信息。</p>
-<p><strong>然后，</strong> 与预测离散的 tokens相比，Decoder 通过预测连续的 tokens， 其能够建立很好的语言生成能力。</p>
-<p><strong>最后，</strong> 通过输入与输出的 mask 匹配， 使得 Decoder 能够从Encoder 中提取到有意义的信息，而不是利用之前的信息。</p>
-<p>MASS 总结来说有以下几点创新：</p>
-<ul>
-<li>引入了 Seq2Seq 来训练预训练模型。</li>
-<li><strong>mask 掉的是一段连续的tokens而不是离散的 mask， 有助于模型生成语言的能力。</strong></li>
-<li>Encoder 中是 mask 掉的序列，而 Decoder 中是对应被mask的 tokens。</li>
-</ul>
-<h3 id="7-2UNILM"><a href="#7-2UNILM" class="headerlink" title="7.2UNILM"></a>7.2UNILM</h3><p>UNILM 同样想融合bert与gpt ，然而走了与 MASS 完全不同的路子，它想通过多任务学习的方式来解决。UNILM 这篇文章，厉害在，同时使用多个预训练语言模型训练这个思想，在预训练任务中包含了三种语言模型：</p>
-<ul>
-<li><p><strong>Bidirectional</strong> <strong>LM</strong> <strong>：</strong> BERT 的 mask LM</p>
-</li>
-<li><p><strong>Unidirectional LM</strong>：GPT 的 语言模型，包括 left-to-right 到 right-to-left</p>
-</li>
-<li><p><strong>Seq2Seq LM</strong>： 句子间LM。输入两个句子，第一个句子采用双向LM方式，第二个采用单向LM 方式。</p>
-</li>
-</ul>
-<h3 id="7-3BART"><a href="#7-3BART" class="headerlink" title="7.3BART"></a>7.3BART</h3><p>BART 与 MASS 的基本思想一致，都是受到 Transformer 在机器翻译领域的成功，尝试将 Transformer架构跟预训练结合起来。</p>
-<p>但是与 MASS 不同的是，他们输入的数据格式有很大的差别，Decoder 也有较大的差别。与MASS 相比， BART 完全延续 Transformer 原来的架构方式。</p>
-<p><strong>训练数据：</strong></p>
-<ul>
-<li><strong>Token Masking</strong> 和BERT一样，随机选择<strong>token</strong>用[MASK] 代替。</li>
-<li><strong>Token Deletion</strong> 随机删除<strong>token</strong>，模型必须确定哪些<strong>位置</strong>缺少输入。</li>
-<li><strong>Text Filling</strong> 屏蔽一个<strong>文段</strong>，文段长度服从泊松分布（λ=3）。每个文段被<strong>一个[MASK]</strong>标记替换。如果文段长度为0，意味插入一个[MASK]标记（灵感来自Span-BERT）。</li>
-<li><strong>Sentence Permutation</strong> 以句号作为分割符，将一篇文章分成多个<strong>句子</strong>，并随机打乱。</li>
-<li><strong>Document Rotation</strong> 随机均匀地选择一个<strong>token</strong>，以这个token为中心，旋转文档，选中的这个token作为新的开头，此任务训练模型以识别文档的开头。</li>
-</ul>
-<h2 id="8-预训练语言模型融入知识"><a href="#8-预训练语言模型融入知识" class="headerlink" title="8.预训练语言模型融入知识"></a>8.预训练语言模型融入知识</h2><h3 id="8-1ERNIE"><a href="#8-1ERNIE" class="headerlink" title="8.1ERNIE"></a>8.1ERNIE</h3><p>ERINE 的网络架构，语言模型等与 BERT 完全相同，与BERT 不同的主要有两点：</p>
-<ul>
-<li>数据的mask</li>
-<li>NSP 任务 与 DLM</li>
-</ul>
-<p>首先我们来看 mask 方式，ERNIE 的 mask 包括三部分：</p>
-<ol>
-<li><p>BERT 的 basic-level mask 预训练</p>
-</li>
-<li><p>Phrase-level 预训练</p>
-</li>
-<li><p>Entity-level 预训练</p>
-</li>
-</ol>
-<p>但是我们反过来看这篇文章，它融入知识了吗？ 我觉得没有，对于知识图谱来说，实体本身的含义很重要，但是实体的关系同样非常重要，而这篇文章并没有融入任何的关系信息。</p>
-<h3 id="8-2ERNIE（清华）"><a href="#8-2ERNIE（清华）" class="headerlink" title="8.2ERNIE（清华）"></a>8.2ERNIE（清华）</h3><p>这篇文章最核心的点在于，将BERT的信息与TransE 的信息进行融合</p>
-<p>我们看到，上述整个模型可以整体分为两部分：</p>
-<ul>
-<li>T-Encoder： 与 Bert 的预训练过程完全相同，是一个多层的双向 Transformer encoder， 用来捕捉词汇和语法信息。</li>
-<li>K-Encoder： 本文创新点，描述如何将知识图谱融入到预训练模型。</li>
-</ul>
-<h3 id="8-3K-BERT"><a href="#8-3K-BERT" class="headerlink" title="8.3K-BERT"></a>8.3K-BERT</h3><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><strong>语言模型基础与词向量：</strong></p>
-<p>[1] A Neural Probabilistic Language Model</p>
-<p>[2] Mikolov, T.(2013). Distributed Representations of Words and Phrases and their Compositionality.</p>
-<p>[3] Mikolov, T.(2013). Efficient Estimation of Word Representations in Vector Space.</p>
-<p>[4] Rong, X. (2014). word2vec Parameter Learning Explained.</p>
-<p><strong>预训练语言模型：</strong></p>
-<p>[1] ELMO: Deep contextualized word representations</p>
-<p>[2]  BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</p>
-<p>[3] GPT 1.0: Improving Language Understanding by Generative Pre-Training</p>
-<p>[4] GPT 2.0: Language Models are Unsupervised Multitask Learners</p>
-<p>[5] GPT 3.0: Language Models are Few-Shot Learners</p>
-<p><strong>应用预训练语言模型：</strong></p>
-<p>[1]  To tune or not to tune? adapting pretrained representations to diverse tasks. </p>
-<p>[2]  Don’t Stop Pretraining: Adapt Language Models to Domains and Tasks</p>
-<p><strong>预训练语言模型 - 后时代：</strong></p>
-<p>[2]  ERNIE - Enhanced Language Representation with Informative Entities</p>
-<p>[3]  ERNIE - Enhanced Representation through Knowledge Integration</p>
-<p>[4]  ERNIE 2.0 - A Continual Pre-training Framework for Language Understanding</p>
-<p>[5]  MASS - Masked Sequence to Sequence Pre-training for Language Generation</p>
-<p>[6] UNILM - Unified Language Model Pre-training for Natural Language Understanding and Generation</p>
-<p>[7]  XLNet - Generalized Autoregressive Pretraining for Language Understanding</p>
-<p>[8]  RoBERTa - A Robustly Optimized BERT Pretraining Approach</p>
-<p>[9] TransformerXL: Attentive Language Models Beyond a Fixed-Length Context</p>
-<p><strong>如何预训练一个好的预训练语言模型：</strong></p>
-<p>[1] Pre-trained Models for Natural Language Processing: A Survey</p>
-<p>[2] T5: Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Bag of Tricks for Efficient Text Classification</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/06/ci-xiang-liang-yu-yu-yan-mo-xing/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1122,82 +581,14 @@ p(x) = \prod_{x\in Mask} p(x|context)</script><p><strong>AR 语言模型：</str
 <h2 id="1-1CBOW模型"><a href="#1-1CBOW模型" class="headerlink" title="1.1CBOW模型"></a>1.1CBOW模型</h2><p>CBOW，全称Continuous Bag-of-Word，中文叫做连续词袋模型：</p>
 <p><img src="../imgs/$%7Bfiilename%7D/image-20231204224108495-1701700870620-1.png" alt="image-20231204224108495"></p>
 <p>如上图是一个两层的神经网络，其实在训练语言模型的过程中考虑到效率等问题，常常采用浅层的神经网络来训练，并取第一层的参数如上图就是 $W_{V \times N}$ 来作为最终的词向量矩阵（参考 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/43453548">语言模型：从n元模型到NNLM</a>）。</p>
-<p>CBOW模型的目的是预测 $P(w<em>t| w</em>{t-k}, \cdots, w<em>{t-1}, w</em>{t+1}, \cdots, w_{t+k}) $，我们先来走一遍CBOW的前向传播过程 。</p>
-<h3 id="1-1-1前向传播过程"><a href="#1-1-1前向传播过程" class="headerlink" title="1.1.1前向传播过程"></a>1.1.1前向传播过程</h3><ul>
-<li><p>输入层: 输入C个单词： $x<em>{1k}, \cdots, x</em>{Ck} $，并且每个 $x$ 都是用 One-hot 编码表示，每一个 $x$ 的维度为 V（词表长度）。</p>
-</li>
-<li><p>输入层到隐层:  共享矩阵为 $W_{V \times N}$ ，V表示词表长度，W的每一行表示的就是一个N维的向量（训练结束后，W的每一行就表示一个词的词向量）。在隐藏层中，我们的所有输入的词转化为对应词向量，然后取平均值，这样我们就得到了隐层输出值 ( 注意，隐层中无激活函数，也就是说这里是线性组合)。 其中，隐层输出 $h$ 是一个N维的向量 。</p>
-<script type="math/tex; mode=display">
-h = \frac{1}{C} W^T(x_1 + x_2 + \cdots + x_c)</script></li>
-<li><p>隐层到输出层：隐层的输出为N维向量 $h$ ， 隐层到输出层的权重矩阵为  $W’_{N \times V}$ 。然后，通过矩阵运算我们得到一个 $V \times 1 $ 维向量</p>
-<script type="math/tex; mode=display">
-u = W'^{T} * h</script></li>
-</ul>
-<p>其中，向量 $u$  的第 $i$  行表示词汇表中第 $i$  个词的可能性，然后我们的目的就是取可能性最高的那个词。因此，在最后的输出层是一个softmax 层获取分数最高的词，那么就有我们的最终输出：</p>
-<script type="math/tex; mode=display">
-P(w_j| context)  =y_i =  \frac{exp({u_j})}{\sum_{k \in V} exp({u_k})}</script><h3 id="1-1-2-损失函数"><a href="#1-1-2-损失函数" class="headerlink" title="1.1.2 损失函数"></a>1.1.2 损失函数</h3><p>我们假定 $j^*$ 是真实单词在词汇表中的下标，那么根据极大似然法，则目标函数定义如下：</p>
-<script type="math/tex; mode=display">
-E = -log \, p(W_O |W_I) = -log \, \frac{exp({u_j})}{\sum_{k \in V} exp({u_k})} =  log  \, \sum_{k \in V} exp(u_{k})  -u_j</script><h2 id="1-2-Skip-gram模型"><a href="#1-2-Skip-gram模型" class="headerlink" title="1.2 Skip-gram模型"></a>1.2 Skip-gram模型</h2><p>Skip-Gram的基本思想是：已知当前词 $w<em>t$ 的前提下，预测其上下文 $w</em>{t-i}, \cdots , w_{t+i}$ ，模型如下图所示：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231204224437325-1701701078311-3.png" alt="image-20231204224437325"></p>
-<h3 id="1-2-1前向传播过程"><a href="#1-2-1前向传播过程" class="headerlink" title="1.2.1前向传播过程"></a>1.2.1前向传播过程</h3><h4 id=""><a href="#" class="headerlink" title=" "></a> </h4><ul>
-<li>输入层：   输入的是一个单词，其表示形式为 <strong>One-hot</strong> ，我们将其表示为V维向量 $x<em>k$ ，其中 $V$ 为词表大小。然后，通过词向量矩阵 $W</em>{V \times N}$ 我们得到一个N维向量  <script type="math/tex; mode=display">
-h = W^T * x_k = v^{T}_{w_I}</script></li>
-</ul>
-<ul>
-<li><p>隐层： 而隐层中没有激活函数，也就是说输入=输出，因此隐藏的输出也是 $h$ 。</p>
-</li>
-<li><p>隐层到输出层：</p>
-<blockquote>
-<ul>
-<li>首先，因为要输出C个单词，因此我们此时的输出有C个分布： $y_1, \cdots y_C $，且每个分布都是独立的，我们需要单独计算， 其中 $y_i$  表示窗口的第 $i$  个单词的分布。 </li>
-<li>其次， 因为矩阵 $W’<em>{N \times V}$ 是共享的，因此我们得到的 $V \times 1$ 维向量 $u$ 其实是相同的，也就是有 $u</em>{c,j} = u_j$ ，这里 $u$ 的每一行同 CBOW 中一样，表示的也是评分。</li>
-<li>最后，每个分布都经过一个 softmax 层，不同于 CBOW，我们此处产生的是第 $i$ 个单词的分布（共有C个单词），如下：</li>
-</ul>
-</blockquote>
-<script type="math/tex; mode=display">
-P(w_{i,j}| context)  =y_i =  \frac{exp({u_j})}{\sum_{k \in V} exp({u_k})}</script></li>
-</ul>
-<h3 id="1-2-2-损失函数"><a href="#1-2-2-损失函数" class="headerlink" title="1.2.2 损失函数"></a>1.2.2 损失函数</h3><p>假设 $j^*$ 是真实单词在词汇表中的下标，那么根据极大似然法，则目标函数定义如下：</p>
-<script type="math/tex; mode=display">
-\begin{split} E &= - log \, p(w_1, w_2, \cdots, w_C | w_I)   \\ &= - log \prod_{c=1}^C P(w_c|w_i) \\ &= - log  \prod_{c=1}^{C} \frac{exp(u_{c, j})}{\sum_{k=1}^{V} exp(u_{c,k}) } \\ &= - \sum_{c=1}^C u_{j^*_c} + C \cdot log \sum_{k=1}^{V} exp(u_k) \end{split}</script><h2 id="1-3模型复杂度"><a href="#1-3模型复杂度" class="headerlink" title="1.3模型复杂度"></a>1.3模型复杂度</h2><p>本节中我们来分析一下模型训练时的复杂度，无论是在CBOW还是Skip-Gram模型中，都需要学习两个词向量矩阵： $W, W’$ 。</p>
-<p>对于矩阵 $W$ ， 从前向传播中可以看到， 可以看到对于每一个样本(或mini-batch)，CBOW更新 $W$  的 C 行（h与C个x相关）， 而Skip-Gram 更新W中的其中一行（h与1个x相关），这点训练量并不算大。</p>
-<p>对于 $W’$  而言， 无论是 CBOW 还是 Skip-Gram 模型，每个训练样本(mini-batch)都更新 $W’$ 的所有 $V \times N$ 个元素。</p>
-<p>在现实中，用于语言模型训练的数据集通常都很大，此外词表也是巨大的，这就导致对于 $W’$ 的更新所花费的计算成本是很大的，真的是验证了一个道理：穷逼没必要搞语言模型。</p>
-<p>为了解决优化起来速度太慢的问题， Word2Vec 中提供了两种策略来对这方面进行优化。</p>
-<h2 id="1-4Hierarchical-Softmax"><a href="#1-4Hierarchical-Softmax" class="headerlink" title="1.4Hierarchical Softmax"></a>1.4Hierarchical Softmax</h2><p>HS 基于哈夫曼树将计算量大的部分转化为一种二分类问题。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231204224719385-1701701240403-5.png" alt="image-20231204224719385"></p>
-<p>原先的模型中，模型再隐层之后通过 $W’$ 连接输出层，现在 HS 则去掉了 $W’$ , 隐层向量 <strong>h</strong> 直接与上图的二叉树的 root 节点相连， 图中的每一个分支都代表一个选择。 上图中白色的叶子节点表示词表中所有的$|V|$个词， 黑色节点表示非叶子节点， 每一个叶子节点（单词）都对应一条从 root 节点出发的路径，而问题就转化为了使得 $w=w_o$ 这条路径的概率最大， 即：$P(w=w+O|w_I)$ 最大。</p>
-<p>用 $n(w,j)$ 表示从 root 到叶子节点 w 的路径上的第 j 个非叶子节点, 并且每个非叶子节点都对应一个向量$v_{n(w,j)}′$, 维度与h 相同, 然后使用一个sigmod函数: $σ(x)=\frac{1}{1+exp(−x)}∈[0,1]$ ，结合向量的内积, 来判断该向左还是向右，那么第 n 个节点向左以及向右的概率分别为：</p>
-<script type="math/tex; mode=display">
-P(n,left) = \sigma(v_w' \cdot h) \\
-P(n, right) = 1 - \sigma(v_w' \cdot h)</script><p>那么就有：</p>
-<script type="math/tex; mode=display">
-P(w=w_O|W_I) = \prod_{j=1}^{L(w)-1} P(\sigma(I(n(w, j+1 == left) v_w' \cdot h))</script><ul>
-<li>$I()$ ：指示函数，条件成立值为1， 反之为 -1</li>
-<li>$L(w)$ ：表示整条路径的长度</li>
-</ul>
-<p>这样我们就能够通过训练来更新每个非叶子节点的参数 $v_w’$了。举例来说，图上加黑的黑色路径： $(n(w_2,1),n(w_2,2),n(w_2,3),w2$， 对于一个训练样本，我们要使得 $P(w_O=w_2|w_I)$  概率最大：</p>
-<script type="math/tex; mode=display">
-P(w_2=w_O) = P(n(w_2, 1), left) \cdot P(n(w_2, 2), left) \cdot P(n(w_2, 3), right)</script><p>且需要注意的时，再一个非叶子节点处， 向左向右的概率和为1， 因此一直分裂下去，最后的和肯定还是1， 因此可以得出：</p>
-<script type="math/tex; mode=display">
-\sum_{j=1}^V P(w_j = w_O) = 1</script><p>损失函数同样为最大似然：</p>
-<script type="math/tex; mode=display">
-E = -log P(w = w_O | w_I) = -\sum_{j=1}^{L(w) -1} log \sigma([I] v_j'^Th)</script><p>通过 HS， 隐层到输出层的计算量从 $O(V)$ 降到了 $O(logV)$。</p>
-<h2 id="1-5Negative-Sampling-—-负采样"><a href="#1-5Negative-Sampling-—-负采样" class="headerlink" title="1.5Negative Sampling — 负采样"></a>1.5Negative Sampling — 负采样</h2><p>在 Word2Vec 中， 对于输出层来说，我每一个输出节点都要预测词表中所有词在当前位置的概率，在动辄几万甚至几十万大的词表中，用softmax 计算真的十分困难。 </p>
-<p>但我们的目的不在于训练一个精准的语言模型，而只是为了训练得到语言模型的副产物-词向量，那么我们可不可以把输出压缩呢，将几万的输出压缩到几十程度，这计算量是成几何倍数的下降。</p>
-<p>负采样的思路很简单，<strong>不直接让模型从整个词表中找最可能的词，而是直接给定这个词（正例）和几个随机采样的噪声词（负例），然后模型能够从这几个词中找到正确的词，就算达到目的了。</strong></p>
-<p>那么如何对负例进行采样呢？作者直接使用<strong>基于词频的权重分布</strong>来获得概率分布进行抽样：</p>
-<script type="math/tex; mode=display">
-weight(w) = \frac{count(w)^{0.75}}{\sum_u count(w)^{0.75}}</script><p>相比于直接使用频次作为权重， 取0.75幂的好处可以减弱不同频次差异过大带来的影响，使得小频次的单词被采样的概率变大。</p>
-<p>此时的损失函数为：</p>
-<script type="math/tex; mode=display">
-E = - log \sigma(v_{w_O}' h) - \sum_{w_j \in W_{neg}} log \sigma(-v_{w_j}'h)</script><h2 id="Glove"><a href="#Glove" class="headerlink" title="Glove []"></a>Glove []</h2><h2 id="Questions"><a href="#Questions" class="headerlink" title="Questions"></a>Questions</h2><h2 id="Reference-Papers"><a href="#Reference-Papers" class="headerlink" title="Reference Papers"></a>Reference Papers</h2><p>[1] Mikolov, T.(2013). Distributed Representations of Words and Phrases and their Compositionality.</p>
-<p>[2] Mikolov, T.(2013). Efficient Estimation of Word Representations in Vector Space.</p>
-<p>[3] Rong, X. (2014). word2vec Parameter Learning Explained.</p>
-<p>[4] GloVe: Global Vectors for Word Representation</p>
-<p>[5] Enriching Word Vectors with Subword Information</p>
-<p>[6] Bag of Tricks for Efficient Text Classification</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/04/ci-xiang-liang/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1280,102 +671,14 @@ E = - log \sigma(v_{w_O}' h) - \sum_{w_j \in W_{neg}} log \sigma(-v_{w_j}'h)</sc
 </ol>
 <p>例如：<strong>John likes to watch movies. Mary likes too</strong><br>例如：约翰喜欢看电影。玛丽也喜欢</p>
 <p><strong>John also likes to watch football games.<br>约翰还喜欢看足球比赛。</strong></p>
-<p>以上两句可以构造一个词典，<strong>{“John”: 1, “likes”: 2, “to”: 3, “watch”: 4, “movies”: 5, “also”: 6, “football”: 7, “games”: 8, “Mary”: 9, “too”: 10} </strong><br>以上两句可以构造一个字典，<strong>{“John”: 1, “likes”: 2, “to”: 3, “watch”: 4, “movies”: 5, “also”: 6, “football” : 7、“游戏”: 8、“玛丽”: 9、“也是”: 10} </strong></p>
-<p>每个词典索引对应着比特位。那么利用One-hot表示为：</p>
-<p><strong>John: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0] </strong><br><strong>约翰: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0] </strong></p>
-<p><strong>likes: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0]</strong> …….等等，以此类推。</p>
-<ul>
-<li>随着语料库的增加，数据特征的维度会越来越大，产生一个维度很高，又很稀疏的矩阵。</li>
-<li>这种表示方法的分词顺序和在句子中的顺序是无关的，不能保留词与词之间的关系信息。</li>
-</ul>
-<h2 id="2-2词袋模型"><a href="#2-2词袋模型" class="headerlink" title="2.2词袋模型"></a>2.2词袋模型</h2><p>词袋模型(Bag-of-words model)，像是句子或是文件这样的文字可以用一个袋子装着这些词的方式表现，这种表现方式不考虑文法以及词的顺序。</p>
-<p><strong>文档的向量表示可以直接将各词的词向量表示加和</strong>。例如：</p>
-<p><strong>John likes to watch movies. Mary likes too<br>约翰喜欢看电影。玛丽也喜欢</strong></p>
-<p><strong>John also likes to watch football games.<br>约翰还喜欢看足球比赛。</strong></p>
-<p>那么第一句的向量表示为：<strong>[1,2,1,1,1,0,0,0,1,1]</strong>，其中的2表示<strong>likes</strong>在该句中出现了2次，依次类推。</p>
-<p>词袋模型同样有以下<strong>缺点</strong>：</p>
-<ul>
-<li>词向量化后，词与词之间是有大小关系的，不一定词出现的越多，权重越大。</li>
-<li>词与词之间是没有顺序关系的。</li>
-</ul>
-<h2 id="2-3TF-IDF"><a href="#2-3TF-IDF" class="headerlink" title="2.3TF-IDF"></a>2.3TF-IDF</h2><p>TF-IDF（term frequency–inverse document frequency）是一种用于信息检索与数据挖掘的常用加权技术。TF意思是词频(Term Frequency)，IDF意思是逆文本频率指数(Inverse Document Frequency)。</p>
-<p><strong>字词的重要性随着它在文件中出现的次数成正比增加，但同时会随着它在语料库中出现的频率成反比下降。一个词语在一篇文章中出现次数越多, 同时在所有文档中出现次数越少, 越能够代表该文章。</strong></p>
-<p><img src="../imgs/$%7Bfiilename%7D/68747470733a2f2f67697465652e636f6d2f6b6b7765697368652f696d616765732f7261772f6d61737465722f4d4c2f323031392d382d32315f31302d372d32332e706e67.png" alt="img"></p>
-<p>分母之所以加1，是为了避免分母为0。</p>
-<p>那么，<a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/76b4bb5e8ddcecfa37305bd982c9ab72d94265e0e9382781cbe56a0516b276cf/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f54462d4944463d54462a494446"><img src="../imgs/$%7Bfiilename%7D/68747470733a2f2f6c617465782e636f6465636f67732e636f6d2f6769662e6c617465783f54462d4944463d54462a494446.gif" alt="img"></a>，从这个公式可以看出，当w在文档中出现的次数增大时，而TF-IDF的值是减小的，所以也就体现了以上所说的了。</p>
-<p><strong>缺点：</strong>还是没有把词与词之间的关系顺序表达出来。</p>
-<h2 id="2-4n-gram模型"><a href="#2-4n-gram模型" class="headerlink" title="2.4n-gram模型"></a>2.4n-gram模型</h2><p>n-gram模型为了保持词的顺序，做了一个<strong>滑窗的操作</strong>，这里的n表示的就是滑窗的大小，例如2-gram模型，也就是把2个词当做一组来处理，然后向后移动一个词的长度，再次组成另一组词，把这些生成一个字典，按照词袋模型的方式进行编码得到结果。改模型考虑了词的顺序。</p>
-<p>例如：</p>
-<p><strong>John likes to watch movies. Mary likes too<br>约翰喜欢看电影。玛丽也喜欢</strong></p>
-<p><strong>John also likes to watch football games.<br>约翰还喜欢看足球比赛。</strong></p>
-<p>以上两句可以构造一个词典，<strong>{“John likes”: 1, “likes to”: 2, “to watch”: 3, “watch movies”: 4, “Mary likes”: 5, “likes too”: 6, “John also”: 7, “also likes”: 8, “watch football”: 9, “football games”: 10}</strong></p>
-<p>以上两句可以构造一个字典，{“约翰喜欢”: 1, “喜欢”: 2, “看”: 3, “看电影”: 4, “玛丽喜欢”: 5, “也喜欢”: 6 , “约翰也”: 7, “也喜欢”: 8, “看足球”: 9, “足球比赛”: 10}</p>
-<p>那么第一句的向量表示为：<strong>[1, 1, 1, 1, 1, 1, 0, 0, 0, 0]</strong>，其中第一个1表示<strong>John likes</strong>在该句中出现了1次，依次类推。</p>
-<p><strong>缺点：</strong>随着n的大小增加，词表会成指数型膨胀，会越来越大。</p>
-<h2 id="2-5离散表示存在的问题"><a href="#2-5离散表示存在的问题" class="headerlink" title="2.5离散表示存在的问题"></a>2.5离散表示存在的问题</h2><p>由于存在以下的问题，对于一般的NLP问题，是可以使用离散表示文本信息来解决问题的，但对于要求精度较高的场景就不适合了。</p>
-<ul>
-<li>无法衡量词向量之间的关系。</li>
-<li>词表的维度随着语料库的增长而膨胀。</li>
-<li>n-gram词序列随语料库增长呈指数型膨胀，更加快。</li>
-<li>离散数据来表示文本会带来数据稀疏问题，导致丢失了信息，与我们生活中理解的信息是不一样的。</li>
-</ul>
-<h1 id="3-分布式表示"><a href="#3-分布式表示" class="headerlink" title="3.分布式表示"></a>3.分布式表示</h1><p>科学家们为了提高模型的精度，又发明出了分布式的表示文本信息的方法，这就是这一节需要介绍的。</p>
-<p><strong>用一个词附近的其它词来表示该词，这是现代统计自然语言处理中最有创见的想法之一。</strong>当初科学家发明这种方法是基于人的语言表达，认为一个词是由这个词的周边词汇一起来构成精确的语义信息。就好比，物以类聚人以群分，如果你想了解一个人，可以通过他周围的人进行了解，因为周围人都有一些共同点才能聚集起来。</p>
-<h2 id="3-1共现矩阵"><a href="#3-1共现矩阵" class="headerlink" title="3.1共现矩阵"></a>3.1共现矩阵</h2><p>共现矩阵顾名思义就是共同出现的意思，词文档的共现矩阵主要用于发现主题(topic)，用于主题模型，如LSA。</p>
-<p>局域窗中的word-word共现矩阵可以挖掘语法和语义信息，<strong>例如：</strong></p>
-<ul>
-<li>I like deep learning.<br>我喜欢深度学习。</li>
-<li>I like NLP. 我喜欢自然语言处理。</li>
-<li>I enjoy flying 我喜欢飞行</li>
-</ul>
-<p>有以上三句话，设置滑窗为2，可以得到一个词典：<strong>{“I like”,”like deep”,”deep learning”,”like NLP”,”I enjoy”,”enjoy flying”}</strong>。</p>
-<p>我们可以得到一个共现矩阵(对称矩阵)：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/68747470733a2f2f7778322e73696e61696d672e636e2f6c617267652f30303633304465666c79316732727776316f70357a6a333071373063377768322e6a7067.jpeg" alt="image"></p>
-<p>中间的每个格子表示的是行和列组成的词组在词典中共同出现的次数，也就体现了<strong>共现</strong>的特性。</p>
-<p><strong>存在的问题：</strong></p>
-<ul>
-<li>向量维数随着词典大小线性增长。</li>
-<li>存储整个词典的空间消耗非常大。</li>
-<li>一些模型如文本分类模型会面临稀疏性问题。</li>
-<li><strong>模型会欠稳定，每新增一份语料进来，稳定性就会变化。</strong></li>
-</ul>
-<h1 id="4-神经网络表示"><a href="#4-神经网络表示" class="headerlink" title="4.神经网络表示"></a>4.神经网络表示</h1><h2 id="4-1NNLM"><a href="#4-1NNLM" class="headerlink" title="4.1NNLM"></a>4.1NNLM</h2><p>NNLM (Neural Network Language model)，神经网络语言模型是03年提出来的，通过训练得到中间产物—词向量矩阵，这就是我们要得到的文本表示向量矩阵。</p>
-<p>NNLM说的是定义一个前向窗口大小，其实和上面提到的窗口是一个意思。把这个窗口中最后一个词当做y，把之前的词当做输入x，通俗来说就是<strong>预测这个窗口中最后一个词出现概率的模型。</strong></p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231202223958330-1701527999871-7.png" alt="image-20231202223958330"></p>
-<p>以下是NNLM的网络结构图：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231203191427167-1701602068838-22.png" alt="image-20231203191427167"></p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231202224031026-1701528032495-9.png" alt="image-20231202224031026"></p>
-<ul>
-<li>input层是一个前向词的输入，是经过one-hot编码的词向量表示形式，具有V*1的矩阵。</li>
-<li>C矩阵是投影矩阵，也就是稠密词向量表示，在神经网络中是<strong>w参数矩阵</strong>，该矩阵的大小为D<em>*V，正好与input层进行全连接(相乘)得到D</em>1的矩阵，采用线性映射将one-hot表示投影到稠密D维表示。</li>
-</ul>
-<h2 id="4-2Word2Vec"><a href="#4-2Word2Vec" class="headerlink" title="4.2Word2Vec"></a>4.2Word2Vec</h2><p>谷歌2013年提出的Word2Vec是目前最常用的词嵌入模型之一。Word2Vec实际是一种浅层的神经网络模型，它有两种网络结构，<strong>分别是CBOW（Continues Bag of Words）连续词袋和Skip-gram。</strong>Word2Vec和上面的NNLM很类似，但比NNLM简单。</p>
-<p><strong>CBOW</strong></p>
-<p>CBOW获得中间词两边的的上下文，然后用周围的词去预测中间的词，把中间词当做y，把窗口中的其它词当做x输入，x输入是经过one-hot编码过的，然后通过一个隐层进行求和操作，最后通过激活函数softmax，可以计算出每个单词的生成概率，接下来的任务就是训练神经网络的权重，使得语料库中所有单词的整体生成概率最大化，而求得的权重矩阵就是文本表示词向量的结果。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/v2-c4fe99824e10b1842d59172774cfeeed_720w-1701575944724-14.webp" alt="img"></p>
-<p><strong>Skip-gram</strong>：</p>
-<p>Skip-gram是通过当前词来预测窗口中上下文词出现的概率模型，把当前词当做x，把窗口中其它词当做y，依然是通过一个隐层接一个Softmax激活函数来预测其它词的概率。如下图所示：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/68747470733a2f2f67697465652e636f6d2f6b6b7765697368652f696d616765732f7261772f6d61737465722f4d4c2f323031392d382d32305f32302d33342d302e6a7067-1701576029152-18.jpeg" alt="img"></p>
-<p><strong>优化方法</strong>：</p>
-<ul>
-<li><strong>层次Softmax：至此还没有结束，因为如果单单只是接一个softmax激活函数，计算量还是很大的，有多少词就会有多少维的权重矩阵，所以这里就提出层次Softmax(Hierarchical Softmax)</strong>，使用Huffman Tree来编码输出层的词典，相当于平铺到各个叶子节点上，<strong>瞬间把维度降低到了树的深度</strong>，可以看如下图所示。这课Tree把出现频率高的词放到靠近根节点的叶子节点处，每一次只要做二分类计算，计算路径上所有非叶子节点词向量的贡献即可。</li>
-</ul>
-<p><strong>哈夫曼树(Huffman Tree)</strong>：给定N个权值作为N个<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/叶子结点/3620239">叶子结点</a>，构造一棵二叉树，若该树的带权路径长度达到最小，称这样的二叉树为最优二叉树，也称为哈夫曼树(Huffman Tree)。哈夫曼树是带权路径长度最短的树，权值较大的结点离根较近。</p>
-<ul>
-<li><p><strong>负例采样(Negative Sampling)：</strong>这种优化方式做的事情是，在正确单词以外的负样本中进行采样，最终目的是为了减少负样本的数量，达到减少计算量效果。将词典中的每一个词对应一条线段，所有词组成了[0，1］间的剖分，如下图所示，然后每次随机生成一个[1, M-1]间的整数，看落在哪个词对应的剖分上就选择哪个词，最后会得到一个负样本集合。</p>
-<p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/e310fcdc6bb4ff1474051061476669cfda3f8cf666e99cb5d35812af37cf998c/68747470733a2f2f7778332e73696e61696d672e636e2f6c617267652f30303633304465666c793167327537767672676a6e6a33306c753037643735762e6a7067"><img src="../imgs/$%7Bfiilename%7D/68747470733a2f2f7778332e73696e61696d672e636e2f6c617267652f30303633304465666c793167327537767672676a6e6a33306c753037643735762e6a7067.jpeg" alt="image"></a></p>
-</li>
-</ul>
-<p><strong>Word2Vec存在的问题</strong></p>
-<ul>
-<li>对每个local context window单独训练，没有利用包 含在global co-currence矩阵中的统计信息。</li>
-<li>对多义词无法很好的表示和处理，因为使用了唯一的词向量</li>
-</ul>
-<h2 id="4-3sense2vec"><a href="#4-3sense2vec" class="headerlink" title="4.3sense2vec"></a>4.3sense2vec</h2><p>word2vec模型的问题在于词语的多义性。比如duck这个单词常见的含义有水禽或者下蹲，但对于 word2vec 模型来说，它倾向于将所有概念做归一化平滑处理，得到一个最终的表现形式。</p>
-<h1 id="5-词嵌入为何不采用one-hot向量"><a href="#5-词嵌入为何不采用one-hot向量" class="headerlink" title="5.词嵌入为何不采用one-hot向量"></a>5.词嵌入为何不采用one-hot向量</h1><p>虽然one-hot词向量构造起来很容易，但通常并不是⼀个好选择。⼀个主要的原因是，one-hot词向量⽆法准确表达不同词之间的相似度，如我们常常使⽤的余弦相似度。由于任何两个不同词的one-hot向量的余弦相似度都为0，多个不同词之间的相似度难以通过one-hot向量准确地体现出来。</p>
-<p>word2vec⼯具的提出正是为了解决上⾯这个问题。它将每个词表⽰成⼀个定⻓的向量，并使得这些向量能较好地表达不同词之间的相似和类⽐关系。</p>
-<p>6.Word2Vec代码实现</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/12/02/16-1-ci-qian-ru-word2vec/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1451,6 +754,14 @@ E = - log \sigma(v_{w_O}' h) - \sum_{w_j \in W_{neg}} log \sigma(-v_{w_j}'h)</sc
           <h1 id="Kaggle’s-30-Days-Of-ML-Day-1-Getting-Started-With-Kaggle"><a href="#Kaggle’s-30-Days-Of-ML-Day-1-Getting-Started-With-Kaggle" class="headerlink" title="Kaggle’s 30 Days Of ML (Day-1): Getting Started With Kaggle"></a>Kaggle’s 30 Days Of ML (Day-1): Getting Started With Kaggle</h1><h1 id="Kaggle’s-30-Days-Of-ML-Day-9-First-Machine-Learning-Model-and-Validation"><a href="#Kaggle’s-30-Days-Of-ML-Day-9-First-Machine-Learning-Model-and-Validation" class="headerlink" title="Kaggle’s 30 Days Of ML (Day-9): First Machine Learning Model and Validation"></a>Kaggle’s 30 Days Of ML (Day-9): First Machine Learning Model and Validation</h1><p><img src="../imgs/$%7Bfiilename%7D/image-20231117125459917-1700196901968-1.png" alt="image-20231117125459917"></p>
 <p><img src="../imgs/$%7Bfiilename%7D/image-20231117125647067-1700197008690-5.png" alt="image-20231117125647067"></p>
 
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/11/16/kaggle-s-30-days-of-ml/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1575,6 +886,14 @@ E = - log \sigma(v_{w_O}' h) - \sum_{w_j \in W_{neg}} log \sigma(-v_{w_j}'h)</sc
 </table>
 </div>
 
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/11/09/wen-xian-zheng-li/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1651,6 +970,14 @@ E = - log \sigma(v_{w_O}' h) - \sum_{w_j \in W_{neg}} log \sigma(-v_{w_j}'h)</sc
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>近年来，人们对从发票、采购订单、纳税申报表等各种垂直领域的<strong>类似表单的文档中提取结构化信息越来越感兴趣</strong>。[Zhao、Wu 和 Wang 2019；林等人。 2020；于等人。 2019]。在本文中，我们重新审视<strong>关键信息提取（KIE）问题，即从给定文档中提取一组键的值</strong>[Huang et al. 2017]。 2019]。例如，在图 1 中，给定一组键（“电话”、“总计”）和左侧收据文档，KIE 任务旨在提取“电话”的值“03-55423228”和“电话”的值“50.60”全部的”。提取的结构化信息对于广泛的下游任务至关重要，例如知识库构建、问答、文档理解等[Liu and Croft 2002；吴森等人。 2018； Geva 和 Berant 2018]。</p>
 <p><img src="../imgs/$%7Bfiilename%7D/image-20231107114701675-1699328823889-1.png" alt="image-20231107114701675"></p>
 
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/11/06/ji-yu-ti-shi-de-ling-yang-ben-guan-xi-chou-qu-fang-fa-tan-suo/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1734,32 +1061,14 @@ E = - log \sigma(v_{w_O}' h) - \sum_{w_j \in W_{neg}} log \sigma(-v_{w_j}'h)</sc
 <li>我们设计了一种融合机制，将学习忘记不同数据集的遗忘层合并到单个遗忘层中，以处理一系列删除操作。</li>
 <li>我们在不同设置下使用不同规模的骨干模型进行分类和生成任务的实验，以说明EUL的有效性。</li>
 </ul>
-<h2 id="2-Related-Work"><a href="#2-Related-Work" class="headerlink" title="2 Related Work"></a>2 Related Work</h2><h3 id="2-1-Large-Language-Models"><a href="#2-1-Large-Language-Models" class="headerlink" title="2.1 Large Language Models"></a>2.1 Large Language Models</h3><p>大型语言模型最近取得了广泛的进展（Brown et al., 2020; Radford et al., 2019; Smith et al., 2022; Rae et al., 2021; Chowdhery et al., 2022b; Touvron et al., 2023 ），特别是在扩大法学硕士方面，例如 LLAMA（Touvron 等人，2023）、Megatron-turing NLG（Smith 等人，2022）、Gopher（Rae 等人，2021）和 PaLM Chowdhery 等人。 （2022b）。其他工作也通过更长的训练（Hoffmann et al., 2022）、指令调整（Wang et al., 2022；Zhou et al., 2023）和人类反馈（Ouyang et al., 2022）在较小的模型上取得了更好的性能。 。然而，最近的研究表明，训练数据，例如姓名、电话号码、电子邮件地址，甚至银行帐号等个人身份信息（Carlini 等人，2021；Lee 等人，2021；Carlini 等人，2022） ; Jagielski et al., 2022），可以很容易地从 LLM 中提取，因为 LLM 会记住数十亿个参数的训练数据（Carlini et al., 2022）。我们的工作旨在通过允许从法学硕士中学习的参数中有效地消除所请求的或私有的数据来缓解此类问题。</p>
-<h3 id="2-2-Machine-Unlearning-for-Privacy"><a href="#2-2-Machine-Unlearning-for-Privacy" class="headerlink" title="2.2 Machine Unlearning for Privacy"></a>2.2 Machine Unlearning for Privacy</h3><p>为了减轻法学硕士的隐私风险，引入了机器取消学习方法来消除用户要求删除的训练示例的贡献（Bourtoule 等人，2021；Chien 等人，2023），包括重新训练深度学习的精确取消学习删除后新数据集上的学习模型（Bourtoule et al., 2021）和近似遗忘（Izzo et al., 2021; Golatkar et al., 2020; Kurmanji et al., 2023; Jang et al., 2022），旨在修改训练模型的权重以生成一组新的权重，这些权重近似于重新训练的权重。遗忘的影响通常通过已删除数据的模型错误来体现（模型无法预测已删除数据）（Kurmanji et al., 2023; Jang et al., 2022）。另一条工作重点是差分隐私（DP），它确保训练数据中的用户信息无法被推断（Dwork，2008；Yu et al.，2021；Li et al.，2021；Anil et al.，2021；Abadi等人，2016）。然而，这两种方法都需要重新训练整个模型，这是极其昂贵和耗时的，特别是对于大型语言模型，甚至会影响任务性能（Anil et al., 2021）。因此，它们无法动态处理删除序列（Jang et al., 2022；Nguyen et al., 2022）。为了克服这些限制，我们引入了一种有效的忘却方法以及融合机制来高效、动态地忘却用户数据序列。        我们的工作也与模型编辑相关（Mitchell et al., 2021; Belinkov et al., 2017; Dai et al., 2021; Wang et al., 2020），而他们通常专注于根据几个给定的数据编辑模型输出有关世界的语言结构或事实，而不是忘记所需的数据。</p>
-<h2 id="3-Efficient-Unlearning-for-LLMs"><a href="#3-Efficient-Unlearning-for-LLMs" class="headerlink" title="3 Efficient Unlearning for LLMs"></a>3 Efficient Unlearning for LLMs</h2><p>本节介绍了我们为法学硕士（EUL）设计的高效遗忘方法，该方法可以高效、动态地处理一系列删除请求。整体流程如图1所示。形式上，对于在数据集D = {(x, y)}上训练的大型语言模型F(.)，其中x是文本数据，y是相应的标签，并且删除请求忘记 Df = {(xf , yf } )，我们的目标是学习满足以下条件的更新模型 F ′(.) (Kurmanji et al., 2023)：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231107183151791-1699353113266-3.png" alt="image-20231107183151791"></p>
-<p>其中 Dr = D − Df = {(xr, yr)} 指的是我们想要保留的数据，I(.) 是互信息。直观上，我们将用 F(.) 更新 F(.)，为我们想要保留的数据生成类似的输出，同时丢失有关对我们想要忘记的数据进行预测的所有信息。</p>
-<h3 id="3-1-Learning-to-Forget-via-Unlearning-Layers"><a href="#3-1-Learning-to-Forget-via-Unlearning-Layers" class="headerlink" title="3.1 Learning to Forget via Unlearning Layers"></a>3.1 Learning to Forget via Unlearning Layers</h3><p>由于当前法学硕士的规模和训练数据量通常很大，更新模型 F(.) 中的所有参数（例如，在 Dr i 上重新训练 F(.)）变得极其昂贵。受参数高效微调最新进展的启发（Houlsby et al., 2019; Chien et al., 2023），我们通过 F (f (.)) 对 F ′(.) 进行建模，其中 f (.; W ) 是与 F (.) 相比，W 的参数数量显着减少。我们只会更新 f(.) 来满足取消学习的请求。</p>
-<p>​        为了有效地实现等式 1 中的忘却目标，我们最小化了选择性的师生目标，其中学生模型 F ′(.) = F (f (.)) 被学习以遵循 Dr 上的教师模型 F (.)，同时不服从F (.) 在 Df 上：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231107183310417-1699353191715-5.png" alt="image-20231107183310417"></p>
-<p>其中 α 是一个超参数，用于平衡忘记 xf 和保留 xr 之间的权衡。直观上，在训练过程中，f(.) 倾向于最小化更新模型的输出和原始模型在要保留的数据上的输出之间的 KL 散度，同时最大化它们在要忘记的数据上的输出之间的 KL 散度。</p>
-<p>​        为了保持任务性能，我们针对保留数据上的任务损失优化 f(.)：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231107183345526-1699353226937-7.png" alt="image-20231107183345526"></p>
-<p>其中 l(.) 是与任务相关的损失，例如，对于分类任务，交叉熵损失 - log P (F (f (xr)))。</p>
-<p>​        此外，我们还否定了法学硕士中使用的原始训练目标（例如，掩码语言建模目标（Raffel et al., 2020）），以忘记与数据相关的知识，以便忘记预先训练的参数并确保遗忘数据中的信息不能轻易地从 F(.) 中提取：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231107183433768-1699353275101-9.png" alt="image-20231107183433768"></p>
-<p>其中l(.)是预训练F(.)时使用的语言模型损失，例如，屏蔽语言模型损失，− log P (^ x|x − ^ x)（^ x是随机屏蔽的标记）。在我们的实验中，我们使用 T5 模型（Raffel et al., 2020）。因此，我们在这个损失项的输入开头添加了一个额外的“预测屏蔽词”。</p>
-<p>​        我们的最终培训目标如下：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231107183512165-1699353314324-11.png" alt="image-20231107183512165"></p>
-<p>其中 λ 和 γ 是超参数。在实践中，遵循 Kurmanji 等人。 （2023），我们交替更新要忘记的数据和要保留的数据，以更稳定地优化 LEUL 中的最小-最大项。具体来说，我们迭代地对要保留的数据执行一个纪元更新，然后对要忘记的数据执行一个纪元更新。</p>
-<h3 id="3-2-Fusing-Unlearning-Layers"><a href="#3-2-Fusing-Unlearning-Layers" class="headerlink" title="3.2 Fusing Unlearning Layers"></a>3.2 Fusing Unlearning Layers</h3><p>为了动态处理一系列遗忘请求并导出一个可以忘记所有请求数据的统一模型，我们引入了一种融合机制，可以合并不同的遗忘层 fi(.; Wi)，这些层学会了忘记 Df i = (Xf i ,Yf i ) 将上一节中的单个 f m(.; Wm) 转换为单个 f m(.; Wm)。也就是说，我们希望 Df i 上的 f m(.) 输出接近 fi(.)：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231107183611459-1699353373309-13.png" alt="image-20231107183611459"></p>
-<p>这是一个线性回归问题，有一个封闭式解：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231107183649235-1699353410763-15.png" alt="image-20231107183649235"></p>
-<p>具体来说，为了导出合并的遗忘层 f m 的权重 Wm，我们将使用遗忘数据 Xf i T Xf i 的 LLM 中的遗忘层之前的隐藏表示的预先计算的内积矩阵，然后根据公式 7 计算 Wm。</p>
-<p>​        融合机制确保了效率和隐私，因为它可以在没有任何额外训练的情况下执行，并且只需要存储要忘记的数据表示的内积矩阵而不是数据本身。</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>在这项工作中，我们提出了 EUL，这是一种针对LLMs的有效忘却方法，可以<strong>通过选择性的师生目标通过学习忘却层来高效且有效地忘却用户请求的数据</strong>。我们进一步引入了<strong>一种融合机制，可以将不同的遗忘层合并到一个统一的层中，以动态地遗忘一系列数据</strong>。对不同设置（不同数据集、不同模型大小、不同遗忘集大小）的实验证明了我们提出的 EUL 方法与最先进的基线相比的有效性。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/11/06/wang-diao-ni-xiang-wang-diao-de-dong-xi-llms-de-gao-xiao-wang-que/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

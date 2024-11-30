@@ -24,14 +24,20 @@
     <updated>2024-11-30T09:32:41.332Z</updated>
     
     
-      
-      
-        
-        
     <summary type="html">&lt;p&gt;​        GBDT为梯度提升决策树（Gradient  Boosting Decision Tree），是一种以回归决策树为 弱学习器的集成学习模型。GBDT集成学习模型通常使用CART决 策树（回归树）模型作为弱学习器。&lt;/p&gt;
-&lt;p&gt;​       </summary>
-        
-      
+&lt;p&gt;​        提升树算法(Boosting Decision Tree)：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提升树是迭代多棵回归树来共同决策。当采用平方 误差损失函数时，每一棵回归树学习的是之前所有 树的结论和残差，拟合得到一个当前的残差回归树。&lt;/li&gt;
+&lt;li&gt;残差 = 真实值- 预测值。&lt;/li&gt;
+&lt;li&gt;提升树即是整个迭代过程生成的回归树的累加。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例：训练一个提升树模型来预测年龄 训练集只有4个人，A,B,C,D，他们的年龄分别是 14,16,24,26。其中A、B分别是高一和高三学生；C,D 分别是应届毕业生和工作两年的员工。样本中有购物 金额、上网时长、经常到百度知道提问等特征。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/11/30/YNhABjfvzogsKdy.png&quot; alt=&quot;image-20241130163828685&quot;&gt;&lt;/p&gt;
+&lt;p&gt;提升树过程如下：由于数据太少，限定叶子节点最多有两个，即每棵树 都只有一个分枝，并且限定只学习两棵树。第一棵树，由于A,B年龄较为 相近，C,D年龄较为相近，4人被分为两拨，每拨用&lt;strong&gt;平均年龄作为预测值&lt;/strong&gt; 。&lt;strong&gt;拿残差替代A,B,C,D的原值&lt;/strong&gt;，到第二棵树去学习，如果预测值和它们的残差相等，则只需把第二棵树的结论累加到第一棵树上就能得到真实年龄了。第二棵树只有两个值1和-1，直接分成两个节点。此时所有人的残 差都是0，即每个人都得到了真实的预测值。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/11/30/fQz65S8XenPcL2Z.png&quot; alt=&quot;image-20241130163856863&quot;&gt;&lt;/p&gt;
+&lt;p&gt;现在A,B,C,D的预测值都和真实年龄一致&lt;/p&gt;
+&lt;p&gt;A: 14岁高一学生，购物较少，经常问学长问题； 预测年龄A = 15 – 1 = 14 &lt;/p&gt;
+&lt;p&gt;B: 16岁高三学生；购物较少，经常被学弟问问题； 预测年龄B = 15 + 1 = 16 &lt;/p&gt;</summary>
     
     
     
@@ -46,13 +52,16 @@
     <updated>2024-05-26T11:14:12.534Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Document-Level Event Argument Extraction With A Chain Reasoning</summary>
-        
-      
+    <summary type="html">&lt;p&gt;Document-Level Event Argument Extraction With A Chain Reasoning Paradigm&lt;/p&gt;
+&lt;p&gt;文档级事件参数提取旨在识别句子级别之外的事件参数，其中一个重大挑战是对远程依赖关系进行建模。针对这一挑战，我们为该任务&lt;span style=&quot;background-color: #ff666680&quot;&gt;提出了一种新的链式推理范式，它可以生成可分解的一阶逻辑规则进行推理。由于链的组合性质，这种范式自然地捕获了远程相互依赖，这也通过显式地建模推理过程来提高可解释性&lt;/span&gt;。我们&lt;span style=&quot;background-color: #ff666680&quot;&gt;引入 T 范数模糊逻辑进行优化，它允许端到端学习，并有望将逻辑推理的表达能力与神经网络的泛化相结合&lt;/span&gt;。在实验中，我们表明我们的方法在两个标准基准上明显优于以前的方法（F1 中超过 6 个点）。此外，它在资源匮乏的情况下具有数据效率，并且足够强大以防御对抗性攻击。&lt;/p&gt;
+&lt;p&gt;1.&lt;/p&gt;
+&lt;p&gt;识别事件参数（即事件的参与者）是文档级事件理解的一项关键任务（Ebner et al., 2020；Li et al., 2021）。在此任务中，主要挑战是对事件触发器和参数之间的远程依赖关系进行建模，因为事件表达式可以跨越多个句子（Ebner 等人，2020；Liu 等人，2021；Li 等人，2021）。考虑图 1 中由触发引爆（类型 = 攻击）表示的事件。为了定位其参数 Tartus（语义角色 = 地点），模型应捕获包含三个句子和 178 个单词的大型上下文窗口，以支持推理过程。&lt;/p&gt;
+&lt;p&gt;目前，有效捕获此类依赖关系仍然是一个悬而未决的问题（Liu et al., 2021, 2022c）。先前的研究提出建模通过结合分层编码机制（Du and Cardie，2020a）、生成范式（Li et al.，2021；Ma et al.，2022；Du et al.，2022）和文档级归纳偏差（Wei等人，2021；Pouran Ben Veyseh 等人，2022；Liu 等人，2022b)。然而，此类方法并未明确表征文档上下文背后的推理模式，这可能会导致性能不佳。此外，大多数以前的方法都是不可解释的，因为它们依赖于黑盒神经网络。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;attachments/5WFMU28T.png&quot; alt=&quot;&#92;&amp;lt;img alt=&amp;quot;&amp;quot; data-attachment-key=&amp;quot;5WFMU28T&amp;quot; width=&amp;quot;676&amp;quot; height=&amp;quot;697&amp;quot; src=&amp;quot;attachments/5WFMU28T.png&amp;quot; ztype=&amp;quot;zimage&amp;quot;&amp;gt;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在本文中，我们提出了一种新的推理链范式来解决文档级事件参数提取（EAE）。如图 1 底部所示，&lt;span style=&quot;background-color: #ff666680&quot;&gt;我们的方法试图通过一系列局部推理步骤来描述全局参数查找过程。&lt;/span&gt;例如，我们可以使用以下链来定位塔尔图斯：&lt;span style=&quot;background-color: #ff666680&quot;&gt;引爆目标→Arzunah Bridge locatedIn→塔尔图斯。&lt;/span&gt;与以前的方法相比，这种推理链范式具有三个明显的好处：&lt;span style=&quot;background-color: #ff666680&quot;&gt;首先，由于推理链的组合结构，它自然地捕获了长距离依赖关系&lt;/span&gt;。其次，&lt;span style=&quot;background-color: #ff666680&quot;&gt;它只涉及局部推理，这在概念上比直接执行全局推理更容易&lt;/span&gt;。第三，&lt;span style=&quot;background-color: #ff666680&quot;&gt;它提高了可解释性，因为推理过程是可见的&lt;/span&gt;。&lt;/p&gt;
+&lt;p&gt;我们的方法将推理链形式化为一阶逻辑（FOL）规则（Cresswell 和 Hughes，1996）。具体来说，&lt;span style=&quot;background-color: #ff666680&quot;&gt;令 RL(T , ?) 为对事件参数的查询，该事件参数满足关于事件触发器 T 的语义角色 RL （例如，地点）&lt;/span&gt;。我们将查询形式化为以下 FOL 规则：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;attachments/T4XFLP62.png&quot; alt=&quot;&#92;&amp;lt;img alt=&amp;quot;&amp;quot; data-attachment-key=&amp;quot;T4XFLP62&amp;quot; width=&amp;quot;513&amp;quot; height=&amp;quot;69&amp;quot; src=&amp;quot;attachments/T4XFLP62.png&amp;quot; ztype=&amp;quot;zimage&amp;quot;&amp;gt;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;其中&lt;span style=&quot;background-color: #ff666680&quot;&gt;规则主体（右侧）由具有低级谓词 {ri}1n 和中间线索实体 {Bi}n−1 1 的合取命题组成&lt;/span&gt;。我们&lt;span style=&quot;background-color: #ff666680&quot;&gt;构建一个模型，根据文档上下文自动生成规则，然后将规则转换为推理链来定位事件参数&lt;/span&gt;。然而，由于 FOL 规则的离散性质，使用 FOL 规则进行优化通常具有挑战性（Qu 等人，2021a）。受到使用 FOL 增强神经网络的工作的启发（Li 和 Srikumar，2019；Ahmed 等人，2022），我们&lt;span style=&quot;background-color: #ff666680&quot;&gt;提出了用于松弛的 T-Norm 模糊逻辑（Hajek，1998），这导致了端到端的训练机制。&lt;/span&gt;&lt;/p&gt;</summary>
     
     
     
@@ -71,13 +80,17 @@
     <updated>2024-06-26T23:34:34.658Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;第一章-推荐系统概述&quot;&gt;&lt;a href=&quot;#第一章-推荐系统概述&quot; class=&quot;headerlink&quot; title=&quot;第一章 推荐系统概述&quot;&gt;&lt;/a&gt;第一章 推荐系统概述&lt;/h1&gt;&lt;h2 id=&quot;1-1推荐系统的意义&quot;&gt;&lt;a</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;第一章-推荐系统概述&quot;&gt;&lt;a href=&quot;#第一章-推荐系统概述&quot; class=&quot;headerlink&quot; title=&quot;第一章 推荐系统概述&quot;&gt;&lt;/a&gt;第一章 推荐系统概述&lt;/h1&gt;&lt;h2 id=&quot;1-1推荐系统的意义&quot;&gt;&lt;a href=&quot;#1-1推荐系统的意义&quot; class=&quot;headerlink&quot; title=&quot;1.1推荐系统的意义&quot;&gt;&lt;/a&gt;1.1推荐系统的意义&lt;/h2&gt;&lt;p&gt;推荐系统就是一个将信息生产者和信息消费者连接起来的桥梁。平台往往会作为推荐系统的载体，实现信息生产者和消费者之间信息的匹配。上述提到的平台方、信息生产者和消费者可以分别用平台方（如：腾讯视频、淘宝、网易云音乐等）、物品（如：视频、商品、音乐等）和用户和来指代。下面分别从这三方需求出发，介绍推荐系统的存在的意义。&lt;/p&gt;
+&lt;h3 id=&quot;平台方&quot;&gt;&lt;a href=&quot;#平台方&quot; class=&quot;headerlink&quot; title=&quot;平台方&quot;&gt;&lt;/a&gt;平台方&lt;/h3&gt;&lt;p&gt;平台方一般是为信息生产者提供物品展示的位置，然后通过不同的方式吸引用户来到平台上寻找他们感兴趣的物品。平台通过商家对物品的展示以及用户的浏览、观看或下单等行为，就产生了所谓的”流量”。&lt;/p&gt;
+&lt;p&gt;对平台方而言，流量的高效利用是推荐系统存在的重要原因。以典型的电商网站一般具有如图所示的树状拓扑结构，树状结构在连通性方面有着天然的劣势，阻碍这流量的高效流通。推荐系统的出现使得原本的树状结构变成网络拓扑结构，大大增强了整个网络的连通性。推荐模块不仅使用户在当前页面有了更好的选择路径，同时也给了每个商品增加入口和展示机会，进而提高了成交概率。而推荐质量的好坏，直接决定了用户选择这条路径的可能性，进而影响着流量的利用效率。&lt;/p&gt;
+&lt;h3 id=&quot;推荐和搜索的区别&quot;&gt;&lt;a href=&quot;#推荐和搜索的区别&quot; class=&quot;headerlink&quot; title=&quot;推荐和搜索的区别&quot;&gt;&lt;/a&gt;推荐和搜索的区别&lt;/h3&gt;&lt;p&gt;搜索和推荐都是解决互联网大数据时代信息过载的手段，但是它们也存在着许多的不同：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;用户意图&lt;/strong&gt;：搜索时的用户意图是非常明确的，用户通过查询的关键词主动发起搜索请求。对于推荐而言，用户的需求是不明确的，推荐系统在通过对用户历史兴趣的分析给用户推荐他们可能感兴趣的内容。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;个性化程度&lt;/strong&gt;：对于搜索而言，由于限定的了搜索词，所以展示的内容对于用户来说是有标准答案的，所以搜索的个性化程度较低。而对于推荐来说，推荐的内容本身就是没有标准答案的，每个人都有不同的兴趣，所以每个人展示的内容，个性化程度比较强。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优化目标&lt;/strong&gt;：对于搜索系统而言，更希望可以快速地、准确地定位到标准答案，所以希望搜索结果中答案越靠前越好，通常评价指标有：归一化折损累计收益（NDCG）、精确率（Precision）和召回率（Recall）。对于推荐系统而言，因为没有标准的答案，所以优化目标可能会更宽泛。例如用户停留时长、点击、多样性，评分等。不同的优化目标又可以拆解成具体的不同的评价指标。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;马太效应和长尾理论&lt;/strong&gt;：对于搜索系统来说，用户的点击基本都集中在排列靠前的内容上，对于排列靠后的很少会被关注，这就是马太效应。而对于推荐系统来说，热门物品被用户关注更多，冷门物品不怎么被关注的现象也是存在的，所以也存在马太效应。此外，在推荐系统中，冷门物品的数量远远高于热门物品的数量，所以物品的长尾性非常明显。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;1-2推荐系统的架构&quot;&gt;&lt;a href=&quot;#1-2推荐系统的架构&quot; class=&quot;headerlink&quot; title=&quot;1.2推荐系统的架构&quot;&gt;&lt;/a&gt;1.2推荐系统的架构&lt;/h2&gt;</summary>
     
     
     
@@ -98,13 +111,10 @@
     <updated>2024-03-23T04:15:56.744Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;10-1-提升方法AdaBoost算法&quot;&gt;&lt;a href=&quot;#10-1-提升方法AdaBoost算法&quot; class=&quot;headerlink&quot; title=&quot;10.1 提升方法AdaBoost算法&quot;&gt;&lt;/a&gt;10.1</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;10-1-提升方法AdaBoost算法&quot;&gt;&lt;a href=&quot;#10-1-提升方法AdaBoost算法&quot; class=&quot;headerlink&quot; title=&quot;10.1 提升方法AdaBoost算法&quot;&gt;&lt;/a&gt;10.1 提升方法AdaBoost算法&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/03/23/qSx2yrfQHYu86ij.png&quot; alt=&quot;image-20240323120941983&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/03/23/hUxJme2paKIswVn.png&quot; alt=&quot;image-20240323121244084&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240323121450856.png&quot; alt=&quot;image-20240323121450856&quot;&gt;&lt;/p&gt;
+</summary>
     
     
     
@@ -119,13 +129,8 @@
     <updated>2024-05-26T05:16:44.306Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;53-理解-Dropout&quot;&gt;&lt;a href=&quot;#53-理解-Dropout&quot; class=&quot;headerlink&quot; title=&quot;53 理解 Dropout&quot;&gt;&lt;/a&gt;53 理解 Dropout&lt;/h1&gt;&lt;h2</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;53-理解-Dropout&quot;&gt;&lt;a href=&quot;#53-理解-Dropout&quot; class=&quot;headerlink&quot; title=&quot;53 理解 Dropout&quot;&gt;&lt;/a&gt;53 理解 Dropout&lt;/h1&gt;&lt;h2 id=&quot;53-1Why-does-drop-out-work&quot;&gt;&lt;a href=&quot;#53-1Why-does-drop-out-work&quot; class=&quot;headerlink&quot; title=&quot;53.1Why does drop-out work?&quot;&gt;&lt;/a&gt;53.1Why does drop-out work?&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240113212243807.png&quot; alt=&quot;image-20240113212243807&quot;&gt;&lt;/p&gt;
+</summary>
     
     
     
@@ -140,13 +145,11 @@
     <updated>2024-05-26T05:18:39.610Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;0204-K折交叉验证&quot;&gt;&lt;a href=&quot;#0204-K折交叉验证&quot; class=&quot;headerlink&quot; title=&quot;0204 K折交叉验证&quot;&gt;&lt;/a&gt;0204 K折交叉验证&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;0204-K折交叉验证&quot;&gt;&lt;a href=&quot;#0204-K折交叉验证&quot; class=&quot;headerlink&quot; title=&quot;0204 K折交叉验证&quot;&gt;&lt;/a&gt;0204 K折交叉验证&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240115195857331.png&quot; alt=&quot;image-20240115195857331&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;0205-测试集分割留出法&quot;&gt;&lt;a href=&quot;#0205-测试集分割留出法&quot; class=&quot;headerlink&quot; title=&quot;0205 测试集分割留出法&quot;&gt;&lt;/a&gt;0205 测试集分割留出法&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/15/hGeNuPqEw2KdamL.png&quot; alt=&quot;image-20240115200322730&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;0206-验证集&quot;&gt;&lt;a href=&quot;#0206-验证集&quot; class=&quot;headerlink&quot; title=&quot;0206 验证集&quot;&gt;&lt;/a&gt;0206 验证集&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/15/abAQVWwImtsRSu8.png&quot; alt=&quot;image-20240115200552460&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;0207-均方误差&quot;&gt;&lt;a href=&quot;#0207-均方误差&quot; class=&quot;headerlink&quot; title=&quot;0207 均方误差&quot;&gt;&lt;/a&gt;0207 均方误差&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240115200948281.png&quot; alt=&quot;image-20240115200948281&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;0208错误率与精确度公式&quot;&gt;&lt;a href=&quot;#0208错误率与精确度公式&quot; class=&quot;headerlink&quot; title=&quot;0208错误率与精确度公式&quot;&gt;&lt;/a&gt;0208错误率与精确度公式&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/15/v3huHoQinVwDErU.png&quot; alt=&quot;image-20240115201639265&quot;&gt;&lt;/p&gt;</summary>
     
     
     
@@ -161,13 +164,10 @@
     <updated>2024-05-26T05:16:18.738Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;52-Dropout-正则化&quot;&gt;&lt;a href=&quot;#52-Dropout-正则化&quot; class=&quot;headerlink&quot; title=&quot;52 Dropout 正则化&quot;&gt;&lt;/a&gt;52 Dropout 正则化&lt;/h1&gt;&lt;h2</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;52-Dropout-正则化&quot;&gt;&lt;a href=&quot;#52-Dropout-正则化&quot; class=&quot;headerlink&quot; title=&quot;52 Dropout 正则化&quot;&gt;&lt;/a&gt;52 Dropout 正则化&lt;/h1&gt;&lt;h2 id=&quot;52-1Dropout-regularization&quot;&gt;&lt;a href=&quot;#52-1Dropout-regularization&quot; class=&quot;headerlink&quot; title=&quot;52.1Dropout regularization&quot;&gt;&lt;/a&gt;52.1Dropout regularization&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240113203610466.png&quot; alt=&quot;image-20240113203610466&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;52-2Implementing-dropout-“Inverted-dropout”&quot;&gt;&lt;a href=&quot;#52-2Implementing-dropout-“Inverted-dropout”&quot; class=&quot;headerlink&quot; title=&quot;52.2Implementing dropout(“Inverted dropout”)&quot;&gt;&lt;/a&gt;52.2Implementing dropout(“Inverted dropout”)&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/13/ilLpst3SmYoHRuX.png&quot; alt=&quot;image-20240113210330586&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;52-3Making-predictions-at-test-time&quot;&gt;&lt;a href=&quot;#52-3Making-predictions-at-test-time&quot; class=&quot;headerlink&quot; title=&quot;52.3Making predictions at test time&quot;&gt;&lt;/a&gt;52.3Making predictions at test time&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/13/YDzrq1TguIACMRh.png&quot; alt=&quot;image-20240113210850114&quot;&gt;&lt;/p&gt;
+</summary>
     
     
     
@@ -182,13 +182,9 @@
     <updated>2024-05-26T05:15:57.951Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;51-为什么正则化可以减少过拟合？&quot;&gt;&lt;a href=&quot;#51-为什么正则化可以减少过拟合？&quot; class=&quot;headerlink&quot; title=&quot;51 为什么正则化可以减少过拟合？&quot;&gt;&lt;/a&gt;51 为什么正则化可以减少过拟合？&lt;/h1&gt;&lt;h2</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;51-为什么正则化可以减少过拟合？&quot;&gt;&lt;a href=&quot;#51-为什么正则化可以减少过拟合？&quot; class=&quot;headerlink&quot; title=&quot;51 为什么正则化可以减少过拟合？&quot;&gt;&lt;/a&gt;51 为什么正则化可以减少过拟合？&lt;/h1&gt;&lt;h2 id=&quot;51-1-How-does-regularization-prevent-overfitting&quot;&gt;&lt;a href=&quot;#51-1-How-does-regularization-prevent-overfitting&quot; class=&quot;headerlink&quot; title=&quot;51.1 How does regularization prevent overfitting?&quot;&gt;&lt;/a&gt;51.1 How does regularization prevent overfitting?&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/06/eK9HgiZJAS7MwGz.png&quot; alt=&quot;image-20240106230618834&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/06/vMUnYbDhmiwR85j.png&quot; alt=&quot;image-20240106231520169&quot;&gt;&lt;/p&gt;
+</summary>
     
     
     
@@ -203,13 +199,9 @@
     <updated>2024-05-26T05:15:33.716Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;50-正则化&quot;&gt;&lt;a href=&quot;#50-正则化&quot; class=&quot;headerlink&quot; title=&quot;50 正则化&quot;&gt;&lt;/a&gt;50 正则化&lt;/h1&gt;&lt;h2 id=&quot;logistic-regression&quot;&gt;&lt;a</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;50-正则化&quot;&gt;&lt;a href=&quot;#50-正则化&quot; class=&quot;headerlink&quot; title=&quot;50 正则化&quot;&gt;&lt;/a&gt;50 正则化&lt;/h1&gt;&lt;h2 id=&quot;logistic-regression&quot;&gt;&lt;a href=&quot;#logistic-regression&quot; class=&quot;headerlink&quot; title=&quot;logistic regression&quot;&gt;&lt;/a&gt;logistic regression&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/05/heCbfkAP8I1O2cp.png&quot; alt=&quot;image-20240105123556939&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Neural-network&quot;&gt;&lt;a href=&quot;#Neural-network&quot; class=&quot;headerlink&quot; title=&quot;Neural network&quot;&gt;&lt;/a&gt;Neural network&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/05/6K2UAiya5ILhCQn.png&quot; alt=&quot;image-20240105124653826&quot;&gt;&lt;/p&gt;
+</summary>
     
     
     
@@ -224,13 +216,8 @@
     <updated>2024-05-26T05:15:17.891Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;49-机器学习基础&quot;&gt;&lt;a href=&quot;#49-机器学习基础&quot; class=&quot;headerlink&quot; title=&quot;49 机器学习基础&quot;&gt;&lt;/a&gt;49 机器学习基础&lt;/h1&gt;&lt;h2</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;49-机器学习基础&quot;&gt;&lt;a href=&quot;#49-机器学习基础&quot; class=&quot;headerlink&quot; title=&quot;49 机器学习基础&quot;&gt;&lt;/a&gt;49 机器学习基础&lt;/h1&gt;&lt;h2 id=&quot;Basic-recipe-for-machine-learning&quot;&gt;&lt;a href=&quot;#Basic-recipe-for-machine-learning&quot; class=&quot;headerlink&quot; title=&quot;Basic recipe for machine learning&quot;&gt;&lt;/a&gt;Basic recipe for machine learning&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/05/Owq1IAr3ZspX2jn.png&quot; alt=&quot;image-20240105122804069&quot;&gt;&lt;/p&gt;
+</summary>
     
     
     
@@ -245,13 +232,10 @@
     <updated>2024-05-26T05:15:01.066Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;48-偏差和方差&quot;&gt;&lt;a href=&quot;#48-偏差和方差&quot; class=&quot;headerlink&quot; title=&quot;48 偏差和方差&quot;&gt;&lt;/a&gt;48 偏差和方差&lt;/h1&gt;&lt;h2 id=&quot;Bias-and-Variance&quot;&gt;&lt;a</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;48-偏差和方差&quot;&gt;&lt;a href=&quot;#48-偏差和方差&quot; class=&quot;headerlink&quot; title=&quot;48 偏差和方差&quot;&gt;&lt;/a&gt;48 偏差和方差&lt;/h1&gt;&lt;h2 id=&quot;Bias-and-Variance&quot;&gt;&lt;a href=&quot;#Bias-and-Variance&quot; class=&quot;headerlink&quot; title=&quot;Bias and Variance&quot;&gt;&lt;/a&gt;Bias and Variance&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/05/tXWsarKZ4qpvSdY.png&quot; alt=&quot;image-20240105121254636&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/05/3SJeIYPVkEojilH.png&quot; alt=&quot;image-20240105121719692&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;High-bias-and-high-variance&quot;&gt;&lt;a href=&quot;#High-bias-and-high-variance&quot; class=&quot;headerlink&quot; title=&quot;High bias and high variance&quot;&gt;&lt;/a&gt;High bias and high variance&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/05/WUb7IruKNq6Gg3Z.png&quot; alt=&quot;image-20240105122119324&quot;&gt;&lt;/p&gt;
+</summary>
     
     
     
@@ -266,13 +250,9 @@
     <updated>2024-05-26T05:13:33.916Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;41-搭建深层神经网络块&quot;&gt;&lt;a href=&quot;#41-搭建深层神经网络块&quot; class=&quot;headerlink&quot; title=&quot;41 搭建深层神经网络块&quot;&gt;&lt;/a&gt;41 搭建深层神经网络块&lt;/h1&gt;&lt;h2</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;41-搭建深层神经网络块&quot;&gt;&lt;a href=&quot;#41-搭建深层神经网络块&quot; class=&quot;headerlink&quot; title=&quot;41 搭建深层神经网络块&quot;&gt;&lt;/a&gt;41 搭建深层神经网络块&lt;/h1&gt;&lt;h2 id=&quot;41-1-Forward-and-backward-functions&quot;&gt;&lt;a href=&quot;#41-1-Forward-and-backward-functions&quot; class=&quot;headerlink&quot; title=&quot;41.1 Forward and backward functions&quot;&gt;&lt;/a&gt;41.1 Forward and backward functions&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/EQqSfZ79F8RPADt.png&quot; alt=&quot;image-20240102113354053&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/Gt9qfyEvS1BDwpz.png&quot; alt=&quot;image-20240102113716528&quot;&gt;&lt;/p&gt;
+</summary>
     
     
     
@@ -287,13 +267,8 @@
     <updated>2024-05-26T05:14:13.314Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;43-这和大脑有什么关系？&quot;&gt;&lt;a href=&quot;#43-这和大脑有什么关系？&quot; class=&quot;headerlink&quot; title=&quot;43 这和大脑有什么关系？&quot;&gt;&lt;/a&gt;43 这和大脑有什么关系？&lt;/h1&gt;&lt;h2</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;43-这和大脑有什么关系？&quot;&gt;&lt;a href=&quot;#43-这和大脑有什么关系？&quot; class=&quot;headerlink&quot; title=&quot;43 这和大脑有什么关系？&quot;&gt;&lt;/a&gt;43 这和大脑有什么关系？&lt;/h1&gt;&lt;h2 id=&quot;43-1-Forward-and-backward-propagation&quot;&gt;&lt;a href=&quot;#43-1-Forward-and-backward-propagation&quot; class=&quot;headerlink&quot; title=&quot;43.1 Forward and backward propagation&quot;&gt;&lt;/a&gt;43.1 Forward and backward propagation&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/XITyJkBZGtPgFK3.png&quot; alt=&quot;image-20240102114639554&quot;&gt;&lt;/p&gt;
+</summary>
     
     
     
@@ -308,13 +283,10 @@
     <updated>2024-05-26T05:14:39.852Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;47-训练-开发-测试集合&quot;&gt;&lt;a href=&quot;#47-训练-开发-测试集合&quot; class=&quot;headerlink&quot; title=&quot;47 训练 开发 测试集合&quot;&gt;&lt;/a&gt;47 训练 开发 测试集合&lt;/h1&gt;&lt;h2</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;47-训练-开发-测试集合&quot;&gt;&lt;a href=&quot;#47-训练-开发-测试集合&quot; class=&quot;headerlink&quot; title=&quot;47 训练 开发 测试集合&quot;&gt;&lt;/a&gt;47 训练 开发 测试集合&lt;/h1&gt;&lt;h2 id=&quot;47-1-Applied-ML-is-a-highly-iterative-process&quot;&gt;&lt;a href=&quot;#47-1-Applied-ML-is-a-highly-iterative-process&quot; class=&quot;headerlink&quot; title=&quot;47.1 Applied ML is a highly iterative process&quot;&gt;&lt;/a&gt;47.1 Applied ML is a highly iterative process&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/dCbINSOFyX1KPoA.png&quot; alt=&quot;image-20240102115159250&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;47-2-Train-dev-test-sets&quot;&gt;&lt;a href=&quot;#47-2-Train-dev-test-sets&quot; class=&quot;headerlink&quot; title=&quot;47.2 Train/dev/test sets&quot;&gt;&lt;/a&gt;47.2 Train/dev/test sets&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/nY6lAPGzEpc4mfF.png&quot; alt=&quot;image-20240102115531660&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Mismatched-train-test-distribution&quot;&gt;&lt;a href=&quot;#Mismatched-train-test-distribution&quot; class=&quot;headerlink&quot; title=&quot;Mismatched train/test distribution&quot;&gt;&lt;/a&gt;Mismatched train/test distribution&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/v1bpjqulMgBCP9N.png&quot; alt=&quot;image-20240102115859490&quot;&gt;&lt;/p&gt;
+</summary>
     
     
     
@@ -329,13 +301,9 @@
     <updated>2024-05-26T05:13:53.250Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;42-参数-vs-超参数&quot;&gt;&lt;a href=&quot;#42-参数-vs-超参数&quot; class=&quot;headerlink&quot; title=&quot;42 参数 vs 超参数&quot;&gt;&lt;/a&gt;42 参数 vs 超参数&lt;/h1&gt;&lt;h2</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;42-参数-vs-超参数&quot;&gt;&lt;a href=&quot;#42-参数-vs-超参数&quot; class=&quot;headerlink&quot; title=&quot;42 参数 vs 超参数&quot;&gt;&lt;/a&gt;42 参数 vs 超参数&lt;/h1&gt;&lt;h2 id=&quot;42-1-What-are-hyperparameters&quot;&gt;&lt;a href=&quot;#42-1-What-are-hyperparameters&quot; class=&quot;headerlink&quot; title=&quot;42.1 What are hyperparameters?&quot;&gt;&lt;/a&gt;42.1 What are hyperparameters?&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/oUZe4XYmG9KwdFj.png&quot; alt=&quot;image-20240102114031228&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;42-2-Applied-deep-learning-is-a-very-empirical-proecss&quot;&gt;&lt;a href=&quot;#42-2-Applied-deep-learning-is-a-very-empirical-proecss&quot; class=&quot;headerlink&quot; title=&quot;42.2 Applied deep learning is a very empirical proecss&quot;&gt;&lt;/a&gt;42.2 Applied deep learning is a very empirical proecss&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/xOzLhe1rVvoAwFt.png&quot; alt=&quot;image-20240102114347560&quot;&gt;&lt;/p&gt;
+</summary>
     
     
     
@@ -350,13 +318,23 @@
     <updated>2024-05-26T05:13:09.386Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;40-为什么要使用深层表示？&quot;&gt;&lt;a href=&quot;#40-为什么要使用深层表示？&quot; class=&quot;headerlink&quot; title=&quot;40 为什么要使用深层表示？&quot;&gt;&lt;/a&gt;40 为什么要使用深层表示？&lt;/h1&gt;&lt;h2</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;40-为什么要使用深层表示？&quot;&gt;&lt;a href=&quot;#40-为什么要使用深层表示？&quot; class=&quot;headerlink&quot; title=&quot;40 为什么要使用深层表示？&quot;&gt;&lt;/a&gt;40 为什么要使用深层表示？&lt;/h1&gt;&lt;h2 id=&quot;40-1-Intuition-about-deep-representation&quot;&gt;&lt;a href=&quot;#40-1-Intuition-about-deep-representation&quot; class=&quot;headerlink&quot; title=&quot;40.1 Intuition about deep representation&quot;&gt;&lt;/a&gt;40.1 Intuition about deep representation&lt;/h2&gt;&lt;p&gt;在人脸识别系统中&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一层：可以当作 feature detector 或者 edge detector&lt;/li&gt;
+&lt;li&gt;其他层：有的在找眼睛，有的在找鼻子&lt;/li&gt;
+&lt;li&gt;最后一层：综合各个层找到的结果，就可以做人脸识别&lt;/li&gt;
+&lt;li&gt;从左往右，层数逐渐加深的过程中，神经元可以探测到的区域是逐渐变大，或者逐渐具有现实意义的。例如：一开始探测只是像素边缘，而后可以探测到眼睛、鼻子、嘴巴，最后，就可以探测到整张人脸了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;上述使用的金字塔形状的深度网络，也可以用于探测其他类似于图像的数据，如 Audio&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;前几层就是得到比较低层次的音频波形的一些特征，比如音调的高低、分别白噪声等&lt;/li&gt;
+&lt;li&gt;把这些低层次的波形进行组合，就可以去探测声音的基本单元，叫做音位&lt;/li&gt;
+&lt;li&gt;有了音位就可以辨识出单词发音&lt;/li&gt;
+&lt;li&gt;有了单词发音，就可以得到词组，再得到句子&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/3vQHLkB82Dowq9p.png&quot; alt=&quot;image-20240102112015431&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Circuit-theory-and-deep-learning&quot;&gt;&lt;a href=&quot;#Circuit-theory-and-deep-learning&quot; class=&quot;headerlink&quot; title=&quot;Circuit theory and deep learning&quot;&gt;&lt;/a&gt;Circuit theory and deep learning&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/g3hAELJVKGqpO9o.png&quot; alt=&quot;image-20240102112324324&quot;&gt;&lt;/p&gt;
+</summary>
     
     
     
@@ -371,13 +349,14 @@
     <updated>2024-01-02T02:05:18.472Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Building-Recommender-System-with-GNN&quot;&gt;&lt;a href=&quot;#Building-Recommender-System-with-GNN&quot; class=&quot;headerlink&quot; title=&quot;Building</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;Building-Recommender-System-with-GNN&quot;&gt;&lt;a href=&quot;#Building-Recommender-System-with-GNN&quot; class=&quot;headerlink&quot; title=&quot;Building Recommender System with GNN&quot;&gt;&lt;/a&gt;Building Recommender System with GNN&lt;/h1&gt;&lt;h2 id=&quot;Part1-Intro-to-GNN&quot;&gt;&lt;a href=&quot;#Part1-Intro-to-GNN&quot; class=&quot;headerlink&quot; title=&quot;Part1: Intro to GNN&quot;&gt;&lt;/a&gt;Part1: Intro to GNN&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/YG6IJ2yqmKrHpgu.png&quot; alt=&quot;image-20240102093813068&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/NnDVusyUarfP7Bj.png&quot; alt=&quot;image-20240102093947364&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/OJyrtMAjZmuHKiG.png&quot; alt=&quot;image-20240102094029280&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/v29RWSGTwM3br1q.png&quot; alt=&quot;image-20240102094208182&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/MzbBhYHCsxwFUDA.png&quot; alt=&quot;image-20240102094318610&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/EbY5l7mG4j8uxTi.png&quot; alt=&quot;image-20240102094522141&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/KwkYmbyLXjla85H.png&quot; alt=&quot;image-20240102095433388&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/hyE5kwJuMlYoQ6d.png&quot; alt=&quot;image-20240102095715735&quot;&gt;&lt;/p&gt;</summary>
     
     
     
@@ -392,13 +371,15 @@
     <updated>2024-01-02T01:33:47.735Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Graph-Neural-Networks&quot;&gt;&lt;a href=&quot;#Graph-Neural-Networks&quot; class=&quot;headerlink&quot; title=&quot;Graph Neural Networks&quot;&gt;&lt;/a&gt;Graph Neural</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;Graph-Neural-Networks&quot;&gt;&lt;a href=&quot;#Graph-Neural-Networks&quot; class=&quot;headerlink&quot; title=&quot;Graph Neural Networks&quot;&gt;&lt;/a&gt;Graph Neural Networks&lt;/h1&gt;&lt;p&gt; &lt;img src=&quot;https://s2.loli.net/2024/01/02/X3PRzd8yeAVw2BQ.png&quot; alt=&quot;image-20240102091617093&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/ibrAWq4GKnaODmU.png&quot; alt=&quot;image-20240102091633581&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/vkSD7QTXYzIb2P3.png&quot; alt=&quot;image-20240102091655951&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/tsgATuv5YWf6dmE.png&quot; alt=&quot;image-20240102091704896&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/XaYg4cUEhQKxjfF.png&quot; alt=&quot;image-20240102092051111&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/DBOTAfVsoZpP3G7.png&quot; alt=&quot;image-20240102092139541&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/zPlAsZHKE2CBg8u.png&quot; alt=&quot;image-20240102092226107&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/yQKTcIiXPYRB6od.png&quot; alt=&quot;image-20240102092403353&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/02/8C2OMYbPq5BIm1r.png&quot; alt=&quot;image-20240102092446883&quot;&gt;&lt;/p&gt;</summary>
     
     
     
@@ -413,13 +394,14 @@
     <updated>2024-05-26T05:17:21.500Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;BERT-and-its-family&quot;&gt;&lt;a href=&quot;#BERT-and-its-family&quot; class=&quot;headerlink&quot; title=&quot;BERT and its family&quot;&gt;&lt;/a&gt;BERT and its</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;BERT-and-its-family&quot;&gt;&lt;a href=&quot;#BERT-and-its-family&quot; class=&quot;headerlink&quot; title=&quot;BERT and its family&quot;&gt;&lt;/a&gt;BERT and its family&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/KD5ztoah4AgLCnI.png&quot; alt=&quot;image-20240101151311412&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/GKmn7WsTyINrFMk.png&quot; alt=&quot;image-20240101151613828&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Pre-train-Model&quot;&gt;&lt;a href=&quot;#Pre-train-Model&quot; class=&quot;headerlink&quot; title=&quot;Pre-train Model&quot;&gt;&lt;/a&gt;Pre-train Model&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/4C5YGIkevqH3MDp.png&quot; alt=&quot;image-20240101151957204&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/dQR8v9iuGs7IZCL.png&quot; alt=&quot;image-20240101152133087&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/IyM1dVasxH6zrcT.png&quot; alt=&quot;image-20240101152335163&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/w7bXtS2YVMy54Np.png&quot; alt=&quot;image-20240101152512194&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/cRELKtklnXWgBHD.png&quot; alt=&quot;image-20240101152725539&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/erEx3JtOCYjyI9n.png&quot; alt=&quot;image-20240101152955469&quot;&gt;&lt;/p&gt;</summary>
     
     
     
@@ -434,13 +416,11 @@
     <updated>2024-05-26T05:17:54.993Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Transformer&quot;&gt;&lt;a href=&quot;#Transformer&quot; class=&quot;headerlink&quot; title=&quot;Transformer&quot;&gt;&lt;/a&gt;Transformer&lt;/h1&gt;&lt;h2</summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;Transformer&quot;&gt;&lt;a href=&quot;#Transformer&quot; class=&quot;headerlink&quot; title=&quot;Transformer&quot;&gt;&lt;/a&gt;Transformer&lt;/h1&gt;&lt;h2 id=&quot;Sequence-to-sequence-Seq2seq&quot;&gt;&lt;a href=&quot;#Sequence-to-sequence-Seq2seq&quot; class=&quot;headerlink&quot; title=&quot;Sequence-to-sequence (Seq2seq)&quot;&gt;&lt;/a&gt;Sequence-to-sequence (Seq2seq)&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/1uHMwf28IvBoxmD.png&quot; alt=&quot;image-20240101101103745&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Hokkien（闽南语、台语）&quot;&gt;&lt;a href=&quot;#Hokkien（闽南语、台语）&quot; class=&quot;headerlink&quot; title=&quot;Hokkien（闽南语、台语）&quot;&gt;&lt;/a&gt;Hokkien（闽南语、台语）&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/LpzdmFXs2Q678ZJ.png&quot; alt=&quot;image-20240101101234381&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Text-to-Speech-TTS-Synthesis&quot;&gt;&lt;a href=&quot;#Text-to-Speech-TTS-Synthesis&quot; class=&quot;headerlink&quot; title=&quot;Text to Speech (TTS) Synthesis&quot;&gt;&lt;/a&gt;Text to Speech (TTS) Synthesis&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/eXRbOBoYSwsPmqJ.png&quot; alt=&quot;image-20240101101640728&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Seq2Seq-for-Chatbot&quot;&gt;&lt;a href=&quot;#Seq2Seq-for-Chatbot&quot; class=&quot;headerlink&quot; title=&quot;Seq2Seq for Chatbot&quot;&gt;&lt;/a&gt;Seq2Seq for Chatbot&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/XYRoVr4JBDEdvze.png&quot; alt=&quot;image-20240101101827226&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Most-Natural-Language-Processing-appliactions…&quot;&gt;&lt;a href=&quot;#Most-Natural-Language-Processing-appliactions…&quot; class=&quot;headerlink&quot; title=&quot;Most Natural Language Processing appliactions…&quot;&gt;&lt;/a&gt;Most Natural Language Processing appliactions…&lt;/h2&gt;</summary>
     
     
     
