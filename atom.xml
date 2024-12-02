@@ -3,11 +3,11 @@
   <title>院龙</title>
   
   
-  <link href="http://humble2967738843.github.io/atom.xml" rel="self"/>
+  <link href="http://yuanllong.github.io/atom.xml" rel="self"/>
   
-  <link href="http://humble2967738843.github.io/"/>
+  <link href="http://yuanllong.github.io/"/>
   <updated>2024-11-30T09:32:41.332Z</updated>
-  <id>http://humble2967738843.github.io/</id>
+  <id>http://yuanllong.github.io/</id>
   
   <author>
     <name>院龙</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>GBDT</title>
-    <link href="http://humble2967738843.github.io/2024/11/30/gbdt/"/>
-    <id>http://humble2967738843.github.io/2024/11/30/gbdt/</id>
+    <link href="http://yuanllong.github.io/2024/11/30/gbdt/"/>
+    <id>http://yuanllong.github.io/2024/11/30/gbdt/</id>
     <published>2024-11-30T07:45:56.000Z</published>
     <updated>2024-11-30T09:32:41.332Z</updated>
     
@@ -46,8 +46,8 @@
   
   <entry>
     <title>基于链式推理的文档级事件论元提取</title>
-    <link href="http://humble2967738843.github.io/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/"/>
-    <id>http://humble2967738843.github.io/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/</id>
+    <link href="http://yuanllong.github.io/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/"/>
+    <id>http://yuanllong.github.io/2024/05/06/ji-yu-lian-shi-tui-li-de-wen-dang-ji-shi-jian-lun-yuan-ti-qu/</id>
     <published>2024-05-06T04:21:08.000Z</published>
     <updated>2024-05-26T11:14:12.534Z</updated>
     
@@ -65,17 +65,17 @@
     
     
     
-    <category term="事件参数抽取" scheme="http://humble2967738843.github.io/categories/%E4%BA%8B%E4%BB%B6%E5%8F%82%E6%95%B0%E6%8A%BD%E5%8F%96/"/>
+    <category term="事件参数抽取" scheme="http://yuanllong.github.io/categories/%E4%BA%8B%E4%BB%B6%E5%8F%82%E6%95%B0%E6%8A%BD%E5%8F%96/"/>
     
     
-    <category term="ACL2023" scheme="http://humble2967738843.github.io/tags/ACL2023/"/>
+    <category term="ACL2023" scheme="http://yuanllong.github.io/tags/ACL2023/"/>
     
   </entry>
   
   <entry>
     <title>推荐系统</title>
-    <link href="http://humble2967738843.github.io/2024/04/10/tui-jian-xi-tong/"/>
-    <id>http://humble2967738843.github.io/2024/04/10/tui-jian-xi-tong/</id>
+    <link href="http://yuanllong.github.io/2024/04/10/tui-jian-xi-tong/"/>
+    <id>http://yuanllong.github.io/2024/04/10/tui-jian-xi-tong/</id>
     <published>2024-04-10T04:09:32.000Z</published>
     <updated>2024-06-26T23:34:34.658Z</updated>
     
@@ -94,19 +94,19 @@
     
     
     
-    <category term="搜广推" scheme="http://humble2967738843.github.io/categories/%E6%90%9C%E5%B9%BF%E6%8E%A8/"/>
+    <category term="搜广推" scheme="http://yuanllong.github.io/categories/%E6%90%9C%E5%B9%BF%E6%8E%A8/"/>
     
     
-    <category term="DeepFM" scheme="http://humble2967738843.github.io/tags/DeepFM/"/>
+    <category term="DeepFM" scheme="http://yuanllong.github.io/tags/DeepFM/"/>
     
-    <category term="FFM" scheme="http://humble2967738843.github.io/tags/FFM/"/>
+    <category term="FFM" scheme="http://yuanllong.github.io/tags/FFM/"/>
     
   </entry>
   
   <entry>
     <title></title>
-    <link href="http://humble2967738843.github.io/2024/03/23/tong-ji-xue-xi-fang-fa/"/>
-    <id>http://humble2967738843.github.io/2024/03/23/tong-ji-xue-xi-fang-fa/</id>
+    <link href="http://yuanllong.github.io/2024/03/23/tong-ji-xue-xi-fang-fa/"/>
+    <id>http://yuanllong.github.io/2024/03/23/tong-ji-xue-xi-fang-fa/</id>
     <published>2024-03-23T04:07:25.317Z</published>
     <updated>2024-03-23T04:15:56.744Z</updated>
     
@@ -123,8 +123,8 @@
   
   <entry>
     <title>53理解Dropout</title>
-    <link href="http://humble2967738843.github.io/2024/01/16/53-li-jie-dropout/"/>
-    <id>http://humble2967738843.github.io/2024/01/16/53-li-jie-dropout/</id>
+    <link href="http://yuanllong.github.io/2024/01/16/53-li-jie-dropout/"/>
+    <id>http://yuanllong.github.io/2024/01/16/53-li-jie-dropout/</id>
     <published>2024-01-16T03:26:08.783Z</published>
     <updated>2024-05-26T05:16:44.306Z</updated>
     
@@ -139,8 +139,8 @@
   
   <entry>
     <title>西瓜书</title>
-    <link href="http://humble2967738843.github.io/2024/01/15/xi-gua-shu/"/>
-    <id>http://humble2967738843.github.io/2024/01/15/xi-gua-shu/</id>
+    <link href="http://yuanllong.github.io/2024/01/15/xi-gua-shu/"/>
+    <id>http://yuanllong.github.io/2024/01/15/xi-gua-shu/</id>
     <published>2024-01-15T14:04:27.751Z</published>
     <updated>2024-05-26T05:18:39.610Z</updated>
     
@@ -158,8 +158,8 @@
   
   <entry>
     <title>52Dropout正则化</title>
-    <link href="http://humble2967738843.github.io/2024/01/13/52-dropout-zheng-ze-hua/"/>
-    <id>http://humble2967738843.github.io/2024/01/13/52-dropout-zheng-ze-hua/</id>
+    <link href="http://yuanllong.github.io/2024/01/13/52-dropout-zheng-ze-hua/"/>
+    <id>http://yuanllong.github.io/2024/01/13/52-dropout-zheng-ze-hua/</id>
     <published>2024-01-13T13:09:22.411Z</published>
     <updated>2024-05-26T05:16:18.738Z</updated>
     
@@ -176,8 +176,8 @@
   
   <entry>
     <title>为什么正则化可以减少过拟合？</title>
-    <link href="http://humble2967738843.github.io/2024/01/06/51-wei-shi-me-zheng-ze-hua-ke-yi-jian-shao-guo-ni-he/"/>
-    <id>http://humble2967738843.github.io/2024/01/06/51-wei-shi-me-zheng-ze-hua-ke-yi-jian-shao-guo-ni-he/</id>
+    <link href="http://yuanllong.github.io/2024/01/06/51-wei-shi-me-zheng-ze-hua-ke-yi-jian-shao-guo-ni-he/"/>
+    <id>http://yuanllong.github.io/2024/01/06/51-wei-shi-me-zheng-ze-hua-ke-yi-jian-shao-guo-ni-he/</id>
     <published>2024-01-06T15:03:06.290Z</published>
     <updated>2024-05-26T05:15:57.951Z</updated>
     
@@ -193,8 +193,8 @@
   
   <entry>
     <title>50正则化</title>
-    <link href="http://humble2967738843.github.io/2024/01/05/50-zheng-ze-hua/"/>
-    <id>http://humble2967738843.github.io/2024/01/05/50-zheng-ze-hua/</id>
+    <link href="http://yuanllong.github.io/2024/01/05/50-zheng-ze-hua/"/>
+    <id>http://yuanllong.github.io/2024/01/05/50-zheng-ze-hua/</id>
     <published>2024-01-05T04:43:38.182Z</published>
     <updated>2024-05-26T05:15:33.716Z</updated>
     
@@ -210,8 +210,8 @@
   
   <entry>
     <title>49机器学习基础</title>
-    <link href="http://humble2967738843.github.io/2024/01/05/49-ji-qi-xue-xi-ji-chu/"/>
-    <id>http://humble2967738843.github.io/2024/01/05/49-ji-qi-xue-xi-ji-chu/</id>
+    <link href="http://yuanllong.github.io/2024/01/05/49-ji-qi-xue-xi-ji-chu/"/>
+    <id>http://yuanllong.github.io/2024/01/05/49-ji-qi-xue-xi-ji-chu/</id>
     <published>2024-01-05T04:29:26.333Z</published>
     <updated>2024-05-26T05:15:17.891Z</updated>
     
@@ -226,8 +226,8 @@
   
   <entry>
     <title>48偏差和方差</title>
-    <link href="http://humble2967738843.github.io/2024/01/05/48-pian-chai-he-fang-chai/"/>
-    <id>http://humble2967738843.github.io/2024/01/05/48-pian-chai-he-fang-chai/</id>
+    <link href="http://yuanllong.github.io/2024/01/05/48-pian-chai-he-fang-chai/"/>
+    <id>http://yuanllong.github.io/2024/01/05/48-pian-chai-he-fang-chai/</id>
     <published>2024-01-05T04:08:24.728Z</published>
     <updated>2024-05-26T05:15:01.066Z</updated>
     
@@ -244,8 +244,8 @@
   
   <entry>
     <title>41搭建深层神经网络块</title>
-    <link href="http://humble2967738843.github.io/2024/01/02/41-da-jian-shen-ceng-shen-jing-wang-luo-kuai/"/>
-    <id>http://humble2967738843.github.io/2024/01/02/41-da-jian-shen-ceng-shen-jing-wang-luo-kuai/</id>
+    <link href="http://yuanllong.github.io/2024/01/02/41-da-jian-shen-ceng-shen-jing-wang-luo-kuai/"/>
+    <id>http://yuanllong.github.io/2024/01/02/41-da-jian-shen-ceng-shen-jing-wang-luo-kuai/</id>
     <published>2024-01-02T08:30:06.377Z</published>
     <updated>2024-05-26T05:13:33.916Z</updated>
     
@@ -261,8 +261,8 @@
   
   <entry>
     <title>43这和大脑有什么关系？</title>
-    <link href="http://humble2967738843.github.io/2024/01/02/43-zhe-he-da-nao-you-shi-me-guan-xi/"/>
-    <id>http://humble2967738843.github.io/2024/01/02/43-zhe-he-da-nao-you-shi-me-guan-xi/</id>
+    <link href="http://yuanllong.github.io/2024/01/02/43-zhe-he-da-nao-you-shi-me-guan-xi/"/>
+    <id>http://yuanllong.github.io/2024/01/02/43-zhe-he-da-nao-you-shi-me-guan-xi/</id>
     <published>2024-01-02T08:29:55.800Z</published>
     <updated>2024-05-26T05:14:13.314Z</updated>
     
@@ -277,8 +277,8 @@
   
   <entry>
     <title>47训练 开发 测试集合</title>
-    <link href="http://humble2967738843.github.io/2024/01/02/47-xun-lian-kai-fa-ce-shi-ji-he/"/>
-    <id>http://humble2967738843.github.io/2024/01/02/47-xun-lian-kai-fa-ce-shi-ji-he/</id>
+    <link href="http://yuanllong.github.io/2024/01/02/47-xun-lian-kai-fa-ce-shi-ji-he/"/>
+    <id>http://yuanllong.github.io/2024/01/02/47-xun-lian-kai-fa-ce-shi-ji-he/</id>
     <published>2024-01-02T03:48:42.171Z</published>
     <updated>2024-05-26T05:14:39.852Z</updated>
     
@@ -295,8 +295,8 @@
   
   <entry>
     <title>42参数vs超参数</title>
-    <link href="http://humble2967738843.github.io/2024/01/02/42-can-shu-vs-chao-can-shu/"/>
-    <id>http://humble2967738843.github.io/2024/01/02/42-can-shu-vs-chao-can-shu/</id>
+    <link href="http://yuanllong.github.io/2024/01/02/42-can-shu-vs-chao-can-shu/"/>
+    <id>http://yuanllong.github.io/2024/01/02/42-can-shu-vs-chao-can-shu/</id>
     <published>2024-01-02T03:37:50.867Z</published>
     <updated>2024-05-26T05:13:53.250Z</updated>
     
@@ -312,8 +312,8 @@
   
   <entry>
     <title>40为什么要用深层表示？</title>
-    <link href="http://humble2967738843.github.io/2024/01/02/40-wei-shi-me-yao-shi-yong-shen-ceng-biao-shi/"/>
-    <id>http://humble2967738843.github.io/2024/01/02/40-wei-shi-me-yao-shi-yong-shen-ceng-biao-shi/</id>
+    <link href="http://yuanllong.github.io/2024/01/02/40-wei-shi-me-yao-shi-yong-shen-ceng-biao-shi/"/>
+    <id>http://yuanllong.github.io/2024/01/02/40-wei-shi-me-yao-shi-yong-shen-ceng-biao-shi/</id>
     <published>2024-01-02T03:07:29.161Z</published>
     <updated>2024-05-26T05:13:09.386Z</updated>
     
@@ -343,8 +343,8 @@
   
   <entry>
     <title></title>
-    <link href="http://humble2967738843.github.io/2024/01/02/building-recommender-system-with-gnn/"/>
-    <id>http://humble2967738843.github.io/2024/01/02/building-recommender-system-with-gnn/</id>
+    <link href="http://yuanllong.github.io/2024/01/02/building-recommender-system-with-gnn/"/>
+    <id>http://yuanllong.github.io/2024/01/02/building-recommender-system-with-gnn/</id>
     <published>2024-01-02T01:36:10.054Z</published>
     <updated>2024-01-02T02:05:18.472Z</updated>
     
@@ -365,8 +365,8 @@
   
   <entry>
     <title></title>
-    <link href="http://humble2967738843.github.io/2024/01/02/graph-neural-networks/"/>
-    <id>http://humble2967738843.github.io/2024/01/02/graph-neural-networks/</id>
+    <link href="http://yuanllong.github.io/2024/01/02/graph-neural-networks/"/>
+    <id>http://yuanllong.github.io/2024/01/02/graph-neural-networks/</id>
     <published>2024-01-02T01:10:20.540Z</published>
     <updated>2024-01-02T01:33:47.735Z</updated>
     
@@ -388,8 +388,8 @@
   
   <entry>
     <title>BERT and its family</title>
-    <link href="http://humble2967738843.github.io/2024/01/01/bert-and-its-family/"/>
-    <id>http://humble2967738843.github.io/2024/01/01/bert-and-its-family/</id>
+    <link href="http://yuanllong.github.io/2024/01/01/bert-and-its-family/"/>
+    <id>http://yuanllong.github.io/2024/01/01/bert-and-its-family/</id>
     <published>2024-01-01T07:10:51.204Z</published>
     <updated>2024-05-26T05:17:21.500Z</updated>
     
@@ -410,8 +410,8 @@
   
   <entry>
     <title>Transformer</title>
-    <link href="http://humble2967738843.github.io/2024/01/01/transformer/"/>
-    <id>http://humble2967738843.github.io/2024/01/01/transformer/</id>
+    <link href="http://yuanllong.github.io/2024/01/01/transformer/"/>
+    <id>http://yuanllong.github.io/2024/01/01/transformer/</id>
     <published>2024-01-01T02:05:14.455Z</published>
     <updated>2024-05-26T05:17:54.993Z</updated>
     
