@@ -17,13 +17,13 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yuanllong.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"humble2967738843.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="第一章 基础算法 暴力的调整区间的方法：  双指针调整区间的方法：  1.1快速排序123456789101112void quick_sort(int q[], int l, int r)&#123;    &#x2F;&#x2F; 没有数或者只有一个数    if (l &gt;&#x3D; r) return;        int i &#x3D; l - 1, j &#x3D; r + 1, x &#x3D; q[l + r &gt;&gt;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法笔记V2.0">
-<meta property="og:url" content="http://yuanllong.github.io/2023/11/02/suan-fa-bi-ji-v2.0/index.html">
+<meta property="og:url" content="http://humble2967738843.github.io/2023/11/02/suan-fa-bi-ji-v2.0/index.html">
 <meta property="og:site_name" content="院龙">
 <meta property="og:description" content="第一章 基础算法 暴力的调整区间的方法：  双指针调整区间的方法：  1.1快速排序123456789101112void quick_sort(int q[], int l, int r)&#123;    &#x2F;&#x2F; 没有数或者只有一个数    if (l &gt;&#x3D; r) return;        int i &#x3D; l - 1, j &#x3D; r + 1, x &#x3D; q[l + r &gt;&gt;">
 <meta property="og:locale" content="zh_CN">
@@ -35,20 +35,20 @@
 <meta property="og:image" content="https://s2.loli.net/2023/12/24/5CBy8zDxdOSK9Zq.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/24/jYi9DukFEtUosmL.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/24/jE5ZyP9dQU6wHaT.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230711102910501.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230711103015554.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230711160430739.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230711160520755.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230711102910501.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230711103015554.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230711160430739.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230711160520755.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/25/Slu1CTdqakXewOr.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/25/cs4upBjgyWqtvGf.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/25/y6np1FwuS4ofmD3.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/25/YUfcmJjDHdw9lIo.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230711170214118.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230711170227595.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230711170214118.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230711170227595.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/25/Xqv7hI5Tt3GeQlE.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230712104957623.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230712104957623.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/25/ibGeP47zaJ2vZ9k.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230712153738206.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230712153738206.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/25/GuVv3DkgJqSWXFI.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/25/hVJPvBWGdqfHIyx.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/25/L6VWFKNHtCXlgA2.png">
@@ -56,23 +56,23 @@
 <meta property="og:image" content="https://s2.loli.net/2023/12/26/yRdSstYFLVkjUAJ.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/26/6lF3z2JLQG1VuTO.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/26/zHrnqDtXyoBl4O5.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230712160615068.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230712160615068.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/26/HxkoEiSbZJznvl6.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230712172137055.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230712172113638.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230712172215273.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230712172137055.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230712172113638.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230712172215273.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/26/XhWbDKSur85Efov.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/26/v6jUzVlq5N3KHEb.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230712223354863.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713133117553.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713133758783.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230712223354863.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713133117553.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713133758783.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/26/VEyI3AhRK8TQ1XF.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713134718087.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713134718087.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/26/d1PEAGCByc5bwUu.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/26/kCeqSmAEwOfJcFI.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713215615857.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713215659352.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713220534251.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713215615857.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713215659352.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713220534251.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/27/fuhL2kcPXBlO1yD.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/27/ByUuJ8RNmqZswxn.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/27/RqWpKVkmbdC3UOr.png">
@@ -84,60 +84,60 @@
 <meta property="og:image" content="https://s2.loli.net/2023/12/27/DyAQMpLVflwgJT7.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/27/JRsePVpl6yIWzG3.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/27/XTWbgFluheDPa7V.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713210104059.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713212936702.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713211916396.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713211940060.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713213921010.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713212306990.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713210104059.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713212936702.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713211916396.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713211940060.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713213921010.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230713212306990.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/28/9mCDVl7hq3xP8Mk.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/28/Bgaf91NZ4iRJ8W5.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/28/tb3yzuXeN5pDx7O.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/28/ZdJaMm7Ts3pNAHk.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714084320881.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714084933741.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714090044519.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714091922464.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714092003479.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714092054831.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714092300179.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714094157178.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714094339219.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714094546069.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714094848386.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714094945525.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714084320881.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714084933741.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714090044519.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714091922464.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714092003479.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714092054831.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714092300179.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714094157178.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714094339219.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714094546069.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714094848386.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714094945525.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/01/GFXU6LkgQfHtnCu.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/01/8UKsNc5DifXuYrq.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/01/YrUSNMXJ21c6hgv.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714104642384.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714104642384.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/01/mTrS28jNdQyEfsP.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230626105508292.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230626110204816.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230626111023572.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230626131038212.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230626105508292.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230626110204816.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230626111023572.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230626131038212.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/04/Lr6zYbQi2k8HpTy.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230626154857952.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714153036633.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230626160720800.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230626154857952.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714153036633.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230626160720800.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/04/D7mN8lacdpiMLvE.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/04/IACULZn1vr7tGz3.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/04/fXvPuMrCjFAYcJW.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/04/WrxzNI5T4DgV9ds.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/04/idJCjb42RmxBYwQ.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230715102401605.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230715102401605.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/04/AQZSaI9FMjprh4c.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/04/d5pYDg1B8xMLfsF.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230715104035145.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230715104553501.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230715105506817.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714155642200.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230715104035145.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230715104553501.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230715105506817.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714155642200.png">
 <meta property="og:image" content="c:\Users\YL.YL.000\AppData\Roaming\Typora\typora-user-images\image-20230714161445674.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714160130664.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714160506300.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714160551385.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714160903965.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714161031308.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714161346146.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714160130664.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714160506300.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714160551385.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714160903965.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714161031308.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230714161346146.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/04/cDP1zKFMinHwEJb.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/04/nV2EfLoa687weXS.png">
 <meta property="og:image" content="https://s2.loli.net/2024/01/04/nNhPOsABt1Um3ew.png">
@@ -186,14 +186,14 @@
 <meta property="og:image" content="https://s2.loli.net/2024/01/12/G5fxB1H6ulQeJNS.png">
 <meta property="og:image" content="c:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240113221611310.png">
 <meta property="og:image" content="c:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240113222051774.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230918210019940.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230918210038825.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231003120818866.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230918210019940.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20230918210038825.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231003120818866.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/10/9AZQIELd8oqOGbe.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/10/Et3BuRXnIVOciYU.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/12/KWumE3USv9bMyhB.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/12/MqbVJyvcd5i8gs4.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231007121158409.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231007121158409.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/13/nt8DG2B9uegZRNc.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/13/OblJZiSdGvYmUkL.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/13/B4fnAIFaTWKGriU.png">
@@ -209,10 +209,10 @@
 <meta property="og:image" content="https://s2.loli.net/2023/12/15/J2FiZVYktwhcry7.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/15/VswZT1aJEotRcP6.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/15/MJTpxKlDRVgX3EW.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231016165351420.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231016170430801.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231016172631457.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231018115145544.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231016165351420.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231016170430801.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231016172631457.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231018115145544.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/18/P1CarcSTqVt4fyU.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/18/vhNCmEW9P6RqlGM.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/18/4e3EpcdJAb9Xkxn.png">
@@ -221,13 +221,13 @@
 <meta property="og:image" content="https://s2.loli.net/2023/12/21/tvY7rhTNfm4UJEn.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/21/iTWDGcEznd1SIoa.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/21/Ete8ShpDsIuFv3a.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231029174803221.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231029180528078.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231030115604158.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231030123419546.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231030125523748.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231104124714764-1699073237598-1.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231105121019454-1699157421627-1.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231029174803221.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231029180528078.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231030115604158.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231030123419546.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231030125523748.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231104124714764-1699073237598-1.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/image-20231105121019454-1699157421627-1.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/21/h37ND9uPTzGfLBS.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/22/Q8SGlsAUeMHhiwD.png">
 <meta property="og:image" content="https://s2.loli.net/2023/12/22/cyBdmFXvQCYGqaz.png">
@@ -249,7 +249,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s2.loli.net/2023/12/23/PiVYAZGmlvQJLWq.png">
 
-<link rel="canonical" href="http://yuanllong.github.io/2023/11/02/suan-fa-bi-ji-v2.0/">
+<link rel="canonical" href="http://humble2967738843.github.io/2023/11/02/suan-fa-bi-ji-v2.0/">
 
 
 <script id="page-configurations">
@@ -412,7 +412,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yuanllong.github.io/2023/11/02/suan-fa-bi-ji-v2.0/">
+    <link itemprop="mainEntityOfPage" href="http://humble2967738843.github.io/2023/11/02/suan-fa-bi-ji-v2.0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -939,13 +939,10 @@ N = p_1^{c_1} \times p_2^{c_2} \times \cdots \times p_k^{c_k}</script><h4 id="4-
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2023/11/02/bian-ji-da-xing-yu-yan-mo-xing-wen-ti-fang-fa-he-ji-yu/" rel="prev" title="编辑大型语言模型：问题、方法和机遇">
-      <i class="fa fa-chevron-left"></i> 编辑大型语言模型：问题、方法和机遇
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2023/11/02/zhi-shi-shen-jing-yuan-zhong-xin-zhi-lu-yu-yan-wu-guan-zhi-shi-shen-jing-yuan-he-jian-bing-zhi-shi-shen-jing-yuan-de-fa-xian/" rel="next" title="知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现">
-      知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现 <i class="fa fa-chevron-right"></i>
+    <a href="/2023/11/02/bian-ji-da-xing-yu-yan-mo-xing-wen-ti-fang-fa-he-ji-yu/" rel="next" title="编辑大型语言模型：问题、方法和机遇">
+      编辑大型语言模型：问题、方法和机遇 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>

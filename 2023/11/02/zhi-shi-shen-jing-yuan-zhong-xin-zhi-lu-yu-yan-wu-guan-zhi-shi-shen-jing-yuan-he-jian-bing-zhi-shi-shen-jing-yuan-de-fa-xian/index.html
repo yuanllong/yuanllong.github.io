@@ -17,37 +17,37 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yuanllong.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"humble2967738843.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现Abstruct预训练语言模型 (PLM) 包含大量事实知识，但这些知识如何存储在参数中仍不清楚。本文深入研究了理解事实知识如何存储在多语言 PLM 中的复杂任务，并介绍了适应架构的多语言集成梯度方法，与现有方法相比，该方法成功地更精确地定位了知识神经元，并且在各种架构和语言中更加通用。此外，我们对知识神经元进行了深入的探索，得到了以下两">
 <meta property="og:type" content="article">
 <meta property="og:title" content="知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现">
-<meta property="og:url" content="http://yuanllong.github.io/2023/11/02/zhi-shi-shen-jing-yuan-zhong-xin-zhi-lu-yu-yan-wu-guan-zhi-shi-shen-jing-yuan-he-jian-bing-zhi-shi-shen-jing-yuan-de-fa-xian/index.html">
+<meta property="og:url" content="http://humble2967738843.github.io/2023/11/02/zhi-shi-shen-jing-yuan-zhong-xin-zhi-lu-yu-yan-wu-guan-zhi-shi-shen-jing-yuan-he-jian-bing-zhi-shi-shen-jing-yuan-de-fa-xian/index.html">
 <meta property="og:site_name" content="院龙">
 <meta property="og:description" content="知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现Abstruct预训练语言模型 (PLM) 包含大量事实知识，但这些知识如何存储在参数中仍不清楚。本文深入研究了理解事实知识如何存储在多语言 PLM 中的复杂任务，并介绍了适应架构的多语言集成梯度方法，与现有方法相比，该方法成功地更精确地定位了知识神经元，并且在各种架构和语言中更加通用。此外，我们对知识神经元进行了深入的探索，得到了以下两">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/35MAP8RY.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/MXWX28JU.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/WXFG2TDF.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/9PTK8AY8.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/YTVPUQLA.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/J2V52PJA.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/TJE9KG2X.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/P9A52SBQ.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/363QLBKW.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/IECZZKEA.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/SUFF78G3.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/GVDGBVQB.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/KX4LAIXX.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/35MAP8RY.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/MXWX28JU.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/WXFG2TDF.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/9PTK8AY8.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/YTVPUQLA.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/J2V52PJA.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/TJE9KG2X.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/P9A52SBQ.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/363QLBKW.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/IECZZKEA.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/SUFF78G3.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/GVDGBVQB.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/KX4LAIXX.png">
 <meta property="article:published_time" content="2023-11-02T04:21:08.000Z">
 <meta property="article:modified_time" content="2024-05-26T09:36:08.654Z">
 <meta property="article:author" content="院龙">
 <meta property="article:tag" content="EMNLP2023">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/35MAP8RY.png">
+<meta name="twitter:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/35MAP8RY.png">
 
-<link rel="canonical" href="http://yuanllong.github.io/2023/11/02/zhi-shi-shen-jing-yuan-zhong-xin-zhi-lu-yu-yan-wu-guan-zhi-shi-shen-jing-yuan-he-jian-bing-zhi-shi-shen-jing-yuan-de-fa-xian/">
+<link rel="canonical" href="http://humble2967738843.github.io/2023/11/02/zhi-shi-shen-jing-yuan-zhong-xin-zhi-lu-yu-yan-wu-guan-zhi-shi-shen-jing-yuan-he-jian-bing-zhi-shi-shen-jing-yuan-de-fa-xian/">
 
 
 <script id="page-configurations">
@@ -210,7 +210,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yuanllong.github.io/2023/11/02/zhi-shi-shen-jing-yuan-zhong-xin-zhi-lu-yu-yan-wu-guan-zhi-shi-shen-jing-yuan-he-jian-bing-zhi-shi-shen-jing-yuan-de-fa-xian/">
+    <link itemprop="mainEntityOfPage" href="http://humble2967738843.github.io/2023/11/02/zhi-shi-shen-jing-yuan-zhong-xin-zhi-lu-yu-yan-wu-guan-zhi-shi-shen-jing-yuan-he-jian-bing-zhi-shi-shen-jing-yuan-de-fa-xian/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -378,8 +378,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/11/02/suan-fa-bi-ji-v2.0/" rel="prev" title="算法笔记V2.0">
-      <i class="fa fa-chevron-left"></i> 算法笔记V2.0
+    <a href="/2023/11/02/bian-ji-da-xing-yu-yan-mo-xing-wen-ti-fang-fa-he-ji-yu/" rel="prev" title="编辑大型语言模型：问题、方法和机遇">
+      <i class="fa fa-chevron-left"></i> 编辑大型语言模型：问题、方法和机遇
     </a></div>
       <div class="post-nav-item">
     <a href="/2023/11/02/wo-men-ke-yi-tong-guo-qing-jing-xue-xi-lai-bian-ji-shi-shi-zhi-shi-ma/" rel="next" title="我们可以通过情景学习来编辑事实知识吗？">

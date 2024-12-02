@@ -17,28 +17,28 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yuanllong.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"humble2967738843.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="多语言模型中事实知识的跨语言一致性Abstract多语言大规模预训练语言模型（PLM）已被证明可以存储大量的事实知识，但观察到语言之间存在很大差异。为了确保具有不同语言背景的用户从同一模型获得一致的反馈，我们研究了各种多语言PLM中事实知识的跨语言一致性（CLC）。为此，我们提出了一个基于排名的一致性（RankC）指标，以独立于准确性来评估跨语言的知识一致性。使用这个指标，我们在模型级别和语言对级">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多语言模型中事实知识的跨语言一致性">
-<meta property="og:url" content="http://yuanllong.github.io/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/index.html">
+<meta property="og:url" content="http://humble2967738843.github.io/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/index.html">
 <meta property="og:site_name" content="院龙">
 <meta property="og:description" content="多语言模型中事实知识的跨语言一致性Abstract多语言大规模预训练语言模型（PLM）已被证明可以存储大量的事实知识，但观察到语言之间存在很大差异。为了确保具有不同语言背景的用户从同一模型获得一致的反馈，我们研究了各种多语言PLM中事实知识的跨语言一致性（CLC）。为此，我们提出了一个基于排名的一致性（RankC）指标，以独立于准确性来评估跨语言的知识一致性。使用这个指标，我们在模型级别和语言对级">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s2.loli.net/2024/05/26/yIq1rwA2Hf7F6Db.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/JTY72Y4D-1698899470325-23.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/UTGQ3CDQ-1698899466973-21.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/CKJAUHAN-1698899465379-19.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/4BUNNT2A-1698899462448-17.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/9E3DW5HT-1698899458937-15.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/SGCTJSZD-1698899456427-13.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/ML4DE4BX-1698899454568-11.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/UNBA9DMX-1698899452209-9.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/9DVJYQ7U.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/7UYEHQJN.png">
-<meta property="og:image" content="http://yuanllong.github.io/2023/11/02/imgs/$%7Bfiilename%7D/JTSVCJAA.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/JTY72Y4D-1698899470325-23.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/UTGQ3CDQ-1698899466973-21.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/CKJAUHAN-1698899465379-19.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/4BUNNT2A-1698899462448-17.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/9E3DW5HT-1698899458937-15.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/SGCTJSZD-1698899456427-13.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/ML4DE4BX-1698899454568-11.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/UNBA9DMX-1698899452209-9.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/9DVJYQ7U.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/7UYEHQJN.png">
+<meta property="og:image" content="http://humble2967738843.github.io/2023/11/02/imgs/$%7Bfiilename%7D/JTSVCJAA.png">
 <meta property="article:published_time" content="2023-11-02T04:21:08.000Z">
 <meta property="article:modified_time" content="2024-05-26T11:53:03.927Z">
 <meta property="article:author" content="院龙">
@@ -46,7 +46,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s2.loli.net/2024/05/26/yIq1rwA2Hf7F6Db.png">
 
-<link rel="canonical" href="http://yuanllong.github.io/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/">
+<link rel="canonical" href="http://humble2967738843.github.io/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/">
 
 
 <script id="page-configurations">
@@ -209,7 +209,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yuanllong.github.io/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/">
+    <link itemprop="mainEntityOfPage" href="http://humble2967738843.github.io/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
