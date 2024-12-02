@@ -127,6 +127,70 @@
 ]]></content>
   </entry>
   <entry>
+    <title>06矩阵计算</title>
+    <url>/2023/12/10/06-ju-zhen-ji-suan/</url>
+    <content><![CDATA[<h1 id="06矩阵计算"><a href="#06矩阵计算" class="headerlink" title="06矩阵计算"></a>06矩阵计算</h1><h2 id="6-1矩阵计算"><a href="#6-1矩阵计算" class="headerlink" title="6.1矩阵计算"></a>6.1矩阵计算</h2><ul>
+<li>标量导数</li>
+</ul>
+<p><img src="https://s2.loli.net/2023/12/10/SgVNKrhO89EGjRv.png" alt="标量导数"></p>
+<ul>
+<li>导数是切线的斜率</li>
+</ul>
+<p><img src="https://s2.loli.net/2023/12/10/ISj9R3t1UWzdAnx.png" alt="导数是切线的斜率"></p>
+<ul>
+<li>亚导数<ul>
+<li>将导数拓展到不可微的函数</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://s2.loli.net/2023/12/10/DExw4IelAZaztUG.png" alt="image-20231210212635618"></p>
+<p><img src="https://s2.loli.net/2023/12/10/2kdaW31bwzUpe4i.png" alt="image-20231210212836474"></p>
+<p>另一个例子</p>
+<p><img src="https://s2.loli.net/2023/12/10/bmYzIX8y1lHQNeR.png" alt="image-20231210212924305"></p>
+<ul>
+<li>梯度<ul>
+<li>将导数拓展到向量</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://s2.loli.net/2023/12/10/IYfiq7KQlZEV3pR.png" alt="image-20231210213557615"></p>
+<ul>
+<li>$\frac{\partial y}{\partial x}$<ul>
+<li>列向量的导数是行向量</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://s2.loli.net/2023/12/10/XWvAMFKkmLesYli.png" alt="image-20231210213818208"></p>
+<p>【举例】</p>
+<script type="math/tex; mode=display">
+\frac{\partial x_1^2}{\partial x} + 2x_2^2=[2x_1 + 4x_2]</script><p>方向 $(2, 4)$ 与等高线正交</p>
+<p><img src="https://s2.loli.net/2023/12/10/7KpYcLPmDo4jIw3.png" alt="image-20231210214202"></p>
+<p>如何理解：<strong>前面的函数可以画作是等高线，可以看作是一座山，现取任意一点 $(x_1, x_2) = (1, 1)$  ，经过这个点做等高线的切线（可以看作是上面函数的导数），而这个切线的垂线方向恰好可以使用我们所谓的梯度函数 $[2x_1, 4x_2]$ 计算出来。</strong></p>
+<p><strong>梯度和等高线是正交的，指向的是等高线变化最大的方向。</strong>也就是机器学习求解的核心思想。</p>
+<p>【举例】</p>
+<p><img src="https://s2.loli.net/2023/12/10/pqwCnxD5MA6tiWf.png" alt="image-20231210215112830"></p>
+<p><img src="https://s2.loli.net/2023/12/10/qWMLQ1CjtezKZAw.png" alt="image-20231210215141945"></p>
+<ul>
+<li>$\frac{\partial y}{\partial x}$</li>
+</ul>
+<p><img src="https://s2.loli.net/2023/12/10/aVk2tSzN6xvf1db.png" alt="image-20231210215451058"></p>
+<p><img src="https://s2.loli.net/2023/12/10/ofFO4aHIXlNdKxu.png" alt="image-20231210215430244"></p>
+<p>$\frac{\partial y}{\partial x}$是行向量，$\frac{\partial y}{\partial x}$是列向量，这个被称为分子局部符号，反过来的版本就叫分母布局符号</p>
+<ul>
+<li>$\frac{\partial y}{\partial x}$</li>
+</ul>
+<p><img src="https://s2.loli.net/2023/12/10/BzU2X47kly6oOcg.png" alt="image-20231210220234811"></p>
+<p><img src="https://s2.loli.net/2023/12/10/gUzCJlrPDY6iKaj.png" alt="image-20231210220248272"></p>
+<p><img src="https://s2.loli.net/2023/12/10/Nzu2t6r9xcmvH4P.png" alt="image-20231210220322753"></p>
+<p>【举例】</p>
+<p><img src="https://s2.loli.net/2023/12/10/D79yhU6iNQE5rTv.png" alt="image-20231210220453673"></p>
+<ul>
+<li>拓展到矩阵</li>
+</ul>
+<p><img src="https://s2.loli.net/2023/12/10/QdJae39DlM1OSq5.png" alt="image-20231210221120356"></p>
+<h2 id="6-2QA"><a href="#6-2QA" class="headerlink" title="6.2QA"></a>6.2QA</h2>]]></content>
+  </entry>
+  <entry>
     <title>05线性代数</title>
     <url>/2023/12/08/05-xian-xing-dai-shu/</url>
     <content><![CDATA[<h1 id="05线性代数"><a href="#05线性代数" class="headerlink" title="05线性代数"></a>05线性代数</h1><p><img src="https://s2.loli.net/2023/12/08/WRwMYeFdpP2Ogho.png" alt="image-20231208123851480"></p>
@@ -300,70 +364,6 @@ Ax = \lambda x</script><p><img src="https://s2.loli.net/2023/12/08/aqi97HUjBVQGk
 ||X||_F = \sqrt{\sum_{i=1}^m \sum_{j=1}^n x_{ij}^2}</script><p><img src="https://s2.loli.net/2023/12/09/9JXOxPIDnt1ZmUR.png" alt="image-20231209163941729"></p>
 <h2 id="5-3按特定轴求和"><a href="#5-3按特定轴求和" class="headerlink" title="5.3按特定轴求和"></a>5.3按特定轴求和</h2><p><img src="https://s2.loli.net/2023/12/09/zfXoBY1nAbhLOUF.png" alt="image-20231209164342978"></p>
 <h2 id="5-4QA"><a href="#5-4QA" class="headerlink" title="5.4QA"></a>5.4QA</h2>]]></content>
-  </entry>
-  <entry>
-    <title>06矩阵计算</title>
-    <url>/2023/12/10/06-ju-zhen-ji-suan/</url>
-    <content><![CDATA[<h1 id="06矩阵计算"><a href="#06矩阵计算" class="headerlink" title="06矩阵计算"></a>06矩阵计算</h1><h2 id="6-1矩阵计算"><a href="#6-1矩阵计算" class="headerlink" title="6.1矩阵计算"></a>6.1矩阵计算</h2><ul>
-<li>标量导数</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/10/SgVNKrhO89EGjRv.png" alt="标量导数"></p>
-<ul>
-<li>导数是切线的斜率</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/10/ISj9R3t1UWzdAnx.png" alt="导数是切线的斜率"></p>
-<ul>
-<li>亚导数<ul>
-<li>将导数拓展到不可微的函数</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/10/DExw4IelAZaztUG.png" alt="image-20231210212635618"></p>
-<p><img src="https://s2.loli.net/2023/12/10/2kdaW31bwzUpe4i.png" alt="image-20231210212836474"></p>
-<p>另一个例子</p>
-<p><img src="https://s2.loli.net/2023/12/10/bmYzIX8y1lHQNeR.png" alt="image-20231210212924305"></p>
-<ul>
-<li>梯度<ul>
-<li>将导数拓展到向量</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/10/IYfiq7KQlZEV3pR.png" alt="image-20231210213557615"></p>
-<ul>
-<li>$\frac{\partial y}{\partial x}$<ul>
-<li>列向量的导数是行向量</li>
-</ul>
-</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/10/XWvAMFKkmLesYli.png" alt="image-20231210213818208"></p>
-<p>【举例】</p>
-<script type="math/tex; mode=display">
-\frac{\partial x_1^2}{\partial x} + 2x_2^2=[2x_1 + 4x_2]</script><p>方向 $(2, 4)$ 与等高线正交</p>
-<p><img src="https://s2.loli.net/2023/12/10/7KpYcLPmDo4jIw3.png" alt="image-20231210214202"></p>
-<p>如何理解：<strong>前面的函数可以画作是等高线，可以看作是一座山，现取任意一点 $(x_1, x_2) = (1, 1)$  ，经过这个点做等高线的切线（可以看作是上面函数的导数），而这个切线的垂线方向恰好可以使用我们所谓的梯度函数 $[2x_1, 4x_2]$ 计算出来。</strong></p>
-<p><strong>梯度和等高线是正交的，指向的是等高线变化最大的方向。</strong>也就是机器学习求解的核心思想。</p>
-<p>【举例】</p>
-<p><img src="https://s2.loli.net/2023/12/10/pqwCnxD5MA6tiWf.png" alt="image-20231210215112830"></p>
-<p><img src="https://s2.loli.net/2023/12/10/qWMLQ1CjtezKZAw.png" alt="image-20231210215141945"></p>
-<ul>
-<li>$\frac{\partial y}{\partial x}$</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/10/aVk2tSzN6xvf1db.png" alt="image-20231210215451058"></p>
-<p><img src="https://s2.loli.net/2023/12/10/ofFO4aHIXlNdKxu.png" alt="image-20231210215430244"></p>
-<p>$\frac{\partial y}{\partial x}$是行向量，$\frac{\partial y}{\partial x}$是列向量，这个被称为分子局部符号，反过来的版本就叫分母布局符号</p>
-<ul>
-<li>$\frac{\partial y}{\partial x}$</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/10/BzU2X47kly6oOcg.png" alt="image-20231210220234811"></p>
-<p><img src="https://s2.loli.net/2023/12/10/gUzCJlrPDY6iKaj.png" alt="image-20231210220248272"></p>
-<p><img src="https://s2.loli.net/2023/12/10/Nzu2t6r9xcmvH4P.png" alt="image-20231210220322753"></p>
-<p>【举例】</p>
-<p><img src="https://s2.loli.net/2023/12/10/D79yhU6iNQE5rTv.png" alt="image-20231210220453673"></p>
-<ul>
-<li>拓展到矩阵</li>
-</ul>
-<p><img src="https://s2.loli.net/2023/12/10/QdJae39DlM1OSq5.png" alt="image-20231210221120356"></p>
-<h2 id="6-2QA"><a href="#6-2QA" class="headerlink" title="6.2QA"></a>6.2QA</h2>]]></content>
   </entry>
   <entry>
     <title>07二分分类</title>
@@ -768,10 +768,20 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 <h2 id="8-5QA"><a href="#8-5QA" class="headerlink" title="8.5QA"></a>8.5QA</h2>]]></content>
   </entry>
   <entry>
-    <title>10 梯度下降法</title>
-    <url>/2023/12/18/10-ti-du-xia-jiang-fa/</url>
-    <content><![CDATA[<h1 id="10-梯度下降法"><a href="#10-梯度下降法" class="headerlink" title="10 梯度下降法"></a>10 梯度下降法</h1><h2 id="10-1-Gradient-Descent"><a href="#10-1-Gradient-Descent" class="headerlink" title="10.1 Gradient Descent"></a>10.1 Gradient Descent</h2><p><img src="https://s2.loli.net/2023/12/18/5g29KPrnfduwWSM.png" alt="image-20231218110449631"></p>
-<p><img src="https://s2.loli.net/2023/12/18/l6SPghF1BXREWG5.png" alt="image-20231218111903673"></p>
+    <title>11导数</title>
+    <url>/2023/12/18/11-dao-shu/</url>
+    <content><![CDATA[<h1 id="11-导数"><a href="#11-导数" class="headerlink" title="11 导数"></a>11 导数</h1><h2 id="11-1-Intuition-about-derivatives"><a href="#11-1-Intuition-about-derivatives" class="headerlink" title="11.1 Intuition about derivatives"></a>11.1 Intuition about derivatives</h2><p> <img src="https://s2.loli.net/2023/12/18/vNLjQAUXIDqVWSF.png" alt="image-20231218112637878"></p>
+<h2 id="11-2-examples"><a href="#11-2-examples" class="headerlink" title="11.2 examples"></a>11.2 examples</h2><p><img src="https://s2.loli.net/2023/12/18/45DRYspac3kLzOy.png" alt="image-20231218113045875"></p>
+<p><img src="https://s2.loli.net/2023/12/18/Tzk8fL7Z9OKIRp2.png" alt="image-20231218113339464"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>13计算图</title>
+    <url>/2023/12/18/13-ji-suan-tu/</url>
+    <content><![CDATA[<h1 id="13-计算图"><a href="#13-计算图" class="headerlink" title="13 计算图"></a>13 计算图</h1><h2 id="13-1-Computation-Graph"><a href="#13-1-Computation-Graph" class="headerlink" title="13.1 Computation Graph"></a>13.1 Computation Graph</h2><p><img src="https://s2.loli.net/2023/12/18/C91u6wRZVLIzkgn.png" alt="image-20231218113756356"></p>
+<h2 id="13-2-Computing-derivatives"><a href="#13-2-Computing-derivatives" class="headerlink" title="13.2 Computing derivatives"></a>13.2 Computing derivatives</h2><p><img src="https://s2.loli.net/2023/12/18/PJSbW8NOrpXVYvL.png" alt="image-20231218120438053"></p>
+<p><img src="https://s2.loli.net/2023/12/18/deJoOvjcH3U8EYm.png" alt="image-20231218120900304"></p>
+<p>可控</p>
 ]]></content>
   </entry>
   <entry>
@@ -796,20 +806,10 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 <h2 id="9-2损失函数"><a href="#9-2损失函数" class="headerlink" title="9.2损失函数"></a>9.2损失函数</h2><h2 id="9-3图片分类数据集"><a href="#9-3图片分类数据集" class="headerlink" title="9.3图片分类数据集"></a>9.3图片分类数据集</h2><h2 id="9-4Softmax-回归从零开始实现"><a href="#9-4Softmax-回归从零开始实现" class="headerlink" title="9.4Softmax 回归从零开始实现"></a>9.4Softmax 回归从零开始实现</h2><h2 id="9-5Softmax-回归简洁实现"><a href="#9-5Softmax-回归简洁实现" class="headerlink" title="9.5Softmax 回归简洁实现"></a>9.5Softmax 回归简洁实现</h2>]]></content>
   </entry>
   <entry>
-    <title>11导数</title>
-    <url>/2023/12/18/11-dao-shu/</url>
-    <content><![CDATA[<h1 id="11-导数"><a href="#11-导数" class="headerlink" title="11 导数"></a>11 导数</h1><h2 id="11-1-Intuition-about-derivatives"><a href="#11-1-Intuition-about-derivatives" class="headerlink" title="11.1 Intuition about derivatives"></a>11.1 Intuition about derivatives</h2><p> <img src="https://s2.loli.net/2023/12/18/vNLjQAUXIDqVWSF.png" alt="image-20231218112637878"></p>
-<h2 id="11-2-examples"><a href="#11-2-examples" class="headerlink" title="11.2 examples"></a>11.2 examples</h2><p><img src="https://s2.loli.net/2023/12/18/45DRYspac3kLzOy.png" alt="image-20231218113045875"></p>
-<p><img src="https://s2.loli.net/2023/12/18/Tzk8fL7Z9OKIRp2.png" alt="image-20231218113339464"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>13计算图</title>
-    <url>/2023/12/18/13-ji-suan-tu/</url>
-    <content><![CDATA[<h1 id="13-计算图"><a href="#13-计算图" class="headerlink" title="13 计算图"></a>13 计算图</h1><h2 id="13-1-Computation-Graph"><a href="#13-1-Computation-Graph" class="headerlink" title="13.1 Computation Graph"></a>13.1 Computation Graph</h2><p><img src="https://s2.loli.net/2023/12/18/C91u6wRZVLIzkgn.png" alt="image-20231218113756356"></p>
-<h2 id="13-2-Computing-derivatives"><a href="#13-2-Computing-derivatives" class="headerlink" title="13.2 Computing derivatives"></a>13.2 Computing derivatives</h2><p><img src="https://s2.loli.net/2023/12/18/PJSbW8NOrpXVYvL.png" alt="image-20231218120438053"></p>
-<p><img src="https://s2.loli.net/2023/12/18/deJoOvjcH3U8EYm.png" alt="image-20231218120900304"></p>
-<p>可控</p>
+    <title>10 梯度下降法</title>
+    <url>/2023/12/18/10-ti-du-xia-jiang-fa/</url>
+    <content><![CDATA[<h1 id="10-梯度下降法"><a href="#10-梯度下降法" class="headerlink" title="10 梯度下降法"></a>10 梯度下降法</h1><h2 id="10-1-Gradient-Descent"><a href="#10-1-Gradient-Descent" class="headerlink" title="10.1 Gradient Descent"></a>10.1 Gradient Descent</h2><p><img src="https://s2.loli.net/2023/12/18/5g29KPrnfduwWSM.png" alt="image-20231218110449631"></p>
+<p><img src="https://s2.loli.net/2023/12/18/l6SPghF1BXREWG5.png" alt="image-20231218111903673"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1032,28 +1032,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>35随机初始化</title>
-    <url>/2023/12/22/35-sui-ji-chu-shi-hua/</url>
-    <content><![CDATA[<h1 id="35-随机初始化"><a href="#35-随机初始化" class="headerlink" title="35 随机初始化"></a>35 随机初始化</h1><p><strong>在训练神经网络时，初始化权重的重要性，对于随机初始化的权重，将其全部初始化为零时是不合适的，因为这将导致隐藏单位集散相同的函数，没有区别。相反，初始化为权重为随机值可以解决对称性破缺问题，是隐藏单元计算不同的函数。此外，初始化偏置项和权重的其它注意事项，可以帮助训练更加有效的神经网络。</strong></p>
-<ul>
-<li>在训练神经网络时，初始化权重的重要性，特别时对于随机初始化的神经网络<ul>
-<li>初始化权重对神经网络训练非常重要</li>
-<li>初始化为零会导致隐藏单元计算相同的函数</li>
-<li>初始化参数为随机值可以解决这个问题</li>
-</ul>
-</li>
-<li>如何初始化神经网络的参数，以及为什么通常将权重初始化为较小的随机值<ul>
-<li>初始化权重为小随机值可以避免对称性破缺问题</li>
-<li>初始化权重过大可能导致激活函数饱和（计算出的值，落在激活函数的平缓部分，则斜率非常小），减缓学习速度</li>
-<li>初始化常数为0.01（浅层网络一般适用）或其他相对较小的数字（其他深层的网络，则需要仔细选择）</li>
-</ul>
-</li>
-</ul>
-<h2 id="35-1-What-happens-if-you-initialize-weights-to-zero"><a href="#35-1-What-happens-if-you-initialize-weights-to-zero" class="headerlink" title="35.1 What happens if you initialize weights to zero"></a>35.1 What happens if you initialize weights to zero</h2><p><img src="https://s2.loli.net/2023/12/22/XvPGQlsrHFObB1Y.png" alt="image-20231222122124897"></p>
-<h2 id="35-2-Random-initialization"><a href="#35-2-Random-initialization" class="headerlink" title="35.2 Random initialization"></a>35.2 Random initialization</h2><p><img src="https://s2.loli.net/2023/12/22/H2UiuCyMGgmDhTV.png" alt="image-20231222122527065"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>37前向传播和反向传播</title>
     <url>/2023/12/22/37-qian-xiang-chuan-bo-he-fan-xiang-chuan-bo/</url>
     <content><![CDATA[<h1 id="37-前向传播和反向传播"><a href="#37-前向传播和反向传播" class="headerlink" title="37 前向传播和反向传播"></a>37 前向传播和反向传播</h1><p><strong>实现深度神经网路的基本模块，包括前向传播和反向传播。其中，前向传播涉及输入、减去一个、和产出，反向传播涉及导数、梯度和损失函数。通过实现这些方程，可以得到正确的前向传播和反向传播的实现，以及所需的导数。作者建议在开始编程联系前，先研究微积分和线性代数，以便于更好地理解推导。</strong></p>
@@ -1082,6 +1060,28 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 <h2 id="37-1-Forward-propagation-for-layer-l"><a href="#37-1-Forward-propagation-for-layer-l" class="headerlink" title="37.1 Forward propagation for layer $l$"></a>37.1 Forward propagation for layer $l$</h2><p><img src="https://s2.loli.net/2023/12/22/O1osy4RcXdkAUfS.png" alt="image-20231222175038352"></p>
 <h2 id="37-2-Backward-propagation-for-layer-l"><a href="#37-2-Backward-propagation-for-layer-l" class="headerlink" title="37.2 Backward propagation for layer $l$"></a>37.2 Backward propagation for layer $l$</h2><p><img src="https://s2.loli.net/2023/12/22/A7NxXnUbzvs1gyY.png" alt="image-20231222175306718"></p>
 <h2 id="37-3-Summary"><a href="#37-3-Summary" class="headerlink" title="37.3 Summary"></a>37.3 Summary</h2><p><img src="https://s2.loli.net/2023/12/22/H6nAPErOMaTpRKF.png" alt="image-20231222175622368"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>35随机初始化</title>
+    <url>/2023/12/22/35-sui-ji-chu-shi-hua/</url>
+    <content><![CDATA[<h1 id="35-随机初始化"><a href="#35-随机初始化" class="headerlink" title="35 随机初始化"></a>35 随机初始化</h1><p><strong>在训练神经网络时，初始化权重的重要性，对于随机初始化的权重，将其全部初始化为零时是不合适的，因为这将导致隐藏单位集散相同的函数，没有区别。相反，初始化为权重为随机值可以解决对称性破缺问题，是隐藏单元计算不同的函数。此外，初始化偏置项和权重的其它注意事项，可以帮助训练更加有效的神经网络。</strong></p>
+<ul>
+<li>在训练神经网络时，初始化权重的重要性，特别时对于随机初始化的神经网络<ul>
+<li>初始化权重对神经网络训练非常重要</li>
+<li>初始化为零会导致隐藏单元计算相同的函数</li>
+<li>初始化参数为随机值可以解决这个问题</li>
+</ul>
+</li>
+<li>如何初始化神经网络的参数，以及为什么通常将权重初始化为较小的随机值<ul>
+<li>初始化权重为小随机值可以避免对称性破缺问题</li>
+<li>初始化权重过大可能导致激活函数饱和（计算出的值，落在激活函数的平缓部分，则斜率非常小），减缓学习速度</li>
+<li>初始化常数为0.01（浅层网络一般适用）或其他相对较小的数字（其他深层的网络，则需要仔细选择）</li>
+</ul>
+</li>
+</ul>
+<h2 id="35-1-What-happens-if-you-initialize-weights-to-zero"><a href="#35-1-What-happens-if-you-initialize-weights-to-zero" class="headerlink" title="35.1 What happens if you initialize weights to zero"></a>35.1 What happens if you initialize weights to zero</h2><p><img src="https://s2.loli.net/2023/12/22/XvPGQlsrHFObB1Y.png" alt="image-20231222122124897"></p>
+<h2 id="35-2-Random-initialization"><a href="#35-2-Random-initialization" class="headerlink" title="35.2 Random initialization"></a>35.2 Random initialization</h2><p><img src="https://s2.loli.net/2023/12/22/H2UiuCyMGgmDhTV.png" alt="image-20231222122527065"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1156,16 +1156,16 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
+    <title>43这和大脑有什么关系？</title>
+    <url>/2024/01/02/43-zhe-he-da-nao-you-shi-me-guan-xi/</url>
+    <content><![CDATA[<h1 id="43-这和大脑有什么关系？"><a href="#43-这和大脑有什么关系？" class="headerlink" title="43 这和大脑有什么关系？"></a>43 这和大脑有什么关系？</h1><h2 id="43-1-Forward-and-backward-propagation"><a href="#43-1-Forward-and-backward-propagation" class="headerlink" title="43.1 Forward and backward propagation"></a>43.1 Forward and backward propagation</h2><p><img src="https://s2.loli.net/2024/01/02/XITyJkBZGtPgFK3.png" alt="image-20240102114639554"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>42参数vs超参数</title>
     <url>/2024/01/02/42-can-shu-vs-chao-can-shu/</url>
     <content><![CDATA[<h1 id="42-参数-vs-超参数"><a href="#42-参数-vs-超参数" class="headerlink" title="42 参数 vs 超参数"></a>42 参数 vs 超参数</h1><h2 id="42-1-What-are-hyperparameters"><a href="#42-1-What-are-hyperparameters" class="headerlink" title="42.1 What are hyperparameters?"></a>42.1 What are hyperparameters?</h2><p><img src="https://s2.loli.net/2024/01/02/oUZe4XYmG9KwdFj.png" alt="image-20240102114031228"></p>
 <h2 id="42-2-Applied-deep-learning-is-a-very-empirical-proecss"><a href="#42-2-Applied-deep-learning-is-a-very-empirical-proecss" class="headerlink" title="42.2 Applied deep learning is a very empirical proecss"></a>42.2 Applied deep learning is a very empirical proecss</h2><p><img src="https://s2.loli.net/2024/01/02/xOzLhe1rVvoAwFt.png" alt="image-20240102114347560"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>43这和大脑有什么关系？</title>
-    <url>/2024/01/02/43-zhe-he-da-nao-you-shi-me-guan-xi/</url>
-    <content><![CDATA[<h1 id="43-这和大脑有什么关系？"><a href="#43-这和大脑有什么关系？" class="headerlink" title="43 这和大脑有什么关系？"></a>43 这和大脑有什么关系？</h1><h2 id="43-1-Forward-and-backward-propagation"><a href="#43-1-Forward-and-backward-propagation" class="headerlink" title="43.1 Forward and backward propagation"></a>43.1 Forward and backward propagation</h2><p><img src="https://s2.loli.net/2024/01/02/XITyJkBZGtPgFK3.png" alt="image-20240102114639554"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1174,14 +1174,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
     <content><![CDATA[<h1 id="47-训练-开发-测试集合"><a href="#47-训练-开发-测试集合" class="headerlink" title="47 训练 开发 测试集合"></a>47 训练 开发 测试集合</h1><h2 id="47-1-Applied-ML-is-a-highly-iterative-process"><a href="#47-1-Applied-ML-is-a-highly-iterative-process" class="headerlink" title="47.1 Applied ML is a highly iterative process"></a>47.1 Applied ML is a highly iterative process</h2><p><img src="https://s2.loli.net/2024/01/02/dCbINSOFyX1KPoA.png" alt="image-20240102115159250"></p>
 <h2 id="47-2-Train-dev-test-sets"><a href="#47-2-Train-dev-test-sets" class="headerlink" title="47.2 Train/dev/test sets"></a>47.2 Train/dev/test sets</h2><p><img src="https://s2.loli.net/2024/01/02/nY6lAPGzEpc4mfF.png" alt="image-20240102115531660"></p>
 <h2 id="Mismatched-train-test-distribution"><a href="#Mismatched-train-test-distribution" class="headerlink" title="Mismatched train/test distribution"></a>Mismatched train/test distribution</h2><p><img src="https://s2.loli.net/2024/01/02/v1bpjqulMgBCP9N.png" alt="image-20240102115859490"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>48偏差和方差</title>
-    <url>/2024/01/05/48-pian-chai-he-fang-chai/</url>
-    <content><![CDATA[<h1 id="48-偏差和方差"><a href="#48-偏差和方差" class="headerlink" title="48 偏差和方差"></a>48 偏差和方差</h1><h2 id="Bias-and-Variance"><a href="#Bias-and-Variance" class="headerlink" title="Bias and Variance"></a>Bias and Variance</h2><p><img src="https://s2.loli.net/2024/01/05/tXWsarKZ4qpvSdY.png" alt="image-20240105121254636"></p>
-<p><img src="https://s2.loli.net/2024/01/05/3SJeIYPVkEojilH.png" alt="image-20240105121719692"></p>
-<h2 id="High-bias-and-high-variance"><a href="#High-bias-and-high-variance" class="headerlink" title="High bias and high variance"></a>High bias and high variance</h2><p><img src="https://s2.loli.net/2024/01/05/WUb7IruKNq6Gg3Z.png" alt="image-20240105122119324"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1198,24 +1190,16 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
+    <title>53理解Dropout</title>
+    <url>/2024/01/16/53-li-jie-dropout/</url>
+    <content><![CDATA[<h1 id="53-理解-Dropout"><a href="#53-理解-Dropout" class="headerlink" title="53 理解 Dropout"></a>53 理解 Dropout</h1><h2 id="53-1Why-does-drop-out-work"><a href="#53-1Why-does-drop-out-work" class="headerlink" title="53.1Why does drop-out work?"></a>53.1Why does drop-out work?</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240113212243807.png" alt="image-20240113212243807"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>为什么正则化可以减少过拟合？</title>
     <url>/2024/01/06/51-wei-shi-me-zheng-ze-hua-ke-yi-jian-shao-guo-ni-he/</url>
     <content><![CDATA[<h1 id="51-为什么正则化可以减少过拟合？"><a href="#51-为什么正则化可以减少过拟合？" class="headerlink" title="51 为什么正则化可以减少过拟合？"></a>51 为什么正则化可以减少过拟合？</h1><h2 id="51-1-How-does-regularization-prevent-overfitting"><a href="#51-1-How-does-regularization-prevent-overfitting" class="headerlink" title="51.1 How does regularization prevent overfitting?"></a>51.1 How does regularization prevent overfitting?</h2><p><img src="https://s2.loli.net/2024/01/06/eK9HgiZJAS7MwGz.png" alt="image-20240106230618834"></p>
 <p><img src="https://s2.loli.net/2024/01/06/vMUnYbDhmiwR85j.png" alt="image-20240106231520169"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>52Dropout正则化</title>
-    <url>/2024/01/13/52-dropout-zheng-ze-hua/</url>
-    <content><![CDATA[<h1 id="52-Dropout-正则化"><a href="#52-Dropout-正则化" class="headerlink" title="52 Dropout 正则化"></a>52 Dropout 正则化</h1><h2 id="52-1Dropout-regularization"><a href="#52-1Dropout-regularization" class="headerlink" title="52.1Dropout regularization"></a>52.1Dropout regularization</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240113203610466.png" alt="image-20240113203610466"></p>
-<h2 id="52-2Implementing-dropout-“Inverted-dropout”"><a href="#52-2Implementing-dropout-“Inverted-dropout”" class="headerlink" title="52.2Implementing dropout(“Inverted dropout”)"></a>52.2Implementing dropout(“Inverted dropout”)</h2><p><img src="https://s2.loli.net/2024/01/13/ilLpst3SmYoHRuX.png" alt="image-20240113210330586"></p>
-<h2 id="52-3Making-predictions-at-test-time"><a href="#52-3Making-predictions-at-test-time" class="headerlink" title="52.3Making predictions at test time"></a>52.3Making predictions at test time</h2><p><img src="https://s2.loli.net/2024/01/13/YDzrq1TguIACMRh.png" alt="image-20240113210850114"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>53理解Dropout</title>
-    <url>/2024/01/16/53-li-jie-dropout/</url>
-    <content><![CDATA[<h1 id="53-理解-Dropout"><a href="#53-理解-Dropout" class="headerlink" title="53 理解 Dropout"></a>53 理解 Dropout</h1><h2 id="53-1Why-does-drop-out-work"><a href="#53-1Why-does-drop-out-work" class="headerlink" title="53.1Why does drop-out work?"></a>53.1Why does drop-out work?</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240113212243807.png" alt="image-20240113212243807"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1254,21 +1238,19 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/2024/01/02/building-recommender-system-with-gnn/</url>
-    <content><![CDATA[<h1 id="Building-Recommender-System-with-GNN"><a href="#Building-Recommender-System-with-GNN" class="headerlink" title="Building Recommender System with GNN"></a>Building Recommender System with GNN</h1><h2 id="Part1-Intro-to-GNN"><a href="#Part1-Intro-to-GNN" class="headerlink" title="Part1: Intro to GNN"></a>Part1: Intro to GNN</h2><p><img src="https://s2.loli.net/2024/01/02/YG6IJ2yqmKrHpgu.png" alt="image-20240102093813068"></p>
-<p><img src="https://s2.loli.net/2024/01/02/NnDVusyUarfP7Bj.png" alt="image-20240102093947364"></p>
-<p><img src="https://s2.loli.net/2024/01/02/OJyrtMAjZmuHKiG.png" alt="image-20240102094029280"></p>
-<p><img src="https://s2.loli.net/2024/01/02/v29RWSGTwM3br1q.png" alt="image-20240102094208182"></p>
-<p><img src="https://s2.loli.net/2024/01/02/MzbBhYHCsxwFUDA.png" alt="image-20240102094318610"></p>
-<p><img src="https://s2.loli.net/2024/01/02/EbY5l7mG4j8uxTi.png" alt="image-20240102094522141"></p>
-<p><img src="https://s2.loli.net/2024/01/02/KwkYmbyLXjla85H.png" alt="image-20240102095433388"></p>
-<p><img src="https://s2.loli.net/2024/01/02/hyE5kwJuMlYoQ6d.png" alt="image-20240102095715735"></p>
-<p><img src="https://s2.loli.net/2024/01/02/1JOisIEHlS4ZGrc.png" alt="image-20240102095928047"></p>
-<p><img src="https://s2.loli.net/2024/01/02/zcorTG9veWNO1hU.png" alt="image-20240102100124742"></p>
-<p><img src="https://s2.loli.net/2024/01/02/n6ZWoUOTFX978Eq.png" alt="image-20240102100308238"></p>
-<p><img src="https://s2.loli.net/2024/01/02/EQ8RbjtuvpHSrl9.png" alt="image-20240102100357505"></p>
-<p><img src="https://s2.loli.net/2024/01/02/8qX3bhr5asLpuNB.png" alt="image-20240102100506717"></p>
+    <title>52Dropout正则化</title>
+    <url>/2024/01/13/52-dropout-zheng-ze-hua/</url>
+    <content><![CDATA[<h1 id="52-Dropout-正则化"><a href="#52-Dropout-正则化" class="headerlink" title="52 Dropout 正则化"></a>52 Dropout 正则化</h1><h2 id="52-1Dropout-regularization"><a href="#52-1Dropout-regularization" class="headerlink" title="52.1Dropout regularization"></a>52.1Dropout regularization</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240113203610466.png" alt="image-20240113203610466"></p>
+<h2 id="52-2Implementing-dropout-“Inverted-dropout”"><a href="#52-2Implementing-dropout-“Inverted-dropout”" class="headerlink" title="52.2Implementing dropout(“Inverted dropout”)"></a>52.2Implementing dropout(“Inverted dropout”)</h2><p><img src="https://s2.loli.net/2024/01/13/ilLpst3SmYoHRuX.png" alt="image-20240113210330586"></p>
+<h2 id="52-3Making-predictions-at-test-time"><a href="#52-3Making-predictions-at-test-time" class="headerlink" title="52.3Making predictions at test time"></a>52.3Making predictions at test time</h2><p><img src="https://s2.loli.net/2024/01/13/YDzrq1TguIACMRh.png" alt="image-20240113210850114"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>48偏差和方差</title>
+    <url>/2024/01/05/48-pian-chai-he-fang-chai/</url>
+    <content><![CDATA[<h1 id="48-偏差和方差"><a href="#48-偏差和方差" class="headerlink" title="48 偏差和方差"></a>48 偏差和方差</h1><h2 id="Bias-and-Variance"><a href="#Bias-and-Variance" class="headerlink" title="Bias and Variance"></a>Bias and Variance</h2><p><img src="https://s2.loli.net/2024/01/05/tXWsarKZ4qpvSdY.png" alt="image-20240105121254636"></p>
+<p><img src="https://s2.loli.net/2024/01/05/3SJeIYPVkEojilH.png" alt="image-20240105121719692"></p>
+<h2 id="High-bias-and-high-variance"><a href="#High-bias-and-high-variance" class="headerlink" title="High bias and high variance"></a>High bias and high variance</h2><p><img src="https://s2.loli.net/2024/01/05/WUb7IruKNq6Gg3Z.png" alt="image-20240105122119324"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1339,23 +1321,20 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
   </entry>
   <entry>
     <title></title>
-    <url>/2024/01/02/graph-neural-networks/</url>
-    <content><![CDATA[<h1 id="Graph-Neural-Networks"><a href="#Graph-Neural-Networks" class="headerlink" title="Graph Neural Networks"></a>Graph Neural Networks</h1><p> <img src="https://s2.loli.net/2024/01/02/X3PRzd8yeAVw2BQ.png" alt="image-20240102091617093"></p>
-<p><img src="https://s2.loli.net/2024/01/02/ibrAWq4GKnaODmU.png" alt="image-20240102091633581"></p>
-<p><img src="https://s2.loli.net/2024/01/02/vkSD7QTXYzIb2P3.png" alt="image-20240102091655951"></p>
-<p><img src="https://s2.loli.net/2024/01/02/tsgATuv5YWf6dmE.png" alt="image-20240102091704896"></p>
-<p><img src="https://s2.loli.net/2024/01/02/XaYg4cUEhQKxjfF.png" alt="image-20240102092051111"></p>
-<p><img src="https://s2.loli.net/2024/01/02/DBOTAfVsoZpP3G7.png" alt="image-20240102092139541"></p>
-<p><img src="https://s2.loli.net/2024/01/02/zPlAsZHKE2CBg8u.png" alt="image-20240102092226107"></p>
-<p><img src="https://s2.loli.net/2024/01/02/yQKTcIiXPYRB6od.png" alt="image-20240102092403353"></p>
-<p><img src="https://s2.loli.net/2024/01/02/8C2OMYbPq5BIm1r.png" alt="image-20240102092446883"></p>
-<p><img src="https://s2.loli.net/2024/01/02/Buy4Nge9brMG6tw.png" alt="image-20240102092539175"></p>
-<p><img src="https://s2.loli.net/2024/01/02/QdkTCKZnXYmLIaq.png" alt="image-20240102092553255"></p>
-<p><img src="https://s2.loli.net/2024/01/02/sDG7fm93UqjurnL.png" alt="image-20240102092726082"></p>
-<p><img src="https://s2.loli.net/2024/01/02/5CxyABnEUIapTkS.png" alt="image-20240102092900682"></p>
-<p><img src="https://s2.loli.net/2024/01/02/UW52fkCNwt9LXsb.png" alt="image-20240102093103632"></p>
-<p><img src="https://s2.loli.net/2024/01/02/rHNW6E5Z372dSsU.png" alt="image-20240102093208704"></p>
-<p><img src="https://s2.loli.net/2024/01/02/VOAtoWbmqCvTg8S.png" alt="image-20240102093339507"></p>
+    <url>/2024/01/02/building-recommender-system-with-gnn/</url>
+    <content><![CDATA[<h1 id="Building-Recommender-System-with-GNN"><a href="#Building-Recommender-System-with-GNN" class="headerlink" title="Building Recommender System with GNN"></a>Building Recommender System with GNN</h1><h2 id="Part1-Intro-to-GNN"><a href="#Part1-Intro-to-GNN" class="headerlink" title="Part1: Intro to GNN"></a>Part1: Intro to GNN</h2><p><img src="https://s2.loli.net/2024/01/02/YG6IJ2yqmKrHpgu.png" alt="image-20240102093813068"></p>
+<p><img src="https://s2.loli.net/2024/01/02/NnDVusyUarfP7Bj.png" alt="image-20240102093947364"></p>
+<p><img src="https://s2.loli.net/2024/01/02/OJyrtMAjZmuHKiG.png" alt="image-20240102094029280"></p>
+<p><img src="https://s2.loli.net/2024/01/02/v29RWSGTwM3br1q.png" alt="image-20240102094208182"></p>
+<p><img src="https://s2.loli.net/2024/01/02/MzbBhYHCsxwFUDA.png" alt="image-20240102094318610"></p>
+<p><img src="https://s2.loli.net/2024/01/02/EbY5l7mG4j8uxTi.png" alt="image-20240102094522141"></p>
+<p><img src="https://s2.loli.net/2024/01/02/KwkYmbyLXjla85H.png" alt="image-20240102095433388"></p>
+<p><img src="https://s2.loli.net/2024/01/02/hyE5kwJuMlYoQ6d.png" alt="image-20240102095715735"></p>
+<p><img src="https://s2.loli.net/2024/01/02/1JOisIEHlS4ZGrc.png" alt="image-20240102095928047"></p>
+<p><img src="https://s2.loli.net/2024/01/02/zcorTG9veWNO1hU.png" alt="image-20240102100124742"></p>
+<p><img src="https://s2.loli.net/2024/01/02/n6ZWoUOTFX978Eq.png" alt="image-20240102100308238"></p>
+<p><img src="https://s2.loli.net/2024/01/02/EQ8RbjtuvpHSrl9.png" alt="image-20240102100357505"></p>
+<p><img src="https://s2.loli.net/2024/01/02/8qX3bhr5asLpuNB.png" alt="image-20240102100506717"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1398,17 +1377,25 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
       </tags>
   </entry>
   <entry>
-    <title>Kaggle&#39;s_30_Days_Of_ML</title>
-    <url>/2023/11/16/kaggle-s-30-days-of-ml/</url>
-    <content><![CDATA[<h1 id="Kaggle’s-30-Days-Of-ML-Day-1-Getting-Started-With-Kaggle"><a href="#Kaggle’s-30-Days-Of-ML-Day-1-Getting-Started-With-Kaggle" class="headerlink" title="Kaggle’s 30 Days Of ML (Day-1): Getting Started With Kaggle"></a>Kaggle’s 30 Days Of ML (Day-1): Getting Started With Kaggle</h1><h1 id="Kaggle’s-30-Days-Of-ML-Day-9-First-Machine-Learning-Model-and-Validation"><a href="#Kaggle’s-30-Days-Of-ML-Day-9-First-Machine-Learning-Model-and-Validation" class="headerlink" title="Kaggle’s 30 Days Of ML (Day-9): First Machine Learning Model and Validation"></a>Kaggle’s 30 Days Of ML (Day-9): First Machine Learning Model and Validation</h1><p><img src="../imgs/$%7Bfiilename%7D/image-20231117125459917-1700196901968-1.png" alt="image-20231117125459917"></p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231117125647067-1700197008690-5.png" alt="image-20231117125647067"></p>
+    <title></title>
+    <url>/2024/01/02/graph-neural-networks/</url>
+    <content><![CDATA[<h1 id="Graph-Neural-Networks"><a href="#Graph-Neural-Networks" class="headerlink" title="Graph Neural Networks"></a>Graph Neural Networks</h1><p> <img src="https://s2.loli.net/2024/01/02/X3PRzd8yeAVw2BQ.png" alt="image-20240102091617093"></p>
+<p><img src="https://s2.loli.net/2024/01/02/ibrAWq4GKnaODmU.png" alt="image-20240102091633581"></p>
+<p><img src="https://s2.loli.net/2024/01/02/vkSD7QTXYzIb2P3.png" alt="image-20240102091655951"></p>
+<p><img src="https://s2.loli.net/2024/01/02/tsgATuv5YWf6dmE.png" alt="image-20240102091704896"></p>
+<p><img src="https://s2.loli.net/2024/01/02/XaYg4cUEhQKxjfF.png" alt="image-20240102092051111"></p>
+<p><img src="https://s2.loli.net/2024/01/02/DBOTAfVsoZpP3G7.png" alt="image-20240102092139541"></p>
+<p><img src="https://s2.loli.net/2024/01/02/zPlAsZHKE2CBg8u.png" alt="image-20240102092226107"></p>
+<p><img src="https://s2.loli.net/2024/01/02/yQKTcIiXPYRB6od.png" alt="image-20240102092403353"></p>
+<p><img src="https://s2.loli.net/2024/01/02/8C2OMYbPq5BIm1r.png" alt="image-20240102092446883"></p>
+<p><img src="https://s2.loli.net/2024/01/02/Buy4Nge9brMG6tw.png" alt="image-20240102092539175"></p>
+<p><img src="https://s2.loli.net/2024/01/02/QdkTCKZnXYmLIaq.png" alt="image-20240102092553255"></p>
+<p><img src="https://s2.loli.net/2024/01/02/sDG7fm93UqjurnL.png" alt="image-20240102092726082"></p>
+<p><img src="https://s2.loli.net/2024/01/02/5CxyABnEUIapTkS.png" alt="image-20240102092900682"></p>
+<p><img src="https://s2.loli.net/2024/01/02/UW52fkCNwt9LXsb.png" alt="image-20240102093103632"></p>
+<p><img src="https://s2.loli.net/2024/01/02/rHNW6E5Z372dSsU.png" alt="image-20240102093208704"></p>
+<p><img src="https://s2.loli.net/2024/01/02/VOAtoWbmqCvTg8S.png" alt="image-20240102093339507"></p>
 ]]></content>
-      <categories>
-        <category>kaggle比赛</category>
-      </categories>
-      <tags>
-        <tag>kaggle比赛</tag>
-      </tags>
   </entry>
   <entry>
     <title>Java基础</title>
@@ -1470,6 +1457,19 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
       </categories>
       <tags>
         <tag>Java基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Kaggle&#39;s_30_Days_Of_ML</title>
+    <url>/2023/11/16/kaggle-s-30-days-of-ml/</url>
+    <content><![CDATA[<h1 id="Kaggle’s-30-Days-Of-ML-Day-1-Getting-Started-With-Kaggle"><a href="#Kaggle’s-30-Days-Of-ML-Day-1-Getting-Started-With-Kaggle" class="headerlink" title="Kaggle’s 30 Days Of ML (Day-1): Getting Started With Kaggle"></a>Kaggle’s 30 Days Of ML (Day-1): Getting Started With Kaggle</h1><h1 id="Kaggle’s-30-Days-Of-ML-Day-9-First-Machine-Learning-Model-and-Validation"><a href="#Kaggle’s-30-Days-Of-ML-Day-9-First-Machine-Learning-Model-and-Validation" class="headerlink" title="Kaggle’s 30 Days Of ML (Day-9): First Machine Learning Model and Validation"></a>Kaggle’s 30 Days Of ML (Day-9): First Machine Learning Model and Validation</h1><p><img src="../imgs/$%7Bfiilename%7D/image-20231117125459917-1700196901968-1.png" alt="image-20231117125459917"></p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231117125647067-1700197008690-5.png" alt="image-20231117125647067"></p>
+]]></content>
+      <categories>
+        <category>kaggle比赛</category>
+      </categories>
+      <tags>
+        <tag>kaggle比赛</tag>
       </tags>
   </entry>
   <entry>
@@ -1614,48 +1614,6 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
       </tags>
   </entry>
   <entry>
-    <title>并发编程</title>
-    <url>/2023/11/03/bing-fa-bian-cheng/</url>
-    <content><![CDATA[<h2 id="3-7-sleep和yield"><a href="#3-7-sleep和yield" class="headerlink" title="3.7 sleep和yield"></a>3.7 sleep和yield</h2><p><strong>sleep</strong></p>
-<p>1.调用sleep会让当前线程从<strong><em>Running</em></strong>进入<strong><em>Timed Waiting</em></strong>状态（阻塞）</p>
-<p>2.其他线程可以使用interupt方法打断正在睡眠的线程，这时sleep方法会抛出InterruptedException</p>
-<p>3.睡眠结束后的线程未必会立刻得到执行</p>
-<p>4.建议用TimeUnit的sleep代替Thread的sleep来获得更好的可读性</p>
-<p><strong>yield</strong></p>
-<p>1.调用yield会让当前线程从Running进入Runnable就绪状态，然后调度执行其它线程</p>
-<p>2.<strong>具体的实现依赖于操作系统的任务调度器</strong></p>
-<p><strong>线程优先级</strong></p>
-<p>线程优先级会提示（hint）调度器优先调度该线程，但它仅仅是一个提示，调度器可以忽略它</p>
-<p>如果CPU比较忙，那么优先级高的线程会获得更多的时间片，但CPU空闲时，优先级几乎没作用</p>
-<p>不使用yield</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test9</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Runnable</span> <span class="variable">task1</span> <span class="operator">=</span> () -&gt; &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">                System.out.prinln(<span class="string">&quot;----&gt;1&quot;</span> + count ++ );</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="type">Runnable</span> <span class="variable">task2</span> <span class="operator">=</span> () -&gt; &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">                <span class="comment">// Thread.yield();</span></span><br><span class="line">                System.out.println(<span class="string">&quot;         ------&gt;2 &quot;</span> + count ++ );</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="type">Thread</span> <span class="variable">t1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(task1, <span class="string">&quot;t1&quot;</span>);</span><br><span class="line">        <span class="type">Thread</span> <span class="variable">t2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(task2, <span class="string">&quot;t2&quot;</span>);</span><br><span class="line">        <span class="comment">// t1.setPriority(Thread.MIN_PRIORITY);</span></span><br><span class="line">        <span class="comment">// t2.setPriority(Thread.MAX_PRIORITY);</span></span><br><span class="line">        t1.start();</span><br><span class="line">        t2.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>未开启yield两者打印次数基本差不多</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231103223923885-1699022365204-1.png" alt="image-20231103223923885"></p>
-<p>开启后</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231103224121283-1699022483089-3.png" alt="image-20231103224121283"></p>
-<p>开启优先级</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231103224359120-1699022640208-6.png" alt="image-20231103224359120"></p>
-<h2 id="案例-防止CPU占用100"><a href="#案例-防止CPU占用100" class="headerlink" title="案例-防止CPU占用100%"></a>案例-防止CPU占用100%</h2><p><strong>sleep实现</strong></p>
-<p>在没有利用CPU进行计算时，不要让while(true)空转浪费CPU，这时可以使用yield或sleep来让出cpu的使用权给其他程序</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Thread.sleep(<span class="number">50</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>可以使用wait或条件变量达到类似的效果</li>
-<li>不同的是，后两种都需要加锁，并且需要响应的唤醒操作，一般适用于要进行同步的场景</li>
-<li>sleep适用于无需锁同步的场景</li>
-</ul>
-<p>不使用sleep，将会占满单核虚拟机资源</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231103225132518-1699023094621-8.png" alt="image-20231103225132518"></p>
-<p>使用后</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231103225214908-1699023136594-10.png" alt="image-20231103225214908"></p>
-]]></content>
-      <categories>
-        <category>软件开发</category>
-      </categories>
-      <tags>
-        <tag>并发编程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>多语言模型中事实知识的跨语言一致性</title>
     <url>/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/</url>
     <content><![CDATA[<h1 id="多语言模型中事实知识的跨语言一致性"><a href="#多语言模型中事实知识的跨语言一致性" class="headerlink" title="多语言模型中事实知识的跨语言一致性"></a>多语言模型中事实知识的跨语言一致性</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p><span style="background-color: #2ea8e580">多语言大规模预训练语言模型（PLM）已被证明可以存储大量的事实知识，但观察到语言之间存在很大差异</span>。为了确保具有不同语言背景的用户从同一模型获得一致的反馈，我们研究了各种多语言PLM中事实知识的跨语言一致性（CLC）。为此，我们<span style="background-color: #2ea8e580">提出了一个基于排名的一致性（RankC）指标，以独立于准确性来评估跨语言的知识一致性</span>。使用这个指标，我们在模型级别和语言对级别对CLC的决定因素进行了深入分析。在其他结果中，我们发现<span style="background-color: #ff666680">增加模型大小会导致大多数语言中更高的事实探测准确性，但不会提高跨语言的一致性</span>。最后，我们进行了关于CLC的案例研究，当通过模型编辑在PLM中插入新的事实关联时。英<span style="background-color: #ff666680">语插入的一小部分事实样本的结果揭示了一个清晰的模式，即新知识仅转移到英语具有高 RankC 分数的语言。</span></p>
@@ -1730,6 +1688,84 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
       </tags>
   </entry>
   <entry>
+    <title>并发编程</title>
+    <url>/2023/11/03/bing-fa-bian-cheng/</url>
+    <content><![CDATA[<h2 id="3-7-sleep和yield"><a href="#3-7-sleep和yield" class="headerlink" title="3.7 sleep和yield"></a>3.7 sleep和yield</h2><p><strong>sleep</strong></p>
+<p>1.调用sleep会让当前线程从<strong><em>Running</em></strong>进入<strong><em>Timed Waiting</em></strong>状态（阻塞）</p>
+<p>2.其他线程可以使用interupt方法打断正在睡眠的线程，这时sleep方法会抛出InterruptedException</p>
+<p>3.睡眠结束后的线程未必会立刻得到执行</p>
+<p>4.建议用TimeUnit的sleep代替Thread的sleep来获得更好的可读性</p>
+<p><strong>yield</strong></p>
+<p>1.调用yield会让当前线程从Running进入Runnable就绪状态，然后调度执行其它线程</p>
+<p>2.<strong>具体的实现依赖于操作系统的任务调度器</strong></p>
+<p><strong>线程优先级</strong></p>
+<p>线程优先级会提示（hint）调度器优先调度该线程，但它仅仅是一个提示，调度器可以忽略它</p>
+<p>如果CPU比较忙，那么优先级高的线程会获得更多的时间片，但CPU空闲时，优先级几乎没作用</p>
+<p>不使用yield</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test9</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Runnable</span> <span class="variable">task1</span> <span class="operator">=</span> () -&gt; &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">                System.out.prinln(<span class="string">&quot;----&gt;1&quot;</span> + count ++ );</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="type">Runnable</span> <span class="variable">task2</span> <span class="operator">=</span> () -&gt; &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">                <span class="comment">// Thread.yield();</span></span><br><span class="line">                System.out.println(<span class="string">&quot;         ------&gt;2 &quot;</span> + count ++ );</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="type">Thread</span> <span class="variable">t1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(task1, <span class="string">&quot;t1&quot;</span>);</span><br><span class="line">        <span class="type">Thread</span> <span class="variable">t2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(task2, <span class="string">&quot;t2&quot;</span>);</span><br><span class="line">        <span class="comment">// t1.setPriority(Thread.MIN_PRIORITY);</span></span><br><span class="line">        <span class="comment">// t2.setPriority(Thread.MAX_PRIORITY);</span></span><br><span class="line">        t1.start();</span><br><span class="line">        t2.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>未开启yield两者打印次数基本差不多</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231103223923885-1699022365204-1.png" alt="image-20231103223923885"></p>
+<p>开启后</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231103224121283-1699022483089-3.png" alt="image-20231103224121283"></p>
+<p>开启优先级</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231103224359120-1699022640208-6.png" alt="image-20231103224359120"></p>
+<h2 id="案例-防止CPU占用100"><a href="#案例-防止CPU占用100" class="headerlink" title="案例-防止CPU占用100%"></a>案例-防止CPU占用100%</h2><p><strong>sleep实现</strong></p>
+<p>在没有利用CPU进行计算时，不要让while(true)空转浪费CPU，这时可以使用yield或sleep来让出cpu的使用权给其他程序</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Thread.sleep(<span class="number">50</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>可以使用wait或条件变量达到类似的效果</li>
+<li>不同的是，后两种都需要加锁，并且需要响应的唤醒操作，一般适用于要进行同步的场景</li>
+<li>sleep适用于无需锁同步的场景</li>
+</ul>
+<p>不使用sleep，将会占满单核虚拟机资源</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231103225132518-1699023094621-8.png" alt="image-20231103225132518"></p>
+<p>使用后</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231103225214908-1699023136594-10.png" alt="image-20231103225214908"></p>
+]]></content>
+      <categories>
+        <category>软件开发</category>
+      </categories>
+      <tags>
+        <tag>并发编程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>情境学习创建任务向量</title>
+    <url>/2023/11/02/qing-jing-xue-xi-chuang-jian-ren-wu-xiang-liang/</url>
+    <content><![CDATA[<h1 id="情境学习创建任务向量"><a href="#情境学习创建任务向量" class="headerlink" title="情境学习创建任务向量"></a>情境学习创建任务向量</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>大型语言模型 (LLM) 中的上下文学习 (ICL) 已成为一种强大的新学习范式。然而，其基本机制仍不清楚。<strong>特别是，将其映射到“标准”机器学习框架具有挑战性，在该框架中，人们使用训练集 S 在某个假设类中找到最佳拟合函数 f (x)</strong>。在这里，我们在这个问题上取得了进展，表明 ICL 学习的函数通常具有非常简单的结构：<strong>它们对应于变压器 LLM，其唯一输入是查询 x 和从训练集计算出的单个“任务向量”</strong>。因此，<strong>ICL 可以看作是将 S 压缩为单个任务向量 θ(S)，然后使用该任务向量来调制变压器以产生输出</strong>。我们通过一系列模型和任务的综合实验来支持上述主张。</p>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>大型语言模型在过去几年中得到了显着改进。这些模型的一个<strong>显着特性是它们可以从很少的演示中学习新规则</strong>。例如，可以使用输入“Apple → Red、Lime → Green、Corn →”提示模型并生成输出“Yellow”。因此，<strong>该模型仅基于两个示例就学习了映射，并且可以将其正确应用于新示例</strong>。这种能力被称为 InContext Learning (ICL)，已被广泛使用，产生了令人印象深刻的实证结果（Brown 等人，2020；Liu 等人，2023；Dong 等人，2022）。</p>
+<p>​       鉴于这一成功，人们自然会问 ICL 背后的根本机制是什么。即，模型内部如何使用演示 S 和查询 x 来产生所需的输出？在这里，我们利用统计学习理论中的假设类概念（Shalev-Shwartz 和 Ben-David，2014）。在学习理论公式中，人们通常考虑假设类 H，其中 H 的每个元素都是函数 h(x; θ)，对输入 x 进行运算，并由参数向量 θ 指定。例如，如果 x ∈ Rd，则类 H 可以是线性分类器的集合，由系数向量 θ 定义为 h(x; θ) = θ · x。学习算法寻找一个能很好地拟合训练集的元素 h ∈ H。这称为经验风险最小化。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105171853641-1699175934785-1.png" alt="image-20231105171853641"></p>
+<p>​       目前尚不清楚 ICL 是否以这种方式运行，<font color="red" size="4.5"> 因为预测是通过 T ([S, x]) 执行的，其中 T 通常是自回归变压器和[S, x] 是 S 和 x 中标记的串联 </font><strong><em>*。因此，在一般情况下，</em></strong>它可以是对 S 和 x 进行运算以产生输出的任意函数**。这可以包括“非参数”方法，例如最近邻法。最近的工作已经开始探索这个问题。例如，研究表明，当从头开始训练 Transformer 以在上下文中执行线性回归时，新兴的学习算法类似于随机梯度下降（Akyürek 等人，2022 年；von Oswald 等人，2022 年）。然而，对于执行更复杂的自然语言任务的法LLMs来说，根本不清楚假设空间可能是什么。</p>
+<p>​        在这项工作中，我们表明，<strong>在广泛的任务中，LLMs中的 ICL 可以被视为在非常自然的假设空间上工作</strong>。我们认为，<strong>给定训练集 S，变压器将其映射到“任务向量”θ(S)，该向量本质上表示 S.2 中描述的映射/规则</strong>。即，<strong>给定变压器 T 和向量 θ，我们可以构造实现该任务的新函数 f (x; θ)</strong>。<strong>函数 f 与应用于 x 的原始变换器非常相似，但没有演示，而是通过 θ 进行调制</strong>（见图 2）。</p>
+<p>​        我们的观点也与<strong>软提示</strong>有关（Lester et al., 2021），因为这两种方法都会<strong>针对特定任务调节变压器的功能</strong>。然而，<strong>在 ICL 中，任务向量是在前向传递中计算的，而不是进行微调的。</strong></p>
+<p>​        我们的贡献包括<strong>提出基于假设类的 ICL 机械观点</strong>，并进行实验来验证我们对一系列公开可用的LLMs和各种任务的观点。我们的结果进一步加深了对 ICL 的理解，并可能对LLMs有效适应执行特定任务具有实际意义。</p>
+<h2 id="2-A-Hypothesis-Class-View-of-ICL"><a href="#2-A-Hypothesis-Class-View-of-ICL" class="headerlink" title="2 A Hypothesis Class View of ICL"></a>2 A Hypothesis Class View of ICL</h2><p>受学习理论的假设类视图的启发，我们的目标<strong>是了解 ICL 是否将演示集 S 映射到查询 x 上的函数以及这种映射是如何发生的</strong>。具体来说，我们<strong>试图看看 ICL 是否将 S 转换为 θ——某个假设空间内函数的“参数”</strong>。我们的实证研究结果表明这种观点是适用的，揭示了 ICL 运行的假设空间的结构。</p>
+<h3 id="2-1Theoretical-Framework"><a href="#2-1Theoretical-Framework" class="headerlink" title="2.1Theoretical Framework"></a>2.1Theoretical Framework</h3><p>我们使用 <em>T</em> 表示仅解码器变压器 LLM，<em>S</em> 表示用作 ICL 输入的演示集（即训练示例），x 表示要求 ICL 提供输出的查询。我们使用 <em>T</em> ([<em>S</em>, x]) 表示 ICL 对 <em>S</em> 和 x 串联的输出。</p>
+<p>​        为了证明 ICL 在假设空间内运行，我们的目标是证明其基本机制可以分为两部分：</p>
+<ul>
+<li>一种“学习算法”（用 <em>A</em> 表示），将 <em>S</em> 映射到“任务向量”<em>θ</em>，独立于查询 x。鉴于注意力层可以访问 S 和 x，这种独立性并非微不足道。</li>
+<li>一个“规则应用”（用<em>f</em>表示），它基于<strong><em>θ</em></strong> ≡ <strong><em>A</em></strong>(<strong><em>S</em></strong>) 将查询x 映射到输出，而不直接依赖于<em>S</em>。同样，这种独立性并非微不足道。</li>
+</ul>
+<p>因此，我们考虑以下从一组演示和查询到预测输出的映射<em>：T</em> ([S, x]) = f (x; A(S))。如果我们可以将 LLM 的前向传递分解为上述两个部分，我们可以将 ICL 视为在以下假设类上运行： H = {f (·; θ) | θ}。在下一节中，我们提出这样一个类的实现。</p>
+<h3 id="2-2-A-proposed-Hypothesis-Class"><a href="#2-2-A-proposed-Hypothesis-Class" class="headerlink" title="2.2 A proposed Hypothesis Class"></a>2.2 A proposed Hypothesis Class</h3><p>上述框架有多种可能的实现，对应于 A 和 f 的不同选择。接下来我们描述我们关注的实现，这自然是从变压器架构中得出的。我们<strong>考虑如图 1 所示的 ICL 设置，其中输入以查询 x（即 Corn）结尾，后跟“→”符号</strong>。如上所述，我们将学习视为由两个步骤组成：<strong>根据训练样本 S 计算参数向量 θ，并将该参数向量定义的规则应用于查询 x</strong>。变压器执行此操作的一个简单方法<strong>可能是让 → 表示的前 L 层计算 θ，然后让其余层将 θ 和 x 作为输入并产生输出</strong>。参见图 1。回想一下，变压器在任何层都可以访问 S 和 x，这对我们的观点提出了挑战。</p>
+<p>​        在以下部分中，我们将解决这一挑战并提出验证我们观点的实验。也就是说，我们证明<strong>我们可以在执行 ICL 的 LLM 的前向传播中分离出我们提出的 A 和 f。我们还表明 θ 向量是可解释的并且对应于学习任务。</strong></p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105174538487-1699177540536-5.png" alt="image-20231105174538487"></p>
+<h2 id="3-Validity-of-the-Hypothesis-Class-View"><a href="#3-Validity-of-the-Hypothesis-Class-View" class="headerlink" title="3 Validity of the Hypothesis Class View"></a>3 Validity of the Hypothesis Class View</h2><p>我们首先证明，<strong>将前向传播分成两个不同的分量 A 和 f（在第 2.2 节中定义）可以保持 ICL 的高精度。</strong></p>
+<h3 id="3-1-Separating-A-and-f"><a href="#3-1-Separating-A-and-f" class="headerlink" title="3.1 Separating A and f"></a>3.1 Separating A and f</h3><p>我们在常规前向传递中面临一些挑战：<strong>首先，对应于 A 的初始 L 层，更新 → 的表示以创建 θ，可以处理查询 x。因此，它们可能依赖于 x，从而产生 θ 对 x 的不必要的依赖。</strong>其次，与 f 相对应的其余层可以直接访问 S，而不是仅使用 x 和 θ。</p>
+<p>​        我们提出以下过程来解决这些挑战：<strong>为了解决第一个问题，我们引入一个“虚拟查询”x′并使用该查询计算→的表示。我们使用前 L 层之后的 → 表示（使用 x′ 计算）作为向量 θ（如图 2 左侧所示）。另一种方法是阻止对 x 的关注，但这会导致性能不佳。为了解决在不允许直接依赖于 S 的情况下计算 f (x, θ) 的第二个问题，我们仅对 x 和 →,3 执行变换器的前向传递，并对我们之前在第 L 层提取的 θ 进行“修补”。</strong> →（图2右侧）.4</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105175112562-1699177874552-7.png" alt="image-20231105175112562"></p>
+<p>3.2</p>
+<h2 id="8-Conclusions"><a href="#8-Conclusions" class="headerlink" title="8 Conclusions"></a>8 Conclusions</h2><p>通过LLMs对 ICL 的探索，我们揭示了 ICL 学习机制的新视角。我们揭示了一个简单而优雅的结构：<strong>ICL 通过将给定的训练集压缩为单个任务向量来发挥作用，然后引导变压器根据给定的查询生成适当的输出</strong>。我们的工作为了解LLMs如何进行 ICL 奠定了基础。根据我们的发现，未来的工作可以集中于理解任务向量是如何构建的以及如何使用它来计算输出。</p>
+]]></content>
+      <categories>
+        <category>上下文学习</category>
+      </categories>
+      <tags>
+        <tag>EMNLP2023</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>忘掉你想忘掉的东西：LLMs的高效忘却</title>
     <url>/2023/11/06/wang-diao-ni-xiang-wang-diao-de-dong-xi-llms-de-gao-xiao-wang-que/</url>
     <content><![CDATA[<h1 id="忘掉你想忘掉的东西：LLMs的高效忘却"><a href="#忘掉你想忘掉的东西：LLMs的高效忘却" class="headerlink" title="忘掉你想忘掉的东西：LLMs的高效忘却"></a>忘掉你想忘掉的东西：LLMs的高效忘却</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>大型语言模型（LLM）在预训练和记忆各种文本数据方面取得了显着进展，然而，这个过程可能会遇到<strong>隐私问题</strong>和<strong>违反数据保护法规</strong>的问题。因此，<strong>从此类模型中轻松删除与个人用户相关的数据，同时在删除后不降低其预测质量的能力变得越来越重要</strong>。为了解决这些问题，在这项工作中，我们提出了一种有效的取消学习框架，<strong>通过将选择性师生目标学习的轻量级取消学习层引入到变压器中，可以有效地更新 LLM，而无需在数据删除后重新训练整个模型</strong>。此外，我们引入了<strong>一种融合机制来有效地结合不同的遗忘层，学习遗忘不同的数据集来处理一系列遗忘操作</strong>。<strong>分类和生成任务</strong>的实验证明了我们提出的方法与最先进的基线相比的有效性。</p>
@@ -1777,36 +1813,78 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
       </tags>
   </entry>
   <entry>
-    <title>情境学习创建任务向量</title>
-    <url>/2023/11/02/qing-jing-xue-xi-chuang-jian-ren-wu-xiang-liang/</url>
-    <content><![CDATA[<h1 id="情境学习创建任务向量"><a href="#情境学习创建任务向量" class="headerlink" title="情境学习创建任务向量"></a>情境学习创建任务向量</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>大型语言模型 (LLM) 中的上下文学习 (ICL) 已成为一种强大的新学习范式。然而，其基本机制仍不清楚。<strong>特别是，将其映射到“标准”机器学习框架具有挑战性，在该框架中，人们使用训练集 S 在某个假设类中找到最佳拟合函数 f (x)</strong>。在这里，我们在这个问题上取得了进展，表明 ICL 学习的函数通常具有非常简单的结构：<strong>它们对应于变压器 LLM，其唯一输入是查询 x 和从训练集计算出的单个“任务向量”</strong>。因此，<strong>ICL 可以看作是将 S 压缩为单个任务向量 θ(S)，然后使用该任务向量来调制变压器以产生输出</strong>。我们通过一系列模型和任务的综合实验来支持上述主张。</p>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>大型语言模型在过去几年中得到了显着改进。这些模型的一个<strong>显着特性是它们可以从很少的演示中学习新规则</strong>。例如，可以使用输入“Apple → Red、Lime → Green、Corn →”提示模型并生成输出“Yellow”。因此，<strong>该模型仅基于两个示例就学习了映射，并且可以将其正确应用于新示例</strong>。这种能力被称为 InContext Learning (ICL)，已被广泛使用，产生了令人印象深刻的实证结果（Brown 等人，2020；Liu 等人，2023；Dong 等人，2022）。</p>
-<p>​       鉴于这一成功，人们自然会问 ICL 背后的根本机制是什么。即，模型内部如何使用演示 S 和查询 x 来产生所需的输出？在这里，我们利用统计学习理论中的假设类概念（Shalev-Shwartz 和 Ben-David，2014）。在学习理论公式中，人们通常考虑假设类 H，其中 H 的每个元素都是函数 h(x; θ)，对输入 x 进行运算，并由参数向量 θ 指定。例如，如果 x ∈ Rd，则类 H 可以是线性分类器的集合，由系数向量 θ 定义为 h(x; θ) = θ · x。学习算法寻找一个能很好地拟合训练集的元素 h ∈ H。这称为经验风险最小化。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105171853641-1699175934785-1.png" alt="image-20231105171853641"></p>
-<p>​       目前尚不清楚 ICL 是否以这种方式运行，<font color="red" size="4.5"> 因为预测是通过 T ([S, x]) 执行的，其中 T 通常是自回归变压器和[S, x] 是 S 和 x 中标记的串联 </font><strong><em>*。因此，在一般情况下，</em></strong>它可以是对 S 和 x 进行运算以产生输出的任意函数**。这可以包括“非参数”方法，例如最近邻法。最近的工作已经开始探索这个问题。例如，研究表明，当从头开始训练 Transformer 以在上下文中执行线性回归时，新兴的学习算法类似于随机梯度下降（Akyürek 等人，2022 年；von Oswald 等人，2022 年）。然而，对于执行更复杂的自然语言任务的法LLMs来说，根本不清楚假设空间可能是什么。</p>
-<p>​        在这项工作中，我们表明，<strong>在广泛的任务中，LLMs中的 ICL 可以被视为在非常自然的假设空间上工作</strong>。我们认为，<strong>给定训练集 S，变压器将其映射到“任务向量”θ(S)，该向量本质上表示 S.2 中描述的映射/规则</strong>。即，<strong>给定变压器 T 和向量 θ，我们可以构造实现该任务的新函数 f (x; θ)</strong>。<strong>函数 f 与应用于 x 的原始变换器非常相似，但没有演示，而是通过 θ 进行调制</strong>（见图 2）。</p>
-<p>​        我们的观点也与<strong>软提示</strong>有关（Lester et al., 2021），因为这两种方法都会<strong>针对特定任务调节变压器的功能</strong>。然而，<strong>在 ICL 中，任务向量是在前向传递中计算的，而不是进行微调的。</strong></p>
-<p>​        我们的贡献包括<strong>提出基于假设类的 ICL 机械观点</strong>，并进行实验来验证我们对一系列公开可用的LLMs和各种任务的观点。我们的结果进一步加深了对 ICL 的理解，并可能对LLMs有效适应执行特定任务具有实际意义。</p>
-<h2 id="2-A-Hypothesis-Class-View-of-ICL"><a href="#2-A-Hypothesis-Class-View-of-ICL" class="headerlink" title="2 A Hypothesis Class View of ICL"></a>2 A Hypothesis Class View of ICL</h2><p>受学习理论的假设类视图的启发，我们的目标<strong>是了解 ICL 是否将演示集 S 映射到查询 x 上的函数以及这种映射是如何发生的</strong>。具体来说，我们<strong>试图看看 ICL 是否将 S 转换为 θ——某个假设空间内函数的“参数”</strong>。我们的实证研究结果表明这种观点是适用的，揭示了 ICL 运行的假设空间的结构。</p>
-<h3 id="2-1Theoretical-Framework"><a href="#2-1Theoretical-Framework" class="headerlink" title="2.1Theoretical Framework"></a>2.1Theoretical Framework</h3><p>我们使用 <em>T</em> 表示仅解码器变压器 LLM，<em>S</em> 表示用作 ICL 输入的演示集（即训练示例），x 表示要求 ICL 提供输出的查询。我们使用 <em>T</em> ([<em>S</em>, x]) 表示 ICL 对 <em>S</em> 和 x 串联的输出。</p>
-<p>​        为了证明 ICL 在假设空间内运行，我们的目标是证明其基本机制可以分为两部分：</p>
-<ul>
-<li>一种“学习算法”（用 <em>A</em> 表示），将 <em>S</em> 映射到“任务向量”<em>θ</em>，独立于查询 x。鉴于注意力层可以访问 S 和 x，这种独立性并非微不足道。</li>
-<li>一个“规则应用”（用<em>f</em>表示），它基于<strong><em>θ</em></strong> ≡ <strong><em>A</em></strong>(<strong><em>S</em></strong>) 将查询x 映射到输出，而不直接依赖于<em>S</em>。同样，这种独立性并非微不足道。</li>
+    <title>我们可以编辑多模态大型语言模型吗？</title>
+    <url>/2023/11/02/wo-men-ke-yi-bian-ji-duo-mo-tai-da-xing-yu-yan-mo-xing-ma/</url>
+    <content><![CDATA[<h1 id="我们可以编辑多模态大型语言模型吗？"><a href="#我们可以编辑多模态大型语言模型吗？" class="headerlink" title="我们可以编辑多模态大型语言模型吗？"></a>我们可以编辑多模态大型语言模型吗？</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>在本文中，我们重点关注编辑多模态大型语言模型（MLLM）。与编辑单模态LLMs相比，多模态模型编辑更具挑战性，需要在编辑过程中进行更高水平的审查和仔细考虑。为了促进这一领域的研究，我们<span style="background-color: #ff666680">构建了一个名为 MMEdit 的新基准，用于编辑多模式LLMs并建立一套创新的评估指标</span>。我们进行了涉及各种模型编辑基线的综合实验，并分析了编辑不同组件对多模式LLMs的影响。根据经验，我们注意到<span style="background-color: #ff666680">以前的基线可以在一定程度上实现多模态 LLM 的编辑，但效果仍然差强人意，这表明这项任务的潜在难度。</span>我们希望我们的工作能够为 NLP 社区提供见解1。</p>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>随着大型语言模型 (LLM) 的广泛部署（Zhao 等人，2023），在不产生大量再培训成本的情况下保持其知识准确和最新的必要性变得越来越重要（Sinitsin 等人，2020）。<span style="background-color: #2ea8e580">先前的研究引入了知识编辑方法，旨在逐步向语言模型注入一组新的事实</span>（Mitchell 等人，2022a；Han 等人，2023；Hartvigsen 人，2022；Zhong 等人，2023；Gandikota等人，2023；姚等人，2023）。</p>
+<pre><code>  与单模态模型编辑不同，多模态LLMs的编辑任务因其固有的多样性和复杂性而面临相当大的挑战。具体来说，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;多模式模型的错误输出可能源于各种模式的协同效应。输出不正确可能不仅仅源于LLMs，类似于误读或误识别等人为错误&lt;/span&gt;（例如，色盲影响图像中的颜色识别）。如图1所示，在编辑之前，模型将物体错误地识别为“梯子”而不是正确的“障碍物”，从而导致错误的预测。编辑后，模型准确识别了“障碍”。请注意，多模态LLMs（Yin et al., 2023）的效用正在增加，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;但缺乏相应的数据集资源和用于编辑多模态大语言模型的基准。&lt;/span&gt;
+
+ 为了促进这一领域的研究，我们第一步构建了一个多模态模型编辑基准：&lt;span style=&quot;background-color: #ff666680&quot;&gt;称为 MMEdit，它包含两个子任务：编辑 VQA 和编辑图像标题。&lt;/span&gt;具体来说，我们&lt;span style=&quot;background-color: #ff666680&quot;&gt;遵循单模态模型编辑方法（Mitchell et al., 2022a；Cao et al., 2021；Mitchell et al., 2022b）来构建数据集，这扩展了之前的评估原则，即 Reliability2、Locality3 和通用性4，多模式设置。对于可靠性评估，我们从严格的数据收集开始，收集表现不佳的多模态模型数据来创建专用的可靠性编辑数据集（§3.2.1）。对于局部性评估，我们将其分为文本局部性和多模态局部性，以评估多模态 LLM 的稳定性（第 3.2.2 节）。对于通用性评估，与局部性类似，我们将其分为文本通用性和多模态通用性，并利用 ChatGLM (Du et al., 2022) 和稳定扩散 (Rombach et al., 2022) 生成重新措辞的文本以及重新措辞的图像进行评估（第 3.2.3 节）。我们评估了 MMEdit 上的几种知识编辑方法。&lt;/span&gt;根据经验，我们注意到&lt;span style=&quot;background-color: #5fb23680&quot;&gt;当前的编辑方法对于编辑多模态语言模型中的文本模型有效，但对于编辑视觉模块则不那么有效&lt;/span&gt;。例如，在编辑BLIP-2模型的语言模块时，MEND的可靠性可以达到92.6%，但在编辑视觉模块时只能达到14.1%，表明该任务的潜在难度和机遇。总的来说，我们的主要贡献如下：
+</code></pre><ul>
+<li>我们迈出了第一步，研究编辑多模态LLMs，将模型编辑扩展到多模态设置。</li>
 </ul>
-<p>因此，我们考虑以下从一组演示和查询到预测输出的映射<em>：T</em> ([S, x]) = f (x; A(S))。如果我们可以将 LLM 的前向传递分解为上述两个部分，我们可以将 ICL 视为在以下假设类上运行： H = {f (·; θ) | θ}。在下一节中，我们提出这样一个类的实现。</p>
-<h3 id="2-2-A-proposed-Hypothesis-Class"><a href="#2-2-A-proposed-Hypothesis-Class" class="headerlink" title="2.2 A proposed Hypothesis Class"></a>2.2 A proposed Hypothesis Class</h3><p>上述框架有多种可能的实现，对应于 A 和 f 的不同选择。接下来我们描述我们关注的实现，这自然是从变压器架构中得出的。我们<strong>考虑如图 1 所示的 ICL 设置，其中输入以查询 x（即 Corn）结尾，后跟“→”符号</strong>。如上所述，我们将学习视为由两个步骤组成：<strong>根据训练样本 S 计算参数向量 θ，并将该参数向量定义的规则应用于查询 x</strong>。变压器执行此操作的一个简单方法<strong>可能是让 → 表示的前 L 层计算 θ，然后让其余层将 θ 和 x 作为输入并产生输出</strong>。参见图 1。回想一下，变压器在任何层都可以访问 S 和 x，这对我们的观点提出了挑战。</p>
-<p>​        在以下部分中，我们将解决这一挑战并提出验证我们观点的实验。也就是说，我们证明<strong>我们可以在执行 ICL 的 LLM 的前向传播中分离出我们提出的 A 和 f。我们还表明 θ 向量是可解释的并且对应于学习任务。</strong></p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105174538487-1699177540536-5.png" alt="image-20231105174538487"></p>
-<h2 id="3-Validity-of-the-Hypothesis-Class-View"><a href="#3-Validity-of-the-Hypothesis-Class-View" class="headerlink" title="3 Validity of the Hypothesis Class View"></a>3 Validity of the Hypothesis Class View</h2><p>我们首先证明，<strong>将前向传播分成两个不同的分量 A 和 f（在第 2.2 节中定义）可以保持 ICL 的高精度。</strong></p>
-<h3 id="3-1-Separating-A-and-f"><a href="#3-1-Separating-A-and-f" class="headerlink" title="3.1 Separating A and f"></a>3.1 Separating A and f</h3><p>我们在常规前向传递中面临一些挑战：<strong>首先，对应于 A 的初始 L 层，更新 → 的表示以创建 θ，可以处理查询 x。因此，它们可能依赖于 x，从而产生 θ 对 x 的不必要的依赖。</strong>其次，与 f 相对应的其余层可以直接访问 S，而不是仅使用 x 和 θ。</p>
-<p>​        我们提出以下过程来解决这些挑战：<strong>为了解决第一个问题，我们引入一个“虚拟查询”x′并使用该查询计算→的表示。我们使用前 L 层之后的 → 表示（使用 x′ 计算）作为向量 θ（如图 2 左侧所示）。另一种方法是阻止对 x 的关注，但这会导致性能不佳。为了解决在不允许直接依赖于 S 的情况下计算 f (x, θ) 的第二个问题，我们仅对 x 和 →,3 执行变换器的前向传递，并对我们之前在第 L 层提取的 θ 进行“修补”。</strong> →（图2右侧）.4</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105175112562-1699177874552-7.png" alt="image-20231105175112562"></p>
-<p>3.2</p>
-<h2 id="8-Conclusions"><a href="#8-Conclusions" class="headerlink" title="8 Conclusions"></a>8 Conclusions</h2><p>通过LLMs对 ICL 的探索，我们揭示了 ICL 学习机制的新视角。我们揭示了一个简单而优雅的结构：<strong>ICL 通过将给定的训练集压缩为单个任务向量来发挥作用，然后引导变压器根据给定的查询生成适当的输出</strong>。我们的工作为了解LLMs如何进行 ICL 奠定了基础。根据我们的发现，未来的工作可以集中于理解任务向量是如何构建的以及如何使用它来计算输出。</p>
+<!---->
+<ul>
+<li>我们提出了MMEdit，一个新的基准，用于评估多模态模型编辑方法的可靠性、局部性和通用性。</li>
+</ul>
+<!---->
+<ul>
+<li>我们使用各种基线进行实验，证明虽然当前的方法可以在一定程度上帮助多模式编辑，但结果仍然达不到完全满意的程度。我们将公开代码和数据集以用于未来的研究目的。</li>
+</ul>
+<h2 id="2-Related-Work"><a href="#2-Related-Work" class="headerlink" title="2 Related Work"></a>2 Related Work</h2><h3 id="2-1-Multimodal-Language-Models"><a href="#2-1-Multimodal-Language-Models" class="headerlink" title="2.1 Multimodal Language Models"></a>2.1 Multimodal Language Models</h3><pre><code> 多模态学习 (MML)（Xu 等人，2022a；Yin 等人，2023）提供了一种构建 AI 模型的整体方法，该模型可以从各种数据模态中提取和关联信息。由于其社会意义，MML 在研究界站稳了脚跟，在过去十年中巩固了自己作为一个重要研究领域的地位。视&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;觉语言预训练是MML的重要分支之一，旨在学习在各种视觉和语言任务上具有改进性能的多模态基础模型&lt;/span&gt;。 Vision Transformer (ViT)（Dosovitskiy et al., 2021）&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;是一项开创性的工作，贡献了端到端将 Transformers 的编码器应用于图像的解决方案。&lt;/span&gt; CLIP（Radford et al., 2021）&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;提出了一种方法，使用多模态预训练将分类转换为检索任务，使预训练模型能够解决零样本识别问题&lt;/span&gt;。最近，LLaMA (Touvron et al., 2023)、BLOOM (Scao et al., 2022) 和 ChatGPT (OpenAI, 2022) 等 LLM 的进步得到了扩大训练数据和增加参数的支持，最近取得了重大成功。这些模型展示了令人印象深刻的语言理解、生成和知识推理能力，增强了它们理解自然语言和生成高质量、基于上下文的文本的能力。大型语言模型的发展刺激了自回归语言模型作为视觉语言任务中的解码器的广泛使用。&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;利用跨模态迁移，这种方法可以实现语言和多模态领域之间的知识共享&lt;/span&gt;（Gao et al., 2023; Liu et al., 2023; Li et al., 2023a; Ye et al., 2023; Zhu et al., 2023；Li 等人，2023b；Zhang 等人，2023）。
+</code></pre><h3 id="2-2-Model-Editing"><a href="#2-2-Model-Editing" class="headerlink" title="2.2 Model Editing"></a>2.2 Model Editing</h3><pre><code> LLMs（Zhao et al., 2023）主要从训练语料库中获取知识。然而，数据集的质量并不总是得到保证，可能会将有害或不正确的信息集成到模型中（Hernandez 等人，2023）。&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;一种解决方案是使用更新的知识重新训练模型，尽管这可能成本高昂且难以实施&lt;/span&gt;。或者，&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;可以考虑使用一些更新的事实进行微调，但它存在过度拟合和灾难性遗忘的风险&lt;/span&gt;（Zhai et al., 2023）。为了解决这些问题，（Sinitsin et al., 2020）提出了模型编辑，旨在高效、准确地改变模型中存储的事实知识。这种方法应用于各个领域（Mao et al., 2023; Onoe et al., 2023; Xu et al., 2022b; Wang et al., 2023a; Li et al., 2023c），并且研究数量不断增加调查编辑的影响（Ilharco 等人，2023；Gupta 等人，2023；Hase 等人，2023；Cohen 等人，2023；Wu 等人，2023；Wang 等人，2023b；Gandikota 等人等人，2023；Li 等人，2023d）。目前，模型编辑方法主要有三种类型：&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;1）元学习方法，2）定位然后编辑方法，3）上下文知识编辑方法。&lt;/span&gt;
+</code></pre><p><strong>元学习方法</strong>。 MEND（Mitchell 等人，2022a）和知识编辑器 (KE)（Cao 等人，2021）提出了<span style="background-color: #2ea8e580">涉及外部编辑器的方法，能够学习用于知识更新的最佳参数集 θ，同时施加约束以保持模型稳定性。</span> CaliNET (Dong et al., 2022) 和 T-Patcher (Huang et al., 2023) 从 (Dai et al., 2022) 中汲取灵感，<span style="background-color: #2ea8e580">将额外的可训练参数引入到预训练语言模型的前馈模块中。</span> SERAC（Mitchell 等人，2022b）<span style="background-color: #2ea8e580">利用显式记忆来存储编辑，并学习对它们进行推理，以根据需要调整基本模型的预测。</span></p>
+<p><strong>定位然后编辑方法</strong>。 ROME（Meng et al., 2022a）<span style="background-color: #2ea8e580">提出了采用因果中介分析来识别编辑区域的方法。</span> ROME 发现记忆的事实关联可以精确定位到 GPT 模型中的特定位置。然而，ROME 的一个显着限制是它一次只能编辑一个事实。为了解决这个问题，Meng 等人。 (2022b)提出了一种称为MEMIT的新方法，<span style="background-color: #2ea8e580">它是之前工作ROME的继承者，它对单层的MLP权重进行rankone修改，以将内存直接写入模型中。</span></p>
+<p><strong>上下文知识编辑方法</strong>。 InContext Learning (ICL)（Brown et al., 2020）<span style="background-color: #2ea8e580">表示一种免训练范式，其中知识是从输入上下文中直接串联的演示中获取的</span>。最近出现了一种新颖的编辑范式，它<span style="background-color: #2ea8e580">利用LLMs理解上下文的能力（Zheng et al., 2023），从而实现基于上下文的模型编辑，指导模型的生成过程，并提供高效、轻量级的模型方法编辑</span>。迄今为止的模型编辑方法主要迎合单模态场景，在多模态编辑方面留下了空白。据我们所知，我们是第一个研究LLMs多模式模型编辑的人，并为促进该领域的研究提供了新的基准。</p>
+<h2 id="3-Editing-Multimodal-LLMs"><a href="#3-Editing-Multimodal-LLMs" class="headerlink" title="3 Editing Multimodal LLMs"></a>3 Editing Multimodal LLMs</h2><p>我们在图 2 中说明了多模态编辑的建议任务。我们将介绍任务定义（§3.1）、（§3.2）中的数据集构建细节、多模态模型（§3.3）以及我们在实验。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/KQ9KJ8DQ.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;KQ9KJ8DQ&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22MS6FUQ8I%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%223%22%2C%22position%22%3A%7B%22pageIndex%22%3A2%2C%22rects%22%3A%5B%5B68.654%2C497.467%2C526.731%2C777.852%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%223%22%7D%7D&quot; width=&quot;763&quot; height=&quot;467&quot; src=&quot;attachments/KQ9KJ8DQ.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<h3 id="3-1-Task-Definition"><a href="#3-1-Task-Definition" class="headerlink" title="3.1 Task Definition"></a>3.1 Task Definition</h3><p>假设我们有一个由 <em>θ </em>参数化的多模态 LLM<em> f </em>（由两部分组成，由 θ<sub>vision</sub> 和 θ<sub>text</sub> 参数化的 f<sub>vision</sub> 和 f<sub>text </sub>），将输入 i<sub>e</sub> 和 x<sub>e</sub> 映射到 y<sub>o</sub> 的预测，其中 i<sub>e </sub>指的是编辑图像输入，xe 指的是编辑文本提示输入和 y<sub>o</sub> 表示为原始输出。我们将 M 表示为特定指标的符号表示，下标表示特定度量，上标表示变化编辑数据。我们准备第 3.2.1 节中所述的编辑数据集，其表示为 Dedit。受到姚等人的启发。 （2023），我们引入了一系列多模式模型编辑指标。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/ZFVB46CA.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;ZFVB46CA&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22MJQK4385%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B64.853%2C526.008%2C292.5%2C791.596%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;379&quot; height=&quot;442&quot; src=&quot;attachments/ZFVB46CA.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><strong>可靠性</strong>。需要编辑可靠性才能将预测从 y<sub>o</sub> 更改为 y<sub>e</sub>。直观上，我们需要的是更新后的 θe，其中 f（即 x<sub>e</sub>;θ<sub>e</sub>）= y<sub>e</sub>。为了衡量可靠性，我们使用编辑准确性，如下所述：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/HSTRNPML.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;HSTRNPML&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22NS7JGJWI%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B68.824%2C342.919%2C292.059%2C378.214%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;372&quot; height=&quot;59&quot; src=&quot;attachments/HSTRNPML.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>其中θ<sub>e</sub>指的是编辑后的参数。</p>
+<p><strong>局部性</strong>。为了保持模型的稳定性，必须最大限度地减少编辑对模型更广泛的知识库造成的意外副作用。为了实现这一目标，我们引入了两个指标：M <sup>Text</sup> <sub>loc</sub> (T-Locality) 和 M<sup>Image</sup> <sub>loc</sub> (M-Locality)，这两个指标都是为了在编辑过程中保持模型的稳定性。鉴于多模态语言模型中的知识是从LLMs继承的，保护这些知识至关重要。考虑到这一目标，我们搁置了模型的视觉辨别模块，而是采用基本的问答数据集 D<sub>loc-t</sub>，如第 3.2.2 节中所述。我们定义问题为x，答案为y，如下：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/J24EN8UP.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;J24EN8UP&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22M2ZHI4QM%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B67.941%2C93.214%2C292.941%2C133.361%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;375&quot; height=&quot;67&quot; src=&quot;attachments/J24EN8UP.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>视觉编码器在多模态语言模型中发挥着关键作用，将将图像转换为矢量表示，以便与自然语言文本共同编码。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/IPZFZHUW.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;IPZFZHUW&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22ZIQHSJG7%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B301.765%2C653.066%2C528.529%2C777.919%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;378&quot; height=&quot;208&quot; src=&quot;attachments/IPZFZHUW.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>因此，我们必须考虑对该模块进行任何修改的潜在后果。我们构建表示为 D<sub>loc-v</sub> 的数据集用于测试 MImage loc ，并计算如下：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/4NC86SS7.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;4NC86SS7&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22K2BYGI7E%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B302.647%2C522.478%2C532.941%2C557.772%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;384&quot; height=&quot;59&quot; src=&quot;attachments/4NC86SS7.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>其中（iv，xv，yv）是范围外数据，θe表示编辑数据更新的参数（即xe，ye)。</p>
+<p><strong>泛化性</strong>。在整个编辑过程中，仅仅修改个别错误的输入是不够的。修订后的模型还应保留泛化能力，并始终为等效输入（例如改写的句子）生成一致的输出，如图 3 所示。虽然以前的单模态模型编辑任务仅需要考虑改写的文本，但多模态场景需要泛化以及图像。为了解决这个问题，我们引入了两个泛化考虑因素：MText gen (TGenerality) 和 MImage gen (M-Generality)，其表示如下：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/BS3DHYZH.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;BS3DHYZH&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22SSPQQ5PC%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B303.088%2C236.596%2C527.206%2C296.596%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;374&quot; height=&quot;100&quot; src=&quot;attachments/BS3DHYZH.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>其中 ir 表示重新表述的图像，xr 指重新表述的文本提示，N (x) 表示 x 范围内的对象。</p>
+<h3 id="3-2-Datasets"><a href="#3-2-Datasets" class="headerlink" title="3.2 Datasets"></a>3.2 Datasets</h3><p>我们构建的数据集MMEdit主要包含两个子任务：编辑VQA（E-VQA）和编辑图像标题（E-IC）。</p>
+<h4 id="3-2-1-Reliability-Dataset-Construction"><a href="#3-2-1-Reliability-Dataset-Construction" class="headerlink" title="3.2.1 Reliability Dataset Construction"></a>3.2.1 Reliability Dataset Construction</h4><p>为了对我们的实验进行基准测试，我们选择了两个常见的多模态任务：视觉问答（VQA）（Antol et al., 2015）和图像</p>
+<p><img src="../imgs/$%7Bfiilename%7D/TT279E4N.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;TT279E4N&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%229KCXYY3D%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%225%22%2C%22position%22%3A%7B%22pageIndex%22%3A4%2C%22rects%22%3A%5B%5B60%2C488.39%2C297%2C778.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%225%22%7D%7D&quot; width=&quot;395&quot; height=&quot;483&quot; src=&quot;attachments/TT279E4N.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>字幕（Herdade 等人，2019）。 <span style="background-color: #2ea8e580">VQA 旨在设计一种算法，不仅可以理解图像中的视觉内容，还可以理解用于查询该图像的自然语言，并随后生成这些查询的精确答案</span>。<span style="background-color: #2ea8e580">图像字幕是设计能够理解图像视觉内容的算法，随后用自然语言生成连贯且精确的图像描述</span>。在本研究中，我们选择 BLIP-2 OPT。我们的基础编辑数据源自两个评估数据集的次优条目，即 VQAv2（Goyal 等人，2017）和 COCO Caption（Chen 等人，2015)。</p>
+<pre><code> 除了基本的编辑数据之外，利用其他数据也至关重要。这些数据不仅有助于编辑过程，还验证更改的有效性，评估模型编辑的稳定性和通用性。
+</code></pre><h4 id="3-2-2-Locality-Dataset-Construction"><a href="#3-2-2-Locality-Dataset-Construction" class="headerlink" title="3.2.2 Locality Dataset Construction"></a>3.2.2 Locality Dataset Construction</h4><p>我们必须仔细考虑多模态模型中编辑对语言功能的影响，<span style="background-color: #5fb23680">类似于我们如何评估手术后个体大脑的各个认知区域。</span></p>
+<p><strong>文本局部性数据集</strong>。为了评估语言模型的稳定性，我们利用之前在 MEND 中使用的 NQ 数据集（Kwiatkowski 等人，2019）作为模型内 LLM 组件稳定性的基准。我们专门使用模型的输出预编辑和后期编辑来构建 KL 散点图，从而促进对模型编辑的约束。此外，我们还计算了保持 top-1 状态的实例比例，进一步量化了模型的稳定性。</p>
+<p><strong>多模态局部性数据集</strong>。同样，验证编辑对视觉模块的影响也至关重要。因此，我们在多模态领域使用简单的数据集 OK-VQA（Marino 等人，2019），作为多模态视觉模块局部性的度量。我们再次在编辑过程之前和之后使用 logits 更新 KL 离散度约束。</p>
+<h4 id="3-2-3-Generality-Dataset-Construction"><a href="#3-2-3-Generality-Dataset-Construction" class="headerlink" title="3.2.3 Generality Dataset Construction"></a>3.2.3 Generality Dataset Construction</h4><p>我们在多模态模型中提出了两种形式的通用性。共性数据集构建的整体流程如图4所示。</p>
+<p><strong>文本泛化数据集</strong>。值得注意的是，LLMs表现出强大的会话能力和强大的解决问题的能力，这使我们能够制定任务指令，从而指导模型生成类似的文本输入。对于 E-VQA 任务，我们利用 ChatGLM（Du et al., 2022；Zeng et al., 2022）生成类似的查询。然而，对于E-IC任务，由于提示的简洁和相对直接，模型生成的输出质量并不令人满意。因此，我们采用手动编写的包含20条提示的模板来随机替换原来的提示。</p>
+<p><strong>视觉泛化数据集</strong>。近年来，<span style="background-color: #2ea8e580">扩散模型（Ho et al., 2020）在图像生成领域取得了巨大成功。超越最初最先进的模型</span>：生成对抗网络（GAN）模型（Goodfellow 等人，2014）。扩散模型在许多图像生成任务中表现出色，并在各个应用领域中表现出了值得称赞的性能。<span style="background-color: #2ea8e580">稳定扩散（Rombach 等人，2022）是一种潜在的文本到图像扩散模型，能够根据给定的文本输入生成逼真的图像</span>。我们利用稳定扩散 2.1 来生成重新解释的图像。该数据集利用 COCO 数据集的标题描述来评估模型的图像泛化能力。</p>
+<h3 id="3-3-Multimodal-Language-Models"><a href="#3-3-Multimodal-Language-Models" class="headerlink" title="3.3 Multimodal Language Models"></a>3.3 Multimodal Language Models</h3><p><strong>BLIP-2 OPT</strong>。 BLIP-2（Li et al., 2023b）<span style="background-color: #2ea8e580">是一种通用且高效的预训练策略，可从现成的冻结预训练图像编码器和冻结大型语言模型引导视觉语言预训练。该模型利用轻量级查询转换器来弥合视觉模态和文本模态之间的差距，并在各种视觉语言任务上实现最先进的性能</span>。我们选择 BLIP-2 OPT 作为基本编辑模型，它在视觉模块中利用 ViT-L，并选择无监督训练的 OPT 模型用于基于解码器的 LLM。迷你GPT-4。</p>
+<p><strong>MiniGPT-4</strong>（Zhu et al., 2023）是一种类似于 BLIP-2 的有效视觉语言模型，利用冷冻视觉编码器与冷冻 Vicuna（Chiang et al., 2023）相结合。据报道，基于 LLaMA 构建的 Vicuna 根据 GPT-4 的评估标准达到了 ChatGPT 90% 的性能。 MiniGPT-4 添加了一个投影层，以使编码的视觉特征与 Vicuna 语言模型保持一致。 MiniGPT-4 采用与 BLIP-2 相同的预训练视觉组件，由 EVA-CLIP（Sun 等人，2023）的 Vit-G/14 和 Q-Former 组成。</p>
+<h3 id="3-4-Baselines"><a href="#3-4-Baselines" class="headerlink" title="3.4 Baselines"></a>3.4 Baselines</h3><p><strong>Finetune</strong>。微调已成为一种广泛采用的策略，用于使预训练的语言模型适应特定任务或领域（Cortes 等人，2015）。在我们的探索中，我们深入研究了两种不同的微调方法：一种专注于语言模型的最后一层。以BLIP-2 OPT模型为例，我们对OPT模型的第31个解码器层进行微调。另一个目标是多模态语言模型中的视觉块，具体来说，我们微调 Q-former 模型以过度拟合编辑数据集。</p>
+<p><strong>MEND</strong>。具有梯度分解的模型编辑器网络（Mitchell 等人，2022a）使用单个输入输出对对语言模型进行高效的本地编辑。本质上，MEND 学习转换微调 LLM 的梯度，它利用梯度的低秩分解。</p>
+<p><strong>KE</strong>。 KE（Cao et al., 2021）是一种可以编辑语言模型中错误知识而无需重新训练整个模型的方法。 KE 利用具有约束优化的超网络（双向 LSTM），用于预测推理过程中的权重更新。</p>
+<p><strong>SERAC</strong>。 SERAC（Mitchell 等人，2022b）引入了一种基于内存的模型编辑方法，该方法利用显式内存系统来缓存编辑。该内存随后用于在推理过程中调整基本模型的输出。该系统利用一个小型辅助范围分类器和反事实模型。范围分类器的作用是确定输入是否在内存缓存的范围内。如果在此范围内找到输入，则会将其与最相关的缓存项结合起来，并输入到反事实模型中进行预测。</p>
+<p><strong>In-Context Knowledge Editing.</strong>。上下文知识编辑（IKE）（Zheng et al., 2023）构造 k 个演示 C = {c1, . 。 。 , ck }，遵循 Liu 等人中概述的方法。 （2022）。该方法采用基于余弦相似度的无监督检索器，在将事实 f = (x*, y*) 注入语言模型之前从训练集中获取演示。 x* 是探索模型中事实知识的提示（例如，美国总统是），y* 将是编辑目标乔·拜登。上下文演示的排名也取决于余弦相似度：cos(c1, f ) &lt; cos(c2, f ) &lt; · · · &lt; cos(ck, f )。其中 c1, . 。 。 , ck 在上下文中从左到右顺序排列。演示 C 可以被视为外部增强的知识库，主要设计用于指导 LM 内的生成。其最终目标是当提示符x落在目标提示符x*的编辑范围内时，最大化P(y|x,f,C)。</p>
+<h2 id="4-Experiments"><a href="#4-Experiments" class="headerlink" title="4 Experiments"></a>4 Experiments</h2><h3 id="4-1-Results"><a href="#4-1-Results" class="headerlink" title="4.1 Results"></a>4.1 Results</h3><p>在这一部分中，我们对 MMEdit 上的多种编辑方法进行了比较分析。这些比较的结果如表2所示。之后，我们深入研究了实验结果的三个指标，包括可靠性、局部性和通用性三个方面。此外，我们通过文本和视觉方式分析局部性和通用性，并在图 6 中提供了几个编辑案例。</p>
+<p><strong>可靠性</strong>。从结果来看，<span style="background-color: #ff666680">所有模型编辑方法在可靠性方面均优于基本方法</span>。特别是，<span style="background-color: #ff666680">利用外部存储器进行编辑的 IKE 和 SERAC 方法在多模态语言中表现出了值得称赞的性能楷模</span>。我们<span style="background-color: #ff666680">观察到微调方法的性能比模型编辑方法差</span>。请注意，<span style="background-color: #5fb23680">仅微调 LLM 或模态融合模块的参数并不能充分捕获多模态数据的特征</span>。我们分析原因为如下：<span style="background-color: #5fb23680">用于微调的数据与原始模型有较大差异，例如Q-former和OPT模型，需要有效协作。简单地微调这些模块之一可能无法准确捕获特定于任务的特征。另一方面，微调所有模块会产生大量的资源开销</span>。此外，<span style="background-color: #ff666680">根据我们的实验结果，我们观察到微调可能会导致原始模型发生重大变化，通常会导致其他知识的丢失，在多模式数据集中尤其明显。</span></p>
+<p><img src="../imgs/$%7Bfiilename%7D/WSEXRRE8.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;WSEXRRE8&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%229DEQKYBI%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%227%22%2C%22position%22%3A%7B%22pageIndex%22%3A6%2C%22rects%22%3A%5B%5B68.077%2C533.813%2C530.769%2C783.044%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%227%22%7D%7D&quot; width=&quot;771&quot; height=&quot;415&quot; src=&quot;attachments/WSEXRRE8.png&quot; ztype=&quot;zimage&quot;&gt;"><br><strong>局部性</strong>。<span style="background-color: #ff666680">几种传统的编辑方法仍然适用于多模式编辑</span>，这对于有效修改模型内的知识并纠正其输出很有价值。然而，IKE和SERAC尽管在可靠性方面表现出色，但由于缺乏对M-Locality的约束而在M-Locality上表现不佳，<span style="background-color: #5fb23680">这表明尽管这些基于外部存储器的编辑技术无疑成功地修复了输出，但它们在稳定内部模型中的知识还有改进的空间。</span>对于T-Locality，大多数模型编辑方法都获得了良好的性能，而IKE再次表现不佳。根本原因是其他三种方法对T-Locality施加了约束，而IKE作为InContext Learning方法缺乏鲁棒的约束机制，导致性能不佳。</p>
+<p><strong>泛化</strong>。我们在 E-VQA 中与 MiniGPT-4 进行了各种方法的文本和图像泛化能力的比较探索。请注意，<span style="background-color: #ff666680">KE 往往表现出较低程度的图像泛化，这主要是由于其在训练阶段对 M 局部性的固有考虑。</span>因此，<span style="background-color: #ff666680">与基于记忆的方法相比，元学习方法的图像泛化效率往往较低。另一方面，基于内存的方法所表现出的卓越图像泛化能力是以牺牲 M-Locality 为代价实现的，导致 M-Locality 水平显着降低。</span>通过对各种编辑方法的评估，<span style="background-color: #5fb23680">我们经常发现图像泛化性能往往不如文本泛化性能强大。</span></p>
+<p><img src="../imgs/$%7Bfiilename%7D/QNQGNXI7.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;QNQGNXI7&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%227YT8KPYF%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B54.231%2C457.659%2C540.577%2C782.467%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;811&quot; height=&quot;542&quot; src=&quot;attachments/QNQGNXI7.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><img src="../imgs/$%7Bfiilename%7D/CPEZX96N.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;CPEZX96N&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%2293WRHX5J%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B55.962%2C212.467%2C303.462%2C451.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;413&quot; height=&quot;400&quot; src=&quot;attachments/CPEZX96N.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<h3 id="4-2-Editing-Different-Component"><a href="#4-2-Editing-Different-Component" class="headerlink" title="4.2 Editing Different Component"></a>4.2 Editing Different Component</h3><p>我们进一步分析了编辑多模态模型不同区域的变化。与编辑单模态模型相比，由于多模态模型的复杂性和多样性，我们可以尝试编辑更多模块并分析它们对视觉和文本知识的影响。结果如图 7 所示。对于 BLIP-2 OPT 模型，我们研究了在 VQA 数据集上编辑 Q-former 和 OPT 的区别。关于MiniGPT4模型，我们主要关注llama_proj和Vicuna模型在编辑最后几层的区别。选择的分析编辑方法有 MEND、KE 和 FT，这使我们能够指定编辑区域。</p>
+<pre><code> 结果表明，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;编辑视觉模块比编辑语言模块更具挑战性（另请参阅图 6 中的失败编辑）。我们认为这种困难可能归因于模型的架构&lt;/span&gt;。&lt;span style=&quot;background-color: #ff666680&quot;&gt;编辑LLM的最后一层可以直接修改输出，而修改视觉模块只影响LLM的输入，对模型的影响相对较小&lt;/span&gt;。具体来说，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;各种模态驻留在不同的空间中，这意味着事实知识可以存储在模型内的单独参数中&lt;/span&gt;。考虑到LLMs拥有大量参数，这一点对于多模态模型变得更加重要。因此，编辑语言模型可以显着提高性能。值得注意的是，模型中的视觉模块在图像理解中起着至关重要的作用，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;因此表明未来的工作需要同时考虑来自不同模式的信息。&lt;/span&gt;
+</code></pre><h2 id="5-Conclusion"><a href="#5-Conclusion" class="headerlink" title="5 Conclusion"></a>5 Conclusion</h2><p>在本文中，我们介绍了多模式模型编辑，以及新的基准 MMEdit。根据经验，我们分析了各种模型编辑基线的有效性，并探索它们对不同组件（例如视觉和文本）的影响。</p>
+<h2 id="6-Limitations"><a href="#6-Limitations" class="headerlink" title="6 Limitations"></a>6 Limitations</h2><p><strong>楷模</strong>。我们只编辑几个基本的多模式LLMs，留下许多其他的。此外，由于资源限制，我们编辑的多模态LLM的参数数量低于10B，我们无法编辑具有更多参数的LLM，例如65B LLaMA Adapter V2（Gao et al., 2023） 。</p>
+<p><strong>高效的视觉编辑</strong>。在本文中，我们的分析主要集中于比较不同模式模块中现有编辑方法的不同效果。然而，结果并不令人满意。展望未来，我们的主要目标是探索如何跨其他模式高效、准确地编辑信息。这包括研究技术，<span style="background-color: #5fb23680">例如通过查明多模态模型内的知识并识别需要修改的内容来在不同模态之间进行共同编辑。</span></p>
 ]]></content>
       <categories>
-        <category>上下文学习</category>
+        <category>知识编辑</category>
       </categories>
       <tags>
         <tag>EMNLP2023</tag>
@@ -1900,84 +1978,6 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
 <pre><code>为了评估编辑中这种时间感知知识的遗忘，我们基于 TEMPLAMA (Dhingra et al., 2022) 构建了一个小型基准，以进一步表明 IKE 比 §C 中的其他基准可以导致更少的知识遗忘。
 </code></pre><h2 id="6-Discussions"><a href="#6-Discussions" class="headerlink" title="6 Discussions"></a>6 Discussions</h2><p>在之前的实验中，我们遵循孟等人之前研究的设置。 （2022a）并主要评估编辑单个事实以进行公平比较的方法。我们的结果表明 IKE 可以获得更好的泛化性和特异性，副作用更少，并且不需要修改参数。尽管如此，为了探讨可行性在将 IKE 应用到现实场景中时，有几个重要问题尚未得到充分探索：(1) IKE 能否扩展以容纳更多的编辑事实？考虑到语言模型的输入长度有限，在上下文中包含大量的编辑事实可能是不可行的。 (2) IKE 能否适应处理不同格式和域的事实和提示？在IKE中，事实和提示的域和格式保持一致。然而，在现实世界中，事实和提示有多种形式。米切尔等人。 (2022b)提出了一种基于检索的方法来编辑多个知识事实。类似地，具有外部存储器来存储事实编辑的 IKE 可以检索正确的事实编辑来构建给定提示的上下文，从而避免永远在上下文中预先添加所有事实编辑。为了验证 IKE 对不同形式的事实或提示的泛化，我们用维基百科中的中性数据替换了事实，或者用生成提示替换了提示，提示 LM 生成与新对象相关的文本。详细讨论可以在§D 中找到。</p>
 <h2 id="7-Conclusion"><a href="#7-Conclusion" class="headerlink" title="7 Conclusion"></a>7 Conclusion</h2><p>在这项工作中，我们研究了上下文学习在大规模语言模型上进行知识编辑的潜力。具体来说，我们设计了提示LM的演示策略，包括三种类型的演示格式和基于检索的演示组织。我们表明，所提出的方法 IKE 在不需要任何参数修改的情况下实现了竞争性知识编辑功效，并保持了良好的泛化和特异性性能。进一步的分析证明了它对于大型 LM 的可扩展性、对过度编辑问题的弹性以及通过多轮编辑维护时间感知知识事实的能力。我们的结果证明 ICL 在 LM 知识编辑方面具有巨大潜力。</p>
-]]></content>
-      <categories>
-        <category>知识编辑</category>
-      </categories>
-      <tags>
-        <tag>EMNLP2023</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我们可以编辑多模态大型语言模型吗？</title>
-    <url>/2023/11/02/wo-men-ke-yi-bian-ji-duo-mo-tai-da-xing-yu-yan-mo-xing-ma/</url>
-    <content><![CDATA[<h1 id="我们可以编辑多模态大型语言模型吗？"><a href="#我们可以编辑多模态大型语言模型吗？" class="headerlink" title="我们可以编辑多模态大型语言模型吗？"></a>我们可以编辑多模态大型语言模型吗？</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>在本文中，我们重点关注编辑多模态大型语言模型（MLLM）。与编辑单模态LLMs相比，多模态模型编辑更具挑战性，需要在编辑过程中进行更高水平的审查和仔细考虑。为了促进这一领域的研究，我们<span style="background-color: #ff666680">构建了一个名为 MMEdit 的新基准，用于编辑多模式LLMs并建立一套创新的评估指标</span>。我们进行了涉及各种模型编辑基线的综合实验，并分析了编辑不同组件对多模式LLMs的影响。根据经验，我们注意到<span style="background-color: #ff666680">以前的基线可以在一定程度上实现多模态 LLM 的编辑，但效果仍然差强人意，这表明这项任务的潜在难度。</span>我们希望我们的工作能够为 NLP 社区提供见解1。</p>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>随着大型语言模型 (LLM) 的广泛部署（Zhao 等人，2023），在不产生大量再培训成本的情况下保持其知识准确和最新的必要性变得越来越重要（Sinitsin 等人，2020）。<span style="background-color: #2ea8e580">先前的研究引入了知识编辑方法，旨在逐步向语言模型注入一组新的事实</span>（Mitchell 等人，2022a；Han 等人，2023；Hartvigsen 人，2022；Zhong 等人，2023；Gandikota等人，2023；姚等人，2023）。</p>
-<pre><code>  与单模态模型编辑不同，多模态LLMs的编辑任务因其固有的多样性和复杂性而面临相当大的挑战。具体来说，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;多模式模型的错误输出可能源于各种模式的协同效应。输出不正确可能不仅仅源于LLMs，类似于误读或误识别等人为错误&lt;/span&gt;（例如，色盲影响图像中的颜色识别）。如图1所示，在编辑之前，模型将物体错误地识别为“梯子”而不是正确的“障碍物”，从而导致错误的预测。编辑后，模型准确识别了“障碍”。请注意，多模态LLMs（Yin et al., 2023）的效用正在增加，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;但缺乏相应的数据集资源和用于编辑多模态大语言模型的基准。&lt;/span&gt;
-
- 为了促进这一领域的研究，我们第一步构建了一个多模态模型编辑基准：&lt;span style=&quot;background-color: #ff666680&quot;&gt;称为 MMEdit，它包含两个子任务：编辑 VQA 和编辑图像标题。&lt;/span&gt;具体来说，我们&lt;span style=&quot;background-color: #ff666680&quot;&gt;遵循单模态模型编辑方法（Mitchell et al., 2022a；Cao et al., 2021；Mitchell et al., 2022b）来构建数据集，这扩展了之前的评估原则，即 Reliability2、Locality3 和通用性4，多模式设置。对于可靠性评估，我们从严格的数据收集开始，收集表现不佳的多模态模型数据来创建专用的可靠性编辑数据集（§3.2.1）。对于局部性评估，我们将其分为文本局部性和多模态局部性，以评估多模态 LLM 的稳定性（第 3.2.2 节）。对于通用性评估，与局部性类似，我们将其分为文本通用性和多模态通用性，并利用 ChatGLM (Du et al., 2022) 和稳定扩散 (Rombach et al., 2022) 生成重新措辞的文本以及重新措辞的图像进行评估（第 3.2.3 节）。我们评估了 MMEdit 上的几种知识编辑方法。&lt;/span&gt;根据经验，我们注意到&lt;span style=&quot;background-color: #5fb23680&quot;&gt;当前的编辑方法对于编辑多模态语言模型中的文本模型有效，但对于编辑视觉模块则不那么有效&lt;/span&gt;。例如，在编辑BLIP-2模型的语言模块时，MEND的可靠性可以达到92.6%，但在编辑视觉模块时只能达到14.1%，表明该任务的潜在难度和机遇。总的来说，我们的主要贡献如下：
-</code></pre><ul>
-<li>我们迈出了第一步，研究编辑多模态LLMs，将模型编辑扩展到多模态设置。</li>
-</ul>
-<!---->
-<ul>
-<li>我们提出了MMEdit，一个新的基准，用于评估多模态模型编辑方法的可靠性、局部性和通用性。</li>
-</ul>
-<!---->
-<ul>
-<li>我们使用各种基线进行实验，证明虽然当前的方法可以在一定程度上帮助多模式编辑，但结果仍然达不到完全满意的程度。我们将公开代码和数据集以用于未来的研究目的。</li>
-</ul>
-<h2 id="2-Related-Work"><a href="#2-Related-Work" class="headerlink" title="2 Related Work"></a>2 Related Work</h2><h3 id="2-1-Multimodal-Language-Models"><a href="#2-1-Multimodal-Language-Models" class="headerlink" title="2.1 Multimodal Language Models"></a>2.1 Multimodal Language Models</h3><pre><code> 多模态学习 (MML)（Xu 等人，2022a；Yin 等人，2023）提供了一种构建 AI 模型的整体方法，该模型可以从各种数据模态中提取和关联信息。由于其社会意义，MML 在研究界站稳了脚跟，在过去十年中巩固了自己作为一个重要研究领域的地位。视&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;觉语言预训练是MML的重要分支之一，旨在学习在各种视觉和语言任务上具有改进性能的多模态基础模型&lt;/span&gt;。 Vision Transformer (ViT)（Dosovitskiy et al., 2021）&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;是一项开创性的工作，贡献了端到端将 Transformers 的编码器应用于图像的解决方案。&lt;/span&gt; CLIP（Radford et al., 2021）&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;提出了一种方法，使用多模态预训练将分类转换为检索任务，使预训练模型能够解决零样本识别问题&lt;/span&gt;。最近，LLaMA (Touvron et al., 2023)、BLOOM (Scao et al., 2022) 和 ChatGPT (OpenAI, 2022) 等 LLM 的进步得到了扩大训练数据和增加参数的支持，最近取得了重大成功。这些模型展示了令人印象深刻的语言理解、生成和知识推理能力，增强了它们理解自然语言和生成高质量、基于上下文的文本的能力。大型语言模型的发展刺激了自回归语言模型作为视觉语言任务中的解码器的广泛使用。&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;利用跨模态迁移，这种方法可以实现语言和多模态领域之间的知识共享&lt;/span&gt;（Gao et al., 2023; Liu et al., 2023; Li et al., 2023a; Ye et al., 2023; Zhu et al., 2023；Li 等人，2023b；Zhang 等人，2023）。
-</code></pre><h3 id="2-2-Model-Editing"><a href="#2-2-Model-Editing" class="headerlink" title="2.2 Model Editing"></a>2.2 Model Editing</h3><pre><code> LLMs（Zhao et al., 2023）主要从训练语料库中获取知识。然而，数据集的质量并不总是得到保证，可能会将有害或不正确的信息集成到模型中（Hernandez 等人，2023）。&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;一种解决方案是使用更新的知识重新训练模型，尽管这可能成本高昂且难以实施&lt;/span&gt;。或者，&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;可以考虑使用一些更新的事实进行微调，但它存在过度拟合和灾难性遗忘的风险&lt;/span&gt;（Zhai et al., 2023）。为了解决这些问题，（Sinitsin et al., 2020）提出了模型编辑，旨在高效、准确地改变模型中存储的事实知识。这种方法应用于各个领域（Mao et al., 2023; Onoe et al., 2023; Xu et al., 2022b; Wang et al., 2023a; Li et al., 2023c），并且研究数量不断增加调查编辑的影响（Ilharco 等人，2023；Gupta 等人，2023；Hase 等人，2023；Cohen 等人，2023；Wu 等人，2023；Wang 等人，2023b；Gandikota 等人等人，2023；Li 等人，2023d）。目前，模型编辑方法主要有三种类型：&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;1）元学习方法，2）定位然后编辑方法，3）上下文知识编辑方法。&lt;/span&gt;
-</code></pre><p><strong>元学习方法</strong>。 MEND（Mitchell 等人，2022a）和知识编辑器 (KE)（Cao 等人，2021）提出了<span style="background-color: #2ea8e580">涉及外部编辑器的方法，能够学习用于知识更新的最佳参数集 θ，同时施加约束以保持模型稳定性。</span> CaliNET (Dong et al., 2022) 和 T-Patcher (Huang et al., 2023) 从 (Dai et al., 2022) 中汲取灵感，<span style="background-color: #2ea8e580">将额外的可训练参数引入到预训练语言模型的前馈模块中。</span> SERAC（Mitchell 等人，2022b）<span style="background-color: #2ea8e580">利用显式记忆来存储编辑，并学习对它们进行推理，以根据需要调整基本模型的预测。</span></p>
-<p><strong>定位然后编辑方法</strong>。 ROME（Meng et al., 2022a）<span style="background-color: #2ea8e580">提出了采用因果中介分析来识别编辑区域的方法。</span> ROME 发现记忆的事实关联可以精确定位到 GPT 模型中的特定位置。然而，ROME 的一个显着限制是它一次只能编辑一个事实。为了解决这个问题，Meng 等人。 (2022b)提出了一种称为MEMIT的新方法，<span style="background-color: #2ea8e580">它是之前工作ROME的继承者，它对单层的MLP权重进行rankone修改，以将内存直接写入模型中。</span></p>
-<p><strong>上下文知识编辑方法</strong>。 InContext Learning (ICL)（Brown et al., 2020）<span style="background-color: #2ea8e580">表示一种免训练范式，其中知识是从输入上下文中直接串联的演示中获取的</span>。最近出现了一种新颖的编辑范式，它<span style="background-color: #2ea8e580">利用LLMs理解上下文的能力（Zheng et al., 2023），从而实现基于上下文的模型编辑，指导模型的生成过程，并提供高效、轻量级的模型方法编辑</span>。迄今为止的模型编辑方法主要迎合单模态场景，在多模态编辑方面留下了空白。据我们所知，我们是第一个研究LLMs多模式模型编辑的人，并为促进该领域的研究提供了新的基准。</p>
-<h2 id="3-Editing-Multimodal-LLMs"><a href="#3-Editing-Multimodal-LLMs" class="headerlink" title="3 Editing Multimodal LLMs"></a>3 Editing Multimodal LLMs</h2><p>我们在图 2 中说明了多模态编辑的建议任务。我们将介绍任务定义（§3.1）、（§3.2）中的数据集构建细节、多模态模型（§3.3）以及我们在实验。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/KQ9KJ8DQ.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;KQ9KJ8DQ&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22MS6FUQ8I%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%223%22%2C%22position%22%3A%7B%22pageIndex%22%3A2%2C%22rects%22%3A%5B%5B68.654%2C497.467%2C526.731%2C777.852%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%223%22%7D%7D&quot; width=&quot;763&quot; height=&quot;467&quot; src=&quot;attachments/KQ9KJ8DQ.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<h3 id="3-1-Task-Definition"><a href="#3-1-Task-Definition" class="headerlink" title="3.1 Task Definition"></a>3.1 Task Definition</h3><p>假设我们有一个由 <em>θ </em>参数化的多模态 LLM<em> f </em>（由两部分组成，由 θ<sub>vision</sub> 和 θ<sub>text</sub> 参数化的 f<sub>vision</sub> 和 f<sub>text </sub>），将输入 i<sub>e</sub> 和 x<sub>e</sub> 映射到 y<sub>o</sub> 的预测，其中 i<sub>e </sub>指的是编辑图像输入，xe 指的是编辑文本提示输入和 y<sub>o</sub> 表示为原始输出。我们将 M 表示为特定指标的符号表示，下标表示特定度量，上标表示变化编辑数据。我们准备第 3.2.1 节中所述的编辑数据集，其表示为 Dedit。受到姚等人的启发。 （2023），我们引入了一系列多模式模型编辑指标。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/ZFVB46CA.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;ZFVB46CA&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22MJQK4385%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B64.853%2C526.008%2C292.5%2C791.596%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;379&quot; height=&quot;442&quot; src=&quot;attachments/ZFVB46CA.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p><strong>可靠性</strong>。需要编辑可靠性才能将预测从 y<sub>o</sub> 更改为 y<sub>e</sub>。直观上，我们需要的是更新后的 θe，其中 f（即 x<sub>e</sub>;θ<sub>e</sub>）= y<sub>e</sub>。为了衡量可靠性，我们使用编辑准确性，如下所述：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/HSTRNPML.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;HSTRNPML&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22NS7JGJWI%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B68.824%2C342.919%2C292.059%2C378.214%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;372&quot; height=&quot;59&quot; src=&quot;attachments/HSTRNPML.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>其中θ<sub>e</sub>指的是编辑后的参数。</p>
-<p><strong>局部性</strong>。为了保持模型的稳定性，必须最大限度地减少编辑对模型更广泛的知识库造成的意外副作用。为了实现这一目标，我们引入了两个指标：M <sup>Text</sup> <sub>loc</sub> (T-Locality) 和 M<sup>Image</sup> <sub>loc</sub> (M-Locality)，这两个指标都是为了在编辑过程中保持模型的稳定性。鉴于多模态语言模型中的知识是从LLMs继承的，保护这些知识至关重要。考虑到这一目标，我们搁置了模型的视觉辨别模块，而是采用基本的问答数据集 D<sub>loc-t</sub>，如第 3.2.2 节中所述。我们定义问题为x，答案为y，如下：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/J24EN8UP.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;J24EN8UP&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22M2ZHI4QM%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B67.941%2C93.214%2C292.941%2C133.361%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;375&quot; height=&quot;67&quot; src=&quot;attachments/J24EN8UP.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>视觉编码器在多模态语言模型中发挥着关键作用，将将图像转换为矢量表示，以便与自然语言文本共同编码。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/IPZFZHUW.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;IPZFZHUW&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22ZIQHSJG7%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B301.765%2C653.066%2C528.529%2C777.919%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;378&quot; height=&quot;208&quot; src=&quot;attachments/IPZFZHUW.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>因此，我们必须考虑对该模块进行任何修改的潜在后果。我们构建表示为 D<sub>loc-v</sub> 的数据集用于测试 MImage loc ，并计算如下：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/4NC86SS7.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;4NC86SS7&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22K2BYGI7E%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B302.647%2C522.478%2C532.941%2C557.772%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;384&quot; height=&quot;59&quot; src=&quot;attachments/4NC86SS7.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>其中（iv，xv，yv）是范围外数据，θe表示编辑数据更新的参数（即xe，ye)。</p>
-<p><strong>泛化性</strong>。在整个编辑过程中，仅仅修改个别错误的输入是不够的。修订后的模型还应保留泛化能力，并始终为等效输入（例如改写的句子）生成一致的输出，如图 3 所示。虽然以前的单模态模型编辑任务仅需要考虑改写的文本，但多模态场景需要泛化以及图像。为了解决这个问题，我们引入了两个泛化考虑因素：MText gen (TGenerality) 和 MImage gen (M-Generality)，其表示如下：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/BS3DHYZH.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;BS3DHYZH&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%22SSPQQ5PC%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%224%22%2C%22position%22%3A%7B%22pageIndex%22%3A3%2C%22rects%22%3A%5B%5B303.088%2C236.596%2C527.206%2C296.596%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%224%22%7D%7D&quot; width=&quot;374&quot; height=&quot;100&quot; src=&quot;attachments/BS3DHYZH.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>其中 ir 表示重新表述的图像，xr 指重新表述的文本提示，N (x) 表示 x 范围内的对象。</p>
-<h3 id="3-2-Datasets"><a href="#3-2-Datasets" class="headerlink" title="3.2 Datasets"></a>3.2 Datasets</h3><p>我们构建的数据集MMEdit主要包含两个子任务：编辑VQA（E-VQA）和编辑图像标题（E-IC）。</p>
-<h4 id="3-2-1-Reliability-Dataset-Construction"><a href="#3-2-1-Reliability-Dataset-Construction" class="headerlink" title="3.2.1 Reliability Dataset Construction"></a>3.2.1 Reliability Dataset Construction</h4><p>为了对我们的实验进行基准测试，我们选择了两个常见的多模态任务：视觉问答（VQA）（Antol et al., 2015）和图像</p>
-<p><img src="../imgs/$%7Bfiilename%7D/TT279E4N.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;TT279E4N&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%229KCXYY3D%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%225%22%2C%22position%22%3A%7B%22pageIndex%22%3A4%2C%22rects%22%3A%5B%5B60%2C488.39%2C297%2C778.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%225%22%7D%7D&quot; width=&quot;395&quot; height=&quot;483&quot; src=&quot;attachments/TT279E4N.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>字幕（Herdade 等人，2019）。 <span style="background-color: #2ea8e580">VQA 旨在设计一种算法，不仅可以理解图像中的视觉内容，还可以理解用于查询该图像的自然语言，并随后生成这些查询的精确答案</span>。<span style="background-color: #2ea8e580">图像字幕是设计能够理解图像视觉内容的算法，随后用自然语言生成连贯且精确的图像描述</span>。在本研究中，我们选择 BLIP-2 OPT。我们的基础编辑数据源自两个评估数据集的次优条目，即 VQAv2（Goyal 等人，2017）和 COCO Caption（Chen 等人，2015)。</p>
-<pre><code> 除了基本的编辑数据之外，利用其他数据也至关重要。这些数据不仅有助于编辑过程，还验证更改的有效性，评估模型编辑的稳定性和通用性。
-</code></pre><h4 id="3-2-2-Locality-Dataset-Construction"><a href="#3-2-2-Locality-Dataset-Construction" class="headerlink" title="3.2.2 Locality Dataset Construction"></a>3.2.2 Locality Dataset Construction</h4><p>我们必须仔细考虑多模态模型中编辑对语言功能的影响，<span style="background-color: #5fb23680">类似于我们如何评估手术后个体大脑的各个认知区域。</span></p>
-<p><strong>文本局部性数据集</strong>。为了评估语言模型的稳定性，我们利用之前在 MEND 中使用的 NQ 数据集（Kwiatkowski 等人，2019）作为模型内 LLM 组件稳定性的基准。我们专门使用模型的输出预编辑和后期编辑来构建 KL 散点图，从而促进对模型编辑的约束。此外，我们还计算了保持 top-1 状态的实例比例，进一步量化了模型的稳定性。</p>
-<p><strong>多模态局部性数据集</strong>。同样，验证编辑对视觉模块的影响也至关重要。因此，我们在多模态领域使用简单的数据集 OK-VQA（Marino 等人，2019），作为多模态视觉模块局部性的度量。我们再次在编辑过程之前和之后使用 logits 更新 KL 离散度约束。</p>
-<h4 id="3-2-3-Generality-Dataset-Construction"><a href="#3-2-3-Generality-Dataset-Construction" class="headerlink" title="3.2.3 Generality Dataset Construction"></a>3.2.3 Generality Dataset Construction</h4><p>我们在多模态模型中提出了两种形式的通用性。共性数据集构建的整体流程如图4所示。</p>
-<p><strong>文本泛化数据集</strong>。值得注意的是，LLMs表现出强大的会话能力和强大的解决问题的能力，这使我们能够制定任务指令，从而指导模型生成类似的文本输入。对于 E-VQA 任务，我们利用 ChatGLM（Du et al., 2022；Zeng et al., 2022）生成类似的查询。然而，对于E-IC任务，由于提示的简洁和相对直接，模型生成的输出质量并不令人满意。因此，我们采用手动编写的包含20条提示的模板来随机替换原来的提示。</p>
-<p><strong>视觉泛化数据集</strong>。近年来，<span style="background-color: #2ea8e580">扩散模型（Ho et al., 2020）在图像生成领域取得了巨大成功。超越最初最先进的模型</span>：生成对抗网络（GAN）模型（Goodfellow 等人，2014）。扩散模型在许多图像生成任务中表现出色，并在各个应用领域中表现出了值得称赞的性能。<span style="background-color: #2ea8e580">稳定扩散（Rombach 等人，2022）是一种潜在的文本到图像扩散模型，能够根据给定的文本输入生成逼真的图像</span>。我们利用稳定扩散 2.1 来生成重新解释的图像。该数据集利用 COCO 数据集的标题描述来评估模型的图像泛化能力。</p>
-<h3 id="3-3-Multimodal-Language-Models"><a href="#3-3-Multimodal-Language-Models" class="headerlink" title="3.3 Multimodal Language Models"></a>3.3 Multimodal Language Models</h3><p><strong>BLIP-2 OPT</strong>。 BLIP-2（Li et al., 2023b）<span style="background-color: #2ea8e580">是一种通用且高效的预训练策略，可从现成的冻结预训练图像编码器和冻结大型语言模型引导视觉语言预训练。该模型利用轻量级查询转换器来弥合视觉模态和文本模态之间的差距，并在各种视觉语言任务上实现最先进的性能</span>。我们选择 BLIP-2 OPT 作为基本编辑模型，它在视觉模块中利用 ViT-L，并选择无监督训练的 OPT 模型用于基于解码器的 LLM。迷你GPT-4。</p>
-<p><strong>MiniGPT-4</strong>（Zhu et al., 2023）是一种类似于 BLIP-2 的有效视觉语言模型，利用冷冻视觉编码器与冷冻 Vicuna（Chiang et al., 2023）相结合。据报道，基于 LLaMA 构建的 Vicuna 根据 GPT-4 的评估标准达到了 ChatGPT 90% 的性能。 MiniGPT-4 添加了一个投影层，以使编码的视觉特征与 Vicuna 语言模型保持一致。 MiniGPT-4 采用与 BLIP-2 相同的预训练视觉组件，由 EVA-CLIP（Sun 等人，2023）的 Vit-G/14 和 Q-Former 组成。</p>
-<h3 id="3-4-Baselines"><a href="#3-4-Baselines" class="headerlink" title="3.4 Baselines"></a>3.4 Baselines</h3><p><strong>Finetune</strong>。微调已成为一种广泛采用的策略，用于使预训练的语言模型适应特定任务或领域（Cortes 等人，2015）。在我们的探索中，我们深入研究了两种不同的微调方法：一种专注于语言模型的最后一层。以BLIP-2 OPT模型为例，我们对OPT模型的第31个解码器层进行微调。另一个目标是多模态语言模型中的视觉块，具体来说，我们微调 Q-former 模型以过度拟合编辑数据集。</p>
-<p><strong>MEND</strong>。具有梯度分解的模型编辑器网络（Mitchell 等人，2022a）使用单个输入输出对对语言模型进行高效的本地编辑。本质上，MEND 学习转换微调 LLM 的梯度，它利用梯度的低秩分解。</p>
-<p><strong>KE</strong>。 KE（Cao et al., 2021）是一种可以编辑语言模型中错误知识而无需重新训练整个模型的方法。 KE 利用具有约束优化的超网络（双向 LSTM），用于预测推理过程中的权重更新。</p>
-<p><strong>SERAC</strong>。 SERAC（Mitchell 等人，2022b）引入了一种基于内存的模型编辑方法，该方法利用显式内存系统来缓存编辑。该内存随后用于在推理过程中调整基本模型的输出。该系统利用一个小型辅助范围分类器和反事实模型。范围分类器的作用是确定输入是否在内存缓存的范围内。如果在此范围内找到输入，则会将其与最相关的缓存项结合起来，并输入到反事实模型中进行预测。</p>
-<p><strong>In-Context Knowledge Editing.</strong>。上下文知识编辑（IKE）（Zheng et al., 2023）构造 k 个演示 C = {c1, . 。 。 , ck }，遵循 Liu 等人中概述的方法。 （2022）。该方法采用基于余弦相似度的无监督检索器，在将事实 f = (x*, y*) 注入语言模型之前从训练集中获取演示。 x* 是探索模型中事实知识的提示（例如，美国总统是），y* 将是编辑目标乔·拜登。上下文演示的排名也取决于余弦相似度：cos(c1, f ) &lt; cos(c2, f ) &lt; · · · &lt; cos(ck, f )。其中 c1, . 。 。 , ck 在上下文中从左到右顺序排列。演示 C 可以被视为外部增强的知识库，主要设计用于指导 LM 内的生成。其最终目标是当提示符x落在目标提示符x*的编辑范围内时，最大化P(y|x,f,C)。</p>
-<h2 id="4-Experiments"><a href="#4-Experiments" class="headerlink" title="4 Experiments"></a>4 Experiments</h2><h3 id="4-1-Results"><a href="#4-1-Results" class="headerlink" title="4.1 Results"></a>4.1 Results</h3><p>在这一部分中，我们对 MMEdit 上的多种编辑方法进行了比较分析。这些比较的结果如表2所示。之后，我们深入研究了实验结果的三个指标，包括可靠性、局部性和通用性三个方面。此外，我们通过文本和视觉方式分析局部性和通用性，并在图 6 中提供了几个编辑案例。</p>
-<p><strong>可靠性</strong>。从结果来看，<span style="background-color: #ff666680">所有模型编辑方法在可靠性方面均优于基本方法</span>。特别是，<span style="background-color: #ff666680">利用外部存储器进行编辑的 IKE 和 SERAC 方法在多模态语言中表现出了值得称赞的性能楷模</span>。我们<span style="background-color: #ff666680">观察到微调方法的性能比模型编辑方法差</span>。请注意，<span style="background-color: #5fb23680">仅微调 LLM 或模态融合模块的参数并不能充分捕获多模态数据的特征</span>。我们分析原因为如下：<span style="background-color: #5fb23680">用于微调的数据与原始模型有较大差异，例如Q-former和OPT模型，需要有效协作。简单地微调这些模块之一可能无法准确捕获特定于任务的特征。另一方面，微调所有模块会产生大量的资源开销</span>。此外，<span style="background-color: #ff666680">根据我们的实验结果，我们观察到微调可能会导致原始模型发生重大变化，通常会导致其他知识的丢失，在多模式数据集中尤其明显。</span></p>
-<p><img src="../imgs/$%7Bfiilename%7D/WSEXRRE8.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;WSEXRRE8&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%229DEQKYBI%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%227%22%2C%22position%22%3A%7B%22pageIndex%22%3A6%2C%22rects%22%3A%5B%5B68.077%2C533.813%2C530.769%2C783.044%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%227%22%7D%7D&quot; width=&quot;771&quot; height=&quot;415&quot; src=&quot;attachments/WSEXRRE8.png&quot; ztype=&quot;zimage&quot;&gt;"><br><strong>局部性</strong>。<span style="background-color: #ff666680">几种传统的编辑方法仍然适用于多模式编辑</span>，这对于有效修改模型内的知识并纠正其输出很有价值。然而，IKE和SERAC尽管在可靠性方面表现出色，但由于缺乏对M-Locality的约束而在M-Locality上表现不佳，<span style="background-color: #5fb23680">这表明尽管这些基于外部存储器的编辑技术无疑成功地修复了输出，但它们在稳定内部模型中的知识还有改进的空间。</span>对于T-Locality，大多数模型编辑方法都获得了良好的性能，而IKE再次表现不佳。根本原因是其他三种方法对T-Locality施加了约束，而IKE作为InContext Learning方法缺乏鲁棒的约束机制，导致性能不佳。</p>
-<p><strong>泛化</strong>。我们在 E-VQA 中与 MiniGPT-4 进行了各种方法的文本和图像泛化能力的比较探索。请注意，<span style="background-color: #ff666680">KE 往往表现出较低程度的图像泛化，这主要是由于其在训练阶段对 M 局部性的固有考虑。</span>因此，<span style="background-color: #ff666680">与基于记忆的方法相比，元学习方法的图像泛化效率往往较低。另一方面，基于内存的方法所表现出的卓越图像泛化能力是以牺牲 M-Locality 为代价实现的，导致 M-Locality 水平显着降低。</span>通过对各种编辑方法的评估，<span style="background-color: #5fb23680">我们经常发现图像泛化性能往往不如文本泛化性能强大。</span></p>
-<p><img src="../imgs/$%7Bfiilename%7D/QNQGNXI7.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;QNQGNXI7&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%227YT8KPYF%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B54.231%2C457.659%2C540.577%2C782.467%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;811&quot; height=&quot;542&quot; src=&quot;attachments/QNQGNXI7.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p><img src="../imgs/$%7Bfiilename%7D/CPEZX96N.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;CPEZX96N&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F5LR2L362%22%2C%22annotationKey%22%3A%2293WRHX5J%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B55.962%2C212.467%2C303.462%2C451.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FEQHAEIP8%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;413&quot; height=&quot;400&quot; src=&quot;attachments/CPEZX96N.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<h3 id="4-2-Editing-Different-Component"><a href="#4-2-Editing-Different-Component" class="headerlink" title="4.2 Editing Different Component"></a>4.2 Editing Different Component</h3><p>我们进一步分析了编辑多模态模型不同区域的变化。与编辑单模态模型相比，由于多模态模型的复杂性和多样性，我们可以尝试编辑更多模块并分析它们对视觉和文本知识的影响。结果如图 7 所示。对于 BLIP-2 OPT 模型，我们研究了在 VQA 数据集上编辑 Q-former 和 OPT 的区别。关于MiniGPT4模型，我们主要关注llama_proj和Vicuna模型在编辑最后几层的区别。选择的分析编辑方法有 MEND、KE 和 FT，这使我们能够指定编辑区域。</p>
-<pre><code> 结果表明，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;编辑视觉模块比编辑语言模块更具挑战性（另请参阅图 6 中的失败编辑）。我们认为这种困难可能归因于模型的架构&lt;/span&gt;。&lt;span style=&quot;background-color: #ff666680&quot;&gt;编辑LLM的最后一层可以直接修改输出，而修改视觉模块只影响LLM的输入，对模型的影响相对较小&lt;/span&gt;。具体来说，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;各种模态驻留在不同的空间中，这意味着事实知识可以存储在模型内的单独参数中&lt;/span&gt;。考虑到LLMs拥有大量参数，这一点对于多模态模型变得更加重要。因此，编辑语言模型可以显着提高性能。值得注意的是，模型中的视觉模块在图像理解中起着至关重要的作用，&lt;span style=&quot;background-color: #5fb23680&quot;&gt;因此表明未来的工作需要同时考虑来自不同模式的信息。&lt;/span&gt;
-</code></pre><h2 id="5-Conclusion"><a href="#5-Conclusion" class="headerlink" title="5 Conclusion"></a>5 Conclusion</h2><p>在本文中，我们介绍了多模式模型编辑，以及新的基准 MMEdit。根据经验，我们分析了各种模型编辑基线的有效性，并探索它们对不同组件（例如视觉和文本）的影响。</p>
-<h2 id="6-Limitations"><a href="#6-Limitations" class="headerlink" title="6 Limitations"></a>6 Limitations</h2><p><strong>楷模</strong>。我们只编辑几个基本的多模式LLMs，留下许多其他的。此外，由于资源限制，我们编辑的多模态LLM的参数数量低于10B，我们无法编辑具有更多参数的LLM，例如65B LLaMA Adapter V2（Gao et al., 2023） 。</p>
-<p><strong>高效的视觉编辑</strong>。在本文中，我们的分析主要集中于比较不同模式模块中现有编辑方法的不同效果。然而，结果并不令人满意。展望未来，我们的主要目标是探索如何跨其他模式高效、准确地编辑信息。这包括研究技术，<span style="background-color: #5fb23680">例如通过查明多模态模型内的知识并识别需要修改的内容来在不同模态之间进行共同编辑。</span></p>
 ]]></content>
       <categories>
         <category>知识编辑</category>
@@ -3073,6 +3073,14 @@ Gain\_Gini(D,A)=\frac{D_1}{D}Gini(D_1)+\frac{D_2}{D}Gini(D_2)</script><blockquot
       </tags>
   </entry>
   <entry>
+    <title></title>
+    <url>/2024/03/23/tong-ji-xue-xi-fang-fa/</url>
+    <content><![CDATA[<h1 id="10-1-提升方法AdaBoost算法"><a href="#10-1-提升方法AdaBoost算法" class="headerlink" title="10.1 提升方法AdaBoost算法"></a>10.1 提升方法AdaBoost算法</h1><p><img src="https://s2.loli.net/2024/03/23/qSx2yrfQHYu86ij.png" alt="image-20240323120941983"></p>
+<p><img src="https://s2.loli.net/2024/03/23/hUxJme2paKIswVn.png" alt="image-20240323121244084"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240323121450856.png" alt="image-20240323121450856"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现</title>
     <url>/2023/11/02/zhi-shi-shen-jing-yuan-zhong-xin-zhi-lu-yu-yan-wu-guan-zhi-shi-shen-jing-yuan-he-jian-bing-zhi-shi-shen-jing-yuan-de-fa-xian/</url>
     <content><![CDATA[<h1 id="知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现"><a href="#知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现" class="headerlink" title="知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现"></a>知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现</h1><h2 id="Abstruct"><a href="#Abstruct" class="headerlink" title="Abstruct"></a>Abstruct</h2><p>预训练语言模型 (PLM) 包含大量事实知识，但这些知识如何存储在参数中仍不清楚。本文深入研究了理解事实知识如何存储在多语言 PLM 中的复杂任务，并介绍了适应架构的多语言集成梯度方法，与现有方法相比，该方法<span style="background-color: #ff666680">成功地更精确地定位了知识神经元，并且在各种架构和语言中更加通用。</span>此外，我们对知识神经元进行了深入的探索，得到了以下两个重要发现：<span style="background-color: #ff666680">（1）语言无关的知识神经元的发现，它以超越语言的形式存储事实知识。我们设计了跨语言知识编辑实验，证明 PLM 可以基于语言无关的神经元完成这项任务；</span> <span style="background-color: #ff666680">（2）退化知识神经元的发现，这是一种新型神经元，表明不同的知识神经元可以存储相同的事实。</span>其<span style="background-color: #ff666680">功能重叠的特性赋予 PLM 强大的事实知识掌握能力。</span>我们设计了事实检查实验，证明<span style="background-color: #ff666680">退化知识神经元可以帮助 PLM 检测错误事实。</span>实验证实了这些发现，揭示了多语言 PLM 中事实知识存储的机制，并为该领域提供了宝贵的见解。源代码将公开以供进一步研究。</p>
@@ -3143,6 +3151,111 @@ Gain\_Gini(D,A)=\frac{D_1}{D}Gini(D_1)+\frac{D_2}{D}Gini(D_2)</script><blockquot
       <tags>
         <tag>EMNLP2023</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>编辑大型语言模型：问题、方法和机遇</title>
+    <url>/2023/11/02/bian-ji-da-xing-yu-yan-mo-xing-wen-ti-fang-fa-he-ji-yu/</url>
+    <content><![CDATA[<h1 id="编辑大型语言模型：问题、方法和机遇"><a href="#编辑大型语言模型：问题、方法和机遇" class="headerlink" title="编辑大型语言模型：问题、方法和机遇"></a>编辑大型语言模型：问题、方法和机遇</h1><h2 id="Abstruct"><a href="#Abstruct" class="headerlink" title="Abstruct"></a>Abstruct</h2><p>尽管有能力培养有能力的LLMs，但维持其相关性和纠正错误的方法仍然难以捉摸。为此，过去几年见证了LLMs编辑技术的激增，其<span style="background-color: #2ea8e580">目标是有效地改变特定领域内LLMs的行为，而不会对其他输入的性能产生负面影响</span>。本文深入探讨了LLMs模型编辑相关的问题、方法和机遇。特别是，我们<span style="background-color: #ff666680">对任务定义和与模型编辑相关的挑战进行了详尽的概述，并对我们目前掌握的最先进的方法进行了深入的实证分析</span>。我们还<span style="background-color: #ff666680">构建了一个新的基准数据集，以促进更稳健的评估并查明现有技术固有的持久问题</span>。我们的目标是为每种编辑技术的有效性和可行性提供有价值的见解，从而帮助社区做出明智的决定，为特定任务或上下文选择最合适的方法。</p>
+<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h1><p>大型语言模型（LLM）已经表现出理解和生成类人文本的非凡能力（Brown et al., 2020；OpenAI, 2023；Anil et al., 2023；Touvron et al., 2023；Qiao et al., 2022；赵等人，2023）。尽管LLMs的训练非常熟练，但确保其相关性和修复错误的策略仍不清楚。理想情况下，随着世界形势的发展，我们的目标是更新LLMs，避免与训练全新模型相关的计算负担。如图1所示，解决这个问题模型编辑的概念被提出</p>
+<p><img src="../imgs/$%7Bfiilename%7D/SWBFWKDL.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;SWBFWKDL&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%226BF2NSVY%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%221%22%2C%22position%22%3A%7B%22pageIndex%22%3A0%2C%22rects%22%3A%5B%5B300.5%2C490.39%2C533%2C628.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%221%22%7D%7D&quot; width=&quot;388&quot; height=&quot;231&quot; src=&quot;attachments/SWBFWKDL.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>（Sinitsin 等人，2020；De Cao 等人，2021），<span style="background-color: #2ea8e580">能够对模型的行为进行数据有效的改变，特别是在指定的感兴趣领域内，同时确保不会对其他输入产生不利影响。</span>目前，大量关于LLMs模型编辑的工作（De Cao et al., 2021；Meng et al., 2022, 2023；Sinitsin et al., 2020；Huang et al., 2023)在各种编辑任务和设置方面取得了长足的进步。如图 2 所示，<span style="background-color: #2ea8e580">这些工作通过将辅助网络与原始未更改的模型集成或更改导致不良输出的模型参数来操纵特定情况下的模型输出。</span>尽管文献中存在广泛的模型编辑技术，但<span style="background-color: #5fb23680">明显缺乏在统一实验条件下评估这些方法的全面比较分析。缺乏直接比较会削弱我们辨别每种方法相对优缺点的能力，从而阻碍我们理解它们在不同问题领域的适应性。</span></p>
+<pre><code> 为了解决这个问题，本研究致力于建立一个标准的问题定义，并对这些方法进行细致的评估（§2，§3）。我们在规定的条件下进行实验，促进对各自的优缺点进行公正的比较（§4）。&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;我们最初使用两个流行的模型编辑数据集，ZsRE (Levy et al., 2017) 和 COUNTERFACT (Meng et al., 2022)，以及两个结构上的数据集不同的语言模型，T5（Raffel et al.，2020a）（编码器-解码器）和 GPT-J（Wang 和 Komatsuzaki，2021a）（仅解码器）作为我们的基础模型&lt;/span&gt;。我们还评估了较大模型 OPT-13B（Zhang 等人，2022a）和 GPT-NEOX20B（Black 等人，2022）的性能。除了基本编辑设置之外，我们还评估批量和顺序编辑的性能。虽然我们观察到当前的方法在事实模型编辑任务中表现出当大的能力，但&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;我们重新考虑当前的评估并创建一个更具包容性的评估数据集（§5）：可移植性（强大的泛化能力）、局部性（副作用）和效率（时间）和内存使用情况）&lt;/span&gt;。我们发现当前的模型编辑方法在这些层面上有所限制，从而限制了它们的实际应用，未来值得更多的研究。通过系统评估，我们的目标是为每种模型编辑技术的有效性提供有价值的见解，帮助研究人员为特定任务选择合适的方法。
+</code></pre><h2 id="2-Problem-Definition"><a href="#2-Problem-Definition" class="headerlink" title="2 Problem Definition"></a>2 Problem Definition</h2><p>模型编辑，由 Mitchell 等人阐明。 （2022b），<span style="background-color: #2ea8e580">旨在有效地调整特定编辑描述符（xe，ye）上的初始基础模型（fθ，θ表示模型的参数）行为，而不影响其他样本上的模型行为</span>。最终目标是创建一个编辑模型，表示为 fθe。具体来说，基本模型 fθ 由函数 f : X → Y 表示，该函数将输入 x 与其相应的预测 y 相关联。给定一个由编辑输入 xe 和编辑标签 ye 组成的编辑描述符，使得 fθ(xe) ̸= ye，后期编辑模型 fθe 被设计为产生预期输出，其中 fθe(xe) = ye。</p>
+<pre><code> &lt;span style=&quot;background-color: #2ea8e580&quot;&gt;模型编辑过程通常会影响与编辑示例密切相关的大量输入的预测。这个输入集合称为编辑范围。&lt;/span&gt;成功的编辑应该调整编辑范围内示例的模型行为，同时保持范围外示例的性能不变：
+</code></pre><p><img src="../imgs/$%7Bfiilename%7D/YCQJYKA2.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;YCQJYKA2&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22WCMI8DSD%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%222%22%2C%22position%22%3A%7B%22pageIndex%22%3A1%2C%22rects%22%3A%5B%5B70.5%2C136.39%2C291.5%2C183.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%222%22%7D%7D&quot; width=&quot;368&quot; height=&quot;78&quot; src=&quot;attachments/YCQJYKA2.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>范围内 I(xe, ye) 通常包含 xe 及其等价邻域 N (xe, ye)，其中包括相关的输入/输出对。相反，超出范围的 O(xe, ye) 由与编辑示例无关的输入组成。模型fe应该满足以下三个属性：可靠性、泛化性和局部性。</p>
+<p><strong>可靠性</strong> 先前的工作（Huang et al., 2023；De Cao et al., 2021；Meng et al., 2022）定义了当后期编辑模型 fθe 给出案例 (xe, ye) 的目标答案时的可靠编辑被编辑。可靠性以编辑案例的平均准确度来衡量：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/Q3XB8E8H.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;Q3XB8E8H&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22WHB9Z2XR%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%222%22%2C%22position%22%3A%7B%22pageIndex%22%3A1%2C%22rects%22%3A%5B%5B302.5%2C616.89%2C530%2C650.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%222%22%7D%7D&quot; width=&quot;379&quot; height=&quot;56&quot; src=&quot;attachments/Q3XB8E8H.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><strong>泛化</strong> 编辑后模型 fθe 还应该编辑等效邻居 N (xe, ye)（例如改写的句子)。它是通过模型 fθe 在从等价邻域中均匀抽取的示例上的平均精度来评估的：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/TSPLLYFE.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;TSPLLYFE&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22ICM3VKEP%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%222%22%2C%22position%22%3A%7B%22pageIndex%22%3A1%2C%22rects%22%3A%5B%5B305%2C503.39%2C527%2C538.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%222%22%7D%7D&quot; width=&quot;370&quot; height=&quot;59&quot; src=&quot;attachments/TSPLLYFE.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><strong>局部性 </strong>在一些工作中，也被称为特异性。编辑应该在本地实现，这意味着编辑后模型 fθe 不应更改范围外 O(xe, ye) 中不相关示例的输出。因此，局部性是通过编辑后模型 fθe 的预测与编辑前 fθ 模型相同的来评估的</p>
+<p><img src="../imgs/$%7Bfiilename%7D/88F6ZZTR.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;88F6ZZTR&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22KH34VUGC%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%222%22%2C%22position%22%3A%7B%22pageIndex%22%3A1%2C%22rects%22%3A%5B%5B306.5%2C364.39%2C527%2C401.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%222%22%7D%7D&quot; width=&quot;368&quot; height=&quot;62&quot; src=&quot;attachments/88F6ZZTR.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<h3 id="3-Current-Methods"><a href="#3-Current-Methods" class="headerlink" title="3 Current Methods"></a>3 Current Methods</h3><p>目前LLMs的模型编辑方法可以分为两种主要范式，如图2所示：<span style="background-color: #2ea8e580">修改模型参数或保留模型参数。</span>更多比较见表 6。</p>
+<h3 id="3-1-Methods-for-Preserving-LLMs-Parameters"><a href="#3-1-Methods-for-Preserving-LLMs-Parameters" class="headerlink" title="3.1 Methods for Preserving LLMs Parameters"></a>3.1 Methods for Preserving LLMs Parameters</h3><p><strong>基于内存的模型 </strong><span style="background-color: #2ea8e580">这种方法将所有编辑示例显式存储在内存中，并使用检索器为每个新输入提取最相关的编辑事实，以指导模型生成编辑事实。 </span>SERAC（Mitchell 等人，2022b）提出了一种采用独特的反事实模型，同时保持原始模型不变的方法。具体来说，<span style="background-color: #2ea8e580">它采用范围分类器来计算新输入落入存储的编辑示例范围内的可能性。如果输入与内存中任何缓存的编辑相匹配，则反事实模型的预测将基于输入和最可能的编辑。否则，如果输入超出了所有编辑的范围，给出了原始模型的预测。</span>此外，<span style="background-color: #5fb23680">最近的研究表明LLMs拥有强大的情境学习能力。模型本身可以生成与所提供的知识相对应的输出，而不是求助于用新事实训练的额外模型，并给出精炼的知识上下文作为提示。</span><span style="background-color: #2ea8e580">这种方法通过用编辑后的事实提示模型并从编辑记忆中检索编辑演示来编辑语言模型</span>，包括以下工作：MemPrompt (Madaan et al., 2022)、IKE (Zheng et al., 2023) 和MeLLo（Zhong 等人，2023）。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/Y5M6Y7UX.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;Y5M6Y7UX&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%226XZYF4BM%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%223%22%2C%22position%22%3A%7B%22pageIndex%22%3A2%2C%22rects%22%3A%5B%5B79%2C517.39%2C515%2C782.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%223%22%7D%7D&quot; width=&quot;727&quot; height=&quot;443&quot; src=&quot;attachments/Y5M6Y7UX.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><strong>附加参数 </strong><span style="background-color: #2ea8e580">此范例在语言模型中引入了额外的可训练参数。这些参数在修改后的知识数据集上进行训练，而原始模型参数保持静态。</span> T-Patcher（Huang et al., 2023）在模型前馈网络（FFN）的最后一层针对一个错误集成了一个神经元（补丁），仅在遇到其对应错误时才生效。 CaliNET（Dong et al., 2022）整合了多个神经元以用于多个编辑案例。不同的是，GRACE（Hartvigsen et al., 2022）维护一个离散的密码本作为适配器，随着时间的推移添加和更新元素以编辑模型的预测。</p>
+<h3 id="3-2-Methods-for-Modifying-LLMs-Paramete"><a href="#3-2-Methods-for-Modifying-LLMs-Paramete" class="headerlink" title="3.2 Methods for Modifying LLMs Paramete"></a>3.2 Methods for Modifying LLMs Paramete</h3><p>该范例将更新部分参数 θ，它应用更新 Δ 矩阵来编辑模型。</p>
+<p><strong>定位然后编辑 </strong><span style="background-color: #2ea8e580">该范例首先识别与特定知识相对应的参数，并通过直接更新目标参数来修改它们。</span>知识神经元（KN）方法（Dai et al., 2022）<span style="background-color: #2ea8e580">引入了知识归因技术来精确定位体现知识的“知识神经元”（FFN 矩阵中的键值对），然后更新这些神经元。 </span>ROME（Meng et al., 2022）<span style="background-color: #2ea8e580">应用因果中介分析来定位编辑区域。 ROME 不是修改 FFN 中的知识神经元，而是改变整个矩阵。 ROME 将模型编辑视为具有线性等式约束的最小二乘法，并使用拉格朗日乘子来求解。</span>然而，<span style="background-color: #2ea8e580">KN 和 ROME 一次只能编辑一个事实关联。</span>为此，<span style="background-color: #2ea8e580">MEMIT（Meng et al., 2023）对ROME的设置进行了扩展，实现了多病例同步编辑的情况。</span>基于 MEMIT，PMET（Li et al., 2023a）涉及注意力值以获得更好的性能。</p>
+<p><strong>元学习</strong> <span style="background-color: #2ea8e580">元学习方法采用超网络来学习编辑 LLM 所需的 Δ</span>。<span style="background-color: #2ea8e580">知识编辑器（KE）（De Cao et al., 2021）利用超网络（特别是双向 LSTM）来预测每个数据点的权重更新，从而能够在不干扰其他知识的情况下对编辑目标知识进行约束优化</span>。然而，这种方法在编辑LLMs方面存在不足。为了克服这个限制，<span style="background-color: #2ea8e580">模型编辑器网络梯度分解（MEND）（Mitchell et al., 2022a）学习通过采用梯度的低秩分解来变换微调语言模型的梯度，这可以应用于具有更好性能的LLM。</span></p>
+<h2 id="4-Preliminary-Experiments"><a href="#4-Preliminary-Experiments" class="headerlink" title="4 Preliminary Experiments"></a>4 Preliminary Experiments</h2><p>考虑到大量以事实知识为中心的研究和数据集，我们将其用作主要比较基础。我们最初的对照实验使用两个著名的事实知识数据集（表 1）进行，促进了方法的直接比较，突出了它们独特的优势和局限性（Wang 等人，2023b）。</p>
+<h3 id="4-1-Experiment-Setting"><a href="#4-1-Experiment-Setting" class="headerlink" title="4.1 Experiment Setting"></a>4.1 Experiment Setting</h3><p>我们使用两个著名的模型编辑数据集：ZsRE 和 COUNTERFACT，其详细信息请参见附录 B。以前的研究通常使用较小的语言模型 (&lt;1B)，并证明了当前编辑方法在 BERT 等较小模型上的有效性（Devlin 等人， 2019）。然而，这些方法是否适用于更大的模型仍有待探索。因此，考虑到编辑任务和未来的发展，我们专注于基于生成的模型并选择更大的模型：T5-XL（3B）和GPT-J（6B），代表编码器-解码器和仅解码器结构。</p>
+<pre><code> 我们从每种方法类型中选择了有影响力的作品。除了现有的模型编辑技术之外，我们还检查了微调的结果，这是模型更新的基本方法。为了避免重新训练所有层的计算成本，我们采用了Meng等人提出的方法。 (2022)，由 ROME 识别的微调层，我们将其表示为 FT-L。该策略确保与其他直接编辑进行公平比较方法，增强我们分析的有效性。更多详细信息请参见附录 A。
+</code></pre><h3 id="4-2-Experiment-Results"><a href="#4-2-Experiment-Results" class="headerlink" title="4.2 Experiment Results"></a>4.2 Experiment Results</h3><p>基本模型表 1 <span style="background-color: #ff666680">揭示了 SERAC 和 ROME 在 ZsRE 和 COUNTERFACT 数据集上的卓越性能，SERAC 在多个指标上超过 90%。虽然 MEMIT 缺乏通用性，但它在可靠性和局部性方面表现出色。 KE、CaliNET 和 KN 表现不佳，在较小的模型中表现尚可，但在较大的模型中表现平平。 MEND 在这两个数据集上表现良好，在 T5 上的结果达到了 80% 以上，尽管不如 ROME 和 SERAC 那样令人印象深刻。 T-Patcher 模型的性能因模型架构和大小的不同而有所不同。例如，它在 ZsRE 数据集的 T5-XL 上表现不佳，而在 GPT-J 上表现完美。在 COUNTERFACT 数据集的情况下，T-Patcher 在 T5 上实现了令人满意的可靠性和局部性，但缺乏泛化性。相反，在 GPT-J 上，该模型在可靠性和泛化性方面表现出色，但在局部性方面表现不佳。</span><span style="background-color: #5fb23680">这种不稳定性可归因于模型架构，因为 T-Patcher 在 T5 的最终解码器层添加了一个神经元；</span><span style="background-color: #ff666680">然而，编码器可能仍然保留原始知识。 FT-L 在 PLM 上的表现不如 ROME，即使修改相同的位置。它在 ZsRE 数据集上显示出令人印象深刻的性能，但在 GPT-J 上的 COUNTERFACT 数据集上与 ROME 的可靠性和泛化能力相当。然而，其较低的局部性得分表明对不相关知识领域的潜在影响。 IKE 表现出良好的可靠性，但在局部性方面遇到困难，因为预先设置的提示可能会影响不相关的输入。它的泛化能力也可以提高。情境学习</span></p>
+<p><img src="../imgs/$%7Bfiilename%7D/B7WY2DBH.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;B7WY2DBH&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22AYAJST64%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%225%22%2C%22position%22%3A%7B%22pageIndex%22%3A4%2C%22rects%22%3A%5B%5B67%2C654.39%2C531.5%2C770.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%225%22%7D%7D&quot; width=&quot;774&quot; height=&quot;193&quot; src=&quot;attachments/B7WY2DBH.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>该方法可能会遇到上下文调解失败的问题（Hernandez et al., 2023)，因为预先训练的语言模型可能无法始终生成与提示对齐的文本。</p>
+<p><strong>模型缩放</strong> 由于计算限制，我们使用更大的模型进行实验，在 OPT-13B 和 GPT-NEOX-20B 上测试 IKE、ROME 和 MEMIT。结果（表 2）令人惊讶地<span style="background-color: #ff666680">显示 ROME 和 MEMIT 在 GPT-NEOX-20B 模型上表现良好，但在 OPT-13B 上表现不佳。这是由于这两种方法都依赖于矩阵求逆运算。然而，在 OPT-13B 模型中，矩阵是不可逆的。</span>我们甚至根据经验发现，<span style="background-color: #5fb23680">用最小二乘法逼近解会产生不令人满意的结果。我们认为这是 ROME 和 MEMIT 的局限性，因为它们不能应用于不同的模型。</span> <span style="background-color: #ff666680">MEMIT 由于依赖多层矩阵计算而表现较差，并且对于较大模型，其可靠性和泛化性比 ROME 下降得更多。 IKE 的性能受到模型本身的上下文学习能力的影响。 OPT的结果比GPT-J的结果还要差，这可能归因于OPT本身的上下文学习能力。</span><span style="background-color: #5fb23680">此外，随着模型大小的增加，其泛化和局部性的性能都会下降。</span></p>
+<p><strong>批量编辑</strong> 鉴于许多研究通常将更新限制为几十个事实或仅关注单个编辑案例，我们进行了进一步的批量编辑分析。然而，通常需要同时修改具有多个知识片段的模型。我们重点关注支持批量编辑的方法（FT、SERAC、MEND 和 MEMIT），并在图 3 中展示了它们的性能。值得注意的是，<span style="background-color: #ff666680">MEMIT 支持LLMs的大规模知识编辑，允许以最少的时间和内存进行数百甚至数千个同时编辑成本。其在可靠性和泛化方面的性能在最多 1000 次编辑时仍然保持稳健，但局部性在此级别下降。而 FT-L、SERAC、和MEND还支持批量编辑，它们需要大量内存来处理更多情况，超出了我们当前的能力。因此，我们将测试限制为 100 次编辑。 SERAC 可以完美地进行最多 100 次编辑的批量编辑。 MEND 和 FT-L 在批量编辑中的性能并不那么强，随着编辑数量的增加，模型的性能迅速下降。</span></p>
+<p><img src="../imgs/$%7Bfiilename%7D/WVMGDVMU.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;WVMGDVMU&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22UTUV86Q8%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%225%22%2C%22position%22%3A%7B%22pageIndex%22%3A4%2C%22rects%22%3A%5B%5B303%2C516.89%2C528%2C639.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%225%22%7D%7D&quot; width=&quot;375&quot; height=&quot;204&quot; src=&quot;attachments/WVMGDVMU.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><strong>顺序编辑</strong> 请注意，默认评估过程是更新单个模型知识，评估新模型，然后回滚更新，然后对每个测试点重复该过程。在实际场景中，模型在进行新的编辑时应保留先前的更改。因此，进行连续编辑的能力是模型编辑的一个重要特征（Huang et al., 2023）。我们评估了具有强大的单编辑性能的顺序编辑方法，并在图 4 中报告了结果。<span style="background-color: #ff666680">冻结模型参数的方法（如 SERAC 和 T-Patcher)通常在顺序编辑中表现出稳定的性能。然而，那些改变模型参数的人却很困难</span>。 <span style="background-color: #ff666680">ROME 在 n = 10 之前表现良好，然后在 n = 100 时下降。MEMIT 的性能也会在超过 100 次编辑后下降，但不如 ROME 大幅下降。同样，MEND 在 n = 1 时表现良好，但在 n = 10 时表现明显下降。随着编辑过程的继续，这些模型越来越偏离其原始状态，导致性能次优。</span></p>
+<h2 id="5-Comprehensive-Study"><a href="#5-Comprehensive-Study" class="headerlink" title="5 Comprehensive Study"></a>5 Comprehensive Study</h2><p>考虑到上述几点，我们认为以前的评估指标可能无法充分评估模型编辑能力。因此，我们提出对可移植性、局部性和效率进行更全面的评估。</p>
+<h3 id="5-1-Portability-Robust-Generalization"><a href="#5-1-Portability-Robust-Generalization" class="headerlink" title="5.1 Portability - Robust Generalization"></a>5.1 Portability - Robust Generalization</h3><p>几项研究使用通过反向翻译生成的样本来评估泛化性（De Cao 等人，2021）。然而，这些释义的句子通常只涉及微小的措辞变化，并不能反映实质性的事实修改。正如 Jacques Thibodeau (2022) 中所述，验证这些方法是否能够处理编辑对实际应用程序的影响至关重要。因此，我们引入了一种称为可移植性的新评估指标，以衡量模型编辑在将知识转移到相关内容方面的有效性，称为鲁棒泛化。因此我们考虑三个方面：（1）<strong>主语替换</strong>：由于大多数改写的句子保留了主语描述，但更多地改写了关系，我们通过替换来测试泛化能力问题中的主题带有别名或同义词。这测试模型是否可以将编辑的属性推广到同一主题的其他描述。 (2)<strong>反向关系</strong>：当编辑主体和关系的目标时，目标实体的属性也发生变化。我们通过过滤合适的关系（例如一对一）并询问相反的问题来检查目标实体是否也更新来测试模型处理此问题的能力。 （3）<strong>一跳</strong>：修改后的知识应该可以被编辑后的语言模型用于下游任务。例如，如果我们更改“瓦茨·汉弗莱 (Watts Humphrey) 就读哪所大学？”这个问题的答案。从“三一学院”到“密歇根大学”，当被问到“Watts Humphrey 在大学学习期间住在哪个城市？”时，模型应该回答“密歇根州的安娜堡”而不是“爱尔兰的都柏林”。因此，我们构建了一个推理数据集来评估编辑后模型使用编辑知识的能力。</p>
+<pre><code> 我们将一个新部分 P (xe, ye) 合并到现有数据集 ZsRE 中，可移植性计算为应用于 P (xe, ye) 中的推理示例时编辑模型 (fθe) 的平均准确度：
+</code></pre><p><img src="../imgs/$%7Bfiilename%7D/AKCEUPGK.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;AKCEUPGK&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22J5ARE9LF%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%226%22%2C%22position%22%3A%7B%22pageIndex%22%3A5%2C%22rects%22%3A%5B%5B306.5%2C154.39%2C526.5%2C190.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%226%22%7D%7D&quot; width=&quot;367&quot; height=&quot;60&quot; src=&quot;attachments/AKCEUPGK.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><strong>数据集构建 </strong>对于一跳数据集<span style="background-color: #ff666680">，在原始编辑中，我们将主题 s 的答案从 o 更改为 o<em>。然后，我们提示模型生成链接的三元组 (o</em>, r<em>, o′</em>)。随后，GPT-4 根据这个三元组和 s 创建一个问题和答案。尤其，如果模型可以回答这个新问题，意味着它具有三元组 (o<em>, r</em>, o′<em>) 的预先存在的知识。我们通过要求模型从 o</em> 和 r<em> 预测 o’</em> 来过滤未知的三元组。如果成功，则推断该模型具有先验知识。最后，人类评估者验证三元组的准确性和问题的流畅性</span>。其他详细信息，例如我们使用的演示和数据集构建的其他部分，可以在附录 B 中找到。</p>
+<p><strong>结果 </strong>我们根据新提出的评估指标和数据集进行实验，结果如表3所示。如表所示，<span style="background-color: #ff666680">当前模型编辑方法在可移植性方面的性能有些欠佳。尽管 SERAC 在之前的指标上显示出无可挑剔的结果，但在所有三个可移植性方面的准确度均低于 20%。 SERAC的瓶颈在于分类器的准确性和附加模型的能力。对于主题替换场景，包括SERAC、MEND、ROME和MEMIT，只能适应特定的主题实体表达，而不能泛化到主题实体的概念。然而，FT-L、IKE 和 T-patcher 在面对替换主题时表现出了出色的性能。</span>关于反向关系，我们的结果表明，<span style="background-color: #ff666680">当前的编辑方法主要编辑单向关系，IKE 是一个明显的例外，在 GPT-J 和 GPT-NEOX-20B 上都达到了 90% 以上。其他方法改变主体实体的属性，同时保持客体实体不受影响</span>。在一跳推理环境中，<span style="background-color: #ff666680">大多数编辑方法都难以将改变的知识转移到相关事实。</span>出乎意料的是，<span style="background-color: #5fb23680">ROME、MEMIT和IKE在可移植性方面表现出相对值得称赞的表现（超过50%）。他们不仅能够编辑原始案件，而且能够在某些方面修改与案件相关的事实</span>。综上所述，在我们的评估中，IKE 在三个场景中都表现出了相对较好的性能。然而，很明显，当前的模型编辑技术在管理编辑的后果方面继续面临挑战，即确保知识的变化在相关上下文中连贯一致地反映。事实上，这一领域需要在未来的研究中进一步调查和创新。</p>
+<h3 id="5-2-Locality-Side-Effect-of-Model-Editing"><a href="#5-2-Locality-Side-Effect-of-Model-Editing" class="headerlink" title="5.2 Locality - Side Effect of Model Editing"></a>5.2 Locality - Side Effect of Model Editing</h3><p>在上一节中，COUNTERFACT 和 ZsRE 从以下方面评估模型编辑的局部性：COUNTERFACT 使用与目标知识相同分布的三元组，而 ZsRE 使用来自不同自然问题数据集的问题。值得注意的是，一些方法（例如 T-Patcher）在这两个数据集上表现出不同的性能。这凸显出模型编辑对语言模型的影响是多方面的，需要进行彻底、全面的评估才能充分理解其效果。为了彻底检查模型编辑的潜在副作用，我们提出了三个不同层面的评估：（1）其他关系：尽管Meng等人。 (2022)引入了本质的概念，但他们没有明确评价它。我们认为，已更新的主题的其他属性在编辑后应保持不变。 (2)分散邻里的注意力：HoelscherObermaier等人。 （2023a）发现，如果我们将编辑后的案例连接在其他不相关的输入之前，模型往往会受到编辑后的事实的影响，并继续产生与编辑后的案例一致的结果。 (3) 其他任务：基于 Skill Neuron 的断言（Wang 等人，2022），即大语言模型（LLM）中的前馈网络拥有特定于任务的知识能力，我们引入了一个新的挑战来评估模型编辑是否可能对性能产生负面影响关于其他任务。数据集构建的详细信息请参见附录 B.3。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/ND8H464M.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;ND8H464M&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22DX678K73%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%227%22%2C%22position%22%3A%7B%22pageIndex%22%3A6%2C%22rects%22%3A%5B%5B297.5%2C600.89%2C529%2C776.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%227%22%7D%7D&quot; width=&quot;386&quot; height=&quot;293&quot; src=&quot;attachments/ND8H464M.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p><strong>结果</strong> 表 4 列出了我们的结果。值得注意的是，当前的编辑方法在其他属性方面表现出色，表明它们仅修改目标特征而不影响其他属性。<span style="background-color: #5fb23680">然而，它们在 Distract-Neighbor 设置中通常表现不佳，</span>如与表 1 中的结果相比性能下降所反映的那样。IKE 是一个例外，它的性能保持相对稳定，因为它继承了以下事实：</p>
+<p><img src="../imgs/$%7Bfiilename%7D/EQ2WM2DI.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;EQ2WM2DI&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22S55AHZG9%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B62.727%2C578.708%2C296.591%2C783.254%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;390&quot; height=&quot;341&quot; src=&quot;attachments/EQ2WM2DI.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>完全需要在输入之前连接编辑后的事实。对于常识推理任务，参数保留方法在很大程度上保持了其在其他任务上的性能。相反，改变参数的方法往往会对性能产生负面影响，MEMIT 除外。尽管参数发生了变化，MEMIT 在常识性任务中仍然保持着强劲的性能，展示了其值得称赞的局部性。</p>
+<h3 id="5-3-Efficiency"><a href="#5-3-Efficiency" class="headerlink" title="5.3 Efficiency"></a>5.3 Efficiency</h3><p>模型编辑应最大限度地减少进行编辑所需的时间和内存，而不影响模型的性能。</p>
+<p>时间分析表5说明了不同模型编辑技术从提供编辑案例到获得发布后编辑模型所需的时间。我们观察到，一旦超网络经过训练，KE 和 MEND 就会以相当快的速度执行编辑过程。同样，SERAC 还可以快速编辑知识，在经过训练的分类器和反事实模型的情况下，在大约 5 秒内完成该过程。然而，这些方法需要数小时至数天的额外训练和额外的数据集。在我们的实验中，在 ZsRE 数据集上训练 MEND 需要超过 7 个小时，在 3× V100 上训练 SERAC 需要超过 36 个小时。另一方面，ROME 和 MEMIT 需要预先计算维基文本的协方差统计数据。然而，这种计算非常耗时，可能需要数小时至数天才能完成。相比之下，其他方法（例如 KN、CaliNET 和 T-Patcher）可能更快，因为它们不需要任何预计算或预训练。然而，KN 和 CaliNET 在较大模型上的性能</p>
+<p><img src="../imgs/$%7Bfiilename%7D/K9ABI2KM.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;K9ABI2KM&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22GC2LNVEQ%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B302.045%2C605.981%2C532.5%2C781.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;384&quot; height=&quot;293&quot; src=&quot;attachments/K9ABI2KM.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
+<p>不能令人满意，T-Patcher 是最慢的，因为需要针对每个相应的错误进行单独的神经元训练。考虑到时间方面，需要一种更加省时的模型编辑方法。</p>
+<p><strong>内存分析</strong> 图 5 显示了每种模型编辑方法的内存 VRAM 使用情况。从该图中，我们观察到大多数方法消耗的内存量相似，但 MEND 除外，它需要超过 60GB 的内存用于训练。引入额外训练的方法（例如 MEND 和 SERAC）会导致额外的计算开销，从而显着增加内存消耗。</p>
+<h2 id="6-Relationship-with-Relevant-Works"><a href="#6-Relationship-with-Relevant-Works" class="headerlink" title="6 Relationship with Relevant Works"></a>6 Relationship with Relevant Works</h2><h3 id="6-1Knowledge-in-LLMs"><a href="#6-1Knowledge-in-LLMs" class="headerlink" title="6.1Knowledge in LLMs"></a>6.1Knowledge in LLMs</h3><p>多种模型编辑方法旨在了解 PLM 中存储的知识如何精确且直接地改变模型参数。现有工作研究了 PLM 如何存储知识的原则（Geva 等人，2021、2022；Haviv 等人，2023；Hao 等人，2021；Hernandez 等人，2023；Yao 等人， 2023；Cao et al., 2023；Lamparth and Reuel, 2023；Cheng et al., 2023；Li et al., 2023b；Chen et al., 2023；Ju and Zhang, 2023），这些都有助于模型编辑过程。此外，一些模型编辑技术与知识增强相似（Zhang et al., 2019；Lewis et al., 2020；Zhang et al., 2022b；Yasunaga et al., 2021；Yao et al., 2022；Pan et al. ., 2023）方法，因为更新模型的知识也可以被视为将知识灌输到模型中。</p>
+<h3 id="6-2Lifelong-Learning-and-Unlearning"><a href="#6-2Lifelong-Learning-and-Unlearning" class="headerlink" title="6.2Lifelong Learning and Unlearning"></a>6.2Lifelong Learning and Unlearning</h3><p>模型编辑包括终身学习和忘却，允许自适应地添加、修改和删除知识。持续学习（Biesialska et al., 2020）可以提高模型跨任务和领域的适应性，已在 PLM 中的模型编辑中显示出有效性（Zhu et al., 2020）。此外，模型忘记敏感知识并与机器遗忘概念保持一致至关重要（Hase 等人，2023；Wu 等人，2022；Tarun 等人，2021；Gandikota 等人，2023）。</p>
+<h3 id="6-3Security-and-Privacy-for-LLMs"><a href="#6-3Security-and-Privacy-for-LLMs" class="headerlink" title="6.3Security and Privacy for LLMs"></a>6.3Security and Privacy for LLMs</h3><p>过去的研究（Carlini 等人，2020；Shen 等人，2023）表明，LLMs可以根据某些提示生成不可靠或个人的样本。删除大型语言模型 (LLM) 中存储的潜在有害信息和隐私信息的任务对于增强基于 LLM 的应用程序的隐私和安全性至关重要（Sun 等人，2023）。模型编辑可以抑制有害语言的生成（Geva et al., 2022；Hu et al., 2023），可以帮助解决这些问题。</p>
+<h2 id="7-Conclusion"><a href="#7-Conclusion" class="headerlink" title="7 Conclusion"></a>7 Conclusion</h2><p>我们系统地分析了编辑大语言模型（LLM）的方法。我们的目标是通过检查现有编辑技术的特征、优势和局限性，帮助研究人员更好地理解现有编辑技术。我们的分析显示了很大的改进空间，特别是在可移植性、局部性和效率方面。改进的LLMs编辑可以帮助他们更好地适应用户不断变化的需求和价值观。我们希望我们的工作能够促进开放问题和进一步研究的进展。</p>
+]]></content>
+      <categories>
+        <category>知识编辑</category>
+      </categories>
+      <tags>
+        <tag>EMNLP2023</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自注意力机制</title>
+    <url>/2023/12/29/zi-zhu-yi-li-ji-zhi/</url>
+    <content><![CDATA[<h1 id="自注意力机制"><a href="#自注意力机制" class="headerlink" title="自注意力机制"></a>自注意力机制</h1><h2 id="Sophisticated-input"><a href="#Sophisticated-input" class="headerlink" title="Sophisticated input"></a>Sophisticated input</h2><p><img src="https://s2.loli.net/2023/12/29/n8W9btsVvg5MxoT.png" alt="image-20231229105452661"></p>
+<h2 id="Vector-Set-as-Input"><a href="#Vector-Set-as-Input" class="headerlink" title="Vector Set as Input"></a>Vector Set as Input</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229105727351.png" alt="image-20231229105727351"></p>
+<p><img src="https://s2.loli.net/2023/12/29/SC4MYGdbpWokvAl.png" alt="image-20231229105938497"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229110040187.png" alt="image-20231229110040187"></p>
+<p><img src="https://s2.loli.net/2023/12/29/sjlEwmAa2L1xbfU.png" alt="image-20231229110139172"></p>
+<h2 id="What-is-the-output"><a href="#What-is-the-output" class="headerlink" title="What is the output?"></a>What is the output?</h2><p><img src="https://s2.loli.net/2023/12/29/97MivqYoh3t2EX8.png" alt="image-20231229110343955"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229110500001.png" alt="image-20231229110500001"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229110528351.png" alt="image-20231229110528351"></p>
+<h2 id="Sequence-Labeling"><a href="#Sequence-Labeling" class="headerlink" title="Sequence Labeling"></a>Sequence Labeling</h2><p><img src="https://s2.loli.net/2023/12/29/KnmNkCX4Bjq317U.png" alt="image-20231229111029189"></p>
+<h2 id="Self-attention"><a href="#Self-attention" class="headerlink" title="Self-attention"></a>Self-attention</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229111243095.png" alt="image-20231229111243095"></p>
+<p><img src="https://s2.loli.net/2023/12/29/EOaxibsI2vVmnDo.png" alt="image-20231229111328519"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229111447447.png" alt="image-20231229111447447"></p>
+<p><img src="https://s2.loli.net/2023/12/29/BuIYhorAR8anWsQ.png" alt="image-20231229111613666"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229111844380.png" alt="image-20231229111844380"></p>
+<p><img src="https://s2.loli.net/2023/12/29/gsHDVXrySkv61wA.png" alt="image-20231229112012157"></p>
+<p><img src="https://s2.loli.net/2023/12/29/xZiQaeTY26sUmhk.png" alt="image-20231229112129280"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229112323860.png" alt="image-20231229112323860"></p>
+<p><img src="https://s2.loli.net/2023/12/29/fGARtPodCYx6syl.png" alt="image-20231229112504332"></p>
+<p><img src="https://s2.loli.net/2023/12/29/PckCHBfQYrFDpju.png" alt="image-20231229112825156"></p>
+<p>矩阵计算</p>
+<p><img src="https://s2.loli.net/2023/12/29/UpATDIF169vVWJ3.png" alt="image-20231229113203405"></p>
+<p> <img src="https://s2.loli.net/2023/12/29/xzmvaWDyOjGTnpP.png" alt="image-20231229115018255"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229115203578.png" alt="image-20231229115203578"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229115350227.png" alt="image-20231229115350227"></p>
+<h2 id="Multi-head-Self-attention"><a href="#Multi-head-Self-attention" class="headerlink" title="Multi-head Self-attention"></a>Multi-head Self-attention</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229115757287.png" alt="image-20231229115757287"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229115844341.png" alt="image-20231229115844341"></p>
+<h2 id="Position-Encoding"><a href="#Position-Encoding" class="headerlink" title="Position Encoding"></a>Position Encoding</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229120245068.png" alt="image-20231229120245068"></p>
+<p><img src="https://s2.loli.net/2023/12/29/6nVL2TYGu1rMzlI.png" alt="image-20231229120401270"></p>
+<h2 id="Self-attention-for-Speech"><a href="#Self-attention-for-Speech" class="headerlink" title="Self-attention for Speech"></a>Self-attention for Speech</h2><p><img src="https://s2.loli.net/2023/12/29/V2oPpfWXJUNFCEs.png" alt="image-20231229120647905"></p>
+<h2 id="Self-attention-for-Image"><a href="#Self-attention-for-Image" class="headerlink" title="Self-attention for Image"></a>Self-attention for Image</h2><p><img src="https://s2.loli.net/2023/12/29/Rh1VJnqidxsM5Pa.png" alt="image-20231229120820731"></p>
+<h2 id="Self-Attention-GAN"><a href="#Self-Attention-GAN" class="headerlink" title="Self-Attention GAN"></a>Self-Attention GAN</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229120933611.png" alt="image-20231229120933611"></p>
+<h2 id="Self-attention-v-s-CNN"><a href="#Self-attention-v-s-CNN" class="headerlink" title="Self-attention v.s. CNN"></a>Self-attention v.s. CNN</h2><p><img src="https://s2.loli.net/2023/12/29/DacnGJOQ1ZysVRj.png" alt="image-20231229121120848"></p>
+<p><img src="https://s2.loli.net/2023/12/29/o14S28ZhUXJKFQx.png" alt="image-20231229121239055"></p>
+<p><img src="https://s2.loli.net/2023/12/29/25SKNZctz6DJG8H.png" alt="image-20231229121432020"></p>
+<h2 id="Self-attention-v-s-RNN"><a href="#Self-attention-v-s-RNN" class="headerlink" title="Self-attention v.s. RNN"></a>Self-attention v.s. RNN</h2><p><img src="https://s2.loli.net/2023/12/29/hCuFaR5sAQpkxZB.png" alt="image-20231229121807937"></p>
+<h2 id="Self-attention-v-s-GNN"><a href="#Self-attention-v-s-GNN" class="headerlink" title="Self-attention v.s. GNN"></a>Self-attention v.s. GNN</h2><p><img src="https://s2.loli.net/2023/12/29/jmt2i7ZrQoLcAuW.png" alt="image-20231229122046331"></p>
+<h2 id="To-Leain-More"><a href="#To-Leain-More" class="headerlink" title="To Leain More"></a>To Leain More</h2><p><img src="https://s2.loli.net/2023/12/29/Cf6QicAP5emb1NH.png" alt="image-20231229122257533"></p>
+]]></content>
   </entry>
   <entry>
     <title>算法笔记V2.0</title>
@@ -3593,119 +3706,6 @@ N = p_1^{c_1} \times p_2^{c_2} \times \cdots \times p_k^{c_k}</script><h4 id="4-
       <tags>
         <tag>C++算法题目</tag>
       </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2024/03/23/tong-ji-xue-xi-fang-fa/</url>
-    <content><![CDATA[<h1 id="10-1-提升方法AdaBoost算法"><a href="#10-1-提升方法AdaBoost算法" class="headerlink" title="10.1 提升方法AdaBoost算法"></a>10.1 提升方法AdaBoost算法</h1><p><img src="https://s2.loli.net/2024/03/23/qSx2yrfQHYu86ij.png" alt="image-20240323120941983"></p>
-<p><img src="https://s2.loli.net/2024/03/23/hUxJme2paKIswVn.png" alt="image-20240323121244084"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240323121450856.png" alt="image-20240323121450856"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>编辑大型语言模型：问题、方法和机遇</title>
-    <url>/2023/11/02/bian-ji-da-xing-yu-yan-mo-xing-wen-ti-fang-fa-he-ji-yu/</url>
-    <content><![CDATA[<h1 id="编辑大型语言模型：问题、方法和机遇"><a href="#编辑大型语言模型：问题、方法和机遇" class="headerlink" title="编辑大型语言模型：问题、方法和机遇"></a>编辑大型语言模型：问题、方法和机遇</h1><h2 id="Abstruct"><a href="#Abstruct" class="headerlink" title="Abstruct"></a>Abstruct</h2><p>尽管有能力培养有能力的LLMs，但维持其相关性和纠正错误的方法仍然难以捉摸。为此，过去几年见证了LLMs编辑技术的激增，其<span style="background-color: #2ea8e580">目标是有效地改变特定领域内LLMs的行为，而不会对其他输入的性能产生负面影响</span>。本文深入探讨了LLMs模型编辑相关的问题、方法和机遇。特别是，我们<span style="background-color: #ff666680">对任务定义和与模型编辑相关的挑战进行了详尽的概述，并对我们目前掌握的最先进的方法进行了深入的实证分析</span>。我们还<span style="background-color: #ff666680">构建了一个新的基准数据集，以促进更稳健的评估并查明现有技术固有的持久问题</span>。我们的目标是为每种编辑技术的有效性和可行性提供有价值的见解，从而帮助社区做出明智的决定，为特定任务或上下文选择最合适的方法。</p>
-<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h1><p>大型语言模型（LLM）已经表现出理解和生成类人文本的非凡能力（Brown et al., 2020；OpenAI, 2023；Anil et al., 2023；Touvron et al., 2023；Qiao et al., 2022；赵等人，2023）。尽管LLMs的训练非常熟练，但确保其相关性和修复错误的策略仍不清楚。理想情况下，随着世界形势的发展，我们的目标是更新LLMs，避免与训练全新模型相关的计算负担。如图1所示，解决这个问题模型编辑的概念被提出</p>
-<p><img src="../imgs/$%7Bfiilename%7D/SWBFWKDL.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;SWBFWKDL&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%226BF2NSVY%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%221%22%2C%22position%22%3A%7B%22pageIndex%22%3A0%2C%22rects%22%3A%5B%5B300.5%2C490.39%2C533%2C628.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%221%22%7D%7D&quot; width=&quot;388&quot; height=&quot;231&quot; src=&quot;attachments/SWBFWKDL.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>（Sinitsin 等人，2020；De Cao 等人，2021），<span style="background-color: #2ea8e580">能够对模型的行为进行数据有效的改变，特别是在指定的感兴趣领域内，同时确保不会对其他输入产生不利影响。</span>目前，大量关于LLMs模型编辑的工作（De Cao et al., 2021；Meng et al., 2022, 2023；Sinitsin et al., 2020；Huang et al., 2023)在各种编辑任务和设置方面取得了长足的进步。如图 2 所示，<span style="background-color: #2ea8e580">这些工作通过将辅助网络与原始未更改的模型集成或更改导致不良输出的模型参数来操纵特定情况下的模型输出。</span>尽管文献中存在广泛的模型编辑技术，但<span style="background-color: #5fb23680">明显缺乏在统一实验条件下评估这些方法的全面比较分析。缺乏直接比较会削弱我们辨别每种方法相对优缺点的能力，从而阻碍我们理解它们在不同问题领域的适应性。</span></p>
-<pre><code> 为了解决这个问题，本研究致力于建立一个标准的问题定义，并对这些方法进行细致的评估（§2，§3）。我们在规定的条件下进行实验，促进对各自的优缺点进行公正的比较（§4）。&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;我们最初使用两个流行的模型编辑数据集，ZsRE (Levy et al., 2017) 和 COUNTERFACT (Meng et al., 2022)，以及两个结构上的数据集不同的语言模型，T5（Raffel et al.，2020a）（编码器-解码器）和 GPT-J（Wang 和 Komatsuzaki，2021a）（仅解码器）作为我们的基础模型&lt;/span&gt;。我们还评估了较大模型 OPT-13B（Zhang 等人，2022a）和 GPT-NEOX20B（Black 等人，2022）的性能。除了基本编辑设置之外，我们还评估批量和顺序编辑的性能。虽然我们观察到当前的方法在事实模型编辑任务中表现出当大的能力，但&lt;span style=&quot;background-color: #2ea8e580&quot;&gt;我们重新考虑当前的评估并创建一个更具包容性的评估数据集（§5）：可移植性（强大的泛化能力）、局部性（副作用）和效率（时间）和内存使用情况）&lt;/span&gt;。我们发现当前的模型编辑方法在这些层面上有所限制，从而限制了它们的实际应用，未来值得更多的研究。通过系统评估，我们的目标是为每种模型编辑技术的有效性提供有价值的见解，帮助研究人员为特定任务选择合适的方法。
-</code></pre><h2 id="2-Problem-Definition"><a href="#2-Problem-Definition" class="headerlink" title="2 Problem Definition"></a>2 Problem Definition</h2><p>模型编辑，由 Mitchell 等人阐明。 （2022b），<span style="background-color: #2ea8e580">旨在有效地调整特定编辑描述符（xe，ye）上的初始基础模型（fθ，θ表示模型的参数）行为，而不影响其他样本上的模型行为</span>。最终目标是创建一个编辑模型，表示为 fθe。具体来说，基本模型 fθ 由函数 f : X → Y 表示，该函数将输入 x 与其相应的预测 y 相关联。给定一个由编辑输入 xe 和编辑标签 ye 组成的编辑描述符，使得 fθ(xe) ̸= ye，后期编辑模型 fθe 被设计为产生预期输出，其中 fθe(xe) = ye。</p>
-<pre><code> &lt;span style=&quot;background-color: #2ea8e580&quot;&gt;模型编辑过程通常会影响与编辑示例密切相关的大量输入的预测。这个输入集合称为编辑范围。&lt;/span&gt;成功的编辑应该调整编辑范围内示例的模型行为，同时保持范围外示例的性能不变：
-</code></pre><p><img src="../imgs/$%7Bfiilename%7D/YCQJYKA2.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;YCQJYKA2&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22WCMI8DSD%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%222%22%2C%22position%22%3A%7B%22pageIndex%22%3A1%2C%22rects%22%3A%5B%5B70.5%2C136.39%2C291.5%2C183.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%222%22%7D%7D&quot; width=&quot;368&quot; height=&quot;78&quot; src=&quot;attachments/YCQJYKA2.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>范围内 I(xe, ye) 通常包含 xe 及其等价邻域 N (xe, ye)，其中包括相关的输入/输出对。相反，超出范围的 O(xe, ye) 由与编辑示例无关的输入组成。模型fe应该满足以下三个属性：可靠性、泛化性和局部性。</p>
-<p><strong>可靠性</strong> 先前的工作（Huang et al., 2023；De Cao et al., 2021；Meng et al., 2022）定义了当后期编辑模型 fθe 给出案例 (xe, ye) 的目标答案时的可靠编辑被编辑。可靠性以编辑案例的平均准确度来衡量：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/Q3XB8E8H.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;Q3XB8E8H&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22WHB9Z2XR%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%222%22%2C%22position%22%3A%7B%22pageIndex%22%3A1%2C%22rects%22%3A%5B%5B302.5%2C616.89%2C530%2C650.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%222%22%7D%7D&quot; width=&quot;379&quot; height=&quot;56&quot; src=&quot;attachments/Q3XB8E8H.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p><strong>泛化</strong> 编辑后模型 fθe 还应该编辑等效邻居 N (xe, ye)（例如改写的句子)。它是通过模型 fθe 在从等价邻域中均匀抽取的示例上的平均精度来评估的：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/TSPLLYFE.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;TSPLLYFE&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22ICM3VKEP%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%222%22%2C%22position%22%3A%7B%22pageIndex%22%3A1%2C%22rects%22%3A%5B%5B305%2C503.39%2C527%2C538.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%222%22%7D%7D&quot; width=&quot;370&quot; height=&quot;59&quot; src=&quot;attachments/TSPLLYFE.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p><strong>局部性 </strong>在一些工作中，也被称为特异性。编辑应该在本地实现，这意味着编辑后模型 fθe 不应更改范围外 O(xe, ye) 中不相关示例的输出。因此，局部性是通过编辑后模型 fθe 的预测与编辑前 fθ 模型相同的来评估的</p>
-<p><img src="../imgs/$%7Bfiilename%7D/88F6ZZTR.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;88F6ZZTR&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22KH34VUGC%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%222%22%2C%22position%22%3A%7B%22pageIndex%22%3A1%2C%22rects%22%3A%5B%5B306.5%2C364.39%2C527%2C401.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%222%22%7D%7D&quot; width=&quot;368&quot; height=&quot;62&quot; src=&quot;attachments/88F6ZZTR.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<h3 id="3-Current-Methods"><a href="#3-Current-Methods" class="headerlink" title="3 Current Methods"></a>3 Current Methods</h3><p>目前LLMs的模型编辑方法可以分为两种主要范式，如图2所示：<span style="background-color: #2ea8e580">修改模型参数或保留模型参数。</span>更多比较见表 6。</p>
-<h3 id="3-1-Methods-for-Preserving-LLMs-Parameters"><a href="#3-1-Methods-for-Preserving-LLMs-Parameters" class="headerlink" title="3.1 Methods for Preserving LLMs Parameters"></a>3.1 Methods for Preserving LLMs Parameters</h3><p><strong>基于内存的模型 </strong><span style="background-color: #2ea8e580">这种方法将所有编辑示例显式存储在内存中，并使用检索器为每个新输入提取最相关的编辑事实，以指导模型生成编辑事实。 </span>SERAC（Mitchell 等人，2022b）提出了一种采用独特的反事实模型，同时保持原始模型不变的方法。具体来说，<span style="background-color: #2ea8e580">它采用范围分类器来计算新输入落入存储的编辑示例范围内的可能性。如果输入与内存中任何缓存的编辑相匹配，则反事实模型的预测将基于输入和最可能的编辑。否则，如果输入超出了所有编辑的范围，给出了原始模型的预测。</span>此外，<span style="background-color: #5fb23680">最近的研究表明LLMs拥有强大的情境学习能力。模型本身可以生成与所提供的知识相对应的输出，而不是求助于用新事实训练的额外模型，并给出精炼的知识上下文作为提示。</span><span style="background-color: #2ea8e580">这种方法通过用编辑后的事实提示模型并从编辑记忆中检索编辑演示来编辑语言模型</span>，包括以下工作：MemPrompt (Madaan et al., 2022)、IKE (Zheng et al., 2023) 和MeLLo（Zhong 等人，2023）。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/Y5M6Y7UX.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;Y5M6Y7UX&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%226XZYF4BM%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%223%22%2C%22position%22%3A%7B%22pageIndex%22%3A2%2C%22rects%22%3A%5B%5B79%2C517.39%2C515%2C782.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%223%22%7D%7D&quot; width=&quot;727&quot; height=&quot;443&quot; src=&quot;attachments/Y5M6Y7UX.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p><strong>附加参数 </strong><span style="background-color: #2ea8e580">此范例在语言模型中引入了额外的可训练参数。这些参数在修改后的知识数据集上进行训练，而原始模型参数保持静态。</span> T-Patcher（Huang et al., 2023）在模型前馈网络（FFN）的最后一层针对一个错误集成了一个神经元（补丁），仅在遇到其对应错误时才生效。 CaliNET（Dong et al., 2022）整合了多个神经元以用于多个编辑案例。不同的是，GRACE（Hartvigsen et al., 2022）维护一个离散的密码本作为适配器，随着时间的推移添加和更新元素以编辑模型的预测。</p>
-<h3 id="3-2-Methods-for-Modifying-LLMs-Paramete"><a href="#3-2-Methods-for-Modifying-LLMs-Paramete" class="headerlink" title="3.2 Methods for Modifying LLMs Paramete"></a>3.2 Methods for Modifying LLMs Paramete</h3><p>该范例将更新部分参数 θ，它应用更新 Δ 矩阵来编辑模型。</p>
-<p><strong>定位然后编辑 </strong><span style="background-color: #2ea8e580">该范例首先识别与特定知识相对应的参数，并通过直接更新目标参数来修改它们。</span>知识神经元（KN）方法（Dai et al., 2022）<span style="background-color: #2ea8e580">引入了知识归因技术来精确定位体现知识的“知识神经元”（FFN 矩阵中的键值对），然后更新这些神经元。 </span>ROME（Meng et al., 2022）<span style="background-color: #2ea8e580">应用因果中介分析来定位编辑区域。 ROME 不是修改 FFN 中的知识神经元，而是改变整个矩阵。 ROME 将模型编辑视为具有线性等式约束的最小二乘法，并使用拉格朗日乘子来求解。</span>然而，<span style="background-color: #2ea8e580">KN 和 ROME 一次只能编辑一个事实关联。</span>为此，<span style="background-color: #2ea8e580">MEMIT（Meng et al., 2023）对ROME的设置进行了扩展，实现了多病例同步编辑的情况。</span>基于 MEMIT，PMET（Li et al., 2023a）涉及注意力值以获得更好的性能。</p>
-<p><strong>元学习</strong> <span style="background-color: #2ea8e580">元学习方法采用超网络来学习编辑 LLM 所需的 Δ</span>。<span style="background-color: #2ea8e580">知识编辑器（KE）（De Cao et al., 2021）利用超网络（特别是双向 LSTM）来预测每个数据点的权重更新，从而能够在不干扰其他知识的情况下对编辑目标知识进行约束优化</span>。然而，这种方法在编辑LLMs方面存在不足。为了克服这个限制，<span style="background-color: #2ea8e580">模型编辑器网络梯度分解（MEND）（Mitchell et al., 2022a）学习通过采用梯度的低秩分解来变换微调语言模型的梯度，这可以应用于具有更好性能的LLM。</span></p>
-<h2 id="4-Preliminary-Experiments"><a href="#4-Preliminary-Experiments" class="headerlink" title="4 Preliminary Experiments"></a>4 Preliminary Experiments</h2><p>考虑到大量以事实知识为中心的研究和数据集，我们将其用作主要比较基础。我们最初的对照实验使用两个著名的事实知识数据集（表 1）进行，促进了方法的直接比较，突出了它们独特的优势和局限性（Wang 等人，2023b）。</p>
-<h3 id="4-1-Experiment-Setting"><a href="#4-1-Experiment-Setting" class="headerlink" title="4.1 Experiment Setting"></a>4.1 Experiment Setting</h3><p>我们使用两个著名的模型编辑数据集：ZsRE 和 COUNTERFACT，其详细信息请参见附录 B。以前的研究通常使用较小的语言模型 (&lt;1B)，并证明了当前编辑方法在 BERT 等较小模型上的有效性（Devlin 等人， 2019）。然而，这些方法是否适用于更大的模型仍有待探索。因此，考虑到编辑任务和未来的发展，我们专注于基于生成的模型并选择更大的模型：T5-XL（3B）和GPT-J（6B），代表编码器-解码器和仅解码器结构。</p>
-<pre><code> 我们从每种方法类型中选择了有影响力的作品。除了现有的模型编辑技术之外，我们还检查了微调的结果，这是模型更新的基本方法。为了避免重新训练所有层的计算成本，我们采用了Meng等人提出的方法。 (2022)，由 ROME 识别的微调层，我们将其表示为 FT-L。该策略确保与其他直接编辑进行公平比较方法，增强我们分析的有效性。更多详细信息请参见附录 A。
-</code></pre><h3 id="4-2-Experiment-Results"><a href="#4-2-Experiment-Results" class="headerlink" title="4.2 Experiment Results"></a>4.2 Experiment Results</h3><p>基本模型表 1 <span style="background-color: #ff666680">揭示了 SERAC 和 ROME 在 ZsRE 和 COUNTERFACT 数据集上的卓越性能，SERAC 在多个指标上超过 90%。虽然 MEMIT 缺乏通用性，但它在可靠性和局部性方面表现出色。 KE、CaliNET 和 KN 表现不佳，在较小的模型中表现尚可，但在较大的模型中表现平平。 MEND 在这两个数据集上表现良好，在 T5 上的结果达到了 80% 以上，尽管不如 ROME 和 SERAC 那样令人印象深刻。 T-Patcher 模型的性能因模型架构和大小的不同而有所不同。例如，它在 ZsRE 数据集的 T5-XL 上表现不佳，而在 GPT-J 上表现完美。在 COUNTERFACT 数据集的情况下，T-Patcher 在 T5 上实现了令人满意的可靠性和局部性，但缺乏泛化性。相反，在 GPT-J 上，该模型在可靠性和泛化性方面表现出色，但在局部性方面表现不佳。</span><span style="background-color: #5fb23680">这种不稳定性可归因于模型架构，因为 T-Patcher 在 T5 的最终解码器层添加了一个神经元；</span><span style="background-color: #ff666680">然而，编码器可能仍然保留原始知识。 FT-L 在 PLM 上的表现不如 ROME，即使修改相同的位置。它在 ZsRE 数据集上显示出令人印象深刻的性能，但在 GPT-J 上的 COUNTERFACT 数据集上与 ROME 的可靠性和泛化能力相当。然而，其较低的局部性得分表明对不相关知识领域的潜在影响。 IKE 表现出良好的可靠性，但在局部性方面遇到困难，因为预先设置的提示可能会影响不相关的输入。它的泛化能力也可以提高。情境学习</span></p>
-<p><img src="../imgs/$%7Bfiilename%7D/B7WY2DBH.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;B7WY2DBH&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22AYAJST64%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%225%22%2C%22position%22%3A%7B%22pageIndex%22%3A4%2C%22rects%22%3A%5B%5B67%2C654.39%2C531.5%2C770.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%225%22%7D%7D&quot; width=&quot;774&quot; height=&quot;193&quot; src=&quot;attachments/B7WY2DBH.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>该方法可能会遇到上下文调解失败的问题（Hernandez et al., 2023)，因为预先训练的语言模型可能无法始终生成与提示对齐的文本。</p>
-<p><strong>模型缩放</strong> 由于计算限制，我们使用更大的模型进行实验，在 OPT-13B 和 GPT-NEOX-20B 上测试 IKE、ROME 和 MEMIT。结果（表 2）令人惊讶地<span style="background-color: #ff666680">显示 ROME 和 MEMIT 在 GPT-NEOX-20B 模型上表现良好，但在 OPT-13B 上表现不佳。这是由于这两种方法都依赖于矩阵求逆运算。然而，在 OPT-13B 模型中，矩阵是不可逆的。</span>我们甚至根据经验发现，<span style="background-color: #5fb23680">用最小二乘法逼近解会产生不令人满意的结果。我们认为这是 ROME 和 MEMIT 的局限性，因为它们不能应用于不同的模型。</span> <span style="background-color: #ff666680">MEMIT 由于依赖多层矩阵计算而表现较差，并且对于较大模型，其可靠性和泛化性比 ROME 下降得更多。 IKE 的性能受到模型本身的上下文学习能力的影响。 OPT的结果比GPT-J的结果还要差，这可能归因于OPT本身的上下文学习能力。</span><span style="background-color: #5fb23680">此外，随着模型大小的增加，其泛化和局部性的性能都会下降。</span></p>
-<p><strong>批量编辑</strong> 鉴于许多研究通常将更新限制为几十个事实或仅关注单个编辑案例，我们进行了进一步的批量编辑分析。然而，通常需要同时修改具有多个知识片段的模型。我们重点关注支持批量编辑的方法（FT、SERAC、MEND 和 MEMIT），并在图 3 中展示了它们的性能。值得注意的是，<span style="background-color: #ff666680">MEMIT 支持LLMs的大规模知识编辑，允许以最少的时间和内存进行数百甚至数千个同时编辑成本。其在可靠性和泛化方面的性能在最多 1000 次编辑时仍然保持稳健，但局部性在此级别下降。而 FT-L、SERAC、和MEND还支持批量编辑，它们需要大量内存来处理更多情况，超出了我们当前的能力。因此，我们将测试限制为 100 次编辑。 SERAC 可以完美地进行最多 100 次编辑的批量编辑。 MEND 和 FT-L 在批量编辑中的性能并不那么强，随着编辑数量的增加，模型的性能迅速下降。</span></p>
-<p><img src="../imgs/$%7Bfiilename%7D/WVMGDVMU.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;WVMGDVMU&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22UTUV86Q8%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%225%22%2C%22position%22%3A%7B%22pageIndex%22%3A4%2C%22rects%22%3A%5B%5B303%2C516.89%2C528%2C639.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%225%22%7D%7D&quot; width=&quot;375&quot; height=&quot;204&quot; src=&quot;attachments/WVMGDVMU.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p><strong>顺序编辑</strong> 请注意，默认评估过程是更新单个模型知识，评估新模型，然后回滚更新，然后对每个测试点重复该过程。在实际场景中，模型在进行新的编辑时应保留先前的更改。因此，进行连续编辑的能力是模型编辑的一个重要特征（Huang et al., 2023）。我们评估了具有强大的单编辑性能的顺序编辑方法，并在图 4 中报告了结果。<span style="background-color: #ff666680">冻结模型参数的方法（如 SERAC 和 T-Patcher)通常在顺序编辑中表现出稳定的性能。然而，那些改变模型参数的人却很困难</span>。 <span style="background-color: #ff666680">ROME 在 n = 10 之前表现良好，然后在 n = 100 时下降。MEMIT 的性能也会在超过 100 次编辑后下降，但不如 ROME 大幅下降。同样，MEND 在 n = 1 时表现良好，但在 n = 10 时表现明显下降。随着编辑过程的继续，这些模型越来越偏离其原始状态，导致性能次优。</span></p>
-<h2 id="5-Comprehensive-Study"><a href="#5-Comprehensive-Study" class="headerlink" title="5 Comprehensive Study"></a>5 Comprehensive Study</h2><p>考虑到上述几点，我们认为以前的评估指标可能无法充分评估模型编辑能力。因此，我们提出对可移植性、局部性和效率进行更全面的评估。</p>
-<h3 id="5-1-Portability-Robust-Generalization"><a href="#5-1-Portability-Robust-Generalization" class="headerlink" title="5.1 Portability - Robust Generalization"></a>5.1 Portability - Robust Generalization</h3><p>几项研究使用通过反向翻译生成的样本来评估泛化性（De Cao 等人，2021）。然而，这些释义的句子通常只涉及微小的措辞变化，并不能反映实质性的事实修改。正如 Jacques Thibodeau (2022) 中所述，验证这些方法是否能够处理编辑对实际应用程序的影响至关重要。因此，我们引入了一种称为可移植性的新评估指标，以衡量模型编辑在将知识转移到相关内容方面的有效性，称为鲁棒泛化。因此我们考虑三个方面：（1）<strong>主语替换</strong>：由于大多数改写的句子保留了主语描述，但更多地改写了关系，我们通过替换来测试泛化能力问题中的主题带有别名或同义词。这测试模型是否可以将编辑的属性推广到同一主题的其他描述。 (2)<strong>反向关系</strong>：当编辑主体和关系的目标时，目标实体的属性也发生变化。我们通过过滤合适的关系（例如一对一）并询问相反的问题来检查目标实体是否也更新来测试模型处理此问题的能力。 （3）<strong>一跳</strong>：修改后的知识应该可以被编辑后的语言模型用于下游任务。例如，如果我们更改“瓦茨·汉弗莱 (Watts Humphrey) 就读哪所大学？”这个问题的答案。从“三一学院”到“密歇根大学”，当被问到“Watts Humphrey 在大学学习期间住在哪个城市？”时，模型应该回答“密歇根州的安娜堡”而不是“爱尔兰的都柏林”。因此，我们构建了一个推理数据集来评估编辑后模型使用编辑知识的能力。</p>
-<pre><code> 我们将一个新部分 P (xe, ye) 合并到现有数据集 ZsRE 中，可移植性计算为应用于 P (xe, ye) 中的推理示例时编辑模型 (fθe) 的平均准确度：
-</code></pre><p><img src="../imgs/$%7Bfiilename%7D/AKCEUPGK.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;AKCEUPGK&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22J5ARE9LF%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%226%22%2C%22position%22%3A%7B%22pageIndex%22%3A5%2C%22rects%22%3A%5B%5B306.5%2C154.39%2C526.5%2C190.39%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%226%22%7D%7D&quot; width=&quot;367&quot; height=&quot;60&quot; src=&quot;attachments/AKCEUPGK.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p><strong>数据集构建 </strong>对于一跳数据集<span style="background-color: #ff666680">，在原始编辑中，我们将主题 s 的答案从 o 更改为 o<em>。然后，我们提示模型生成链接的三元组 (o</em>, r<em>, o′</em>)。随后，GPT-4 根据这个三元组和 s 创建一个问题和答案。尤其，如果模型可以回答这个新问题，意味着它具有三元组 (o<em>, r</em>, o′<em>) 的预先存在的知识。我们通过要求模型从 o</em> 和 r<em> 预测 o’</em> 来过滤未知的三元组。如果成功，则推断该模型具有先验知识。最后，人类评估者验证三元组的准确性和问题的流畅性</span>。其他详细信息，例如我们使用的演示和数据集构建的其他部分，可以在附录 B 中找到。</p>
-<p><strong>结果 </strong>我们根据新提出的评估指标和数据集进行实验，结果如表3所示。如表所示，<span style="background-color: #ff666680">当前模型编辑方法在可移植性方面的性能有些欠佳。尽管 SERAC 在之前的指标上显示出无可挑剔的结果，但在所有三个可移植性方面的准确度均低于 20%。 SERAC的瓶颈在于分类器的准确性和附加模型的能力。对于主题替换场景，包括SERAC、MEND、ROME和MEMIT，只能适应特定的主题实体表达，而不能泛化到主题实体的概念。然而，FT-L、IKE 和 T-patcher 在面对替换主题时表现出了出色的性能。</span>关于反向关系，我们的结果表明，<span style="background-color: #ff666680">当前的编辑方法主要编辑单向关系，IKE 是一个明显的例外，在 GPT-J 和 GPT-NEOX-20B 上都达到了 90% 以上。其他方法改变主体实体的属性，同时保持客体实体不受影响</span>。在一跳推理环境中，<span style="background-color: #ff666680">大多数编辑方法都难以将改变的知识转移到相关事实。</span>出乎意料的是，<span style="background-color: #5fb23680">ROME、MEMIT和IKE在可移植性方面表现出相对值得称赞的表现（超过50%）。他们不仅能够编辑原始案件，而且能够在某些方面修改与案件相关的事实</span>。综上所述，在我们的评估中，IKE 在三个场景中都表现出了相对较好的性能。然而，很明显，当前的模型编辑技术在管理编辑的后果方面继续面临挑战，即确保知识的变化在相关上下文中连贯一致地反映。事实上，这一领域需要在未来的研究中进一步调查和创新。</p>
-<h3 id="5-2-Locality-Side-Effect-of-Model-Editing"><a href="#5-2-Locality-Side-Effect-of-Model-Editing" class="headerlink" title="5.2 Locality - Side Effect of Model Editing"></a>5.2 Locality - Side Effect of Model Editing</h3><p>在上一节中，COUNTERFACT 和 ZsRE 从以下方面评估模型编辑的局部性：COUNTERFACT 使用与目标知识相同分布的三元组，而 ZsRE 使用来自不同自然问题数据集的问题。值得注意的是，一些方法（例如 T-Patcher）在这两个数据集上表现出不同的性能。这凸显出模型编辑对语言模型的影响是多方面的，需要进行彻底、全面的评估才能充分理解其效果。为了彻底检查模型编辑的潜在副作用，我们提出了三个不同层面的评估：（1）其他关系：尽管Meng等人。 (2022)引入了本质的概念，但他们没有明确评价它。我们认为，已更新的主题的其他属性在编辑后应保持不变。 (2)分散邻里的注意力：HoelscherObermaier等人。 （2023a）发现，如果我们将编辑后的案例连接在其他不相关的输入之前，模型往往会受到编辑后的事实的影响，并继续产生与编辑后的案例一致的结果。 (3) 其他任务：基于 Skill Neuron 的断言（Wang 等人，2022），即大语言模型（LLM）中的前馈网络拥有特定于任务的知识能力，我们引入了一个新的挑战来评估模型编辑是否可能对性能产生负面影响关于其他任务。数据集构建的详细信息请参见附录 B.3。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/ND8H464M.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;ND8H464M&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22DX678K73%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%227%22%2C%22position%22%3A%7B%22pageIndex%22%3A6%2C%22rects%22%3A%5B%5B297.5%2C600.89%2C529%2C776.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%227%22%7D%7D&quot; width=&quot;386&quot; height=&quot;293&quot; src=&quot;attachments/ND8H464M.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p><strong>结果</strong> 表 4 列出了我们的结果。值得注意的是，当前的编辑方法在其他属性方面表现出色，表明它们仅修改目标特征而不影响其他属性。<span style="background-color: #5fb23680">然而，它们在 Distract-Neighbor 设置中通常表现不佳，</span>如与表 1 中的结果相比性能下降所反映的那样。IKE 是一个例外，它的性能保持相对稳定，因为它继承了以下事实：</p>
-<p><img src="../imgs/$%7Bfiilename%7D/EQ2WM2DI.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;EQ2WM2DI&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22S55AHZG9%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B62.727%2C578.708%2C296.591%2C783.254%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;390&quot; height=&quot;341&quot; src=&quot;attachments/EQ2WM2DI.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>完全需要在输入之前连接编辑后的事实。对于常识推理任务，参数保留方法在很大程度上保持了其在其他任务上的性能。相反，改变参数的方法往往会对性能产生负面影响，MEMIT 除外。尽管参数发生了变化，MEMIT 在常识性任务中仍然保持着强劲的性能，展示了其值得称赞的局部性。</p>
-<h3 id="5-3-Efficiency"><a href="#5-3-Efficiency" class="headerlink" title="5.3 Efficiency"></a>5.3 Efficiency</h3><p>模型编辑应最大限度地减少进行编辑所需的时间和内存，而不影响模型的性能。</p>
-<p>时间分析表5说明了不同模型编辑技术从提供编辑案例到获得发布后编辑模型所需的时间。我们观察到，一旦超网络经过训练，KE 和 MEND 就会以相当快的速度执行编辑过程。同样，SERAC 还可以快速编辑知识，在经过训练的分类器和反事实模型的情况下，在大约 5 秒内完成该过程。然而，这些方法需要数小时至数天的额外训练和额外的数据集。在我们的实验中，在 ZsRE 数据集上训练 MEND 需要超过 7 个小时，在 3× V100 上训练 SERAC 需要超过 36 个小时。另一方面，ROME 和 MEMIT 需要预先计算维基文本的协方差统计数据。然而，这种计算非常耗时，可能需要数小时至数天才能完成。相比之下，其他方法（例如 KN、CaliNET 和 T-Patcher）可能更快，因为它们不需要任何预计算或预训练。然而，KN 和 CaliNET 在较大模型上的性能</p>
-<p><img src="../imgs/$%7Bfiilename%7D/K9ABI2KM.png" alt="\&lt;img alt=&quot;&quot; data-attachment-key=&quot;K9ABI2KM&quot; data-annotation=&quot;%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2F9227ERUC%22%2C%22annotationKey%22%3A%22GC2LNVEQ%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%228%22%2C%22position%22%3A%7B%22pageIndex%22%3A7%2C%22rects%22%3A%5B%5B302.045%2C605.981%2C532.5%2C781.89%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2Flocal%2FiUeV0SQs%2Fitems%2FCU5SMQAC%22%5D%2C%22locator%22%3A%228%22%7D%7D&quot; width=&quot;384&quot; height=&quot;293&quot; src=&quot;attachments/K9ABI2KM.png&quot; ztype=&quot;zimage&quot;&gt;"></p>
-<p>不能令人满意，T-Patcher 是最慢的，因为需要针对每个相应的错误进行单独的神经元训练。考虑到时间方面，需要一种更加省时的模型编辑方法。</p>
-<p><strong>内存分析</strong> 图 5 显示了每种模型编辑方法的内存 VRAM 使用情况。从该图中，我们观察到大多数方法消耗的内存量相似，但 MEND 除外，它需要超过 60GB 的内存用于训练。引入额外训练的方法（例如 MEND 和 SERAC）会导致额外的计算开销，从而显着增加内存消耗。</p>
-<h2 id="6-Relationship-with-Relevant-Works"><a href="#6-Relationship-with-Relevant-Works" class="headerlink" title="6 Relationship with Relevant Works"></a>6 Relationship with Relevant Works</h2><h3 id="6-1Knowledge-in-LLMs"><a href="#6-1Knowledge-in-LLMs" class="headerlink" title="6.1Knowledge in LLMs"></a>6.1Knowledge in LLMs</h3><p>多种模型编辑方法旨在了解 PLM 中存储的知识如何精确且直接地改变模型参数。现有工作研究了 PLM 如何存储知识的原则（Geva 等人，2021、2022；Haviv 等人，2023；Hao 等人，2021；Hernandez 等人，2023；Yao 等人， 2023；Cao et al., 2023；Lamparth and Reuel, 2023；Cheng et al., 2023；Li et al., 2023b；Chen et al., 2023；Ju and Zhang, 2023），这些都有助于模型编辑过程。此外，一些模型编辑技术与知识增强相似（Zhang et al., 2019；Lewis et al., 2020；Zhang et al., 2022b；Yasunaga et al., 2021；Yao et al., 2022；Pan et al. ., 2023）方法，因为更新模型的知识也可以被视为将知识灌输到模型中。</p>
-<h3 id="6-2Lifelong-Learning-and-Unlearning"><a href="#6-2Lifelong-Learning-and-Unlearning" class="headerlink" title="6.2Lifelong Learning and Unlearning"></a>6.2Lifelong Learning and Unlearning</h3><p>模型编辑包括终身学习和忘却，允许自适应地添加、修改和删除知识。持续学习（Biesialska et al., 2020）可以提高模型跨任务和领域的适应性，已在 PLM 中的模型编辑中显示出有效性（Zhu et al., 2020）。此外，模型忘记敏感知识并与机器遗忘概念保持一致至关重要（Hase 等人，2023；Wu 等人，2022；Tarun 等人，2021；Gandikota 等人，2023）。</p>
-<h3 id="6-3Security-and-Privacy-for-LLMs"><a href="#6-3Security-and-Privacy-for-LLMs" class="headerlink" title="6.3Security and Privacy for LLMs"></a>6.3Security and Privacy for LLMs</h3><p>过去的研究（Carlini 等人，2020；Shen 等人，2023）表明，LLMs可以根据某些提示生成不可靠或个人的样本。删除大型语言模型 (LLM) 中存储的潜在有害信息和隐私信息的任务对于增强基于 LLM 的应用程序的隐私和安全性至关重要（Sun 等人，2023）。模型编辑可以抑制有害语言的生成（Geva et al., 2022；Hu et al., 2023），可以帮助解决这些问题。</p>
-<h2 id="7-Conclusion"><a href="#7-Conclusion" class="headerlink" title="7 Conclusion"></a>7 Conclusion</h2><p>我们系统地分析了编辑大语言模型（LLM）的方法。我们的目标是通过检查现有编辑技术的特征、优势和局限性，帮助研究人员更好地理解现有编辑技术。我们的分析显示了很大的改进空间，特别是在可移植性、局部性和效率方面。改进的LLMs编辑可以帮助他们更好地适应用户不断变化的需求和价值观。我们希望我们的工作能够促进开放问题和进一步研究的进展。</p>
-]]></content>
-      <categories>
-        <category>知识编辑</category>
-      </categories>
-      <tags>
-        <tag>EMNLP2023</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>自注意力机制</title>
-    <url>/2023/12/29/zi-zhu-yi-li-ji-zhi/</url>
-    <content><![CDATA[<h1 id="自注意力机制"><a href="#自注意力机制" class="headerlink" title="自注意力机制"></a>自注意力机制</h1><h2 id="Sophisticated-input"><a href="#Sophisticated-input" class="headerlink" title="Sophisticated input"></a>Sophisticated input</h2><p><img src="https://s2.loli.net/2023/12/29/n8W9btsVvg5MxoT.png" alt="image-20231229105452661"></p>
-<h2 id="Vector-Set-as-Input"><a href="#Vector-Set-as-Input" class="headerlink" title="Vector Set as Input"></a>Vector Set as Input</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229105727351.png" alt="image-20231229105727351"></p>
-<p><img src="https://s2.loli.net/2023/12/29/SC4MYGdbpWokvAl.png" alt="image-20231229105938497"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229110040187.png" alt="image-20231229110040187"></p>
-<p><img src="https://s2.loli.net/2023/12/29/sjlEwmAa2L1xbfU.png" alt="image-20231229110139172"></p>
-<h2 id="What-is-the-output"><a href="#What-is-the-output" class="headerlink" title="What is the output?"></a>What is the output?</h2><p><img src="https://s2.loli.net/2023/12/29/97MivqYoh3t2EX8.png" alt="image-20231229110343955"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229110500001.png" alt="image-20231229110500001"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229110528351.png" alt="image-20231229110528351"></p>
-<h2 id="Sequence-Labeling"><a href="#Sequence-Labeling" class="headerlink" title="Sequence Labeling"></a>Sequence Labeling</h2><p><img src="https://s2.loli.net/2023/12/29/KnmNkCX4Bjq317U.png" alt="image-20231229111029189"></p>
-<h2 id="Self-attention"><a href="#Self-attention" class="headerlink" title="Self-attention"></a>Self-attention</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229111243095.png" alt="image-20231229111243095"></p>
-<p><img src="https://s2.loli.net/2023/12/29/EOaxibsI2vVmnDo.png" alt="image-20231229111328519"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229111447447.png" alt="image-20231229111447447"></p>
-<p><img src="https://s2.loli.net/2023/12/29/BuIYhorAR8anWsQ.png" alt="image-20231229111613666"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229111844380.png" alt="image-20231229111844380"></p>
-<p><img src="https://s2.loli.net/2023/12/29/gsHDVXrySkv61wA.png" alt="image-20231229112012157"></p>
-<p><img src="https://s2.loli.net/2023/12/29/xZiQaeTY26sUmhk.png" alt="image-20231229112129280"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229112323860.png" alt="image-20231229112323860"></p>
-<p><img src="https://s2.loli.net/2023/12/29/fGARtPodCYx6syl.png" alt="image-20231229112504332"></p>
-<p><img src="https://s2.loli.net/2023/12/29/PckCHBfQYrFDpju.png" alt="image-20231229112825156"></p>
-<p>矩阵计算</p>
-<p><img src="https://s2.loli.net/2023/12/29/UpATDIF169vVWJ3.png" alt="image-20231229113203405"></p>
-<p> <img src="https://s2.loli.net/2023/12/29/xzmvaWDyOjGTnpP.png" alt="image-20231229115018255"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229115203578.png" alt="image-20231229115203578"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229115350227.png" alt="image-20231229115350227"></p>
-<h2 id="Multi-head-Self-attention"><a href="#Multi-head-Self-attention" class="headerlink" title="Multi-head Self-attention"></a>Multi-head Self-attention</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229115757287.png" alt="image-20231229115757287"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229115844341.png" alt="image-20231229115844341"></p>
-<h2 id="Position-Encoding"><a href="#Position-Encoding" class="headerlink" title="Position Encoding"></a>Position Encoding</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229120245068.png" alt="image-20231229120245068"></p>
-<p><img src="https://s2.loli.net/2023/12/29/6nVL2TYGu1rMzlI.png" alt="image-20231229120401270"></p>
-<h2 id="Self-attention-for-Speech"><a href="#Self-attention-for-Speech" class="headerlink" title="Self-attention for Speech"></a>Self-attention for Speech</h2><p><img src="https://s2.loli.net/2023/12/29/V2oPpfWXJUNFCEs.png" alt="image-20231229120647905"></p>
-<h2 id="Self-attention-for-Image"><a href="#Self-attention-for-Image" class="headerlink" title="Self-attention for Image"></a>Self-attention for Image</h2><p><img src="https://s2.loli.net/2023/12/29/Rh1VJnqidxsM5Pa.png" alt="image-20231229120820731"></p>
-<h2 id="Self-Attention-GAN"><a href="#Self-Attention-GAN" class="headerlink" title="Self-Attention GAN"></a>Self-Attention GAN</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229120933611.png" alt="image-20231229120933611"></p>
-<h2 id="Self-attention-v-s-CNN"><a href="#Self-attention-v-s-CNN" class="headerlink" title="Self-attention v.s. CNN"></a>Self-attention v.s. CNN</h2><p><img src="https://s2.loli.net/2023/12/29/DacnGJOQ1ZysVRj.png" alt="image-20231229121120848"></p>
-<p><img src="https://s2.loli.net/2023/12/29/o14S28ZhUXJKFQx.png" alt="image-20231229121239055"></p>
-<p><img src="https://s2.loli.net/2023/12/29/25SKNZctz6DJG8H.png" alt="image-20231229121432020"></p>
-<h2 id="Self-attention-v-s-RNN"><a href="#Self-attention-v-s-RNN" class="headerlink" title="Self-attention v.s. RNN"></a>Self-attention v.s. RNN</h2><p><img src="https://s2.loli.net/2023/12/29/hCuFaR5sAQpkxZB.png" alt="image-20231229121807937"></p>
-<h2 id="Self-attention-v-s-GNN"><a href="#Self-attention-v-s-GNN" class="headerlink" title="Self-attention v.s. GNN"></a>Self-attention v.s. GNN</h2><p><img src="https://s2.loli.net/2023/12/29/jmt2i7ZrQoLcAuW.png" alt="image-20231229122046331"></p>
-<h2 id="To-Leain-More"><a href="#To-Leain-More" class="headerlink" title="To Leain More"></a>To Leain More</h2><p><img src="https://s2.loli.net/2023/12/29/Cf6QicAP5emb1NH.png" alt="image-20231229122257533"></p>
-]]></content>
   </entry>
   <entry>
     <title>西瓜书</title>
