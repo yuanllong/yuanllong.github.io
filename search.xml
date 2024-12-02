@@ -1,6 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>05线性代数</title>
+    <url>/2023/12/08/05-xian-xing-dai-shu/</url>
+    <content><![CDATA[<h1 id="05线性代数"><a href="#05线性代数" class="headerlink" title="05线性代数"></a>05线性代数</h1><p><img src="https://s2.loli.net/2023/12/08/WRwMYeFdpP2Ogho.png" alt="image-20231208123851480"></p>
+<h2 id="5-1线性代数"><a href="#5-1线性代数" class="headerlink" title="5.1线性代数"></a>5.1线性代数</h2><p><strong>标量</strong></p>
+<ul>
+<li><p>简单操作</p>
+<script type="math/tex; mode=display">
+c = a + b \\
+c = a * b \\
+c = sina</script></li>
+<li><p>长度</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+\left| a \right| = 
+\begin{cases}
+a & \text{ $ if a > 0 $ } \\
+-a & \text{ $ otherwise $ }
+\end{cases}
+\end{equation}</script><script type="math/tex; mode=display">
+\left| a + b\right| <= \left| a \right| + \left| b \right|  \\
+\left| a * b\right| = \left| a \right|  *  \left| b \right|</script></li>
+</ul>
+<p><strong>向量</strong></p>
+<ul>
+<li><p>简单操作</p>
+<script type="math/tex; mode=display">
+||a||_2 = \left[ \sum_{i=1}^m a_i^2 \right]^{1/2} \\
+||a|| >= 0 for all a \\
+||a + b|| <= ||a|| + ||b|| \\
+||a * b|| = |a| * ||b||</script></li>
+<li><p>长度</p>
+</li>
+</ul>
+<p>【举例】</p>
+<p>$c = a + b$</p>
+<p><img src="https://s2.loli.net/2023/12/08/FJW457BjzIxQhAU.png" alt="image-20231208221234555"></p>
+<p>$c = a * b$</p>
+<p><img src="https://s2.loli.net/2023/12/08/iHdQYVvpjbSwI4R.png" alt="image-20231208221304693"></p>
+<ul>
+<li>点乘</li>
+</ul>
+<script type="math/tex; mode=display">
+a^T b = \sum_i a_ib_i</script><ul>
+<li>正交</li>
+</ul>
+<script type="math/tex; mode=display">
+a^Tb = \sum_i a_i b_i = 0</script><p><img src="https://s2.loli.net/2023/12/08/TStW7HOB1r4J9XF.png" alt="image-20231208221644639"></p>
+<p><strong>矩阵</strong></p>
+<ul>
+<li>简单操作</li>
+</ul>
+<script type="math/tex; mode=display">
+C = A + B \\
+C = a * B \\
+C = sinA</script><ul>
+<li>乘法（矩阵乘以向量）</li>
+</ul>
+<script type="math/tex; mode=display">
+c = Ab</script><p><img src="https://s2.loli.net/2023/12/08/aFrORcwp1KMbfhP.png" alt="矩阵乘以向量"></p>
+<p><strong>直观上理解矩阵乘法</strong>：向量可以看作空间，矩阵可以看作是特定的工具，向量与特定的矩阵相乘后，将会使得向量变得扭曲，也就是变换到另一个空间中</p>
+<p><img src="https://s2.loli.net/2023/12/08/GEneLpHOWuBFza5.png" alt="直观上理解矩阵乘法"></p>
+<ul>
+<li>范数</li>
+</ul>
+<script type="math/tex; mode=display">
+c = A * b \\
+hence |c| <= ||A|| * ||b||</script><ul>
+<li>取决于如何衡量 b 和 c的长度</li>
+<li>常见的范数</li>
+<li>矩阵范数：最小的满足的上面公式的值</li>
+<li>Frobenius 范数</li>
+</ul>
+<script type="math/tex; mode=display">
+||A||_{Frob} = \left[ \sum_{ij} A_{ij}^2 \right]^{1/2}</script><p><strong>特殊矩阵</strong></p>
+<ul>
+<li>对称和反对称</li>
+</ul>
+<script type="math/tex; mode=display">
+A_{ij} = A_{ji} \\
+A_{ij} = -A_{ji}</script><p><img src="https://s2.loli.net/2023/12/08/WkO897cMeLTEVqG.png" alt="image-20231208223352977"></p>
+<ul>
+<li>正定</li>
+</ul>
+<script type="math/tex; mode=display">
+||x||^2 = x^Tx >= 0 \\
+generalizes to \\
+x^TAx >= 0</script><p><img src="https://s2.loli.net/2023/12/08/eQ3w7MXjvZBKmEl.png" alt="image-20231208223522068"></p>
+<ul>
+<li>正交矩阵<ul>
+<li>所有行都相互正交</li>
+<li>所有行都有单位长度 $u$</li>
+<li>可以写成</li>
+</ul>
+</li>
+<li>置换矩阵</li>
+<li>置换矩阵是正交矩阵</li>
+<li>特征向量和特征值<ul>
+<li>不被矩阵改变方向的向量$x$（<strong>但长度可能会改变</strong>）</li>
+</ul>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+Ax = \lambda x</script><p><img src="https://s2.loli.net/2023/12/08/aqi97HUjBVQGk1F.png" alt="image-20231208224252581"></p>
+<ul>
+<li>对称矩阵总是可以找到特征向量</li>
+</ul>
+<h2 id="5-2线性代数实现"><a href="#5-2线性代数实现" class="headerlink" title="5.2线性代数实现"></a>5.2线性代数实现</h2><p>标量由只有一个元素的张量表示</p>
+<p><img src="https://s2.loli.net/2023/12/09/SGmW8QPnMXzfIor.png" alt="image-20231209152426875"></p>
+<p>你可以将向量视为标量值组成的列表</p>
+<p><img src="https://s2.loli.net/2023/12/09/GmoESUCyKabAnXV.png" alt="image-20231209152539663"></p>
+<p>通过张量的索引来访问任一元素</p>
+<p><img src="https://s2.loli.net/2023/12/09/WeOzi8kUPvHhZDt.png" alt="image-20231209152604605"></p>
+<p>访问张量的长度</p>
+<p><img src="https://s2.loli.net/2023/12/09/fB4mHSrdutLOPJw.png" alt="image-20231209152703768"></p>
+<p>只有一个轴的张量，形状只有一个元素</p>
+<p><img src="https://s2.loli.net/2023/12/09/3r4JBczaENgw9Gd.png" alt="image-20231209152726497"></p>
+<p>通过指定两个分量 $m$ 和 $n$ 来创建一个形状 $m * n$ 的矩阵</p>
+<p><img src="https://s2.loli.net/2023/12/09/aDjNKtfdH6vXb9g.png" alt="image-20231209152855536"></p>
+<p>矩阵的转置</p>
+<p><img src="https://s2.loli.net/2023/12/09/6VOAfsBmClFR4Dt.png" alt="image-20231209152938567"></p>
+<p>对称矩阵（symmetric matrix）$A$ 等于其转置：$A = A^T$</p>
+<p><img src="https://s2.loli.net/2023/12/09/ryJBHx4iSZCNaoQ.png" alt="image-20231209153046682"></p>
+<p><img src="https://s2.loli.net/2023/12/09/B6XvFPcsIaHyEwr.png" alt="image-20231209153111807"></p>
+<p>就像向量是标量的推广，矩阵是向量的推广一样，我们可以构建具有更多轴的数据结构 <strong>代表2个具有3 * 4结构的矩阵的组合</strong></p>
+<p><img src="https://s2.loli.net/2023/12/09/z2JnxGuyglNSBX6.png" alt="image-20231209153215038"></p>
+<p>给定具有相同形状的任何两个张量，任何按元素二元运算的结果都将是相同形状的张量</p>
+<p><img src="https://s2.loli.net/2023/12/09/9xKdV6USFkj1yHq.png" alt="image-20231209153448715"></p>
+<p><img src="https://s2.loli.net/2023/12/09/z4UXC9R8aLsDGKQ.png" alt="image-20231209153501138"></p>
+<p>两个矩阵的按元素的成绩称为 哈达玛积（Hadamard product）（数学符号）⊙</p>
+<p><img src="https://s2.loli.net/2023/12/09/cTdrO89U1tLs3Ny.png" alt="image-20231209153835936"></p>
+<p><img src="https://s2.loli.net/2023/12/09/71WP9ROlLvsFifZ.png" alt="image-20231209153850528"></p>
+<p>计算其元素的和</p>
+<p><img src="https://s2.loli.net/2023/12/09/N1CK9gH4YFcJD5m.png" alt="image-20231209153932420"></p>
+<p>表示任意形状张量的元素和</p>
+<p><img src="https://s2.loli.net/2023/12/09/vRTyCNFwMLeUurW.png" alt="image-20231209154014998"></p>
+<p>指定求和汇总张量的轴</p>
+<p>axis=0 意味着对 2 这一维度进行求和，剩下的两个维度留下来了。</p>
+<p><img src="https://s2.loli.net/2023/12/09/O5mESaK81ujvLzg.png" alt="image-20231209154251883"></p>
+<p><img src="https://s2.loli.net/2023/12/09/SBplV19n6WCbJ8U.png" alt="image-20231209154222362"></p>
+<p>axis=1 意味着对 5 这一维度进行求和，剩下的两个维度留下来了。</p>
+<p><img src="https://s2.loli.net/2023/12/09/f3FbEpYLR1dtPga.png" alt="image-20231209154529821"></p>
+<p>也可以指定其中的多个维度进行求和，其余的维度留下来</p>
+<p><img src="https://s2.loli.net/2023/12/09/LfJOmsx1oaqD28k.png" alt="image-20231209154709279"></p>
+<p><img src="https://s2.loli.net/2023/12/09/ypw5d9il6NRGrc2.png" alt="image-20231209154755666"></p>
+<p><strong>下面解释一下是怎么按特定轴求和的</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">原始的tensor.size([2, 5, 4]), 一共是40个数</span><br><span class="line">tensor([[[ 0,  1,  3,  4],</span><br><span class="line">		 [ 5,  6,  7,  8],</span><br><span class="line">		 [ 9, 10, 11, 12],</span><br><span class="line">		 [13, 14, 15, 16],</span><br><span class="line">		 [17, 18, 19, 20]],</span><br><span class="line">		 </span><br><span class="line">		[[21, 22, 23, 24],</span><br><span class="line">		 [24, 25, 26, 27],</span><br><span class="line">		 [28, 29, 30, 31],</span><br><span class="line">		 [32, 33, 34, 35],</span><br><span class="line">		 [36, 37, 38, 39]]])</span><br><span class="line">按 axis=0 求和，也就是</span><br></pre></td></tr></table></figure>
+<p>一个与求和相关的量是 平均值（mean 或 average）</p>
+<p><img src="https://s2.loli.net/2023/12/09/qYuWCpZ1zIGEOlm.png" alt="image-20231209162139075"></p>
+<p>计算总和或均值时保持轴数不变</p>
+<p><img src="https://s2.loli.net/2023/12/09/ktsEXCSLOF1phTP.png" alt="image-20231209162248301"></p>
+<p>通过广播将 $A$ 除以 sum_A </p>
+<p><img src="https://s2.loli.net/2023/12/09/sJ9u4axNmzAZeOj.png" alt="image-20231209162431838"></p>
+<p>某个轴计算 $A$ 元素的累积总和</p>
+<p><img src="https://s2.loli.net/2023/12/09/4qhyUSHTos8bQpE.png" alt="image-20231209162526414"></p>
+<p>点积是相同位置的按元素乘积的和4</p>
+<p><img src="https://s2.loli.net/2023/12/09/PitU9EjMDT6rswy.png" alt="image-20231209162702754"></p>
+<p>我们可以通过执行按元素乘法，然后进行求和来表示两个向量的点积</p>
+<p><img src="https://s2.loli.net/2023/12/09/l82JiN9IY45mAz7.png" alt="image-20231209162847916"></p>
+<p>矩阵向量积 $Ax$ 是一个长度为 $m$ 的列向量，其 $i^{th}$ 元素是点积 $a_i^Tx$</p>
+<p><img src="https://s2.loli.net/2023/12/09/O8qkeSBwUpjYFCs.png" alt="image-20231209163033727"></p>
+<p>我们可以将矩阵-矩阵乘法 $AB$ 看作是简单地执行 $m$ 次矩阵-向量积，并将结果拼接在一起，形成一个 $n * m$ 的矩阵</p>
+<p><img src="https://s2.loli.net/2023/12/09/WgdQNoFIHRqrk8E.png" alt="image-20231209163240282"></p>
+<p>$L_2$ 范数是向量元素平方和的平方根</p>
+<script type="math/tex; mode=display">
+||x||_2 = \sqrt{\sum_{i-1}^n x_i^2}</script><p><img src="https://s2.loli.net/2023/12/09/RX5k97ySiZHUJ8D.png" alt="image-20231209163429546"></p>
+<p>$L_1$ 范数，它表示为向量元素的绝对值之和：</p>
+<script type="math/tex; mode=display">
+||x||_1 = \sum_{i=1}^n |x_i|</script><p><img src="https://s2.loli.net/2023/12/09/nIaBMVCW8K6OlNT.png" alt="image-20231209163603565"></p>
+<p>矩阵的 <em>弗罗贝尼乌斯范数</em> （Frobenius norm） 是矩阵元素的平方和的平方根：</p>
+<script type="math/tex; mode=display">
+||X||_F = \sqrt{\sum_{i=1}^m \sum_{j=1}^n x_{ij}^2}</script><p><img src="https://s2.loli.net/2023/12/09/9JXOxPIDnt1ZmUR.png" alt="image-20231209163941729"></p>
+<h2 id="5-3按特定轴求和"><a href="#5-3按特定轴求和" class="headerlink" title="5.3按特定轴求和"></a>5.3按特定轴求和</h2><p><img src="https://s2.loli.net/2023/12/09/zfXoBY1nAbhLOUF.png" alt="image-20231209164342978"></p>
+<h2 id="5-4QA"><a href="#5-4QA" class="headerlink" title="5.4QA"></a>5.4QA</h2>]]></content>
+  </entry>
+  <entry>
     <title>00绪论基本概念</title>
     <url>/2023/12/07/00-xu-lun-ji-ben-gai-nian/</url>
     <content><![CDATA[<h1 id="绪论基本概念"><a href="#绪论基本概念" class="headerlink" title="绪论基本概念"></a>绪论基本概念</h1><p><img src="https://s2.loli.net/2023/12/07/o4PD9Ujh3gv8kwY.png" alt="image-20231207182255445"></p>
@@ -191,181 +366,6 @@
 <h2 id="6-2QA"><a href="#6-2QA" class="headerlink" title="6.2QA"></a>6.2QA</h2>]]></content>
   </entry>
   <entry>
-    <title>05线性代数</title>
-    <url>/2023/12/08/05-xian-xing-dai-shu/</url>
-    <content><![CDATA[<h1 id="05线性代数"><a href="#05线性代数" class="headerlink" title="05线性代数"></a>05线性代数</h1><p><img src="https://s2.loli.net/2023/12/08/WRwMYeFdpP2Ogho.png" alt="image-20231208123851480"></p>
-<h2 id="5-1线性代数"><a href="#5-1线性代数" class="headerlink" title="5.1线性代数"></a>5.1线性代数</h2><p><strong>标量</strong></p>
-<ul>
-<li><p>简单操作</p>
-<script type="math/tex; mode=display">
-c = a + b \\
-c = a * b \\
-c = sina</script></li>
-<li><p>长度</p>
-<script type="math/tex; mode=display">
-\begin{equation}
-\left| a \right| = 
-\begin{cases}
-a & \text{ $ if a > 0 $ } \\
--a & \text{ $ otherwise $ }
-\end{cases}
-\end{equation}</script><script type="math/tex; mode=display">
-\left| a + b\right| <= \left| a \right| + \left| b \right|  \\
-\left| a * b\right| = \left| a \right|  *  \left| b \right|</script></li>
-</ul>
-<p><strong>向量</strong></p>
-<ul>
-<li><p>简单操作</p>
-<script type="math/tex; mode=display">
-||a||_2 = \left[ \sum_{i=1}^m a_i^2 \right]^{1/2} \\
-||a|| >= 0 for all a \\
-||a + b|| <= ||a|| + ||b|| \\
-||a * b|| = |a| * ||b||</script></li>
-<li><p>长度</p>
-</li>
-</ul>
-<p>【举例】</p>
-<p>$c = a + b$</p>
-<p><img src="https://s2.loli.net/2023/12/08/FJW457BjzIxQhAU.png" alt="image-20231208221234555"></p>
-<p>$c = a * b$</p>
-<p><img src="https://s2.loli.net/2023/12/08/iHdQYVvpjbSwI4R.png" alt="image-20231208221304693"></p>
-<ul>
-<li>点乘</li>
-</ul>
-<script type="math/tex; mode=display">
-a^T b = \sum_i a_ib_i</script><ul>
-<li>正交</li>
-</ul>
-<script type="math/tex; mode=display">
-a^Tb = \sum_i a_i b_i = 0</script><p><img src="https://s2.loli.net/2023/12/08/TStW7HOB1r4J9XF.png" alt="image-20231208221644639"></p>
-<p><strong>矩阵</strong></p>
-<ul>
-<li>简单操作</li>
-</ul>
-<script type="math/tex; mode=display">
-C = A + B \\
-C = a * B \\
-C = sinA</script><ul>
-<li>乘法（矩阵乘以向量）</li>
-</ul>
-<script type="math/tex; mode=display">
-c = Ab</script><p><img src="https://s2.loli.net/2023/12/08/aFrORcwp1KMbfhP.png" alt="矩阵乘以向量"></p>
-<p><strong>直观上理解矩阵乘法</strong>：向量可以看作空间，矩阵可以看作是特定的工具，向量与特定的矩阵相乘后，将会使得向量变得扭曲，也就是变换到另一个空间中</p>
-<p><img src="https://s2.loli.net/2023/12/08/GEneLpHOWuBFza5.png" alt="直观上理解矩阵乘法"></p>
-<ul>
-<li>范数</li>
-</ul>
-<script type="math/tex; mode=display">
-c = A * b \\
-hence |c| <= ||A|| * ||b||</script><ul>
-<li>取决于如何衡量 b 和 c的长度</li>
-<li>常见的范数</li>
-<li>矩阵范数：最小的满足的上面公式的值</li>
-<li>Frobenius 范数</li>
-</ul>
-<script type="math/tex; mode=display">
-||A||_{Frob} = \left[ \sum_{ij} A_{ij}^2 \right]^{1/2}</script><p><strong>特殊矩阵</strong></p>
-<ul>
-<li>对称和反对称</li>
-</ul>
-<script type="math/tex; mode=display">
-A_{ij} = A_{ji} \\
-A_{ij} = -A_{ji}</script><p><img src="https://s2.loli.net/2023/12/08/WkO897cMeLTEVqG.png" alt="image-20231208223352977"></p>
-<ul>
-<li>正定</li>
-</ul>
-<script type="math/tex; mode=display">
-||x||^2 = x^Tx >= 0 \\
-generalizes to \\
-x^TAx >= 0</script><p><img src="https://s2.loli.net/2023/12/08/eQ3w7MXjvZBKmEl.png" alt="image-20231208223522068"></p>
-<ul>
-<li>正交矩阵<ul>
-<li>所有行都相互正交</li>
-<li>所有行都有单位长度 $u$</li>
-<li>可以写成</li>
-</ul>
-</li>
-<li>置换矩阵</li>
-<li>置换矩阵是正交矩阵</li>
-<li>特征向量和特征值<ul>
-<li>不被矩阵改变方向的向量$x$（<strong>但长度可能会改变</strong>）</li>
-</ul>
-</li>
-</ul>
-<script type="math/tex; mode=display">
-Ax = \lambda x</script><p><img src="https://s2.loli.net/2023/12/08/aqi97HUjBVQGk1F.png" alt="image-20231208224252581"></p>
-<ul>
-<li>对称矩阵总是可以找到特征向量</li>
-</ul>
-<h2 id="5-2线性代数实现"><a href="#5-2线性代数实现" class="headerlink" title="5.2线性代数实现"></a>5.2线性代数实现</h2><p>标量由只有一个元素的张量表示</p>
-<p><img src="https://s2.loli.net/2023/12/09/SGmW8QPnMXzfIor.png" alt="image-20231209152426875"></p>
-<p>你可以将向量视为标量值组成的列表</p>
-<p><img src="https://s2.loli.net/2023/12/09/GmoESUCyKabAnXV.png" alt="image-20231209152539663"></p>
-<p>通过张量的索引来访问任一元素</p>
-<p><img src="https://s2.loli.net/2023/12/09/WeOzi8kUPvHhZDt.png" alt="image-20231209152604605"></p>
-<p>访问张量的长度</p>
-<p><img src="https://s2.loli.net/2023/12/09/fB4mHSrdutLOPJw.png" alt="image-20231209152703768"></p>
-<p>只有一个轴的张量，形状只有一个元素</p>
-<p><img src="https://s2.loli.net/2023/12/09/3r4JBczaENgw9Gd.png" alt="image-20231209152726497"></p>
-<p>通过指定两个分量 $m$ 和 $n$ 来创建一个形状 $m * n$ 的矩阵</p>
-<p><img src="https://s2.loli.net/2023/12/09/aDjNKtfdH6vXb9g.png" alt="image-20231209152855536"></p>
-<p>矩阵的转置</p>
-<p><img src="https://s2.loli.net/2023/12/09/6VOAfsBmClFR4Dt.png" alt="image-20231209152938567"></p>
-<p>对称矩阵（symmetric matrix）$A$ 等于其转置：$A = A^T$</p>
-<p><img src="https://s2.loli.net/2023/12/09/ryJBHx4iSZCNaoQ.png" alt="image-20231209153046682"></p>
-<p><img src="https://s2.loli.net/2023/12/09/B6XvFPcsIaHyEwr.png" alt="image-20231209153111807"></p>
-<p>就像向量是标量的推广，矩阵是向量的推广一样，我们可以构建具有更多轴的数据结构 <strong>代表2个具有3 * 4结构的矩阵的组合</strong></p>
-<p><img src="https://s2.loli.net/2023/12/09/z2JnxGuyglNSBX6.png" alt="image-20231209153215038"></p>
-<p>给定具有相同形状的任何两个张量，任何按元素二元运算的结果都将是相同形状的张量</p>
-<p><img src="https://s2.loli.net/2023/12/09/9xKdV6USFkj1yHq.png" alt="image-20231209153448715"></p>
-<p><img src="https://s2.loli.net/2023/12/09/z4UXC9R8aLsDGKQ.png" alt="image-20231209153501138"></p>
-<p>两个矩阵的按元素的成绩称为 哈达玛积（Hadamard product）（数学符号）⊙</p>
-<p><img src="https://s2.loli.net/2023/12/09/cTdrO89U1tLs3Ny.png" alt="image-20231209153835936"></p>
-<p><img src="https://s2.loli.net/2023/12/09/71WP9ROlLvsFifZ.png" alt="image-20231209153850528"></p>
-<p>计算其元素的和</p>
-<p><img src="https://s2.loli.net/2023/12/09/N1CK9gH4YFcJD5m.png" alt="image-20231209153932420"></p>
-<p>表示任意形状张量的元素和</p>
-<p><img src="https://s2.loli.net/2023/12/09/vRTyCNFwMLeUurW.png" alt="image-20231209154014998"></p>
-<p>指定求和汇总张量的轴</p>
-<p>axis=0 意味着对 2 这一维度进行求和，剩下的两个维度留下来了。</p>
-<p><img src="https://s2.loli.net/2023/12/09/O5mESaK81ujvLzg.png" alt="image-20231209154251883"></p>
-<p><img src="https://s2.loli.net/2023/12/09/SBplV19n6WCbJ8U.png" alt="image-20231209154222362"></p>
-<p>axis=1 意味着对 5 这一维度进行求和，剩下的两个维度留下来了。</p>
-<p><img src="https://s2.loli.net/2023/12/09/f3FbEpYLR1dtPga.png" alt="image-20231209154529821"></p>
-<p>也可以指定其中的多个维度进行求和，其余的维度留下来</p>
-<p><img src="https://s2.loli.net/2023/12/09/LfJOmsx1oaqD28k.png" alt="image-20231209154709279"></p>
-<p><img src="https://s2.loli.net/2023/12/09/ypw5d9il6NRGrc2.png" alt="image-20231209154755666"></p>
-<p><strong>下面解释一下是怎么按特定轴求和的</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">原始的tensor.size([2, 5, 4]), 一共是40个数</span><br><span class="line">tensor([[[ 0,  1,  3,  4],</span><br><span class="line">		 [ 5,  6,  7,  8],</span><br><span class="line">		 [ 9, 10, 11, 12],</span><br><span class="line">		 [13, 14, 15, 16],</span><br><span class="line">		 [17, 18, 19, 20]],</span><br><span class="line">		 </span><br><span class="line">		[[21, 22, 23, 24],</span><br><span class="line">		 [24, 25, 26, 27],</span><br><span class="line">		 [28, 29, 30, 31],</span><br><span class="line">		 [32, 33, 34, 35],</span><br><span class="line">		 [36, 37, 38, 39]]])</span><br><span class="line">按 axis=0 求和，也就是</span><br></pre></td></tr></table></figure>
-<p>一个与求和相关的量是 平均值（mean 或 average）</p>
-<p><img src="https://s2.loli.net/2023/12/09/qYuWCpZ1zIGEOlm.png" alt="image-20231209162139075"></p>
-<p>计算总和或均值时保持轴数不变</p>
-<p><img src="https://s2.loli.net/2023/12/09/ktsEXCSLOF1phTP.png" alt="image-20231209162248301"></p>
-<p>通过广播将 $A$ 除以 sum_A </p>
-<p><img src="https://s2.loli.net/2023/12/09/sJ9u4axNmzAZeOj.png" alt="image-20231209162431838"></p>
-<p>某个轴计算 $A$ 元素的累积总和</p>
-<p><img src="https://s2.loli.net/2023/12/09/4qhyUSHTos8bQpE.png" alt="image-20231209162526414"></p>
-<p>点积是相同位置的按元素乘积的和4</p>
-<p><img src="https://s2.loli.net/2023/12/09/PitU9EjMDT6rswy.png" alt="image-20231209162702754"></p>
-<p>我们可以通过执行按元素乘法，然后进行求和来表示两个向量的点积</p>
-<p><img src="https://s2.loli.net/2023/12/09/l82JiN9IY45mAz7.png" alt="image-20231209162847916"></p>
-<p>矩阵向量积 $Ax$ 是一个长度为 $m$ 的列向量，其 $i^{th}$ 元素是点积 $a_i^Tx$</p>
-<p><img src="https://s2.loli.net/2023/12/09/O8qkeSBwUpjYFCs.png" alt="image-20231209163033727"></p>
-<p>我们可以将矩阵-矩阵乘法 $AB$ 看作是简单地执行 $m$ 次矩阵-向量积，并将结果拼接在一起，形成一个 $n * m$ 的矩阵</p>
-<p><img src="https://s2.loli.net/2023/12/09/WgdQNoFIHRqrk8E.png" alt="image-20231209163240282"></p>
-<p>$L_2$ 范数是向量元素平方和的平方根</p>
-<script type="math/tex; mode=display">
-||x||_2 = \sqrt{\sum_{i-1}^n x_i^2}</script><p><img src="https://s2.loli.net/2023/12/09/RX5k97ySiZHUJ8D.png" alt="image-20231209163429546"></p>
-<p>$L_1$ 范数，它表示为向量元素的绝对值之和：</p>
-<script type="math/tex; mode=display">
-||x||_1 = \sum_{i=1}^n |x_i|</script><p><img src="https://s2.loli.net/2023/12/09/nIaBMVCW8K6OlNT.png" alt="image-20231209163603565"></p>
-<p>矩阵的 <em>弗罗贝尼乌斯范数</em> （Frobenius norm） 是矩阵元素的平方和的平方根：</p>
-<script type="math/tex; mode=display">
-||X||_F = \sqrt{\sum_{i=1}^m \sum_{j=1}^n x_{ij}^2}</script><p><img src="https://s2.loli.net/2023/12/09/9JXOxPIDnt1ZmUR.png" alt="image-20231209163941729"></p>
-<h2 id="5-3按特定轴求和"><a href="#5-3按特定轴求和" class="headerlink" title="5.3按特定轴求和"></a>5.3按特定轴求和</h2><p><img src="https://s2.loli.net/2023/12/09/zfXoBY1nAbhLOUF.png" alt="image-20231209164342978"></p>
-<h2 id="5-4QA"><a href="#5-4QA" class="headerlink" title="5.4QA"></a>5.4QA</h2>]]></content>
-  </entry>
-  <entry>
     <title>07二分分类</title>
     <url>/2023/12/17/07-er-fen-fen-lei/</url>
     <content><![CDATA[<h1 id="07-二分分类"><a href="#07-二分分类" class="headerlink" title="07 二分分类"></a>07 二分分类</h1><h2 id="7-1-Binary-Classification"><a href="#7-1-Binary-Classification" class="headerlink" title="7.1 Binary Classification"></a>7.1 Binary Classification</h2><p><img src="https://s2.loli.net/2023/12/17/z4fd8SO12cq9sRM.png" alt="image-20231217230534251"></p>
@@ -511,13 +511,6 @@ Ax = \lambda x</script><p><img src="https://s2.loli.net/2023/12/08/aqi97HUjBVQGk
 <p>工作原理是：<strong>隐式计算流：首先看我们的函数，你会发现，整个函数的返回值总是取决于 b 的值或者是你输入的 a 的值。每一次计算的时候，PyTorch会在背后将计算图存储下来，然后倒着做一遍就可以正确答案了</strong>。同时计算更慢。</p>
 <p><img src="https://s2.loli.net/2023/12/11/GeTXM4N9CzVFgIE.png" alt="image-20231211223252136"></p>
 <h2 id="7-3QA"><a href="#7-3QA" class="headerlink" title="7.3QA"></a>7.3QA</h2>]]></content>
-  </entry>
-  <entry>
-    <title>08逻辑回归</title>
-    <url>/2023/12/18/08-logistic-hui-gui/</url>
-    <content><![CDATA[<h1 id="08-logistic-回归"><a href="#08-logistic-回归" class="headerlink" title="08 logistic 回归"></a>08 logistic 回归</h1><h2 id="8-1-Logistic-Regression"><a href="#8-1-Logistic-Regression" class="headerlink" title="8.1 Logistic Regression"></a>8.1 Logistic Regression</h2><p><img src="https://s2.loli.net/2023/12/18/gs7HLUcrdN3bzpE.png" alt="image-20231218104931835"></p>
-<h2 id="8-2-Logistic-Regression-cost-function"><a href="#8-2-Logistic-Regression-cost-function" class="headerlink" title="8.2 Logistic Regression cost function"></a>8.2 Logistic Regression cost function</h2><p><img src="https://s2.loli.net/2023/12/18/MGK5DQbgXyeq2Uf.png" alt="image-20231218105940949"></p>
-]]></content>
   </entry>
   <entry>
     <title>08线性回归</title>
@@ -768,20 +761,10 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 <h2 id="8-5QA"><a href="#8-5QA" class="headerlink" title="8.5QA"></a>8.5QA</h2>]]></content>
   </entry>
   <entry>
-    <title>11导数</title>
-    <url>/2023/12/18/11-dao-shu/</url>
-    <content><![CDATA[<h1 id="11-导数"><a href="#11-导数" class="headerlink" title="11 导数"></a>11 导数</h1><h2 id="11-1-Intuition-about-derivatives"><a href="#11-1-Intuition-about-derivatives" class="headerlink" title="11.1 Intuition about derivatives"></a>11.1 Intuition about derivatives</h2><p> <img src="https://s2.loli.net/2023/12/18/vNLjQAUXIDqVWSF.png" alt="image-20231218112637878"></p>
-<h2 id="11-2-examples"><a href="#11-2-examples" class="headerlink" title="11.2 examples"></a>11.2 examples</h2><p><img src="https://s2.loli.net/2023/12/18/45DRYspac3kLzOy.png" alt="image-20231218113045875"></p>
-<p><img src="https://s2.loli.net/2023/12/18/Tzk8fL7Z9OKIRp2.png" alt="image-20231218113339464"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>13计算图</title>
-    <url>/2023/12/18/13-ji-suan-tu/</url>
-    <content><![CDATA[<h1 id="13-计算图"><a href="#13-计算图" class="headerlink" title="13 计算图"></a>13 计算图</h1><h2 id="13-1-Computation-Graph"><a href="#13-1-Computation-Graph" class="headerlink" title="13.1 Computation Graph"></a>13.1 Computation Graph</h2><p><img src="https://s2.loli.net/2023/12/18/C91u6wRZVLIzkgn.png" alt="image-20231218113756356"></p>
-<h2 id="13-2-Computing-derivatives"><a href="#13-2-Computing-derivatives" class="headerlink" title="13.2 Computing derivatives"></a>13.2 Computing derivatives</h2><p><img src="https://s2.loli.net/2023/12/18/PJSbW8NOrpXVYvL.png" alt="image-20231218120438053"></p>
-<p><img src="https://s2.loli.net/2023/12/18/deJoOvjcH3U8EYm.png" alt="image-20231218120900304"></p>
-<p>可控</p>
+    <title>08逻辑回归</title>
+    <url>/2023/12/18/08-logistic-hui-gui/</url>
+    <content><![CDATA[<h1 id="08-logistic-回归"><a href="#08-logistic-回归" class="headerlink" title="08 logistic 回归"></a>08 logistic 回归</h1><h2 id="8-1-Logistic-Regression"><a href="#8-1-Logistic-Regression" class="headerlink" title="8.1 Logistic Regression"></a>8.1 Logistic Regression</h2><p><img src="https://s2.loli.net/2023/12/18/gs7HLUcrdN3bzpE.png" alt="image-20231218104931835"></p>
+<h2 id="8-2-Logistic-Regression-cost-function"><a href="#8-2-Logistic-Regression-cost-function" class="headerlink" title="8.2 Logistic Regression cost function"></a>8.2 Logistic Regression cost function</h2><p><img src="https://s2.loli.net/2023/12/18/MGK5DQbgXyeq2Uf.png" alt="image-20231218105940949"></p>
 ]]></content>
   </entry>
   <entry>
@@ -810,6 +793,23 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
     <url>/2023/12/18/10-ti-du-xia-jiang-fa/</url>
     <content><![CDATA[<h1 id="10-梯度下降法"><a href="#10-梯度下降法" class="headerlink" title="10 梯度下降法"></a>10 梯度下降法</h1><h2 id="10-1-Gradient-Descent"><a href="#10-1-Gradient-Descent" class="headerlink" title="10.1 Gradient Descent"></a>10.1 Gradient Descent</h2><p><img src="https://s2.loli.net/2023/12/18/5g29KPrnfduwWSM.png" alt="image-20231218110449631"></p>
 <p><img src="https://s2.loli.net/2023/12/18/l6SPghF1BXREWG5.png" alt="image-20231218111903673"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>13计算图</title>
+    <url>/2023/12/18/13-ji-suan-tu/</url>
+    <content><![CDATA[<h1 id="13-计算图"><a href="#13-计算图" class="headerlink" title="13 计算图"></a>13 计算图</h1><h2 id="13-1-Computation-Graph"><a href="#13-1-Computation-Graph" class="headerlink" title="13.1 Computation Graph"></a>13.1 Computation Graph</h2><p><img src="https://s2.loli.net/2023/12/18/C91u6wRZVLIzkgn.png" alt="image-20231218113756356"></p>
+<h2 id="13-2-Computing-derivatives"><a href="#13-2-Computing-derivatives" class="headerlink" title="13.2 Computing derivatives"></a>13.2 Computing derivatives</h2><p><img src="https://s2.loli.net/2023/12/18/PJSbW8NOrpXVYvL.png" alt="image-20231218120438053"></p>
+<p><img src="https://s2.loli.net/2023/12/18/deJoOvjcH3U8EYm.png" alt="image-20231218120900304"></p>
+<p>可控</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>11导数</title>
+    <url>/2023/12/18/11-dao-shu/</url>
+    <content><![CDATA[<h1 id="11-导数"><a href="#11-导数" class="headerlink" title="11 导数"></a>11 导数</h1><h2 id="11-1-Intuition-about-derivatives"><a href="#11-1-Intuition-about-derivatives" class="headerlink" title="11.1 Intuition about derivatives"></a>11.1 Intuition about derivatives</h2><p> <img src="https://s2.loli.net/2023/12/18/vNLjQAUXIDqVWSF.png" alt="image-20231218112637878"></p>
+<h2 id="11-2-examples"><a href="#11-2-examples" class="headerlink" title="11.2 examples"></a>11.2 examples</h2><p><img src="https://s2.loli.net/2023/12/18/45DRYspac3kLzOy.png" alt="image-20231218113045875"></p>
+<p><img src="https://s2.loli.net/2023/12/18/Tzk8fL7Z9OKIRp2.png" alt="image-20231218113339464"></p>
 ]]></content>
   </entry>
   <entry>
@@ -952,21 +952,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>25神经网络</title>
-    <url>/2023/12/19/25-shen-jing-wang-luo/</url>
-    <content><![CDATA[<h1 id="25-神经网络"><a href="#25-神经网络" class="headerlink" title="25 神经网络"></a>25 神经网络</h1><h2 id="25-1-What-is-a-Neural-Network"><a href="#25-1-What-is-a-Neural-Network" class="headerlink" title="25.1 What is a Neural Network ?"></a>25.1 What is a Neural Network ?</h2><p><img src="https://s2.loli.net/2023/12/19/ZMTlEBK9cYr87mR.png" alt="image-20231219165206416"></p>
-<h2 id="25-2-Neural-Network-Representation"><a href="#25-2-Neural-Network-Representation" class="headerlink" title="25.2 Neural Network Representation"></a>25.2 Neural Network Representation</h2><p><img src="https://s2.loli.net/2023/12/19/97dc5uODvNkLPlz.png" alt="image-20231219165708420"></p>
-<p><img src="https://s2.loli.net/2023/12/19/iWtYLns6cawBjK1.png" alt="image-20231219170536546"></p>
-<p><strong>向量化的一条经验法则：当我们在一层中有不同的节点，那就将它们竖向堆叠</strong></p>
-<p><img src="https://s2.loli.net/2023/12/19/M5PUYEkIW2G6B34.png" alt="image-20231219171341280"></p>
-<h2 id="25-3-Neural-Network-Representation-learning"><a href="#25-3-Neural-Network-Representation-learning" class="headerlink" title="25.3 Neural Network Representation learning"></a>25.3 Neural Network Representation learning</h2><p><img src="https://s2.loli.net/2023/12/19/jxJ8vWe3ALRCtM6.png" alt="image-20231219171642916"></p>
-<h2 id="25-4-Vectorizing-across-multiple-examples"><a href="#25-4-Vectorizing-across-multiple-examples" class="headerlink" title="25.4 Vectorizing across multiple examples"></a>25.4 Vectorizing across multiple examples</h2><p><img src="https://s2.loli.net/2023/12/20/OhMJLo4AlnGWskV.png" alt="image-20231220212910827"></p>
-<p><img src="https://s2.loli.net/2023/12/20/bBxOjdkr9lq81MJ.png" alt="image-20231220213502717"></p>
-<h2 id="25-5-Justification-for-vectorized-implementation"><a href="#25-5-Justification-for-vectorized-implementation" class="headerlink" title="25.5 Justification for vectorized implementation"></a>25.5 Justification for vectorized implementation</h2><p><img src="https://s2.loli.net/2023/12/20/hR4DELJwqmMWFUl.png" alt="image-20231220214715916"></p>
-<h2 id="25-6-Recap-of-vectorizing-across-multiple-examples"><a href="#25-6-Recap-of-vectorizing-across-multiple-examples" class="headerlink" title="25.6 Recap of vectorizing across multiple examples"></a>25.6 Recap of vectorizing across multiple examples</h2><p><img src="https://s2.loli.net/2023/12/20/LKg54FatcyoUx7B.png" alt="image-20231220215654131"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>21python广播机制</title>
     <url>/2023/12/19/21-python-de-guang-bo-ji-zhi/</url>
     <content><![CDATA[<h1 id="21-Python-的广播机制"><a href="#21-Python-的广播机制" class="headerlink" title="21 Python 的广播机制"></a>21 Python 的广播机制</h1><h2 id="21-1-Broadcasting-example"><a href="#21-1-Broadcasting-example" class="headerlink" title="21.1 Broadcasting example"></a>21.1 Broadcasting example</h2><p>【举例】</p>
@@ -998,6 +983,21 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
+    <title>25神经网络</title>
+    <url>/2023/12/19/25-shen-jing-wang-luo/</url>
+    <content><![CDATA[<h1 id="25-神经网络"><a href="#25-神经网络" class="headerlink" title="25 神经网络"></a>25 神经网络</h1><h2 id="25-1-What-is-a-Neural-Network"><a href="#25-1-What-is-a-Neural-Network" class="headerlink" title="25.1 What is a Neural Network ?"></a>25.1 What is a Neural Network ?</h2><p><img src="https://s2.loli.net/2023/12/19/ZMTlEBK9cYr87mR.png" alt="image-20231219165206416"></p>
+<h2 id="25-2-Neural-Network-Representation"><a href="#25-2-Neural-Network-Representation" class="headerlink" title="25.2 Neural Network Representation"></a>25.2 Neural Network Representation</h2><p><img src="https://s2.loli.net/2023/12/19/97dc5uODvNkLPlz.png" alt="image-20231219165708420"></p>
+<p><img src="https://s2.loli.net/2023/12/19/iWtYLns6cawBjK1.png" alt="image-20231219170536546"></p>
+<p><strong>向量化的一条经验法则：当我们在一层中有不同的节点，那就将它们竖向堆叠</strong></p>
+<p><img src="https://s2.loli.net/2023/12/19/M5PUYEkIW2G6B34.png" alt="image-20231219171341280"></p>
+<h2 id="25-3-Neural-Network-Representation-learning"><a href="#25-3-Neural-Network-Representation-learning" class="headerlink" title="25.3 Neural Network Representation learning"></a>25.3 Neural Network Representation learning</h2><p><img src="https://s2.loli.net/2023/12/19/jxJ8vWe3ALRCtM6.png" alt="image-20231219171642916"></p>
+<h2 id="25-4-Vectorizing-across-multiple-examples"><a href="#25-4-Vectorizing-across-multiple-examples" class="headerlink" title="25.4 Vectorizing across multiple examples"></a>25.4 Vectorizing across multiple examples</h2><p><img src="https://s2.loli.net/2023/12/20/OhMJLo4AlnGWskV.png" alt="image-20231220212910827"></p>
+<p><img src="https://s2.loli.net/2023/12/20/bBxOjdkr9lq81MJ.png" alt="image-20231220213502717"></p>
+<h2 id="25-5-Justification-for-vectorized-implementation"><a href="#25-5-Justification-for-vectorized-implementation" class="headerlink" title="25.5 Justification for vectorized implementation"></a>25.5 Justification for vectorized implementation</h2><p><img src="https://s2.loli.net/2023/12/20/hR4DELJwqmMWFUl.png" alt="image-20231220214715916"></p>
+<h2 id="25-6-Recap-of-vectorizing-across-multiple-examples"><a href="#25-6-Recap-of-vectorizing-across-multiple-examples" class="headerlink" title="25.6 Recap of vectorizing across multiple examples"></a>25.6 Recap of vectorizing across multiple examples</h2><p><img src="https://s2.loli.net/2023/12/20/LKg54FatcyoUx7B.png" alt="image-20231220215654131"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>33神经网络中的梯度下降法</title>
     <url>/2023/12/21/33.shen-jing-wang-luo-de-ti-du-xia-jiang-fa/</url>
     <content><![CDATA[<h1 id="33-神经网络的梯度下降法"><a href="#33-神经网络的梯度下降法" class="headerlink" title="33.神经网络的梯度下降法"></a>33.神经网络的梯度下降法</h1><h2 id="33-1-Gradient-descent-for-neural-networks"><a href="#33-1-Gradient-descent-for-neural-networks" class="headerlink" title="33.1 Gradient descent for neural networks"></a>33.1 Gradient descent for neural networks</h2><p><img src="https://s2.loli.net/2023/12/21/TlmcBKHQSbEi73L.png" alt="image-20231221214947242"></p>
@@ -1008,6 +1008,28 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 <p><img src="https://s2.loli.net/2023/12/21/SKNIoOUVEuGRA6X.png" alt="image-20231221221307296"></p>
 <h2 id="33-4-Summary-of-gradient-descent"><a href="#33-4-Summary-of-gradient-descent" class="headerlink" title="33.4 Summary of gradient descent"></a>33.4 Summary of gradient descent</h2><p><img src="https://s2.loli.net/2023/12/21/P7xHrJEDdOVMTm4.png" alt="image-20231221221512260"></p>
 <p><img src="https://s2.loli.net/2023/12/21/jEKUJu6LQGHPsR9.png" alt="image-20231221221645389"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>35随机初始化</title>
+    <url>/2023/12/22/35-sui-ji-chu-shi-hua/</url>
+    <content><![CDATA[<h1 id="35-随机初始化"><a href="#35-随机初始化" class="headerlink" title="35 随机初始化"></a>35 随机初始化</h1><p><strong>在训练神经网络时，初始化权重的重要性，对于随机初始化的权重，将其全部初始化为零时是不合适的，因为这将导致隐藏单位集散相同的函数，没有区别。相反，初始化为权重为随机值可以解决对称性破缺问题，是隐藏单元计算不同的函数。此外，初始化偏置项和权重的其它注意事项，可以帮助训练更加有效的神经网络。</strong></p>
+<ul>
+<li>在训练神经网络时，初始化权重的重要性，特别时对于随机初始化的神经网络<ul>
+<li>初始化权重对神经网络训练非常重要</li>
+<li>初始化为零会导致隐藏单元计算相同的函数</li>
+<li>初始化参数为随机值可以解决这个问题</li>
+</ul>
+</li>
+<li>如何初始化神经网络的参数，以及为什么通常将权重初始化为较小的随机值<ul>
+<li>初始化权重为小随机值可以避免对称性破缺问题</li>
+<li>初始化权重过大可能导致激活函数饱和（计算出的值，落在激活函数的平缓部分，则斜率非常小），减缓学习速度</li>
+<li>初始化常数为0.01（浅层网络一般适用）或其他相对较小的数字（其他深层的网络，则需要仔细选择）</li>
+</ul>
+</li>
+</ul>
+<h2 id="35-1-What-happens-if-you-initialize-weights-to-zero"><a href="#35-1-What-happens-if-you-initialize-weights-to-zero" class="headerlink" title="35.1 What happens if you initialize weights to zero"></a>35.1 What happens if you initialize weights to zero</h2><p><img src="https://s2.loli.net/2023/12/22/XvPGQlsrHFObB1Y.png" alt="image-20231222122124897"></p>
+<h2 id="35-2-Random-initialization"><a href="#35-2-Random-initialization" class="headerlink" title="35.2 Random initialization"></a>35.2 Random initialization</h2><p><img src="https://s2.loli.net/2023/12/22/H2UiuCyMGgmDhTV.png" alt="image-20231222122527065"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1063,45 +1085,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>35随机初始化</title>
-    <url>/2023/12/22/35-sui-ji-chu-shi-hua/</url>
-    <content><![CDATA[<h1 id="35-随机初始化"><a href="#35-随机初始化" class="headerlink" title="35 随机初始化"></a>35 随机初始化</h1><p><strong>在训练神经网络时，初始化权重的重要性，对于随机初始化的权重，将其全部初始化为零时是不合适的，因为这将导致隐藏单位集散相同的函数，没有区别。相反，初始化为权重为随机值可以解决对称性破缺问题，是隐藏单元计算不同的函数。此外，初始化偏置项和权重的其它注意事项，可以帮助训练更加有效的神经网络。</strong></p>
-<ul>
-<li>在训练神经网络时，初始化权重的重要性，特别时对于随机初始化的神经网络<ul>
-<li>初始化权重对神经网络训练非常重要</li>
-<li>初始化为零会导致隐藏单元计算相同的函数</li>
-<li>初始化参数为随机值可以解决这个问题</li>
-</ul>
-</li>
-<li>如何初始化神经网络的参数，以及为什么通常将权重初始化为较小的随机值<ul>
-<li>初始化权重为小随机值可以避免对称性破缺问题</li>
-<li>初始化权重过大可能导致激活函数饱和（计算出的值，落在激活函数的平缓部分，则斜率非常小），减缓学习速度</li>
-<li>初始化常数为0.01（浅层网络一般适用）或其他相对较小的数字（其他深层的网络，则需要仔细选择）</li>
-</ul>
-</li>
-</ul>
-<h2 id="35-1-What-happens-if-you-initialize-weights-to-zero"><a href="#35-1-What-happens-if-you-initialize-weights-to-zero" class="headerlink" title="35.1 What happens if you initialize weights to zero"></a>35.1 What happens if you initialize weights to zero</h2><p><img src="https://s2.loli.net/2023/12/22/XvPGQlsrHFObB1Y.png" alt="image-20231222122124897"></p>
-<h2 id="35-2-Random-initialization"><a href="#35-2-Random-initialization" class="headerlink" title="35.2 Random initialization"></a>35.2 Random initialization</h2><p><img src="https://s2.loli.net/2023/12/22/H2UiuCyMGgmDhTV.png" alt="image-20231222122527065"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>38深层网络中的前向传播</title>
-    <url>/2023/12/23/38-shen-ceng-wang-luo-zhong-de-qian-xiang-chuan-bo/</url>
-    <content><![CDATA[<h1 id="38-深层网络中的前向传播"><a href="#38-深层网络中的前向传播" class="headerlink" title="38 深层网络中的前向传播"></a>38 深层网络中的前向传播</h1><p><strong>深度神经网络的符号和如何在深度网络中执行正向传播。对于单个训练实例 x 的前向传播，首先计算第一层的激活，然后计算第二层到输出层的激活，最终得到预测输出。还讨论向量化方法和循环实现正向传播的必要性。</strong></p>
-<ul>
-<li><strong>深度神经网络的正向传播过程，对于单个训练实例的前向传播的计算方法</strong></li>
-<li>深度神经网络的正向传播</li>
-<li>向量化方法在整个训练集上的正向传播</li>
-<li>输入特征向量 x 在计算激活时等于零层的激活</li>
-<li><strong>深度神经网络的符号和正向传播的实现，包括将小写字母替换为大写字母、循环计算激活量等。</strong></li>
-<li>深度学习的符号和表示法</li>
-<li>训练集和表示和预测结果</li>
-<li>深度神经网络的实现和符号表示</li>
-</ul>
-<h2 id="38-1-Forward-propagation-in-a-deep-network"><a href="#38-1-Forward-propagation-in-a-deep-network" class="headerlink" title="38.1 Forward propagation in a deep network"></a>38.1 Forward propagation in a deep network</h2><p><img src="https://s2.loli.net/2023/12/23/szgD3h5LA1CIcTv.png" alt="image-20231223180058234"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>39核对矩阵的维数</title>
     <url>/2023/12/24/39-he-dui-ju-zhen-de-wei-shu/</url>
     <content><![CDATA[<h1 id="39-核对矩阵的维数"><a href="#39-核对矩阵的维数" class="headerlink" title="39 核对矩阵的维数"></a>39 核对矩阵的维数</h1><p><strong>深度学习中深度神经网络的正向传播和反向传播的过程。包含神经网络中各个层的参数和输入特性的尺寸，以及如何确保矩阵和向量的尺寸一致性。通过正向传播，我们可以计算出网络的输出和损失函数，而反向传播则用与计算梯度并更新参数。还包含深度神经网络相较于浅层表示的优势。</strong></p>
@@ -1128,6 +1111,23 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
+    <title>38深层网络中的前向传播</title>
+    <url>/2023/12/23/38-shen-ceng-wang-luo-zhong-de-qian-xiang-chuan-bo/</url>
+    <content><![CDATA[<h1 id="38-深层网络中的前向传播"><a href="#38-深层网络中的前向传播" class="headerlink" title="38 深层网络中的前向传播"></a>38 深层网络中的前向传播</h1><p><strong>深度神经网络的符号和如何在深度网络中执行正向传播。对于单个训练实例 x 的前向传播，首先计算第一层的激活，然后计算第二层到输出层的激活，最终得到预测输出。还讨论向量化方法和循环实现正向传播的必要性。</strong></p>
+<ul>
+<li><strong>深度神经网络的正向传播过程，对于单个训练实例的前向传播的计算方法</strong></li>
+<li>深度神经网络的正向传播</li>
+<li>向量化方法在整个训练集上的正向传播</li>
+<li>输入特征向量 x 在计算激活时等于零层的激活</li>
+<li><strong>深度神经网络的符号和正向传播的实现，包括将小写字母替换为大写字母、循环计算激活量等。</strong></li>
+<li>深度学习的符号和表示法</li>
+<li>训练集和表示和预测结果</li>
+<li>深度神经网络的实现和符号表示</li>
+</ul>
+<h2 id="38-1-Forward-propagation-in-a-deep-network"><a href="#38-1-Forward-propagation-in-a-deep-network" class="headerlink" title="38.1 Forward propagation in a deep network"></a>38.1 Forward propagation in a deep network</h2><p><img src="https://s2.loli.net/2023/12/23/szgD3h5LA1CIcTv.png" alt="image-20231223180058234"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>40为什么要用深层表示？</title>
     <url>/2024/01/02/40-wei-shi-me-yao-shi-yong-shen-ceng-biao-shi/</url>
     <content><![CDATA[<h1 id="40-为什么要使用深层表示？"><a href="#40-为什么要使用深层表示？" class="headerlink" title="40 为什么要使用深层表示？"></a>40 为什么要使用深层表示？</h1><h2 id="40-1-Intuition-about-deep-representation"><a href="#40-1-Intuition-about-deep-representation" class="headerlink" title="40.1 Intuition about deep representation"></a>40.1 Intuition about deep representation</h2><p>在人脸识别系统中</p>
@@ -1149,13 +1149,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>41搭建深层神经网络块</title>
-    <url>/2024/01/02/41-da-jian-shen-ceng-shen-jing-wang-luo-kuai/</url>
-    <content><![CDATA[<h1 id="41-搭建深层神经网络块"><a href="#41-搭建深层神经网络块" class="headerlink" title="41 搭建深层神经网络块"></a>41 搭建深层神经网络块</h1><h2 id="41-1-Forward-and-backward-functions"><a href="#41-1-Forward-and-backward-functions" class="headerlink" title="41.1 Forward and backward functions"></a>41.1 Forward and backward functions</h2><p><img src="https://s2.loli.net/2024/01/02/EQqSfZ79F8RPADt.png" alt="image-20240102113354053"></p>
-<p><img src="https://s2.loli.net/2024/01/02/Gt9qfyEvS1BDwpz.png" alt="image-20240102113716528"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>43这和大脑有什么关系？</title>
     <url>/2024/01/02/43-zhe-he-da-nao-you-shi-me-guan-xi/</url>
     <content><![CDATA[<h1 id="43-这和大脑有什么关系？"><a href="#43-这和大脑有什么关系？" class="headerlink" title="43 这和大脑有什么关系？"></a>43 这和大脑有什么关系？</h1><h2 id="43-1-Forward-and-backward-propagation"><a href="#43-1-Forward-and-backward-propagation" class="headerlink" title="43.1 Forward and backward propagation"></a>43.1 Forward and backward propagation</h2><p><img src="https://s2.loli.net/2024/01/02/XITyJkBZGtPgFK3.png" alt="image-20240102114639554"></p>
@@ -1169,17 +1162,18 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
+    <title>41搭建深层神经网络块</title>
+    <url>/2024/01/02/41-da-jian-shen-ceng-shen-jing-wang-luo-kuai/</url>
+    <content><![CDATA[<h1 id="41-搭建深层神经网络块"><a href="#41-搭建深层神经网络块" class="headerlink" title="41 搭建深层神经网络块"></a>41 搭建深层神经网络块</h1><h2 id="41-1-Forward-and-backward-functions"><a href="#41-1-Forward-and-backward-functions" class="headerlink" title="41.1 Forward and backward functions"></a>41.1 Forward and backward functions</h2><p><img src="https://s2.loli.net/2024/01/02/EQqSfZ79F8RPADt.png" alt="image-20240102113354053"></p>
+<p><img src="https://s2.loli.net/2024/01/02/Gt9qfyEvS1BDwpz.png" alt="image-20240102113716528"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>47训练 开发 测试集合</title>
     <url>/2024/01/02/47-xun-lian-kai-fa-ce-shi-ji-he/</url>
     <content><![CDATA[<h1 id="47-训练-开发-测试集合"><a href="#47-训练-开发-测试集合" class="headerlink" title="47 训练 开发 测试集合"></a>47 训练 开发 测试集合</h1><h2 id="47-1-Applied-ML-is-a-highly-iterative-process"><a href="#47-1-Applied-ML-is-a-highly-iterative-process" class="headerlink" title="47.1 Applied ML is a highly iterative process"></a>47.1 Applied ML is a highly iterative process</h2><p><img src="https://s2.loli.net/2024/01/02/dCbINSOFyX1KPoA.png" alt="image-20240102115159250"></p>
 <h2 id="47-2-Train-dev-test-sets"><a href="#47-2-Train-dev-test-sets" class="headerlink" title="47.2 Train/dev/test sets"></a>47.2 Train/dev/test sets</h2><p><img src="https://s2.loli.net/2024/01/02/nY6lAPGzEpc4mfF.png" alt="image-20240102115531660"></p>
 <h2 id="Mismatched-train-test-distribution"><a href="#Mismatched-train-test-distribution" class="headerlink" title="Mismatched train/test distribution"></a>Mismatched train/test distribution</h2><p><img src="https://s2.loli.net/2024/01/02/v1bpjqulMgBCP9N.png" alt="image-20240102115859490"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>49机器学习基础</title>
-    <url>/2024/01/05/49-ji-qi-xue-xi-ji-chu/</url>
-    <content><![CDATA[<h1 id="49-机器学习基础"><a href="#49-机器学习基础" class="headerlink" title="49 机器学习基础"></a>49 机器学习基础</h1><h2 id="Basic-recipe-for-machine-learning"><a href="#Basic-recipe-for-machine-learning" class="headerlink" title="Basic recipe for machine learning"></a>Basic recipe for machine learning</h2><p><img src="https://s2.loli.net/2024/01/05/Owq1IAr3ZspX2jn.png" alt="image-20240105122804069"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1190,9 +1184,17 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>53理解Dropout</title>
-    <url>/2024/01/16/53-li-jie-dropout/</url>
-    <content><![CDATA[<h1 id="53-理解-Dropout"><a href="#53-理解-Dropout" class="headerlink" title="53 理解 Dropout"></a>53 理解 Dropout</h1><h2 id="53-1Why-does-drop-out-work"><a href="#53-1Why-does-drop-out-work" class="headerlink" title="53.1Why does drop-out work?"></a>53.1Why does drop-out work?</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240113212243807.png" alt="image-20240113212243807"></p>
+    <title>49机器学习基础</title>
+    <url>/2024/01/05/49-ji-qi-xue-xi-ji-chu/</url>
+    <content><![CDATA[<h1 id="49-机器学习基础"><a href="#49-机器学习基础" class="headerlink" title="49 机器学习基础"></a>49 机器学习基础</h1><h2 id="Basic-recipe-for-machine-learning"><a href="#Basic-recipe-for-machine-learning" class="headerlink" title="Basic recipe for machine learning"></a>Basic recipe for machine learning</h2><p><img src="https://s2.loli.net/2024/01/05/Owq1IAr3ZspX2jn.png" alt="image-20240105122804069"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>48偏差和方差</title>
+    <url>/2024/01/05/48-pian-chai-he-fang-chai/</url>
+    <content><![CDATA[<h1 id="48-偏差和方差"><a href="#48-偏差和方差" class="headerlink" title="48 偏差和方差"></a>48 偏差和方差</h1><h2 id="Bias-and-Variance"><a href="#Bias-and-Variance" class="headerlink" title="Bias and Variance"></a>Bias and Variance</h2><p><img src="https://s2.loli.net/2024/01/05/tXWsarKZ4qpvSdY.png" alt="image-20240105121254636"></p>
+<p><img src="https://s2.loli.net/2024/01/05/3SJeIYPVkEojilH.png" alt="image-20240105121719692"></p>
+<h2 id="High-bias-and-high-variance"><a href="#High-bias-and-high-variance" class="headerlink" title="High bias and high variance"></a>High bias and high variance</h2><p><img src="https://s2.loli.net/2024/01/05/WUb7IruKNq6Gg3Z.png" alt="image-20240105122119324"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1200,6 +1202,20 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
     <url>/2024/01/06/51-wei-shi-me-zheng-ze-hua-ke-yi-jian-shao-guo-ni-he/</url>
     <content><![CDATA[<h1 id="51-为什么正则化可以减少过拟合？"><a href="#51-为什么正则化可以减少过拟合？" class="headerlink" title="51 为什么正则化可以减少过拟合？"></a>51 为什么正则化可以减少过拟合？</h1><h2 id="51-1-How-does-regularization-prevent-overfitting"><a href="#51-1-How-does-regularization-prevent-overfitting" class="headerlink" title="51.1 How does regularization prevent overfitting?"></a>51.1 How does regularization prevent overfitting?</h2><p><img src="https://s2.loli.net/2024/01/06/eK9HgiZJAS7MwGz.png" alt="image-20240106230618834"></p>
 <p><img src="https://s2.loli.net/2024/01/06/vMUnYbDhmiwR85j.png" alt="image-20240106231520169"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>52Dropout正则化</title>
+    <url>/2024/01/13/52-dropout-zheng-ze-hua/</url>
+    <content><![CDATA[<h1 id="52-Dropout-正则化"><a href="#52-Dropout-正则化" class="headerlink" title="52 Dropout 正则化"></a>52 Dropout 正则化</h1><h2 id="52-1Dropout-regularization"><a href="#52-1Dropout-regularization" class="headerlink" title="52.1Dropout regularization"></a>52.1Dropout regularization</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240113203610466.png" alt="image-20240113203610466"></p>
+<h2 id="52-2Implementing-dropout-“Inverted-dropout”"><a href="#52-2Implementing-dropout-“Inverted-dropout”" class="headerlink" title="52.2Implementing dropout(“Inverted dropout”)"></a>52.2Implementing dropout(“Inverted dropout”)</h2><p><img src="https://s2.loli.net/2024/01/13/ilLpst3SmYoHRuX.png" alt="image-20240113210330586"></p>
+<h2 id="52-3Making-predictions-at-test-time"><a href="#52-3Making-predictions-at-test-time" class="headerlink" title="52.3Making predictions at test time"></a>52.3Making predictions at test time</h2><p><img src="https://s2.loli.net/2024/01/13/YDzrq1TguIACMRh.png" alt="image-20240113210850114"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>53理解Dropout</title>
+    <url>/2024/01/16/53-li-jie-dropout/</url>
+    <content><![CDATA[<h1 id="53-理解-Dropout"><a href="#53-理解-Dropout" class="headerlink" title="53 理解 Dropout"></a>53 理解 Dropout</h1><h2 id="53-1Why-does-drop-out-work"><a href="#53-1Why-does-drop-out-work" class="headerlink" title="53.1Why does drop-out work?"></a>53.1Why does drop-out work?</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240113212243807.png" alt="image-20240113212243807"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1238,19 +1254,21 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>52Dropout正则化</title>
-    <url>/2024/01/13/52-dropout-zheng-ze-hua/</url>
-    <content><![CDATA[<h1 id="52-Dropout-正则化"><a href="#52-Dropout-正则化" class="headerlink" title="52 Dropout 正则化"></a>52 Dropout 正则化</h1><h2 id="52-1Dropout-regularization"><a href="#52-1Dropout-regularization" class="headerlink" title="52.1Dropout regularization"></a>52.1Dropout regularization</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240113203610466.png" alt="image-20240113203610466"></p>
-<h2 id="52-2Implementing-dropout-“Inverted-dropout”"><a href="#52-2Implementing-dropout-“Inverted-dropout”" class="headerlink" title="52.2Implementing dropout(“Inverted dropout”)"></a>52.2Implementing dropout(“Inverted dropout”)</h2><p><img src="https://s2.loli.net/2024/01/13/ilLpst3SmYoHRuX.png" alt="image-20240113210330586"></p>
-<h2 id="52-3Making-predictions-at-test-time"><a href="#52-3Making-predictions-at-test-time" class="headerlink" title="52.3Making predictions at test time"></a>52.3Making predictions at test time</h2><p><img src="https://s2.loli.net/2024/01/13/YDzrq1TguIACMRh.png" alt="image-20240113210850114"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>48偏差和方差</title>
-    <url>/2024/01/05/48-pian-chai-he-fang-chai/</url>
-    <content><![CDATA[<h1 id="48-偏差和方差"><a href="#48-偏差和方差" class="headerlink" title="48 偏差和方差"></a>48 偏差和方差</h1><h2 id="Bias-and-Variance"><a href="#Bias-and-Variance" class="headerlink" title="Bias and Variance"></a>Bias and Variance</h2><p><img src="https://s2.loli.net/2024/01/05/tXWsarKZ4qpvSdY.png" alt="image-20240105121254636"></p>
-<p><img src="https://s2.loli.net/2024/01/05/3SJeIYPVkEojilH.png" alt="image-20240105121719692"></p>
-<h2 id="High-bias-and-high-variance"><a href="#High-bias-and-high-variance" class="headerlink" title="High bias and high variance"></a>High bias and high variance</h2><p><img src="https://s2.loli.net/2024/01/05/WUb7IruKNq6Gg3Z.png" alt="image-20240105122119324"></p>
+    <title></title>
+    <url>/2024/01/02/building-recommender-system-with-gnn/</url>
+    <content><![CDATA[<h1 id="Building-Recommender-System-with-GNN"><a href="#Building-Recommender-System-with-GNN" class="headerlink" title="Building Recommender System with GNN"></a>Building Recommender System with GNN</h1><h2 id="Part1-Intro-to-GNN"><a href="#Part1-Intro-to-GNN" class="headerlink" title="Part1: Intro to GNN"></a>Part1: Intro to GNN</h2><p><img src="https://s2.loli.net/2024/01/02/YG6IJ2yqmKrHpgu.png" alt="image-20240102093813068"></p>
+<p><img src="https://s2.loli.net/2024/01/02/NnDVusyUarfP7Bj.png" alt="image-20240102093947364"></p>
+<p><img src="https://s2.loli.net/2024/01/02/OJyrtMAjZmuHKiG.png" alt="image-20240102094029280"></p>
+<p><img src="https://s2.loli.net/2024/01/02/v29RWSGTwM3br1q.png" alt="image-20240102094208182"></p>
+<p><img src="https://s2.loli.net/2024/01/02/MzbBhYHCsxwFUDA.png" alt="image-20240102094318610"></p>
+<p><img src="https://s2.loli.net/2024/01/02/EbY5l7mG4j8uxTi.png" alt="image-20240102094522141"></p>
+<p><img src="https://s2.loli.net/2024/01/02/KwkYmbyLXjla85H.png" alt="image-20240102095433388"></p>
+<p><img src="https://s2.loli.net/2024/01/02/hyE5kwJuMlYoQ6d.png" alt="image-20240102095715735"></p>
+<p><img src="https://s2.loli.net/2024/01/02/1JOisIEHlS4ZGrc.png" alt="image-20240102095928047"></p>
+<p><img src="https://s2.loli.net/2024/01/02/zcorTG9veWNO1hU.png" alt="image-20240102100124742"></p>
+<p><img src="https://s2.loli.net/2024/01/02/n6ZWoUOTFX978Eq.png" alt="image-20240102100308238"></p>
+<p><img src="https://s2.loli.net/2024/01/02/EQ8RbjtuvpHSrl9.png" alt="image-20240102100357505"></p>
+<p><img src="https://s2.loli.net/2024/01/02/8qX3bhr5asLpuNB.png" alt="image-20240102100506717"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1321,20 +1339,23 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
   </entry>
   <entry>
     <title></title>
-    <url>/2024/01/02/building-recommender-system-with-gnn/</url>
-    <content><![CDATA[<h1 id="Building-Recommender-System-with-GNN"><a href="#Building-Recommender-System-with-GNN" class="headerlink" title="Building Recommender System with GNN"></a>Building Recommender System with GNN</h1><h2 id="Part1-Intro-to-GNN"><a href="#Part1-Intro-to-GNN" class="headerlink" title="Part1: Intro to GNN"></a>Part1: Intro to GNN</h2><p><img src="https://s2.loli.net/2024/01/02/YG6IJ2yqmKrHpgu.png" alt="image-20240102093813068"></p>
-<p><img src="https://s2.loli.net/2024/01/02/NnDVusyUarfP7Bj.png" alt="image-20240102093947364"></p>
-<p><img src="https://s2.loli.net/2024/01/02/OJyrtMAjZmuHKiG.png" alt="image-20240102094029280"></p>
-<p><img src="https://s2.loli.net/2024/01/02/v29RWSGTwM3br1q.png" alt="image-20240102094208182"></p>
-<p><img src="https://s2.loli.net/2024/01/02/MzbBhYHCsxwFUDA.png" alt="image-20240102094318610"></p>
-<p><img src="https://s2.loli.net/2024/01/02/EbY5l7mG4j8uxTi.png" alt="image-20240102094522141"></p>
-<p><img src="https://s2.loli.net/2024/01/02/KwkYmbyLXjla85H.png" alt="image-20240102095433388"></p>
-<p><img src="https://s2.loli.net/2024/01/02/hyE5kwJuMlYoQ6d.png" alt="image-20240102095715735"></p>
-<p><img src="https://s2.loli.net/2024/01/02/1JOisIEHlS4ZGrc.png" alt="image-20240102095928047"></p>
-<p><img src="https://s2.loli.net/2024/01/02/zcorTG9veWNO1hU.png" alt="image-20240102100124742"></p>
-<p><img src="https://s2.loli.net/2024/01/02/n6ZWoUOTFX978Eq.png" alt="image-20240102100308238"></p>
-<p><img src="https://s2.loli.net/2024/01/02/EQ8RbjtuvpHSrl9.png" alt="image-20240102100357505"></p>
-<p><img src="https://s2.loli.net/2024/01/02/8qX3bhr5asLpuNB.png" alt="image-20240102100506717"></p>
+    <url>/2024/01/02/graph-neural-networks/</url>
+    <content><![CDATA[<h1 id="Graph-Neural-Networks"><a href="#Graph-Neural-Networks" class="headerlink" title="Graph Neural Networks"></a>Graph Neural Networks</h1><p> <img src="https://s2.loli.net/2024/01/02/X3PRzd8yeAVw2BQ.png" alt="image-20240102091617093"></p>
+<p><img src="https://s2.loli.net/2024/01/02/ibrAWq4GKnaODmU.png" alt="image-20240102091633581"></p>
+<p><img src="https://s2.loli.net/2024/01/02/vkSD7QTXYzIb2P3.png" alt="image-20240102091655951"></p>
+<p><img src="https://s2.loli.net/2024/01/02/tsgATuv5YWf6dmE.png" alt="image-20240102091704896"></p>
+<p><img src="https://s2.loli.net/2024/01/02/XaYg4cUEhQKxjfF.png" alt="image-20240102092051111"></p>
+<p><img src="https://s2.loli.net/2024/01/02/DBOTAfVsoZpP3G7.png" alt="image-20240102092139541"></p>
+<p><img src="https://s2.loli.net/2024/01/02/zPlAsZHKE2CBg8u.png" alt="image-20240102092226107"></p>
+<p><img src="https://s2.loli.net/2024/01/02/yQKTcIiXPYRB6od.png" alt="image-20240102092403353"></p>
+<p><img src="https://s2.loli.net/2024/01/02/8C2OMYbPq5BIm1r.png" alt="image-20240102092446883"></p>
+<p><img src="https://s2.loli.net/2024/01/02/Buy4Nge9brMG6tw.png" alt="image-20240102092539175"></p>
+<p><img src="https://s2.loli.net/2024/01/02/QdkTCKZnXYmLIaq.png" alt="image-20240102092553255"></p>
+<p><img src="https://s2.loli.net/2024/01/02/sDG7fm93UqjurnL.png" alt="image-20240102092726082"></p>
+<p><img src="https://s2.loli.net/2024/01/02/5CxyABnEUIapTkS.png" alt="image-20240102092900682"></p>
+<p><img src="https://s2.loli.net/2024/01/02/UW52fkCNwt9LXsb.png" alt="image-20240102093103632"></p>
+<p><img src="https://s2.loli.net/2024/01/02/rHNW6E5Z372dSsU.png" alt="image-20240102093208704"></p>
+<p><img src="https://s2.loli.net/2024/01/02/VOAtoWbmqCvTg8S.png" alt="image-20240102093339507"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1375,27 +1396,6 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
       <tags>
         <tag>JVM</tag>
       </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2024/01/02/graph-neural-networks/</url>
-    <content><![CDATA[<h1 id="Graph-Neural-Networks"><a href="#Graph-Neural-Networks" class="headerlink" title="Graph Neural Networks"></a>Graph Neural Networks</h1><p> <img src="https://s2.loli.net/2024/01/02/X3PRzd8yeAVw2BQ.png" alt="image-20240102091617093"></p>
-<p><img src="https://s2.loli.net/2024/01/02/ibrAWq4GKnaODmU.png" alt="image-20240102091633581"></p>
-<p><img src="https://s2.loli.net/2024/01/02/vkSD7QTXYzIb2P3.png" alt="image-20240102091655951"></p>
-<p><img src="https://s2.loli.net/2024/01/02/tsgATuv5YWf6dmE.png" alt="image-20240102091704896"></p>
-<p><img src="https://s2.loli.net/2024/01/02/XaYg4cUEhQKxjfF.png" alt="image-20240102092051111"></p>
-<p><img src="https://s2.loli.net/2024/01/02/DBOTAfVsoZpP3G7.png" alt="image-20240102092139541"></p>
-<p><img src="https://s2.loli.net/2024/01/02/zPlAsZHKE2CBg8u.png" alt="image-20240102092226107"></p>
-<p><img src="https://s2.loli.net/2024/01/02/yQKTcIiXPYRB6od.png" alt="image-20240102092403353"></p>
-<p><img src="https://s2.loli.net/2024/01/02/8C2OMYbPq5BIm1r.png" alt="image-20240102092446883"></p>
-<p><img src="https://s2.loli.net/2024/01/02/Buy4Nge9brMG6tw.png" alt="image-20240102092539175"></p>
-<p><img src="https://s2.loli.net/2024/01/02/QdkTCKZnXYmLIaq.png" alt="image-20240102092553255"></p>
-<p><img src="https://s2.loli.net/2024/01/02/sDG7fm93UqjurnL.png" alt="image-20240102092726082"></p>
-<p><img src="https://s2.loli.net/2024/01/02/5CxyABnEUIapTkS.png" alt="image-20240102092900682"></p>
-<p><img src="https://s2.loli.net/2024/01/02/UW52fkCNwt9LXsb.png" alt="image-20240102093103632"></p>
-<p><img src="https://s2.loli.net/2024/01/02/rHNW6E5Z372dSsU.png" alt="image-20240102093208704"></p>
-<p><img src="https://s2.loli.net/2024/01/02/VOAtoWbmqCvTg8S.png" alt="image-20240102093339507"></p>
-]]></content>
   </entry>
   <entry>
     <title>Java基础</title>
@@ -1614,6 +1614,48 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
       </tags>
   </entry>
   <entry>
+    <title>并发编程</title>
+    <url>/2023/11/03/bing-fa-bian-cheng/</url>
+    <content><![CDATA[<h2 id="3-7-sleep和yield"><a href="#3-7-sleep和yield" class="headerlink" title="3.7 sleep和yield"></a>3.7 sleep和yield</h2><p><strong>sleep</strong></p>
+<p>1.调用sleep会让当前线程从<strong><em>Running</em></strong>进入<strong><em>Timed Waiting</em></strong>状态（阻塞）</p>
+<p>2.其他线程可以使用interupt方法打断正在睡眠的线程，这时sleep方法会抛出InterruptedException</p>
+<p>3.睡眠结束后的线程未必会立刻得到执行</p>
+<p>4.建议用TimeUnit的sleep代替Thread的sleep来获得更好的可读性</p>
+<p><strong>yield</strong></p>
+<p>1.调用yield会让当前线程从Running进入Runnable就绪状态，然后调度执行其它线程</p>
+<p>2.<strong>具体的实现依赖于操作系统的任务调度器</strong></p>
+<p><strong>线程优先级</strong></p>
+<p>线程优先级会提示（hint）调度器优先调度该线程，但它仅仅是一个提示，调度器可以忽略它</p>
+<p>如果CPU比较忙，那么优先级高的线程会获得更多的时间片，但CPU空闲时，优先级几乎没作用</p>
+<p>不使用yield</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test9</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Runnable</span> <span class="variable">task1</span> <span class="operator">=</span> () -&gt; &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">                System.out.prinln(<span class="string">&quot;----&gt;1&quot;</span> + count ++ );</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="type">Runnable</span> <span class="variable">task2</span> <span class="operator">=</span> () -&gt; &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">                <span class="comment">// Thread.yield();</span></span><br><span class="line">                System.out.println(<span class="string">&quot;         ------&gt;2 &quot;</span> + count ++ );</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="type">Thread</span> <span class="variable">t1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(task1, <span class="string">&quot;t1&quot;</span>);</span><br><span class="line">        <span class="type">Thread</span> <span class="variable">t2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(task2, <span class="string">&quot;t2&quot;</span>);</span><br><span class="line">        <span class="comment">// t1.setPriority(Thread.MIN_PRIORITY);</span></span><br><span class="line">        <span class="comment">// t2.setPriority(Thread.MAX_PRIORITY);</span></span><br><span class="line">        t1.start();</span><br><span class="line">        t2.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>未开启yield两者打印次数基本差不多</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231103223923885-1699022365204-1.png" alt="image-20231103223923885"></p>
+<p>开启后</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231103224121283-1699022483089-3.png" alt="image-20231103224121283"></p>
+<p>开启优先级</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231103224359120-1699022640208-6.png" alt="image-20231103224359120"></p>
+<h2 id="案例-防止CPU占用100"><a href="#案例-防止CPU占用100" class="headerlink" title="案例-防止CPU占用100%"></a>案例-防止CPU占用100%</h2><p><strong>sleep实现</strong></p>
+<p>在没有利用CPU进行计算时，不要让while(true)空转浪费CPU，这时可以使用yield或sleep来让出cpu的使用权给其他程序</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Thread.sleep(<span class="number">50</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>可以使用wait或条件变量达到类似的效果</li>
+<li>不同的是，后两种都需要加锁，并且需要响应的唤醒操作，一般适用于要进行同步的场景</li>
+<li>sleep适用于无需锁同步的场景</li>
+</ul>
+<p>不使用sleep，将会占满单核虚拟机资源</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231103225132518-1699023094621-8.png" alt="image-20231103225132518"></p>
+<p>使用后</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231103225214908-1699023136594-10.png" alt="image-20231103225214908"></p>
+]]></content>
+      <categories>
+        <category>软件开发</category>
+      </categories>
+      <tags>
+        <tag>并发编程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>多语言模型中事实知识的跨语言一致性</title>
     <url>/2023/11/02/duo-yu-yan-mo-xing-zhong-shi-shi-zhi-shi-de-kua-yu-yan-yi-zhi-xing/</url>
     <content><![CDATA[<h1 id="多语言模型中事实知识的跨语言一致性"><a href="#多语言模型中事实知识的跨语言一致性" class="headerlink" title="多语言模型中事实知识的跨语言一致性"></a>多语言模型中事实知识的跨语言一致性</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p><span style="background-color: #2ea8e580">多语言大规模预训练语言模型（PLM）已被证明可以存储大量的事实知识，但观察到语言之间存在很大差异</span>。为了确保具有不同语言背景的用户从同一模型获得一致的反馈，我们研究了各种多语言PLM中事实知识的跨语言一致性（CLC）。为此，我们<span style="background-color: #2ea8e580">提出了一个基于排名的一致性（RankC）指标，以独立于准确性来评估跨语言的知识一致性</span>。使用这个指标，我们在模型级别和语言对级别对CLC的决定因素进行了深入分析。在其他结果中，我们发现<span style="background-color: #ff666680">增加模型大小会导致大多数语言中更高的事实探测准确性，但不会提高跨语言的一致性</span>。最后，我们进行了关于CLC的案例研究，当通过模型编辑在PLM中插入新的事实关联时。英<span style="background-color: #ff666680">语插入的一小部分事实样本的结果揭示了一个清晰的模式，即新知识仅转移到英语具有高 RankC 分数的语言。</span></p>
@@ -1682,84 +1724,6 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
 ]]></content>
       <categories>
         <category>知识编辑</category>
-      </categories>
-      <tags>
-        <tag>EMNLP2023</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>并发编程</title>
-    <url>/2023/11/03/bing-fa-bian-cheng/</url>
-    <content><![CDATA[<h2 id="3-7-sleep和yield"><a href="#3-7-sleep和yield" class="headerlink" title="3.7 sleep和yield"></a>3.7 sleep和yield</h2><p><strong>sleep</strong></p>
-<p>1.调用sleep会让当前线程从<strong><em>Running</em></strong>进入<strong><em>Timed Waiting</em></strong>状态（阻塞）</p>
-<p>2.其他线程可以使用interupt方法打断正在睡眠的线程，这时sleep方法会抛出InterruptedException</p>
-<p>3.睡眠结束后的线程未必会立刻得到执行</p>
-<p>4.建议用TimeUnit的sleep代替Thread的sleep来获得更好的可读性</p>
-<p><strong>yield</strong></p>
-<p>1.调用yield会让当前线程从Running进入Runnable就绪状态，然后调度执行其它线程</p>
-<p>2.<strong>具体的实现依赖于操作系统的任务调度器</strong></p>
-<p><strong>线程优先级</strong></p>
-<p>线程优先级会提示（hint）调度器优先调度该线程，但它仅仅是一个提示，调度器可以忽略它</p>
-<p>如果CPU比较忙，那么优先级高的线程会获得更多的时间片，但CPU空闲时，优先级几乎没作用</p>
-<p>不使用yield</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test9</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Runnable</span> <span class="variable">task1</span> <span class="operator">=</span> () -&gt; &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">                System.out.prinln(<span class="string">&quot;----&gt;1&quot;</span> + count ++ );</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="type">Runnable</span> <span class="variable">task2</span> <span class="operator">=</span> () -&gt; &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">                <span class="comment">// Thread.yield();</span></span><br><span class="line">                System.out.println(<span class="string">&quot;         ------&gt;2 &quot;</span> + count ++ );</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="type">Thread</span> <span class="variable">t1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(task1, <span class="string">&quot;t1&quot;</span>);</span><br><span class="line">        <span class="type">Thread</span> <span class="variable">t2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(task2, <span class="string">&quot;t2&quot;</span>);</span><br><span class="line">        <span class="comment">// t1.setPriority(Thread.MIN_PRIORITY);</span></span><br><span class="line">        <span class="comment">// t2.setPriority(Thread.MAX_PRIORITY);</span></span><br><span class="line">        t1.start();</span><br><span class="line">        t2.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>未开启yield两者打印次数基本差不多</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231103223923885-1699022365204-1.png" alt="image-20231103223923885"></p>
-<p>开启后</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231103224121283-1699022483089-3.png" alt="image-20231103224121283"></p>
-<p>开启优先级</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231103224359120-1699022640208-6.png" alt="image-20231103224359120"></p>
-<h2 id="案例-防止CPU占用100"><a href="#案例-防止CPU占用100" class="headerlink" title="案例-防止CPU占用100%"></a>案例-防止CPU占用100%</h2><p><strong>sleep实现</strong></p>
-<p>在没有利用CPU进行计算时，不要让while(true)空转浪费CPU，这时可以使用yield或sleep来让出cpu的使用权给其他程序</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Thread.sleep(<span class="number">50</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>可以使用wait或条件变量达到类似的效果</li>
-<li>不同的是，后两种都需要加锁，并且需要响应的唤醒操作，一般适用于要进行同步的场景</li>
-<li>sleep适用于无需锁同步的场景</li>
-</ul>
-<p>不使用sleep，将会占满单核虚拟机资源</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231103225132518-1699023094621-8.png" alt="image-20231103225132518"></p>
-<p>使用后</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231103225214908-1699023136594-10.png" alt="image-20231103225214908"></p>
-]]></content>
-      <categories>
-        <category>软件开发</category>
-      </categories>
-      <tags>
-        <tag>并发编程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>情境学习创建任务向量</title>
-    <url>/2023/11/02/qing-jing-xue-xi-chuang-jian-ren-wu-xiang-liang/</url>
-    <content><![CDATA[<h1 id="情境学习创建任务向量"><a href="#情境学习创建任务向量" class="headerlink" title="情境学习创建任务向量"></a>情境学习创建任务向量</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>大型语言模型 (LLM) 中的上下文学习 (ICL) 已成为一种强大的新学习范式。然而，其基本机制仍不清楚。<strong>特别是，将其映射到“标准”机器学习框架具有挑战性，在该框架中，人们使用训练集 S 在某个假设类中找到最佳拟合函数 f (x)</strong>。在这里，我们在这个问题上取得了进展，表明 ICL 学习的函数通常具有非常简单的结构：<strong>它们对应于变压器 LLM，其唯一输入是查询 x 和从训练集计算出的单个“任务向量”</strong>。因此，<strong>ICL 可以看作是将 S 压缩为单个任务向量 θ(S)，然后使用该任务向量来调制变压器以产生输出</strong>。我们通过一系列模型和任务的综合实验来支持上述主张。</p>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>大型语言模型在过去几年中得到了显着改进。这些模型的一个<strong>显着特性是它们可以从很少的演示中学习新规则</strong>。例如，可以使用输入“Apple → Red、Lime → Green、Corn →”提示模型并生成输出“Yellow”。因此，<strong>该模型仅基于两个示例就学习了映射，并且可以将其正确应用于新示例</strong>。这种能力被称为 InContext Learning (ICL)，已被广泛使用，产生了令人印象深刻的实证结果（Brown 等人，2020；Liu 等人，2023；Dong 等人，2022）。</p>
-<p>​       鉴于这一成功，人们自然会问 ICL 背后的根本机制是什么。即，模型内部如何使用演示 S 和查询 x 来产生所需的输出？在这里，我们利用统计学习理论中的假设类概念（Shalev-Shwartz 和 Ben-David，2014）。在学习理论公式中，人们通常考虑假设类 H，其中 H 的每个元素都是函数 h(x; θ)，对输入 x 进行运算，并由参数向量 θ 指定。例如，如果 x ∈ Rd，则类 H 可以是线性分类器的集合，由系数向量 θ 定义为 h(x; θ) = θ · x。学习算法寻找一个能很好地拟合训练集的元素 h ∈ H。这称为经验风险最小化。</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105171853641-1699175934785-1.png" alt="image-20231105171853641"></p>
-<p>​       目前尚不清楚 ICL 是否以这种方式运行，<font color="red" size="4.5"> 因为预测是通过 T ([S, x]) 执行的，其中 T 通常是自回归变压器和[S, x] 是 S 和 x 中标记的串联 </font><strong><em>*。因此，在一般情况下，</em></strong>它可以是对 S 和 x 进行运算以产生输出的任意函数**。这可以包括“非参数”方法，例如最近邻法。最近的工作已经开始探索这个问题。例如，研究表明，当从头开始训练 Transformer 以在上下文中执行线性回归时，新兴的学习算法类似于随机梯度下降（Akyürek 等人，2022 年；von Oswald 等人，2022 年）。然而，对于执行更复杂的自然语言任务的法LLMs来说，根本不清楚假设空间可能是什么。</p>
-<p>​        在这项工作中，我们表明，<strong>在广泛的任务中，LLMs中的 ICL 可以被视为在非常自然的假设空间上工作</strong>。我们认为，<strong>给定训练集 S，变压器将其映射到“任务向量”θ(S)，该向量本质上表示 S.2 中描述的映射/规则</strong>。即，<strong>给定变压器 T 和向量 θ，我们可以构造实现该任务的新函数 f (x; θ)</strong>。<strong>函数 f 与应用于 x 的原始变换器非常相似，但没有演示，而是通过 θ 进行调制</strong>（见图 2）。</p>
-<p>​        我们的观点也与<strong>软提示</strong>有关（Lester et al., 2021），因为这两种方法都会<strong>针对特定任务调节变压器的功能</strong>。然而，<strong>在 ICL 中，任务向量是在前向传递中计算的，而不是进行微调的。</strong></p>
-<p>​        我们的贡献包括<strong>提出基于假设类的 ICL 机械观点</strong>，并进行实验来验证我们对一系列公开可用的LLMs和各种任务的观点。我们的结果进一步加深了对 ICL 的理解，并可能对LLMs有效适应执行特定任务具有实际意义。</p>
-<h2 id="2-A-Hypothesis-Class-View-of-ICL"><a href="#2-A-Hypothesis-Class-View-of-ICL" class="headerlink" title="2 A Hypothesis Class View of ICL"></a>2 A Hypothesis Class View of ICL</h2><p>受学习理论的假设类视图的启发，我们的目标<strong>是了解 ICL 是否将演示集 S 映射到查询 x 上的函数以及这种映射是如何发生的</strong>。具体来说，我们<strong>试图看看 ICL 是否将 S 转换为 θ——某个假设空间内函数的“参数”</strong>。我们的实证研究结果表明这种观点是适用的，揭示了 ICL 运行的假设空间的结构。</p>
-<h3 id="2-1Theoretical-Framework"><a href="#2-1Theoretical-Framework" class="headerlink" title="2.1Theoretical Framework"></a>2.1Theoretical Framework</h3><p>我们使用 <em>T</em> 表示仅解码器变压器 LLM，<em>S</em> 表示用作 ICL 输入的演示集（即训练示例），x 表示要求 ICL 提供输出的查询。我们使用 <em>T</em> ([<em>S</em>, x]) 表示 ICL 对 <em>S</em> 和 x 串联的输出。</p>
-<p>​        为了证明 ICL 在假设空间内运行，我们的目标是证明其基本机制可以分为两部分：</p>
-<ul>
-<li>一种“学习算法”（用 <em>A</em> 表示），将 <em>S</em> 映射到“任务向量”<em>θ</em>，独立于查询 x。鉴于注意力层可以访问 S 和 x，这种独立性并非微不足道。</li>
-<li>一个“规则应用”（用<em>f</em>表示），它基于<strong><em>θ</em></strong> ≡ <strong><em>A</em></strong>(<strong><em>S</em></strong>) 将查询x 映射到输出，而不直接依赖于<em>S</em>。同样，这种独立性并非微不足道。</li>
-</ul>
-<p>因此，我们考虑以下从一组演示和查询到预测输出的映射<em>：T</em> ([S, x]) = f (x; A(S))。如果我们可以将 LLM 的前向传递分解为上述两个部分，我们可以将 ICL 视为在以下假设类上运行： H = {f (·; θ) | θ}。在下一节中，我们提出这样一个类的实现。</p>
-<h3 id="2-2-A-proposed-Hypothesis-Class"><a href="#2-2-A-proposed-Hypothesis-Class" class="headerlink" title="2.2 A proposed Hypothesis Class"></a>2.2 A proposed Hypothesis Class</h3><p>上述框架有多种可能的实现，对应于 A 和 f 的不同选择。接下来我们描述我们关注的实现，这自然是从变压器架构中得出的。我们<strong>考虑如图 1 所示的 ICL 设置，其中输入以查询 x（即 Corn）结尾，后跟“→”符号</strong>。如上所述，我们将学习视为由两个步骤组成：<strong>根据训练样本 S 计算参数向量 θ，并将该参数向量定义的规则应用于查询 x</strong>。变压器执行此操作的一个简单方法<strong>可能是让 → 表示的前 L 层计算 θ，然后让其余层将 θ 和 x 作为输入并产生输出</strong>。参见图 1。回想一下，变压器在任何层都可以访问 S 和 x，这对我们的观点提出了挑战。</p>
-<p>​        在以下部分中，我们将解决这一挑战并提出验证我们观点的实验。也就是说，我们证明<strong>我们可以在执行 ICL 的 LLM 的前向传播中分离出我们提出的 A 和 f。我们还表明 θ 向量是可解释的并且对应于学习任务。</strong></p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105174538487-1699177540536-5.png" alt="image-20231105174538487"></p>
-<h2 id="3-Validity-of-the-Hypothesis-Class-View"><a href="#3-Validity-of-the-Hypothesis-Class-View" class="headerlink" title="3 Validity of the Hypothesis Class View"></a>3 Validity of the Hypothesis Class View</h2><p>我们首先证明，<strong>将前向传播分成两个不同的分量 A 和 f（在第 2.2 节中定义）可以保持 ICL 的高精度。</strong></p>
-<h3 id="3-1-Separating-A-and-f"><a href="#3-1-Separating-A-and-f" class="headerlink" title="3.1 Separating A and f"></a>3.1 Separating A and f</h3><p>我们在常规前向传递中面临一些挑战：<strong>首先，对应于 A 的初始 L 层，更新 → 的表示以创建 θ，可以处理查询 x。因此，它们可能依赖于 x，从而产生 θ 对 x 的不必要的依赖。</strong>其次，与 f 相对应的其余层可以直接访问 S，而不是仅使用 x 和 θ。</p>
-<p>​        我们提出以下过程来解决这些挑战：<strong>为了解决第一个问题，我们引入一个“虚拟查询”x′并使用该查询计算→的表示。我们使用前 L 层之后的 → 表示（使用 x′ 计算）作为向量 θ（如图 2 左侧所示）。另一种方法是阻止对 x 的关注，但这会导致性能不佳。为了解决在不允许直接依赖于 S 的情况下计算 f (x, θ) 的第二个问题，我们仅对 x 和 →,3 执行变换器的前向传递，并对我们之前在第 L 层提取的 θ 进行“修补”。</strong> →（图2右侧）.4</p>
-<p><img src="../imgs/$%7Bfiilename%7D/image-20231105175112562-1699177874552-7.png" alt="image-20231105175112562"></p>
-<p>3.2</p>
-<h2 id="8-Conclusions"><a href="#8-Conclusions" class="headerlink" title="8 Conclusions"></a>8 Conclusions</h2><p>通过LLMs对 ICL 的探索，我们揭示了 ICL 学习机制的新视角。我们揭示了一个简单而优雅的结构：<strong>ICL 通过将给定的训练集压缩为单个任务向量来发挥作用，然后引导变压器根据给定的查询生成适当的输出</strong>。我们的工作为了解LLMs如何进行 ICL 奠定了基础。根据我们的发现，未来的工作可以集中于理解任务向量是如何构建的以及如何使用它来计算输出。</p>
-]]></content>
-      <categories>
-        <category>上下文学习</category>
       </categories>
       <tags>
         <tag>EMNLP2023</tag>
@@ -1885,6 +1849,42 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
 ]]></content>
       <categories>
         <category>知识编辑</category>
+      </categories>
+      <tags>
+        <tag>EMNLP2023</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>情境学习创建任务向量</title>
+    <url>/2023/11/02/qing-jing-xue-xi-chuang-jian-ren-wu-xiang-liang/</url>
+    <content><![CDATA[<h1 id="情境学习创建任务向量"><a href="#情境学习创建任务向量" class="headerlink" title="情境学习创建任务向量"></a>情境学习创建任务向量</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>大型语言模型 (LLM) 中的上下文学习 (ICL) 已成为一种强大的新学习范式。然而，其基本机制仍不清楚。<strong>特别是，将其映射到“标准”机器学习框架具有挑战性，在该框架中，人们使用训练集 S 在某个假设类中找到最佳拟合函数 f (x)</strong>。在这里，我们在这个问题上取得了进展，表明 ICL 学习的函数通常具有非常简单的结构：<strong>它们对应于变压器 LLM，其唯一输入是查询 x 和从训练集计算出的单个“任务向量”</strong>。因此，<strong>ICL 可以看作是将 S 压缩为单个任务向量 θ(S)，然后使用该任务向量来调制变压器以产生输出</strong>。我们通过一系列模型和任务的综合实验来支持上述主张。</p>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>大型语言模型在过去几年中得到了显着改进。这些模型的一个<strong>显着特性是它们可以从很少的演示中学习新规则</strong>。例如，可以使用输入“Apple → Red、Lime → Green、Corn →”提示模型并生成输出“Yellow”。因此，<strong>该模型仅基于两个示例就学习了映射，并且可以将其正确应用于新示例</strong>。这种能力被称为 InContext Learning (ICL)，已被广泛使用，产生了令人印象深刻的实证结果（Brown 等人，2020；Liu 等人，2023；Dong 等人，2022）。</p>
+<p>​       鉴于这一成功，人们自然会问 ICL 背后的根本机制是什么。即，模型内部如何使用演示 S 和查询 x 来产生所需的输出？在这里，我们利用统计学习理论中的假设类概念（Shalev-Shwartz 和 Ben-David，2014）。在学习理论公式中，人们通常考虑假设类 H，其中 H 的每个元素都是函数 h(x; θ)，对输入 x 进行运算，并由参数向量 θ 指定。例如，如果 x ∈ Rd，则类 H 可以是线性分类器的集合，由系数向量 θ 定义为 h(x; θ) = θ · x。学习算法寻找一个能很好地拟合训练集的元素 h ∈ H。这称为经验风险最小化。</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105171853641-1699175934785-1.png" alt="image-20231105171853641"></p>
+<p>​       目前尚不清楚 ICL 是否以这种方式运行，<font color="red" size="4.5"> 因为预测是通过 T ([S, x]) 执行的，其中 T 通常是自回归变压器和[S, x] 是 S 和 x 中标记的串联 </font><strong><em>*。因此，在一般情况下，</em></strong>它可以是对 S 和 x 进行运算以产生输出的任意函数**。这可以包括“非参数”方法，例如最近邻法。最近的工作已经开始探索这个问题。例如，研究表明，当从头开始训练 Transformer 以在上下文中执行线性回归时，新兴的学习算法类似于随机梯度下降（Akyürek 等人，2022 年；von Oswald 等人，2022 年）。然而，对于执行更复杂的自然语言任务的法LLMs来说，根本不清楚假设空间可能是什么。</p>
+<p>​        在这项工作中，我们表明，<strong>在广泛的任务中，LLMs中的 ICL 可以被视为在非常自然的假设空间上工作</strong>。我们认为，<strong>给定训练集 S，变压器将其映射到“任务向量”θ(S)，该向量本质上表示 S.2 中描述的映射/规则</strong>。即，<strong>给定变压器 T 和向量 θ，我们可以构造实现该任务的新函数 f (x; θ)</strong>。<strong>函数 f 与应用于 x 的原始变换器非常相似，但没有演示，而是通过 θ 进行调制</strong>（见图 2）。</p>
+<p>​        我们的观点也与<strong>软提示</strong>有关（Lester et al., 2021），因为这两种方法都会<strong>针对特定任务调节变压器的功能</strong>。然而，<strong>在 ICL 中，任务向量是在前向传递中计算的，而不是进行微调的。</strong></p>
+<p>​        我们的贡献包括<strong>提出基于假设类的 ICL 机械观点</strong>，并进行实验来验证我们对一系列公开可用的LLMs和各种任务的观点。我们的结果进一步加深了对 ICL 的理解，并可能对LLMs有效适应执行特定任务具有实际意义。</p>
+<h2 id="2-A-Hypothesis-Class-View-of-ICL"><a href="#2-A-Hypothesis-Class-View-of-ICL" class="headerlink" title="2 A Hypothesis Class View of ICL"></a>2 A Hypothesis Class View of ICL</h2><p>受学习理论的假设类视图的启发，我们的目标<strong>是了解 ICL 是否将演示集 S 映射到查询 x 上的函数以及这种映射是如何发生的</strong>。具体来说，我们<strong>试图看看 ICL 是否将 S 转换为 θ——某个假设空间内函数的“参数”</strong>。我们的实证研究结果表明这种观点是适用的，揭示了 ICL 运行的假设空间的结构。</p>
+<h3 id="2-1Theoretical-Framework"><a href="#2-1Theoretical-Framework" class="headerlink" title="2.1Theoretical Framework"></a>2.1Theoretical Framework</h3><p>我们使用 <em>T</em> 表示仅解码器变压器 LLM，<em>S</em> 表示用作 ICL 输入的演示集（即训练示例），x 表示要求 ICL 提供输出的查询。我们使用 <em>T</em> ([<em>S</em>, x]) 表示 ICL 对 <em>S</em> 和 x 串联的输出。</p>
+<p>​        为了证明 ICL 在假设空间内运行，我们的目标是证明其基本机制可以分为两部分：</p>
+<ul>
+<li>一种“学习算法”（用 <em>A</em> 表示），将 <em>S</em> 映射到“任务向量”<em>θ</em>，独立于查询 x。鉴于注意力层可以访问 S 和 x，这种独立性并非微不足道。</li>
+<li>一个“规则应用”（用<em>f</em>表示），它基于<strong><em>θ</em></strong> ≡ <strong><em>A</em></strong>(<strong><em>S</em></strong>) 将查询x 映射到输出，而不直接依赖于<em>S</em>。同样，这种独立性并非微不足道。</li>
+</ul>
+<p>因此，我们考虑以下从一组演示和查询到预测输出的映射<em>：T</em> ([S, x]) = f (x; A(S))。如果我们可以将 LLM 的前向传递分解为上述两个部分，我们可以将 ICL 视为在以下假设类上运行： H = {f (·; θ) | θ}。在下一节中，我们提出这样一个类的实现。</p>
+<h3 id="2-2-A-proposed-Hypothesis-Class"><a href="#2-2-A-proposed-Hypothesis-Class" class="headerlink" title="2.2 A proposed Hypothesis Class"></a>2.2 A proposed Hypothesis Class</h3><p>上述框架有多种可能的实现，对应于 A 和 f 的不同选择。接下来我们描述我们关注的实现，这自然是从变压器架构中得出的。我们<strong>考虑如图 1 所示的 ICL 设置，其中输入以查询 x（即 Corn）结尾，后跟“→”符号</strong>。如上所述，我们将学习视为由两个步骤组成：<strong>根据训练样本 S 计算参数向量 θ，并将该参数向量定义的规则应用于查询 x</strong>。变压器执行此操作的一个简单方法<strong>可能是让 → 表示的前 L 层计算 θ，然后让其余层将 θ 和 x 作为输入并产生输出</strong>。参见图 1。回想一下，变压器在任何层都可以访问 S 和 x，这对我们的观点提出了挑战。</p>
+<p>​        在以下部分中，我们将解决这一挑战并提出验证我们观点的实验。也就是说，我们证明<strong>我们可以在执行 ICL 的 LLM 的前向传播中分离出我们提出的 A 和 f。我们还表明 θ 向量是可解释的并且对应于学习任务。</strong></p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105174538487-1699177540536-5.png" alt="image-20231105174538487"></p>
+<h2 id="3-Validity-of-the-Hypothesis-Class-View"><a href="#3-Validity-of-the-Hypothesis-Class-View" class="headerlink" title="3 Validity of the Hypothesis Class View"></a>3 Validity of the Hypothesis Class View</h2><p>我们首先证明，<strong>将前向传播分成两个不同的分量 A 和 f（在第 2.2 节中定义）可以保持 ICL 的高精度。</strong></p>
+<h3 id="3-1-Separating-A-and-f"><a href="#3-1-Separating-A-and-f" class="headerlink" title="3.1 Separating A and f"></a>3.1 Separating A and f</h3><p>我们在常规前向传递中面临一些挑战：<strong>首先，对应于 A 的初始 L 层，更新 → 的表示以创建 θ，可以处理查询 x。因此，它们可能依赖于 x，从而产生 θ 对 x 的不必要的依赖。</strong>其次，与 f 相对应的其余层可以直接访问 S，而不是仅使用 x 和 θ。</p>
+<p>​        我们提出以下过程来解决这些挑战：<strong>为了解决第一个问题，我们引入一个“虚拟查询”x′并使用该查询计算→的表示。我们使用前 L 层之后的 → 表示（使用 x′ 计算）作为向量 θ（如图 2 左侧所示）。另一种方法是阻止对 x 的关注，但这会导致性能不佳。为了解决在不允许直接依赖于 S 的情况下计算 f (x, θ) 的第二个问题，我们仅对 x 和 →,3 执行变换器的前向传递，并对我们之前在第 L 层提取的 θ 进行“修补”。</strong> →（图2右侧）.4</p>
+<p><img src="../imgs/$%7Bfiilename%7D/image-20231105175112562-1699177874552-7.png" alt="image-20231105175112562"></p>
+<p>3.2</p>
+<h2 id="8-Conclusions"><a href="#8-Conclusions" class="headerlink" title="8 Conclusions"></a>8 Conclusions</h2><p>通过LLMs对 ICL 的探索，我们揭示了 ICL 学习机制的新视角。我们揭示了一个简单而优雅的结构：<strong>ICL 通过将给定的训练集压缩为单个任务向量来发挥作用，然后引导变压器根据给定的查询生成适当的输出</strong>。我们的工作为了解LLMs如何进行 ICL 奠定了基础。根据我们的发现，未来的工作可以集中于理解任务向量是如何构建的以及如何使用它来计算输出。</p>
+]]></content>
+      <categories>
+        <category>上下文学习</category>
       </categories>
       <tags>
         <tag>EMNLP2023</tag>
@@ -3073,14 +3073,6 @@ Gain\_Gini(D,A)=\frac{D_1}{D}Gini(D_1)+\frac{D_2}{D}Gini(D_2)</script><blockquot
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2024/03/23/tong-ji-xue-xi-fang-fa/</url>
-    <content><![CDATA[<h1 id="10-1-提升方法AdaBoost算法"><a href="#10-1-提升方法AdaBoost算法" class="headerlink" title="10.1 提升方法AdaBoost算法"></a>10.1 提升方法AdaBoost算法</h1><p><img src="https://s2.loli.net/2024/03/23/qSx2yrfQHYu86ij.png" alt="image-20240323120941983"></p>
-<p><img src="https://s2.loli.net/2024/03/23/hUxJme2paKIswVn.png" alt="image-20240323121244084"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240323121450856.png" alt="image-20240323121450856"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现</title>
     <url>/2023/11/02/zhi-shi-shen-jing-yuan-zhong-xin-zhi-lu-yu-yan-wu-guan-zhi-shi-shen-jing-yuan-he-jian-bing-zhi-shi-shen-jing-yuan-de-fa-xian/</url>
     <content><![CDATA[<h1 id="知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现"><a href="#知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现" class="headerlink" title="知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现"></a>知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现</h1><h2 id="Abstruct"><a href="#Abstruct" class="headerlink" title="Abstruct"></a>Abstruct</h2><p>预训练语言模型 (PLM) 包含大量事实知识，但这些知识如何存储在参数中仍不清楚。本文深入研究了理解事实知识如何存储在多语言 PLM 中的复杂任务，并介绍了适应架构的多语言集成梯度方法，与现有方法相比，该方法<span style="background-color: #ff666680">成功地更精确地定位了知识神经元，并且在各种架构和语言中更加通用。</span>此外，我们对知识神经元进行了深入的探索，得到了以下两个重要发现：<span style="background-color: #ff666680">（1）语言无关的知识神经元的发现，它以超越语言的形式存储事实知识。我们设计了跨语言知识编辑实验，证明 PLM 可以基于语言无关的神经元完成这项任务；</span> <span style="background-color: #ff666680">（2）退化知识神经元的发现，这是一种新型神经元，表明不同的知识神经元可以存储相同的事实。</span>其<span style="background-color: #ff666680">功能重叠的特性赋予 PLM 强大的事实知识掌握能力。</span>我们设计了事实检查实验，证明<span style="background-color: #ff666680">退化知识神经元可以帮助 PLM 检测错误事实。</span>实验证实了这些发现，揭示了多语言 PLM 中事实知识存储的机制，并为该领域提供了宝贵的见解。源代码将公开以供进一步研究。</p>
@@ -3216,45 +3208,11 @@ Gain\_Gini(D,A)=\frac{D_1}{D}Gini(D_1)+\frac{D_2}{D}Gini(D_2)</script><blockquot
       </tags>
   </entry>
   <entry>
-    <title>自注意力机制</title>
-    <url>/2023/12/29/zi-zhu-yi-li-ji-zhi/</url>
-    <content><![CDATA[<h1 id="自注意力机制"><a href="#自注意力机制" class="headerlink" title="自注意力机制"></a>自注意力机制</h1><h2 id="Sophisticated-input"><a href="#Sophisticated-input" class="headerlink" title="Sophisticated input"></a>Sophisticated input</h2><p><img src="https://s2.loli.net/2023/12/29/n8W9btsVvg5MxoT.png" alt="image-20231229105452661"></p>
-<h2 id="Vector-Set-as-Input"><a href="#Vector-Set-as-Input" class="headerlink" title="Vector Set as Input"></a>Vector Set as Input</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229105727351.png" alt="image-20231229105727351"></p>
-<p><img src="https://s2.loli.net/2023/12/29/SC4MYGdbpWokvAl.png" alt="image-20231229105938497"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229110040187.png" alt="image-20231229110040187"></p>
-<p><img src="https://s2.loli.net/2023/12/29/sjlEwmAa2L1xbfU.png" alt="image-20231229110139172"></p>
-<h2 id="What-is-the-output"><a href="#What-is-the-output" class="headerlink" title="What is the output?"></a>What is the output?</h2><p><img src="https://s2.loli.net/2023/12/29/97MivqYoh3t2EX8.png" alt="image-20231229110343955"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229110500001.png" alt="image-20231229110500001"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229110528351.png" alt="image-20231229110528351"></p>
-<h2 id="Sequence-Labeling"><a href="#Sequence-Labeling" class="headerlink" title="Sequence Labeling"></a>Sequence Labeling</h2><p><img src="https://s2.loli.net/2023/12/29/KnmNkCX4Bjq317U.png" alt="image-20231229111029189"></p>
-<h2 id="Self-attention"><a href="#Self-attention" class="headerlink" title="Self-attention"></a>Self-attention</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229111243095.png" alt="image-20231229111243095"></p>
-<p><img src="https://s2.loli.net/2023/12/29/EOaxibsI2vVmnDo.png" alt="image-20231229111328519"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229111447447.png" alt="image-20231229111447447"></p>
-<p><img src="https://s2.loli.net/2023/12/29/BuIYhorAR8anWsQ.png" alt="image-20231229111613666"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229111844380.png" alt="image-20231229111844380"></p>
-<p><img src="https://s2.loli.net/2023/12/29/gsHDVXrySkv61wA.png" alt="image-20231229112012157"></p>
-<p><img src="https://s2.loli.net/2023/12/29/xZiQaeTY26sUmhk.png" alt="image-20231229112129280"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229112323860.png" alt="image-20231229112323860"></p>
-<p><img src="https://s2.loli.net/2023/12/29/fGARtPodCYx6syl.png" alt="image-20231229112504332"></p>
-<p><img src="https://s2.loli.net/2023/12/29/PckCHBfQYrFDpju.png" alt="image-20231229112825156"></p>
-<p>矩阵计算</p>
-<p><img src="https://s2.loli.net/2023/12/29/UpATDIF169vVWJ3.png" alt="image-20231229113203405"></p>
-<p> <img src="https://s2.loli.net/2023/12/29/xzmvaWDyOjGTnpP.png" alt="image-20231229115018255"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229115203578.png" alt="image-20231229115203578"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229115350227.png" alt="image-20231229115350227"></p>
-<h2 id="Multi-head-Self-attention"><a href="#Multi-head-Self-attention" class="headerlink" title="Multi-head Self-attention"></a>Multi-head Self-attention</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229115757287.png" alt="image-20231229115757287"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229115844341.png" alt="image-20231229115844341"></p>
-<h2 id="Position-Encoding"><a href="#Position-Encoding" class="headerlink" title="Position Encoding"></a>Position Encoding</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229120245068.png" alt="image-20231229120245068"></p>
-<p><img src="https://s2.loli.net/2023/12/29/6nVL2TYGu1rMzlI.png" alt="image-20231229120401270"></p>
-<h2 id="Self-attention-for-Speech"><a href="#Self-attention-for-Speech" class="headerlink" title="Self-attention for Speech"></a>Self-attention for Speech</h2><p><img src="https://s2.loli.net/2023/12/29/V2oPpfWXJUNFCEs.png" alt="image-20231229120647905"></p>
-<h2 id="Self-attention-for-Image"><a href="#Self-attention-for-Image" class="headerlink" title="Self-attention for Image"></a>Self-attention for Image</h2><p><img src="https://s2.loli.net/2023/12/29/Rh1VJnqidxsM5Pa.png" alt="image-20231229120820731"></p>
-<h2 id="Self-Attention-GAN"><a href="#Self-Attention-GAN" class="headerlink" title="Self-Attention GAN"></a>Self-Attention GAN</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229120933611.png" alt="image-20231229120933611"></p>
-<h2 id="Self-attention-v-s-CNN"><a href="#Self-attention-v-s-CNN" class="headerlink" title="Self-attention v.s. CNN"></a>Self-attention v.s. CNN</h2><p><img src="https://s2.loli.net/2023/12/29/DacnGJOQ1ZysVRj.png" alt="image-20231229121120848"></p>
-<p><img src="https://s2.loli.net/2023/12/29/o14S28ZhUXJKFQx.png" alt="image-20231229121239055"></p>
-<p><img src="https://s2.loli.net/2023/12/29/25SKNZctz6DJG8H.png" alt="image-20231229121432020"></p>
-<h2 id="Self-attention-v-s-RNN"><a href="#Self-attention-v-s-RNN" class="headerlink" title="Self-attention v.s. RNN"></a>Self-attention v.s. RNN</h2><p><img src="https://s2.loli.net/2023/12/29/hCuFaR5sAQpkxZB.png" alt="image-20231229121807937"></p>
-<h2 id="Self-attention-v-s-GNN"><a href="#Self-attention-v-s-GNN" class="headerlink" title="Self-attention v.s. GNN"></a>Self-attention v.s. GNN</h2><p><img src="https://s2.loli.net/2023/12/29/jmt2i7ZrQoLcAuW.png" alt="image-20231229122046331"></p>
-<h2 id="To-Leain-More"><a href="#To-Leain-More" class="headerlink" title="To Leain More"></a>To Leain More</h2><p><img src="https://s2.loli.net/2023/12/29/Cf6QicAP5emb1NH.png" alt="image-20231229122257533"></p>
+    <title></title>
+    <url>/2024/03/23/tong-ji-xue-xi-fang-fa/</url>
+    <content><![CDATA[<h1 id="10-1-提升方法AdaBoost算法"><a href="#10-1-提升方法AdaBoost算法" class="headerlink" title="10.1 提升方法AdaBoost算法"></a>10.1 提升方法AdaBoost算法</h1><p><img src="https://s2.loli.net/2024/03/23/qSx2yrfQHYu86ij.png" alt="image-20240323120941983"></p>
+<p><img src="https://s2.loli.net/2024/03/23/hUxJme2paKIswVn.png" alt="image-20240323121244084"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240323121450856.png" alt="image-20240323121450856"></p>
 ]]></content>
   </entry>
   <entry>
@@ -3795,6 +3753,48 @@ N = p_1^{c_1} \times p_2^{c_2} \times \cdots \times p_k^{c_k}</script><h4 id="4-
 <h1 id="0803-AdaBoost原理看个例子包懂"><a href="#0803-AdaBoost原理看个例子包懂" class="headerlink" title="0803 AdaBoost原理看个例子包懂"></a>0803 AdaBoost原理看个例子包懂</h1><p><img src="https://s2.loli.net/2024/03/21/jITXMkENx7LohFU.png" alt="image-20240321114637180"></p>
 <p><a href="https://zhuanlan.zhihu.com/p/27126737">https://zhuanlan.zhihu.com/p/27126737</a></p>
 <h1 id="0804-AdaBoost算法实现"><a href="#0804-AdaBoost算法实现" class="headerlink" title="0804 AdaBoost算法实现"></a>0804 AdaBoost算法实现</h1><h1 id="0807-Gradient-Boosting简述"><a href="#0807-Gradient-Boosting简述" class="headerlink" title="0807 Gradient Boosting简述"></a>0807 Gradient Boosting简述</h1><p><img src="https://s2.loli.net/2024/03/23/yi3XNk2FuOUvGz9.png" alt="image-20240323114332358"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>自注意力机制</title>
+    <url>/2023/12/29/zi-zhu-yi-li-ji-zhi/</url>
+    <content><![CDATA[<h1 id="自注意力机制"><a href="#自注意力机制" class="headerlink" title="自注意力机制"></a>自注意力机制</h1><h2 id="Sophisticated-input"><a href="#Sophisticated-input" class="headerlink" title="Sophisticated input"></a>Sophisticated input</h2><p><img src="https://s2.loli.net/2023/12/29/n8W9btsVvg5MxoT.png" alt="image-20231229105452661"></p>
+<h2 id="Vector-Set-as-Input"><a href="#Vector-Set-as-Input" class="headerlink" title="Vector Set as Input"></a>Vector Set as Input</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229105727351.png" alt="image-20231229105727351"></p>
+<p><img src="https://s2.loli.net/2023/12/29/SC4MYGdbpWokvAl.png" alt="image-20231229105938497"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229110040187.png" alt="image-20231229110040187"></p>
+<p><img src="https://s2.loli.net/2023/12/29/sjlEwmAa2L1xbfU.png" alt="image-20231229110139172"></p>
+<h2 id="What-is-the-output"><a href="#What-is-the-output" class="headerlink" title="What is the output?"></a>What is the output?</h2><p><img src="https://s2.loli.net/2023/12/29/97MivqYoh3t2EX8.png" alt="image-20231229110343955"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229110500001.png" alt="image-20231229110500001"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229110528351.png" alt="image-20231229110528351"></p>
+<h2 id="Sequence-Labeling"><a href="#Sequence-Labeling" class="headerlink" title="Sequence Labeling"></a>Sequence Labeling</h2><p><img src="https://s2.loli.net/2023/12/29/KnmNkCX4Bjq317U.png" alt="image-20231229111029189"></p>
+<h2 id="Self-attention"><a href="#Self-attention" class="headerlink" title="Self-attention"></a>Self-attention</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229111243095.png" alt="image-20231229111243095"></p>
+<p><img src="https://s2.loli.net/2023/12/29/EOaxibsI2vVmnDo.png" alt="image-20231229111328519"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229111447447.png" alt="image-20231229111447447"></p>
+<p><img src="https://s2.loli.net/2023/12/29/BuIYhorAR8anWsQ.png" alt="image-20231229111613666"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229111844380.png" alt="image-20231229111844380"></p>
+<p><img src="https://s2.loli.net/2023/12/29/gsHDVXrySkv61wA.png" alt="image-20231229112012157"></p>
+<p><img src="https://s2.loli.net/2023/12/29/xZiQaeTY26sUmhk.png" alt="image-20231229112129280"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229112323860.png" alt="image-20231229112323860"></p>
+<p><img src="https://s2.loli.net/2023/12/29/fGARtPodCYx6syl.png" alt="image-20231229112504332"></p>
+<p><img src="https://s2.loli.net/2023/12/29/PckCHBfQYrFDpju.png" alt="image-20231229112825156"></p>
+<p>矩阵计算</p>
+<p><img src="https://s2.loli.net/2023/12/29/UpATDIF169vVWJ3.png" alt="image-20231229113203405"></p>
+<p> <img src="https://s2.loli.net/2023/12/29/xzmvaWDyOjGTnpP.png" alt="image-20231229115018255"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229115203578.png" alt="image-20231229115203578"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229115350227.png" alt="image-20231229115350227"></p>
+<h2 id="Multi-head-Self-attention"><a href="#Multi-head-Self-attention" class="headerlink" title="Multi-head Self-attention"></a>Multi-head Self-attention</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229115757287.png" alt="image-20231229115757287"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229115844341.png" alt="image-20231229115844341"></p>
+<h2 id="Position-Encoding"><a href="#Position-Encoding" class="headerlink" title="Position Encoding"></a>Position Encoding</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229120245068.png" alt="image-20231229120245068"></p>
+<p><img src="https://s2.loli.net/2023/12/29/6nVL2TYGu1rMzlI.png" alt="image-20231229120401270"></p>
+<h2 id="Self-attention-for-Speech"><a href="#Self-attention-for-Speech" class="headerlink" title="Self-attention for Speech"></a>Self-attention for Speech</h2><p><img src="https://s2.loli.net/2023/12/29/V2oPpfWXJUNFCEs.png" alt="image-20231229120647905"></p>
+<h2 id="Self-attention-for-Image"><a href="#Self-attention-for-Image" class="headerlink" title="Self-attention for Image"></a>Self-attention for Image</h2><p><img src="https://s2.loli.net/2023/12/29/Rh1VJnqidxsM5Pa.png" alt="image-20231229120820731"></p>
+<h2 id="Self-Attention-GAN"><a href="#Self-Attention-GAN" class="headerlink" title="Self-Attention GAN"></a>Self-Attention GAN</h2><p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20231229120933611.png" alt="image-20231229120933611"></p>
+<h2 id="Self-attention-v-s-CNN"><a href="#Self-attention-v-s-CNN" class="headerlink" title="Self-attention v.s. CNN"></a>Self-attention v.s. CNN</h2><p><img src="https://s2.loli.net/2023/12/29/DacnGJOQ1ZysVRj.png" alt="image-20231229121120848"></p>
+<p><img src="https://s2.loli.net/2023/12/29/o14S28ZhUXJKFQx.png" alt="image-20231229121239055"></p>
+<p><img src="https://s2.loli.net/2023/12/29/25SKNZctz6DJG8H.png" alt="image-20231229121432020"></p>
+<h2 id="Self-attention-v-s-RNN"><a href="#Self-attention-v-s-RNN" class="headerlink" title="Self-attention v.s. RNN"></a>Self-attention v.s. RNN</h2><p><img src="https://s2.loli.net/2023/12/29/hCuFaR5sAQpkxZB.png" alt="image-20231229121807937"></p>
+<h2 id="Self-attention-v-s-GNN"><a href="#Self-attention-v-s-GNN" class="headerlink" title="Self-attention v.s. GNN"></a>Self-attention v.s. GNN</h2><p><img src="https://s2.loli.net/2023/12/29/jmt2i7ZrQoLcAuW.png" alt="image-20231229122046331"></p>
+<h2 id="To-Leain-More"><a href="#To-Leain-More" class="headerlink" title="To Leain More"></a>To Leain More</h2><p><img src="https://s2.loli.net/2023/12/29/Cf6QicAP5emb1NH.png" alt="image-20231229122257533"></p>
 ]]></content>
   </entry>
   <entry>
