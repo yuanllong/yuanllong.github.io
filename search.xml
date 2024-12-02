@@ -822,6 +822,20 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
+    <title>17向量化</title>
+    <url>/2023/12/18/17-xiang-liang-hua/</url>
+    <content><![CDATA[<h1 id="17-向量化"><a href="#17-向量化" class="headerlink" title="17 向量化"></a>17 向量化</h1><h2 id="17-1-What-is-vectorization"><a href="#17-1-What-is-vectorization" class="headerlink" title="17.1 What is vectorization?"></a>17.1 What is vectorization?</h2><p><img src="https://s2.loli.net/2023/12/18/1BKChsn8SaX2gwW.png" alt="image-20231218170525346"></p>
+<p>【举例】</p>
+<p><img src="https://s2.loli.net/2023/12/18/3BurMGlpJOFI8a6.png" alt="image-20231218170331625"></p>
+<h2 id="17-2-Neural-network-programming-guideline"><a href="#17-2-Neural-network-programming-guideline" class="headerlink" title="17.2 Neural network programming guideline"></a>17.2 Neural network programming guideline</h2><p><img src="https://s2.loli.net/2023/12/18/2GFzALSHQTjREqc.png" alt="image-20231218170732621"></p>
+<p><img src="https://s2.loli.net/2023/12/18/rikdlyF7n3LuTUV.png" alt="image-20231218170919314"></p>
+<h2 id="17-3-Logistic-regression-derivatives"><a href="#17-3-Logistic-regression-derivatives" class="headerlink" title="17.3 Logistic regression derivatives"></a>17.3 Logistic regression derivatives</h2><p><img src="https://s2.loli.net/2023/12/18/lVjsxRFKyW15vTX.png" alt="image-20231218171117221"></p>
+<h2 id="17-4-Vectorizing-Logistic-Regression"><a href="#17-4-Vectorizing-Logistic-Regression" class="headerlink" title="17.4 Vectorizing Logistic Regression"></a>17.4 Vectorizing Logistic Regression</h2><p><img src="https://s2.loli.net/2023/12/18/ybrQ4onj3CTq7Uc.png" alt="image-20231218172750055"></p>
+<h2 id="17-5-Vectorizing-Logistic-Regression-2"><a href="#17-5-Vectorizing-Logistic-Regression-2" class="headerlink" title="17.5 Vectorizing Logistic Regression 2"></a>17.5 Vectorizing Logistic Regression 2</h2><p><img src="https://s2.loli.net/2023/12/19/W6RvpId7YN9HsKJ.png" alt="image-20231219114423482"></p>
+<h2 id="17-6-Implementing-Logistic-Regression"><a href="#17-6-Implementing-Logistic-Regression" class="headerlink" title="17.6 Implementing Logistic Regression"></a>17.6 Implementing Logistic Regression</h2><p><img src="https://s2.loli.net/2023/12/19/vJufMBcE6FzxKP8.png" alt="image-20231219114728401"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>16.1词嵌入（Word2Vec）</title>
     <url>/2023/12/02/16-1-ci-qian-ru-word2vec/</url>
     <content><![CDATA[<h1 id="1-什么是词嵌入（Word-Embedding）"><a href="#1-什么是词嵌入（Word-Embedding）" class="headerlink" title="1.什么是词嵌入（Word Embedding）"></a>1.什么是词嵌入（Word Embedding）</h1><p>自然语言是一套用来表达含义的复杂系统。在这套系统中，词是表意的基本单元。顾名思义，词向量是用来表示词的向量，也可以被认为是词的特征向量或表征。把词映射为实数域向量的技术也叫做词嵌入（word embedding）。近年来，词嵌入已逐渐称为自然语言处理的基础知识。</p>
@@ -936,20 +950,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
       <tags>
         <tag>词嵌入（Word2Vec）</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>17向量化</title>
-    <url>/2023/12/18/17-xiang-liang-hua/</url>
-    <content><![CDATA[<h1 id="17-向量化"><a href="#17-向量化" class="headerlink" title="17 向量化"></a>17 向量化</h1><h2 id="17-1-What-is-vectorization"><a href="#17-1-What-is-vectorization" class="headerlink" title="17.1 What is vectorization?"></a>17.1 What is vectorization?</h2><p><img src="https://s2.loli.net/2023/12/18/1BKChsn8SaX2gwW.png" alt="image-20231218170525346"></p>
-<p>【举例】</p>
-<p><img src="https://s2.loli.net/2023/12/18/3BurMGlpJOFI8a6.png" alt="image-20231218170331625"></p>
-<h2 id="17-2-Neural-network-programming-guideline"><a href="#17-2-Neural-network-programming-guideline" class="headerlink" title="17.2 Neural network programming guideline"></a>17.2 Neural network programming guideline</h2><p><img src="https://s2.loli.net/2023/12/18/2GFzALSHQTjREqc.png" alt="image-20231218170732621"></p>
-<p><img src="https://s2.loli.net/2023/12/18/rikdlyF7n3LuTUV.png" alt="image-20231218170919314"></p>
-<h2 id="17-3-Logistic-regression-derivatives"><a href="#17-3-Logistic-regression-derivatives" class="headerlink" title="17.3 Logistic regression derivatives"></a>17.3 Logistic regression derivatives</h2><p><img src="https://s2.loli.net/2023/12/18/lVjsxRFKyW15vTX.png" alt="image-20231218171117221"></p>
-<h2 id="17-4-Vectorizing-Logistic-Regression"><a href="#17-4-Vectorizing-Logistic-Regression" class="headerlink" title="17.4 Vectorizing Logistic Regression"></a>17.4 Vectorizing Logistic Regression</h2><p><img src="https://s2.loli.net/2023/12/18/ybrQ4onj3CTq7Uc.png" alt="image-20231218172750055"></p>
-<h2 id="17-5-Vectorizing-Logistic-Regression-2"><a href="#17-5-Vectorizing-Logistic-Regression-2" class="headerlink" title="17.5 Vectorizing Logistic Regression 2"></a>17.5 Vectorizing Logistic Regression 2</h2><p><img src="https://s2.loli.net/2023/12/19/W6RvpId7YN9HsKJ.png" alt="image-20231219114423482"></p>
-<h2 id="17-6-Implementing-Logistic-Regression"><a href="#17-6-Implementing-Logistic-Regression" class="headerlink" title="17.6 Implementing Logistic Regression"></a>17.6 Implementing Logistic Regression</h2><p><img src="https://s2.loli.net/2023/12/19/vJufMBcE6FzxKP8.png" alt="image-20231219114728401"></p>
-]]></content>
   </entry>
   <entry>
     <title>21python广播机制</title>
@@ -1128,27 +1128,6 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
-    <title>40为什么要用深层表示？</title>
-    <url>/2024/01/02/40-wei-shi-me-yao-shi-yong-shen-ceng-biao-shi/</url>
-    <content><![CDATA[<h1 id="40-为什么要使用深层表示？"><a href="#40-为什么要使用深层表示？" class="headerlink" title="40 为什么要使用深层表示？"></a>40 为什么要使用深层表示？</h1><h2 id="40-1-Intuition-about-deep-representation"><a href="#40-1-Intuition-about-deep-representation" class="headerlink" title="40.1 Intuition about deep representation"></a>40.1 Intuition about deep representation</h2><p>在人脸识别系统中</p>
-<ul>
-<li>第一层：可以当作 feature detector 或者 edge detector</li>
-<li>其他层：有的在找眼睛，有的在找鼻子</li>
-<li>最后一层：综合各个层找到的结果，就可以做人脸识别</li>
-<li>从左往右，层数逐渐加深的过程中，神经元可以探测到的区域是逐渐变大，或者逐渐具有现实意义的。例如：一开始探测只是像素边缘，而后可以探测到眼睛、鼻子、嘴巴，最后，就可以探测到整张人脸了</li>
-</ul>
-<p>上述使用的金字塔形状的深度网络，也可以用于探测其他类似于图像的数据，如 Audio</p>
-<ul>
-<li>前几层就是得到比较低层次的音频波形的一些特征，比如音调的高低、分别白噪声等</li>
-<li>把这些低层次的波形进行组合，就可以去探测声音的基本单元，叫做音位</li>
-<li>有了音位就可以辨识出单词发音</li>
-<li>有了单词发音，就可以得到词组，再得到句子</li>
-</ul>
-<p><img src="https://s2.loli.net/2024/01/02/3vQHLkB82Dowq9p.png" alt="image-20240102112015431"></p>
-<h2 id="Circuit-theory-and-deep-learning"><a href="#Circuit-theory-and-deep-learning" class="headerlink" title="Circuit theory and deep learning"></a>Circuit theory and deep learning</h2><p><img src="https://s2.loli.net/2024/01/02/g3hAELJVKGqpO9o.png" alt="image-20240102112324324"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>41搭建深层神经网络块</title>
     <url>/2024/01/02/41-da-jian-shen-ceng-shen-jing-wang-luo-kuai/</url>
     <content><![CDATA[<h1 id="41-搭建深层神经网络块"><a href="#41-搭建深层神经网络块" class="headerlink" title="41 搭建深层神经网络块"></a>41 搭建深层神经网络块</h1><h2 id="41-1-Forward-and-backward-functions"><a href="#41-1-Forward-and-backward-functions" class="headerlink" title="41.1 Forward and backward functions"></a>41.1 Forward and backward functions</h2><p><img src="https://s2.loli.net/2024/01/02/EQqSfZ79F8RPADt.png" alt="image-20240102113354053"></p>
@@ -1177,6 +1156,27 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
+    <title>40为什么要用深层表示？</title>
+    <url>/2024/01/02/40-wei-shi-me-yao-shi-yong-shen-ceng-biao-shi/</url>
+    <content><![CDATA[<h1 id="40-为什么要使用深层表示？"><a href="#40-为什么要使用深层表示？" class="headerlink" title="40 为什么要使用深层表示？"></a>40 为什么要使用深层表示？</h1><h2 id="40-1-Intuition-about-deep-representation"><a href="#40-1-Intuition-about-deep-representation" class="headerlink" title="40.1 Intuition about deep representation"></a>40.1 Intuition about deep representation</h2><p>在人脸识别系统中</p>
+<ul>
+<li>第一层：可以当作 feature detector 或者 edge detector</li>
+<li>其他层：有的在找眼睛，有的在找鼻子</li>
+<li>最后一层：综合各个层找到的结果，就可以做人脸识别</li>
+<li>从左往右，层数逐渐加深的过程中，神经元可以探测到的区域是逐渐变大，或者逐渐具有现实意义的。例如：一开始探测只是像素边缘，而后可以探测到眼睛、鼻子、嘴巴，最后，就可以探测到整张人脸了</li>
+</ul>
+<p>上述使用的金字塔形状的深度网络，也可以用于探测其他类似于图像的数据，如 Audio</p>
+<ul>
+<li>前几层就是得到比较低层次的音频波形的一些特征，比如音调的高低、分别白噪声等</li>
+<li>把这些低层次的波形进行组合，就可以去探测声音的基本单元，叫做音位</li>
+<li>有了音位就可以辨识出单词发音</li>
+<li>有了单词发音，就可以得到词组，再得到句子</li>
+</ul>
+<p><img src="https://s2.loli.net/2024/01/02/3vQHLkB82Dowq9p.png" alt="image-20240102112015431"></p>
+<h2 id="Circuit-theory-and-deep-learning"><a href="#Circuit-theory-and-deep-learning" class="headerlink" title="Circuit theory and deep learning"></a>Circuit theory and deep learning</h2><p><img src="https://s2.loli.net/2024/01/02/g3hAELJVKGqpO9o.png" alt="image-20240102112324324"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>48偏差和方差</title>
     <url>/2024/01/05/48-pian-chai-he-fang-chai/</url>
     <content><![CDATA[<h1 id="48-偏差和方差"><a href="#48-偏差和方差" class="headerlink" title="48 偏差和方差"></a>48 偏差和方差</h1><h2 id="Bias-and-Variance"><a href="#Bias-and-Variance" class="headerlink" title="Bias and Variance"></a>Bias and Variance</h2><p><img src="https://s2.loli.net/2024/01/05/tXWsarKZ4qpvSdY.png" alt="image-20240105121254636"></p>
@@ -1185,16 +1185,16 @@ l(\boldsymbol {X}, \boldsymbol {y}, \boldsymbol {w} = 1/2n ||\boldsymbol {y} - \
 ]]></content>
   </entry>
   <entry>
+    <title>49机器学习基础</title>
+    <url>/2024/01/05/49-ji-qi-xue-xi-ji-chu/</url>
+    <content><![CDATA[<h1 id="49-机器学习基础"><a href="#49-机器学习基础" class="headerlink" title="49 机器学习基础"></a>49 机器学习基础</h1><h2 id="Basic-recipe-for-machine-learning"><a href="#Basic-recipe-for-machine-learning" class="headerlink" title="Basic recipe for machine learning"></a>Basic recipe for machine learning</h2><p><img src="https://s2.loli.net/2024/01/05/Owq1IAr3ZspX2jn.png" alt="image-20240105122804069"></p>
+]]></content>
+  </entry>
+  <entry>
     <title>50正则化</title>
     <url>/2024/01/05/50-zheng-ze-hua/</url>
     <content><![CDATA[<h1 id="50-正则化"><a href="#50-正则化" class="headerlink" title="50 正则化"></a>50 正则化</h1><h2 id="logistic-regression"><a href="#logistic-regression" class="headerlink" title="logistic regression"></a>logistic regression</h2><p><img src="https://s2.loli.net/2024/01/05/heCbfkAP8I1O2cp.png" alt="image-20240105123556939"></p>
 <h2 id="Neural-network"><a href="#Neural-network" class="headerlink" title="Neural network"></a>Neural network</h2><p><img src="https://s2.loli.net/2024/01/05/6K2UAiya5ILhCQn.png" alt="image-20240105124653826"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>49机器学习基础</title>
-    <url>/2024/01/05/49-ji-qi-xue-xi-ji-chu/</url>
-    <content><![CDATA[<h1 id="49-机器学习基础"><a href="#49-机器学习基础" class="headerlink" title="49 机器学习基础"></a>49 机器学习基础</h1><h2 id="Basic-recipe-for-machine-learning"><a href="#Basic-recipe-for-machine-learning" class="headerlink" title="Basic recipe for machine learning"></a>Basic recipe for machine learning</h2><p><img src="https://s2.loli.net/2024/01/05/Owq1IAr3ZspX2jn.png" alt="image-20240105122804069"></p>
 ]]></content>
   </entry>
   <entry>
@@ -1990,74 +1990,6 @@ L^t(X)=L^(t-1)(X)+L_t(X)</script><p>若未满足算法终止条件，则返回�
       </categories>
       <tags>
         <tag>EMNLP2023</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献整理</title>
-    <url>/2023/11/09/wen-xian-zheng-li/</url>
-    <content><![CDATA[<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">基于大语言模型的零样本信息抽取方法实现</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">Event Extraction by Answering (Almost) Natural Questions</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
-      <categories>
-        <category>文献整理</category>
-      </categories>
-      <tags>
-        <tag>文献整理</tag>
       </tags>
   </entry>
   <entry>
@@ -3079,6 +3011,74 @@ Gain\_Gini(D,A)=\frac{D_1}{D}Gini(D_1)+\frac{D_2}{D}Gini(D_2)</script><blockquot
       </tags>
   </entry>
   <entry>
+    <title>文献整理</title>
+    <url>/2023/11/09/wen-xian-zheng-li/</url>
+    <content><![CDATA[<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">基于大语言模型的零样本信息抽取方法实现</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Event Extraction by Answering (Almost) Natural Questions</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>文献整理</category>
+      </categories>
+      <tags>
+        <tag>文献整理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现</title>
     <url>/2023/11/02/zhi-shi-shen-jing-yuan-zhong-xin-zhi-lu-yu-yan-wu-guan-zhi-shi-shen-jing-yuan-he-jian-bing-zhi-shi-shen-jing-yuan-de-fa-xian/</url>
     <content><![CDATA[<h1 id="知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现"><a href="#知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现" class="headerlink" title="知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现"></a>知识神经元中心之旅：语言无关知识神经元和简并知识神经元的发现</h1><h2 id="Abstruct"><a href="#Abstruct" class="headerlink" title="Abstruct"></a>Abstruct</h2><p>预训练语言模型 (PLM) 包含大量事实知识，但这些知识如何存储在参数中仍不清楚。本文深入研究了理解事实知识如何存储在多语言 PLM 中的复杂任务，并介绍了适应架构的多语言集成梯度方法，与现有方法相比，该方法<span style="background-color: #ff666680">成功地更精确地定位了知识神经元，并且在各种架构和语言中更加通用。</span>此外，我们对知识神经元进行了深入的探索，得到了以下两个重要发现：<span style="background-color: #ff666680">（1）语言无关的知识神经元的发现，它以超越语言的形式存储事实知识。我们设计了跨语言知识编辑实验，证明 PLM 可以基于语言无关的神经元完成这项任务；</span> <span style="background-color: #ff666680">（2）退化知识神经元的发现，这是一种新型神经元，表明不同的知识神经元可以存储相同的事实。</span>其<span style="background-color: #ff666680">功能重叠的特性赋予 PLM 强大的事实知识掌握能力。</span>我们设计了事实检查实验，证明<span style="background-color: #ff666680">退化知识神经元可以帮助 PLM 检测错误事实。</span>实验证实了这些发现，揭示了多语言 PLM 中事实知识存储的机制，并为该领域提供了宝贵的见解。源代码将公开以供进一步研究。</p>
@@ -3149,14 +3149,6 @@ Gain\_Gini(D,A)=\frac{D_1}{D}Gini(D_1)+\frac{D_2}{D}Gini(D_2)</script><blockquot
       <tags>
         <tag>EMNLP2023</tag>
       </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2024/03/23/tong-ji-xue-xi-fang-fa/</url>
-    <content><![CDATA[<h1 id="10-1-提升方法AdaBoost算法"><a href="#10-1-提升方法AdaBoost算法" class="headerlink" title="10.1 提升方法AdaBoost算法"></a>10.1 提升方法AdaBoost算法</h1><p><img src="https://s2.loli.net/2024/03/23/qSx2yrfQHYu86ij.png" alt="image-20240323120941983"></p>
-<p><img src="https://s2.loli.net/2024/03/23/hUxJme2paKIswVn.png" alt="image-20240323121244084"></p>
-<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240323121450856.png" alt="image-20240323121450856"></p>
-]]></content>
   </entry>
   <entry>
     <title>算法笔记V2.0</title>
@@ -3607,6 +3599,14 @@ N = p_1^{c_1} \times p_2^{c_2} \times \cdots \times p_k^{c_k}</script><h4 id="4-
       <tags>
         <tag>C++算法题目</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/03/23/tong-ji-xue-xi-fang-fa/</url>
+    <content><![CDATA[<h1 id="10-1-提升方法AdaBoost算法"><a href="#10-1-提升方法AdaBoost算法" class="headerlink" title="10.1 提升方法AdaBoost算法"></a>10.1 提升方法AdaBoost算法</h1><p><img src="https://s2.loli.net/2024/03/23/qSx2yrfQHYu86ij.png" alt="image-20240323120941983"></p>
+<p><img src="https://s2.loli.net/2024/03/23/hUxJme2paKIswVn.png" alt="image-20240323121244084"></p>
+<p><img src="C:/Users/YL.YL.000/AppData/Roaming/Typora/typora-user-images/image-20240323121450856.png" alt="image-20240323121450856"></p>
+]]></content>
   </entry>
   <entry>
     <title>编辑大型语言模型：问题、方法和机遇</title>
