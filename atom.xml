@@ -6,7 +6,7 @@
   <link href="http://humble2967738843.github.io/atom.xml" rel="self"/>
   
   <link href="http://humble2967738843.github.io/"/>
-  <updated>2024-11-30T09:32:41.332Z</updated>
+  <updated>2024-12-02T08:47:25.401Z</updated>
   <id>http://humble2967738843.github.io/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>dkdos</title>
+    <link href="http://humble2967738843.github.io/2024/12/02/dkdos/"/>
+    <id>http://humble2967738843.github.io/2024/12/02/dkdos/</id>
+    <published>2024-12-02T08:46:47.000Z</published>
+    <updated>2024-12-02T08:47:25.401Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;ceshia&lt;/p&gt;
+</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>GBDT</title>
@@ -402,25 +418,6 @@
 &lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/w7bXtS2YVMy54Np.png&quot; alt=&quot;image-20240101152512194&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/cRELKtklnXWgBHD.png&quot; alt=&quot;image-20240101152725539&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/erEx3JtOCYjyI9n.png&quot; alt=&quot;image-20240101152955469&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Transformer</title>
-    <link href="http://humble2967738843.github.io/2024/01/01/transformer/"/>
-    <id>http://humble2967738843.github.io/2024/01/01/transformer/</id>
-    <published>2024-01-01T02:05:14.455Z</published>
-    <updated>2024-05-26T05:17:54.993Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;Transformer&quot;&gt;&lt;a href=&quot;#Transformer&quot; class=&quot;headerlink&quot; title=&quot;Transformer&quot;&gt;&lt;/a&gt;Transformer&lt;/h1&gt;&lt;h2 id=&quot;Sequence-to-sequence-Seq2seq&quot;&gt;&lt;a href=&quot;#Sequence-to-sequence-Seq2seq&quot; class=&quot;headerlink&quot; title=&quot;Sequence-to-sequence (Seq2seq)&quot;&gt;&lt;/a&gt;Sequence-to-sequence (Seq2seq)&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/1uHMwf28IvBoxmD.png&quot; alt=&quot;image-20240101101103745&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Hokkien（闽南语、台语）&quot;&gt;&lt;a href=&quot;#Hokkien（闽南语、台语）&quot; class=&quot;headerlink&quot; title=&quot;Hokkien（闽南语、台语）&quot;&gt;&lt;/a&gt;Hokkien（闽南语、台语）&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/LpzdmFXs2Q678ZJ.png&quot; alt=&quot;image-20240101101234381&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Text-to-Speech-TTS-Synthesis&quot;&gt;&lt;a href=&quot;#Text-to-Speech-TTS-Synthesis&quot; class=&quot;headerlink&quot; title=&quot;Text to Speech (TTS) Synthesis&quot;&gt;&lt;/a&gt;Text to Speech (TTS) Synthesis&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/eXRbOBoYSwsPmqJ.png&quot; alt=&quot;image-20240101101640728&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Seq2Seq-for-Chatbot&quot;&gt;&lt;a href=&quot;#Seq2Seq-for-Chatbot&quot; class=&quot;headerlink&quot; title=&quot;Seq2Seq for Chatbot&quot;&gt;&lt;/a&gt;Seq2Seq for Chatbot&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/01/01/XYRoVr4JBDEdvze.png&quot; alt=&quot;image-20240101101827226&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Most-Natural-Language-Processing-appliactions…&quot;&gt;&lt;a href=&quot;#Most-Natural-Language-Processing-appliactions…&quot; class=&quot;headerlink&quot; title=&quot;Most Natural Language Processing appliactions…&quot;&gt;&lt;/a&gt;Most Natural Language Processing appliactions…&lt;/h2&gt;</summary>
     
     
     
